@@ -1,0 +1,831 @@
+{
+ "slug": "jimmy1",
+ "name": "James Moore",
+ "usernames": [
+  "Jimmy1"
+ ],
+ "rcs": [
+  {
+   "cycle": 1,
+   "date": "2022-11-25",
+   "format": "Pioneer",
+   "finish": "127th",
+   "field_size": 152,
+   "record": "1-3-0",
+   "deck": "Storm Herald Combo",
+   "decklist": "https://melee.gg/Decklist/View/f22648f7-e86c-43e6-bb49-6187eb1dc7a4"
+  },
+  {
+   "cycle": 3,
+   "date": "2023-06-24",
+   "format": "Pioneer",
+   "finish": "155th",
+   "field_size": 180,
+   "record": "1-2-0",
+   "deck": "Storm Herald Combo",
+   "decklist": "https://melee.gg/Decklist/View/bd9bcfc2-78b2-4cb9-ab79-383af415c8ec"
+  },
+  {
+   "cycle": 4,
+   "date": "2023-10-27",
+   "format": "Pioneer",
+   "finish": "48th",
+   "field_size": 156,
+   "record": "5-3-0",
+   "deck": "Abzan Greasefang",
+   "decklist": "https://melee.gg/Decklist/View/158047f9-2680-49d2-9ec6-c4ef2c83a01e"
+  },
+  {
+   "cycle": 5,
+   "date": "2024-03-08",
+   "format": "Modern",
+   "finish": "173rd",
+   "field_size": 228,
+   "record": "1-2-0",
+   "deck": "Living End",
+   "decklist": "https://melee.gg/Decklist/View/ff0d5d99-8a85-45a6-8c55-4c5790b13911"
+  },
+  {
+   "cycle": 6,
+   "date": "2024-05-25",
+   "format": "Standard",
+   "finish": "28th",
+   "field_size": 168,
+   "record": "5-3-0",
+   "deck": "Temur Analyst",
+   "decklist": "https://melee.gg/Decklist/View/9c38ffb3-34d8-4643-a5ae-bc199ce39ae0"
+  },
+  {
+   "cycle": 7,
+   "date": "2024-11-08",
+   "format": "Pioneer",
+   "finish": "Title",
+   "field_size": 221,
+   "record": "9-1-0",
+   "deck": "Jund Combo",
+   "decklist": "https://melee.gg/Decklist/View/59f24b7a-429d-4e29-aa97-2af06f20b49b"
+  },
+  {
+   "cycle": 8,
+   "date": "2025-03-07",
+   "format": "Modern",
+   "finish": "86th",
+   "field_size": 154,
+   "record": "3-3-0",
+   "deck": "Orzhov Blink",
+   "decklist": "https://melee.gg/Decklist/View/53103f18-c935-45d2-9e1b-8933484c74d6"
+  },
+  {
+   "cycle": 9,
+   "date": "2025-05-09",
+   "format": "Standard",
+   "finish": "31st",
+   "field_size": 222,
+   "record": "5-2-1",
+   "deck": "Zur Overlords",
+   "decklist": "https://melee.gg/Decklist/View/01cbe18a-e273-436c-b5ed-b2d800170b01"
+  },
+  {
+   "cycle": 11,
+   "date": "2026-03-13",
+   "format": "Standard",
+   "finish": "40th",
+   "field_size": 209,
+   "record": "5-3-0",
+   "deck": "Temur Harmonizer",
+   "decklist": "https://melee.gg/Decklist/View/962d51fe-c443-486d-863d-b40b00d3a2a7"
+  },
+  {
+   "cycle": 12,
+   "date": "2026-05-22",
+   "format": "Standard",
+   "finish": "102nd",
+   "field_size": 188,
+   "record": "3-4-0",
+   "deck": "Dimir Excruciator",
+   "decklist": "https://melee.gg/Decklist/View/dabeca98-78aa-458a-9c4d-b45100ddc320"
+  },
+  {
+   "cycle": 13,
+   "date": "2026-10-23",
+   "format": "Modern",
+   "finish": "128th",
+   "field_size": 233,
+   "record": "3-3-0",
+   "deck": "Sultai Neoform",
+   "decklist": "https://melee.gg/Decklist/View/b66cce65-a036-4429-903e-b4ea016c4d1f"
+  }
+ ],
+ "matches": [
+  {
+   "cycle": 1,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "dweebdog",
+    "name": "Ivan Schroder"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  },
+  {
+   "cycle": 1,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "loperit",
+    "name": "Robert Wise"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  },
+  {
+   "cycle": 1,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "wrathulon",
+    "name": "Darian Richards"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 1,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "ittaiw",
+    "name": "IttaiW"
+   },
+   "result": "Loss",
+   "games": "0-2-0"
+  },
+  {
+   "cycle": 3,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "regularwilde",
+    "name": "James Laurenson"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  },
+  {
+   "cycle": 3,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "klarkt",
+    "name": "Klarke Trezise"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  },
+  {
+   "cycle": 3,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "dennison",
+    "name": "Gabriel Dennison"
+   },
+   "result": "Loss",
+   "games": "0-2-0"
+  },
+  {
+   "cycle": 4,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "jamiea1",
+    "name": "Jamie Anderson"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  },
+  {
+   "cycle": 4,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "damiansparks",
+    "name": "Damian Sparks"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  },
+  {
+   "cycle": 4,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "samloy",
+    "name": "Samuel Loy"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 4,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "allan_begovic",
+    "name": "Allan Begovic"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  },
+  {
+   "cycle": 4,
+   "round": "Round 5",
+   "opponent": {
+    "slug": "cooperwilso",
+    "name": "cooperwilso"
+   },
+   "result": "Loss",
+   "games": "0-2-0"
+  },
+  {
+   "cycle": 4,
+   "round": "Round 6",
+   "opponent": {
+    "slug": "calmmirror",
+    "name": "Samuel Maher"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  },
+  {
+   "cycle": 4,
+   "round": "Round 7",
+   "opponent": {
+    "slug": "alabaster",
+    "name": "Ian Cormick"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  },
+  {
+   "cycle": 4,
+   "round": "Round 8",
+   "opponent": {
+    "slug": "goscar",
+    "name": "Oscar Gray"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 5,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "soul_mtg",
+    "name": "David Huang"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  },
+  {
+   "cycle": 5,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "nicholas-talbot",
+    "name": "Nicholas Talbot"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  },
+  {
+   "cycle": 5,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "adamjaz",
+    "name": "AdamJaz"
+   },
+   "result": "Loss",
+   "games": "0-2-0"
+  },
+  {
+   "cycle": 6,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "gotrek2222",
+    "name": "Gotrek2222"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 6,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "dc_abstracted",
+    "name": "David Chamberlain"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 6,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "pjax",
+    "name": "Paul Jackson"
+   },
+   "result": "Loss",
+   "games": "0-2-0"
+  },
+  {
+   "cycle": 6,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "ray_charles_28",
+    "name": "Ray_charles_28"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  },
+  {
+   "cycle": 6,
+   "round": "Round 5",
+   "opponent": {
+    "slug": "alosaur",
+    "name": "Alex Humbley"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 6,
+   "round": "Round 6",
+   "opponent": {
+    "slug": "kenodvt",
+    "name": "Keayn de Vries-Turnell"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  },
+  {
+   "cycle": 6,
+   "round": "Round 7",
+   "opponent": {
+    "slug": "planeswalkerzen",
+    "name": "Zen Miyaji-Thorne"
+   },
+   "result": "Loss",
+   "games": "0-2-0"
+  },
+  {
+   "cycle": 6,
+   "round": "Round 8",
+   "opponent": {
+    "slug": "bbotonline",
+    "name": "Brandon Rashad"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  },
+  {
+   "cycle": 7,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "williamtheconq",
+    "name": "William Poor"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  },
+  {
+   "cycle": 7,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "raiderray76784",
+    "name": "Richard Velvin"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  },
+  {
+   "cycle": 7,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "s4m",
+    "name": "S4M"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  },
+  {
+   "cycle": 7,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "natebass",
+    "name": "Nathan Basser"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  },
+  {
+   "cycle": 7,
+   "round": "Round 5",
+   "opponent": {
+    "slug": "campbells",
+    "name": "Campbell Sullivan"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 7,
+   "round": "Round 6",
+   "opponent": {
+    "slug": "tonyjones22",
+    "name": "antoine nguyen"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 7,
+   "round": "Round 7",
+   "opponent": {
+    "slug": "mattbarnes",
+    "name": "Matthew Barnes"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 7,
+   "round": "Round 8",
+   "opponent": {
+    "slug": "tylervisser",
+    "name": "Tyler Visser"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 7,
+   "round": "Quarterfinal",
+   "opponent": {
+    "slug": "kierantierney",
+    "name": "Kieran Tierney"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 7,
+   "round": "Semifinal",
+   "opponent": {
+    "slug": "assembledalphas",
+    "name": "Matthew Giudes"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  },
+  {
+   "cycle": 8,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "kyye",
+    "name": "Kyye"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 8,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "venerablelammasu",
+    "name": "Thomas Bot"
+   },
+   "result": "Loss",
+   "games": "0-2-0"
+  },
+  {
+   "cycle": 8,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "bbotonline",
+    "name": "Brandon Rashad"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 8,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "damo32",
+    "name": "Damo32"
+   },
+   "result": "Loss",
+   "games": "0-2-0"
+  },
+  {
+   "cycle": 8,
+   "round": "Round 5",
+   "opponent": {
+    "slug": "alosaur",
+    "name": "Alex Humbley"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  },
+  {
+   "cycle": 8,
+   "round": "Round 6",
+   "opponent": {
+    "slug": "bent",
+    "name": "Ben Tudman"
+   },
+   "result": "Loss",
+   "games": "0-2-0"
+  },
+  {
+   "cycle": 9,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "fizzbark",
+    "name": "Finn Brightwell"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 9,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "sillygoose",
+    "name": "Gideon Hallam-walsh"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  },
+  {
+   "cycle": 9,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "snekdotdek",
+    "name": "Roberte Brookes"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 9,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "floptic",
+    "name": "Ben Kleinsman-Leusink-Hill"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 9,
+   "round": "Round 5",
+   "opponent": {
+    "slug": "ethanwcranford",
+    "name": "Ethan Cranford"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 9,
+   "round": "Round 6",
+   "opponent": {
+    "slug": "planeswalkerzen",
+    "name": "Zen Miyaji-Thorne"
+   },
+   "result": "Draw",
+   "games": "1-1-1"
+  },
+  {
+   "cycle": 9,
+   "round": "Round 7",
+   "opponent": {
+    "slug": "madelinem",
+    "name": "Madeline Mutton"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 9,
+   "round": "Round 8",
+   "opponent": {
+    "slug": "conradus",
+    "name": "connor mcgillivray"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  },
+  {
+   "cycle": 11,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "spiderbyte12",
+    "name": "Michael Billinghurst"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  },
+  {
+   "cycle": 11,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "warsfeil",
+    "name": "warsfeil"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  },
+  {
+   "cycle": 11,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "raydric",
+    "name": "Jose Gabriel Hilario"
+   },
+   "result": "Loss",
+   "games": "0-2-0"
+  },
+  {
+   "cycle": 11,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "thesource",
+    "name": "Michael Rose"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  },
+  {
+   "cycle": 11,
+   "round": "Round 5",
+   "opponent": {
+    "slug": "avila",
+    "name": "Alex Vilagosh"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 11,
+   "round": "Round 6",
+   "opponent": {
+    "slug": "samird",
+    "name": "SamirD"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 11,
+   "round": "Round 7",
+   "opponent": {
+    "slug": "lillia",
+    "name": "Brennan Crawford"
+   },
+   "result": "Loss",
+   "games": "0-2-0"
+  },
+  {
+   "cycle": 11,
+   "round": "Round 8",
+   "opponent": {
+    "slug": "helloaragon",
+    "name": "Oliver Wearing"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  },
+  {
+   "cycle": 12,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "beardedbear",
+    "name": "BeardedBear"
+   },
+   "result": "Loss",
+   "games": "0-2-0"
+  },
+  {
+   "cycle": 12,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "zeroix7",
+    "name": "William Jettner"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  },
+  {
+   "cycle": 12,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "lachlan107",
+    "name": "lachlan107"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 12,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "hooti",
+    "name": "Hooti"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  },
+  {
+   "cycle": 12,
+   "round": "Round 5",
+   "opponent": {
+    "slug": "danso",
+    "name": "Brett Girvan"
+   },
+   "result": "Loss",
+   "games": "0-2-0"
+  },
+  {
+   "cycle": 12,
+   "round": "Round 6",
+   "opponent": {
+    "slug": "jahikoi",
+    "name": "Tim Hughes"
+   },
+   "result": "Loss",
+   "games": "0-2-0"
+  },
+  {
+   "cycle": 12,
+   "round": "Round 7",
+   "opponent": {
+    "slug": "carps",
+    "name": "Samuel Carpenter"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  },
+  {
+   "cycle": 13,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "domze",
+    "name": "Dom Ze"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  },
+  {
+   "cycle": 13,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "jdh1",
+    "name": "JD Hawke"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 13,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "ignismorgan",
+    "name": "IgnisMorgan"
+   },
+   "result": "Loss",
+   "games": "0-2-0"
+  },
+  {
+   "cycle": 13,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "alecf",
+    "name": "Alecf"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 13,
+   "round": "Round 5",
+   "opponent": {
+    "slug": "sniperhood",
+    "name": "Sniperhood"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  },
+  {
+   "cycle": 13,
+   "round": "Round 6",
+   "opponent": {
+    "slug": "danro",
+    "name": "Daniel Roper"
+   },
+   "result": "Loss",
+   "games": "0-2-0"
+  }
+ ]
+}

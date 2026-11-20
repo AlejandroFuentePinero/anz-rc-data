@@ -1,0 +1,91 @@
+{
+ "slug": "cf123",
+ "name": "CF123",
+ "usernames": [
+  "CF123"
+ ],
+ "rcs": [
+  {
+   "cycle": 9,
+   "date": "2025-05-09",
+   "format": "Standard",
+   "finish": "101st",
+   "field_size": 222,
+   "record": "3-3-1",
+   "deck": "Jeskai Oculus",
+   "decklist": "https://melee.gg/Decklist/View/f9dd17cc-2e84-4e66-aff7-b2d500fe53ae"
+  }
+ ],
+ "matches": [
+  {
+   "cycle": 9,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "peterkeenan",
+    "name": "PeterKeenan"
+   },
+   "result": "Draw",
+   "games": "1-1-1"
+  },
+  {
+   "cycle": 9,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "santinomaher",
+    "name": "Santinomaher"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 9,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "pianto",
+    "name": "James Pianto"
+   },
+   "result": "Loss",
+   "games": "0-2-0"
+  },
+  {
+   "cycle": 9,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "lennygo7",
+    "name": "Lennygo7"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 9,
+   "round": "Round 5",
+   "opponent": {
+    "slug": "nicholas-talbot",
+    "name": "Nicholas Talbot"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  },
+  {
+   "cycle": 9,
+   "round": "Round 6",
+   "opponent": {
+    "slug": "viraz",
+    "name": "Viraz"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  },
+  {
+   "cycle": 9,
+   "round": "Round 7",
+   "opponent": {
+    "slug": "leocui",
+    "name": "LeoCui"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+# Owner rulings only. Accounts with the same real name that never share an RC are joined by rule, not here.
+
+# Melee usernames that are one Player, beyond that rule. A join that puts one Player twice in an RC fails the build.
+joins = [
+]
+
+# Display Name overrides, by Melee username.
+[display_names]
+alejandrofp = "Alejandro de la Fuente"

@@ -1,0 +1,111 @@
+{
+ "slug": "awesomebrew",
+ "name": "Awesomebrew",
+ "usernames": [
+  "Awesomebrew"
+ ],
+ "rcs": [
+  {
+   "cycle": 4,
+   "date": "2023-10-27",
+   "format": "Pioneer",
+   "finish": "106th",
+   "field_size": 156,
+   "record": "2-3-0",
+   "deck": "Mono-Green Devotion",
+   "decklist": "https://melee.gg/Decklist/View/f4b3ce54-ef2b-4029-81ee-a5b7e5bb5b26"
+  },
+  {
+   "cycle": 7,
+   "date": "2024-11-08",
+   "format": "Pioneer",
+   "finish": "181st",
+   "field_size": 221,
+   "record": "1-2-0",
+   "deck": "Mono-Green Devotion",
+   "decklist": "https://melee.gg/Decklist/View/21d9ffe0-b853-42ab-83ee-5768bf00e088"
+  }
+ ],
+ "matches": [
+  {
+   "cycle": 4,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "planeswalkerzen",
+    "name": "Zen Miyaji-Thorne"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  },
+  {
+   "cycle": 4,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "morgo2870",
+    "name": "Morgo2870"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 4,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "hannawarelf",
+    "name": "Hannah Nixon"
+   },
+   "result": "Loss",
+   "games": "0-2-0"
+  },
+  {
+   "cycle": 4,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "pjax",
+    "name": "Paul Jackson"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  },
+  {
+   "cycle": 4,
+   "round": "Round 5",
+   "opponent": {
+    "slug": "thenoobshoota",
+    "name": "TheNoobShoota"
+   },
+   "result": "Loss",
+   "games": "0-2-0"
+  },
+  {
+   "cycle": 7,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "soul_mtg",
+    "name": "David Huang"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  },
+  {
+   "cycle": 7,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "shawnrayson",
+    "name": "Shawn Rayson"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  },
+  {
+   "cycle": 7,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "danielpodowd",
+    "name": "danielpodowd"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  }
+ ]
+}

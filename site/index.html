@@ -14,12 +14,15 @@
 </head>
 <body>
 <h1>ANZ Regional Championships</h1>
+<input id="search" type="search" placeholder="Find a Player" autocomplete="off">
+<ul id="search-results"></ul>
 <div class="scroll">
 <table>
   <thead><tr><th>Cycle</th><th>Date</th><th>City</th><th>Format</th><th>Field Size</th><th>Champion</th></tr></thead>
   <tbody id="rcs"></tbody>
 </table>
 </div>
+<script src="search.js"></script>
 <script>
 fetch("data/rcs.json")
   .then((response) => response.json())

@@ -1,0 +1,91 @@
+{
+ "slug": "fuzzywuzzy",
+ "name": "Harry Bowden",
+ "usernames": [
+  "FuzzyWuzzy"
+ ],
+ "rcs": [
+  {
+   "cycle": 4,
+   "date": "2023-10-27",
+   "format": "Pioneer",
+   "finish": "139th",
+   "field_size": 156,
+   "record": "1-2-0",
+   "deck": "Izzet Creativity",
+   "decklist": "https://melee.gg/Decklist/View/cab094c2-dfd0-45ed-940f-4644edcac92d"
+  },
+  {
+   "cycle": 6,
+   "date": "2024-05-25",
+   "format": "Standard",
+   "finish": "126th",
+   "field_size": 168,
+   "record": "1-2-0",
+   "deck": "Azorius Control",
+   "decklist": "https://melee.gg/Decklist/View/19c16b5a-fd2e-4268-878e-e93d3617cc27"
+  }
+ ],
+ "matches": [
+  {
+   "cycle": 4,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "carps",
+    "name": "Samuel Carpenter"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  },
+  {
+   "cycle": 4,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "redmage38",
+    "name": "David Gonzalez"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 4,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "ringdingdingo",
+    "name": "Rhianna Milton"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  },
+  {
+   "cycle": 6,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "danielcollins",
+    "name": "DanielCollins"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 6,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "alosaur",
+    "name": "Alex Humbley"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  },
+  {
+   "cycle": 6,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "ez_clap",
+    "name": "Henry Sams"
+   },
+   "result": "Loss",
+   "games": "0-2-0"
+  }
+ ]
+}

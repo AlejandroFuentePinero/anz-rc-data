@@ -5,6 +5,7 @@ import re
 from pathlib import Path
 
 from anzrc import rcs
+from anzrc.build import CURATION, build
 from anzrc.melee import round_ids
 
 ROOT = Path(__file__).parent.parent
@@ -65,3 +66,22 @@ def test_main_decks_count_60_or_more_and_sideboards_15_or_fewer_bar_the_listed_e
         if main < 60 or sideboard > 15:
             outside[deck["decklist_id"]] = (main, sideboard)
     assert outside == DECKLIST_COUNT_EXCEPTIONS
+
+
+def test_the_real_data_builds_921_players_with_the_six_same_real_name_pairs_joined(tmp_path):
+    build(ROOT / rcs.RAW, ROOT / rcs.RC_LIST, ROOT / CURATION, tmp_path)
+    index = json.loads((tmp_path / "players.json").read_text())
+    by_username = {username: player for player in index for username in player["usernames"]}
+
+    assert len(by_username) == 927
+    assert len(index) == 921
+    pairs = [
+        ("Swiftclaw", "Swiftclaw_"),
+        ("Dimmers", "Dimmer"),
+        ("Pandaexpress", "RowanMillers"),
+        ("Davnderp", "rdavey88"),
+        ("Solarion", "Solarionmtg"),
+        ("tylervisser", "tylervisserr"),
+    ]
+    assert all(by_username[a] is by_username[b] for a, b in pairs)
+    assert by_username["alejandrofp"]["name"] == "Alejandro de la Fuente"

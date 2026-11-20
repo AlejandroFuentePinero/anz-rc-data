@@ -1,0 +1,81 @@
+{
+ "slug": "skraz",
+ "name": "Skraz",
+ "usernames": [
+  "Skraz"
+ ],
+ "rcs": [
+  {
+   "cycle": 9,
+   "date": "2025-05-09",
+   "format": "Standard",
+   "finish": "111th",
+   "field_size": 222,
+   "record": "3-3-0",
+   "deck": "Gruul Aggro",
+   "decklist": "https://melee.gg/Decklist/View/d5bc469e-4d6b-4018-aafd-b2d500247015"
+  }
+ ],
+ "matches": [
+  {
+   "cycle": 9,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "jahikoi",
+    "name": "Tim Hughes"
+   },
+   "result": "Win",
+   "games": "2-0-0"
+  },
+  {
+   "cycle": 9,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "vedmak",
+    "name": "Vedmak"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  },
+  {
+   "cycle": 9,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "danielcollins",
+    "name": "DanielCollins"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  },
+  {
+   "cycle": 9,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "tonycultanvil",
+    "name": "Tony Dwyer"
+   },
+   "result": "Win",
+   "games": "2-1-0"
+  },
+  {
+   "cycle": 9,
+   "round": "Round 5",
+   "opponent": {
+    "slug": "nathw",
+    "name": "NathW"
+   },
+   "result": "Loss",
+   "games": "1-2-0"
+  },
+  {
+   "cycle": 9,
+   "round": "Round 6",
+   "opponent": {
+    "slug": "leocui",
+    "name": "LeoCui"
+   },
+   "result": "Loss",
+   "games": "0-2-0"
+  }
+ ]
+}

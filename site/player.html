@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Player card</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 16px; background: #fff; color: #222; }
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; }
+  th, td { padding: 4px 12px; text-align: left; border-bottom: 1px solid #ddd; white-space: nowrap; }
+  td.num { text-align: right; }
+</style>
+</head>
+<body>
+<p><a href="index.html">ANZ Regional Championships</a></p>
+<input id="search" type="search" placeholder="Find a Player" autocomplete="off">
+<ul id="search-results"></ul>
+<h1 id="name"></h1>
+<p id="usernames"></p>
+<h2>RC history</h2>
+<div class="scroll">
+<table>
+  <thead><tr><th>Cycle</th><th>Date</th><th>Format</th><th>Finish</th><th>Record</th><th>Deck</th></tr></thead>
+  <tbody id="rcs"></tbody>
+</table>
+</div>
+<h2>Match history</h2>
+<div class="scroll">
+<table>
+  <thead><tr><th>Cycle</th><th>Round</th><th>Opponent</th><th>Result</th><th>Games</th></tr></thead>
+  <tbody id="matches"></tbody>
+</table>
+</div>
+<script src="search.js"></script>
+<script>
+function link(text, href) {
+  const a = document.createElement("a");
+  a.href = href;
+  a.textContent = text;
+  return a;
+}
+
+function fill(body, rows) {
+  body.replaceChildren();
+  for (const cells of rows) {
+    const row = body.insertRow();
+    for (const [value, cls] of cells) {
+      const cell = row.insertCell();
+      cell.append(value ?? "-");
+      if (cls) cell.className = cls;
+    }
+  }
+}
+
+function show() {
+  const slug = decodeURIComponent(location.hash.slice(1));
+  if (!slug) return;
+  fetch(`data/players/${slug}.json`)
+    .then((response) => response.json())
+    .then((card) => {
+      document.title = card.name;
+      document.getElementById("name").textContent = card.name;
+      document.getElementById("usernames").textContent = `Melee: ${card.usernames.join(", ")}`;
+      fill(document.getElementById("rcs"), card.rcs.map((rc) => [
+        [rc.cycle, "num"],
+        [rc.date],
+        [rc.format],
+        [rc.finish && `${rc.finish} of ${rc.field_size}`],
+        [rc.record],
+        [rc.deck && link(rc.deck, rc.decklist)],
+      ]));
+      fill(document.getElementById("matches"), card.matches.map((match) => [
+        [match.cycle, "num"],
+        [match.round],
+        [match.opponent && link(match.opponent.name, `#${match.opponent.slug}`)],
+        [match.result],
+        [match.games],
+      ]));
+      window.scrollTo(0, 0);
+    });
+}
+
+window.addEventListener("hashchange", show);
+show();
+</script>
+</body>
+</html>
