@@ -56,14 +56,18 @@ events:
 3. **Standings.** Send `POST https://melee.gg/Standing/GetRoundStandings` with the same params plus
    `roundId`, using the last round for final standings. Each row has `Rank`, `Points`, match and game
    records, tiebreakers (`OpponentMatchWinPercentage`, ...) and `Decklists[]` (`DecklistId`, `DecklistName`).
-4. **Decklists.** Fetch `https://melee.gg/Decklist/View/{DecklistId}` and parse the card links and
-   `.decklist-record-quantity`.
+4. **Decklists.** Fetch `https://melee.gg/Decklist/View/{DecklistId}` and read the hidden
+   `<pre id="decklist-text">` block: `<quantity> <card>` lines under the headers `MainDeck`, `Companion`
+   and `Sideboard`. Each page is about 110 KB of markup around a 1 KB list (five sampled pages measured
+   107.6 to 111.3 KB, so about 265 MB for all 2,455, five times the 52 MB of every other raw response), so
+   only the parsed list is stored, in `data/decklists/<melee id>/<DecklistId>.json` (4.7 MB in all), not the raw page.
 
 ## Known quirks
 
 - Round names differ between events. Some playoff rounds are named "Quarterfinals/Semifinals/Finals"
   and others continue as "Round 9…". Tell Swiss and playoff rounds apart by phase, not by name.
 - Cycle 13 has 1 match out of 812 with no result. It is probably a bye or a drop.
-- In Cycles 4 and 7, summing every quantity on the deck page gives 76. This is probably a companion
-  or an extra counter, so parse the main deck and sideboard separately.
+- In Cycles 4 and 7, summing every quantity on the deck page gives 76: older lists show the companion
+  under Companion and again under Sideboard, newer ones under Companion only. The stored sideboard counts
+  the companion once either way.
 - Requests time out if all 13 events are fetched at once. Fetch them one at a time with a short delay.

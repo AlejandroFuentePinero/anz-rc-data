@@ -36,3 +36,32 @@ def test_every_rcs_final_standings_count_the_sources_files_players():
     assert len(expected) == 13
     counted = {rc["melee_id"]: len(grid(rc["melee_id"], f"standings-{rounds(rc['melee_id'])[-1]}.json")) for rc in rcs.load(ROOT / rcs.RC_LIST)}
     assert counted == expected
+
+
+# Decklists outside 60 or more main and 15 or fewer sideboard cards, as Melee holds them: id to (main, sideboard).
+DECKLIST_COUNT_EXCEPTIONS: dict[str, tuple[int, int]] = {}
+
+
+def final_decklist_ids(melee_id: int) -> list[str]:
+    rows = grid(melee_id, f"standings-{rounds(melee_id)[-1]}.json")
+    return [entry["DecklistId"] for row in rows for entry in row["Decklists"]]
+
+
+def test_every_final_standings_decklist_is_stored():
+    missing = [
+        (rc["cycle"], decklist_id)
+        for rc in rcs.load(ROOT / rcs.RC_LIST)
+        for decklist_id in final_decklist_ids(rc["melee_id"])
+        if not (ROOT / rcs.DECKLISTS / str(rc["melee_id"]) / f"{decklist_id}.json").exists()
+    ]
+    assert missing == []
+
+
+def test_main_decks_count_60_or_more_and_sideboards_15_or_fewer_bar_the_listed_exceptions():
+    outside = {}
+    for path in (ROOT / rcs.DECKLISTS).glob("*/*.json"):
+        deck = json.loads(path.read_text())
+        main, sideboard = (sum(card["quantity"] for card in deck[part]) for part in ("main", "sideboard"))
+        if main < 60 or sideboard > 15:
+            outside[deck["decklist_id"]] = (main, sideboard)
+    assert outside == DECKLIST_COUNT_EXCEPTIONS

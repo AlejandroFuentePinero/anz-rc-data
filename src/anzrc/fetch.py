@@ -1,10 +1,10 @@
-"""Fetch each RC's raw Melee responses into the repo, one folder per RC, skipping what is stored."""
+"""Fetch each RC's raw Melee responses into the repo, one folder per RC, and its decklists parsed, skipping what is stored."""
 
 import json
 import time
 from pathlib import Path
 
-from anzrc.melee import round_ids
+from anzrc.melee import decklist, round_ids
 
 BASE = "https://melee.gg"
 
@@ -44,7 +44,8 @@ def _complete_grid(body: bytes) -> bool:
     return "Error" not in grid and grid["recordsTotal"] == len(grid["data"])
 
 
-def fetch_rc(melee_id: int, raw_root: Path, http, delay: float = 1.5) -> None:
+def fetch_rc(melee_id: int, raw_root: Path, decklist_root: Path, http, delay: float = 1.5) -> None:
+    """Store the RC's raw responses as sent, then every decklist on its final standings, parsed."""
     folder = Path(raw_root) / str(melee_id)
     folder.mkdir(parents=True, exist_ok=True)
 
@@ -66,10 +67,25 @@ def fetch_rc(melee_id: int, raw_root: Path, http, delay: float = 1.5) -> None:
     )
     for round_id in round_ids(page.decode()):
         stored(f"matches-{round_id}.json", lambda: http.post(f"{BASE}/Match/GetRoundMatches/{round_id}", _form(("TableNumber",))))
-        stored(
+        final_standings = stored(
             f"standings-{round_id}.json",
             lambda: http.post(f"{BASE}/Standing/GetRoundStandings", _form(STANDINGS_COLUMNS, roundId=round_id)),
         )
+
+    # A decklist page is about 110 KB of markup around a 1 KB list, so only the parsed list is kept (issue #3).
+    decklists = Path(decklist_root) / str(melee_id)
+    decklists.mkdir(parents=True, exist_ok=True)
+    for row in json.loads(final_standings)["data"]:
+        for decklist_id in (entry["DecklistId"] for entry in row["Decklists"]):
+            path = decklists / f"{decklist_id}.json"
+            if path.exists():
+                continue
+            try:
+                deck = decklist(http.get(f"{BASE}/Decklist/View/{decklist_id}").decode())
+            except ValueError as error:
+                raise RuntimeError(f"RC {melee_id}: decklist {decklist_id} is unreadable ({error}); rerun to retry") from error
+            path.write_text(json.dumps({"decklist_id": decklist_id} | deck, indent=1, ensure_ascii=False) + "\n")
+            time.sleep(delay)
 
 
 class Melee:
@@ -102,4 +118,4 @@ def main() -> None:
     melee = Melee()
     for rc in rcs.load():
         print(f"Cycle {rc['cycle']} ({rc['melee_id']})", flush=True)
-        fetch_rc(rc["melee_id"], rcs.RAW, melee)
+        fetch_rc(rc["melee_id"], rcs.RAW, rcs.DECKLISTS, melee)

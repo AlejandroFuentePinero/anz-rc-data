@@ -5,6 +5,7 @@ from pathlib import Path
 
 RC_LIST = Path("data/rcs.csv")
 RAW = Path("data/raw")
+DECKLISTS = Path("data/decklists")
 
 
 def load(path: Path = RC_LIST) -> list[dict]:
