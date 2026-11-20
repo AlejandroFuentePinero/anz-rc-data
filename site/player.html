@@ -57,7 +57,10 @@ function show() {
   const slug = decodeURIComponent(location.hash.slice(1));
   if (!slug) return;
   fetch(`data/players/${slug}.json`)
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) throw new Error(`no card for ${slug}`);
+      return response.json();
+    })
     .then((card) => {
       document.title = card.name;
       document.getElementById("name").textContent = card.name;
@@ -78,6 +81,13 @@ function show() {
         [match.games],
       ]));
       window.scrollTo(0, 0);
+    })
+    .catch(() => {
+      // A mistyped or outdated link: say so rather than leave the page blank.
+      document.getElementById("name").textContent = "No Player found";
+      document.getElementById("usernames").textContent = "";
+      fill(document.getElementById("rcs"), []);
+      fill(document.getElementById("matches"), []);
     });
 }
 
