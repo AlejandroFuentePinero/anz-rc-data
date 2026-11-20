@@ -9,9 +9,9 @@ Checked 2026-11-20: each event below returns standings, pairings with results, a
 
 | Cycle | City | Start date (UTC) | Format | Players | Event page | Pairings | Standings |
 |---|---|---|---|---|---|---|---|
-| 1 | — | 2022-11-25 | Pioneer | 152 | [12737](https://melee.gg/Tournament/View/12737) | [pairings](https://melee.gg/Tournament/View/12737#pairings) | [standings](https://melee.gg/Tournament/View/12737#standings) |
-| 2 | — | 2023-03-03 | Standard | 132 | [13123](https://melee.gg/Tournament/View/13123) | [pairings](https://melee.gg/Tournament/View/13123#pairings) | [standings](https://melee.gg/Tournament/View/13123#standings) |
-| 3 | — | 2023-06-24 | Pioneer | 180 | [13419](https://melee.gg/Tournament/View/13419) | [pairings](https://melee.gg/Tournament/View/13419#pairings) | [standings](https://melee.gg/Tournament/View/13419#standings) |
+| 1 | Sydney | 2022-11-25 | Pioneer | 152 | [12737](https://melee.gg/Tournament/View/12737) | [pairings](https://melee.gg/Tournament/View/12737#pairings) | [standings](https://melee.gg/Tournament/View/12737#standings) |
+| 2 | - | 2023-03-03 | Standard | 132 | [13123](https://melee.gg/Tournament/View/13123) | [pairings](https://melee.gg/Tournament/View/13123#pairings) | [standings](https://melee.gg/Tournament/View/13123#standings) |
+| 3 | - | 2023-06-24 | Pioneer | 180 | [13419](https://melee.gg/Tournament/View/13419) | [pairings](https://melee.gg/Tournament/View/13419#pairings) | [standings](https://melee.gg/Tournament/View/13419#standings) |
 | 4 | Sydney | 2023-10-27 | Pioneer | 156 | [14959](https://melee.gg/Tournament/View/14959) | [pairings](https://melee.gg/Tournament/View/14959#pairings) | [standings](https://melee.gg/Tournament/View/14959#standings) |
 | 5 | Melbourne | 2024-03-08 | Modern | 228 | [17545](https://melee.gg/Tournament/View/17545) | [pairings](https://melee.gg/Tournament/View/17545#pairings) | [standings](https://melee.gg/Tournament/View/17545#standings) |
 | 6 | Melbourne | 2024-05-25 | Standard | 168 | [44116](https://melee.gg/Tournament/View/44116) | [pairings](https://melee.gg/Tournament/View/44116#pairings) | [standings](https://melee.gg/Tournament/View/44116#standings) |
