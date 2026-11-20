@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ANZ Regional Championships</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 16px; background: #fff; color: #222; }
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; }
+  th, td { padding: 4px 12px; text-align: left; border-bottom: 1px solid #ddd; white-space: nowrap; }
+  td.num { text-align: right; }
+</style>
+</head>
+<body>
+<h1>ANZ Regional Championships</h1>
+<div class="scroll">
+<table>
+  <thead><tr><th>Cycle</th><th>Date</th><th>City</th><th>Format</th><th>Field Size</th><th>Champion</th></tr></thead>
+  <tbody id="rcs"></tbody>
+</table>
+</div>
+<script>
+fetch("data/rcs.json")
+  .then((response) => response.json())
+  .then((rcs) => {
+    const body = document.getElementById("rcs");
+    for (const rc of rcs) {
+      const row = body.insertRow();
+      for (const [value, cls] of [[rc.cycle, "num"], [rc.date], [rc.city ?? "-"], [rc.format], [rc.field_size, "num"], [rc.champion]]) {
+        const cell = row.insertCell();
+        cell.textContent = value;
+        if (cls) cell.className = cls;
+      }
+    }
+  });
+</script>
+</body>
+</html>

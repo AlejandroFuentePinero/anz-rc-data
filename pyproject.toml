@@ -1,0 +1,20 @@
+[project]
+name = "anzrc"
+version = "0.1.0"
+description = "The Players of the ANZ Magic Regional Championships, from every RC's standings and pairings"
+requires-python = ">=3.12"
+dependencies = ["requests>=2.32,<3"]
+
+[project.scripts]
+anzrc-fetch = "anzrc.fetch:main"
+anzrc-build = "anzrc.build:main"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
