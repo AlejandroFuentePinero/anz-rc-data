@@ -11,7 +11,7 @@
    "format": "Pioneer",
    "finish": "Finalist",
    "field_size": 180,
-   "record": "6-1-1",
+   "record": "8-2-1",
    "deck": "Mono-White Humans",
    "decklist": "https://melee.gg/Decklist/View/1e021927-560b-4b66-96af-8ed814786d86"
   }
@@ -25,7 +25,8 @@
     "name": "Joseph Wong"
    },
    "result": "Win",
-   "games": "2-1-0"
+   "games": "2-1-0",
+   "reconstructed": false
   },
   {
    "cycle": 3,
@@ -35,7 +36,8 @@
     "name": "Gaza"
    },
    "result": "Win",
-   "games": "2-0-0"
+   "games": "2-0-0",
+   "reconstructed": false
   },
   {
    "cycle": 3,
@@ -45,7 +47,8 @@
     "name": "FreddyK"
    },
    "result": "Win",
-   "games": "2-1-0"
+   "games": "2-1-0",
+   "reconstructed": false
   },
   {
    "cycle": 3,
@@ -55,7 +58,8 @@
     "name": "Samuel Carpenter"
    },
    "result": "Win",
-   "games": "2-1-0"
+   "games": "2-1-0",
+   "reconstructed": false
   },
   {
    "cycle": 3,
@@ -65,7 +69,8 @@
     "name": "David Huang"
    },
    "result": "Win",
-   "games": "2-1-0"
+   "games": "2-1-0",
+   "reconstructed": false
   },
   {
    "cycle": 3,
@@ -75,7 +80,8 @@
     "name": "Jim Burgemeestre"
    },
    "result": "Win",
-   "games": "2-0-0"
+   "games": "2-0-0",
+   "reconstructed": false
   },
   {
    "cycle": 3,
@@ -85,7 +91,8 @@
     "name": "Keayn de Vries-Turnell"
    },
    "result": "Loss",
-   "games": "0-2-0"
+   "games": "0-2-0",
+   "reconstructed": false
   },
   {
    "cycle": 3,
@@ -95,7 +102,41 @@
     "name": "Masonme2"
    },
    "result": "Intentional Draw",
-   "games": "0-0-3"
+   "games": "0-0-3",
+   "reconstructed": false
+  },
+  {
+   "cycle": 3,
+   "round": "Quarterfinal",
+   "opponent": {
+    "slug": "lillia",
+    "name": "Brennan Crawford"
+   },
+   "result": "Win",
+   "games": null,
+   "reconstructed": true
+  },
+  {
+   "cycle": 3,
+   "round": "Semifinal",
+   "opponent": {
+    "slug": "markzhou2207",
+    "name": "Mark Zhou"
+   },
+   "result": "Win",
+   "games": null,
+   "reconstructed": true
+  },
+  {
+   "cycle": 3,
+   "round": "Final",
+   "opponent": {
+    "slug": "goodfriendmtg",
+    "name": "Ben Kemp"
+   },
+   "result": "Loss",
+   "games": null,
+   "reconstructed": true
   }
  ]
 }

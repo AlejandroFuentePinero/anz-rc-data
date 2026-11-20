@@ -60,15 +60,18 @@ def standing(rank, who, deck="Izzet Prowess", decklist_id=None):
     }
 
 
-def write_rc(raw, melee_id, rounds, final):
-    """One RC: rounds as (matching method, Matches), every round's standings holding the final rows."""
+def write_rc(raw, melee_id, rounds, final, swiss=None):
+    """One RC: rounds as (matching method, Matches), every round's standings holding the final rows.
+
+    Given end-of-Swiss rows, the Swiss rounds' standings hold those instead, as Cycles 1 to 5 return them.
+    """
     folder = raw / str(melee_id)
     folder.mkdir(parents=True)
     round_ids = [str(melee_id * 100 + n) for n in range(1, len(rounds) + 1)]
     buttons = "".join(f'<button class="btn btn-gray round-selector" data-id="{r}" data-name="x">\n' for r in round_ids)
     (folder / "event.html").write_text(f"<html>\n{buttons}{buttons}</html>")
     for round_id, (method, matches) in zip(round_ids, rounds):
-        rows = [row | {"MatchingMethodDescription": method} for row in final]
+        rows = [row | {"MatchingMethodDescription": method} for row in (swiss if swiss and method == SWISS else final)]
         (folder / f"matches-{round_id}.json").write_text(json.dumps({"recordsTotal": len(matches), "data": matches}))
         (folder / f"standings-{round_id}.json").write_text(json.dumps({"recordsTotal": len(rows), "data": rows}))
 
@@ -88,12 +91,12 @@ class Bundle:
 
 
 def run_build(tmp_path, rcs, curation=""):
-    """Build from RCs given as (cycle, format, rounds, final standings); Melee IDs are made up."""
+    """Build from RCs given as (cycle, format, rounds, final standings[, end-of-Swiss standings]); Melee IDs are made up."""
     raw = tmp_path / "raw"
     lines = ["cycle,melee_id,format,city,start_date"]
-    for cycle, format_, rounds, final in rcs:
+    for cycle, format_, rounds, final, *swiss in rcs:
         melee_id = 1000 + cycle
-        write_rc(raw, melee_id, rounds, final)
+        write_rc(raw, melee_id, rounds, final, *swiss)
         lines.append(f"{cycle},{melee_id},{format_},,2023-0{cycle}-01")
     rc_list = tmp_path / "rcs.csv"
     rc_list.write_text("\n".join(lines) + "\n")
@@ -135,7 +138,8 @@ def test_a_bare_card_shows_the_rc_history_and_the_match_history(tmp_path):
         }
     ]
     assert card["matches"] == [
-        {"cycle": 1, "round": "Round 1", "opponent": {"slug": "ben", "name": "Ben Hall"}, "result": "Win", "games": "2-1-0"}
+        {"cycle": 1, "round": "Round 1", "opponent": {"slug": "ben", "name": "Ben Hall"}, "result": "Win", "games": "2-1-0",
+         "reconstructed": False}
     ]
     assert bundle.card("ben")["matches"][0]["result"] == "Loss"
     assert bundle.card("ben")["matches"][0]["games"] == "1-2-0"
@@ -201,6 +205,65 @@ def test_playoff_rounds_are_told_apart_by_the_standings_matching_method_not_by_r
     bundle = run_build(tmp_path, [(1, "Modern", rounds, final)])
 
     assert [m["round"] for m in bundle.card("ana")["matches"]] == ["Round 1", "Round 2", "Quarterfinal", "Semifinal", "Final"]
+
+
+def test_a_final_melee_lost_is_rebuilt_as_rank_1_beating_rank_2_with_no_game_score(tmp_path):
+    # As in Cycles 7, 8 and 10: the quarterfinals and semifinals are held, the final round is empty.
+    p = {n: (f"p{n}", f"Player {n}") for n in range(1, 9)}
+    rounds = [
+        (SWISS, [played(p[1], p[2], 2, 0), played(p[3], p[4], 2, 0), played(p[5], p[6], 2, 0), played(p[7], p[8], 2, 0)]),
+        (PLAYOFFS, [played(p[1], p[8], 2, 0), played(p[4], p[5], 2, 1), played(p[2], p[7], 2, 0), played(p[3], p[6], 2, 0)]),
+        (PLAYOFFS, [played(p[1], p[4], 0, 2), played(p[2], p[3], 1, 2)]),
+        (PLAYOFFS, []),
+    ]
+    final = [standing(rank, p[n]) for rank, n in enumerate([4, 3, 1, 2, 5, 6, 7, 8], start=1)]
+
+    bundle = run_build(tmp_path, [(1, "Modern", rounds, final)])
+
+    champion, finalist = bundle.card("p4"), bundle.card("p3")
+    assert champion["matches"][-1] == {
+        "cycle": 1, "round": "Final", "opponent": {"slug": "p3", "name": "Player 3"}, "result": "Win", "games": None, "reconstructed": True
+    }
+    assert finalist["matches"][-1] == {
+        "cycle": 1, "round": "Final", "opponent": {"slug": "p4", "name": "Player 4"}, "result": "Loss", "games": None, "reconstructed": True
+    }
+    assert [m["reconstructed"] for m in champion["matches"][:-1]] == [False, False, False]
+    # Swiss loss, then the quarterfinal, the semifinal and the rebuilt final won.
+    assert champion["rcs"][0]["record"] == "3-1-0"
+    assert finalist["rcs"][0]["record"] == "3-1-0"
+    assert (champion["rcs"][0]["finish"], finalist["rcs"][0]["finish"]) == ("Title", "Finalist")
+
+
+def test_a_bracket_melee_holds_no_matches_for_is_rebuilt_from_end_of_swiss_seeding_and_the_final_standings(tmp_path):
+    # As in Cycles 3 and 4: three playoff rounds, none with a Match. Seeds 1 to 8 are p1 to p8 at the end of the Swiss.
+    p = {n: (f"p{n}", f"Player {n}") for n in range(1, 11)}
+    rounds = [
+        (SWISS, [played(p[n], p[n + 1], 2, 0) for n in range(1, 11, 2)]),
+        (PLAYOFFS, []),
+        (PLAYOFFS, []),
+        (PLAYOFFS, []),
+    ]
+    swiss = [standing(n, p[n]) for n in range(1, 11)]
+    # Quarterfinals 8 beat 1, 4 beat 5, 2 beat 7, 6 beat 3; semifinals 4 beat 8, 6 beat 2; final 6 beat 4.
+    final = [standing(rank, p[n]) for rank, n in enumerate([6, 4, 8, 2, 1, 5, 7, 3, 9, 10], start=1)]
+
+    bundle = run_build(tmp_path, [(1, "Pioneer", rounds, final, swiss)])
+
+    def playoffs(slug):
+        return [(m["round"], m["opponent"]["slug"], m["result"], m["games"], m["reconstructed"])
+                for m in bundle.card(slug)["matches"] if m["round"] != "Round 1"]
+
+    assert playoffs("p6") == [
+        ("Quarterfinal", "p3", "Win", None, True), ("Semifinal", "p2", "Win", None, True), ("Final", "p4", "Win", None, True)
+    ]
+    assert playoffs("p4") == [
+        ("Quarterfinal", "p5", "Win", None, True), ("Semifinal", "p8", "Win", None, True), ("Final", "p6", "Loss", None, True)
+    ]
+    assert playoffs("p8") == [("Quarterfinal", "p1", "Win", None, True), ("Semifinal", "p4", "Loss", None, True)]
+    assert playoffs("p2") == [("Quarterfinal", "p7", "Win", None, True), ("Semifinal", "p6", "Loss", None, True)]
+    assert playoffs("p1") == [("Quarterfinal", "p8", "Loss", None, True)]
+    assert playoffs("p9") == []
+    assert bundle.card("p6")["rcs"][0]["record"] == "3-1-0"
 
 
 def test_finishes_show_title_finalist_and_top_4_and_top_8_tiers_never_melees_order_inside_a_tier(tmp_path):

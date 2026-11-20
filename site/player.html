@@ -32,6 +32,7 @@
   <tbody id="matches"></tbody>
 </table>
 </div>
+<p id="reconstructed-note" hidden>Reconstructed: a playoff Match Melee lost, rebuilt from the standings, so it has no game score.</p>
 <script src="search.js"></script>
 <script>
 function link(text, href) {
@@ -78,8 +79,9 @@ function show() {
         [match.round],
         [match.opponent && link(match.opponent.name, `#${match.opponent.slug}`)],
         [match.result],
-        [match.games],
+        [match.reconstructed ? "Reconstructed" : match.games],
       ]));
+      document.getElementById("reconstructed-note").hidden = !card.matches.some((match) => match.reconstructed);
       window.scrollTo(0, 0);
     })
     .catch(() => {
@@ -88,6 +90,7 @@ function show() {
       document.getElementById("usernames").textContent = "";
       fill(document.getElementById("rcs"), []);
       fill(document.getElementById("matches"), []);
+      document.getElementById("reconstructed-note").hidden = true;
     });
 }
 

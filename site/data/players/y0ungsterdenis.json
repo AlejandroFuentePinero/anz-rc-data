@@ -11,7 +11,7 @@
    "format": "Pioneer",
    "finish": "Top 8",
    "field_size": 156,
-   "record": "6-0-2",
+   "record": "6-1-2",
    "deck": "Rakdos Midrange",
    "decklist": "https://melee.gg/Decklist/View/ce268ce3-f4ae-4b77-8132-b476b94317e9"
   }
@@ -25,7 +25,8 @@
     "name": "Samuel Maher"
    },
    "result": "Win",
-   "games": "2-1-0"
+   "games": "2-1-0",
+   "reconstructed": false
   },
   {
    "cycle": 4,
@@ -35,7 +36,8 @@
     "name": "Brendan_Lyons"
    },
    "result": "Win",
-   "games": "2-0-0"
+   "games": "2-0-0",
+   "reconstructed": false
   },
   {
    "cycle": 4,
@@ -45,7 +47,8 @@
     "name": "Matthew Giudes"
    },
    "result": "Win",
-   "games": "2-0-0"
+   "games": "2-0-0",
+   "reconstructed": false
   },
   {
    "cycle": 4,
@@ -55,7 +58,8 @@
     "name": "Hannah Nixon"
    },
    "result": "Win",
-   "games": "2-1-0"
+   "games": "2-1-0",
+   "reconstructed": false
   },
   {
    "cycle": 4,
@@ -65,7 +69,8 @@
     "name": "Nathan Basser"
    },
    "result": "Win",
-   "games": "2-0-0"
+   "games": "2-0-0",
+   "reconstructed": false
   },
   {
    "cycle": 4,
@@ -75,7 +80,8 @@
     "name": "Liam Brown"
    },
    "result": "Win",
-   "games": "2-0-0"
+   "games": "2-0-0",
+   "reconstructed": false
   },
   {
    "cycle": 4,
@@ -85,7 +91,8 @@
     "name": "Brett Girvan"
    },
    "result": "Intentional Draw",
-   "games": "0-0-3"
+   "games": "0-0-3",
+   "reconstructed": false
   },
   {
    "cycle": 4,
@@ -95,7 +102,19 @@
     "name": "Michael Russell"
    },
    "result": "Intentional Draw",
-   "games": "0-0-3"
+   "games": "0-0-3",
+   "reconstructed": false
+  },
+  {
+   "cycle": 4,
+   "round": "Quarterfinal",
+   "opponent": {
+    "slug": "assembledalphas",
+    "name": "Matthew Giudes"
+   },
+   "result": "Loss",
+   "games": null,
+   "reconstructed": true
   }
  ]
 }

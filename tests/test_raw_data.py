@@ -5,7 +5,7 @@ import re
 from pathlib import Path
 
 from anzrc import rcs
-from anzrc.build import CURATION, build
+from anzrc.build import CURATION, PLAYOFF_ROUNDS, build
 from anzrc.melee import round_ids
 
 ROOT = Path(__file__).parent.parent
@@ -85,3 +85,39 @@ def test_the_real_data_builds_921_players_with_the_six_same_real_name_pairs_join
     ]
     assert all(by_username[a] is by_username[b] for a, b in pairs)
     assert by_username["alejandrofp"]["name"] == "Alejandro de la Fuente"
+
+
+def playoff_results(bundle) -> dict[int, set[tuple[str, str, str]]]:
+    """Each Cycle's playoff Matches in a bundle, as (round, winner, loser)."""
+    results = {}
+    for path in (bundle / "players").glob("*.json"):
+        card = json.loads(path.read_text())
+        for match in card["matches"]:
+            if match["round"] in PLAYOFF_ROUNDS and match["result"] == "Win":
+                results.setdefault(match["cycle"], set()).add((match["round"], card["slug"], match["opponent"]["slug"]))
+    return results
+
+
+def test_every_complete_bracket_is_the_one_the_rebuild_gives_from_its_seeding_and_final_standings(tmp_path):
+    # The raw data with every complete bracket's playoff Matches removed, as Melee lost those of Cycles 3 and 4.
+    stripped, complete = tmp_path / "raw", []
+    for rc in rcs.load(ROOT / rcs.RC_LIST):
+        source, folder = ROOT / rcs.RAW / str(rc["melee_id"]), stripped / str(rc["melee_id"])
+        folder.mkdir(parents=True)
+        for path in source.iterdir():
+            (folder / path.name).symlink_to(path)
+        playoffs = [r for r in rounds(rc["melee_id"]) if grid(rc["melee_id"], f"standings-{r}.json")[0]["MatchingMethodDescription"] != "Swiss"]
+        if all(grid(rc["melee_id"], f"matches-{r}.json") for r in playoffs):
+            complete.append(rc["cycle"])
+            for r in playoffs:
+                (folder / f"matches-{r}.json").unlink()
+                (folder / f"matches-{r}.json").write_text('{"recordsTotal": 0, "data": []}')
+    build(ROOT / rcs.RAW, ROOT / rcs.RC_LIST, ROOT / CURATION, tmp_path / "full")
+    build(stripped, ROOT / rcs.RC_LIST, ROOT / CURATION, tmp_path / "rebuilt")
+    full, rebuilt = playoff_results(tmp_path / "full"), playoff_results(tmp_path / "rebuilt")
+
+    assert {cycle: len(full[cycle]) == 7 and rebuilt[cycle] == full[cycle] for cycle in complete} == {
+        1: True, 2: True, 5: True, 6: True, 9: True, 11: True, 12: True, 13: True
+    }
+    # And what Melee lost is rebuilt: the finals of Cycles 7, 8 and 10, every playoff Match of Cycles 3 and 4.
+    assert {cycle: len(full[cycle]) for cycle in (3, 4, 7, 8, 10)} == {3: 7, 4: 7, 7: 7, 8: 7, 10: 7}

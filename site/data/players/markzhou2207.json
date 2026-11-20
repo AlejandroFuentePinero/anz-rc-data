@@ -21,7 +21,7 @@
    "format": "Pioneer",
    "finish": "Top 4",
    "field_size": 180,
-   "record": "7-1-0",
+   "record": "8-2-0",
    "deck": "Azorius Control",
    "decklist": "https://melee.gg/Decklist/View/2c2028d3-4b84-46eb-bb95-6678e2e2bd72"
   },
@@ -55,7 +55,8 @@
     "name": "Alex Humbley"
    },
    "result": "Loss",
-   "games": "1-2-0"
+   "games": "1-2-0",
+   "reconstructed": false
   },
   {
    "cycle": 1,
@@ -65,14 +66,16 @@
     "name": "mindcandy"
    },
    "result": "Loss",
-   "games": "1-2-0"
+   "games": "1-2-0",
+   "reconstructed": false
   },
   {
    "cycle": 1,
    "round": "Round 3",
    "opponent": null,
    "result": "Bye",
-   "games": null
+   "games": null,
+   "reconstructed": false
   },
   {
    "cycle": 1,
@@ -82,7 +85,8 @@
     "name": "Henry Sams"
    },
    "result": "Loss",
-   "games": "0-2-0"
+   "games": "0-2-0",
+   "reconstructed": false
   },
   {
    "cycle": 3,
@@ -92,7 +96,8 @@
     "name": "Nathan Basser"
    },
    "result": "Loss",
-   "games": "1-2-0"
+   "games": "1-2-0",
+   "reconstructed": false
   },
   {
    "cycle": 3,
@@ -102,7 +107,8 @@
     "name": "Dino Kucukovic"
    },
    "result": "Win",
-   "games": "2-0-0"
+   "games": "2-0-0",
+   "reconstructed": false
   },
   {
    "cycle": 3,
@@ -112,7 +118,8 @@
     "name": "Danny Thai"
    },
    "result": "Win",
-   "games": "2-1-0"
+   "games": "2-1-0",
+   "reconstructed": false
   },
   {
    "cycle": 3,
@@ -122,7 +129,8 @@
     "name": "Ian Tan"
    },
    "result": "Win",
-   "games": "2-0-0"
+   "games": "2-0-0",
+   "reconstructed": false
   },
   {
    "cycle": 3,
@@ -132,7 +140,8 @@
     "name": "Nicholas Malcolm Preston"
    },
    "result": "Win",
-   "games": "2-0-0"
+   "games": "2-0-0",
+   "reconstructed": false
   },
   {
    "cycle": 3,
@@ -142,7 +151,8 @@
     "name": "Finn Gordon-Mckee"
    },
    "result": "Win",
-   "games": "2-0-0"
+   "games": "2-0-0",
+   "reconstructed": false
   },
   {
    "cycle": 3,
@@ -152,7 +162,8 @@
     "name": "maxiebon1234"
    },
    "result": "Win",
-   "games": "2-0-0"
+   "games": "2-0-0",
+   "reconstructed": false
   },
   {
    "cycle": 3,
@@ -162,7 +173,30 @@
     "name": "Michael Russell"
    },
    "result": "Win",
-   "games": "2-0-0"
+   "games": "2-0-0",
+   "reconstructed": false
+  },
+  {
+   "cycle": 3,
+   "round": "Quarterfinal",
+   "opponent": {
+    "slug": "u_be_trixy",
+    "name": "Matthew Anderson"
+   },
+   "result": "Win",
+   "games": null,
+   "reconstructed": true
+  },
+  {
+   "cycle": 3,
+   "round": "Semifinal",
+   "opponent": {
+    "slug": "willows",
+    "name": "WillowS"
+   },
+   "result": "Loss",
+   "games": null,
+   "reconstructed": true
   },
   {
    "cycle": 7,
@@ -172,7 +206,8 @@
     "name": "Morgo2870"
    },
    "result": "Win",
-   "games": "2-0-0"
+   "games": "2-0-0",
+   "reconstructed": false
   },
   {
    "cycle": 7,
@@ -182,7 +217,8 @@
     "name": "RIley Jones"
    },
    "result": "Win",
-   "games": "2-1-0"
+   "games": "2-1-0",
+   "reconstructed": false
   },
   {
    "cycle": 7,
@@ -192,7 +228,8 @@
     "name": "Alejandro de la Fuente"
    },
    "result": "Loss",
-   "games": "1-2-0"
+   "games": "1-2-0",
+   "reconstructed": false
   },
   {
    "cycle": 7,
@@ -202,7 +239,8 @@
     "name": "James Laurenson"
    },
    "result": "Loss",
-   "games": "0-2-0"
+   "games": "0-2-0",
+   "reconstructed": false
   },
   {
    "cycle": 7,
@@ -212,7 +250,8 @@
     "name": "Roberte Brookes"
    },
    "result": "Win",
-   "games": "2-0-0"
+   "games": "2-0-0",
+   "reconstructed": false
   },
   {
    "cycle": 7,
@@ -222,7 +261,8 @@
     "name": "Campbell Sullivan"
    },
    "result": "Win",
-   "games": "2-0-0"
+   "games": "2-0-0",
+   "reconstructed": false
   },
   {
    "cycle": 7,
@@ -232,7 +272,8 @@
     "name": "Joseph Macri"
    },
    "result": "Win",
-   "games": "2-0-0"
+   "games": "2-0-0",
+   "reconstructed": false
   },
   {
    "cycle": 7,
@@ -242,7 +283,8 @@
     "name": "Rowan Millers"
    },
    "result": "Win",
-   "games": "2-0-0"
+   "games": "2-0-0",
+   "reconstructed": false
   },
   {
    "cycle": 8,
@@ -252,7 +294,8 @@
     "name": "Caylem01"
    },
    "result": "Win",
-   "games": "2-0-0"
+   "games": "2-0-0",
+   "reconstructed": false
   },
   {
    "cycle": 8,
@@ -262,7 +305,8 @@
     "name": "Elliott Low Choy"
    },
    "result": "Win",
-   "games": "2-1-0"
+   "games": "2-1-0",
+   "reconstructed": false
   },
   {
    "cycle": 8,
@@ -272,7 +316,8 @@
     "name": "NathanChambers"
    },
    "result": "Win",
-   "games": "2-0-0"
+   "games": "2-0-0",
+   "reconstructed": false
   },
   {
    "cycle": 8,
@@ -282,7 +327,8 @@
     "name": "Thomas Bot"
    },
    "result": "Win",
-   "games": "2-0-0"
+   "games": "2-0-0",
+   "reconstructed": false
   },
   {
    "cycle": 8,
@@ -292,7 +338,8 @@
     "name": "Sebastian Vearncombe"
    },
    "result": "Loss",
-   "games": "0-2-0"
+   "games": "0-2-0",
+   "reconstructed": false
   },
   {
    "cycle": 8,
@@ -302,7 +349,8 @@
     "name": "Shivan4RR"
    },
    "result": "Loss",
-   "games": "1-2-0"
+   "games": "1-2-0",
+   "reconstructed": false
   },
   {
    "cycle": 8,
@@ -312,7 +360,8 @@
     "name": "Brennan Crawford"
    },
    "result": "Loss",
-   "games": "0-2-0"
+   "games": "0-2-0",
+   "reconstructed": false
   },
   {
    "cycle": 8,
@@ -322,7 +371,8 @@
     "name": "Harry Franks"
    },
    "result": "Loss",
-   "games": "0-2-0"
+   "games": "0-2-0",
+   "reconstructed": false
   }
  ]
 }

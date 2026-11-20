@@ -39,6 +39,8 @@ def _sides(match: dict) -> list[tuple[dict, str, str | None]]:
     Not played: a single side (a bye of either kind, the late-entry forfeit, "not reported") or no result.
     """
     sides = match["Competitors"]
+    if match.get("Reconstructed"):  # winner first, and no game score
+        return [(sides[0], "Win", None), (sides[1], "Loss", None)]
     if len(sides) == 1:
         if match["ByeReason"] is not None:
             result = "Bye"
@@ -64,6 +66,35 @@ def _sides(match: dict) -> list[tuple[dict, str, str | None]]:
 PLAYOFF_ROUNDS = ["Quarterfinal", "Semifinal", "Final"]
 
 
+# Seeding from the end-of-Swiss standings, 1 v 8 and so on, the winners meeting in this order. Every complete bracket follows it.
+QUARTERFINALS = [(1, 8), (4, 5), (2, 7), (3, 6)]
+
+
+def _rebuild_playoffs(rc: dict, swiss_standings: list[dict]) -> None:
+    """Fill the playoff rounds Melee holds no Matches for, a lost final or a whole lost bracket.
+
+    The bracket is seeded from the end-of-Swiss standings, and each Match's winner is the Player whose final rank
+    shows them going on: the Top 4 out of a quarterfinal, the Top 2 out of a semifinal, the Title out of the final.
+    So a rebuilt final is always the rank 1 Player beating the rank 2 Player.
+    """
+    playoffs = [round_ for round_ in rc["rounds"] if round_["name"] in PLAYOFF_ROUNDS]
+    if all(round_["matches"] for round_ in playoffs):
+        return
+    final_rows = {_username(row): row for row in rc["standings"]}
+    seeds = {row["Rank"]: final_rows[_username(row)] for row in swiss_standings if row["Rank"] <= 8}
+    pairs = [(seeds[a], seeds[b]) for a, b in QUARTERFINALS]
+    for round_, going_on in zip(playoffs, (4, 2, 1), strict=True):
+        matches = []
+        for a, b in pairs:
+            if (a["Rank"] <= going_on) == (b["Rank"] <= going_on):
+                raise ValueError(f"Cycle {rc['cycle']}: the final standings do not fit a seeded bracket at {_username(a)} v {_username(b)}")
+            matches.append({"Competitors": [a, b] if a["Rank"] <= going_on else [b, a], "Reconstructed": True})
+        if not round_["matches"]:
+            round_["matches"] = matches
+        winners = [match["Competitors"][0] for match in matches]
+        pairs = list(zip(winners[::2], winners[1::2]))
+
+
 def _load(raw: Path, rc_list: Path) -> list[dict]:
     """Every RC with its rounds, Matches and final standings, as Melee shapes."""
     loaded = []
@@ -75,6 +106,7 @@ def _load(raw: Path, rc_list: Path) -> list[dict]:
         names = [f"Round {n}" for n in range(1, playoff.count(False) + 1)] + PLAYOFF_ROUNDS[len(PLAYOFF_ROUNDS) - playoff.count(True):]
         rounds = [{"name": name, "matches": _rows(folder, "matches", r)} for name, r in zip(names, ids, strict=True)]
         loaded.append(rc | {"rounds": rounds, "standings": _rows(folder, "standings", ids[-1])})
+        _rebuild_playoffs(loaded[-1], _rows(folder, "standings", ids[playoff.count(False) - 1]))
     return loaded
 
 
@@ -130,6 +162,7 @@ def build(raw: Path, rc_list: Path, curation: Path, out: Path) -> None:
                             "opponent": opponent and {"slug": opponent["slug"], "name": opponent["name"]},
                             "result": result,
                             "games": games,
+                            "reconstructed": match.get("Reconstructed", False),
                         }
                     )
                     if result in RECORD:
