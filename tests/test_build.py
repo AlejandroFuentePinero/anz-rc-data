@@ -92,6 +92,9 @@ class Bundle:
     def rcs(self):
         return json.loads((self.folder / "rcs.json").read_text())
 
+    def community(self):
+        return json.loads((self.folder / "community.json").read_text())
+
 
 def run_build(tmp_path, rcs, curation=""):
     """Build from RCs given as (cycle, format, rounds, final standings[, end-of-Swiss standings]); Melee IDs are made up."""
@@ -148,15 +151,62 @@ def test_a_bare_card_shows_the_rc_history_and_the_match_history(tmp_path):
     assert bundle.card("ben")["matches"][0]["games"] == "1-2-0"
 
 
-def test_the_rc_table_gives_each_rc_its_field_size_and_champion(tmp_path):
+def test_the_rc_table_gives_each_rc_its_field_size_and_champion_as_the_player_their_card_names(tmp_path):
+    owner = ("alejandrofp", "alejandrofp")
     bundle = run_build(
         tmp_path,
-        [(1, "Pioneer", [(SWISS, [played(ANA, BEN, 2, 0)])], [standing(2, ANA), standing(1, BEN), standing(3, CAL)])],
+        [
+            (1, "Pioneer", [(SWISS, [played(ANA, BEN, 2, 0)])], [standing(2, ANA), standing(1, BEN), standing(3, CAL)]),
+            (2, "Modern", [(SWISS, [played(owner, ANA, 2, 0)])], [standing(1, owner), standing(2, ANA)]),
+        ],
+        curation='[display_names]\nalejandrofp = "Alejandro de la Fuente"\n',
     )
 
-    assert bundle.rcs() == [
-        {"cycle": 1, "date": "2023-01-01", "city": None, "format": "Pioneer", "field_size": 3, "champion": "Ben Hall"}
+    assert [{key: rc[key] for key in ("cycle", "date", "city", "format", "field_size", "champion")} for rc in bundle.rcs()] == [
+        {"cycle": 1, "date": "2023-01-01", "city": None, "format": "Pioneer", "field_size": 3,
+         "champion": {"slug": "ben", "name": "Ben Hall"}},
+        {"cycle": 2, "date": "2023-02-01", "city": None, "format": "Modern", "field_size": 2,
+         "champion": {"slug": "alejandrofp", "name": "Alejandro de la Fuente"}},
     ]
+
+
+def test_each_rc_counts_its_new_players_and_its_returning_players_across_joined_accounts(tmp_path):
+    ana_new = ("Ana_L", "Ana Lopez")  # Ana's second account, one Player with "ana" by the real-name rule
+    eve = ("eve", "Eve Moss")  # disqualified in Cycle 3: off the standings, still at the RC
+    bundle = run_build(
+        tmp_path,
+        [
+            (1, "Pioneer", [(SWISS, [played(ANA, BEN, 2, 0)])], [standing(1, ANA), standing(2, BEN)]),
+            (2, "Modern", [(SWISS, [played(ana_new, CAL, 2, 0)])], [standing(1, ana_new), standing(2, CAL)]),
+            (3, "Pioneer", [(SWISS, [played(BEN, DEE, 2, 0), played(CAL, eve, 2, 0)])], [
+                standing(1, BEN), standing(2, CAL), standing(3, DEE),
+            ]),
+        ],
+    )
+
+    assert [(rc["cycle"], rc["new_players"], rc["returning_players"]) for rc in bundle.rcs()] == [
+        (1, 2, 0),  # ana, ben
+        (2, 1, 1),  # cal new; ana back on her other account
+        (3, 2, 2),  # dee and eve new; ben and cal back
+    ]
+
+
+def test_the_community_counts_players_by_rcs_played_in_each_view_across_joined_accounts(tmp_path):
+    ana_new = ("Ana_L", "Ana Lopez")  # Ana's second account, one Player with "ana" by the real-name rule
+    bundle = run_build(
+        tmp_path,
+        [
+            (1, "Pioneer", [(SWISS, [played(ANA, BEN, 2, 0)])], [standing(1, ANA), standing(2, BEN)]),
+            (2, "Modern", [(SWISS, [played(ana_new, CAL, 2, 0)])], [standing(1, ana_new), standing(2, CAL)]),
+            (3, "Pioneer", [(SWISS, [played(BEN, DEE, 2, 0)])], [standing(1, BEN), standing(2, DEE)]),
+        ],
+    )
+
+    assert bundle.community()["rcs_played"] == {
+        "Global": [{"rcs": 1, "players": 2}, {"rcs": 2, "players": 2}],  # cal, dee once; ana, ben twice
+        "Pioneer": [{"rcs": 1, "players": 2}, {"rcs": 2, "players": 1}],  # ana, dee once; ben twice
+        "Modern": [{"rcs": 1, "players": 2}],  # ana, cal
+    }
 
 
 def test_every_match_class_shows_its_result_and_only_played_matches_and_intentional_draws_count_in_the_record(tmp_path):

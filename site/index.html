@@ -11,11 +11,20 @@
   th, td { padding: 4px 12px; text-align: left; border-bottom: 1px solid #ddd; white-space: nowrap; }
   td.num { text-align: right; }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
 </head>
 <body>
 <h1>ANZ Regional Championships</h1>
 <input id="search" type="search" placeholder="Find a Player" autocomplete="off">
 <ul id="search-results"></ul>
+<label>Format <select id="format"></select></label>
+<h2>Field Size</h2>
+<div id="field-size"></div>
+<h2>New and returning Players</h2>
+<div id="new-returning"></div>
+<h2>RCs played</h2>
+<div id="rcs-played"></div>
+<h2>Every RC</h2>
 <div class="scroll">
 <table>
   <thead><tr><th>Cycle</th><th>Date</th><th>City</th><th>Format</th><th>Field Size</th><th>Champion</th></tr></thead>
@@ -24,18 +33,60 @@
 </div>
 <script src="search.js"></script>
 <script>
-fetch("data/rcs.json")
-  .then((response) => response.json())
-  .then((rcs) => {
-    const body = document.getElementById("rcs");
-    for (const rc of rcs) {
-      const row = body.insertRow();
-      for (const [value, cls] of [[rc.cycle, "num"], [rc.date], [rc.city ?? "-"], [rc.format], [rc.field_size, "num"], [rc.champion]]) {
-        const cell = row.insertCell();
-        cell.textContent = value;
-        if (cls) cell.className = cls;
+const layout = (x, y, extra = {}) => ({
+  xaxis: { title: { text: x }, dtick: 1 },
+  yaxis: { title: { text: y } },
+  margin: { t: 16 },
+  ...extra,
+});
+const config = { displayModeBar: false, responsive: true };
+
+Promise.all([fetch("data/rcs.json"), fetch("data/community.json")])
+  .then((responses) => Promise.all(responses.map((response) => response.json())))
+  .then(([rcs, community]) => {
+    const views = Object.keys(community.rcs_played);
+    // Each Format keeps its colour whichever view is shown.
+    const colour = Object.fromEntries(views.slice(1).map((format, i) => [format, ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728"][i]]));
+    const select = document.getElementById("format");
+    for (const view of views) select.add(new Option(view, view));
+
+    function show() {
+      const view = select.value;
+      const shown = rcs.filter((rc) => view === "Global" || rc.format === view);
+
+      const formats = [...new Set(shown.map((rc) => rc.format))];
+      Plotly.react("field-size", formats.map((format) => {
+        const inFormat = shown.filter((rc) => rc.format === format);
+        return { type: "bar", name: format, x: inFormat.map((rc) => rc.cycle), y: inFormat.map((rc) => rc.field_size), marker: { color: colour[format] } };
+      }), layout("Cycle", "Players"), config);
+
+      Plotly.react("new-returning", [
+        { type: "bar", name: "New", x: shown.map((rc) => rc.cycle), y: shown.map((rc) => rc.new_players) },
+        { type: "bar", name: "Returning", x: shown.map((rc) => rc.cycle), y: shown.map((rc) => rc.returning_players) },
+      ], layout("Cycle", "Players", { barmode: "stack" }), config);
+
+      const played = community.rcs_played[view];
+      Plotly.react("rcs-played", [
+        { type: "bar", x: played.map((row) => row.rcs), y: played.map((row) => row.players) },
+      ], layout("RCs played", "Players"), config);
+
+      const body = document.getElementById("rcs");
+      body.replaceChildren();
+      for (const rc of shown) {
+        const row = body.insertRow();
+        const champion = document.createElement("a");
+        champion.href = `player.html#${rc.champion.slug}`;
+        champion.textContent = rc.champion.name;
+        for (const [value, cls] of [[rc.cycle, "num"], [rc.date], [rc.city ?? "-"], [rc.format], [rc.field_size, "num"], [champion]]) {
+          const cell = row.insertCell();
+          cell.append(value);
+          if (cls) cell.className = cls;
+        }
       }
     }
+
+    select.addEventListener("change", show);
+    show();
   });
 </script>
 </body>

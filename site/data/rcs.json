@@ -5,7 +5,12 @@
   "city": "Sydney",
   "format": "Pioneer",
   "field_size": 152,
-  "champion": "Anthony Lee"
+  "champion": {
+   "slug": "mtgbentcard",
+   "name": "Anthony Lee"
+  },
+  "new_players": 152,
+  "returning_players": 0
  },
  {
   "cycle": 2,
@@ -13,7 +18,12 @@
   "city": null,
   "format": "Standard",
   "field_size": 132,
-  "champion": "Zen Miyaji-Thorne"
+  "champion": {
+   "slug": "planeswalkerzen",
+   "name": "Zen Miyaji-Thorne"
+  },
+  "new_players": 70,
+  "returning_players": 62
  },
  {
   "cycle": 3,
@@ -21,7 +31,12 @@
   "city": null,
   "format": "Pioneer",
   "field_size": 180,
-  "champion": "Ben Kemp"
+  "champion": {
+   "slug": "goodfriendmtg",
+   "name": "Ben Kemp"
+  },
+  "new_players": 79,
+  "returning_players": 101
  },
  {
   "cycle": 4,
@@ -29,7 +44,12 @@
   "city": "Sydney",
   "format": "Pioneer",
   "field_size": 156,
-  "champion": "Brett Girvan"
+  "champion": {
+   "slug": "danso",
+   "name": "Brett Girvan"
+  },
+  "new_players": 55,
+  "returning_players": 101
  },
  {
   "cycle": 5,
@@ -37,7 +57,12 @@
   "city": "Melbourne",
   "format": "Modern",
   "field_size": 228,
-  "champion": "James Wilks"
+  "champion": {
+   "slug": "forceofwilks",
+   "name": "James Wilks"
+  },
+  "new_players": 99,
+  "returning_players": 129
  },
  {
   "cycle": 6,
@@ -45,7 +70,12 @@
   "city": "Melbourne",
   "format": "Standard",
   "field_size": 168,
-  "champion": "Brennan Crawford"
+  "champion": {
+   "slug": "lillia",
+   "name": "Brennan Crawford"
+  },
+  "new_players": 47,
+  "returning_players": 121
  },
  {
   "cycle": 7,
@@ -53,7 +83,12 @@
   "city": "Sydney",
   "format": "Pioneer",
   "field_size": 221,
-  "champion": "James Moore"
+  "champion": {
+   "slug": "jimmy1",
+   "name": "James Moore"
+  },
+  "new_players": 61,
+  "returning_players": 160
  },
  {
   "cycle": 8,
@@ -61,7 +96,12 @@
   "city": "Sydney",
   "format": "Modern",
   "field_size": 154,
-  "champion": "Thomas Bot"
+  "champion": {
+   "slug": "venerablelammasu",
+   "name": "Thomas Bot"
+  },
+  "new_players": 43,
+  "returning_players": 112
  },
  {
   "cycle": 9,
@@ -69,7 +109,12 @@
   "city": "Melbourne",
   "format": "Standard",
   "field_size": 222,
-  "champion": "Jennifer-Rose Holloway"
+  "champion": {
+   "slug": "jenniferrose",
+   "name": "Jennifer-Rose Holloway"
+  },
+  "new_players": 72,
+  "returning_players": 150
  },
  {
   "cycle": 10,
@@ -77,7 +122,12 @@
   "city": "Melbourne",
   "format": "Modern",
   "field_size": 212,
-  "champion": "James Drake"
+  "champion": {
+   "slug": "jamesdrake",
+   "name": "James Drake"
+  },
+  "new_players": 62,
+  "returning_players": 151
  },
  {
   "cycle": 11,
@@ -85,7 +135,12 @@
   "city": "Sydney",
   "format": "Standard",
   "field_size": 209,
-  "champion": "Simon Linabury"
+  "champion": {
+   "slug": "simon_l",
+   "name": "Simon Linabury"
+  },
+  "new_players": 60,
+  "returning_players": 149
  },
  {
   "cycle": 12,
@@ -93,7 +148,12 @@
   "city": "Adelaide",
   "format": "Standard",
   "field_size": 188,
-  "champion": "Riley Beck"
+  "champion": {
+   "slug": "quiznium",
+   "name": "Riley Beck"
+  },
+  "new_players": 40,
+  "returning_players": 148
  },
  {
   "cycle": 13,
@@ -101,6 +161,11 @@
   "city": "Sydney",
   "format": "Modern",
   "field_size": 233,
-  "champion": "Jason Yan"
+  "champion": {
+   "slug": "stolensock16",
+   "name": "Jason Yan"
+  },
+  "new_players": 67,
+  "returning_players": 166
  }
 ]

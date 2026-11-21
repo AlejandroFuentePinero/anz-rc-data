@@ -2,6 +2,7 @@
 
 import json
 import shutil
+from collections import Counter
 from pathlib import Path
 
 from anzrc import identity, ratings, rcs
@@ -143,6 +144,7 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
     agreed = {(draw["cycle"], f"Round {draw['round']}", draw["table"]) for draw in curated["intentional_draws"]}
     found = set()
     rc_rows, cards, history = [], {}, []
+    seen = set()  # every Player at an earlier RC
     # Global from every Match, and each Format from its own Matches only.
     views: dict[str, dict[str, float]] = {"Global": {}}
     after_rc: dict[str, dict[str, list[dict]]] = {}  # each view's Ratings after every RC a Player was in
@@ -161,7 +163,7 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
                 "city": rc["city"] or None,
                 "format": rc["format"],
                 "field_size": len(standings),
-                "champion": champion["Team"]["Players"][0]["DisplayName"],
+                "champion": {key: players[_username(champion)][key] for key in ("slug", "name")},
             }
         )
         # Every Player of the RC: the final standings, and anyone missing from them who kept their Matches.
@@ -206,6 +208,10 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
             for view in ("Global", rc["format"]):
                 ratings.play_round(views.setdefault(view, {}), rated)
         history[-1]["players"] = list(dict.fromkeys(players[username]["slug"] for username in rc_players))
+        # A New Player is one at their first RC; everyone the RC has counts, the standings-missing included.
+        new = set(history[-1]["players"]) - seen
+        rc_rows[-1] |= {"new_players": len(new), "returning_players": len(history[-1]["players"]) - len(new)}
+        seen |= new
         for view in ("Global", rc["format"]):
             for slug in history[-1]["players"]:
                 rating = views[view].get(slug, ratings.START)
@@ -254,6 +260,12 @@ def build(raw: Path, rc_list: Path, curation: Path, out: Path) -> None:
         (out / "players" / f"{player['slug']}.json").write_text(json.dumps(player, indent=1) + "\n")
     index = [{key: player[key] for key in ("slug", "name", "usernames")} for player in cards.values()]
     (out / "players.json").write_text(json.dumps(index, indent=1) + "\n")
+    # How many Players have played each number of RCs, in Global and in each Format's RCs alone.
+    rcs_played = {}
+    for view in ["Global", *dict.fromkeys(rc["format"] for rc in rc_rows)]:
+        counts = Counter(sum(view in ("Global", rc["format"]) for rc in player["rcs"]) for player in cards.values())
+        rcs_played[view] = [{"rcs": n, "players": counts[n]} for n in sorted(counts) if n]
+    (out / "community.json").write_text(json.dumps({"rcs_played": rcs_played}, indent=1) + "\n")
 
 
 def main() -> None:
