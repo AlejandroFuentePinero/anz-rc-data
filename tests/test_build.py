@@ -237,28 +237,6 @@ def test_the_top_8_rate_by_experience_leaves_out_the_first_rc_where_everyone_was
         {"level": "4th-7th", "rcs": "4-7", "top_8s": 0, "entries": 0, "rate": None, "vs_first": None},
         {"level": "8th+", "rcs": "8+", "top_8s": 0, "entries": 0, "rate": None, "vs_first": None},
     ]
-    # Every level together: 8 of 10, and 80 / 50 = 1.6.
-    assert community["top_8_rate_overall"] == {"top_8s": 8, "entries": 10, "rate": 80.0, "vs_first": 1.6}
-
-
-def test_the_community_captions_give_the_typical_first_rc_share_and_how_many_players_reached_a_title_and_a_top_8(tmp_path):
-    eve = ("eve", "Eve Moss")
-    bundle = run_build(
-        tmp_path,
-        [
-            (1, "Pioneer", [(SWISS, [played(ANA, BEN, 2, 0)])], [standing(1, ANA), standing(2, BEN)]),
-            (2, "Modern", [(SWISS, [played(CAL, ANA, 2, 0)])], [standing(1, CAL), standing(2, ANA)]),  # cal new: 50%
-            (3, "Modern", [(SWISS, [played(ANA, BEN, 2, 0), played(CAL, DEE, 2, 0)])],
-             [standing(1, ANA), standing(2, BEN), standing(3, CAL), standing(4, DEE)]),  # dee new: 25%
-            (4, "Pioneer", [(SWISS, [played(BEN, ANA, 2, 0)])], [standing(1, BEN), standing(2, ANA)]),  # 0%
-            (5, "Pioneer", [(SWISS, [played(eve, ANA, 2, 0)])], [standing(1, eve), standing(2, ANA)]),  # eve new: 50%
-        ],
-    )
-
-    community = bundle.community()
-    # The median of 50, 25, 0 and 50, the first RC aside: the middle two are 25 and 50.
-    assert community["typical_first_rc_share"] == 37.5
-    assert (community["champions"], community["top_8_players"], community["top_8_places"]) == (4, 5, 12)
 
 
 def test_every_match_class_shows_its_result_and_only_played_matches_and_intentional_draws_count_in_the_record(tmp_path):

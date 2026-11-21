@@ -22,11 +22,10 @@
 <ul id="search-results"></ul>
 <div class="formats" id="formats"></div>
 
-<h2>How big is each RC?</h2>
+<h2>RC size</h2>
 <div id="field-size"></div>
 
-<h2>Every RC</h2>
-<p id="table-story"></p>
+<h2>RC history</h2>
 <div class="scroll">
 <table>
   <thead><tr><th>Cycle</th><th>Date</th><th>City</th><th>Format</th><th>Field Size</th><th>Champion</th><th>Finalist</th></tr></thead>
@@ -34,16 +33,15 @@
 </table>
 </div>
 
-<h2>Who fills each RC?</h2>
-<p>Across every RC. <span id="fill-story"></span></p>
+<h2>Field by Experience</h2>
 <div id="experience"></div>
 
-<h2>Does experience pay?</h2>
-<p>Across every RC. <span id="pay-story"></span></p>
+<h2>Top 8 rate by Experience</h2>
 <table>
   <thead><tr><th>Experience (RCs)</th><th>Entries</th><th>Top 8s</th><th>Top 8 rate</th><th>Against a first RC</th></tr></thead>
   <tbody id="top-8-rate"></tbody>
 </table>
+<p id="first-rc-note"></p>
 <script src="search.js"></script>
 <script>
 // Each level of experience runs light (new) to dark (8th+).
@@ -64,11 +62,8 @@ Promise.all([fetch("data/rcs.json"), fetch("data/community.json")])
   .then(([rcs, community]) => {
     const cycles = rcs.map((rc) => rc.cycle);
     const formats = [...new Set(rcs.map((rc) => rc.format))];
-    const [first, , , veteran] = community.top_8_rate_by_experience;
 
     // Across every RC: the field by experience and the Top 8 rate at each level. The Format filter leaves these.
-    document.getElementById("fill-story").textContent =
-      `At a typical RC, ${community.typical_first_rc_share}% of the field is at their first RC (Cycle ${cycles[0]} aside, where everyone was).`;
     Plotly.newPlot("experience", community.levels.map((level, j) => ({
       type: "bar", name: `At their ${level} RC`,
       x: community.field_by_experience.map((rc) => rc.cycle),
@@ -81,13 +76,9 @@ Promise.all([fetch("data/rcs.json"), fetch("data/community.json")])
       xaxis: { title: { text: "Cycle" }, tickvals: cycles }, yaxis: { title: { text: "Share of the field" }, ticksuffix: "%", range: [0, 100] },
     }, config);
 
-    document.getElementById("pay-story").textContent =
-      `Players at their 8th RC or later made the Top 8 ${veteran.rate}% of the time, ${veteran.vs_first} times the ${first.rate}% at a first RC. ` +
-      "An Entry is one Player at one RC. " +
-      "That shows who keeps coming back, strong Players among them, not that playing more makes anyone better. " +
-      `Cycle ${cycles[0]} is left out, where everyone was at their first RC.`;
+    document.getElementById("first-rc-note").textContent = `Cycle ${cycles[0]} left out: everyone there was at their first RC.`;
     const rates = document.getElementById("top-8-rate");
-    for (const level of [...community.top_8_rate_by_experience, { rcs: "All", ...community.top_8_rate_overall }]) {
+    for (const level of community.top_8_rate_by_experience) {
       const row = rates.insertRow();
       for (const value of [level.rcs, level.entries, level.top_8s, `${level.rate}%`, `×${level.vs_first.toFixed(1)}`]) {
         const cell = row.insertCell();
@@ -95,9 +86,6 @@ Promise.all([fetch("data/rcs.json"), fetch("data/community.json")])
         cell.className = "num";
       }
     }
-
-    document.getElementById("table-story").textContent =
-      `Across every RC: ${rcs.length} RCs, ${community.champions} different champions, and the ${community.top_8_places} Top 8 places went to ${community.top_8_players} Players.`;
 
     // The Format filter: the Field Size plot and the RC table.
     let view = "Global";

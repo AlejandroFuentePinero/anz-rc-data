@@ -2,7 +2,6 @@
 
 import json
 import shutil
-import statistics
 from pathlib import Path
 
 from anzrc import identity, ratings, rcs
@@ -272,8 +271,7 @@ def _level(nth: int) -> int:
 
 
 def _community(rc_rows: list[dict], cards: dict[str, dict]) -> dict:
-    """The scene across every RC: each field by experience, the Top 8 rate at each level of experience, and the
-    figures the captions quote.
+    """The scene across every RC: each field by experience, and the Top 8 rate at each level of experience.
 
     The rate leaves out the first RC, where everyone is at their first by construction, established Players too.
     """
@@ -286,10 +284,6 @@ def _community(rc_rows: list[dict], cards: dict[str, dict]) -> dict:
             if rc["cycle"] != rc_rows[0]["cycle"]:
                 entries[level] += 1
                 top_8s[level] += rc["finish"] in TOP_8
-    field_by_experience = [
-        {"cycle": cycle, "players": counts, "shares": [round(100 * n / sum(counts), 1) for n in counts]}
-        for cycle, counts in fields.items()
-    ]
     def rate(top: int, n: int) -> dict:
         """Top 8s over Entries, and how many times the rate at a first RC that is."""
         if not n:
@@ -297,21 +291,15 @@ def _community(rc_rows: list[dict], cards: dict[str, dict]) -> dict:
         first = top_8s[0] / entries[0] if entries[0] else 0
         return {"top_8s": top, "entries": n, "rate": round(100 * top / n, 1), "vs_first": round(top / n / first, 1) if first else None}
 
-    top_8_holders = [player["slug"] for player in cards.values() for rc in player["rcs"] if rc["finish"] in TOP_8]
     return {
         "levels": LEVELS,
-        "field_by_experience": field_by_experience,
-        # The share of a field at their first RC at the median RC, the first RC aside.
-        "typical_first_rc_share": round(statistics.median(rc["shares"][0] for rc in field_by_experience[1:]), 1)
-        if len(field_by_experience) > 1
-        else None,
-        "champions": len({rc["champion"]["slug"] for rc in rc_rows}),
-        "top_8_players": len(set(top_8_holders)),
-        "top_8_places": len(top_8_holders),
+        "field_by_experience": [
+            {"cycle": cycle, "players": counts, "shares": [round(100 * n / sum(counts), 1) for n in counts]}
+            for cycle, counts in fields.items()
+        ],
         "top_8_rate_by_experience": [
             {"level": name, "rcs": span} | rate(top, n) for name, span, top, n in zip(LEVELS, LEVEL_RCS, top_8s, entries)
         ],
-        "top_8_rate_overall": rate(sum(top_8s), sum(entries)),
     }
 
 

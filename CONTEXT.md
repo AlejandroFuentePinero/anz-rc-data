@@ -59,7 +59,7 @@ Reaching an RC's playoff, the result the scene counts most after winning it.
 _Avoid_: Cut, day 2
 
 **Top 8 rate**:
-Top 8s over RCs played: a Player's own (3 of 7), or every Entry's at one level of Experience (15 of 192) or across every level.
+Top 8s over RCs played: a Player's own (3 of 7), or every Entry's at one level of Experience (15 of 192).
 
 **Entry**:
 One Player at one RC. A Player at two RCs is two Entries.
