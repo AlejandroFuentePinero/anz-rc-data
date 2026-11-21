@@ -61,7 +61,7 @@ table { width: 100%; border-collapse: collapse; font-size: 15px; }
 th, td { text-align: center; vertical-align: middle; }
 th { padding: 8px 6px; font-size: 14px; font-weight: 600; color: var(--ink); border-bottom: 0.5px solid var(--rule-strong); }
 td { padding: 7px 6px; color: var(--ink-2); border-bottom: 0.5px solid var(--rule); }
-td .whole { white-space: nowrap; }
+td .whole, th .whole { white-space: nowrap; }
 td.num { white-space: nowrap; font-variant-numeric: tabular-nums; }
 tbody tr:last-child > td { border-bottom: 0; }
 tr.global td { color: var(--ink); font-weight: 650; }
@@ -73,8 +73,11 @@ table.sortable th[aria-sort="descending"]::after { content: " ↓"; }
 /* Player card: rows that open their rounds. */
 tr.rc { cursor: pointer; }
 tr.rc:hover > td { background: var(--hover); }
-tr.rc td:first-child::before { content: "▸ "; color: var(--ink-muted); }
-tr.rc.open td:first-child::before { content: "▾ "; }
+/* A chevron sized to the text, pointing right, turning down once the row is open. */
+tr.rc td:first-child::before { content: ""; display: inline-block; width: 0.42em; height: 0.42em; margin: 0 0.6em 0.12em 0;
+  border-right: 2px solid var(--ink-muted); border-bottom: 2px solid var(--ink-muted); transform: rotate(-45deg); transition: transform 150ms; }
+tr.rc:hover td:first-child::before { border-color: var(--ink); }
+tr.rc.open td:first-child::before { transform: rotate(45deg); margin-bottom: 0.25em; }
 tr.rc.open > td { background: var(--sunk); border-bottom-color: transparent; }
 tr.rounds > td { background: var(--sunk); padding: 0 16px 14px; }
 tr.rounds table { background: var(--raised); border-radius: 8px; }

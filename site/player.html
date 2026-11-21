@@ -184,8 +184,8 @@ function draw() {
   summary.replaceChildren();
   for (const name of VIEWS) {
     const s = card.summary[name];
-    if (!s) { addRow(summary, [[name], ...Array(10).fill([null])]); continue; }
-    addRow(summary, [[name], ...summaryCells(s, card.ratings[name])], name === "Global" ? "global" : null);
+    if (!s) { addRow(summary, [[name === "Global" ? "All" : name], ...Array(10).fill([null])]); continue; }
+    addRow(summary, [[name === "Global" ? "All" : name], ...summaryCells(s, card.ratings[name])], name === "Global" ? "global" : null);
   }
 
   const body = document.getElementById("rcs");

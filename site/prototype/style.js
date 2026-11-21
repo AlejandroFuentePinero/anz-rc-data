@@ -100,9 +100,10 @@
     new MutationObserver((changes) => {
       for (const change of changes) for (const node of change.addedNodes) {
         if (node.nodeType !== Node.ELEMENT_NODE) continue;
-        (node.matches("td") ? [node] : node.querySelectorAll("td")).forEach(keepWhole);
+        (node.matches("td, th") ? [node] : node.querySelectorAll("td, th")).forEach(keepWhole);
       }
     }).observe(document.body, { childList: true, subtree: true });
+    document.querySelectorAll("th").forEach(keepWhole);  // the headers written in the page itself
     const box = document.getElementById("search");
     const results = document.getElementById("search-results");
     const close = () => results.replaceChildren();
