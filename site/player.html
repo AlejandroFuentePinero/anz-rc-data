@@ -46,7 +46,7 @@
 <h2>RC history</h2>
 <div class="scroll">
 <table class="history">
-  <thead><tr><th class="num">RC Cycle</th><th>City and year</th><th>Format</th><th>Finish</th><th class="num">Field</th><th>Deck</th><th>W-L-D</th><th class="num">Win rate</th><th class="num">Rating at start</th><th class="num">Rating at end</th></tr></thead>
+  <thead><tr><th class="num">RC Cycle</th><th>City and year</th><th>Format</th><th>Finish</th><th>Deck</th><th>W-L-D</th><th class="num">Win rate</th><th class="num">Rating</th></tr></thead>
   <tbody id="rcs"></tbody>
 </table>
 </div>
@@ -193,8 +193,8 @@ function draw() {
   for (const rc of card.rcs) {
     const row = addRow(body, [
       [rc.cycle, "num"], [[card.city[rc.cycle], rc.date.slice(0, 4)].filter(Boolean).join(" ")], [rc.format],
-      [rc.finish], [rc.field_size, "num"], [rc.deck && link(rc.deck, rc.decklist)], [rc.record], [rate(rc.win_rate), "num"],
-      [rating(rc.rating_start.Global), "num"], [rating(rc.rating_end.Global), "num"],
+      [rc.finish], [rc.deck && link(rc.deck, rc.decklist)], [rc.record], [rate(rc.win_rate), "num"],
+      [`${rating(rc.rating_start.Global)} → ${rating(rc.rating_end.Global)}`, "num"],
     ], open.has(rc.cycle) ? "rc open" : "rc");
     row.addEventListener("click", (event) => {
       if (event.target.closest("a")) return;  // the deck link opens the decklist, not the rounds
@@ -290,7 +290,7 @@ function rounds(rc) {
   const row = document.createElement("tr");
   row.className = "rounds";
   const cell = row.insertCell();
-  cell.colSpan = 10;
+  cell.colSpan = 8;
   cell.append(table);
   return row;
 }
