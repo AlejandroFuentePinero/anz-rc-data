@@ -26,7 +26,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500,
+    "Modern": 1500
+   }
   },
   {
    "cycle": 13,
@@ -37,7 +41,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1466.58,
+    "Modern": 1464.03
+   }
   },
   {
    "cycle": 13,
@@ -48,7 +56,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1501.75,
+    "Modern": 1500.0
+   }
   },
   {
    "cycle": 13,
@@ -59,7 +71,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1579.81,
+    "Modern": 1551.05
+   }
   },
   {
    "cycle": 13,
@@ -70,7 +86,11 @@
    },
    "result": "Draw",
    "games": "1-1-1",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1406.26,
+    "Modern": 1465.82
+   }
   },
   {
    "cycle": 13,
@@ -81,7 +101,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1466.08,
+    "Modern": 1464.55
+   }
   },
   {
    "cycle": 13,
@@ -92,7 +116,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1486.76,
+    "Modern": 1485.03
+   }
   },
   {
    "cycle": 13,
@@ -103,7 +131,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1636.77,
+    "Modern": 1598.34
+   }
   },
   {
    "cycle": 13,
@@ -114,7 +146,34 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1464.12,
+    "Modern": 1456.77
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1502.65,
+   "peak": 1502.65,
+   "after_rc": [
+    {
+     "cycle": 13,
+     "rating": 1502.65
+    }
+   ]
+  },
+  "Modern": {
+   "rating": 1502.25,
+   "peak": 1502.25,
+   "after_rc": [
+    {
+     "cycle": 13,
+     "rating": 1502.25
+    }
+   ],
+   "rated_by": "Modern"
+  }
+ }
 }

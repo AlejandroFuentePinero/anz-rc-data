@@ -26,7 +26,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1560.99,
+    "Standard": 1517.32
+   }
   },
   {
    "cycle": 12,
@@ -37,7 +41,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1522.51,
+    "Standard": 1517.67
+   }
   },
   {
    "cycle": 12,
@@ -48,7 +56,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500.32,
+    "Standard": 1501.08
+   }
   },
   {
    "cycle": 12,
@@ -59,7 +71,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1526.57,
+    "Standard": 1520.96
+   }
   },
   {
    "cycle": 12,
@@ -70,7 +86,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1507.78,
+    "Standard": 1502.74
+   }
   },
   {
    "cycle": 12,
@@ -79,9 +99,36 @@
     "slug": "apellosine",
     "name": "Apellosine"
    },
-   "result": "Intentional Draw",
+   "result": "Draw",
    "games": "0-0-3",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1534.67,
+    "Standard": 1531.88
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1484.35,
+   "peak": 1484.35,
+   "after_rc": [
+    {
+     "cycle": 12,
+     "rating": 1484.35
+    }
+   ]
+  },
+  "Standard": {
+   "rating": 1483.31,
+   "peak": 1483.31,
+   "after_rc": [
+    {
+     "cycle": 12,
+     "rating": 1483.31
+    }
+   ],
+   "rated_by": "Standard"
+  }
+ }
 }

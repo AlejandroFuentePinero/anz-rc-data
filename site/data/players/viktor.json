@@ -21,12 +21,16 @@
    "cycle": 3,
    "round": "Round 1",
    "opponent": {
-    "slug": "johneb",
+    "slug": "jleb",
     "name": "johneb"
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500.0,
+    "Pioneer": 1500.0
+   }
   },
   {
    "cycle": 3,
@@ -37,7 +41,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1518.0,
+    "Pioneer": 1518.0
+   }
   },
   {
    "cycle": 3,
@@ -48,7 +56,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1604.36,
+    "Pioneer": 1536.66
+   }
   },
   {
    "cycle": 3,
@@ -59,7 +71,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1484.56,
+    "Pioneer": 1484.56
+   }
   },
   {
    "cycle": 3,
@@ -70,7 +86,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1536.9,
+    "Pioneer": 1536.92
+   }
   },
   {
    "cycle": 3,
@@ -81,7 +101,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1408.19,
+    "Pioneer": 1451.76
+   }
   },
   {
    "cycle": 3,
@@ -92,7 +116,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1671.25,
+    "Pioneer": 1536.91
+   }
   },
   {
    "cycle": 3,
@@ -103,7 +131,34 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1536.46,
+    "Pioneer": 1536.33
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1538.0,
+   "peak": 1538.0,
+   "after_rc": [
+    {
+     "cycle": 3,
+     "rating": 1538.0
+    }
+   ]
+  },
+  "Pioneer": {
+   "rating": 1535.25,
+   "peak": 1535.25,
+   "after_rc": [
+    {
+     "cycle": 3,
+     "rating": 1535.25
+    }
+   ],
+   "rated_by": "Pioneer"
+  }
+ }
 }

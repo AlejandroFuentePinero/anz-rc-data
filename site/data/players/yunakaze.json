@@ -26,7 +26,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1426.62,
+    "Modern": 1500
+   }
   },
   {
    "cycle": 5,
@@ -37,7 +41,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1553.08,
+    "Modern": 1518.0
+   }
   },
   {
    "cycle": 5,
@@ -48,18 +56,26 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1543.25,
+    "Modern": 1536.0
+   }
   },
   {
    "cycle": 5,
    "round": "Round 4",
    "opponent": {
     "slug": "scubasteve",
-    "name": "Scubasteve"
+    "name": "scubasteve91"
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1517.35,
+    "Modern": 1518.0
+   }
   },
   {
    "cycle": 5,
@@ -70,7 +86,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500.78,
+    "Modern": 1500.0
+   }
   },
   {
    "cycle": 5,
@@ -81,7 +101,34 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1484.08,
+    "Modern": 1482.0
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1463.54,
+   "peak": 1463.54,
+   "after_rc": [
+    {
+     "cycle": 5,
+     "rating": 1463.54
+    }
+   ]
+  },
+  "Modern": {
+   "rating": 1464.0,
+   "peak": 1464.0,
+   "after_rc": [
+    {
+     "cycle": 5,
+     "rating": 1464.0
+    }
+   ],
+   "rated_by": "Modern"
+  }
+ }
 }

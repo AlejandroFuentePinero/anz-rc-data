@@ -37,7 +37,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500,
+    "Pioneer": 1500
+   }
   },
   {
    "cycle": 1,
@@ -48,7 +52,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1518.0,
+    "Pioneer": 1518.0
+   }
   },
   {
    "cycle": 1,
@@ -59,7 +67,11 @@
    },
    "result": "Draw",
    "games": "1-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500.0,
+    "Pioneer": 1500.0
+   }
   },
   {
    "cycle": 1,
@@ -70,7 +82,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1518.0,
+    "Pioneer": 1518.0
+   }
   },
   {
    "cycle": 1,
@@ -81,7 +97,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1518.0,
+    "Pioneer": 1518.0
+   }
   },
   {
    "cycle": 1,
@@ -92,7 +112,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1518.33,
+    "Pioneer": 1518.33
+   }
   },
   {
    "cycle": 1,
@@ -103,7 +127,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1518.33,
+    "Pioneer": 1518.33
+   }
   },
   {
    "cycle": 3,
@@ -114,7 +142,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1574.66,
+    "Pioneer": 1499.69
+   }
   },
   {
    "cycle": 3,
@@ -125,7 +157,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1553.36,
+    "Pioneer": 1552.69
+   }
   },
   {
    "cycle": 3,
@@ -136,7 +172,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1534.69,
+    "Pioneer": 1534.69
+   }
   },
   {
    "cycle": 3,
@@ -147,7 +187,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1482.02,
+    "Pioneer": 1482.02
+   }
   },
   {
    "cycle": 3,
@@ -158,7 +202,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1450.82,
+    "Pioneer": 1502.11
+   }
   },
   {
    "cycle": 3,
@@ -169,7 +217,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1530.32,
+    "Pioneer": 1517.01
+   }
   },
   {
    "cycle": 3,
@@ -178,9 +230,13 @@
     "slug": "calhowes",
     "name": "Callum Howes"
    },
-   "result": "Intentional Draw",
+   "result": "Draw",
    "games": "0-0-3",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1530.39,
+    "Pioneer": 1529.07
+   }
   },
   {
    "cycle": 3,
@@ -191,7 +247,42 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1433.83,
+    "Pioneer": 1482.28
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1449.58,
+   "peak": 1500.0,
+   "after_rc": [
+    {
+     "cycle": 1,
+     "rating": 1500.0
+    },
+    {
+     "cycle": 3,
+     "rating": 1449.58
+    }
+   ]
+  },
+  "Pioneer": {
+   "rating": 1449.88,
+   "peak": 1500.0,
+   "after_rc": [
+    {
+     "cycle": 1,
+     "rating": 1500.0
+    },
+    {
+     "cycle": 3,
+     "rating": 1449.88
+    }
+   ],
+   "rated_by": "Pioneer"
+  }
+ }
 }

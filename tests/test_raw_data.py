@@ -68,13 +68,13 @@ def test_main_decks_count_60_or_more_and_sideboards_15_or_fewer_bar_the_listed_e
     assert outside == DECKLIST_COUNT_EXCEPTIONS
 
 
-def test_the_real_data_builds_921_players_with_the_six_same_real_name_pairs_joined(tmp_path):
+def test_the_real_data_builds_907_players_with_the_same_real_name_pairs_and_the_curated_joins(tmp_path):
     build(ROOT / rcs.RAW, ROOT / rcs.RC_LIST, ROOT / CURATION, tmp_path)
     index = json.loads((tmp_path / "players.json").read_text())
     by_username = {username: player for player in index for username in player["usernames"]}
 
     assert len(by_username) == 927
-    assert len(index) == 921
+    assert len(index) == 907  # 921 accounts-as-Players after the six rule joins, less the 14 curated joins
     pairs = [
         ("Swiftclaw", "Swiftclaw_"),
         ("Dimmers", "Dimmer"),
@@ -84,6 +84,7 @@ def test_the_real_data_builds_921_players_with_the_six_same_real_name_pairs_join
         ("tylervisser", "tylervisserr"),
     ]
     assert all(by_username[a] is by_username[b] for a, b in pairs)
+    assert by_username["WillowS"] is by_username["WillowMoon99"]  # a curated join, from mtgeloproject
     assert by_username["alejandrofp"]["name"] == "Alejandro de la Fuente"
 
 

@@ -26,7 +26,11 @@
    },
    "result": "Draw",
    "games": "1-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500,
+    "Modern": 1500
+   }
   },
   {
    "cycle": 10,
@@ -37,7 +41,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1442.97,
+    "Modern": 1434.06
+   }
   },
   {
    "cycle": 10,
@@ -48,7 +56,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1471.27,
+    "Modern": 1468.5
+   }
   },
   {
    "cycle": 10,
@@ -59,7 +71,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1447.15,
+    "Modern": 1459.68
+   }
   },
   {
    "cycle": 10,
@@ -70,7 +86,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1432.57,
+    "Modern": 1428.38
+   }
   },
   {
    "cycle": 10,
@@ -78,7 +98,8 @@
    "opponent": null,
    "result": "Bye",
    "games": null,
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": null
   },
   {
    "cycle": 10,
@@ -89,7 +110,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1438.89,
+    "Modern": 1445.73
+   }
   },
   {
    "cycle": 10,
@@ -100,7 +125,34 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1402.23,
+    "Modern": 1446.35
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1390.4,
+   "peak": 1390.4,
+   "after_rc": [
+    {
+     "cycle": 10,
+     "rating": 1390.4
+    }
+   ]
+  },
+  "Modern": {
+   "rating": 1391.27,
+   "peak": 1391.27,
+   "after_rc": [
+    {
+     "cycle": 10,
+     "rating": 1391.27
+    }
+   ],
+   "rated_by": "Modern"
+  }
+ }
 }

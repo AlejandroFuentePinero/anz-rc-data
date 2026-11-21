@@ -8,6 +8,8 @@ dependencies = ["requests>=2.32,<3"]
 [project.scripts]
 anzrc-fetch = "anzrc.fetch:main"
 anzrc-build = "anzrc.build:main"
+anzrc-measure = "anzrc.measure:main"
+anzrc-fetch-mtgelo = "anzrc.mtgelo:main"
 
 [dependency-groups]
 dev = ["pytest>=8"]

@@ -26,7 +26,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1673.49,
+    "Standard": 1510.88
+   }
   },
   {
    "cycle": 11,
@@ -37,7 +41,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1761.13,
+    "Standard": 1711.54
+   }
   },
   {
    "cycle": 11,
@@ -48,7 +56,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1472.52,
+    "Standard": 1467.95
+   }
   },
   {
    "cycle": 11,
@@ -59,7 +71,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1444.47,
+    "Standard": 1446.03
+   }
   },
   {
    "cycle": 11,
@@ -70,7 +86,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1448.41,
+    "Standard": 1458.41
+   }
   },
   {
    "cycle": 11,
@@ -78,7 +98,8 @@
    "opponent": null,
    "result": "Bye",
    "games": null,
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": null
   },
   {
    "cycle": 11,
@@ -89,7 +110,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1434.77,
+    "Standard": 1429.58
+   }
   },
   {
    "cycle": 11,
@@ -100,7 +125,34 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1415.85,
+    "Standard": 1413.69
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1454.03,
+   "peak": 1454.03,
+   "after_rc": [
+    {
+     "cycle": 11,
+     "rating": 1454.03
+    }
+   ]
+  },
+  "Standard": {
+   "rating": 1450.62,
+   "peak": 1450.62,
+   "after_rc": [
+    {
+     "cycle": 11,
+     "rating": 1450.62
+    }
+   ],
+   "rated_by": "Standard"
+  }
+ }
 }

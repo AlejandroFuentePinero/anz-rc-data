@@ -1,8 +1,9 @@
 {
  "slug": "gl000p",
- "name": "Gl000p",
+ "name": "Josh Bradbury",
  "usernames": [
-  "Gl000p"
+  "Gl000p",
+  "glooop"
  ],
  "rcs": [
   {
@@ -14,6 +15,26 @@
    "record": "4-4-0",
    "deck": "Abzan Greasefang",
    "decklist": "https://melee.gg/Decklist/View/4466e9de-94c6-4cb6-ba55-a49c9a2b5da6"
+  },
+  {
+   "cycle": 4,
+   "date": "2023-10-27",
+   "format": "Pioneer",
+   "finish": "Finalist",
+   "field_size": 156,
+   "record": "8-2-1",
+   "deck": "Abzan Greasefang",
+   "decklist": "https://melee.gg/Decklist/View/8b1db925-8833-4893-8843-5cea8554cb9f"
+  },
+  {
+   "cycle": 5,
+   "date": "2024-03-08",
+   "format": "Modern",
+   "finish": "130th",
+   "field_size": 228,
+   "record": "3-3-0",
+   "deck": "Azorius Hammer",
+   "decklist": "https://melee.gg/Decklist/View/f1ac686c-8385-44da-a6fd-c5c9f70a47e6"
   }
  ],
  "matches": [
@@ -26,7 +47,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1518.1,
+    "Pioneer": 1500
+   }
   },
   {
    "cycle": 3,
@@ -37,7 +62,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1482.0,
+    "Pioneer": 1482.0
+   }
   },
   {
    "cycle": 3,
@@ -48,7 +77,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1583.53,
+    "Pioneer": 1583.9
+   }
   },
   {
    "cycle": 3,
@@ -59,7 +92,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1483.26,
+    "Pioneer": 1483.26
+   }
   },
   {
    "cycle": 3,
@@ -70,7 +107,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1463.0,
+    "Pioneer": 1463.97
+   }
   },
   {
    "cycle": 3,
@@ -81,7 +122,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1482.5,
+    "Pioneer": 1481.44
+   }
   },
   {
    "cycle": 3,
@@ -92,7 +137,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1503.22,
+    "Pioneer": 1502.44
+   }
   },
   {
    "cycle": 3,
@@ -103,7 +152,312 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1537.92,
+    "Pioneer": 1538.01
+   }
+  },
+  {
+   "cycle": 4,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "juzza",
+    "name": "Justin Cheung"
+   },
+   "result": "Win",
+   "games": "2-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1395.51,
+    "Pioneer": 1447.26
+   }
+  },
+  {
+   "cycle": 4,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "garyjohnson1",
+    "name": "GaryJohnson1"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1551.77,
+    "Pioneer": 1553.14
+   }
+  },
+  {
+   "cycle": 4,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "calmmirror",
+    "name": "Samuel Maher"
+   },
+   "result": "Win",
+   "games": "2-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1525.78,
+    "Pioneer": 1505.39
+   }
+  },
+  {
+   "cycle": 4,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "nmp",
+    "name": "Nicholas Malcolm Preston"
+   },
+   "result": "Win",
+   "games": "2-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1604.05,
+    "Pioneer": 1604.03
+   }
+  },
+  {
+   "cycle": 4,
+   "round": "Round 5",
+   "opponent": {
+    "slug": "voltie",
+    "name": "Voltie"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1633.55,
+    "Pioneer": 1632.39
+   }
+  },
+  {
+   "cycle": 4,
+   "round": "Round 6",
+   "opponent": {
+    "slug": "bronson190",
+    "name": "NathW"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1539.99,
+    "Pioneer": 1539.33
+   }
+  },
+  {
+   "cycle": 4,
+   "round": "Round 7",
+   "opponent": {
+    "slug": "calgit",
+    "name": "Calum Gittins"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1641.06,
+    "Pioneer": 1626.27
+   }
+  },
+  {
+   "cycle": 4,
+   "round": "Round 8",
+   "opponent": {
+    "slug": "assembledalphas",
+    "name": "Matthew Giudes"
+   },
+   "result": "Intentional Draw",
+   "games": "0-0-3",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1671.88,
+    "Pioneer": 1648.48
+   }
+  },
+  {
+   "cycle": 4,
+   "round": "Quarterfinal",
+   "opponent": {
+    "slug": "lostwanderer",
+    "name": "Dillon Kikkawa"
+   },
+   "result": "Win",
+   "games": null,
+   "reconstructed": true,
+   "opponent_rating": {
+    "Global": 1734.67,
+    "Pioneer": 1712.38
+   }
+  },
+  {
+   "cycle": 4,
+   "round": "Semifinal",
+   "opponent": {
+    "slug": "assembledalphas",
+    "name": "Matthew Giudes"
+   },
+   "result": "Win",
+   "games": null,
+   "reconstructed": true,
+   "opponent_rating": {
+    "Global": 1688.2,
+    "Pioneer": 1665.18
+   }
+  },
+  {
+   "cycle": 4,
+   "round": "Final",
+   "opponent": {
+    "slug": "danso",
+    "name": "Brett Girvan"
+   },
+   "result": "Loss",
+   "games": null,
+   "reconstructed": true,
+   "opponent_rating": {
+    "Global": 1603.76,
+    "Pioneer": 1646.92
+   }
+  },
+  {
+   "cycle": 5,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "sirchristophr",
+    "name": "Christopher Bilboe"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500,
+    "Modern": 1500
+   }
+  },
+  {
+   "cycle": 5,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "kirblinx",
+    "name": "Jamie Schoneveld"
+   },
+   "result": "Loss",
+   "games": "1-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1589.63,
+    "Modern": 1518.0
+   }
+  },
+  {
+   "cycle": 5,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "hanrahandh",
+    "name": "dylan hanrahan"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1551.55,
+    "Modern": 1500.0
+   }
+  },
+  {
+   "cycle": 5,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "nino111",
+    "name": "Nino Manera"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1467.98,
+    "Modern": 1518.0
+   }
+  },
+  {
+   "cycle": 5,
+   "round": "Round 5",
+   "opponent": {
+    "slug": "mattdodd",
+    "name": "Matt Dodd"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1499.78,
+    "Modern": 1500.0
+   }
+  },
+  {
+   "cycle": 5,
+   "round": "Round 6",
+   "opponent": {
+    "slug": "scubasteve",
+    "name": "scubasteve91"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1517.76,
+    "Modern": 1518.0
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1606.59,
+   "peak": 1617.62,
+   "after_rc": [
+    {
+     "cycle": 3,
+     "rating": 1503.31
+    },
+    {
+     "cycle": 4,
+     "rating": 1617.62
+    },
+    {
+     "cycle": 5,
+     "rating": 1606.59
+    }
+   ]
+  },
+  "Pioneer": {
+   "rating": 1617.57,
+   "peak": 1617.57,
+   "after_rc": [
+    {
+     "cycle": 3,
+     "rating": 1503.02
+    },
+    {
+     "cycle": 4,
+     "rating": 1617.57
+    }
+   ],
+   "rated_by": "Pioneer"
+  },
+  "Modern": {
+   "rating": 1500.0,
+   "peak": 1500.0,
+   "after_rc": [
+    {
+     "cycle": 5,
+     "rating": 1500.0
+    }
+   ],
+   "rated_by": "Modern"
+  }
+ }
 }

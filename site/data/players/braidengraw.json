@@ -21,12 +21,16 @@
    "cycle": 8,
    "round": "Round 1",
    "opponent": {
-    "slug": "andrewdrake",
-    "name": "AndrewDrake"
+    "slug": "andrewd2",
+    "name": "AndrewD2"
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1665.6,
+    "Modern": 1518.01
+   }
   },
   {
    "cycle": 8,
@@ -37,7 +41,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1491.45,
+    "Modern": 1482.33
+   }
   },
   {
    "cycle": 8,
@@ -48,7 +56,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1764.61,
+    "Modern": 1448.57
+   }
   },
   {
    "cycle": 8,
@@ -59,7 +71,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1521.28,
+    "Modern": 1445.34
+   }
   },
   {
    "cycle": 8,
@@ -70,7 +86,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1508.84,
+    "Modern": 1428.65
+   }
   },
   {
    "cycle": 8,
@@ -81,7 +101,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1378.2,
+    "Modern": 1445.77
+   }
   },
   {
    "cycle": 8,
@@ -92,7 +116,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1424.59,
+    "Modern": 1428.06
+   }
   },
   {
    "cycle": 8,
@@ -103,7 +131,34 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1453.84,
+    "Modern": 1445.39
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1436.58,
+   "peak": 1436.58,
+   "after_rc": [
+    {
+     "cycle": 8,
+     "rating": 1436.58
+    }
+   ]
+  },
+  "Modern": {
+   "rating": 1427.4,
+   "peak": 1427.4,
+   "after_rc": [
+    {
+     "cycle": 8,
+     "rating": 1427.4
+    }
+   ],
+   "rated_by": "Modern"
+  }
+ }
 }

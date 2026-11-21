@@ -26,7 +26,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1608.59,
+    "Modern": 1500
+   }
   },
   {
    "cycle": 8,
@@ -37,7 +41,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1468.09,
+    "Modern": 1464.33
+   }
   },
   {
    "cycle": 8,
@@ -48,7 +56,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1561.8,
+    "Modern": 1446.35
+   }
   },
   {
    "cycle": 8,
@@ -59,7 +71,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1448.79,
+    "Modern": 1446.65
+   }
   },
   {
    "cycle": 8,
@@ -70,7 +86,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1541.54,
+    "Modern": 1462.48
+   }
   },
   {
    "cycle": 8,
@@ -81,7 +101,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1518.68,
+    "Modern": 1445.37
+   }
   },
   {
    "cycle": 8,
@@ -92,7 +116,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1570.63,
+    "Modern": 1464.67
+   }
   },
   {
    "cycle": 8,
@@ -103,7 +131,34 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1454.6,
+    "Modern": 1445.4
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1471.85,
+   "peak": 1471.85,
+   "after_rc": [
+    {
+     "cycle": 8,
+     "rating": 1471.85
+    }
+   ]
+  },
+  "Modern": {
+   "rating": 1463.39,
+   "peak": 1463.39,
+   "after_rc": [
+    {
+     "cycle": 8,
+     "rating": 1463.39
+    }
+   ],
+   "rated_by": "Modern"
+  }
+ }
 }

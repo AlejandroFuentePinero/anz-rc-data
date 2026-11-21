@@ -26,7 +26,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1506.68,
+    "Modern": 1500
+   }
   },
   {
    "cycle": 5,
@@ -37,7 +41,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1517.0,
+    "Modern": 1518.0
+   }
   },
   {
    "cycle": 5,
@@ -48,18 +56,26 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1502.59,
+    "Modern": 1536.0
+   }
   },
   {
    "cycle": 5,
    "round": "Round 4",
    "opponent": {
     "slug": "jleb",
-    "name": "John Eastgate-Brown"
+    "name": "johneb"
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1521.36,
+    "Modern": 1554.0
+   }
   },
   {
    "cycle": 5,
@@ -70,7 +86,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1603.52,
+    "Modern": 1535.99
+   }
   },
   {
    "cycle": 5,
@@ -81,18 +101,26 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1574.72,
+    "Modern": 1518.0
+   }
   },
   {
    "cycle": 5,
    "round": "Round 7",
    "opponent": {
     "slug": "scubasteve",
-    "name": "Scubasteve"
+    "name": "scubasteve91"
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1537.74,
+    "Modern": 1536.0
+   }
   },
   {
    "cycle": 5,
@@ -103,7 +131,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1575.48,
+    "Modern": 1554.0
+   }
   },
   {
    "cycle": 5,
@@ -114,7 +146,34 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1467.7,
+    "Modern": 1536.0
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1554.29,
+   "peak": 1554.29,
+   "after_rc": [
+    {
+     "cycle": 5,
+     "rating": 1554.29
+    }
+   ]
+  },
+  "Modern": {
+   "rating": 1554.0,
+   "peak": 1554.0,
+   "after_rc": [
+    {
+     "cycle": 5,
+     "rating": 1554.0
+    }
+   ],
+   "rated_by": "Modern"
+  }
+ }
 }

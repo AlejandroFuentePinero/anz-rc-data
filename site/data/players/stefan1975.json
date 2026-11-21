@@ -26,18 +26,26 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1477.89,
+    "Standard": 1500
+   }
   },
   {
    "cycle": 11,
    "round": "Round 2",
    "opponent": {
     "slug": "cynthia",
-    "name": "Cynthia"
+    "name": "Cynthiaaa"
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1521.57,
+    "Standard": 1518.29
+   }
   },
   {
    "cycle": 11,
@@ -48,7 +56,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1497.16,
+    "Standard": 1497.31
+   }
   },
   {
    "cycle": 11,
@@ -59,7 +71,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1498.04,
+    "Standard": 1447.9
+   }
   },
   {
    "cycle": 11,
@@ -70,7 +86,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1451.74,
+    "Standard": 1447.61
+   }
   },
   {
    "cycle": 11,
@@ -81,7 +101,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1474.83,
+    "Standard": 1465.94
+   }
   },
   {
    "cycle": 11,
@@ -92,7 +116,34 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1618.98,
+    "Standard": 1482.31
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1448.39,
+   "peak": 1448.39,
+   "after_rc": [
+    {
+     "cycle": 11,
+     "rating": 1448.39
+    }
+   ]
+  },
+  "Standard": {
+   "rating": 1445.13,
+   "peak": 1445.13,
+   "after_rc": [
+    {
+     "cycle": 11,
+     "rating": 1445.13
+    }
+   ],
+   "rated_by": "Standard"
+  }
+ }
 }

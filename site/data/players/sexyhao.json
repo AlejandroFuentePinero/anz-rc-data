@@ -26,7 +26,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1501.96,
+    "Modern": 1500
+   }
   },
   {
    "cycle": 13,
@@ -37,7 +41,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1524.41,
+    "Modern": 1520.14
+   }
   },
   {
    "cycle": 13,
@@ -48,7 +56,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1545.08,
+    "Modern": 1536.0
+   }
   },
   {
    "cycle": 13,
@@ -59,7 +71,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1522.33,
+    "Modern": 1519.72
+   }
   },
   {
    "cycle": 13,
@@ -70,7 +86,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1561.18,
+    "Modern": 1496.94
+   }
   },
   {
    "cycle": 13,
@@ -81,7 +101,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1706.91,
+    "Modern": 1605.4
+   }
   },
   {
    "cycle": 13,
@@ -92,7 +116,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1506.46,
+    "Modern": 1503.84
+   }
   },
   {
    "cycle": 13,
@@ -103,7 +131,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1522.92,
+    "Modern": 1518.74
+   }
   },
   {
    "cycle": 13,
@@ -114,7 +146,34 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1509.82,
+    "Modern": 1506.44
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1486.38,
+   "peak": 1486.38,
+   "after_rc": [
+    {
+     "cycle": 13,
+     "rating": 1486.38
+    }
+   ]
+  },
+  "Modern": {
+   "rating": 1483.1,
+   "peak": 1483.1,
+   "after_rc": [
+    {
+     "cycle": 13,
+     "rating": 1483.1
+    }
+   ],
+   "rated_by": "Modern"
+  }
+ }
 }

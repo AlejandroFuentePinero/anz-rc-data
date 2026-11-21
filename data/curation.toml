@@ -1,7 +1,29 @@
 # Owner rulings only. Accounts with the same real name that never share an RC are joined by rule, not here.
 
 # Melee usernames that are one Player, beyond that rule. A join that puts one Player twice in an RC fails the build.
+# mtgeloproject's identities are well curated, so where it holds two accounts as one person they are one Player here
+# (the owner's ruling, 2026-11-21). Each join names the mtgeloproject person it follows, never a hidden real name.
 joins = [
+    ["Gl000p", "glooop"],  # mtgeloproject k996meq0
+    ["MalusLupus", "AlexanderColbert"],  # mtgeloproject 4drwa5cu
+    ["cuisiwang1", "LeoCui"],  # mtgeloproject ol7skuqn
+    ["Opdadad", "brisbanebroncosrule"],  # mtgeloproject ulipmhmj
+    ["AndrewD2", "AndrewDrake"],  # mtgeloproject a78lsku5
+    ["jleb", "johneb"],  # mtgeloproject tyzfzmog
+    ["ZeGMT", "Azza321"],  # mtgeloproject 5hfa015w
+    ["WillowS", "WillowMoon99"],  # mtgeloproject mvv6irg9
+    ["YoungsterDenis", "Y0ungsterDenis"],  # mtgeloproject oaw5xy3d
+    ["Cynthia", "Cynthiaaa"],  # mtgeloproject z5124qfr
+    ["HamishSnares", "hamish_snares"],  # mtgeloproject 0ijdyt13
+    ["Jollyjoljol28", "JoelS1"],  # mtgeloproject w8hd6zky
+    ["Scubasteve", "scubasteve91"],  # mtgeloproject z2y84kh6
+    ["Bronson190", "NathW"],  # mtgeloproject dyxkdeio
+]
+
+# 0-0-3 Matches that are Intentional Draws beyond the build's rule (the last two Swiss rounds at tables 1 to 8), as
+# mtgeloproject records them (the owner's ruling, 2026-11-21). An entry that names no 0-0-3 fails the build.
+intentional_draws = [
+    {cycle = 5, round = 9, table = 37},  # mtgeloproject rcmel24-cy5, 2kywiu80 v gebts8mm
 ]
 
 # Display Name overrides, by Melee username.

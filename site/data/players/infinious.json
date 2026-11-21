@@ -26,7 +26,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1571.19,
+    "Modern": 1500
+   }
   },
   {
    "cycle": 5,
@@ -37,18 +41,49 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1563.78,
+    "Modern": 1518.0
+   }
   },
   {
    "cycle": 5,
    "round": "Round 3",
    "opponent": {
     "slug": "zegmt",
-    "name": "ZeGMT"
+    "name": "Azza321"
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500.0,
+    "Modern": 1500.0
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1484.07,
+   "peak": 1484.07,
+   "after_rc": [
+    {
+     "cycle": 5,
+     "rating": 1484.07
+    }
+   ]
+  },
+  "Modern": {
+   "rating": 1482.0,
+   "peak": 1482.0,
+   "after_rc": [
+    {
+     "cycle": 5,
+     "rating": 1482.0
+    }
+   ],
+   "rated_by": "Modern"
+  }
+ }
 }

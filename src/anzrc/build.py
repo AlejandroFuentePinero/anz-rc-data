@@ -4,7 +4,7 @@ import json
 import shutil
 from pathlib import Path
 
-from anzrc import identity, rcs
+from anzrc import identity, ratings, rcs
 from anzrc.melee import round_ids
 
 BUNDLE = Path("site/data")
@@ -31,12 +31,22 @@ def _finish(rank: int | None) -> str | None:
 
 # W-L-D counts every draw, Intentional Draws included; a Match not played is in no record.
 RECORD = {"Win": 0, "Loss": 1, "Draw": 2, "Intentional Draw": 2}
+# Only a played Match moves a Rating: Intentional Draws and anything not played move nothing.
+SCORE = {"Win": 1, "Loss": 0, "Draw": 0.5}
 
 
-def _sides(match: dict) -> list[tuple[dict, str, str | None]]:
+# A 0-0-3 is an Intentional Draw where Players still in the hunt for the Top 8 agree to one: the last two Swiss rounds
+# at these tables. Anywhere else it is a played draw. mtgeloproject draws the line the same way (the owner's ruling).
+LATE_ROUNDS, TOP_TABLES = 2, 8
+
+
+def _sides(match: dict, where: str, late_round: bool, curated_draw: bool) -> list[tuple[dict, str, str | None]]:
     """Each side of a Match with its result and its game score (wins-losses-draws), as that Player sees it.
 
-    Not played: a single side (a bye of either kind, the late-entry forfeit, "not reported") or no result.
+    Not played: a single side (a bye of either kind, the late-entry forfeit, "not reported"). A Match Melee left
+    unconfirmed counts by its game score like any other (the owner's ruling: Cycle 13's 0-0-1 is a played draw), but a
+    Match with no games recorded at all has no result to count and stops the build for a ruling. A 0-0-3 is an
+    Intentional Draw at a top table in a late round, or where the curation names it; anywhere else a played draw.
     """
     sides = match["Competitors"]
     if match.get("Reconstructed"):  # winner first, and no game score
@@ -49,14 +59,15 @@ def _sides(match: dict) -> list[tuple[dict, str, str | None]]:
         else:
             result = "Not reported"
         return [(sides[0], result, None)]
-    if not match["HasResult"]:
-        return [(side, "No result", None) for side in sides]
     wins = [side["GameWins"] or 0 for side in sides]  # a loser's null game count reads as 0
     draws = match["GameDraws"] or 0
+    if not any(wins) and not draws:
+        raise ValueError(f"{where}: a Match with no games recorded needs a ruling in the curation file")
+    agreed = curated_draw or (late_round and match["TableNumber"] <= TOP_TABLES)
     played = []
     for me, mine, theirs in ((sides[0], wins[0], wins[1]), (sides[1], wins[1], wins[0])):
         if mine == theirs:
-            result = "Intentional Draw" if mine == 0 and draws == 3 else "Draw"
+            result = "Intentional Draw" if mine == 0 and draws == 3 and agreed else "Draw"
         else:
             result = "Win" if mine > theirs else "Loss"
         played.append((me, result, f"{mine}-{theirs}-{draws}"))
@@ -123,10 +134,18 @@ def _accounts(loaded: list[dict]) -> dict[str, dict]:
     return accounts
 
 
-def build(raw: Path, rc_list: Path, curation: Path, out: Path) -> None:
+def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict[str, dict], list[dict]]:
+    """The RC table, every Player's card, and each RC's rated Matches round by round, as the Ratings replay them."""
     loaded = _load(raw, rc_list)
-    players = identity.players(_accounts(loaded), identity.load_curation(curation))
-    rc_rows, cards = [], {}
+    curated = identity.load_curation(curation)
+    players = identity.players(_accounts(loaded), curated)
+    # 0-0-3s the curation calls Intentional Draws outside the late top tables, each to be found among the Matches.
+    agreed = {(draw["cycle"], f"Round {draw['round']}", draw["table"]) for draw in curated["intentional_draws"]}
+    found = set()
+    rc_rows, cards, history = [], {}, []
+    # Global from every Match, and each Format from its own Matches only.
+    views: dict[str, dict[str, float]] = {"Global": {}}
+    after_rc: dict[str, dict[str, list[dict]]] = {}  # each view's Ratings after every RC a Player was in
 
     def card(entry: dict) -> dict:
         player = players[_username(entry)]
@@ -148,13 +167,27 @@ def build(raw: Path, rc_list: Path, curation: Path, out: Path) -> None:
         # Every Player of the RC: the final standings, and anyone missing from them who kept their Matches.
         rc_players = {_username(row): {"entry": row, "rank": row["Rank"], "decklists": row["Decklists"]} for row in standings}
         records = {}
+        format_view = ratings.rated_by(rc["format"])
+        history.append({"cycle": rc["cycle"], "format": rc["format"], "rounds": []})
+        swiss = [round_["name"] for round_ in rc["rounds"] if round_["name"].startswith("Round")]
         for round_ in rc["rounds"]:
+            rated = []
+            history[-1]["rounds"].append(rated)
             for match in round_["matches"]:
                 sides = match["Competitors"]
-                for me, result, games in _sides(match):
+                where = (rc["cycle"], round_["name"], match.get("TableNumber"))
+                late_round = round_["name"] in swiss[-LATE_ROUNDS:]
+                for me, result, games in _sides(match, "Cycle {} {} table {}".format(*where), late_round, where in agreed):
+                    if result == "Intentional Draw" and where in agreed:
+                        found.add(where)
                     rc_players.setdefault(_username(me), {"entry": me, "rank": None, "decklists": me["Decklists"]})
                     them = next((side for side in sides if side is not me), None)
                     opponent = card(them) if them else None
+                    # The opponent's Ratings as the round started, in Global and in the RC's Format as its card shows them.
+                    opponent_rating = opponent and {
+                        view: round(views.get(source, {}).get(opponent["slug"], ratings.START), 2)
+                        for view, source in (("Global", "Global"), (rc["format"], format_view))
+                    }
                     card(me)["matches"].append(
                         {
                             "cycle": rc["cycle"],
@@ -163,10 +196,20 @@ def build(raw: Path, rc_list: Path, curation: Path, out: Path) -> None:
                             "result": result,
                             "games": games,
                             "reconstructed": match.get("Reconstructed", False),
+                            "opponent_rating": opponent_rating,
                         }
                     )
                     if result in RECORD:
                         records.setdefault(_username(me), [0, 0, 0])[RECORD[result]] += 1
+                    if result in SCORE and me is sides[0]:
+                        rated.append((players[_username(me)]["slug"], opponent["slug"], SCORE[result]))
+            for view in ("Global", rc["format"]):
+                ratings.play_round(views.setdefault(view, {}), rated)
+        history[-1]["players"] = list(dict.fromkeys(players[username]["slug"] for username in rc_players))
+        for view in ("Global", rc["format"]):
+            for slug in history[-1]["players"]:
+                rating = views[view].get(slug, ratings.START)
+                after_rc.setdefault(view, {}).setdefault(slug, []).append({"cycle": rc["cycle"], "rating": rating})
         for username, rc_player in rc_players.items():
             deck = rc_player["decklists"][0] if rc_player["decklists"] else None
             card(rc_player["entry"])["rcs"].append(
@@ -182,6 +225,26 @@ def build(raw: Path, rc_list: Path, curation: Path, out: Path) -> None:
                 }
             )
 
+    if agreed - found:
+        named = ", ".join("Cycle {} {} table {}".format(*draw) for draw in sorted(agreed - found))
+        raise ValueError(f"The curation's intentional draws name no 0-0-3: {named}")
+    for player in cards.values():
+        def view_rating(view):
+            points = after_rc[view][player["slug"]]
+            return {
+                "rating": round(points[-1]["rating"], 2),
+                "peak": round(max(point["rating"] for point in points), 2),
+                "after_rc": [point | {"rating": round(point["rating"], 2)} for point in points],
+            }
+
+        player["ratings"] = {"Global": view_rating("Global")}
+        for format_ in dict.fromkeys(rc["format"] for rc in player["rcs"]):
+            player["ratings"][format_] = view_rating(ratings.rated_by(format_)) | {"rated_by": ratings.rated_by(format_)}
+    return rc_rows, cards, history
+
+
+def build(raw: Path, rc_list: Path, curation: Path, out: Path) -> None:
+    rc_rows, cards, _ = replayed(raw, rc_list, curation)
     out = Path(out)
     out.mkdir(parents=True, exist_ok=True)
     (out / "rcs.json").write_text(json.dumps(rc_rows, indent=1) + "\n")

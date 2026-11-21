@@ -9,6 +9,8 @@ import json
 import pytest
 
 from anzrc.build import build
+from anzrc import ratings
+from anzrc.ratings import K
 
 SWISS, PLAYOFFS = "Swiss", "Playoffs/Top Cut"
 
@@ -22,11 +24,12 @@ def competitor(who, game_wins):
     return {"GameWins": game_wins, "Team": {"Players": [melee_player(who)]}, "Decklists": []}
 
 
-def played(a, b, a_wins, b_wins, draws=0):
+def played(a, b, a_wins, b_wins, draws=0, table=1):
     """A Match with a result between two Players. Melee leaves a loser's game wins null at times."""
     return {
         "Competitors": [competitor(a, a_wins), competitor(b, b_wins)],
         "GameDraws": draws,
+        "TableNumber": table,
         "HasResult": True,
         "ByeReason": None,
         "LossReason": None,
@@ -46,7 +49,7 @@ def not_reported(who):
 
 
 def no_result(a, b):
-    """Cycle 13's one Match without a result."""
+    """Cycle 13's one Match Melee left unconfirmed: no result flag and no game wins, one drawn game."""
     return played(a, b, None, None, draws=1) | {"HasResult": False}
 
 
@@ -139,7 +142,7 @@ def test_a_bare_card_shows_the_rc_history_and_the_match_history(tmp_path):
     ]
     assert card["matches"] == [
         {"cycle": 1, "round": "Round 1", "opponent": {"slug": "ben", "name": "Ben Hall"}, "result": "Win", "games": "2-1-0",
-         "reconstructed": False}
+         "reconstructed": False, "opponent_rating": {"Global": 1500.0, "Pioneer": 1500.0}}
     ]
     assert bundle.card("ben")["matches"][0]["result"] == "Loss"
     assert bundle.card("ben")["matches"][0]["games"] == "1-2-0"
@@ -161,8 +164,8 @@ def test_every_match_class_shows_its_result_and_only_played_matches_and_intentio
         (SWISS, [played(ANA, BEN, 1, 0), played(CAL, DEE, None, 2)]),  # 1-0-0, and a null loser read as 0
         (SWISS, [played(ANA, CAL, 1, 0, draws=1), played(BEN, DEE, 0, 3)]),  # 1-0-1 and 3-0-0
         (SWISS, [played(ANA, DEE, 1, 1), played(BEN, CAL, 1, 1, draws=1)]),  # played draws 1-1-0 and 1-1-1
-        (SWISS, [played(ANA, BEN, 0, 0, draws=3), played(CAL, DEE, 0, 0, draws=3)]),  # Intentional Draws
         (SWISS, [bye(ANA), late_entry_forfeit(BEN), not_reported(CAL)]),
+        (SWISS, [played(ANA, BEN, 0, 0, draws=3), played(CAL, DEE, 0, 0, draws=3, table=2)]),  # Intentional Draws
         (SWISS, [no_result(ANA, DEE)]),
     ]
     final = [standing(1, DEE), standing(2, ANA), standing(3, CAL), standing(4, BEN)]
@@ -174,21 +177,21 @@ def test_every_match_class_shows_its_result_and_only_played_matches_and_intentio
         ("Round 1", "ben", "Win", "1-0-0"),
         ("Round 2", "cal", "Win", "1-0-1"),
         ("Round 3", "dee", "Draw", "1-1-0"),
-        ("Round 4", "ben", "Intentional Draw", "0-0-3"),
-        ("Round 5", None, "Bye", None),
-        ("Round 6", "dee", "No result", None),
+        ("Round 4", None, "Bye", None),
+        ("Round 5", "ben", "Intentional Draw", "0-0-3"),
+        ("Round 6", "dee", "Draw", "0-0-1"),
     ]
-    assert ana["rcs"][0]["record"] == "2-0-2"
+    assert ana["rcs"][0]["record"] == "2-0-3"
     assert [(m["result"], m["games"]) for m in bundle.card("ben")["matches"]] == [
         ("Loss", "0-1-0"),
         ("Loss", "0-3-0"),
         ("Draw", "1-1-1"),
-        ("Intentional Draw", "0-0-3"),
         ("Forfeit", None),
+        ("Intentional Draw", "0-0-3"),
     ]
     assert bundle.card("ben")["rcs"][0]["record"] == "0-2-2"
-    assert [m["result"] for m in bundle.card("cal")["matches"]][-1] == "Not reported"
-    assert bundle.card("dee")["rcs"][0]["record"] == "2-0-2"
+    assert [m["result"] for m in bundle.card("cal")["matches"]][-2:] == ["Not reported", "Intentional Draw"]
+    assert bundle.card("dee")["rcs"][0]["record"] == "2-0-3"
 
 
 def test_playoff_rounds_are_told_apart_by_the_standings_matching_method_not_by_round_number(tmp_path):
@@ -221,6 +224,8 @@ def test_a_final_melee_lost_is_rebuilt_as_rank_1_beating_rank_2_with_no_game_sco
     bundle = run_build(tmp_path, [(1, "Modern", rounds, final)])
 
     champion, finalist = bundle.card("p4"), bundle.card("p3")
+    for card in (champion, finalist):  # the opponent's Rating is tested on its own
+        del card["matches"][-1]["opponent_rating"]
     assert champion["matches"][-1] == {
         "cycle": 1, "round": "Final", "opponent": {"slug": "p3", "name": "Player 3"}, "result": "Win", "games": None, "reconstructed": True
     }
@@ -392,3 +397,211 @@ def test_display_names_follow_the_override_then_the_real_name_then_the_username(
         ("cal", "cal", ["cal"]),
     ]
     assert bundle.card("ana")["matches"][0]["opponent"] == {"slug": "alejandrofp", "name": "Alejandro de la Fuente"}
+
+
+# Ratings (ADR 0001). Expected values are worked by hand from mtgeloproject's rule: E = 1 / (1 + 10^(-gap / D)),
+# D set so a 200 point gap is a 60% expectation, and a Match moves each Rating by K * (score - E).
+
+
+def rating(bundle, slug, view="Global"):
+    return bundle.card(slug)["ratings"][view]["rating"]
+
+
+def test_a_single_match_between_two_new_players_moves_each_rating_by_half_of_k(tmp_path):
+    bundle = run_build(tmp_path, [(1, "Modern", [(SWISS, [played(ANA, BEN, 2, 1)])], [standing(1, ANA), standing(2, BEN)])])
+
+    assert rating(bundle, "ana") == pytest.approx(1500 + K / 2)
+    assert rating(bundle, "ben") == pytest.approx(1500 - K / 2)
+
+
+def test_a_played_draw_between_equals_and_every_match_not_played_move_nothing(tmp_path):
+    # After round 1 Ana and Ben stand at 1518 and 1482, so any of the later Matches would move them if it counted.
+    rounds = [
+        (SWISS, [played(ANA, BEN, 2, 0), played(CAL, DEE, 1, 1, draws=1)]),  # Cal and Dee: a played draw between two 1500s
+        (SWISS, [played(ANA, BEN, 0, 0, draws=3), bye(CAL), late_entry_forfeit(DEE)]),  # an Intentional Draw, a bye, a forfeit
+        (SWISS, [not_reported(ANA)]),
+    ]
+    final = [standing(1, ANA), standing(2, BEN), standing(3, CAL), standing(4, DEE)]
+
+    bundle = run_build(tmp_path, [(1, "Modern", rounds, final)])
+
+    assert [rating(bundle, slug) for slug in ("ana", "ben", "cal", "dee")] == [1500 + K / 2, 1500 - K / 2, 1500, 1500]
+
+
+def test_a_played_draw_moves_the_higher_rated_player_down(tmp_path):
+    # Ana beats Ben (1518 v 1482), then draws Ben: Ana expected 1 / (1 + 10^(-36 / 1135.77)) = 0.518238, so she gives
+    # 36 * 0.018238 = 0.6566 back. Worked with K = 36.
+    rounds = [(SWISS, [played(ANA, BEN, 2, 0)]), (SWISS, [played(ANA, BEN, 1, 1)])]
+
+    bundle = run_build(tmp_path, [(1, "Modern", rounds, [standing(1, ANA), standing(2, BEN)])])
+
+    assert rating(bundle, "ana") == pytest.approx(1518 - 0.66, abs=0.01)
+    assert rating(bundle, "ben") == pytest.approx(1482 + 0.66, abs=0.01)
+
+
+def test_the_order_of_matches_inside_a_round_and_of_players_inside_a_match_changes_no_rating(tmp_path):
+    first = [played(ANA, BEN, 2, 0), played(CAL, DEE, 2, 1)]
+    second = [played(ANA, DEE, 2, 1), played(BEN, CAL, 1, 1)]  # 1518 v 1482 both times, so every Rating ends apart
+    final = [standing(1, ANA), standing(2, CAL), standing(3, BEN), standing(4, DEE)]
+    as_listed = run_build(tmp_path / "a", [(1, "Modern", [(SWISS, first), (SWISS, second)], final)])
+    reordered = run_build(
+        tmp_path / "b",
+        [(1, "Modern", [(SWISS, first[::-1]), (SWISS, [played(CAL, BEN, 1, 1), played(DEE, ANA, 1, 2)])], final)],
+    )
+
+    slugs = ("ana", "ben", "cal", "dee")
+    assert [rating(as_listed, s) for s in slugs] == [rating(reordered, s) for s in slugs]
+    assert len({rating(as_listed, s) for s in slugs}) == 4
+
+
+def test_a_format_rating_moves_only_on_its_own_format_and_starts_at_1500(tmp_path):
+    # Ana beats Ben at a Pioneer RC, then Ben beats Ana at a Modern RC. Globally Ana is the favourite in the second
+    # Match (1518 v 1482, 0.518238), so Ben takes 36 * 0.518238 = 18.66 from her. Worked with K = 36.
+    bundle = run_build(
+        tmp_path,
+        [
+            (1, "Pioneer", [(SWISS, [played(ANA, BEN, 2, 0)])], [standing(1, ANA), standing(2, BEN)]),
+            (2, "Modern", [(SWISS, [played(BEN, ANA, 2, 1)])], [standing(1, BEN), standing(2, ANA)]),
+        ],
+    )
+
+    assert rating(bundle, "ana", "Pioneer") == pytest.approx(1500 + K / 2)
+    assert rating(bundle, "ana", "Modern") == pytest.approx(1500 - K / 2)
+    assert rating(bundle, "ana") == pytest.approx(1518 - 18.66, abs=0.01)
+    assert rating(bundle, "ben") == pytest.approx(1482 + 18.66, abs=0.01)
+    assert set(bundle.card("ana")["ratings"]) == {"Global", "Pioneer", "Modern"}
+    assert bundle.card("ana")["ratings"]["Modern"]["rated_by"] == "Modern"
+
+
+def test_a_format_whose_rating_does_not_ship_shows_the_global_rating(tmp_path, monkeypatch):
+    monkeypatch.setattr(ratings, "FORMAT_RATINGS", {"Pioneer"})
+    bundle = run_build(
+        tmp_path,
+        [
+            (1, "Pioneer", [(SWISS, [played(ANA, BEN, 2, 0)])], [standing(1, ANA), standing(2, BEN)]),
+            (2, "Modern", [(SWISS, [played(BEN, ANA, 2, 1)])], [standing(1, BEN), standing(2, ANA)]),
+        ],
+    )
+
+    ana = bundle.card("ana")["ratings"]
+    assert ana["Modern"] == ana["Global"] | {"rated_by": "Global"}
+    assert ana["Pioneer"]["rating"] == pytest.approx(1500 + K / 2)
+
+
+def test_peak_rating_is_the_highest_after_any_rc_not_the_1500_start(tmp_path):
+    # Ana: beats Ben (1518), sits out with a bye, then loses to Cal (still 1500 after a drawn Cycle 2). From 1518 v 1500
+    # she was expected 1 / (1 + 10^(-18 / 1135.77)) = 0.509122, so she gives up 36 * 0.509122 = 18.33.
+    bundle = run_build(
+        tmp_path,
+        [
+            (1, "Pioneer", [(SWISS, [played(ANA, BEN, 2, 0)])], [standing(1, ANA), standing(2, BEN)]),
+            (2, "Pioneer", [(SWISS, [bye(ANA), played(CAL, DEE, 1, 1)])], [standing(1, ANA), standing(2, CAL), standing(3, DEE)]),
+            (3, "Modern", [(SWISS, [played(CAL, ANA, 2, 0)])], [standing(1, CAL), standing(2, ANA)]),
+        ],
+    )
+
+    ana = bundle.card("ana")["ratings"]["Global"]
+    assert ana["after_rc"] == [{"cycle": 1, "rating": 1518.0}, {"cycle": 2, "rating": 1518.0}, {"cycle": 3, "rating": 1499.67}]
+    assert ana["peak"] == 1518.0
+    assert ana["rating"] == 1499.67
+    assert bundle.card("ben")["ratings"]["Global"]["peak"] == 1482.0
+    assert bundle.card("ana")["ratings"]["Modern"]["after_rc"] == [{"cycle": 3, "rating": 1482.0}]
+    assert bundle.card("ana")["ratings"]["Pioneer"]["peak"] == 1518.0
+
+
+def test_playoff_matches_count_and_a_rebuilt_final_moves_ratings_as_the_real_final_would(tmp_path):
+    p = {n: (f"p{n}", f"Player {n}") for n in range(1, 9)}
+    swiss = (SWISS, [played(p[1], p[2], 2, 0), played(p[3], p[4], 2, 0), played(p[5], p[6], 2, 0), played(p[7], p[8], 2, 0)])
+    quarters = (PLAYOFFS, [played(p[1], p[8], 2, 0), played(p[4], p[5], 2, 1), played(p[2], p[7], 2, 0), played(p[3], p[6], 2, 0)])
+    semis = (PLAYOFFS, [played(p[1], p[4], 0, 2), played(p[2], p[3], 1, 2)])
+    final = [standing(rank, p[n]) for rank, n in enumerate([4, 3, 1, 2, 5, 6, 7, 8], start=1)]
+    rebuilt = run_build(tmp_path / "rebuilt", [(1, "Modern", [swiss, quarters, semis, (PLAYOFFS, [])], final)])
+    real = run_build(tmp_path / "real", [(1, "Modern", [swiss, quarters, semis, (PLAYOFFS, [played(p[4], p[3], 2, 1)])], final)])
+    swiss_only = run_build(tmp_path / "swiss", [(1, "Modern", [swiss], final)])
+
+    slugs = [f"p{n}" for n in range(1, 9)]
+    assert [rating(rebuilt, s) for s in slugs] == [rating(real, s) for s in slugs]
+    assert rating(rebuilt, "p4") != rating(swiss_only, "p4")
+
+
+def test_the_match_history_shows_the_opponents_rating_at_the_start_of_the_round(tmp_path):
+    # Ana and Cal both win round 1 (1518 each), then meet: each card shows the other at 1518, not at the Rating after.
+    # Cycle 2 is Pioneer, so the Pioneer column is each Player's Pioneer Rating, new at 1500.
+    bundle = run_build(
+        tmp_path,
+        [
+            (1, "Modern", [(SWISS, [played(ANA, BEN, 2, 0), played(CAL, DEE, 2, 0)]), (SWISS, [played(ANA, CAL, 2, 0), bye(BEN)])],
+             [standing(1, ANA), standing(2, CAL), standing(3, BEN), standing(4, DEE)]),
+            (2, "Pioneer", [(SWISS, [played(CAL, ANA, 2, 0)])], [standing(1, CAL), standing(2, ANA)]),
+        ],
+    )
+
+    assert [m["opponent_rating"] for m in bundle.card("ana")["matches"]] == [
+        {"Global": 1500.0, "Modern": 1500.0},
+        {"Global": 1518.0, "Modern": 1518.0},
+        {"Global": 1500.0, "Pioneer": 1500.0},
+    ]
+    assert [m["opponent_rating"] for m in bundle.card("ben")["matches"]] == [{"Global": 1500.0, "Modern": 1500.0}, None]
+
+
+def test_a_match_melee_left_unconfirmed_counts_by_its_game_score(tmp_path):
+    # Cycle 13's one unconfirmed Match is 0-0-1: a drawn game, so a played draw, as Melee's own standings count it.
+    rounds = [(SWISS, [played(ANA, BEN, 2, 0)]), (SWISS, [no_result(ANA, BEN)])]
+
+    bundle = run_build(tmp_path, [(1, "Modern", rounds, [standing(1, ANA), standing(2, BEN)])])
+
+    ana = bundle.card("ana")
+    assert [(m["result"], m["games"]) for m in ana["matches"]] == [("Win", "2-0-0"), ("Draw", "0-0-1")]
+    assert ana["rcs"][0]["record"] == "1-0-1"
+    assert rating(bundle, "ana") == pytest.approx(1518 - 0.66, abs=0.01)  # the draw from 1518 v 1482, as worked above
+
+
+# Which 0-0-3 is an Intentional Draw (ADR 0001, following mtgeloproject): one in the last two Swiss rounds at tables 1 to
+# 8, where Players still in the hunt for the Top 8 agree to draw, or one the curation file names. Any other is a played
+# draw. Expected moves are the 1518 v 1482 draw worked above: 36 x (0.5 - 0.5182) = -0.66 for the higher-rated Player.
+
+
+def four_rounds_of_0_0_3s():
+    """Ana and Cal each beat their opponent, then draw them 0-0-3: early, late at table 9, and late at table 8."""
+    return [
+        (SWISS, [played(ANA, BEN, 2, 0, table=1), played(CAL, DEE, 2, 0, table=2)]),
+        (SWISS, [played(ANA, BEN, 0, 0, draws=3, table=1)]),  # round 2 of 4: early
+        (SWISS, [played(CAL, DEE, 0, 0, draws=3, table=9)]),  # round 3 of 4: late, but not a top table
+        (SWISS, [played(ANA, BEN, 0, 0, draws=3, table=8)]),  # round 4 of 4: late, at a top table
+    ]
+
+
+FOUR = [standing(1, ANA), standing(2, CAL), standing(3, BEN), standing(4, DEE)]
+
+
+def test_a_0_0_3_is_an_intentional_draw_only_in_the_last_two_swiss_rounds_at_tables_1_to_8(tmp_path):
+    bundle = run_build(tmp_path, [(1, "Modern", four_rounds_of_0_0_3s(), FOUR)])
+
+    assert [m["result"] for m in bundle.card("ana")["matches"]] == ["Win", "Draw", "Intentional Draw"]
+    assert [m["result"] for m in bundle.card("cal")["matches"]] == ["Win", "Draw"]
+    assert rating(bundle, "ana") == pytest.approx(1518 - 0.66, abs=0.01)  # the early draw moves, the late top-table one not
+    assert rating(bundle, "cal") == pytest.approx(1518 - 0.66, abs=0.01)  # the late table-9 draw moves
+    assert bundle.card("ana")["rcs"][0]["record"] == "1-0-2"
+
+
+def test_a_0_0_3_the_curation_names_is_an_intentional_draw_wherever_it_falls(tmp_path):
+    curation = 'intentional_draws = [{cycle = 1, round = 3, table = 9}]\n'
+
+    bundle = run_build(tmp_path, [(1, "Modern", four_rounds_of_0_0_3s(), FOUR)], curation=curation)
+
+    assert [m["result"] for m in bundle.card("cal")["matches"]] == ["Win", "Intentional Draw"]
+    assert rating(bundle, "cal") == 1500 + K / 2
+
+
+def test_a_curated_intentional_draw_that_names_no_0_0_3_fails_the_build(tmp_path):
+    curation = 'intentional_draws = [{cycle = 1, round = 1, table = 1}]\n'  # a 2-0 win, not a 0-0-3
+
+    with pytest.raises(ValueError, match="Cycle 1 Round 1 table 1"):
+        run_build(tmp_path, [(1, "Modern", four_rounds_of_0_0_3s(), FOUR)], curation=curation)
+
+
+def test_a_match_with_no_games_recorded_fails_the_build_and_asks_for_a_ruling(tmp_path):
+    rounds = [(SWISS, [played(ANA, BEN, None, None, table=4) | {"HasResult": False}])]
+
+    with pytest.raises(ValueError, match="Cycle 1 Round 1 table 4.*ruling"):
+        run_build(tmp_path, [(1, "Modern", rounds, [standing(1, ANA), standing(2, BEN)])])

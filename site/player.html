@@ -28,7 +28,7 @@
 <h2>Match history</h2>
 <div class="scroll">
 <table>
-  <thead><tr><th>Cycle</th><th>Round</th><th>Opponent</th><th>Result</th><th>Games</th></tr></thead>
+  <thead><tr><th>Cycle</th><th>Round</th><th>Opponent</th><th>Their Rating</th><th>Result</th><th>Games</th></tr></thead>
   <tbody id="matches"></tbody>
 </table>
 </div>
@@ -78,6 +78,7 @@ function show() {
         [match.cycle, "num"],
         [match.round],
         [match.opponent && link(match.opponent.name, `#${match.opponent.slug}`)],
+        [match.opponent_rating && Math.round(match.opponent_rating.Global), "num"],
         [match.result],
         [match.reconstructed ? "Reconstructed" : match.games],
       ]));

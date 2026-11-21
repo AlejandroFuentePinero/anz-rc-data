@@ -26,7 +26,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500,
+    "Modern": 1500
+   }
   },
   {
    "cycle": 5,
@@ -37,7 +41,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1555.69,
+    "Modern": 1482.0
+   }
   },
   {
    "cycle": 5,
@@ -48,7 +56,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1428.09,
+    "Modern": 1464.0
+   }
   },
   {
    "cycle": 5,
@@ -59,7 +71,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1468.3,
+    "Modern": 1482.0
+   }
   },
   {
    "cycle": 5,
@@ -70,18 +86,49 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1549.76,
+    "Modern": 1500.0
+   }
   },
   {
    "cycle": 5,
    "round": "Round 6",
    "opponent": {
     "slug": "zegmt",
-    "name": "ZeGMT"
+    "name": "Azza321"
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1517.25,
+    "Modern": 1518.0
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1501.26,
+   "peak": 1501.26,
+   "after_rc": [
+    {
+     "cycle": 5,
+     "rating": 1501.26
+    }
+   ]
+  },
+  "Modern": {
+   "rating": 1500.0,
+   "peak": 1500.0,
+   "after_rc": [
+    {
+     "cycle": 5,
+     "rating": 1500.0
+    }
+   ],
+   "rated_by": "Modern"
+  }
+ }
 }

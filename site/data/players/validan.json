@@ -11,7 +11,7 @@
    "format": "Modern",
    "finish": "138th",
    "field_size": 233,
-   "record": "2-5-1",
+   "record": "2-5-2",
    "deck": "Jeskai Control (Kaheera)",
    "decklist": "https://melee.gg/Decklist/View/698f84d1-8bfe-4049-a965-b4ea011b09a6"
   }
@@ -24,9 +24,13 @@
     "slug": "miketaylor",
     "name": "MikeTaylor"
    },
-   "result": "No result",
-   "games": null,
-   "reconstructed": false
+   "result": "Draw",
+   "games": "0-0-1",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1430.78,
+    "Modern": 1434.55
+   }
   },
   {
    "cycle": 13,
@@ -37,7 +41,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1625.66,
+    "Modern": 1534.45
+   }
   },
   {
    "cycle": 13,
@@ -48,7 +56,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1544.45,
+    "Modern": 1544.03
+   }
   },
   {
    "cycle": 13,
@@ -59,7 +71,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1444.25,
+    "Modern": 1444.78
+   }
   },
   {
    "cycle": 13,
@@ -70,7 +86,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1464.97,
+    "Modern": 1463.65
+   }
   },
   {
    "cycle": 13,
@@ -81,7 +101,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1464.46,
+    "Modern": 1464.96
+   }
   },
   {
    "cycle": 13,
@@ -92,7 +116,11 @@
    },
    "result": "Draw",
    "games": "1-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1429.37,
+    "Modern": 1426.64
+   }
   },
   {
    "cycle": 13,
@@ -103,7 +131,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1374.73,
+    "Modern": 1425.16
+   }
   },
   {
    "cycle": 13,
@@ -114,7 +146,34 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1449.01,
+    "Modern": 1446.86
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1446.75,
+   "peak": 1446.75,
+   "after_rc": [
+    {
+     "cycle": 13,
+     "rating": 1446.75
+    }
+   ]
+  },
+  "Modern": {
+   "rating": 1446.16,
+   "peak": 1446.16,
+   "after_rc": [
+    {
+     "cycle": 13,
+     "rating": 1446.16
+    }
+   ],
+   "rated_by": "Modern"
+  }
+ }
 }

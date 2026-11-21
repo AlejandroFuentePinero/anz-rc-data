@@ -26,7 +26,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1393.96,
+    "Modern": 1482.0
+   }
   },
   {
    "cycle": 13,
@@ -37,7 +41,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1502.12,
+    "Modern": 1464.02
+   }
   },
   {
    "cycle": 13,
@@ -48,7 +56,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1653.18,
+    "Modern": 1503.06
+   }
   },
   {
    "cycle": 13,
@@ -59,7 +71,34 @@
    },
    "result": "Loss",
    "games": "0-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1523.1,
+    "Modern": 1425.67
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1465.37,
+   "peak": 1465.37,
+   "after_rc": [
+    {
+     "cycle": 13,
+     "rating": 1465.37
+    }
+   ]
+  },
+  "Modern": {
+   "rating": 1461.77,
+   "peak": 1461.77,
+   "after_rc": [
+    {
+     "cycle": 13,
+     "rating": 1461.77
+    }
+   ],
+   "rated_by": "Modern"
+  }
+ }
 }

@@ -36,7 +36,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500.0,
+    "Standard": 1500
+   }
   },
   {
    "cycle": 2,
@@ -47,7 +51,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1482.66,
+    "Standard": 1482.0
+   }
   },
   {
    "cycle": 2,
@@ -58,7 +66,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1465.29,
+    "Standard": 1500.0
+   }
   },
   {
    "cycle": 2,
@@ -69,7 +81,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1516.42,
+    "Standard": 1482.0
+   }
   },
   {
    "cycle": 2,
@@ -80,7 +96,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500.98,
+    "Standard": 1499.99
+   }
   },
   {
    "cycle": 2,
@@ -91,7 +111,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1482.63,
+    "Standard": 1482.0
+   }
   },
   {
    "cycle": 2,
@@ -102,7 +126,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1464.05,
+    "Standard": 1464.65
+   }
   },
   {
    "cycle": 2,
@@ -113,7 +141,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1518.28,
+    "Standard": 1518.0
+   }
   },
   {
    "cycle": 6,
@@ -124,7 +156,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500,
+    "Standard": 1500
+   }
   },
   {
    "cycle": 6,
@@ -135,7 +171,11 @@
    },
    "result": "Draw",
    "games": "1-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1414.41,
+    "Standard": 1483.28
+   }
   },
   {
    "cycle": 6,
@@ -146,7 +186,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1445.14,
+    "Standard": 1517.99
+   }
   },
   {
    "cycle": 6,
@@ -157,7 +201,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1536.16,
+    "Standard": 1535.03
+   }
   },
   {
    "cycle": 6,
@@ -168,7 +216,11 @@
    },
    "result": "Draw",
    "games": "1-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1533.63,
+    "Standard": 1569.09
+   }
   },
   {
    "cycle": 6,
@@ -179,7 +231,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1551.17,
+    "Standard": 1517.4
+   }
   },
   {
    "cycle": 6,
@@ -190,7 +246,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1481.53,
+    "Standard": 1499.14
+   }
   },
   {
    "cycle": 6,
@@ -201,7 +261,42 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1501.51,
+    "Standard": 1499.39
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1496.81,
+   "peak": 1499.41,
+   "after_rc": [
+    {
+     "cycle": 2,
+     "rating": 1499.41
+    },
+    {
+     "cycle": 6,
+     "rating": 1496.81
+    }
+   ]
+  },
+  "Standard": {
+   "rating": 1499.39,
+   "peak": 1499.39,
+   "after_rc": [
+    {
+     "cycle": 2,
+     "rating": 1499.37
+    },
+    {
+     "cycle": 6,
+     "rating": 1499.39
+    }
+   ],
+   "rated_by": "Standard"
+  }
+ }
 }

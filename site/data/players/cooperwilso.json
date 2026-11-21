@@ -26,7 +26,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1650.2,
+    "Pioneer": 1621.68
+   }
   },
   {
    "cycle": 4,
@@ -37,7 +41,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1499.16,
+    "Pioneer": 1497.99
+   }
   },
   {
    "cycle": 4,
@@ -48,7 +56,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1537.73,
+    "Pioneer": 1537.02
+   }
   },
   {
    "cycle": 4,
@@ -59,7 +71,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1481.16,
+    "Pioneer": 1516.46
+   }
   },
   {
    "cycle": 4,
@@ -70,7 +86,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1483.57,
+    "Pioneer": 1484.99
+   }
   },
   {
    "cycle": 4,
@@ -79,9 +99,13 @@
     "slug": "josephmcevoy",
     "name": "Joseph McEvoy"
    },
-   "result": "Intentional Draw",
+   "result": "Draw",
    "games": "0-0-3",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1552.64,
+    "Pioneer": 1553.09
+   }
   },
   {
    "cycle": 4,
@@ -92,7 +116,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1540.25,
+    "Pioneer": 1538.49
+   }
   },
   {
    "cycle": 4,
@@ -103,7 +131,34 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1477.22,
+    "Pioneer": 1477.45
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1517.24,
+   "peak": 1517.24,
+   "after_rc": [
+    {
+     "cycle": 4,
+     "rating": 1517.24
+    }
+   ]
+  },
+  "Pioneer": {
+   "rating": 1517.37,
+   "peak": 1517.37,
+   "after_rc": [
+    {
+     "cycle": 4,
+     "rating": 1517.37
+    }
+   ],
+   "rated_by": "Pioneer"
+  }
+ }
 }

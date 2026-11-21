@@ -7,9 +7,14 @@ from pathlib import Path
 
 
 def load_curation(path: Path) -> dict:
-    """The owner's rulings: account joins beyond the rule, and Display Name overrides by username."""
+    """The owner's rulings: account joins beyond the rule, Display Name overrides by username, and 0-0-3s that are
+    Intentional Draws beyond the build's rule."""
     curation = tomllib.loads(Path(path).read_text())
-    return {"joins": curation.get("joins", []), "display_names": curation.get("display_names", {})}
+    return {
+        "joins": curation.get("joins", []),
+        "display_names": curation.get("display_names", {}),
+        "intentional_draws": curation.get("intentional_draws", []),
+    }
 
 
 def _normalised(name: str) -> str:

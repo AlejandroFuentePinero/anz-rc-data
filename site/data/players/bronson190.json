@@ -1,8 +1,9 @@
 {
  "slug": "bronson190",
- "name": "Nathan Whalen",
+ "name": "NathW",
  "usernames": [
-  "Bronson190"
+  "Bronson190",
+  "NathW"
  ],
  "rcs": [
   {
@@ -24,6 +25,46 @@
    "record": "5-3-0",
    "deck": "Izzet Phoenix",
    "decklist": "https://melee.gg/Decklist/View/77e23357-2365-4b2c-b6ee-4fdcf207548a"
+  },
+  {
+   "cycle": 6,
+   "date": "2024-05-25",
+   "format": "Standard",
+   "finish": "145th",
+   "field_size": 168,
+   "record": "1-3-0",
+   "deck": "Temur Analyst",
+   "decklist": "https://melee.gg/Decklist/View/951301df-0bd9-4ec0-beef-7ddeb81247d4"
+  },
+  {
+   "cycle": 7,
+   "date": "2024-11-08",
+   "format": "Pioneer",
+   "finish": "16th",
+   "field_size": 221,
+   "record": "6-2-0",
+   "deck": "Izzet Phoenix",
+   "decklist": "https://melee.gg/Decklist/View/5108dd62-ca46-4a29-bbfa-5549a5d1e0ed"
+  },
+  {
+   "cycle": 9,
+   "date": "2025-05-09",
+   "format": "Standard",
+   "finish": "79th",
+   "field_size": 222,
+   "record": "4-3-0",
+   "deck": "Izzet Prowess",
+   "decklist": "https://melee.gg/Decklist/View/719e04c4-44f5-4900-91ad-b2d70186b9f0"
+  },
+  {
+   "cycle": 12,
+   "date": "2026-05-22",
+   "format": "Standard",
+   "finish": "96th",
+   "field_size": 188,
+   "record": "3-3-0",
+   "deck": "Temur Deceit",
+   "decklist": "https://melee.gg/Decklist/View/521a9c51-ade9-4f1d-99f9-b452008e3719"
   }
  ],
  "matches": [
@@ -36,7 +77,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500,
+    "Pioneer": 1500
+   }
   },
   {
    "cycle": 3,
@@ -47,7 +92,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1515.84,
+    "Pioneer": 1516.69
+   }
   },
   {
    "cycle": 3,
@@ -58,7 +107,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1534.44,
+    "Pioneer": 1535.05
+   }
   },
   {
    "cycle": 3,
@@ -69,7 +122,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1550.15,
+    "Pioneer": 1552.7
+   }
   },
   {
    "cycle": 3,
@@ -80,7 +137,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1513.45,
+    "Pioneer": 1532.81
+   }
   },
   {
    "cycle": 4,
@@ -91,7 +152,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1539.33,
+    "Pioneer": 1470.09
+   }
   },
   {
    "cycle": 4,
@@ -102,7 +167,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1481.5,
+    "Pioneer": 1517.27
+   }
   },
   {
    "cycle": 4,
@@ -113,7 +182,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1593.23,
+    "Pioneer": 1566.29
+   }
   },
   {
    "cycle": 4,
@@ -124,7 +197,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1520.36,
+    "Pioneer": 1520.36
+   }
   },
   {
    "cycle": 4,
@@ -135,18 +212,26 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1536.58,
+    "Pioneer": 1535.23
+   }
   },
   {
    "cycle": 4,
    "round": "Round 6",
    "opponent": {
-    "slug": "glooop",
+    "slug": "gl000p",
     "name": "Josh Bradbury"
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1559.61,
+    "Pioneer": 1559.85
+   }
   },
   {
    "cycle": 4,
@@ -157,7 +242,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1625.23,
+    "Pioneer": 1630.06
+   }
   },
   {
    "cycle": 4,
@@ -168,7 +257,456 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1553.39,
+    "Pioneer": 1553.86
+   }
+  },
+  {
+   "cycle": 6,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "khodgie1",
+    "name": "khodgie1"
+   },
+   "result": "Loss",
+   "games": "1-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500,
+    "Standard": 1500
+   }
+  },
+  {
+   "cycle": 6,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "danbelia",
+    "name": "DanBelia"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1483.72,
+    "Standard": 1482.0
+   }
+  },
+  {
+   "cycle": 6,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "mcfish",
+    "name": "Joel McAndrew"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1466.24,
+    "Standard": 1465.93
+   }
+  },
+  {
+   "cycle": 6,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "domze",
+    "name": "Dom Ze"
+   },
+   "result": "Loss",
+   "games": "1-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1401.79,
+    "Standard": 1484.53
+   }
+  },
+  {
+   "cycle": 7,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "s4m",
+    "name": "S4M"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500,
+    "Pioneer": 1500
+   }
+  },
+  {
+   "cycle": 7,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "voltie",
+    "name": "Voltie"
+   },
+   "result": "Win",
+   "games": "2-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1538.8,
+    "Pioneer": 1592.82
+   }
+  },
+  {
+   "cycle": 7,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "clhis",
+    "name": "Clhis"
+   },
+   "result": "Win",
+   "games": "2-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500.01,
+    "Pioneer": 1500.01
+   }
+  },
+  {
+   "cycle": 7,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "floyd",
+    "name": "Floyd"
+   },
+   "result": "Win",
+   "games": "2-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1487.7,
+    "Pioneer": 1521.62
+   }
+  },
+  {
+   "cycle": 7,
+   "round": "Round 5",
+   "opponent": {
+    "slug": "u_be_trixy",
+    "name": "Matthew Anderson"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1720.82,
+    "Pioneer": 1666.92
+   }
+  },
+  {
+   "cycle": 7,
+   "round": "Round 6",
+   "opponent": {
+    "slug": "solarion",
+    "name": "Scott Aitchison"
+   },
+   "result": "Win",
+   "games": "2-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1525.85,
+    "Pioneer": 1556.19
+   }
+  },
+  {
+   "cycle": 7,
+   "round": "Round 7",
+   "opponent": {
+    "slug": "forceofwilks",
+    "name": "James Wilks"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1811.83,
+    "Pioneer": 1558.75
+   }
+  },
+  {
+   "cycle": 7,
+   "round": "Round 8",
+   "opponent": {
+    "slug": "brendan_lyons",
+    "name": "Brendan_Lyons"
+   },
+   "result": "Win",
+   "games": "2-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1547.8,
+    "Pioneer": 1560.06
+   }
+  },
+  {
+   "cycle": 9,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "argtigg",
+    "name": "Fernando Arriagada"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1610.16,
+    "Standard": 1572.31
+   }
+  },
+  {
+   "cycle": 9,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "jomanman",
+    "name": "Jordan Lam"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1481.79,
+    "Standard": 1482.0
+   }
+  },
+  {
+   "cycle": 9,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "vye",
+    "name": "Vye"
+   },
+   "result": "Win",
+   "games": "2-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1499.47,
+    "Standard": 1499.64
+   }
+  },
+  {
+   "cycle": 9,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "madelinem",
+    "name": "Madeline Mutton"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1516.08,
+    "Standard": 1517.69
+   }
+  },
+  {
+   "cycle": 9,
+   "round": "Round 5",
+   "opponent": {
+    "slug": "skraz",
+    "name": "Skraz"
+   },
+   "result": "Win",
+   "games": "2-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1536.63,
+    "Standard": 1537.19
+   }
+  },
+  {
+   "cycle": 9,
+   "round": "Round 6",
+   "opponent": {
+    "slug": "raydric",
+    "name": "Jose Gabriel Hilario"
+   },
+   "result": "Loss",
+   "games": "1-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1673.09,
+    "Standard": 1615.95
+   }
+  },
+  {
+   "cycle": 9,
+   "round": "Round 7",
+   "opponent": {
+    "slug": "apellosine",
+    "name": "Apellosine"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1535.92,
+    "Standard": 1535.37
+   }
+  },
+  {
+   "cycle": 12,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "rowanmillers",
+    "name": "Rowan Millers"
+   },
+   "result": "Win",
+   "games": "2-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1549.96,
+    "Standard": 1574.18
+   }
+  },
+  {
+   "cycle": 12,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "starilixel",
+    "name": "Mia Fountain"
+   },
+   "result": "Loss",
+   "games": "1-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1560.5,
+    "Standard": 1556.43
+   }
+  },
+  {
+   "cycle": 12,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "apellosine",
+    "name": "Apellosine"
+   },
+   "result": "Win",
+   "games": "2-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1551.67,
+    "Standard": 1551.43
+   }
+  },
+  {
+   "cycle": 12,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "mdubs998",
+    "name": "Matthew Williams"
+   },
+   "result": "Win",
+   "games": "2-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1503.17,
+    "Standard": 1483.82
+   }
+  },
+  {
+   "cycle": 12,
+   "round": "Round 5",
+   "opponent": {
+    "slug": "volcanicpanik",
+    "name": "Daniel Yam"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1560.92,
+    "Standard": 1491.35
+   }
+  },
+  {
+   "cycle": 12,
+   "round": "Round 6",
+   "opponent": {
+    "slug": "hazzrd",
+    "name": "RIley Jones"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1585.0,
+    "Standard": 1569.76
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1575.79,
+   "peak": 1580.33,
+   "after_rc": [
+    {
+     "cycle": 3,
+     "rating": 1482.76
+    },
+    {
+     "cycle": 4,
+     "rating": 1524.43
+    },
+    {
+     "cycle": 6,
+     "rating": 1485.3
+    },
+    {
+     "cycle": 7,
+     "rating": 1566.47
+    },
+    {
+     "cycle": 9,
+     "rating": 1580.33
+    },
+    {
+     "cycle": 12,
+     "rating": 1575.79
+    }
+   ]
+  },
+  "Pioneer": {
+   "rating": 1596.66,
+   "peak": 1596.66,
+   "after_rc": [
+    {
+     "cycle": 3,
+     "rating": 1483.18
+    },
+    {
+     "cycle": 4,
+     "rating": 1523.9
+    },
+    {
+     "cycle": 7,
+     "rating": 1596.66
+    }
+   ],
+   "rated_by": "Pioneer"
+  },
+  "Standard": {
+   "rating": 1492.19,
+   "peak": 1492.19,
+   "after_rc": [
+    {
+     "cycle": 6,
+     "rating": 1464.08
+    },
+    {
+     "cycle": 9,
+     "rating": 1488.7
+    },
+    {
+     "cycle": 12,
+     "rating": 1492.19
+    }
+   ],
+   "rated_by": "Standard"
+  }
+ }
 }

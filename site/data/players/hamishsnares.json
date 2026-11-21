@@ -1,8 +1,9 @@
 {
  "slug": "hamishsnares",
- "name": "HamishSnares",
+ "name": "hamish_snares",
  "usernames": [
-  "HamishSnares"
+  "HamishSnares",
+  "hamish_snares"
  ],
  "rcs": [
   {
@@ -34,6 +35,16 @@
    "record": "5-3-0",
    "deck": "Jeskai Blink",
    "decklist": "https://melee.gg/Decklist/View/12f6af02-244a-42d4-8888-b3800046af17"
+  },
+  {
+   "cycle": 13,
+   "date": "2026-10-23",
+   "format": "Modern",
+   "finish": "179th",
+   "field_size": 233,
+   "record": "1-3-1",
+   "deck": "Azorius Control",
+   "decklist": "https://melee.gg/Decklist/View/ab3157dd-113a-44ba-b317-b4ec003907ce"
   }
  ],
  "matches": [
@@ -46,7 +57,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500,
+    "Pioneer": 1500
+   }
   },
   {
    "cycle": 7,
@@ -57,7 +72,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1467.45,
+    "Pioneer": 1481.35
+   }
   },
   {
    "cycle": 7,
@@ -68,7 +87,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1483.62,
+    "Pioneer": 1482.33
+   }
   },
   {
    "cycle": 7,
@@ -79,7 +102,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1412.75,
+    "Pioneer": 1412.92
+   }
   },
   {
    "cycle": 7,
@@ -90,7 +117,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1467.79,
+    "Pioneer": 1464.71
+   }
   },
   {
    "cycle": 7,
@@ -101,7 +132,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1480.29,
+    "Pioneer": 1481.02
+   }
   },
   {
    "cycle": 7,
@@ -112,7 +147,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1466.25,
+    "Pioneer": 1465.32
+   }
   },
   {
    "cycle": 7,
@@ -123,7 +162,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1466.46,
+    "Pioneer": 1463.66
+   }
   },
   {
    "cycle": 9,
@@ -134,7 +177,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1579.83,
+    "Standard": 1500
+   }
   },
   {
    "cycle": 9,
@@ -145,7 +192,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1689.74,
+    "Standard": 1624.02
+   }
   },
   {
    "cycle": 9,
@@ -156,7 +207,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1691.72,
+    "Standard": 1577.87
+   }
   },
   {
    "cycle": 9,
@@ -167,7 +222,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1629.85,
+    "Standard": 1465.45
+   }
   },
   {
    "cycle": 10,
@@ -178,7 +237,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1483.16,
+    "Modern": 1481.99
+   }
   },
   {
    "cycle": 10,
@@ -189,7 +252,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1482.0,
+    "Modern": 1482.0
+   }
   },
   {
    "cycle": 10,
@@ -200,7 +267,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1435.47,
+    "Modern": 1430.84
+   }
   },
   {
    "cycle": 10,
@@ -211,7 +282,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1447.39,
+    "Modern": 1480.58
+   }
   },
   {
    "cycle": 10,
@@ -222,7 +297,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500.88,
+    "Modern": 1498.8
+   }
   },
   {
    "cycle": 10,
@@ -233,7 +312,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1588.1,
+    "Modern": 1518.17
+   }
   },
   {
    "cycle": 10,
@@ -244,7 +327,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1719.34,
+    "Modern": 1644.52
+   }
   },
   {
    "cycle": 10,
@@ -255,7 +342,147 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1817.79,
+    "Modern": 1601.51
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "spiderbyte12",
+    "name": "Michael Billinghurst"
+   },
+   "result": "Loss",
+   "games": "1-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1633.36,
+    "Modern": 1533.79
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "pocketaces888",
+    "name": "James Moissis"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1438.48,
+    "Modern": 1482.0
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "loffisky",
+    "name": "Loffisky"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1470.54,
+    "Modern": 1500.68
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "hankrowe",
+    "name": "HankRowe"
+   },
+   "result": "Draw",
+   "games": "1-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1485.47,
+    "Modern": 1483.81
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 5",
+   "opponent": {
+    "slug": "jockjohnson",
+    "name": "Joel James"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1481.89,
+    "Modern": 1480.44
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1456.97,
+   "peak": 1491.16,
+   "after_rc": [
+    {
+     "cycle": 7,
+     "rating": 1462.77
+    },
+    {
+     "cycle": 9,
+     "rating": 1439.78
+    },
+    {
+     "cycle": 10,
+     "rating": 1491.16
+    },
+    {
+     "cycle": 13,
+     "rating": 1456.97
+    }
+   ]
+  },
+  "Pioneer": {
+   "rating": 1462.87,
+   "peak": 1462.87,
+   "after_rc": [
+    {
+     "cycle": 7,
+     "rating": 1462.87
+    }
+   ],
+   "rated_by": "Pioneer"
+  },
+  "Standard": {
+   "rating": 1466.95,
+   "peak": 1466.95,
+   "after_rc": [
+    {
+     "cycle": 9,
+     "rating": 1466.95
+    }
+   ],
+   "rated_by": "Standard"
+  },
+  "Modern": {
+   "rating": 1498.63,
+   "peak": 1537.32,
+   "after_rc": [
+    {
+     "cycle": 10,
+     "rating": 1537.32
+    },
+    {
+     "cycle": 13,
+     "rating": 1498.63
+    }
+   ],
+   "rated_by": "Modern"
+  }
+ }
 }

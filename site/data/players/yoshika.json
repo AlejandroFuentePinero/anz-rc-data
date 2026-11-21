@@ -26,7 +26,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1422.15,
+    "Pioneer": 1480.2
+   }
   },
   {
    "cycle": 7,
@@ -37,7 +41,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1491.5,
+    "Pioneer": 1449.93
+   }
   },
   {
    "cycle": 7,
@@ -48,7 +56,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1464.3,
+    "Pioneer": 1463.99
+   }
   },
   {
    "cycle": 7,
@@ -59,7 +71,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1550.84,
+    "Pioneer": 1549.88
+   }
   },
   {
    "cycle": 7,
@@ -70,18 +86,26 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1365.24,
+    "Pioneer": 1392.33
+   }
   },
   {
    "cycle": 7,
    "round": "Round 6",
    "opponent": {
     "slug": "hamishsnares",
-    "name": "HamishSnares"
+    "name": "hamish_snares"
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1480.29,
+    "Pioneer": 1480.46
+   }
   },
   {
    "cycle": 7,
@@ -92,7 +116,11 @@
    },
    "result": "Draw",
    "games": "1-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1465.87,
+    "Pioneer": 1463.01
+   }
   },
   {
    "cycle": 7,
@@ -103,7 +131,34 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1470.36,
+    "Pioneer": 1467.58
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1515.2,
+   "peak": 1515.2,
+   "after_rc": [
+    {
+     "cycle": 7,
+     "rating": 1515.2
+    }
+   ]
+  },
+  "Pioneer": {
+   "rating": 1515.79,
+   "peak": 1515.79,
+   "after_rc": [
+    {
+     "cycle": 7,
+     "rating": 1515.79
+    }
+   ],
+   "rated_by": "Pioneer"
+  }
+ }
 }

@@ -26,7 +26,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1485.08,
+    "Modern": 1500
+   }
   },
   {
    "cycle": 5,
@@ -37,7 +41,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1482.0,
+    "Modern": 1482.0
+   }
   },
   {
    "cycle": 5,
@@ -48,7 +56,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1462.87,
+    "Modern": 1500.0
+   }
   },
   {
    "cycle": 5,
@@ -59,18 +71,49 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1520.5,
+    "Modern": 1482.0
+   }
   },
   {
    "cycle": 5,
    "round": "Round 5",
    "opponent": {
-    "slug": "glooop",
+    "slug": "gl000p",
     "name": "Josh Bradbury"
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1610.58,
+    "Modern": 1500.0
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1483.79,
+   "peak": 1483.79,
+   "after_rc": [
+    {
+     "cycle": 5,
+     "rating": 1483.79
+    }
+   ]
+  },
+  "Modern": {
+   "rating": 1482.0,
+   "peak": 1482.0,
+   "after_rc": [
+    {
+     "cycle": 5,
+     "rating": 1482.0
+    }
+   ],
+   "rated_by": "Modern"
+  }
+ }
 }

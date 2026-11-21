@@ -26,7 +26,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500,
+    "Standard": 1500
+   }
   },
   {
    "cycle": 9,
@@ -37,7 +41,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1481.42,
+    "Standard": 1482.0
+   }
   },
   {
    "cycle": 9,
@@ -48,7 +56,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1470.87,
+    "Standard": 1500.41
+   }
   },
   {
    "cycle": 9,
@@ -59,7 +71,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1677.61,
+    "Standard": 1551.87
+   }
   },
   {
    "cycle": 9,
@@ -70,7 +86,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1463.68,
+    "Standard": 1463.16
+   }
   },
   {
    "cycle": 9,
@@ -81,7 +101,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1447.3,
+    "Standard": 1446.98
+   }
   },
   {
    "cycle": 9,
@@ -92,7 +116,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1446.47,
+    "Standard": 1447.77
+   }
   },
   {
    "cycle": 9,
@@ -103,7 +131,34 @@
    },
    "result": "Draw",
    "games": "1-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1414.18,
+    "Standard": 1464.18
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1448.55,
+   "peak": 1448.55,
+   "after_rc": [
+    {
+     "cycle": 9,
+     "rating": 1448.55
+    }
+   ]
+  },
+  "Standard": {
+   "rating": 1447.88,
+   "peak": 1447.88,
+   "after_rc": [
+    {
+     "cycle": 9,
+     "rating": 1447.88
+    }
+   ],
+   "rated_by": "Standard"
+  }
+ }
 }

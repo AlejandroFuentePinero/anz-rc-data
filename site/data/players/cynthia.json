@@ -1,8 +1,9 @@
 {
  "slug": "cynthia",
- "name": "Cynthia",
+ "name": "Cynthiaaa",
  "usernames": [
-  "Cynthia"
+  "Cynthia",
+  "Cynthiaaa"
  ],
  "rcs": [
   {
@@ -24,6 +25,16 @@
    "record": "3-3-0",
    "deck": "Mono-Green Landfall",
    "decklist": "https://melee.gg/Decklist/View/2555b0ba-be7a-4e3a-9f2a-b40c003504a0"
+  },
+  {
+   "cycle": 13,
+   "date": "2026-10-23",
+   "format": "Modern",
+   "finish": "61st",
+   "field_size": 233,
+   "record": "5-4-0",
+   "deck": "Jund Cosmogoyf",
+   "decklist": "https://melee.gg/Decklist/View/e3e57bf6-e351-4eea-a5ec-b4ec0027254b"
   }
  ],
  "matches": [
@@ -36,7 +47,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1515.11,
+    "Modern": 1500
+   }
   },
   {
    "cycle": 10,
@@ -47,7 +62,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1623.68,
+    "Modern": 1561.57
+   }
   },
   {
    "cycle": 10,
@@ -58,7 +77,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1569.11,
+    "Modern": 1622.43
+   }
   },
   {
    "cycle": 10,
@@ -69,7 +92,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1467.21,
+    "Modern": 1465.99
+   }
   },
   {
    "cycle": 11,
@@ -80,7 +107,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1600.01,
+    "Standard": 1515.89
+   }
   },
   {
    "cycle": 11,
@@ -91,7 +122,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1517.6,
+    "Standard": 1518.0
+   }
   },
   {
    "cycle": 11,
@@ -102,7 +137,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1535.96,
+    "Standard": 1535.01
+   }
   },
   {
    "cycle": 11,
@@ -113,7 +152,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1553.49,
+    "Standard": 1553.99
+   }
   },
   {
    "cycle": 11,
@@ -124,7 +167,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1561.82,
+    "Standard": 1552.38
+   }
   },
   {
    "cycle": 11,
@@ -135,7 +182,192 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1571.42,
+    "Standard": 1519.5
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "ross_s",
+    "name": "Ross_S"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500,
+    "Modern": 1500
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "hankrowe",
+    "name": "HankRowe"
+   },
+   "result": "Win",
+   "games": "2-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1521.47,
+    "Modern": 1519.86
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "seby666",
+    "name": "Sebastiano Condo"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1575.06,
+    "Modern": 1572.51
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "simon_l",
+    "name": "Simon Linabury"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1674.08,
+    "Modern": 1518.68
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 5",
+   "opponent": {
+    "slug": "gabrielbartholazzi",
+    "name": "GabrielBartholazzi"
+   },
+   "result": "Win",
+   "games": "2-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1646.1,
+    "Modern": 1538.08
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 6",
+   "opponent": {
+    "slug": "ignismorgan",
+    "name": "IgnisMorgan"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1520.42,
+    "Modern": 1555.93
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 7",
+   "opponent": {
+    "slug": "alejandrofp",
+    "name": "Alejandro de la Fuente"
+   },
+   "result": "Loss",
+   "games": "1-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1727.11,
+    "Modern": 1624.38
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 8",
+   "opponent": {
+    "slug": "yoshiofadown",
+    "name": "Andrew Jacobs"
+   },
+   "result": "Loss",
+   "games": "1-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1592.97,
+    "Modern": 1586.33
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 9",
+   "opponent": {
+    "slug": "dallas",
+    "name": "Dallas"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1574.57,
+    "Modern": 1603.7
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1530.62,
+   "peak": 1530.62,
+   "after_rc": [
+    {
+     "cycle": 10,
+     "rating": 1501.78
+    },
+    {
+     "cycle": 11,
+     "rating": 1504.67
+    },
+    {
+     "cycle": 13,
+     "rating": 1530.62
+    }
+   ]
+  },
+  "Modern": {
+   "rating": 1522.59,
+   "peak": 1522.59,
+   "after_rc": [
+    {
+     "cycle": 10,
+     "rating": 1501.36
+    },
+    {
+     "cycle": 13,
+     "rating": 1522.59
+    }
+   ],
+   "rated_by": "Modern"
+  },
+  "Standard": {
+   "rating": 1500.57,
+   "peak": 1500.57,
+   "after_rc": [
+    {
+     "cycle": 11,
+     "rating": 1500.57
+    }
+   ],
+   "rated_by": "Standard"
+  }
+ }
 }

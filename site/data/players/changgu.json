@@ -26,7 +26,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1514.93,
+    "Modern": 1500
+   }
   },
   {
    "cycle": 10,
@@ -37,7 +41,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1616.83,
+    "Modern": 1537.61
+   }
   },
   {
    "cycle": 10,
@@ -48,7 +56,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500.56,
+    "Modern": 1500.32
+   }
   },
   {
    "cycle": 10,
@@ -59,7 +71,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1484.24,
+    "Modern": 1517.47
+   }
   },
   {
    "cycle": 10,
@@ -70,7 +86,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1537.45,
+    "Modern": 1551.48
+   }
   },
   {
    "cycle": 10,
@@ -81,7 +101,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1654.88,
+    "Modern": 1595.81
+   }
   },
   {
    "cycle": 10,
@@ -92,7 +116,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1539.53,
+    "Modern": 1536.91
+   }
   },
   {
    "cycle": 10,
@@ -103,7 +131,34 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1651.96,
+    "Modern": 1535.01
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1505.57,
+   "peak": 1505.57,
+   "after_rc": [
+    {
+     "cycle": 10,
+     "rating": 1505.57
+    }
+   ]
+  },
+  "Modern": {
+   "rating": 1501.65,
+   "peak": 1501.65,
+   "after_rc": [
+    {
+     "cycle": 10,
+     "rating": 1501.65
+    }
+   ],
+   "rated_by": "Modern"
+  }
+ }
 }

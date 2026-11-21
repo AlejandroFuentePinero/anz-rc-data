@@ -1,8 +1,9 @@
 {
  "slug": "maluslupus",
- "name": "Alexander Colbert",
+ "name": "AlexanderColbert",
  "usernames": [
-  "MalusLupus"
+  "MalusLupus",
+  "AlexanderColbert"
  ],
  "rcs": [
   {
@@ -14,6 +15,16 @@
    "record": "5-2-1",
    "deck": "Azorius Blink",
    "decklist": "https://melee.gg/Decklist/View/8bda2406-623d-4df0-8efb-b37f008c7a61"
+  },
+  {
+   "cycle": 11,
+   "date": "2026-03-13",
+   "format": "Standard",
+   "finish": "144th",
+   "field_size": 209,
+   "record": "2-3-0",
+   "deck": "Grixis Artifacts",
+   "decklist": "https://melee.gg/Decklist/View/1da09e08-d007-477d-b955-b40c00721f90"
   }
  ],
  "matches": [
@@ -26,7 +37,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1561.43,
+    "Modern": 1483.52
+   }
   },
   {
    "cycle": 10,
@@ -37,7 +52,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1406.79,
+    "Modern": 1500.32
+   }
   },
   {
    "cycle": 10,
@@ -48,7 +67,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1604.3,
+    "Modern": 1526.63
+   }
   },
   {
    "cycle": 10,
@@ -59,7 +82,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1605.61,
+    "Modern": 1570.15
+   }
   },
   {
    "cycle": 10,
@@ -70,7 +97,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1727.76,
+    "Modern": 1649.38
+   }
   },
   {
    "cycle": 10,
@@ -81,7 +112,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1741.61,
+    "Modern": 1665.31
+   }
   },
   {
    "cycle": 10,
@@ -92,7 +127,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1685.04,
+    "Modern": 1552.23
+   }
   },
   {
    "cycle": 10,
@@ -103,7 +142,124 @@
    },
    "result": "Draw",
    "games": "1-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1598.18,
+    "Modern": 1464.38
+   }
+  },
+  {
+   "cycle": 11,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "nicholas-talbot",
+    "name": "Nicholas Talbot"
+   },
+   "result": "Win",
+   "games": "2-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1671.71,
+    "Standard": 1615.96
+   }
+  },
+  {
+   "cycle": 11,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "beardedbear",
+    "name": "BeardedBear"
+   },
+   "result": "Loss",
+   "games": "1-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1517.75,
+    "Standard": 1517.66
+   }
+  },
+  {
+   "cycle": 11,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "assembledalphas",
+    "name": "Matthew Giudes"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1773.72,
+    "Standard": 1566.41
+   }
+  },
+  {
+   "cycle": 11,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "dazza824",
+    "name": "Daniel Zhao"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1502.11,
+    "Standard": 1525.1
+   }
+  },
+  {
+   "cycle": 11,
+   "round": "Round 5",
+   "opponent": {
+    "slug": "jenniferrose",
+    "name": "Jennifer-Rose Holloway"
+   },
+   "result": "Loss",
+   "games": "1-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1602.05,
+    "Standard": 1655.65
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1551.33,
+   "peak": 1565.18,
+   "after_rc": [
+    {
+     "cycle": 10,
+     "rating": 1565.18
+    },
+    {
+     "cycle": 11,
+     "rating": 1551.33
+    }
+   ]
+  },
+  "Modern": {
+   "rating": 1556.12,
+   "peak": 1556.12,
+   "after_rc": [
+    {
+     "cycle": 10,
+     "rating": 1556.12
+    }
+   ],
+   "rated_by": "Modern"
+  },
+  "Standard": {
+   "rating": 1488.71,
+   "peak": 1488.71,
+   "after_rc": [
+    {
+     "cycle": 11,
+     "rating": 1488.71
+    }
+   ],
+   "rated_by": "Standard"
+  }
+ }
 }

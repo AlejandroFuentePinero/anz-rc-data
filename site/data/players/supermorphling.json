@@ -36,7 +36,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1523.91,
+    "Standard": 1500
+   }
   },
   {
    "cycle": 6,
@@ -47,7 +51,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1465.86,
+    "Standard": 1482.0
+   }
   },
   {
    "cycle": 6,
@@ -58,7 +66,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1646.75,
+    "Standard": 1639.39
+   }
   },
   {
    "cycle": 12,
@@ -69,7 +81,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1513.05,
+    "Standard": 1449.15
+   }
   },
   {
    "cycle": 12,
@@ -80,7 +96,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1684.87,
+    "Standard": 1535.61
+   }
   },
   {
    "cycle": 12,
@@ -91,7 +111,42 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1330.37,
+    "Standard": 1326.69
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1467.72,
+   "peak": 1484.79,
+   "after_rc": [
+    {
+     "cycle": 6,
+     "rating": 1484.79
+    },
+    {
+     "cycle": 12,
+     "rating": 1467.72
+    }
+   ]
+  },
+  "Standard": {
+   "rating": 1463.64,
+   "peak": 1484.53,
+   "after_rc": [
+    {
+     "cycle": 6,
+     "rating": 1484.53
+    },
+    {
+     "cycle": 12,
+     "rating": 1463.64
+    }
+   ],
+   "rated_by": "Standard"
+  }
+ }
 }

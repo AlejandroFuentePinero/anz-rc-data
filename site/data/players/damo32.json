@@ -21,12 +21,16 @@
    "cycle": 8,
    "round": "Round 1",
    "opponent": {
-    "slug": "johneb",
+    "slug": "jleb",
     "name": "johneb"
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1513.47,
+    "Modern": 1554.0
+   }
   },
   {
    "cycle": 8,
@@ -37,7 +41,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1653.42,
+    "Modern": 1569.71
+   }
   },
   {
    "cycle": 8,
@@ -48,7 +56,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1499.32,
+    "Modern": 1499.98
+   }
   },
   {
    "cycle": 8,
@@ -59,7 +71,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1700.63,
+    "Modern": 1500.99
+   }
   },
   {
    "cycle": 8,
@@ -70,7 +86,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1537.31,
+    "Modern": 1536.67
+   }
   },
   {
    "cycle": 8,
@@ -81,7 +101,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1492.02,
+    "Modern": 1519.83
+   }
   },
   {
    "cycle": 8,
@@ -92,7 +116,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1627.53,
+    "Modern": 1519.62
+   }
   },
   {
    "cycle": 8,
@@ -103,7 +131,34 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1564.69,
+    "Modern": 1600.44
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1543.44,
+   "peak": 1543.44,
+   "after_rc": [
+    {
+     "cycle": 8,
+     "rating": 1543.44
+    }
+   ]
+  },
+  "Modern": {
+   "rating": 1538.6,
+   "peak": 1538.6,
+   "after_rc": [
+    {
+     "cycle": 8,
+     "rating": 1538.6
+    }
+   ],
+   "rated_by": "Modern"
+  }
+ }
 }

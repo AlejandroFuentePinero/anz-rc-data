@@ -36,7 +36,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500.0,
+    "Pioneer": 1500.0
+   }
   },
   {
    "cycle": 3,
@@ -47,7 +51,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1553.0,
+    "Pioneer": 1553.0
+   }
   },
   {
    "cycle": 3,
@@ -58,7 +66,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1464.15,
+    "Pioneer": 1463.35
+   }
   },
   {
    "cycle": 3,
@@ -69,7 +81,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1483.09,
+    "Pioneer": 1447.94
+   }
   },
   {
    "cycle": 3,
@@ -80,7 +96,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1465.15,
+    "Pioneer": 1464.93
+   }
   },
   {
    "cycle": 3,
@@ -91,7 +111,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1468.33,
+    "Pioneer": 1483.83
+   }
   },
   {
    "cycle": 3,
@@ -102,7 +126,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1678.39,
+    "Pioneer": 1630.27
+   }
   },
   {
    "cycle": 3,
@@ -113,7 +141,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1376.12,
+    "Pioneer": 1418.14
+   }
   },
   {
    "cycle": 6,
@@ -124,7 +156,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1410.1,
+    "Standard": 1500
+   }
   },
   {
    "cycle": 6,
@@ -135,7 +171,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1712.72,
+    "Standard": 1553.34
+   }
   },
   {
    "cycle": 6,
@@ -146,7 +186,11 @@
    },
    "result": "Draw",
    "games": "1-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1559.11,
+    "Standard": 1518.0
+   }
   },
   {
    "cycle": 6,
@@ -157,7 +201,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1512.31,
+    "Standard": 1501.96
+   }
   },
   {
    "cycle": 6,
@@ -168,7 +216,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1619.15,
+    "Standard": 1554.94
+   }
   },
   {
    "cycle": 6,
@@ -179,7 +231,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1412.32,
+    "Standard": 1554.67
+   }
   },
   {
    "cycle": 6,
@@ -190,7 +246,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1734.3,
+    "Standard": 1675.4
+   }
   },
   {
    "cycle": 6,
@@ -201,7 +261,11 @@
    },
    "result": "Intentional Draw",
    "games": "0-0-3",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1698.1,
+    "Standard": 1607.41
+   }
   },
   {
    "cycle": 6,
@@ -212,7 +276,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1729.24,
+    "Standard": 1718.42
+   }
   },
   {
    "cycle": 6,
@@ -223,7 +291,49 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1717.53,
+    "Standard": 1637.4
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1586.18,
+   "peak": 1586.18,
+   "after_rc": [
+    {
+     "cycle": 3,
+     "rating": 1466.81
+    },
+    {
+     "cycle": 6,
+     "rating": 1586.18
+    }
+   ]
+  },
+  "Pioneer": {
+   "rating": 1466.39,
+   "peak": 1466.39,
+   "after_rc": [
+    {
+     "cycle": 3,
+     "rating": 1466.39
+    }
+   ],
+   "rated_by": "Pioneer"
+  },
+  "Standard": {
+   "rating": 1611.1,
+   "peak": 1611.1,
+   "after_rc": [
+    {
+     "cycle": 6,
+     "rating": 1611.1
+    }
+   ],
+   "rated_by": "Standard"
+  }
+ }
 }

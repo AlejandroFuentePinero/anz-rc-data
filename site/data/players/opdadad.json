@@ -1,8 +1,9 @@
 {
  "slug": "opdadad",
- "name": "Opdadad",
+ "name": "brisbanebroncosrule",
  "usernames": [
-  "Opdadad"
+  "Opdadad",
+  "brisbanebroncosrule"
  ],
  "rcs": [
   {
@@ -14,6 +15,16 @@
    "record": "0-3-0",
    "deck": "Eldrazi Tron",
    "decklist": "https://melee.gg/Decklist/View/34475fcd-1636-4b6b-a5c1-0ef1224233e2"
+  },
+  {
+   "cycle": 13,
+   "date": "2026-10-23",
+   "format": "Modern",
+   "finish": "99th",
+   "field_size": 233,
+   "record": "4-5-0",
+   "deck": "Boros Energy",
+   "decklist": "https://melee.gg/Decklist/View/f8152567-4017-41f6-9393-b4ec00635d36"
   }
  ],
  "matches": [
@@ -26,7 +37,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1482.72,
+    "Modern": 1500
+   }
   },
   {
    "cycle": 5,
@@ -37,7 +52,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1444.68,
+    "Modern": 1482.0
+   }
   },
   {
    "cycle": 5,
@@ -48,7 +67,177 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1491.7,
+    "Modern": 1464.0
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "dallas",
+    "name": "Dallas"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1546.1,
+    "Modern": 1579.98
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "jockjohnson",
+    "name": "Joel James"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1484.8,
+    "Modern": 1482.0
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "alosaur",
+    "name": "Alex Humbley"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1782.52,
+    "Modern": 1614.46
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "michellerose",
+    "name": "MichelleRose"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1484.11,
+    "Modern": 1485.99
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 5",
+   "opponent": {
+    "slug": "quiznium",
+    "name": "Riley Beck"
+   },
+   "result": "Win",
+   "games": "2-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1647.65,
+    "Modern": 1502.93
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 6",
+   "opponent": {
+    "slug": "csypher",
+    "name": "Jordan Cock"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1472.64,
+    "Modern": 1463.99
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 7",
+   "opponent": {
+    "slug": "juzza",
+    "name": "Justin Cheung"
+   },
+   "result": "Win",
+   "games": "2-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1684.07,
+    "Modern": 1599.86
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 8",
+   "opponent": {
+    "slug": "jamesdrake",
+    "name": "James Drake"
+   },
+   "result": "Loss",
+   "games": "1-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1812.98,
+    "Modern": 1681.12
+   }
+  },
+  {
+   "cycle": 13,
+   "round": "Round 9",
+   "opponent": {
+    "slug": "garyjohnson1",
+    "name": "GaryJohnson1"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1558.29,
+    "Modern": 1504.33
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1452.04,
+   "peak": 1452.04,
+   "after_rc": [
+    {
+     "cycle": 5,
+     "rating": 1445.53
+    },
+    {
+     "cycle": 13,
+     "rating": 1452.04
+    }
+   ]
+  },
+  "Modern": {
+   "rating": 1443.2,
+   "peak": 1446.0,
+   "after_rc": [
+    {
+     "cycle": 5,
+     "rating": 1446.0
+    },
+    {
+     "cycle": 13,
+     "rating": 1443.2
+    }
+   ],
+   "rated_by": "Modern"
+  }
+ }
 }

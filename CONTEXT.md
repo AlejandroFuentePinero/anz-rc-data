@@ -43,7 +43,7 @@ One pairing between two Players in one round of an RC, with its result.
 _Avoid_: Game (a Match is played over games), pairing
 
 **Intentional Draw**:
-A Match both Players agreed to draw without playing, recorded 0-0-3. Counted in a record, never in a Rating or a win rate.
+A Match both Players agreed to draw without playing: a 0-0-3 in the last two Swiss rounds at tables 1 to 8, where Players still in the hunt for the Top 8 agree to one, or a 0-0-3 the curation file names. A 0-0-3 anywhere else is a played draw. Counted in a record, never in a Rating or a win rate.
 _Avoid_: ID, agreed draw
 
 **Finish**:

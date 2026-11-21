@@ -1,8 +1,9 @@
 {
  "slug": "willows",
- "name": "WillowS",
+ "name": "WillowMoon99",
  "usernames": [
-  "WillowS"
+  "WillowS",
+  "WillowMoon99"
  ],
  "rcs": [
   {
@@ -14,6 +15,36 @@
    "record": "8-2-1",
    "deck": "Mono-White Humans",
    "decklist": "https://melee.gg/Decklist/View/1e021927-560b-4b66-96af-8ed814786d86"
+  },
+  {
+   "cycle": 4,
+   "date": "2023-10-27",
+   "format": "Pioneer",
+   "finish": "Top 8",
+   "field_size": 156,
+   "record": "6-2-1",
+   "deck": "Boros Convoke",
+   "decklist": "https://melee.gg/Decklist/View/d2e9dd5e-8228-454b-a0b3-0cdcd61747fe"
+  },
+  {
+   "cycle": 5,
+   "date": "2024-03-08",
+   "format": "Modern",
+   "finish": "220th",
+   "field_size": 228,
+   "record": "0-2-0",
+   "deck": "Rakdos Scam",
+   "decklist": "https://melee.gg/Decklist/View/9a4809a0-3015-4fdd-a662-6ae9afc9b4a2"
+  },
+  {
+   "cycle": 6,
+   "date": "2024-05-25",
+   "format": "Standard",
+   "finish": "58th",
+   "field_size": 168,
+   "record": "4-4-0",
+   "deck": "Boros Convoke",
+   "decklist": "https://melee.gg/Decklist/View/dd886884-fca6-4f84-b127-f100b02c8c6c"
   }
  ],
  "matches": [
@@ -26,7 +57,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500,
+    "Pioneer": 1500
+   }
   },
   {
    "cycle": 3,
@@ -37,7 +72,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1518.71,
+    "Pioneer": 1518.0
+   }
   },
   {
    "cycle": 3,
@@ -48,7 +87,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1535.8,
+    "Pioneer": 1535.36
+   }
   },
   {
    "cycle": 3,
@@ -59,7 +102,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1518.95,
+    "Pioneer": 1519.89
+   }
   },
   {
    "cycle": 3,
@@ -70,7 +117,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1556.69,
+    "Pioneer": 1572.29
+   }
   },
   {
    "cycle": 3,
@@ -81,7 +132,11 @@
    },
    "result": "Win",
    "games": "2-0-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1591.66,
+    "Pioneer": 1591.23
+   }
   },
   {
    "cycle": 3,
@@ -92,7 +147,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1573.0,
+    "Pioneer": 1572.97
+   }
   },
   {
    "cycle": 3,
@@ -103,7 +162,11 @@
    },
    "result": "Intentional Draw",
    "games": "0-0-3",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1594.44,
+    "Pioneer": 1590.32
+   }
   },
   {
    "cycle": 3,
@@ -114,7 +177,11 @@
    },
    "result": "Win",
    "games": null,
-   "reconstructed": true
+   "reconstructed": true,
+   "opponent_rating": {
+    "Global": 1706.94,
+    "Pioneer": 1687.7
+   }
   },
   {
    "cycle": 3,
@@ -125,7 +192,11 @@
    },
    "result": "Win",
    "games": null,
-   "reconstructed": true
+   "reconstructed": true,
+   "opponent_rating": {
+    "Global": 1586.43,
+    "Pioneer": 1583.79
+   }
   },
   {
    "cycle": 3,
@@ -136,7 +207,357 @@
    },
    "result": "Loss",
    "games": null,
-   "reconstructed": true
+   "reconstructed": true,
+   "opponent_rating": {
+    "Global": 1599.09,
+    "Pioneer": 1627.71
+   }
+  },
+  {
+   "cycle": 4,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "ethanwcranford",
+    "name": "Ethan Cranford"
+   },
+   "result": "Win",
+   "games": "2-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500,
+    "Pioneer": 1500
+   }
+  },
+  {
+   "cycle": 4,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "hannawarelf",
+    "name": "Hannah Nixon"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1518.8,
+    "Pioneer": 1518.76
+   }
+  },
+  {
+   "cycle": 4,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "alosaur",
+    "name": "Alex Humbley"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1581.21,
+    "Pioneer": 1599.52
+   }
+  },
+  {
+   "cycle": 4,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "ez_clap",
+    "name": "Henry Sams"
+   },
+   "result": "Win",
+   "games": "2-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1592.51,
+    "Pioneer": 1620.52
+   }
+  },
+  {
+   "cycle": 4,
+   "round": "Round 5",
+   "opponent": {
+    "slug": "masonme2",
+    "name": "Masonme2"
+   },
+   "result": "Win",
+   "games": "2-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1626.1,
+    "Pioneer": 1622.28
+   }
+  },
+  {
+   "cycle": 4,
+   "round": "Round 6",
+   "opponent": {
+    "slug": "dialect",
+    "name": "Joey Brautigam"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1556.7,
+    "Pioneer": 1556.93
+   }
+  },
+  {
+   "cycle": 4,
+   "round": "Round 7",
+   "opponent": {
+    "slug": "campbells",
+    "name": "Campbell Sullivan"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1582.2,
+    "Pioneer": 1609.36
+   }
+  },
+  {
+   "cycle": 4,
+   "round": "Round 8",
+   "opponent": {
+    "slug": "raydric",
+    "name": "Jose Gabriel Hilario"
+   },
+   "result": "Intentional Draw",
+   "games": "0-0-3",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1542.69,
+    "Pioneer": 1517.03
+   }
+  },
+  {
+   "cycle": 4,
+   "round": "Quarterfinal",
+   "opponent": {
+    "slug": "danso",
+    "name": "Brett Girvan"
+   },
+   "result": "Loss",
+   "games": null,
+   "reconstructed": true,
+   "opponent_rating": {
+    "Global": 1563.77,
+    "Pioneer": 1608.59
+   }
+  },
+  {
+   "cycle": 5,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "darkfire_666",
+    "name": "Daniel Polson"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500,
+    "Modern": 1500
+   }
+  },
+  {
+   "cycle": 5,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "weirdperson",
+    "name": "Carl Frankel"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1441.15,
+    "Modern": 1482.0
+   }
+  },
+  {
+   "cycle": 6,
+   "round": "Round 1",
+   "opponent": {
+    "slug": "stevenesq",
+    "name": "StevenESQ"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1500,
+    "Standard": 1500
+   }
+  },
+  {
+   "cycle": 6,
+   "round": "Round 2",
+   "opponent": {
+    "slug": "bradenm",
+    "name": "Braden Mills"
+   },
+   "result": "Win",
+   "games": "2-1-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1551.05,
+    "Standard": 1553.34
+   }
+  },
+  {
+   "cycle": 6,
+   "round": "Round 3",
+   "opponent": {
+    "slug": "viraz",
+    "name": "Viraz"
+   },
+   "result": "Loss",
+   "games": "1-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1544.06,
+    "Standard": 1536.0
+   }
+  },
+  {
+   "cycle": 6,
+   "round": "Round 4",
+   "opponent": {
+    "slug": "klarkt",
+    "name": "Klarke Trezise"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1469.0,
+    "Standard": 1500.35
+   }
+  },
+  {
+   "cycle": 6,
+   "round": "Round 5",
+   "opponent": {
+    "slug": "dc_abstracted",
+    "name": "David Chamberlain"
+   },
+   "result": "Loss",
+   "games": "1-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1617.07,
+    "Standard": 1534.78
+   }
+  },
+  {
+   "cycle": 6,
+   "round": "Round 6",
+   "opponent": {
+    "slug": "jamesxu",
+    "name": "Jamesxu"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1521.58,
+    "Standard": 1520.72
+   }
+  },
+  {
+   "cycle": 6,
+   "round": "Round 7",
+   "opponent": {
+    "slug": "riversmith",
+    "name": "Chris Dewhurst"
+   },
+   "result": "Win",
+   "games": "2-0-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1502.16,
+    "Standard": 1501.2
+   }
+  },
+  {
+   "cycle": 6,
+   "round": "Round 8",
+   "opponent": {
+    "slug": "conradus",
+    "name": "connor mcgillivray"
+   },
+   "result": "Loss",
+   "games": "0-2-0",
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1656.4,
+    "Standard": 1581.55
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1612.86,
+   "peak": 1668.98,
+   "after_rc": [
+    {
+     "cycle": 3,
+     "rating": 1607.77
+    },
+    {
+     "cycle": 4,
+     "rating": 1668.98
+    },
+    {
+     "cycle": 5,
+     "rating": 1626.21
+    },
+    {
+     "cycle": 6,
+     "rating": 1612.86
+    }
+   ]
+  },
+  "Pioneer": {
+   "rating": 1671.33,
+   "peak": 1671.33,
+   "after_rc": [
+    {
+     "cycle": 3,
+     "rating": 1608.16
+    },
+    {
+     "cycle": 4,
+     "rating": 1671.33
+    }
+   ],
+   "rated_by": "Pioneer"
+  },
+  "Modern": {
+   "rating": 1464.0,
+   "peak": 1464.0,
+   "after_rc": [
+    {
+     "cycle": 5,
+     "rating": 1464.0
+    }
+   ],
+   "rated_by": "Modern"
+  },
+  "Standard": {
+   "rating": 1501.48,
+   "peak": 1501.48,
+   "after_rc": [
+    {
+     "cycle": 6,
+     "rating": 1501.48
+    }
+   ],
+   "rated_by": "Standard"
+  }
+ }
 }

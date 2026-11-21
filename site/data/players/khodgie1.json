@@ -21,12 +21,16 @@
    "cycle": 6,
    "round": "Round 1",
    "opponent": {
-    "slug": "nathw",
+    "slug": "bronson190",
     "name": "NathW"
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1524.43,
+    "Standard": 1500
+   }
   },
   {
    "cycle": 6,
@@ -37,7 +41,11 @@
    },
    "result": "Loss",
    "games": "0-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1546.2,
+    "Standard": 1518.0
+   }
   },
   {
    "cycle": 6,
@@ -48,7 +56,11 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1399.97,
+    "Standard": 1500.0
+   }
   },
   {
    "cycle": 6,
@@ -59,7 +71,11 @@
    },
    "result": "Win",
    "games": "2-1-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1522.76,
+    "Standard": 1483.58
+   }
   },
   {
    "cycle": 6,
@@ -70,7 +86,34 @@
    },
    "result": "Loss",
    "games": "1-2-0",
-   "reconstructed": false
+   "reconstructed": false,
+   "opponent_rating": {
+    "Global": 1469.09,
+    "Standard": 1501.25
+   }
   }
- ]
+ ],
+ "ratings": {
+  "Global": {
+   "rating": 1481.31,
+   "peak": 1481.31,
+   "after_rc": [
+    {
+     "cycle": 6,
+     "rating": 1481.31
+    }
+   ]
+  },
+  "Standard": {
+   "rating": 1482.05,
+   "peak": 1482.05,
+   "after_rc": [
+    {
+     "cycle": 6,
+     "rating": 1482.05
+    }
+   ],
+   "rated_by": "Standard"
+  }
+ }
 }
