@@ -37,6 +37,9 @@ header.site .search { width: 300px; }
 header .search ul { position: absolute; z-index: 30; top: 100%; left: 0; right: 0; max-height: 70vh; overflow-y: auto; box-shadow: 0 8px 24px rgba(20, 20, 19, 0.10); }
 
 main { padding: 24px 32px 48px; }
+/* The footer: how to reach the owner, and the sister site. */
+footer.site span { white-space: nowrap; }
+footer.site { border-top: 0.5px solid var(--rule-strong); padding: 16px 32px 32px; font-size: 14px; color: var(--ink-muted); }
 main > h1, .card-head h1 { font-size: 26px; line-height: 1.15; font-weight: 650; letter-spacing: -0.015em; margin-bottom: 16px; }
 .card-head { margin-bottom: 20px; }
 .card-head h1 { margin-bottom: 4px; }
@@ -109,6 +112,7 @@ tr.rounds table { background: var(--raised); border-radius: 8px; }
   header.site .brand { width: 100%; font-size: 24px; }
   header.site .search { flex: 1 1 200px; width: auto; }
   main { padding: 16px 16px 48px; }
+  footer.site { padding: 16px 16px 32px; }
   /* On a phone the Rating plot keeps a readable width and scrolls inside its sheet, as a wide table does. */
   .rating-plot { overflow-x: auto; }
   #against-field { min-width: 600px; }
