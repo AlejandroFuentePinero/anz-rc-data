@@ -18,6 +18,10 @@
   tr.rounds > td { padding: 0 0 8px 28px; background: #fafafa; }
   tr.rounds table td, tr.rounds table th { border-bottom-color: #eee; }
   #compared .scroll { margin-bottom: 16px; }
+  .picker { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .chip { padding: 2px 4px 2px 12px; border: 1px solid #bbb; border-radius: 16px; }
+  .chip a { padding: 0 6px; color: #888; text-decoration: none; }
+  .chip a:hover { color: #222; }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
 </head>
@@ -38,7 +42,10 @@
 <p>You must have played at least 3 RCs to be ranked, and 3 in a Format to be ranked in it.</p>
 
 <h2>Compare Players</h2>
+<div class="picker">
 <input id="compare" type="search" placeholder="Compare with a Player" autocomplete="off">
+<span class="picker" id="chips"></span>
+</div>
 <ul id="compare-results"></ul>
 <p id="compare-missing" hidden></p>
 <div id="compared" hidden>
@@ -197,6 +204,15 @@ function draw() {
 }
 
 function compare() {
+  // Each compared Player beside the box, with a × that takes them out.
+  document.getElementById("chips").replaceChildren(...compared.map((player) => {
+    const chip = document.createElement("span");
+    chip.className = "chip";
+    const remove = link("×", address([card.slug, ...compared.filter((kept) => kept !== player).map((kept) => kept.slug)]));
+    remove.title = `Remove ${player.name}`;
+    chip.append(player.name, remove);
+    return chip;
+  }));
   document.getElementById("compared").hidden = !compared.length;
   if (!compared.length) return;
   const players = [card, ...compared];
@@ -253,14 +269,7 @@ function compare() {
   const summary = document.getElementById("compared-summary");
   summary.replaceChildren();
   for (const player of players) {
-    const name = document.createElement("span");
-    name.append(cardLink(player));
-    if (player !== card) {
-      const remove = link("×", address([card.slug, ...compared.filter((kept) => kept !== player).map((kept) => kept.slug)]));
-      remove.title = "Remove from the comparison";
-      name.append(" ", remove);
-    }
-    addRow(summary, [[name], ...summaryCells(player.summary.Global, player.ratings.Global)], player === card ? "global" : null);
+    addRow(summary, [[cardLink(player)], ...summaryCells(player.summary.Global, player.ratings.Global)], player === card ? "global" : null);
   }
 }
 
