@@ -26,6 +26,5 @@ function playerSearch(input, results, href) {
   });
 }
 
-// The site search, on every page that has one, opens the Player's card.
-const searchInput = document.getElementById("search");
-if (searchInput) playerSearch(searchInput, document.getElementById("search-results"), (player) => `player.html#${player.slug}`);
+// The site search opens the Player's card.
+playerSearch(document.getElementById("search"), document.getElementById("search-results"), (player) => `player.html#${player.slug}`);

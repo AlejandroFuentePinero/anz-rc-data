@@ -95,12 +95,12 @@ _Avoid_: Max Elo, best rating
 The landing page: the scene as a whole across RCs (Field Sizes, each field by Experience, the Top 8 rate at each level of Experience, and every RC's Winner and Runner-up).
 
 **Player card**:
-One Player's page: their RCs, Finishes, Matches and Rating over the Cycles.
+One Player's page: their RCs, Finishes, Matches and Rating over the Cycles, and Compare Players.
 _Avoid_: Profile, pilot page
 
-**Face to face**:
-The page comparing two chosen Players across the Cycles, with their Head-to-head.
-_Avoid_: Versus, compare
+**Compare Players**:
+The Player card's section setting up to four other Players beside the card's Player: the Head-to-head records (a matrix once three or more Players are in), every Match the card's Player played against each of them, a summary row per Player, and every Player's line on the card's plot. The card's Player is the focus: Matches are listed only between them and each other Player.
+_Avoid_: Face to face, versus
 
 **Leaderboard**:
 The Players ranked by Rating, in Global or one Format.

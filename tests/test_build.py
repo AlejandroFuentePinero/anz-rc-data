@@ -193,7 +193,7 @@ def test_the_rc_table_gives_each_rc_its_winner_and_runner_up_by_rank_as_players(
     )
 
     row = bundle.rcs()[1]
-    del row["field_rating"], row["field_rating_in_format"]  # tested on their own
+    del row["field_rating"]  # tested on its own
     assert row == {
         "cycle": 2, "date": "2023-02-01", "city": None, "format": "Modern", "field_size": 4,
         "winner": {"slug": "p3", "name": "Player 3"}, "runner_up": {"slug": "ana", "name": "Ana Lopez"},
@@ -907,10 +907,10 @@ def test_the_leaderboard_shows_the_top_50_of_more_eligible_players(tmp_path):
     assert [row["rank"] for row in rows] == [1] * 30 + [31] * 20  # tied Players share a rank
 
 
-# Face to face (issue #10): two Players' Head-to-head, and each RC's field in its own Format.
+# Compare Players (issue #10): the card's Player against the Players compared with them.
 
 
-def test_the_head_to_head_counts_every_match_two_players_played_in_global_and_each_format_they_met_in(tmp_path):
+def test_the_head_to_head_counts_every_match_two_players_played_across_every_format(tmp_path):
     # Cycle 1, Modern: Ana and Ben draw 1-1-1 (a played draw, not a 0-0-3), then Ana beats Cal.
     modern = [(SWISS, [played(ANA, BEN, 1, 1, draws=1, table=9)]), (SWISS, [played(ANA, CAL, 2, 0), played(BEN, DEE, 2, 0)])]
     # Cycle 2, Pioneer: an Intentional Draw at table 1 in the only Swiss round, then a bracket seeded Ben 1, Ana 2
@@ -928,27 +928,10 @@ def test_the_head_to_head_counts_every_match_two_players_played_in_global_and_ea
     ])
 
     ana, ben = bundle.card("ana"), bundle.card("ben")
-    # Ana: the played draw, the Intentional Draw and the rebuilt final lost.
-    assert ana["head_to_head"]["ben"] == {"Global": "0-1-2", "Modern": "0-0-1", "Pioneer": "0-1-1"}
-    assert ben["head_to_head"]["ana"] == {"Global": "1-0-2", "Modern": "0-0-1", "Pioneer": "1-0-1"}
-    assert ana["head_to_head"]["cal"] == {"Global": "1-0-0", "Modern": "1-0-0"}
+    # Ana: the played draw in Modern, the Intentional Draw and the rebuilt final lost in Pioneer.
+    assert ana["head_to_head"]["ben"] == "0-1-2"
+    assert ben["head_to_head"]["ana"] == "1-0-2"
+    assert ana["head_to_head"]["cal"] == "1-0-0"
     # Ana and Dee never met.
     assert "dee" not in ana["head_to_head"]
     assert "ana" not in bundle.card("dee")["head_to_head"]
-
-
-def test_each_rc_gives_its_fields_ratings_in_its_own_format_as_well_as_global(tmp_path):
-    # Cycle 1, Modern: Ana beats Ben, Cal and Dee draw. Cycle 2, Pioneer: Ben beats Ana, Cal and Dee draw.
-    # In Pioneer, Cycle 2 is everyone's first RC: Ben 1518, Ana 1482, Cal and Dee 1500, so the median is 1500, the
-    # 90th percentile 1500 + 0.7 x 18 = 1512.6 and Ben highest at 1518. In Global, Ben (1482) beating Ana (1518) moves
-    # each by 36 x (1 - 1 / (1 + 10^(36 / 1135.77))) = 18.66, so Ben is highest at 1500.66.
-    standings = field(1, 4, {1: ANA, 2: BEN, 3: CAL, 4: DEE})
-    bundle = run_build(tmp_path, [
-        (1, "Modern", [(SWISS, [played(ANA, BEN, 2, 0), played(CAL, DEE, 1, 1)])], standings),
-        (2, "Pioneer", [(SWISS, [played(BEN, ANA, 2, 0), played(CAL, DEE, 1, 1)])], standings),
-    ])
-
-    modern, pioneer = bundle.rcs()
-    assert modern["field_rating_in_format"] == modern["field_rating"] == {"median": 1500.0, "top_10": 1512.6, "highest": 1518.0}
-    assert pioneer["field_rating_in_format"] == {"median": 1500.0, "top_10": 1512.6, "highest": 1518.0}
-    assert pioneer["field_rating"]["highest"] == 1500.66

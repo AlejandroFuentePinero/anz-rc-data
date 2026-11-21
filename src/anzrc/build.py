@@ -235,15 +235,13 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
             for view in ("Global", rc["format"]):
                 ratings.play_round(views.setdefault(view, {}), rated)
         history[-1]["players"] = list(dict.fromkeys(players[username]["slug"] for username in rc_players))
-        # The field's Ratings after the RC, in Global and in the view its Format shows: its typical Player, the Rating
-        # a tenth of it reached, and its highest.
-        for key, source in (("field_rating", "Global"), ("field_rating_in_format", format_view)):
-            field_ratings = [views[source].get(slug, ratings.START) for slug in history[-1]["players"]]
-            rc_rows[-1][key] = {
-                "median": round(statistics.median(field_ratings), 2),
-                "top_10": round(statistics.quantiles(field_ratings, n=10, method="inclusive")[-1], 2),
-                "highest": round(max(field_ratings), 2),
-            }
+        # The field's Global Ratings after the RC: its typical Player, the Rating a tenth of it reached, and its highest.
+        field_ratings = [views["Global"].get(slug, ratings.START) for slug in history[-1]["players"]]
+        rc_rows[-1]["field_rating"] = {
+            "median": round(statistics.median(field_ratings), 2),
+            "top_10": round(statistics.quantiles(field_ratings, n=10, method="inclusive")[-1], 2),
+            "highest": round(max(field_ratings), 2),
+        }
         for view in ("Global", rc["format"]):
             for slug in history[-1]["players"]:
                 rating = views[view].get(slug, ratings.START)
@@ -320,16 +318,13 @@ def _summary(player: dict, view: str) -> dict:
     }
 
 
-def _head_to_head(player: dict) -> dict[str, dict[str, str]]:
-    """The Player's W-L-D against every opponent they met, in Global and each Format they met in."""
-    formats = {rc["cycle"]: rc["format"] for rc in player["rcs"]}
-    records: dict[str, dict[str, list[int]]] = {}
+def _head_to_head(player: dict) -> dict[str, str]:
+    """The Player's W-L-D against every opponent they met, across every Format."""
+    records: dict[str, list[int]] = {}
     for match in player["matches"]:
         if match["result"] in RECORD:
-            views = records.setdefault(match["opponent"]["slug"], {})
-            for view in ("Global", formats[match["cycle"]]):
-                views.setdefault(view, [0, 0, 0])[RECORD[match["result"]]] += 1
-    return {slug: {view: "-".join(map(str, record)) for view, record in views.items()} for slug, views in records.items()}
+            records.setdefault(match["opponent"]["slug"], [0, 0, 0])[RECORD[match["result"]]] += 1
+    return {slug: "-".join(map(str, record)) for slug, record in records.items()}
 
 
 def _rank(cards: dict[str, dict]) -> None:

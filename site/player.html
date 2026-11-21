@@ -17,6 +17,7 @@
   tr.rc.open td:first-child::before { content: "▾ "; }
   tr.rounds > td { padding: 0 0 8px 28px; background: #fafafa; }
   tr.rounds table td, tr.rounds table th { border-bottom-color: #eee; }
+  #compared .scroll { margin-bottom: 16px; }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
 </head>
@@ -36,6 +37,25 @@
 <!-- The cutoff is ratings.CUTOFF in the build. -->
 <p>You must have played at least 3 RCs to be ranked, and 3 in a Format to be ranked in it.</p>
 
+<h2>Compare Players</h2>
+<input id="compare" type="search" placeholder="Compare with a Player" autocomplete="off">
+<ul id="compare-results"></ul>
+<p id="compare-missing" hidden></p>
+<div id="compared" hidden>
+<p id="record"></p>
+<div id="matrix" hidden>
+<div class="scroll"><table><thead><tr id="matrix-columns"></tr></thead><tbody id="matrix-rows"></tbody></table></div>
+<p>Each row's W-L-D against each column.</p>
+</div>
+<div id="against"></div>
+<div class="scroll">
+<table>
+  <thead><tr><th>Player</th><th>ANZ Rank</th><th>RCs</th><th>Rating</th><th>Peak Rating</th><th>W-L-D</th><th>Win rate</th><th>Top 8s</th><th>Finals</th><th>Best Finish</th><th>Typically finishes above</th></tr></thead>
+  <tbody id="compared-summary"></tbody>
+</table>
+</div>
+</div>
+
 <h2>Rating against the field</h2>
 <div id="against-field"></div>
 
@@ -47,9 +67,12 @@
 </table>
 </div>
 <p id="reconstructed-note" hidden>Reconstructed: a playoff Match Melee lost, rebuilt from the standings, so it has no game score.</p>
-<script src="search.js"></script>
+<!-- The version makes a browser holding the old search.js, without playerSearch, fetch this one. -->
+<script src="search.js?v=2"></script>
 <script>
 const VIEWS = ["Global", "Pioneer", "Standard", "Modern"];
+const MAX_COMPARED = 4;  // Players compared with the card's own, so the plot stays readable
+const COLOURS = ["#1c5cab", "#c2571a", "#2a8f7b", "#7b4fa8", "#c23b6e"];  // the card's Player, then each compared one
 
 function link(text, href) {
   const a = document.createElement("a");
@@ -82,33 +105,65 @@ const rate = (winRate) => (winRate.rate == null ? null : `${winRate.rate}%`);
 
 const rcsReady = fetch("data/rcs.json").then((response) => response.json());
 let card = null;
+let compared = [];  // the cards compared with this one, in the order they were added
 let allRcs = [];  // every RC in the series, with its field's Ratings
 const open = new Set();  // the Cycles whose rounds are showing
 
-function show() {
-  const slug = decodeURIComponent(location.hash.slice(1));
-  if (!slug) return;
-  Promise.all([rcsReady, fetch(`data/players/${slug}.json`).then((response) => {
+function fetchCard(slug) {
+  return fetch(`data/players/${slug}.json`).then((response) => {
     if (!response.ok) throw new Error(`no card for ${slug}`);
     return response.json();
-  })])
+  });
+}
+
+// The URL: player.html#slug, with the Players compared with them after it, as in #slug/other/another.
+function fromHash() {
+  const [slug, ...others] = decodeURIComponent(location.hash.slice(1)).split("/").filter(Boolean);
+  return { slug, others: [...new Set(others)].filter((other) => other !== slug).slice(0, MAX_COMPARED) };
+}
+const address = (slugs) => `#${slugs.join("/")}`;
+
+// Comparing adds the Player found to the ones already compared; the card's own Player or one already in adds nothing.
+playerSearch(document.getElementById("compare"), document.getElementById("compare-results"), (player) => {
+  const { slug, others } = fromHash();
+  return address([slug, ...others, ...([slug, ...others].includes(player.slug) ? [] : [player.slug])]);
+});
+
+function show() {
+  const { slug, others } = fromHash();
+  if (!slug) return;
+  const comparing = others.map((other) => fetchCard(other).catch(() => null));
+  Promise.all([rcsReady, fetchCard(slug), ...comparing])
     // Only a failed fetch means no such Player; a fault in drawing the card is not reported as one.
-    .then(([rcs, loaded]) => {
+    .then(([rcs, loaded, ...othersFound]) => {
+      const newCard = card?.slug !== loaded.slug;
       card = loaded;
+      compared = othersFound.filter(Boolean);
       allRcs = rcs;
       card.city = Object.fromEntries(rcs.map((rc) => [rc.cycle, rc.city]));
-      open.clear();
-      document.title = card.name;
-      document.getElementById("name").textContent = card.name;
-      document.getElementById("usernames").textContent = `Melee: ${card.usernames.join(", ")}`;
+      const notFound = others.filter((other, n) => !othersFound[n]);
+      const missing = document.getElementById("compare-missing");
+      missing.hidden = !notFound.length;
+      missing.textContent = `No Player found for ${notFound.join(" and ")}`;
+      const input = document.getElementById("compare");
+      input.value = "";
+      input.hidden = others.length >= MAX_COMPARED;
+      document.getElementById("compare-results").replaceChildren();
+      if (newCard) {
+        open.clear();
+        document.title = card.name;
+        document.getElementById("name").textContent = card.name;
+        document.getElementById("usernames").textContent = `Melee: ${card.usernames.join(", ")}`;
+      }
       draw();
-      window.scrollTo(0, 0);
+      if (newCard) window.scrollTo(0, 0);
     }, () => {
       // A mistyped or outdated link: say so rather than leave the page blank.
       card = null;
       document.getElementById("name").textContent = "No Player found";
       for (const id of ["usernames", "summary", "rcs", "against-field"]) document.getElementById(id).replaceChildren();
       document.getElementById("reconstructed-note").hidden = true;
+      document.getElementById("compared").hidden = true;
     });
 }
 
@@ -118,12 +173,7 @@ function draw() {
   for (const name of VIEWS) {
     const s = card.summary[name];
     if (!s) { addRow(summary, [[name], ...Array(10).fill([null])]); continue; }
-    const r = card.ratings[name];
-    addRow(summary, [
-      [name], [s.rank ?? "", "num"], [s.rcs, "num"], [rating(r.rating), "num"], [rating(r.peak), "num"], [s.record],
-      [rate(s.win_rate), "num"], [s.top_8s, "num"], [s.finals, "num"], [s.best_finish],
-      [s.typical_finish_above == null ? null : `${s.typical_finish_above}% of the field`],
-    ], name === "Global" ? "global" : null);
+    addRow(summary, [[name], ...summaryCells(s, card.ratings[name])], name === "Global" ? "global" : null);
   }
 
   const body = document.getElementById("rcs");
@@ -142,8 +192,88 @@ function draw() {
     if (open.has(rc.cycle)) body.append(rounds(rc));
   }
   document.getElementById("reconstructed-note").hidden = !card.matches.some((match) => match.reconstructed);
+  compare();
   againstField();  // last, so the tables stand even if the plot cannot be drawn
 }
+
+function compare() {
+  document.getElementById("compared").hidden = !compared.length;
+  if (!compared.length) return;
+  const players = [card, ...compared];
+  const cardLink = (player) => link(player.name, `#${player.slug}`);
+  // One Player compared: the card's Player's record against them. More: every Player's record against every other.
+  const matrix = compared.length > 1;
+  const record = document.getElementById("record");
+  record.hidden = matrix;
+  const [other] = compared;
+  const versus = card.head_to_head[other.slug];
+  record.replaceChildren(cardLink(card), versus ? " against " : " and ", cardLink(other), versus ? `: ${versus} (W-L-D)` : " never met.");
+  document.getElementById("matrix").hidden = !matrix;
+  const columns = document.getElementById("matrix-columns");
+  columns.replaceChildren(document.createElement("th"), ...players.map((player) => {
+    const th = document.createElement("th");
+    th.append(cardLink(player));
+    return th;
+  }));
+  const rows = document.getElementById("matrix-rows");
+  rows.replaceChildren();
+  for (const row of players) {
+    addRow(rows, [[cardLink(row)], ...players.map((column) => [row === column ? "" : row.head_to_head[column.slug]])]);
+  }
+
+  // Every Match the card's Player played against each compared Player, or that they never met.
+  const against = document.getElementById("against");
+  against.replaceChildren();
+  for (const other of compared) {
+    const heading = document.createElement("h3");
+    heading.append("Against ", cardLink(other));
+    if (!card.head_to_head[other.slug]) {
+      // With one Player compared, the record line already says it.
+      const never = document.createElement("p");
+      never.textContent = "Never met.";
+      if (matrix) against.append(heading, never);
+      continue;
+    }
+    const table = document.createElement("table");
+    table.innerHTML = "<thead><tr><th>RC</th><th>Format</th><th>Round</th><th>Result</th></tr></thead>";
+    const body = table.createTBody();
+    for (const match of card.matches.filter((match) => match.opponent?.slug === other.slug)) {
+      const rc = card.rcs.find((rc) => rc.cycle === match.cycle);
+      addRow(body, [
+        [`Cycle ${[rc.cycle, card.city[rc.cycle], rc.date.slice(0, 4)].filter(Boolean).join(" ")}`], [rc.format],
+        [roundName(match)], [outcome(match)],
+      ]);
+    }
+    const scroll = document.createElement("div");
+    scroll.className = "scroll";
+    scroll.append(table);
+    against.append(heading, scroll);
+  }
+
+  const summary = document.getElementById("compared-summary");
+  summary.replaceChildren();
+  for (const player of players) {
+    const name = document.createElement("span");
+    name.append(cardLink(player));
+    if (player !== card) {
+      const remove = link("×", address([card.slug, ...compared.filter((kept) => kept !== player).map((kept) => kept.slug)]));
+      remove.title = "Remove from the comparison";
+      name.append(" ", remove);
+    }
+    addRow(summary, [[name], ...summaryCells(player.summary.Global, player.ratings.Global)], player === card ? "global" : null);
+  }
+}
+
+// A summary row after its first cell: a view's figures and Ratings.
+function summaryCells(s, r) {
+  return [
+    [s.rank ?? "", "num"], [s.rcs, "num"], [rating(r.rating), "num"], [rating(r.peak), "num"], [s.record],
+    [rate(s.win_rate), "num"], [s.top_8s, "num"], [s.finals, "num"], [s.best_finish],
+    [s.typical_finish_above == null ? null : `${s.typical_finish_above}% of the field`],
+  ];
+}
+
+const roundName = (match) => (match.playoff ? `${match.round} (playoff)` : match.round);
 
 function rounds(rc) {
   const table = document.createElement("table");
@@ -151,7 +281,7 @@ function rounds(rc) {
   const body = table.createTBody();
   for (const match of card.matches.filter((match) => match.cycle === rc.cycle)) {
     addRow(body, [
-      [match.playoff ? `${match.round} (playoff)` : match.round],
+      [roundName(match)],
       [match.opponent && link(match.opponent.name, `#${match.opponent.slug}`)],
       [match.opponent_rating && rating(match.opponent_rating.Global), "num"],
       [outcome(match)],
@@ -168,31 +298,36 @@ function rounds(rc) {
 }
 
 function againstField() {
-  // The Player's Rating after each RC, over the Ratings of that RC's typical Player, its top 10% and its highest.
+  // The Player's Rating after each RC, and each compared Player's, over the Ratings of that RC's typical Player,
+  // its top 10% and its highest.
   const cycles = allRcs.map((rc) => rc.cycle);
   const reference = (key, dash, colour, says) => ({
-    x: cycles, y: allRcs.map((rc) => rc.field_rating[key]), mode: "lines", line: { color: colour, width: 1.5, dash },
+    x: cycles, y: allRcs.map((rc) => rc.field_rating[key]), mode: "lines", line: { color: colour, width: 1.5, dash }, showlegend: false,
     hovertemplate: `RC Cycle %{x}: ${says} stood at %{y:.0f}<extra></extra>`,
   });
-  const after = Object.fromEntries(card.ratings.Global.after_rc.map((point) => [point.cycle, point.rating]));
+  const lines = [card, ...compared].map((player, n) => {
+    const after = Object.fromEntries(player.ratings.Global.after_rc.map((point) => [point.cycle, point.rating]));
+    return {
+      x: player.rcs.map((rc) => rc.cycle), y: player.rcs.map((rc) => after[rc.cycle]), mode: "lines+markers+text", name: player.name,
+      text: player.rcs.map((rc) => rc.finish ?? ""), textposition: n ? "bottom center" : "top center", textfont: { size: 11, color: "#555" },
+      line: { color: COLOURS[n], width: 2 },
+      marker: { size: 10, color: player.rcs.map((rc) => (rc.top_8 ? "#d9a520" : COLOURS[n])), line: { color: "#fff", width: 1 } },
+      customdata: player.rcs.map((rc) => `${rc.format}, ${rc.finish ?? "no Finish"} of ${rc.field_size}`),
+      hovertemplate: `${player.name}<br>RC Cycle %{x}, %{customdata}<br>Rating after: %{y:.0f}<extra></extra>`,
+    };
+  });
   const last = allRcs.at(-1).field_rating;
   // The axis tops out at the highest Rating any RC's field reached, so every Player is drawn to the same scale.
-  const lowest = Math.min(...allRcs.map((rc) => rc.field_rating.median), ...Object.values(after));
+  const lowest = Math.min(...allRcs.map((rc) => rc.field_rating.median), ...lines.flatMap((trace) => trace.y));
   const highest = Math.max(...allRcs.map((rc) => rc.field_rating.highest));
   Plotly.react("against-field", [
     reference("highest", "solid", "#ccc", "the top Player in the field"),
     reference("top_10", "dash", "#999", "a top 10% Player"),
     reference("median", "dot", "#bbb", "the typical Player"),
-    {
-      x: card.rcs.map((rc) => rc.cycle), y: card.rcs.map((rc) => after[rc.cycle]), mode: "lines+markers+text",
-      text: card.rcs.map((rc) => rc.finish ?? ""), textposition: "top center", textfont: { size: 11, color: "#555" },
-      line: { color: "#1c5cab", width: 2 },
-      marker: { size: 10, color: card.rcs.map((rc) => (rc.top_8 ? "#d9a520" : "#1c5cab")), line: { color: "#fff", width: 1 } },
-      customdata: card.rcs.map((rc) => `${rc.format}, ${rc.finish ?? "no Finish"} of ${rc.field_size}`),
-      hovertemplate: "RC Cycle %{x}, %{customdata}<br>Rating after: %{y:.0f}<extra></extra>",
-    },
+    ...lines,
   ], {
-    height: 360, margin: { t: 16, r: 130, l: 56, b: 40 }, showlegend: false,
+    height: 360, margin: { t: compared.length ? 40 : 16, r: 130, l: 56, b: 40 },
+    showlegend: compared.length > 0, legend: { orientation: "h", x: 0, y: 1, yanchor: "bottom" },
     xaxis: { title: { text: "RC Cycle" }, tickvals: cycles }, yaxis: { title: { text: "Rating" }, range: [lowest - 25, highest + 10] },
     annotations: [["highest", "Top Player in the field", "#aaa"], ["top_10", "Top 10% of the field", "#777"], ["median", "Typical Player", "#999"]].map(([key, label, colour]) => ({
       x: cycles.at(-1), y: last[key], xanchor: "left", xshift: 6, showarrow: false, text: label, font: { size: 11, color: colour },
