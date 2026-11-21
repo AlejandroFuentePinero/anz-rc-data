@@ -155,8 +155,9 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
 
     for rc in loaded:
         standings = rc["standings"]
-        # The Top 8 by tier, each tier in Melee's order.
-        top_8 = [{key: players[_username(row)][key] for key in ("slug", "name")} for row in sorted(standings, key=lambda row: row["Rank"])[:8]]
+        champion, finalist = (
+            {key: players[_username(row)][key] for key in ("slug", "name")} for row in sorted(standings, key=lambda row: row["Rank"])[:2]
+        )
         rc_rows.append(
             {
                 "cycle": rc["cycle"],
@@ -164,10 +165,8 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
                 "city": rc["city"] or None,
                 "format": rc["format"],
                 "field_size": len(standings),
-                "champion": top_8[0],
-                "finalist": top_8[1],
-                "places_3_4": top_8[2:4],
-                "places_5_8": top_8[4:8],
+                "champion": champion,
+                "finalist": finalist,
             }
         )
         # Every Player of the RC: the final standings, and anyone missing from them who kept their Matches.
@@ -290,7 +289,7 @@ def _community(rc_rows: list[dict], cards: dict[str, dict]) -> dict:
         {"cycle": cycle, "players": counts, "shares": [round(100 * n / sum(counts), 1) for n in counts]}
         for cycle, counts in fields.items()
     ]
-    top_8 = [player for rc in rc_rows for player in [rc["champion"], rc["finalist"], *rc["places_3_4"], *rc["places_5_8"]]]
+    top_8_holders = [player["slug"] for player in cards.values() for rc in player["rcs"] if rc["finish"] in TOP_8]
     return {
         "levels": LEVELS,
         "field_by_experience": field_by_experience,
@@ -299,8 +298,8 @@ def _community(rc_rows: list[dict], cards: dict[str, dict]) -> dict:
         if len(field_by_experience) > 1
         else None,
         "champions": len({rc["champion"]["slug"] for rc in rc_rows}),
-        "top_8_players": len({player["slug"] for player in top_8}),
-        "top_8_places": len(top_8),
+        "top_8_players": len(set(top_8_holders)),
+        "top_8_places": len(top_8_holders),
         "top_8_rate_by_experience": [
             {"level": name, "top_8s": top, "seats": n, "rate": round(100 * top / n, 1) if n else None}
             for name, top, n in zip(LEVELS, top_8s, seats)

@@ -10,7 +10,9 @@
   table { border-collapse: collapse; }
   th, td { padding: 4px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid #ddd; white-space: nowrap; }
   td.num { text-align: right; }
-  td a { display: block; }
+  .formats { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0; }
+  .formats button { font: inherit; padding: 4px 12px; border: 1px solid #bbb; border-radius: 16px; background: #fff; cursor: pointer; }
+  .formats button[aria-pressed="true"] { background: #222; color: #fff; border-color: #222; }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
 </head>
@@ -18,7 +20,7 @@
 <h1>ANZ Regional Championships</h1>
 <input id="search" type="search" placeholder="Find a Player" autocomplete="off">
 <ul id="search-results"></ul>
-<label>Format <select id="format"></select></label>
+<div class="formats" id="formats"></div>
 
 <h2>How big is each RC?</h2>
 <div id="field-size"></div>
@@ -35,14 +37,14 @@
 <p id="table-story"></p>
 <div class="scroll">
 <table>
-  <thead><tr><th>Cycle</th><th>Date</th><th>City</th><th>Format</th><th>Field Size</th><th>Champion</th><th>Finalist</th><th>3-4</th><th>5-8</th></tr></thead>
+  <thead><tr><th>Cycle</th><th>Date</th><th>City</th><th>Format</th><th>Field Size</th><th>Champion</th><th>Finalist</th></tr></thead>
   <tbody id="rcs"></tbody>
 </table>
 </div>
 <script src="search.js"></script>
 <script>
-// Each Format keeps its colour whichever view is shown; each level of experience runs light (new) to dark (8th+).
-const FORMAT_COLOUR = { Pioneer: "#eb6834", Standard: "#1baf7a", Modern: "#6250d6" };
+// Each level of experience runs light (new) to dark (8th+).
+const FIELD_COLOUR = "#4a4a4a";
 const LEVEL_COLOUR = ["#86b6ef", "#3987e5", "#1c5cab", "#0d366b"];
 const config = { displayModeBar: false, responsive: true };
 const margin = { t: 8, r: 16, l: 56, b: 40 };
@@ -95,27 +97,28 @@ Promise.all([fetch("data/rcs.json"), fetch("data/community.json")])
     document.getElementById("table-story").textContent =
       `Across every RC: ${rcs.length} RCs, ${community.champions} different champions, and the ${community.top_8_places} Top 8 places went to ${community.top_8_players} Players.`;
 
-    const select = document.getElementById("format");
-    for (const view of ["Global", ...formats]) select.add(new Option(view, view));
-
     // The Format filter: the Field Size plot and the RC table.
+    let view = "Global";
+    const buttons = document.getElementById("formats");
+    for (const name of ["Global", ...formats]) {
+      const button = document.createElement("button");
+      button.textContent = name;
+      button.addEventListener("click", () => { view = name; show(); });
+      buttons.append(button);
+    }
+
     function show() {
-      const view = select.value;
+      for (const button of buttons.children) button.setAttribute("aria-pressed", button.textContent === view);
       const shown = rcs.filter((rc) => view === "Global" || rc.format === view);
 
-      Plotly.react("field-size", formats.filter((format) => shown.some((rc) => rc.format === format)).map((format) => {
-        const inFormat = shown.filter((rc) => rc.format === format);
-        return {
-          type: "scatter", mode: "lines+markers+text", name: format,
-          x: inFormat.map((rc) => rc.cycle), y: inFormat.map((rc) => rc.field_size),
-          text: inFormat.map((rc, i) => (i === inFormat.length - 1 ? format : "")), textposition: "middle right",
-          line: { color: FORMAT_COLOUR[format], width: 2 }, marker: { size: 9 },
-          hovertemplate: `Cycle %{x}, ${format}: %{y} Players<extra></extra>`,
-        };
-      }), {
-        margin, height: 300, showlegend: false,
-        xaxis: { title: { text: "Cycle" }, tickvals: cycles, range: [cycles[0] - 0.5, cycles.at(-1) + 0.9] },
-        yaxis: { title: { text: "Field Size" }, rangemode: "tozero" },
+      // Every RC stays on the plot; a chosen Format's RCs keep full strength and the others fade.
+      Plotly.react("field-size", [{
+        type: "bar", x: cycles, y: rcs.map((rc) => rc.field_size), customdata: rcs.map((rc) => rc.format),
+        marker: { color: FIELD_COLOUR, opacity: rcs.map((rc) => (view === "Global" || rc.format === view ? 1 : 0.2)) },
+        hovertemplate: "Cycle %{x}, %{customdata}: %{y} Players<extra></extra>",
+      }], {
+        margin, height: 300, showlegend: false, bargap: 0.25,
+        xaxis: { title: { text: "Cycle" }, tickvals: cycles }, yaxis: { title: { text: "Field Size" }, rangemode: "tozero" },
       }, config);
 
       const body = document.getElementById("rcs");
@@ -124,17 +127,16 @@ Promise.all([fetch("data/rcs.json"), fetch("data/community.json")])
         const row = body.insertRow();
         const cells = [
           [rc.cycle, "num"], [rc.date], [rc.city ?? "-"], [rc.format], [rc.field_size, "num"],
-          [link(rc.champion)], [link(rc.finalist)], [rc.places_3_4.map(link)], [rc.places_5_8.map(link)],
+          [link(rc.champion)], [link(rc.finalist)],
         ];
         for (const [value, cls] of cells) {
           const cell = row.insertCell();
-          cell.append(...[value].flat());
+          cell.append(value);
           if (cls) cell.className = cls;
         }
       }
     }
 
-    select.addEventListener("change", show);
     show();
   });
 </script>

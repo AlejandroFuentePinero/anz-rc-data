@@ -170,27 +170,22 @@ def test_the_rc_table_gives_each_rc_its_field_size_and_champion_as_the_player_th
     ]
 
 
-def test_the_rc_table_gives_each_rc_its_top_8_by_tier_in_melees_order_as_players(tmp_path):
-    p = {n: (f"p{n}", f"Player {n}") for n in range(1, 11)}
-    p[6] = ("Ana_L", "Ana Lopez")  # Ana's second account, one Player with "ana" by the real-name rule
+def test_the_rc_table_gives_each_rc_its_champion_and_finalist_by_rank_as_players(tmp_path):
+    p = {n: (f"p{n}", f"Player {n}") for n in range(1, 5)}
+    p[2] = ("Ana_L", "Ana Lopez")  # Ana's second account, one Player with "ana" by the real-name rule
     # Melee's rows out of rank order, so the table follows the Rank, not the row order.
-    ranks = {3: 1, 7: 2, 1: 3, 9: 4, 6: 5, 2: 6, 10: 7, 4: 8, 5: 9, 8: 10}
     bundle = run_build(
         tmp_path,
         [
             (1, "Pioneer", [(SWISS, [played(ANA, BEN, 2, 0)])], [standing(1, ANA), standing(2, BEN)]),
-            (2, "Modern", [(SWISS, [played(p[n], p[n + 1], 2, 0) for n in range(1, 11, 2)])],
-             [standing(ranks[n], p[n]) for n in range(1, 11)]),
+            (2, "Modern", [(SWISS, [played(p[1], p[2], 2, 0), played(p[3], p[4], 2, 0)])],
+             [standing(3, p[1]), standing(2, p[2]), standing(1, p[3]), standing(4, p[4])]),
         ],
     )
 
-    player = lambda slug, name: {"slug": slug, "name": name}
-    rc = bundle.rcs()[1]
-    assert {key: rc[key] for key in ("champion", "finalist", "places_3_4", "places_5_8")} == {
-        "champion": player("p3", "Player 3"),
-        "finalist": player("p7", "Player 7"),
-        "places_3_4": [player("p1", "Player 1"), player("p9", "Player 9")],
-        "places_5_8": [player("ana", "Ana Lopez"), player("p2", "Player 2"), player("p10", "Player 10"), player("p4", "Player 4")],
+    assert bundle.rcs()[1] == {
+        "cycle": 2, "date": "2023-02-01", "city": None, "format": "Modern", "field_size": 4,
+        "champion": {"slug": "p3", "name": "Player 3"}, "finalist": {"slug": "ana", "name": "Ana Lopez"},
     }
 
 

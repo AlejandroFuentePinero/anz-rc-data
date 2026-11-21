@@ -84,7 +84,7 @@ _Avoid_: Max Elo, best rating
 ### Surfaces
 
 **Community page**:
-The landing page: the scene as a whole across RCs (Field Sizes, each field by Experience, the Top 8 rate at each level of Experience, and every RC's Top 8).
+The landing page: the scene as a whole across RCs (Field Sizes, each field by Experience, the Top 8 rate at each level of Experience, and every RC's champion and Finalist).
 
 **Player card**:
 One Player's page: their RCs, Finishes, Matches and Rating over the Cycles.
