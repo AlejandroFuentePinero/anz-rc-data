@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "101st",
    "field_size": 233,
+   "finish_share": 43.3,
    "record": "4-5-0",
+   "win_rate": {
+    "rate": 44.4,
+    "matches": 9
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1481.69,
+    "Modern": 1484.12
+   },
    "deck": "Mono-Red Ruby Storm",
    "decklist": "https://melee.gg/Decklist/View/ba7992a3-cb4f-4345-92b3-b4ec007400db"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "kierantierney",
     "name": "Kieran Tierney"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1653.49,
     "Modern": 1608.66
+   },
+   "change": {
+    "Global": 20.78,
+    "Modern": 19.97
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "dallas",
     "name": "Dallas"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1562.28,
     "Modern": 1595.55
+   },
+   "change": {
+    "Global": -17.24,
+    "Modern": -16.62
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "parasisnotcool",
     "name": "parasisnotcool"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1425.26,
     "Modern": 1538.14
+   },
+   "change": {
+    "Global": -19.43,
+    "Modern": -17.37
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "opdadad",
     "name": "brisbanebroncosrule"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1436.25,
     "Modern": 1434.35
+   },
+   "change": {
+    "Global": -18.87,
+    "Modern": -18.94
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "jedlamoreaux",
     "name": "JedLamoreaux"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1421.89,
     "Modern": 1465.95
+   },
+   "change": {
+    "Global": -18.79,
+    "Modern": -18.02
    }
   },
   {
    "cycle": 13,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "lankymikey",
     "name": "Michael Cox"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1447.39,
     "Modern": 1444.55
+   },
+   "change": {
+    "Global": 18.02,
+    "Modern": 17.92
    }
   },
   {
    "cycle": 13,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "alecf",
     "name": "Alecf"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1391.4,
     "Modern": 1442.71
+   },
+   "change": {
+    "Global": 16.67,
+    "Modern": 17.56
    }
   },
   {
    "cycle": 13,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "jdn",
     "name": "Jdn"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1466.75,
     "Modern": 1464.49
+   },
+   "change": {
+    "Global": 17.74,
+    "Modern": 17.63
    }
   },
   {
    "cycle": 13,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "carps",
     "name": "Samuel Carpenter"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1543.95,
     "Modern": 1501.09
+   },
+   "change": {
+    "Global": -17.18,
+    "Modern": -18.02
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-5-0",
+   "win_rate": {
+    "rate": 44.4,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "101st of 233",
+   "typical_finish": 43.3,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "4-5-0",
+   "win_rate": {
+    "rate": 44.4,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "101st of 233",
+   "typical_finish": 43.3,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

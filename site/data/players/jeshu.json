@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "209th",
    "field_size": 233,
+   "finish_share": 89.7,
    "record": "1-4-0",
+   "win_rate": {
+    "rate": 20.0,
+    "matches": 5
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1445.77,
+    "Modern": 1446.15
+   },
    "deck": "Golgari Cosmogoyf",
    "decklist": "https://melee.gg/Decklist/View/d7998ac3-5cbc-47a1-a52f-b4e3007be890"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "slzzzpy",
     "name": "Danny Thai"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1464.95,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -18.64,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "pfeeyatko",
     "name": "Marshall Sutton"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1481.14,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -18.0,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "jockjohnson",
     "name": "Joel James"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1465.79,
     "Modern": 1463.06
+   },
+   "change": {
+    "Global": -17.96,
+    "Modern": -18.02
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "goidbro",
     "name": "Goidbro"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1458.57,
     "Modern": 1451.61
+   },
+   "change": {
+    "Global": 18.24,
+    "Modern": 18.1
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "ironduke",
     "name": "Kim Fields"
@@ -90,6 +124,10 @@
    "opponent_rating": {
     "Global": 1470.57,
     "Modern": 1467.87
+   },
+   "change": {
+    "Global": -17.87,
+    "Modern": -17.93
    }
   }
  ],
@@ -114,6 +152,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-4-0",
+   "win_rate": {
+    "rate": 20.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "209th of 233",
+   "typical_finish": 89.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "1-4-0",
+   "win_rate": {
+    "rate": 20.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "209th of 233",
+   "typical_finish": 89.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

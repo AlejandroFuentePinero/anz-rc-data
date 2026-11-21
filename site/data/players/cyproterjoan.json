@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "107th",
    "field_size": 168,
+   "finish_share": 63.7,
    "record": "2-3-0",
+   "win_rate": {
+    "rate": 40.0,
+    "matches": 5
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1485.24,
+    "Standard": 1481.98
+   },
    "deck": "Boros Convoke",
    "decklist": "https://melee.gg/Decklist/View/34d3758a-4697-41cc-a33f-699826928a81"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 6,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "zipo",
     "name": "zipo"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1465.22,
     "Standard": 1500
+   },
+   "change": {
+    "Global": 17.37,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 6,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "alabaster",
     "name": "Ian Cormick"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1624.78,
     "Standard": 1517.69
+   },
+   "change": {
+    "Global": 19.95,
+    "Standard": 17.99
    }
   },
   {
    "cycle": 6,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "kinghairy",
     "name": "Shaun Henry"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1630.34,
     "Standard": 1535.35
+   },
+   "change": {
+    "Global": -16.31,
+    "Standard": -18.01
    }
   },
   {
    "cycle": 6,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "allan_begovic",
     "name": "Allan Begovic"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1540.37,
     "Standard": 1518.0
+   },
+   "change": {
+    "Global": -17.65,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 6,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "gregdavis",
     "name": "GregDavis"
@@ -90,6 +124,10 @@
    "opponent_rating": {
     "Global": 1496.78,
     "Standard": 1499.7
+   },
+   "change": {
+    "Global": -18.12,
+    "Standard": -18.01
    }
   }
  ],
@@ -114,6 +152,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-3-0",
+   "win_rate": {
+    "rate": 40.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "107th of 168",
+   "typical_finish": 63.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "2-3-0",
+   "win_rate": {
+    "rate": 40.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "107th of 168",
+   "typical_finish": 63.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

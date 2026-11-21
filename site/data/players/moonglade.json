@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "147th",
    "field_size": 233,
+   "finish_share": 63.1,
    "record": "2-4-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 6
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1465.63,
+    "Modern": 1465.05
+   },
    "deck": "Grixis Affinity",
    "decklist": "https://melee.gg/Decklist/View/304323cb-0c31-4e81-99a6-b4ea00abe5cc"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "raydric",
     "name": "Jose Gabriel Hilario"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1682.79,
     "Modern": 1546.39
+   },
+   "change": {
+    "Global": -14.7,
+    "Modern": -17.15
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "stevengee28",
     "name": "StevenGee28"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1419.19,
     "Modern": 1465.82
+   },
+   "change": {
+    "Global": -19.2,
+    "Modern": -18.31
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "mooncomix",
     "name": "Ellis Dolan"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1466.57,
     "Modern": 1464.8
+   },
+   "change": {
+    "Global": 18.01,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "gurmagangler",
     "name": "GurmagAngler"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1481.38,
     "Modern": 1481.98
+   },
+   "change": {
+    "Global": 17.95,
+    "Modern": 17.99
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "halumii",
     "name": "Charlie Boyd"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1423.19,
     "Modern": 1483.07
+   },
+   "change": {
+    "Global": -19.44,
+    "Modern": -18.32
    }
   },
   {
    "cycle": 13,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "lifi",
     "name": "Liam Fisher"
@@ -105,6 +144,10 @@
    "opponent_rating": {
     "Global": 1538.03,
     "Modern": 1528.25
+   },
+   "change": {
+    "Global": -16.99,
+    "Modern": -17.16
    }
   }
  ],
@@ -129,6 +172,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-4-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "147th of 233",
+   "typical_finish": 63.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "2-4-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "147th of 233",
+   "typical_finish": 63.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

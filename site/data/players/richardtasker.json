@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "98th",
    "field_size": 212,
+   "finish_share": 46.2,
    "record": "3-3-2",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 6
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1504.93,
+    "Modern": 1502.29
+   },
    "deck": "Esper Goryo's Vengeance",
    "decklist": "https://melee.gg/Decklist/View/7d874310-e36f-4025-80d7-b37c00c20682"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 10,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "bensymonds",
     "name": "Ben Symonds"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 10,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "nicholasc1",
     "name": "Nick Chow"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1570.68,
     "Modern": 1536.67
+   },
+   "change": {
+    "Global": -17.04,
+    "Modern": -17.66
    }
   },
   {
    "cycle": 10,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "hazzrd",
     "name": "RIley Jones"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1649.41,
     "Modern": 1575.57
+   },
+   "change": {
+    "Global": -15.31,
+    "Modern": -16.63
    }
   },
   {
    "cycle": 10,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "stevenesq",
     "name": "StevenESQ"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1397.85,
     "Modern": 1451.29
+   },
+   "change": {
+    "Global": -19.6,
+    "Modern": -18.59
    }
   },
   {
    "cycle": 10,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "matteobuckley",
     "name": "Matteo Buckley"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1589.4,
     "Modern": 1546.49
+   },
+   "change": {
+    "Global": 20.24,
+    "Modern": 19.48
    }
   },
   {
    "cycle": 10,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "viraz",
     "name": "Viraz"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1574.16,
     "Modern": 1468.41
+   },
+   "change": {
+    "Global": 1.6,
+    "Modern": -0.3
    }
   },
   {
    "cycle": 10,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "beau_bubbles",
     "name": "Beau_Bubbles"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1376.54,
     "Modern": 1482.16
+   },
+   "change": {
+    "Global": 15.98,
+    "Modern": 17.96
    }
   },
   {
    "cycle": 10,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "garyjohnson1",
     "name": "GaryJohnson1"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1562.49,
     "Modern": 1503.84
+   },
+   "change": {
+    "Global": 1.07,
+    "Modern": 0.03
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-3-2",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "98th of 212",
+   "typical_finish": 46.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "3-3-2",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "98th of 212",
+   "typical_finish": 46.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

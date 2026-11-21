@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "120th",
    "field_size": 228,
+   "finish_share": 52.6,
    "record": "3-4-0",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1482.63,
+    "Modern": 1481.99
+   },
    "deck": "Amulet Titan",
    "decklist": "https://melee.gg/Decklist/View/818558c3-ec92-4ef5-a5f1-abbcd9f1d45a"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 5,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "santinomaher",
     "name": "Santinomaher"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1448.62,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 17.06,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "jeffleeph28",
     "name": "Jefferson Lee"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1518.0,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": 18.02,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "gilaflame",
     "name": "Randall Hopson"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1536.88,
     "Modern": 1536.0
+   },
+   "change": {
+    "Global": 18.03,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "bjornicorn",
     "name": "bjornicorn"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1554.38,
     "Modern": 1553.68
+   },
+   "change": {
+    "Global": -17.98,
+    "Modern": -18.01
    }
   },
   {
    "cycle": 5,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "assembledalphas",
     "name": "Matthew Giudes"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1692.77,
     "Modern": 1536.0
+   },
+   "change": {
+    "Global": -15.15,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "volcanicpanik",
     "name": "Daniel Yam"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1517.44,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": -18.05,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "klarkt",
     "name": "Klarke Trezise"
@@ -120,6 +164,10 @@
    "opponent_rating": {
     "Global": 1429.88,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": -19.31,
+    "Modern": -18.0
    }
   }
  ],
@@ -144,6 +192,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-4-0",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "120th of 228",
+   "typical_finish": 52.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "3-4-0",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "120th of 228",
+   "typical_finish": 52.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

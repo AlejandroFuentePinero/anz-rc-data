@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "97th",
    "field_size": 132,
+   "finish_share": 73.5,
    "record": "2-4-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 6
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1464.29,
+    "Standard": 1464.0
+   },
    "deck": "Mono-Blue Tempo",
    "decklist": "https://melee.gg/Decklist/View/496617f9-98a9-463f-8ee9-286a3728c000"
   },
@@ -21,7 +34,20 @@
    "format": "Standard",
    "finish": "132nd",
    "field_size": 188,
+   "finish_share": 70.2,
    "record": "2-4-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 6
+   },
+   "rating_start": {
+    "Global": 1464.29,
+    "Standard": 1464.0
+   },
+   "rating_end": {
+    "Global": 1438.17,
+    "Standard": 1433.06
+   },
    "deck": "Izzet Prowess",
    "decklist": "https://melee.gg/Decklist/View/f1fa0d94-7ea6-4841-bfda-b45100d31a16"
   }
@@ -30,6 +56,7 @@
   {
    "cycle": 2,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "hanrahandh",
     "name": "dylan hanrahan"
@@ -40,11 +67,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Standard": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "astridallwyn",
     "name": "Astrid Allwyn"
@@ -55,11 +87,16 @@
    "opponent_rating": {
     "Global": 1464.67,
     "Standard": 1518.0
+   },
+   "change": {
+    "Global": 17.03,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "dazza824",
     "name": "Daniel Zhao"
@@ -70,11 +107,16 @@
    "opponent_rating": {
     "Global": 1535.98,
     "Standard": 1536.0
+   },
+   "change": {
+    "Global": -17.98,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "usual",
     "name": "Alex Davies"
@@ -85,11 +127,16 @@
    "opponent_rating": {
     "Global": 1518.62,
     "Standard": 1518.0
+   },
+   "change": {
+    "Global": -17.97,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "waytoohigh",
     "name": "Dan Phan"
@@ -100,11 +147,16 @@
    "opponent_rating": {
     "Global": 1499.4,
     "Standard": 1500.0
+   },
+   "change": {
+    "Global": -17.99,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "loperit",
     "name": "Robert Wise"
@@ -115,11 +167,16 @@
    "opponent_rating": {
     "Global": 1547.7,
     "Standard": 1482.0
+   },
+   "change": {
+    "Global": -16.79,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 12,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "joshcook78",
     "name": "JoshCook78"
@@ -130,11 +187,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Standard": 1500
+   },
+   "change": {
+    "Global": -17.35,
+    "Standard": -17.34
    }
   },
   {
    "cycle": 12,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "kinghairy",
     "name": "Shaun Henry"
@@ -145,11 +207,16 @@
    "opponent_rating": {
     "Global": 1662.75,
     "Standard": 1635.18
+   },
+   "change": {
+    "Global": -14.12,
+    "Standard": -14.6
    }
   },
   {
    "cycle": 12,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "reecepruis",
     "name": "Reece Pruis"
@@ -160,11 +227,16 @@
    "opponent_rating": {
     "Global": 1369.71,
     "Standard": 1347.33
+   },
+   "change": {
+    "Global": 16.85,
+    "Standard": 16.46
    }
   },
   {
    "cycle": 12,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "klarkt",
     "name": "Klarke Trezise"
@@ -175,11 +247,16 @@
    "opponent_rating": {
     "Global": 1595.09,
     "Standard": 1554.52
+   },
+   "change": {
+    "Global": 20.63,
+    "Standard": 19.93
    }
   },
   {
    "cycle": 12,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "denby",
     "name": "Denby Adams"
@@ -190,11 +267,16 @@
    "opponent_rating": {
     "Global": 1510.71,
     "Standard": 1483.89
+   },
+   "change": {
+    "Global": -17.26,
+    "Standard": -17.72
    }
   },
   {
    "cycle": 12,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "christong0203",
     "name": "Christopher Tong"
@@ -205,6 +287,10 @@
    "opponent_rating": {
     "Global": 1626.4,
     "Standard": 1469.45
+   },
+   "change": {
+    "Global": -14.87,
+    "Standard": -17.66
    }
   }
  ],
@@ -237,6 +323,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-8-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 12
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "132nd of 188",
+   "typical_finish": 71.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
+  },
+  "Standard": {
+   "record": "4-8-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 12
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "132nd of 188",
+   "typical_finish": 71.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
   }
  }
 }

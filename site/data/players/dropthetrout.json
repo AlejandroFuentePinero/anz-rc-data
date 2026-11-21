@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "144th",
    "field_size": 228,
+   "finish_share": 63.2,
    "record": "2-6-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1429.68,
+    "Modern": 1427.99
+   },
    "deck": "Boros Burn",
    "decklist": "https://melee.gg/Decklist/View/21a39869-6018-4cb3-8956-c590fa9614fc"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 5,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "yida",
     "name": "Yida"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "pholtzman",
     "name": "Paul Holtzman"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1403.65,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": 15.92,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "assembledalphas",
     "name": "Matthew Giudes"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1698.5,
     "Modern": 1536.0
+   },
+   "change": {
+    "Global": -15.02,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "ivan_wong",
     "name": "Ivan_wong"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1517.4,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": -18.03,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "wft",
     "name": "Benjamin Twemlow"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1514.29,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": -17.76,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "goldenladybug",
     "name": "Aidan Frisch"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1482.98,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -18.0,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "calmmirror",
     "name": "Samuel Maher"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1500.07,
     "Modern": 1464.0
+   },
+   "change": {
+    "Global": -17.36,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "bianca",
     "name": "Bianca"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1443.94,
     "Modern": 1445.35
+   },
+   "change": {
+    "Global": -18.07,
+    "Modern": -18.01
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-6-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "144th of 228",
+   "typical_finish": 63.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "2-6-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "144th of 228",
+   "typical_finish": 63.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

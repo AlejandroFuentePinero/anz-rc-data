@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "103rd",
    "field_size": 222,
+   "finish_share": 46.4,
    "record": "3-4-1",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1483.09,
+    "Standard": 1481.28
+   },
    "deck": "Golgari Midrange",
    "decklist": "https://melee.gg/Decklist/View/f34fe6d9-6f9f-406b-af28-b2d8005eb971"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 9,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "denby",
     "name": "Denby Adams"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1528.59,
     "Standard": 1500
+   },
+   "change": {
+    "Global": -17.48,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 9,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "stormztv",
     "name": "Toby Needs"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1482.5,
     "Standard": 1482.49
+   },
+   "change": {
+    "Global": 18.0,
+    "Standard": 18.01
    }
   },
   {
    "cycle": 9,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "breelord",
     "name": "BreeLord"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1502.28,
     "Standard": 1501.21
+   },
+   "change": {
+    "Global": -17.97,
+    "Standard": -17.98
    }
   },
   {
    "cycle": 9,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "snekdotdek",
     "name": "Roberte Brookes"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1434.67,
     "Standard": 1434.16
+   },
+   "change": {
+    "Global": -18.87,
+    "Standard": -18.87
    }
   },
   {
    "cycle": 9,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "tomchounz",
     "name": "tomchounz"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1466.99,
     "Standard": 1465.28
+   },
+   "change": {
+    "Global": 18.06,
+    "Standard": 18.04
    }
   },
   {
    "cycle": 9,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "itssmn",
     "name": "Simon Walters"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1557.06,
     "Standard": 1483.74
+   },
+   "change": {
+    "Global": -16.63,
+    "Standard": -17.95
    }
   },
   {
    "cycle": 9,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "riku_slayers",
     "name": "Alfred Chen"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1464.38,
     "Standard": 1464.84
+   },
+   "change": {
+    "Global": -0.01,
+    "Standard": 0.03
    }
   },
   {
    "cycle": 9,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "lennygo7",
     "name": "Lennygo7"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1464.82,
     "Standard": 1463.73
+   },
+   "change": {
+    "Global": 17.99,
+    "Standard": 18.01
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-4-1",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "103rd of 222",
+   "typical_finish": 46.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "3-4-1",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "103rd of 222",
+   "typical_finish": 46.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

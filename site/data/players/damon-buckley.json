@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "173rd",
    "field_size": 180,
+   "finish_share": 96.1,
    "record": "0-2-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 2
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1465.8,
+    "Pioneer": 1465.93
+   },
    "deck": "Mono-White Humans",
    "decklist": "https://melee.gg/Decklist/View/096bd5ce-18d9-46dc-a43e-e99b291b1546"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 3,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "bbotonline",
     "name": "Brandon Rashad"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1531.86,
     "Pioneer": 1572.01
+   },
+   "change": {
+    "Global": -17.42,
+    "Pioneer": -16.69
    }
   },
   {
    "cycle": 3,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "forceofwilks",
     "name": "James Wilks"
@@ -45,6 +64,10 @@
    "opponent_rating": {
     "Global": 1549.5,
     "Pioneer": 1517.34
+   },
+   "change": {
+    "Global": -16.78,
+    "Pioneer": -17.38
    }
   }
  ],
@@ -69,6 +92,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-2-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 2
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "173rd of 180",
+   "typical_finish": 96.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "0-2-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 2
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "173rd of 180",
+   "typical_finish": 96.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "12th",
    "field_size": 233,
+   "finish_share": 5.2,
    "record": "7-2-0",
+   "win_rate": {
+    "rate": 77.8,
+    "matches": 9
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1595.19,
+    "Modern": 1592.17
+   },
    "deck": "Simic Neoform",
    "decklist": "https://melee.gg/Decklist/View/94538aab-ad8c-4524-b1bc-b4ec00570012"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "dinok",
     "name": "Dino Kucukovic"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1351.43,
     "Modern": 1430.61
+   },
+   "change": {
+    "Global": 15.31,
+    "Modern": 16.74
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "mrprince33",
     "name": "MrPrince33"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1518.0,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": -17.95,
+    "Modern": -17.98
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "gurmagangler",
     "name": "GurmagAngler"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1499.41,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": 18.04,
+    "Modern": 18.02
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "myrrhdyrrh",
     "name": "Lachlan Murray"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1519.08,
     "Modern": 1518.07
+   },
+   "change": {
+    "Global": 18.07,
+    "Modern": 18.02
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "seby666",
     "name": "Sebastiano Condo"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1575.1,
     "Modern": 1571.23
+   },
+   "change": {
+    "Global": 18.76,
+    "Modern": 18.66
    }
   },
   {
    "cycle": 13,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "chuckasickie",
     "name": "Jacob Harvey"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1675.88,
     "Modern": 1590.08
+   },
+   "change": {
+    "Global": 20.24,
+    "Modern": 18.67
    }
   },
   {
    "cycle": 13,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "yoshiofadown",
     "name": "Andrew Jacobs"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1611.68,
     "Modern": 1604.93
+   },
+   "change": {
+    "Global": 18.72,
+    "Modern": 18.6
    }
   },
   {
    "cycle": 13,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "notjim",
     "name": "Michael Wei"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1588.36,
     "Modern": 1589.26
+   },
+   "change": {
+    "Global": 17.95,
+    "Modern": 17.97
    }
   },
   {
    "cycle": 13,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "lillia",
     "name": "Brennan Crawford"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1835.54,
     "Modern": 1688.93
+   },
+   "change": {
+    "Global": -13.94,
+    "Modern": -16.54
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "7-2-0",
+   "win_rate": {
+    "rate": 77.8,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "12th of 233",
+   "typical_finish": 5.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "7-2-0",
+   "win_rate": {
+    "rate": 77.8,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "12th of 233",
+   "typical_finish": 5.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

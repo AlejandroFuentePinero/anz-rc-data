@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "198th",
    "field_size": 209,
+   "finish_share": 94.7,
    "record": "0-2-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 2
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1468.87,
+    "Standard": 1466.04
+   },
    "deck": "Izzet",
    "decklist": "https://melee.gg/Decklist/View/e2efa245-ac2c-4a90-8822-b40c0060f05a"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 11,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "lillia",
     "name": "Brennan Crawford"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1775.01,
     "Standard": 1615.02
+   },
+   "change": {
+    "Global": -13.11,
+    "Standard": -15.91
    }
   },
   {
    "cycle": 11,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "yida",
     "name": "Yida"
@@ -45,6 +64,10 @@
    "opponent_rating": {
     "Global": 1485.89,
     "Standard": 1481.34
+   },
+   "change": {
+    "Global": -18.02,
+    "Standard": -18.05
    }
   }
  ],
@@ -69,6 +92,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-2-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 2
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "198th of 209",
+   "typical_finish": 94.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "0-2-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 2
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "198th of 209",
+   "typical_finish": 94.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "77th",
    "field_size": 228,
+   "finish_share": 33.8,
    "record": "5-4-0",
+   "win_rate": {
+    "rate": 55.6,
+    "matches": 9
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1519.26,
+    "Modern": 1518.01
+   },
    "deck": "Domain Rhinos",
    "decklist": "https://melee.gg/Decklist/View/2fa963ce-1dab-4958-8f74-4e1e7d62a05c"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 5,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "rk9",
     "name": "Jacob Golding"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1482.16,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -18.33,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "bianca",
     "name": "Bianca"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1482.0,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -17.99,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "dale85",
     "name": "dale85"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1464.12,
     "Modern": 1464.0
+   },
+   "change": {
+    "Global": 18.01,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "tomjreid5",
     "name": "tomjreid5"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1481.7,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -18.0,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "hunter3rd",
     "name": "Qihan Zhang"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1415.16,
     "Modern": 1464.0
+   },
+   "change": {
+    "Global": -18.88,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "godtierpancake",
     "name": "Solomon Nivison-Smith"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1478.58,
     "Modern": 1446.0
+   },
+   "change": {
+    "Global": 18.62,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "tonyjones22",
     "name": "antoine nguyen"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1527.32,
     "Modern": 1464.64
+   },
+   "change": {
+    "Global": 19.16,
+    "Modern": 18.01
    }
   },
   {
    "cycle": 5,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "reecepruis",
     "name": "Reece Pruis"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1516.57,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": 18.62,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "snekdotdek",
     "name": "Roberte Brookes"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1504.5,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": 18.06,
+    "Modern": 18.0
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "5-4-0",
+   "win_rate": {
+    "rate": 55.6,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "77th of 228",
+   "typical_finish": 33.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "5-4-0",
+   "win_rate": {
+    "rate": 55.6,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "77th of 228",
+   "typical_finish": 33.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

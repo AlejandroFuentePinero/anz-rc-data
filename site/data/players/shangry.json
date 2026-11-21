@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "74th",
    "field_size": 188,
+   "finish_share": 39.4,
    "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1500.96,
+    "Standard": 1499.92
+   },
    "deck": "Temur Control",
    "decklist": "https://melee.gg/Decklist/View/0d06e22e-5de4-471d-adf8-b452018a2edd"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 12,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "fruittoast",
     "name": "Edward Leah"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1499.97,
     "Standard": 1501.7
+   },
+   "change": {
+    "Global": 18.0,
+    "Standard": 18.03
    }
   },
   {
    "cycle": 12,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "10kquinn",
     "name": "10kquinn"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1465.52,
     "Standard": 1518.05
+   },
+   "change": {
+    "Global": 17.04,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 12,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "venerablelammasu",
     "name": "Thomas Bot"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1699.59,
     "Standard": 1552.99
+   },
+   "change": {
+    "Global": -15.03,
+    "Standard": -17.69
    }
   },
   {
    "cycle": 12,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "_babbuja_",
     "name": "Andrea Cibak"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1515.0,
     "Standard": 1539.94
+   },
+   "change": {
+    "Global": 17.91,
+    "Standard": 18.39
    }
   },
   {
    "cycle": 12,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "pholtzman",
     "name": "Paul Holtzman"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1419.27,
     "Standard": 1472.12
+   },
+   "change": {
+    "Global": -20.15,
+    "Standard": -19.18
    }
   },
   {
    "cycle": 12,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "kalmight",
     "name": "Kalmight"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1527.75,
     "Standard": 1523.51
+   },
+   "change": {
+    "Global": -17.82,
+    "Standard": -17.89
    }
   },
   {
    "cycle": 12,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "nicholasc1",
     "name": "Nick Chow"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1616.19,
     "Standard": 1504.48
+   },
+   "change": {
+    "Global": 20.11,
+    "Standard": 18.09
    }
   },
   {
    "cycle": 12,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "boorman2311",
     "name": "Thomas Boorman"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1459.21,
     "Standard": 1526.7
+   },
+   "change": {
+    "Global": -19.11,
+    "Standard": -17.84
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "74th of 188",
+   "typical_finish": 39.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "74th of 188",
+   "typical_finish": 39.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

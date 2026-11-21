@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "135th",
    "field_size": 154,
+   "finish_share": 87.7,
    "record": "1-4-0",
+   "win_rate": {
+    "rate": 20.0,
+    "matches": 5
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1448.11,
+    "Modern": 1446.0
+   },
    "deck": "Domain Zoo",
    "decklist": "https://melee.gg/Decklist/View/cd03c244-c439-4fa4-8461-ad740fb7dce4"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 8,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "itisiconscience",
     "name": "Elliott Low Choy"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -18.0,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 8,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "ddjd9",
     "name": "DDJD9"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1444.48,
     "Modern": 1481.02
+   },
+   "change": {
+    "Global": 17.32,
+    "Modern": 17.98
    }
   },
   {
    "cycle": 8,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "damo32",
     "name": "Damo32"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1503.34,
     "Modern": 1502.56
+   },
+   "change": {
+    "Global": -17.93,
+    "Modern": -17.95
    }
   },
   {
    "cycle": 8,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "arcguy302",
     "name": "Aseem Chandar"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1482.79,
     "Modern": 1480.73
+   },
+   "change": {
+    "Global": -17.97,
+    "Modern": -18.02
    }
   },
   {
    "cycle": 8,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "bbotonline",
     "name": "Brandon Rashad"
@@ -90,6 +124,10 @@
    "opponent_rating": {
     "Global": 1612.49,
     "Modern": 1463.45
+   },
+   "change": {
+    "Global": -15.3,
+    "Modern": -18.01
    }
   }
  ],
@@ -114,6 +152,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-4-0",
+   "win_rate": {
+    "rate": 20.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "135th of 154",
+   "typical_finish": 87.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "1-4-0",
+   "win_rate": {
+    "rate": 20.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "135th of 154",
+   "typical_finish": 87.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

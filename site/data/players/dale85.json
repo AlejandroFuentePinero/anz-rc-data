@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "200th",
    "field_size": 228,
+   "finish_share": 87.7,
    "record": "0-8-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1356.33,
+    "Modern": 1357.93
+   },
    "deck": "8-Rack",
    "decklist": "https://melee.gg/Decklist/View/3b34cd0b-72ed-43e7-b1c4-0daea55fae49"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 5,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "forceofwilks",
     "name": "James Wilks"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1508.21,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -17.85,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "savvykavvy",
     "name": "SavvyKavvy"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1480.73,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -18.03,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "philippemori",
     "name": "PhilippeMori"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1463.68,
     "Modern": 1464.0
+   },
+   "change": {
+    "Global": -18.01,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "hunter3rd",
     "name": "Qihan Zhang"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1396.26,
     "Modern": 1446.0
+   },
+   "change": {
+    "Global": -18.91,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "samcosmo",
     "name": "Samuel Taubman"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1376.88,
     "Modern": 1428.0
+   },
+   "change": {
+    "Global": -18.92,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "sirchristophr",
     "name": "Christopher Bilboe"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1448.21,
     "Modern": 1445.03
+   },
+   "change": {
+    "Global": -17.27,
+    "Modern": -17.36
    }
   },
   {
    "cycle": 5,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "bianca",
     "name": "Bianca"
@@ -120,20 +164,27 @@
    "opponent_rating": {
     "Global": 1426.59,
     "Modern": 1428.0
+   },
+   "change": {
+    "Global": -17.35,
+    "Modern": -17.36
    }
   },
   {
    "cycle": 5,
    "round": "Round 8",
+   "playoff": false,
    "opponent": null,
    "result": "Bye",
    "games": null,
    "reconstructed": false,
-   "opponent_rating": null
+   "opponent_rating": null,
+   "change": null
   },
   {
    "cycle": 5,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "kymmi",
     "name": "Amelia Spencer"
@@ -144,6 +195,10 @@
    "opponent_rating": {
     "Global": 1410.09,
     "Modern": 1410.96
+   },
+   "change": {
+    "Global": -17.34,
+    "Modern": -17.35
    }
   }
  ],
@@ -168,6 +223,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-8-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "200th of 228",
+   "typical_finish": 87.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "0-8-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "200th of 228",
+   "typical_finish": 87.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

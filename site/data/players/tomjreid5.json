@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "71st",
    "field_size": 228,
+   "finish_share": 31.1,
    "record": "5-4-0",
+   "win_rate": {
+    "rate": 55.6,
+    "matches": 9
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1518.61,
+    "Modern": 1518.0
+   },
    "deck": "Temur Rhinos",
    "decklist": "https://melee.gg/Decklist/View/1f19dde5-9586-4796-8278-45194bdb7c53"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 5,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "tezzarexy",
     "name": "TezzaREXy"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1482.85,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -18.31,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "yida",
     "name": "Yida"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1482.0,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": 18.01,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "ramohn",
     "name": "Ramohn"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1500.0,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": -17.99,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "philippemori",
     "name": "PhilippeMori"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1481.69,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": 18.0,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "pnametala",
     "name": "pnametala"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1502.03,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": 18.04,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "dc_abstracted",
     "name": "David Chamberlain"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1515.04,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": -18.05,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "mdesalvo",
     "name": "MDeSalvo"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1474.59,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": -18.46,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "leroyoscar",
     "name": "LeroyOscar"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1484.01,
     "Modern": 1482.01
+   },
+   "change": {
+    "Global": 18.05,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "campbells",
     "name": "Campbell Sullivan"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1572.35,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": 19.33,
+    "Modern": 18.0
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "5-4-0",
+   "win_rate": {
+    "rate": 55.6,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "71st of 228",
+   "typical_finish": 31.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "5-4-0",
+   "win_rate": {
+    "rate": 55.6,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "71st of 228",
+   "typical_finish": 31.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

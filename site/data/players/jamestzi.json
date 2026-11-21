@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "75th",
    "field_size": 212,
+   "finish_share": 35.4,
    "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1508.89,
+    "Modern": 1500.84
+   },
    "deck": "W-U-R-G Domain Zoo",
    "decklist": "https://melee.gg/Decklist/View/a3d6ef7e-9ac1-439c-a1dd-b38000560a86"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 10,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "xmooncx",
     "name": "xMoonCx"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 10,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "dazza824",
     "name": "Daniel Zhao"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1488.9,
     "Modern": 1519.35
+   },
+   "change": {
+    "Global": 17.47,
+    "Modern": 18.02
    }
   },
   {
    "cycle": 10,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "jamesdrake",
     "name": "James Drake"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1663.39,
     "Modern": 1559.01
+   },
+   "change": {
+    "Global": -15.68,
+    "Modern": -17.58
    }
   },
   {
    "cycle": 10,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "volcanicpanik",
     "name": "Daniel Yam"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1548.27,
     "Modern": 1534.09
+   },
+   "change": {
+    "Global": -17.48,
+    "Modern": -17.71
    }
   },
   {
    "cycle": 10,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "conradus",
     "name": "connor mcgillivray"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1778.3,
     "Modern": 1550.23
+   },
+   "change": {
+    "Global": -13.09,
+    "Modern": -17.1
    }
   },
   {
    "cycle": 10,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "jeffrey_blancia_inveritas_",
     "name": "Jeffrey Blancia"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1497.65,
     "Modern": 1437.09
+   },
+   "change": {
+    "Global": -17.85,
+    "Modern": -18.85
    }
   },
   {
    "cycle": 10,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "jomanman",
     "name": "Jordan Lam"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1495.73,
     "Modern": 1467.74
+   },
+   "change": {
+    "Global": 18.44,
+    "Modern": 18.05
    }
   },
   {
    "cycle": 10,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "saomungkai",
     "name": "Daniel Riley"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1548.97,
     "Modern": 1482.93
+   },
+   "change": {
+    "Global": 19.08,
+    "Modern": 18.0
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "75th of 212",
+   "typical_finish": 35.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "75th of 212",
+   "typical_finish": 35.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

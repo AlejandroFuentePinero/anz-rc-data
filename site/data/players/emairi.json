@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "80th",
    "field_size": 222,
+   "finish_share": 36.0,
    "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1499.03,
+    "Standard": 1499.42
+   },
    "deck": "Izzet Prowess",
    "decklist": "https://melee.gg/Decklist/View/dedb3113-de92-4878-ae6e-b2d701755af1"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 9,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "goscar",
     "name": "Oscar Gray"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1468.65,
     "Standard": 1522.6
+   },
+   "change": {
+    "Global": 17.43,
+    "Standard": 18.41
    }
   },
   {
    "cycle": 9,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "rk9",
     "name": "Jacob Golding"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1540.29,
     "Standard": 1518.0
+   },
+   "change": {
+    "Global": -17.58,
+    "Standard": -18.01
    }
   },
   {
    "cycle": 9,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "drdeadwood",
     "name": "Edward Endres"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1428.45,
     "Standard": 1500.0
+   },
+   "change": {
+    "Global": -19.3,
+    "Standard": -18.01
    }
   },
   {
    "cycle": 9,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "drewpower",
     "name": "DrewPower"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1487.02,
     "Standard": 1481.77
+   },
+   "change": {
+    "Global": 18.12,
+    "Standard": 17.99
    }
   },
   {
    "cycle": 9,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "strikerace",
     "name": "StrikerAce"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1536.45,
     "Standard": 1500.34
+   },
+   "change": {
+    "Global": 18.69,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 9,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "zipo",
     "name": "zipo"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1537.74,
     "Standard": 1498.9
+   },
+   "change": {
+    "Global": 18.37,
+    "Standard": 17.64
    }
   },
   {
    "cycle": 9,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "benjaminhipwell",
     "name": "BenjaminHipwell"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1616.27,
     "Standard": 1534.25
+   },
+   "change": {
+    "Global": -16.53,
+    "Standard": -18.03
    }
   },
   {
    "cycle": 9,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "jazza619",
     "name": "Jared Allsop"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1400.34,
     "Standard": 1486.28
+   },
+   "change": {
+    "Global": -20.16,
+    "Standard": -18.58
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "80th of 222",
+   "typical_finish": 36.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "80th of 222",
+   "typical_finish": 36.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "166th",
    "field_size": 209,
+   "finish_share": 79.4,
    "record": "1-6-1",
+   "win_rate": {
+    "rate": 14.3,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1410.6,
+    "Standard": 1406.68
+   },
    "deck": "Rakdos Monument",
    "decklist": "https://melee.gg/Decklist/View/8b8a8ae3-8356-4e3d-acca-b4040161f581"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 11,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "jamesdrake",
     "name": "James Drake"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1781.34,
     "Standard": 1524.24
+   },
+   "change": {
+    "Global": -13.0,
+    "Standard": -17.56
    }
   },
   {
    "cycle": 11,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "hotprobs",
     "name": "HotProbs"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1484.77,
     "Standard": 1482.79
+   },
+   "change": {
+    "Global": -18.04,
+    "Standard": -17.99
    }
   },
   {
    "cycle": 11,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "indruheinstein",
     "name": "indruheinstein"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1427.18,
     "Standard": 1465.34
+   },
+   "change": {
+    "Global": -18.76,
+    "Standard": -17.98
    }
   },
   {
    "cycle": 11,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "natpearce",
     "name": "NatPearce"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1461.17,
     "Standard": 1463.18
+   },
+   "change": {
+    "Global": 0.2,
+    "Standard": 0.3
    }
   },
   {
    "cycle": 11,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "kimura",
     "name": "kimura"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1460.19,
     "Standard": 1461.71
+   },
+   "change": {
+    "Global": -17.82,
+    "Standard": -17.73
    }
   },
   {
    "cycle": 11,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "beau_bubbles",
     "name": "Beau_Bubbles"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1341.17,
     "Standard": 1336.86
+   },
+   "change": {
+    "Global": 16.34,
+    "Standard": 16.32
    }
   },
   {
    "cycle": 11,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "thesource",
     "name": "Michael Rose"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1354.53,
     "Standard": 1330.48
+   },
+   "change": {
+    "Global": -19.72,
+    "Standard": -20.09
    }
   },
   {
    "cycle": 11,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "riku_slayers",
     "name": "Alfred Chen"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1396.77,
     "Standard": 1392.59
+   },
+   "change": {
+    "Global": -18.59,
+    "Standard": -18.6
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-6-1",
+   "win_rate": {
+    "rate": 14.3,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "166th of 209",
+   "typical_finish": 79.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "1-6-1",
+   "win_rate": {
+    "rate": 14.3,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "166th of 209",
+   "typical_finish": 79.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

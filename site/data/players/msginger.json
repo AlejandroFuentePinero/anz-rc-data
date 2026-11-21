@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "131st",
    "field_size": 233,
+   "finish_share": 56.2,
    "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1472.57,
+    "Modern": 1469.27
+   },
    "deck": "Azorius",
    "decklist": "https://melee.gg/Decklist/View/da6b34dd-e9b2-452a-9887-b4ec0071c851"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "peterkeenan",
     "name": "PeterKeenan"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1494.43,
     "Modern": 1502.3
+   },
+   "change": {
+    "Global": -18.1,
+    "Modern": -17.96
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "seelyon",
     "name": "Lisa McGlaughlin"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1529.06,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": 18.86,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "calmmirror",
     "name": "Samuel Maher"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1699.36,
     "Modern": 1592.36
+   },
+   "change": {
+    "Global": 21.58,
+    "Modern": 19.68
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "sexyhao",
     "name": "SexyHao"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1518.31,
     "Modern": 1518.04
+   },
+   "change": {
+    "Global": -18.07,
+    "Modern": -18.03
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "chrischapman",
     "name": "ChrisChapman"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1540.14,
     "Modern": 1535.62
+   },
+   "change": {
+    "Global": -17.35,
+    "Modern": -17.38
    }
   },
   {
    "cycle": 13,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "hazzrd",
     "name": "RIley Jones"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1574.52,
     "Modern": 1548.25
+   },
+   "change": {
+    "Global": -16.41,
+    "Modern": -16.84
    }
   },
   {
    "cycle": 13,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "haohaothevillain",
     "name": "Hao Min"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1550.63,
     "Modern": 1464.93
+   },
+   "change": {
+    "Global": 19.46,
+    "Modern": 17.95
    }
   },
   {
    "cycle": 13,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "nicholas-talbot",
     "name": "Nicholas Talbot"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1523.11,
     "Modern": 1586.5
+   },
+   "change": {
+    "Global": -17.4,
+    "Modern": -16.16
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "131st of 233",
+   "typical_finish": 56.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "131st of 233",
+   "typical_finish": 56.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "131st",
    "field_size": 132,
+   "finish_share": 99.2,
    "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1446.66,
+    "Standard": 1446.0
+   },
    "deck": "Esper Planeswalkers",
    "decklist": "https://melee.gg/Decklist/View/a532ddc5-59cc-4b77-b670-186dfeb3a034"
   },
@@ -21,7 +34,20 @@
    "format": "Pioneer",
    "finish": "129th",
    "field_size": 156,
+   "finish_share": 82.7,
    "record": "1-4-0",
+   "win_rate": {
+    "rate": 20.0,
+    "matches": 5
+   },
+   "rating_start": {
+    "Global": 1446.66,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1397.96,
+    "Pioneer": 1447.18
+   },
    "deck": "Lotus Field Combo",
    "decklist": "https://melee.gg/Decklist/View/16697e20-f906-4fcb-80ae-016a011aa9e8"
   },
@@ -31,7 +57,20 @@
    "format": "Standard",
    "finish": "149th",
    "field_size": 188,
+   "finish_share": 79.3,
    "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rating_start": {
+    "Global": 1397.96,
+    "Standard": 1446.0
+   },
+   "rating_end": {
+    "Global": 1369.24,
+    "Standard": 1413.57
+   },
    "deck": "Golgari Midrange",
    "decklist": "https://melee.gg/Decklist/View/11bbabdc-82a7-46d0-8dfb-b4510088d2a4"
   }
@@ -40,6 +79,7 @@
   {
    "cycle": 2,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "alabaster",
     "name": "Ian Cormick"
@@ -50,11 +90,16 @@
    "opponent_rating": {
     "Global": 1536.0,
     "Standard": 1500
+   },
+   "change": {
+    "Global": -17.34,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "lavaridge",
     "name": "James Larsen-Scott"
@@ -65,11 +110,16 @@
    "opponent_rating": {
     "Global": 1482.34,
     "Standard": 1482.0
+   },
+   "change": {
+    "Global": -18.01,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "nanolotl",
     "name": "Lewis Tolonen"
@@ -80,11 +130,16 @@
    "opponent_rating": {
     "Global": 1465.32,
     "Standard": 1464.0
+   },
+   "change": {
+    "Global": -17.99,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 4,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "shovit",
     "name": "Carlos Pacheco"
@@ -95,11 +150,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Pioneer": 1500
+   },
+   "change": {
+    "Global": 18.97,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 4,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "dweebdog",
     "name": "Ivan Schroder"
@@ -110,11 +170,16 @@
    "opponent_rating": {
     "Global": 1620.18,
     "Pioneer": 1620.29
+   },
+   "change": {
+    "Global": -15.2,
+    "Pioneer": -16.14
    }
   },
   {
    "cycle": 4,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "yangjinhao",
     "name": "Jinhao Yang"
@@ -125,11 +190,16 @@
    "opponent_rating": {
     "Global": 1500.04,
     "Pioneer": 1500.04
+   },
+   "change": {
+    "Global": -17.1,
+    "Pioneer": -18.03
    }
   },
   {
    "cycle": 4,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "nathan1064",
     "name": "nathan1064"
@@ -140,11 +210,16 @@
    "opponent_rating": {
     "Global": 1482.68,
     "Pioneer": 1482.65
+   },
+   "change": {
+    "Global": -17.1,
+    "Pioneer": -18.02
    }
   },
   {
    "cycle": 4,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "dannystone",
     "name": "Danny Stone"
@@ -155,11 +230,16 @@
    "opponent_rating": {
     "Global": 1401.38,
     "Pioneer": 1431.41
+   },
+   "change": {
+    "Global": -18.27,
+    "Pioneer": -18.63
    }
   },
   {
    "cycle": 12,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "dannystone",
     "name": "Danny Stone"
@@ -170,11 +250,16 @@
    "opponent_rating": {
     "Global": 1413.44,
     "Standard": 1415.85
+   },
+   "change": {
+    "Global": 18.28,
+    "Standard": 17.45
    }
   },
   {
    "cycle": 12,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "limp22",
     "name": "Kyle Lerch"
@@ -185,11 +270,16 @@
    "opponent_rating": {
     "Global": 1645.68,
     "Standard": 1591.01
+   },
+   "change": {
+    "Global": -13.89,
+    "Standard": -15.69
    }
   },
   {
    "cycle": 12,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "goscar",
     "name": "Oscar Gray"
@@ -200,11 +290,16 @@
    "opponent_rating": {
     "Global": 1464.04,
     "Standard": 1496.86
+   },
+   "change": {
+    "Global": -16.88,
+    "Standard": -17.11
    }
   },
   {
    "cycle": 12,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "zestycoleslaw",
     "name": "ZestyColeslaw"
@@ -215,6 +310,10 @@
    "opponent_rating": {
     "Global": 1482.1,
     "Standard": 1480.79
+   },
+   "change": {
+    "Global": -16.24,
+    "Standard": -17.09
    }
   }
  ],
@@ -262,6 +361,56 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-10-0",
+   "win_rate": {
+    "rate": 16.7,
+    "matches": 12
+   },
+   "rcs": 3,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "149th of 188",
+   "typical_finish": 82.7,
+   "top_8_rate": 0.0,
+   "rank": 293,
+   "above": 2.7,
+   "rcs_needed": null
+  },
+  "Standard": {
+   "record": "1-6-0",
+   "win_rate": {
+    "rate": 14.3,
+    "matches": 7
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "149th of 188",
+   "typical_finish": 89.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
+  },
+  "Pioneer": {
+   "record": "1-4-0",
+   "win_rate": {
+    "rate": 20.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "129th of 156",
+   "typical_finish": 82.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

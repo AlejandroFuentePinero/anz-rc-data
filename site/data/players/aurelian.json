@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "128th",
    "field_size": 209,
+   "finish_share": 61.2,
    "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1460.31,
+    "Standard": 1459.84
+   },
    "deck": "Dimir Midrange",
    "decklist": "https://melee.gg/Decklist/View/9d3319a2-25dc-47ea-ad4d-b40c0014f753"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 11,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "jedlamoreaux",
     "name": "JedLamoreaux"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1416.74,
     "Standard": 1482.08
+   },
+   "change": {
+    "Global": -19.52,
+    "Standard": -18.33
    }
   },
   {
    "cycle": 11,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "joshwei",
     "name": "JoshWei"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1434.48,
     "Standard": 1464.9
+   },
+   "change": {
+    "Global": -18.84,
+    "Standard": -18.31
    }
   },
   {
    "cycle": 11,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "raiderray76784",
     "name": "Richard Velvin"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1370.74,
     "Standard": 1394.32
+   },
+   "change": {
+    "Global": -19.65,
+    "Standard": -19.26
    }
   },
   {
    "cycle": 11,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "aetherlock",
     "name": "Jonathon Lowbridge"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1520.29,
     "Standard": 1446.24
+   },
+   "change": {
+    "Global": 19.43,
+    "Standard": 18.04
    }
   },
   {
    "cycle": 11,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "bianca",
     "name": "Bianca"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1416.15,
     "Standard": 1465.71
+   },
+   "change": {
+    "Global": -18.83,
+    "Standard": -17.93
    }
   },
   {
    "cycle": 11,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "e9",
     "name": "Jeremy Mackney"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1466.18,
     "Standard": 1475.93
+   },
+   "change": {
+    "Global": 18.43,
+    "Standard": 18.58
    }
   },
   {
    "cycle": 11,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "dialect",
     "name": "Joey Brautigam"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1527.65,
     "Standard": 1429.82
+   },
+   "change": {
+    "Global": 19.21,
+    "Standard": 17.4
    }
   },
   {
    "cycle": 11,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "thesource",
     "name": "Michael Rose"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1374.25,
     "Standard": 1350.57
+   },
+   "change": {
+    "Global": -19.93,
+    "Standard": -20.35
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "128th of 209",
+   "typical_finish": 61.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "128th of 209",
+   "typical_finish": 61.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

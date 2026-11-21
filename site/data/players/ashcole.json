@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "63rd",
    "field_size": 180,
+   "finish_share": 35.0,
    "record": "4-3-0",
+   "win_rate": {
+    "rate": 57.1,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1521.41,
+    "Pioneer": 1519.52
+   },
    "deck": "Rakdos Midrange",
    "decklist": "https://melee.gg/Decklist/View/88c53a1a-38df-4297-9ee6-31105c7298e7"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 3,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "isitaboutmycube",
     "name": "Scott Stipkovich"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Pioneer": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 3,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "joshh",
     "name": "JoshH"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1518.0,
     "Pioneer": 1518.0
+   },
+   "change": {
+    "Global": 18.0,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 3,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "ez_clap",
     "name": "Henry Sams"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1533.24,
     "Pioneer": 1570.41
+   },
+   "change": {
+    "Global": -18.05,
+    "Pioneer": -17.37
    }
   },
   {
    "cycle": 3,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "redmage38",
     "name": "David Gonzalez"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1504.43,
     "Pioneer": 1520.51
+   },
+   "change": {
+    "Global": 17.75,
+    "Pioneer": 18.03
    }
   },
   {
    "cycle": 3,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "lillia",
     "name": "Brennan Crawford"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1640.25,
     "Pioneer": 1619.6
+   },
+   "change": {
+    "Global": -16.1,
+    "Pioneer": -16.49
    }
   },
   {
    "cycle": 3,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "planeswalkerzen",
     "name": "Zen Miyaji-Thorne"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1655.72,
     "Pioneer": 1518.88
+   },
+   "change": {
+    "Global": -15.53,
+    "Pioneer": -18.02
    }
   },
   {
    "cycle": 3,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "kjvt",
     "name": "Kyle Van Tienen"
@@ -120,6 +164,10 @@
    "opponent_rating": {
     "Global": 1467.9,
     "Pioneer": 1467.75
+   },
+   "change": {
+    "Global": 17.34,
+    "Pioneer": 17.37
    }
   }
  ],
@@ -144,6 +192,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-3-0",
+   "win_rate": {
+    "rate": 57.1,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "63rd of 180",
+   "typical_finish": 35.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "4-3-0",
+   "win_rate": {
+    "rate": 57.1,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "63rd of 180",
+   "typical_finish": 35.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "31st",
    "field_size": 154,
+   "finish_share": 20.1,
    "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1539.27,
+    "Modern": 1538.69
+   },
    "deck": "Dimir Murktide",
    "decklist": "https://melee.gg/Decklist/View/dd9c9410-d8a8-4e6f-9d51-eb369282ba80"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 8,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "jacobofcorn",
     "name": "Jacobofcorn"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 8,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "chilly2370",
     "name": "Chris Campbell"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1487.23,
     "Modern": 1517.67
+   },
+   "change": {
+    "Global": -18.56,
+    "Modern": -18.01
    }
   },
   {
    "cycle": 8,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "nino111",
     "name": "Nino Manera"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1544.53,
     "Modern": 1551.11
+   },
+   "change": {
+    "Global": 18.82,
+    "Modern": 18.93
    }
   },
   {
    "cycle": 8,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "solarion",
     "name": "Scott Aitchison"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1527.22,
     "Modern": 1518.31
+   },
+   "change": {
+    "Global": 18.16,
+    "Modern": 17.99
    }
   },
   {
    "cycle": 8,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "pingu",
     "name": "Ben Parker"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1634.01,
     "Modern": 1602.58
+   },
+   "change": {
+    "Global": 19.77,
+    "Modern": 19.2
    }
   },
   {
    "cycle": 8,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "venerablelammasu",
     "name": "Thomas Bot"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1570.26,
     "Modern": 1560.02
+   },
+   "change": {
+    "Global": -17.74,
+    "Modern": -17.93
    }
   },
   {
    "cycle": 8,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "sillygoose",
     "name": "Gideon Hallam-walsh"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1456.01,
     "Modern": 1520.81
+   },
+   "change": {
+    "Global": -19.5,
+    "Modern": -18.32
    }
   },
   {
    "cycle": 8,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "raydric",
     "name": "Jose Gabriel Hilario"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1646.62,
     "Modern": 1565.22
+   },
+   "change": {
+    "Global": 20.32,
+    "Modern": 18.83
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "31st of 154",
+   "typical_finish": 20.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "31st of 154",
+   "typical_finish": 20.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

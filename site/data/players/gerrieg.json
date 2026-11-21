@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "66th",
    "field_size": 222,
+   "finish_share": 29.7,
    "record": "4-2-2",
+   "win_rate": {
+    "rate": 66.7,
+    "matches": 6
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1540.8,
+    "Standard": 1539.22
+   },
    "deck": "Boros Discover",
    "decklist": "https://melee.gg/Decklist/View/49b90f99-0db7-458f-8097-b2d60169483d"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 9,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "kenodvt",
     "name": "Keayn de Vries-Turnell"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1588.15,
     "Standard": 1571.99
+   },
+   "change": {
+    "Global": 19.6,
+    "Standard": 19.31
    }
   },
   {
    "cycle": 9,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "uch7t",
     "name": "Jason Hung"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1502.39,
     "Standard": 1502.07
+   },
+   "change": {
+    "Global": -0.31,
+    "Standard": -0.31
    }
   },
   {
    "cycle": 9,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "cuisiwang1",
     "name": "LeoCui"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1468.03,
     "Standard": 1519.28
+   },
+   "change": {
+    "Global": -18.93,
+    "Standard": -17.99
    }
   },
   {
    "cycle": 9,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "raijindemon",
     "name": "RaijinDemon"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1503.83,
     "Standard": 1501.33
+   },
+   "change": {
+    "Global": 0.06,
+    "Standard": 0.01
    }
   },
   {
    "cycle": 9,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "ignismorgan",
     "name": "IgnisMorgan"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1483.82,
     "Standard": 1481.76
+   },
+   "change": {
+    "Global": 17.7,
+    "Standard": 17.65
    }
   },
   {
    "cycle": 9,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "elppawolley",
     "name": "Philip Lim"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1515.81,
     "Standard": 1517.41
+   },
+   "change": {
+    "Global": 17.96,
+    "Standard": 17.98
    }
   },
   {
    "cycle": 9,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "pianto",
     "name": "James Pianto"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1517.38,
     "Standard": 1518.57
+   },
+   "change": {
+    "Global": 17.66,
+    "Standard": 17.67
    }
   },
   {
    "cycle": 9,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "planeswalkerzen",
     "name": "Zen Miyaji-Thorne"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1839.14,
     "Standard": 1715.6
+   },
+   "change": {
+    "Global": -12.93,
+    "Standard": -15.08
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-2-2",
+   "win_rate": {
+    "rate": 66.7,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "66th of 222",
+   "typical_finish": 29.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "4-2-2",
+   "win_rate": {
+    "rate": 66.7,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "66th of 222",
+   "typical_finish": 29.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

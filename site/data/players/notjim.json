@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "13th",
    "field_size": 233,
+   "finish_share": 5.6,
    "record": "7-2-0",
+   "win_rate": {
+    "rate": 77.8,
+    "matches": 9
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1588.87,
+    "Modern": 1588.65
+   },
    "deck": "Boros Energy",
    "decklist": "https://melee.gg/Decklist/View/14044387-1ef7-4a8f-843d-b4ea00c7b164"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "goscar",
     "name": "Oscar Gray"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1543.45,
     "Modern": 1440.48
+   },
+   "change": {
+    "Global": 18.79,
+    "Modern": 16.92
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "beau_bubbles",
     "name": "Beau_Bubbles"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1331.85,
     "Modern": 1499.89
+   },
+   "change": {
+    "Global": 14.63,
+    "Modern": 17.69
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "alabaster",
     "name": "Ian Cormick"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1671.8,
     "Modern": 1571.65
+   },
+   "change": {
+    "Global": -15.49,
+    "Modern": -17.32
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "caylem01",
     "name": "Caylem01"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1487.23,
     "Modern": 1483.42
+   },
+   "change": {
+    "Global": 17.44,
+    "Modern": 17.38
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "jimmielinville",
     "name": "JimmieLinville"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1539.23,
     "Modern": 1537.6
+   },
+   "change": {
+    "Global": 18.07,
+    "Modern": 18.05
    }
   },
   {
    "cycle": 13,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "miketaylor",
     "name": "MikeTaylor"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1480.46,
     "Modern": 1478.9
+   },
+   "change": {
+    "Global": 16.67,
+    "Modern": 16.66
    }
   },
   {
    "cycle": 13,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "dialect",
     "name": "Joey Brautigam"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1583.91,
     "Modern": 1673.06
+   },
+   "change": {
+    "Global": 18.25,
+    "Modern": 19.88
    }
   },
   {
    "cycle": 13,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "rohitwagh",
     "name": "RohitWagh"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1591.18,
     "Modern": 1590.74
+   },
+   "change": {
+    "Global": -17.95,
+    "Modern": -17.97
    }
   },
   {
    "cycle": 13,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "jeffrey_blancia_inveritas_",
     "name": "Jeffrey Blancia"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1595.12,
     "Modern": 1536.39
+   },
+   "change": {
+    "Global": 18.45,
+    "Modern": 17.36
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "7-2-0",
+   "win_rate": {
+    "rate": 77.8,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "13th of 233",
+   "typical_finish": 5.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "7-2-0",
+   "win_rate": {
+    "rate": 77.8,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "13th of 233",
+   "typical_finish": 5.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

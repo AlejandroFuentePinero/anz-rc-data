@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "10th",
    "field_size": 152,
+   "finish_share": 6.6,
    "record": "6-2-0",
+   "win_rate": {
+    "rate": 75.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1572.31,
+    "Pioneer": 1572.31
+   },
    "deck": "Azorius Control",
    "decklist": "https://melee.gg/Decklist/View/ff782993-c2f2-4047-b608-ea3755a427e3"
   },
@@ -21,7 +34,20 @@
    "format": "Standard",
    "finish": "93rd",
    "field_size": 132,
+   "finish_share": 70.5,
    "record": "2-3-0",
+   "win_rate": {
+    "rate": 40.0,
+    "matches": 5
+   },
+   "rating_start": {
+    "Global": 1572.31,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1547.37,
+    "Standard": 1482.0
+   },
    "deck": "Grixis Midrange",
    "decklist": "https://melee.gg/Decklist/View/1dc5aa66-b503-44cc-9e05-b91b7eaf35ad"
   }
@@ -30,6 +56,7 @@
   {
    "cycle": 1,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "jleb",
     "name": "johneb"
@@ -40,11 +67,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Pioneer": 1500
+   },
+   "change": {
+    "Global": -18.0,
+    "Pioneer": -18.0
    }
   },
   {
    "cycle": 1,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "themidlandmaster",
     "name": "Dean Williams"
@@ -55,11 +87,16 @@
    "opponent_rating": {
     "Global": 1482.0,
     "Pioneer": 1482.0
+   },
+   "change": {
+    "Global": 18.0,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 1,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "shane",
     "name": "Yuxiang Qin"
@@ -70,11 +107,16 @@
    "opponent_rating": {
     "Global": 1500.0,
     "Pioneer": 1500.0
+   },
+   "change": {
+    "Global": 18.0,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 1,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "saomungkai",
     "name": "Daniel Riley"
@@ -85,11 +127,16 @@
    "opponent_rating": {
     "Global": 1536.0,
     "Pioneer": 1536.0
+   },
+   "change": {
+    "Global": 18.33,
+    "Pioneer": 18.33
    }
   },
   {
    "cycle": 1,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "pjax",
     "name": "Paul Jackson"
@@ -100,11 +147,16 @@
    "opponent_rating": {
     "Global": 1536.0,
     "Pioneer": 1536.0
+   },
+   "change": {
+    "Global": 17.99,
+    "Pioneer": 17.99
    }
   },
   {
    "cycle": 1,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "bbotonline",
     "name": "Brandon Rashad"
@@ -115,11 +167,16 @@
    "opponent_rating": {
     "Global": 1554.0,
     "Pioneer": 1554.0
+   },
+   "change": {
+    "Global": 17.99,
+    "Pioneer": 17.99
    }
   },
   {
    "cycle": 1,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "ccousens",
     "name": "Chris Cousens"
@@ -130,11 +187,16 @@
    "opponent_rating": {
     "Global": 1572.0,
     "Pioneer": 1572.0
+   },
+   "change": {
+    "Global": 17.99,
+    "Pioneer": 17.99
    }
   },
   {
    "cycle": 1,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "lillia",
     "name": "Brennan Crawford"
@@ -145,11 +207,16 @@
    "opponent_rating": {
     "Global": 1590.0,
     "Pioneer": 1590.0
+   },
+   "change": {
+    "Global": -18.01,
+    "Pioneer": -18.01
    }
   },
   {
    "cycle": 2,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "jbmtg",
     "name": "Joe Butler"
@@ -160,11 +227,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Standard": 1500
+   },
+   "change": {
+    "Global": 16.68,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "kate_two",
     "name": "Kate Chelberg"
@@ -175,11 +247,16 @@
    "opponent_rating": {
     "Global": 1482.66,
     "Standard": 1518.0
+   },
+   "change": {
+    "Global": -19.93,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "danso",
     "name": "Brett Girvan"
@@ -190,11 +267,16 @@
    "opponent_rating": {
     "Global": 1501.32,
     "Standard": 1500.0
+   },
+   "change": {
+    "Global": 16.77,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "browntown182",
     "name": "Liam Brown"
@@ -205,11 +287,16 @@
    "opponent_rating": {
     "Global": 1517.05,
     "Standard": 1518.0
+   },
+   "change": {
+    "Global": -19.25,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "spiderbyte12",
     "name": "Michael Billinghurst"
@@ -220,6 +307,10 @@
    "opponent_rating": {
     "Global": 1500.7,
     "Standard": 1500.0
+   },
+   "change": {
+    "Global": -19.2,
+    "Standard": -18.0
    }
   }
  ],
@@ -259,6 +350,56 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "8-5-0",
+   "win_rate": {
+    "rate": 61.5,
+    "matches": 13
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "10th of 152",
+   "typical_finish": 38.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
+  },
+  "Pioneer": {
+   "record": "6-2-0",
+   "win_rate": {
+    "rate": 75.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "10th of 152",
+   "typical_finish": 6.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "2-3-0",
+   "win_rate": {
+    "rate": 40.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "93rd of 132",
+   "typical_finish": 70.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

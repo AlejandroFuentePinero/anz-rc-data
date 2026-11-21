@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "110th",
    "field_size": 168,
+   "finish_share": 65.5,
    "record": "2-4-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 6
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1469.47,
+    "Standard": 1462.77
+   },
    "deck": "Mono-Red Aggro",
    "decklist": "https://melee.gg/Decklist/View/48b036a1-7f6b-457f-9d40-4b45025ddcc0"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 6,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "isaaclee",
     "name": "Isaac Lee"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1498.66,
     "Standard": 1464.0
+   },
+   "change": {
+    "Global": -18.02,
+    "Standard": -18.66
    }
   },
   {
    "cycle": 6,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "ganksyou",
     "name": "Michael Russell"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1685.35,
     "Standard": 1481.03
+   },
+   "change": {
+    "Global": 21.66,
+    "Standard": 17.99
    }
   },
   {
    "cycle": 6,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "jamesxu",
     "name": "Jamesxu"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1500.92,
     "Standard": 1500.32
+   },
+   "change": {
+    "Global": -18.05,
+    "Standard": -17.98
    }
   },
   {
    "cycle": 6,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "masonme2",
     "name": "Masonme2"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1596.11,
     "Standard": 1481.41
+   },
+   "change": {
+    "Global": 20.01,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 6,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "tonycultanvil",
     "name": "Tony Dwyer"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1451.74,
     "Standard": 1450.2
+   },
+   "change": {
+    "Global": -18.98,
+    "Standard": -18.9
    }
   },
   {
    "cycle": 6,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "calmmirror",
     "name": "Samuel Maher"
@@ -105,6 +144,10 @@
    "opponent_rating": {
     "Global": 1533.92,
     "Standard": 1497.5
+   },
+   "change": {
+    "Global": -17.14,
+    "Standard": -17.69
    }
   }
  ],
@@ -129,6 +172,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-4-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "110th of 168",
+   "typical_finish": 65.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "2-4-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "110th of 168",
+   "typical_finish": 65.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

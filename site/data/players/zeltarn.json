@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "62nd",
    "field_size": 156,
+   "finish_share": 39.7,
    "record": "3-4-0",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1484.0,
+    "Pioneer": 1483.58
+   },
    "deck": "Mono-White Humans",
    "decklist": "https://melee.gg/Decklist/View/624cb6d4-9263-4a16-ad69-b1971063d387"
   }
@@ -20,15 +33,18 @@
   {
    "cycle": 4,
    "round": "Round 1",
+   "playoff": false,
    "opponent": null,
    "result": "Bye",
    "games": null,
    "reconstructed": false,
-   "opponent_rating": null
+   "opponent_rating": null,
+   "change": null
   },
   {
    "cycle": 4,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "thenoobshoota",
     "name": "TheNoobShoota"
@@ -39,11 +55,16 @@
    "opponent_rating": {
     "Global": 1518.0,
     "Pioneer": 1518.0
+   },
+   "change": {
+    "Global": -17.67,
+    "Pioneer": -17.67
    }
   },
   {
    "cycle": 4,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "mace20",
     "name": "Max de Kievith"
@@ -54,11 +75,16 @@
    "opponent_rating": {
     "Global": 1431.43,
     "Pioneer": 1431.43
+   },
+   "change": {
+    "Global": -18.93,
+    "Pioneer": -18.93
    }
   },
   {
    "cycle": 4,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "jamiea1",
     "name": "Jamie Anderson"
@@ -69,11 +95,16 @@
    "opponent_rating": {
     "Global": 1483.08,
     "Pioneer": 1482.83
+   },
+   "change": {
+    "Global": 18.36,
+    "Pioneer": 18.35
    }
   },
   {
    "cycle": 4,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "bigdogsonly",
     "name": "Aidan Gordon"
@@ -84,11 +115,16 @@
    "opponent_rating": {
     "Global": 1462.58,
     "Pioneer": 1497.55
+   },
+   "change": {
+    "Global": 17.65,
+    "Pioneer": 18.29
    }
   },
   {
    "cycle": 4,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "y4m",
     "name": "Flynn Gordon"
@@ -99,11 +135,16 @@
    "opponent_rating": {
     "Global": 1522.67,
     "Pioneer": 1520.87
+   },
+   "change": {
+    "Global": -17.58,
+    "Pioneer": -17.62
    }
   },
   {
    "cycle": 4,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "cooperr",
     "name": "CooperR"
@@ -114,11 +155,16 @@
    "opponent_rating": {
     "Global": 1498.6,
     "Pioneer": 1499.13
+   },
+   "change": {
+    "Global": 18.31,
+    "Pioneer": 18.3
    }
   },
   {
    "cycle": 4,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "conradus",
     "name": "connor mcgillivray"
@@ -129,6 +175,10 @@
    "opponent_rating": {
     "Global": 1602.26,
     "Pioneer": 1547.37
+   },
+   "change": {
+    "Global": -16.14,
+    "Pioneer": -17.15
    }
   }
  ],
@@ -153,6 +203,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-4-0",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "62nd of 156",
+   "typical_finish": 39.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "3-4-0",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "62nd of 156",
+   "typical_finish": 39.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

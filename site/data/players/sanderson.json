@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "99th",
    "field_size": 180,
+   "finish_share": 55.0,
    "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1461.52,
+    "Pioneer": 1462.05
+   },
    "deck": "Selesnya Angels",
    "decklist": "https://melee.gg/Decklist/View/a98c18ca-8c96-4d7b-a796-9db330c21dbe"
   },
@@ -21,7 +34,20 @@
    "format": "Modern",
    "finish": "207th",
    "field_size": 228,
+   "finish_share": 90.8,
    "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rating_start": {
+    "Global": 1461.52,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1410.11,
+    "Modern": 1446.0
+   },
    "deck": "Merfolk",
    "decklist": "https://melee.gg/Decklist/View/dbebc799-95db-4043-a30a-afae5b3b0bd8"
   }
@@ -30,6 +56,7 @@
   {
    "cycle": 3,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "raiyzd",
     "name": "RAiYzd"
@@ -40,11 +67,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Pioneer": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 3,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "danfilmer",
     "name": "Dan Filmer"
@@ -55,11 +87,16 @@
    "opponent_rating": {
     "Global": 1518.0,
     "Pioneer": 1518.0
+   },
+   "change": {
+    "Global": 18.0,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 3,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "alexander",
     "name": "Alex Lim"
@@ -70,11 +107,16 @@
    "opponent_rating": {
     "Global": 1505.76,
     "Pioneer": 1538.27
+   },
+   "change": {
+    "Global": -18.55,
+    "Pioneer": -17.96
    }
   },
   {
    "cycle": 3,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "sillygoose",
     "name": "Gideon Hallam-walsh"
@@ -85,11 +127,16 @@
    "opponent_rating": {
     "Global": 1404.75,
     "Pioneer": 1449.91
+   },
+   "change": {
+    "Global": -20.05,
+    "Pioneer": -19.24
    }
   },
   {
    "cycle": 3,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "raiderray76784",
     "name": "Richard Velvin"
@@ -100,11 +147,16 @@
    "opponent_rating": {
     "Global": 1507.02,
     "Pioneer": 1483.27
+   },
+   "change": {
+    "Global": 18.18,
+    "Pioneer": 17.72
    }
   },
   {
    "cycle": 3,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "xelbie",
     "name": "Peter Hu"
@@ -115,11 +167,16 @@
    "opponent_rating": {
     "Global": 1519.19,
     "Pioneer": 1519.81
+   },
+   "change": {
+    "Global": -17.93,
+    "Pioneer": -17.94
    }
   },
   {
    "cycle": 3,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "calmmirror",
     "name": "Samuel Maher"
@@ -130,11 +187,16 @@
    "opponent_rating": {
     "Global": 1490.07,
     "Pioneer": 1468.09
+   },
+   "change": {
+    "Global": -18.14,
+    "Pioneer": -18.56
    }
   },
   {
    "cycle": 3,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "connorarcher737",
     "name": "ConnorArcher737"
@@ -145,11 +207,16 @@
    "opponent_rating": {
     "Global": 1480.45,
     "Pioneer": 1481.42
+   },
+   "change": {
+    "Global": -17.98,
+    "Pioneer": -17.97
    }
   },
   {
    "cycle": 5,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "hazzrd",
     "name": "RIley Jones"
@@ -160,11 +227,16 @@
    "opponent_rating": {
     "Global": 1581.7,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -15.82,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "dc_abstracted",
     "name": "David Chamberlain"
@@ -175,11 +247,16 @@
    "opponent_rating": {
     "Global": 1482.0,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -17.34,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "santinomaher",
     "name": "Santinomaher"
@@ -190,6 +267,10 @@
    "opponent_rating": {
     "Global": 1414.53,
     "Modern": 1464.0
+   },
+   "change": {
+    "Global": -18.25,
+    "Modern": -18.0
    }
   }
  ],
@@ -229,6 +310,56 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-8-0",
+   "win_rate": {
+    "rate": 27.3,
+    "matches": 11
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "99th of 180",
+   "typical_finish": 72.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
+  },
+  "Pioneer": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "99th of 180",
+   "typical_finish": 55.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "207th of 228",
+   "typical_finish": 90.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "159th",
    "field_size": 180,
+   "finish_share": 88.3,
    "record": "1-4-0",
+   "win_rate": {
+    "rate": 20.0,
+    "matches": 5
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1449.4,
+    "Pioneer": 1448.8
+   },
    "deck": "Dimir Control",
    "decklist": "https://melee.gg/Decklist/View/d745f771-c943-4644-b9cd-8cde31cd26f8"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 3,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "isaaclee",
     "name": "Isaac Lee"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1497.15,
     "Pioneer": 1536.0
+   },
+   "change": {
+    "Global": 17.95,
+    "Pioneer": 18.66
    }
   },
   {
    "cycle": 3,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "raiderray76784",
     "name": "Richard Velvin"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1522.69,
     "Pioneer": 1500.29
+   },
+   "change": {
+    "Global": -17.91,
+    "Pioneer": -18.34
    }
   },
   {
    "cycle": 3,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "nmp",
     "name": "Nicholas Malcolm Preston"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1602.83,
     "Pioneer": 1603.83
+   },
+   "change": {
+    "Global": -16.13,
+    "Pioneer": -16.12
    }
   },
   {
    "cycle": 3,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "chiawhey",
     "name": "Chia Wei Leong"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1519.64,
     "Pioneer": 1483.27
+   },
+   "change": {
+    "Global": -17.35,
+    "Pioneer": -18.02
    }
   },
   {
    "cycle": 3,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "mindcandy",
     "name": "mindcandy"
@@ -90,6 +124,10 @@
    "opponent_rating": {
     "Global": 1513.17,
     "Pioneer": 1499.62
+   },
+   "change": {
+    "Global": -17.15,
+    "Pioneer": -17.39
    }
   }
  ],
@@ -114,6 +152,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-4-0",
+   "win_rate": {
+    "rate": 20.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "159th of 180",
+   "typical_finish": 88.3,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "1-4-0",
+   "win_rate": {
+    "rate": 20.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "159th of 180",
+   "typical_finish": 88.3,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

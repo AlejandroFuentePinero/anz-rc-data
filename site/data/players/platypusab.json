@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "64th",
    "field_size": 228,
+   "finish_share": 28.1,
    "record": "5-4-0",
+   "win_rate": {
+    "rate": 55.6,
+    "matches": 9
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1518.62,
+    "Modern": 1518.0
+   },
    "deck": "Golgari Yawgmoth",
    "decklist": "https://melee.gg/Decklist/View/e0a55700-eb0d-457e-9427-c086d8dc8789"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 5,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "beardyhd",
     "name": "Samuel Beard"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1465.85,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -18.62,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "jacobroom",
     "name": "Jacob Broom"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1470.35,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -18.2,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "ryfe81",
     "name": "Ryfe81"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1464.0,
     "Modern": 1464.0
+   },
+   "change": {
+    "Global": 18.01,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "isaac_s",
     "name": "Isaac_S"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1483.11,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": 18.04,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "mdsweetman",
     "name": "MDSweetman"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1499.13,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": 18.0,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "nicholasc1",
     "name": "Nick Chow"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1519.89,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": 18.05,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "sam_lewin",
     "name": "Sam_Lewin"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1538.58,
     "Modern": 1536.0
+   },
+   "change": {
+    "Global": -17.94,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "thokk",
     "name": "Ethan Taylor"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1462.75,
     "Modern": 1517.99
+   },
+   "change": {
+    "Global": 17.01,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "alosaur",
     "name": "Alex Humbley"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1659.87,
     "Modern": 1535.99
+   },
+   "change": {
+    "Global": -15.72,
+    "Modern": -18.0
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "5-4-0",
+   "win_rate": {
+    "rate": 55.6,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "64th of 228",
+   "typical_finish": 28.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "5-4-0",
+   "win_rate": {
+    "rate": 55.6,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "64th of 228",
+   "typical_finish": 28.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

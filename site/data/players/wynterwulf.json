@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "36th",
    "field_size": 188,
+   "finish_share": 19.1,
    "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1538.03,
+    "Standard": 1537.05
+   },
    "deck": "U-B-R-G Reanimator",
    "decklist": "https://melee.gg/Decklist/View/b7e85270-1f02-4fb0-bed6-b452007a7073"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 12,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "raiderray76784",
     "name": "Richard Velvin"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1423.21,
     "Standard": 1440.28
+   },
+   "change": {
+    "Global": 16.6,
+    "Standard": 16.91
    }
   },
   {
    "cycle": 12,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "floptic",
     "name": "Ben Kleinsman-Leusink-Hill"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1587.77,
     "Standard": 1622.36
+   },
+   "change": {
+    "Global": 19.3,
+    "Standard": 19.92
    }
   },
   {
    "cycle": 12,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "elvelt6",
     "name": "Elvelt6"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1534.5,
     "Standard": 1534.42
+   },
+   "change": {
+    "Global": -18.03,
+    "Standard": -18.04
    }
   },
   {
    "cycle": 12,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "quiznium",
     "name": "Riley Beck"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1521.7,
     "Standard": 1520.95
+   },
+   "change": {
+    "Global": -17.93,
+    "Standard": -17.96
    }
   },
   {
    "cycle": 12,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "bennyr",
     "name": "Benn Reason"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1500.59,
     "Standard": 1499.67
+   },
+   "change": {
+    "Global": 18.01,
+    "Standard": 17.98
    }
   },
   {
    "cycle": 12,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "beardedbear",
     "name": "BeardedBear"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1605.41,
     "Standard": 1593.61
+   },
+   "change": {
+    "Global": 19.59,
+    "Standard": 19.36
    }
   },
   {
    "cycle": 12,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "jamzone_",
     "name": "JAMzone_"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1511.51,
     "Standard": 1476.91
+   },
+   "change": {
+    "Global": -18.47,
+    "Standard": -19.12
    }
   },
   {
    "cycle": 12,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "warekoala",
     "name": "Adam kinnaird"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1571.85,
     "Standard": 1519.24
+   },
+   "change": {
+    "Global": 18.96,
+    "Standard": 18.0
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "36th of 188",
+   "typical_finish": 19.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "36th of 188",
+   "typical_finish": 19.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

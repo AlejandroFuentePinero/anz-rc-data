@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "83rd",
    "field_size": 212,
+   "finish_share": 39.2,
    "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1502.26,
+    "Modern": 1500.94
+   },
    "deck": "Izzet Affinity",
    "decklist": "https://melee.gg/Decklist/View/468ae3ec-7c10-4f7d-abc5-b37f00b1d965"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 10,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "prosshy",
     "name": "Prosshy"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 10,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "spiderbyte12",
     "name": "Michael Billinghurst"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1587.56,
     "Modern": 1508.45
+   },
+   "change": {
+    "Global": -16.73,
+    "Modern": -18.17
    }
   },
   {
    "cycle": 10,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "yangjinhao",
     "name": "Jinhao Yang"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1603.76,
     "Modern": 1542.77
+   },
+   "change": {
+    "Global": -16.14,
+    "Modern": -17.22
    }
   },
   {
    "cycle": 10,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "ltsxenon",
     "name": "Brett Shortall"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1482.56,
     "Modern": 1481.59
+   },
+   "change": {
+    "Global": 17.95,
+    "Modern": 17.98
    }
   },
   {
    "cycle": 10,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "mitchrobbo",
     "name": "Mitch Robinson"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1391.08,
     "Modern": 1450.55
+   },
+   "change": {
+    "Global": -20.03,
+    "Modern": -18.91
    }
   },
   {
    "cycle": 10,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "shadws13",
     "name": "Shadws13"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1483.42,
     "Modern": 1481.23
+   },
+   "change": {
+    "Global": 18.01,
+    "Modern": 17.99
    }
   },
   {
    "cycle": 10,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "s2dawnbringer",
     "name": "S2Dawnbringer"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1506.23,
     "Modern": 1501.72
+   },
+   "change": {
+    "Global": 18.09,
+    "Modern": 18.04
    }
   },
   {
    "cycle": 10,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "itssmn",
     "name": "Simon Walters"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1580.29,
     "Modern": 1585.63
+   },
+   "change": {
+    "Global": -16.89,
+    "Modern": -16.76
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "83rd of 212",
+   "typical_finish": 39.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "83rd of 212",
+   "typical_finish": 39.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

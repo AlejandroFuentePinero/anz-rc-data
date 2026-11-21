@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "122nd",
    "field_size": 156,
+   "finish_share": 78.2,
    "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1464.72,
+    "Pioneer": 1463.58
+   },
    "deck": "Rakdos Midrange",
    "decklist": "https://melee.gg/Decklist/View/886144d8-4216-41c2-a674-2850b26e28c5"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 4,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "tonyjones22",
     "name": "antoine nguyen"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Pioneer": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 4,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "jinp",
     "name": "JinP"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1589.16,
     "Pioneer": 1590.12
+   },
+   "change": {
+    "Global": -16.7,
+    "Pioneer": -16.69
    }
   },
   {
    "cycle": 4,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "adamjaz",
     "name": "AdamJaz"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1465.31,
     "Pioneer": 1467.99
+   },
+   "change": {
+    "Global": -18.66,
+    "Pioneer": -18.61
    }
   },
   {
    "cycle": 4,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "andrewd2",
     "name": "AndrewD2"
@@ -75,6 +104,10 @@
    "opponent_rating": {
     "Global": 1487.07,
     "Pioneer": 1420.9
+   },
+   "change": {
+    "Global": -17.92,
+    "Pioneer": -19.13
    }
   }
  ],
@@ -99,6 +132,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "122nd of 156",
+   "typical_finish": 78.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "122nd of 156",
+   "typical_finish": 78.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

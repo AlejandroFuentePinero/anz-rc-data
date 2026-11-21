@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "128th",
    "field_size": 132,
+   "finish_share": 97.0,
    "record": "0-3-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1445.06,
+    "Standard": 1445.68
+   },
    "deck": "Mono-White Midrange",
    "decklist": "https://melee.gg/Decklist/View/308d9e79-8165-473e-9133-1a7eb269f242"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 2,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "calmmirror",
     "name": "Samuel Maher"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1464.3,
     "Standard": 1500
+   },
+   "change": {
+    "Global": -0.65,
+    "Standard": 0.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "raydric",
     "name": "Jose Gabriel Hilario"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1482.0,
     "Standard": 1482.0
+   },
+   "change": {
+    "Global": -18.32,
+    "Standard": -18.33
    }
   },
   {
    "cycle": 2,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "nranyone",
     "name": "ivan sanche"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1482.97,
     "Standard": 1482.0
+   },
+   "change": {
+    "Global": -17.96,
+    "Standard": -17.99
    }
   },
   {
    "cycle": 2,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "rowanmillers",
     "name": "Rowan Millers"
@@ -75,6 +104,10 @@
    "opponent_rating": {
     "Global": 1462.72,
     "Standard": 1464.0
+   },
+   "change": {
+    "Global": -18.01,
+    "Standard": -17.99
    }
   }
  ],
@@ -99,6 +132,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-3-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "128th of 132",
+   "typical_finish": 97.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "0-3-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "128th of 132",
+   "typical_finish": 97.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

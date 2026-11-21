@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "146th",
    "field_size": 152,
+   "finish_share": 96.1,
    "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1446.0,
+    "Pioneer": 1446.0
+   },
    "deck": "Abzan Greasefang",
    "decklist": "https://melee.gg/Decklist/View/acf3dcd8-cbb8-4dbd-bd94-1252cbab4431"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 1,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "ethanmtg",
     "name": "Ethan Bird"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Pioneer": 1500
+   },
+   "change": {
+    "Global": -18.0,
+    "Pioneer": -18.0
    }
   },
   {
    "cycle": 1,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "shinypants",
     "name": "Gordon Chan"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1482.0,
     "Pioneer": 1482.0
+   },
+   "change": {
+    "Global": -18.0,
+    "Pioneer": -18.0
    }
   },
   {
    "cycle": 1,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "thebetterpierce",
     "name": "Pierce Tattersall"
@@ -60,6 +84,10 @@
    "opponent_rating": {
     "Global": 1464.0,
     "Pioneer": 1464.0
+   },
+   "change": {
+    "Global": -18.0,
+    "Pioneer": -18.0
    }
   }
  ],
@@ -84,6 +112,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "146th of 152",
+   "typical_finish": 96.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "146th of 152",
+   "typical_finish": 96.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

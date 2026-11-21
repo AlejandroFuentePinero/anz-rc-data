@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "83rd",
    "field_size": 233,
+   "finish_share": 35.6,
    "record": "4-4-1",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1503.27,
+    "Modern": 1500.87
+   },
    "deck": "Grixis Affinity",
    "decklist": "https://melee.gg/Decklist/View/d279b451-dcba-4727-8399-b4ec00530cd2"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "carps",
     "name": "Samuel Carpenter"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1549.97,
     "Modern": 1499.66
+   },
+   "change": {
+    "Global": 18.91,
+    "Modern": 17.99
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "alabaster",
     "name": "Ian Cormick"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1656.29,
     "Modern": 1554.32
+   },
+   "change": {
+    "Global": -15.51,
+    "Modern": -17.34
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "volcanicpanik",
     "name": "Daniel Yam"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1557.86,
     "Modern": 1552.67
+   },
+   "change": {
+    "Global": 18.99,
+    "Modern": 18.95
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "frewdobaggins",
     "name": "FrewdoBaggins"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1520.2,
     "Modern": 1517.75
+   },
+   "change": {
+    "Global": -18.04,
+    "Modern": -18.03
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "cmiller",
     "name": "Chris Miller"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1614.99,
     "Modern": 1485.33
+   },
+   "change": {
+    "Global": 20.01,
+    "Modern": 17.7
    }
   },
   {
    "cycle": 13,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "kuangfupanda",
     "name": "kuangfupanda"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1528.55,
     "Modern": 1523.13
+   },
+   "change": {
+    "Global": 0.08,
+    "Modern": 0.07
    }
   },
   {
    "cycle": 13,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "jdh1",
     "name": "JD Hawke"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1423.86,
     "Modern": 1484.94
+   },
+   "change": {
+    "Global": -19.83,
+    "Modern": -18.63
    }
   },
   {
    "cycle": 13,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "mrprince33",
     "name": "MrPrince33"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1503.23,
     "Modern": 1503.28
+   },
+   "change": {
+    "Global": -18.03,
+    "Modern": -17.95
    }
   },
   {
    "cycle": 13,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "boombarton",
     "name": "BoomBarton"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1414.27,
     "Modern": 1488.68
+   },
+   "change": {
+    "Global": 16.68,
+    "Modern": 18.11
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-4-1",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "83rd of 233",
+   "typical_finish": 35.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "4-4-1",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "83rd of 233",
+   "typical_finish": 35.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

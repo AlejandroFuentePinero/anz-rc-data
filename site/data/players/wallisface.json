@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "46th",
    "field_size": 233,
+   "finish_share": 19.7,
    "record": "6-3-0",
+   "win_rate": {
+    "rate": 66.7,
+    "matches": 9
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1557.3,
+    "Modern": 1554.77
+   },
    "deck": "Dimir Midrange",
    "decklist": "https://melee.gg/Decklist/View/dcf9b7ca-a1f6-4b93-a052-b4e2017f99e5"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "joeshoer",
     "name": "Joshua Bennett"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1516.74,
     "Modern": 1502.71
+   },
+   "change": {
+    "Global": 18.31,
+    "Modern": 18.05
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "viraz",
     "name": "Viraz"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1588.02,
     "Modern": 1486.89
+   },
+   "change": {
+    "Global": -16.73,
+    "Modern": -18.57
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "justalec",
     "name": "JustAlec"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1500.37,
     "Modern": 1499.22
+   },
+   "change": {
+    "Global": 17.98,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "morienus",
     "name": "Morienus"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1520.96,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": 18.03,
+    "Modern": 18.01
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "kida",
     "name": "Kida"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1538.15,
     "Modern": 1536.14
+   },
+   "change": {
+    "Global": -17.99,
+    "Modern": -17.99
    }
   },
   {
    "cycle": 13,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "urisklyerg",
     "name": "Caleb House"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1520.15,
     "Modern": 1499.14
+   },
+   "change": {
+    "Global": 18.01,
+    "Modern": 17.67
    }
   },
   {
    "cycle": 13,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "calmmirror",
     "name": "Samuel Maher"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1721.52,
     "Modern": 1621.8
+   },
+   "change": {
+    "Global": -14.68,
+    "Modern": -16.42
    }
   },
   {
    "cycle": 13,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "sexyhao",
     "name": "SexyHao"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1522.27,
     "Modern": 1519.01
+   },
+   "change": {
+    "Global": 17.99,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "pholtzman",
     "name": "Paul Holtzman"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1452.88,
     "Modern": 1538.05
+   },
+   "change": {
+    "Global": 16.4,
+    "Modern": 18.02
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "6-3-0",
+   "win_rate": {
+    "rate": 66.7,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "46th of 233",
+   "typical_finish": 19.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "6-3-0",
+   "win_rate": {
+    "rate": 66.7,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "46th of 233",
+   "typical_finish": 19.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "41st",
    "field_size": 233,
+   "finish_share": 17.6,
    "record": "6-3-0",
+   "win_rate": {
+    "rate": 66.7,
+    "matches": 9
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1564.35,
+    "Modern": 1557.32
+   },
    "deck": "Mono-Red Ruby Storm",
    "decklist": "https://melee.gg/Decklist/View/18798812-d942-4fa1-990b-b4ec0022f56d"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "smenbith",
     "name": "Smenbith"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "steve-rebbechi",
     "name": "Steve Rebbechi"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1539.17,
     "Modern": 1586.27
+   },
+   "change": {
+    "Global": 18.39,
+    "Modern": 19.24
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "solarion",
     "name": "Scott Aitchison"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1696.27,
     "Modern": 1541.58
+   },
+   "change": {
+    "Global": -15.11,
+    "Modern": -17.92
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "juzza",
     "name": "Justin Cheung"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1711.32,
     "Modern": 1623.35
+   },
+   "change": {
+    "Global": -14.57,
+    "Modern": -16.11
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "dennison",
     "name": "Gabriel Dennison"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1480.07,
     "Modern": 1404.1
+   },
+   "change": {
+    "Global": 17.51,
+    "Modern": 16.2
    }
   },
   {
    "cycle": 13,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "gabrielbartholazzi",
     "name": "GabrielBartholazzi"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1626.24,
     "Modern": 1520.08
+   },
+   "change": {
+    "Global": -16.15,
+    "Modern": -17.99
    }
   },
   {
    "cycle": 13,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "lemonzesty",
     "name": "Magnus Mungo"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1554.62,
     "Modern": 1524.0
+   },
+   "change": {
+    "Global": 18.85,
+    "Modern": 18.41
    }
   },
   {
    "cycle": 13,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "chrischapman",
     "name": "ChrisChapman"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1559.73,
     "Modern": 1554.04
+   },
+   "change": {
+    "Global": 18.6,
+    "Modern": 18.62
    }
   },
   {
    "cycle": 13,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "volcanicpanik",
     "name": "Daniel Yam"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1590.97,
     "Modern": 1585.74
+   },
+   "change": {
+    "Global": 18.83,
+    "Modern": 18.86
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "6-3-0",
+   "win_rate": {
+    "rate": 66.7,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "41st of 233",
+   "typical_finish": 17.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "6-3-0",
+   "win_rate": {
+    "rate": 66.7,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "41st of 233",
+   "typical_finish": 17.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

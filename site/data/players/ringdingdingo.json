@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "42nd",
    "field_size": 156,
+   "finish_share": 26.9,
    "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1539.24,
+    "Pioneer": 1539.52
+   },
    "deck": "Lotus Field Combo",
    "decklist": "https://melee.gg/Decklist/View/6e22379e-43b2-4015-952e-ddaadfbabb18"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 4,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "soul_mtg",
     "name": "David Huang"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1557.89,
     "Pioneer": 1572.9
+   },
+   "change": {
+    "Global": 19.05,
+    "Pioneer": 19.33
    }
   },
   {
    "cycle": 4,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "dallas",
     "name": "Dallas"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1517.48,
     "Pioneer": 1518.6
+   },
+   "change": {
+    "Global": -18.03,
+    "Pioneer": -18.01
    }
   },
   {
    "cycle": 4,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "fuzzywuzzy",
     "name": "Harry Bowden"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1499.76,
     "Pioneer": 1500.08
+   },
+   "change": {
+    "Global": 17.98,
+    "Pioneer": 17.98
    }
   },
   {
    "cycle": 4,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "danb",
     "name": "Dan Bretherton"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1610.16,
     "Pioneer": 1615.35
+   },
+   "change": {
+    "Global": -16.34,
+    "Pioneer": -16.25
    }
   },
   {
    "cycle": 4,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "sam_lewin",
     "name": "Sam_Lewin"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1502.05,
     "Pioneer": 1502.04
+   },
+   "change": {
+    "Global": 17.99,
+    "Pioneer": 17.98
    }
   },
   {
    "cycle": 4,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "hamurai88au",
     "name": "Hamurai88au"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1519.81,
     "Pioneer": 1518.02
+   },
+   "change": {
+    "Global": 17.98,
+    "Pioneer": 17.95
    }
   },
   {
    "cycle": 4,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "isitaboutmycube",
     "name": "Scott Stipkovich"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1573.94,
     "Pioneer": 1573.03
+   },
+   "change": {
+    "Global": 18.64,
+    "Pioneer": 18.62
    }
   },
   {
    "cycle": 4,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "kirblinx",
     "name": "Jamie Schoneveld"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1554.92,
     "Pioneer": 1553.62
+   },
+   "change": {
+    "Global": -18.04,
+    "Pioneer": -18.07
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "42nd of 156",
+   "typical_finish": 26.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "42nd of 156",
+   "typical_finish": 26.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

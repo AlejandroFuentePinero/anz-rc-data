@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "199th",
    "field_size": 212,
+   "finish_share": 93.9,
    "record": "0-1-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 1
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1482.01,
+    "Modern": 1482.98
+   },
    "deck": "Boros Energy",
    "decklist": "https://melee.gg/Decklist/View/8d2a1e50-810f-4624-8fbd-b37d00fa24c2"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 10,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "mtgdirk",
     "name": "MTGDirk"
@@ -30,6 +44,10 @@
    "opponent_rating": {
     "Global": 1500.5,
     "Modern": 1553.7
+   },
+   "change": {
+    "Global": -17.99,
+    "Modern": -17.02
    }
   }
  ],
@@ -54,6 +72,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-1-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 1
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "199th of 212",
+   "typical_finish": 93.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "0-1-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 1
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "199th of 212",
+   "typical_finish": 93.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

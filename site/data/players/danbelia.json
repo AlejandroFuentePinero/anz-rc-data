@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "119th",
    "field_size": 168,
+   "finish_share": 70.8,
    "record": "2-3-0",
+   "win_rate": {
+    "rate": 40.0,
+    "matches": 5
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1483.44,
+    "Standard": 1481.36
+   },
    "deck": "Domain Ramp",
    "decklist": "https://melee.gg/Decklist/View/e513a259-178a-4b63-865f-c69604c78b4d"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 6,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "tibbersau",
     "name": "Malcolm Zegveld"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1594.44,
     "Standard": 1500
+   },
+   "change": {
+    "Global": -16.28,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 6,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "bronson190",
     "name": "NathW"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1505.98,
     "Standard": 1482.0
+   },
+   "change": {
+    "Global": 18.41,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 6,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "tonycultanvil",
     "name": "Tony Dwyer"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1448.19,
     "Standard": 1447.67
+   },
+   "change": {
+    "Global": -18.98,
+    "Standard": -18.95
    }
   },
   {
    "cycle": 6,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "alejandrofp",
     "name": "Alejandro de la Fuente"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1500.88,
     "Standard": 1499.41
+   },
+   "change": {
+    "Global": 18.32,
+    "Standard": 18.34
    }
   },
   {
    "cycle": 6,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "typehastur",
     "name": "TypeHastur"
@@ -90,6 +124,10 @@
    "opponent_rating": {
     "Global": 1500.34,
     "Standard": 1498.45
+   },
+   "change": {
+    "Global": -18.02,
+    "Standard": -18.02
    }
   }
  ],
@@ -114,6 +152,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-3-0",
+   "win_rate": {
+    "rate": 40.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "119th of 168",
+   "typical_finish": 70.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "2-3-0",
+   "win_rate": {
+    "rate": 40.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "119th of 168",
+   "typical_finish": 70.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

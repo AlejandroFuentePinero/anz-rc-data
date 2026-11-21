@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "191st",
    "field_size": 233,
+   "finish_share": 82.0,
    "record": "1-2-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 3
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1482.45,
+    "Modern": 1482.33
+   },
    "deck": "Azorius Blink",
    "decklist": "https://melee.gg/Decklist/View/b4dd4b5e-3c11-4ce5-8569-b4ec0070ce73"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "alabaster",
     "name": "Ian Cormick"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1640.84,
     "Modern": 1536.99
+   },
+   "change": {
+    "Global": -15.45,
+    "Modern": -17.33
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "gyurme",
     "name": "gyurme"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1553.66,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": 19.26,
+    "Modern": 17.99
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "beau_bubbles",
     "name": "Beau_Bubbles"
@@ -60,6 +84,10 @@
    "opponent_rating": {
     "Global": 1317.22,
     "Modern": 1482.2
+   },
+   "change": {
+    "Global": -21.36,
+    "Modern": -18.34
    }
   }
  ],
@@ -84,6 +112,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-2-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "191st of 233",
+   "typical_finish": 82.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "1-2-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "191st of 233",
+   "typical_finish": 82.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

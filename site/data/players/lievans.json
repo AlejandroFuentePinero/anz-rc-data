@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "218th",
    "field_size": 222,
+   "finish_share": 98.2,
    "record": "0-4-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 4
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1429.02,
+    "Standard": 1427.05
+   },
    "deck": "Izzet Prowess",
    "decklist": "https://melee.gg/Decklist/View/50c2b8ca-86f8-4235-9679-b2d80063ad15"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 9,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "strikerace",
     "name": "StrikerAce"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1538.46,
     "Standard": 1500
+   },
+   "change": {
+    "Global": -17.3,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 9,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "avocado",
     "name": "San Dro"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1502.53,
     "Standard": 1428.37
+   },
+   "change": {
+    "Global": -17.64,
+    "Standard": -18.98
    }
   },
   {
    "cycle": 9,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "parasisnotcool",
     "name": "parasisnotcool"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1463.42,
     "Standard": 1463.97
+   },
+   "change": {
+    "Global": -18.03,
+    "Standard": -17.98
    }
   },
   {
    "cycle": 9,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "unrestrained",
     "name": "Daniel Szwed"
@@ -75,6 +104,10 @@
    "opponent_rating": {
     "Global": 1446.54,
     "Standard": 1445.67
+   },
+   "change": {
+    "Global": -18.01,
+    "Standard": -17.99
    }
   }
  ],
@@ -99,6 +132,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-4-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 4
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "218th of 222",
+   "typical_finish": 98.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "0-4-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 4
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "218th of 222",
+   "typical_finish": 98.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

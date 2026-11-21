@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "174th",
    "field_size": 228,
+   "finish_share": 76.3,
    "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1463.37,
+    "Modern": 1464.0
+   },
    "deck": "Rakdos Scam",
    "decklist": "https://melee.gg/Decklist/View/61e6e1a1-5ebe-4dab-8661-9222e366e614"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 5,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "bianca",
     "name": "Bianca"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "jinavie",
     "name": "Jin Kim"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1518.0,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": -18.0,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "steve-rebbechi",
     "name": "Steve Rebbechi"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1449.81,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": -18.91,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "wft",
     "name": "Benjamin Twemlow"
@@ -75,6 +104,10 @@
    "opponent_rating": {
     "Global": 1496.57,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -17.72,
+    "Modern": -18.0
    }
   }
  ],
@@ -99,6 +132,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "174th of 228",
+   "typical_finish": 76.3,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "174th of 228",
+   "typical_finish": 76.3,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

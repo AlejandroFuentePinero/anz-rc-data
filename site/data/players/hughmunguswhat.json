@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "203rd",
    "field_size": 222,
+   "finish_share": 91.4,
    "record": "0-2-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 2
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1462.63,
+    "Standard": 1464.58
+   },
    "deck": "Azorius Control",
    "decklist": "https://melee.gg/Decklist/View/1f65ec3f-7ed3-48e3-8399-b2d8006cb5ec"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 9,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "ashbrown",
     "name": "Hanbin Zhou"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1565.92,
     "Standard": 1536.77
+   },
+   "change": {
+    "Global": -16.8,
+    "Standard": -17.33
    }
   },
   {
    "cycle": 9,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "dazza824",
     "name": "Daniel Zhao"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1452.28,
     "Standard": 1527.69
+   },
+   "change": {
+    "Global": -0.56,
+    "Standard": 0.82
    }
   },
   {
    "cycle": 9,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "chuckasickie",
     "name": "Jacob Harvey"
@@ -60,6 +84,10 @@
    "opponent_rating": {
     "Global": 1372.21,
     "Standard": 1433.6
+   },
+   "change": {
+    "Global": -20.01,
+    "Standard": -18.91
    }
   }
  ],
@@ -84,6 +112,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-2-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 2
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "203rd of 222",
+   "typical_finish": 91.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "0-2-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 2
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "203rd of 222",
+   "typical_finish": 91.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

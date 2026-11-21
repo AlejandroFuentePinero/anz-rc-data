@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "112th",
    "field_size": 222,
+   "finish_share": 50.5,
    "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1473.7,
+    "Standard": 1463.94
+   },
    "deck": "Zur Overlords",
    "decklist": "https://melee.gg/Decklist/View/9d942126-9e41-4e37-bcc8-b2c500a284ae"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 9,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "kierantierney",
     "name": "Kieran Tierney"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1686.16,
     "Standard": 1500.65
+   },
+   "change": {
+    "Global": 21.36,
+    "Standard": 18.01
    }
   },
   {
    "cycle": 9,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "craig",
     "name": "Craig sweetman"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1418.06,
     "Standard": 1518.0
+   },
+   "change": {
+    "Global": 16.12,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 9,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "fairjordans",
     "name": "Dylan Brown"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1583.73,
     "Standard": 1536.0
+   },
+   "change": {
+    "Global": -17.16,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 9,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "swiftclaw",
     "name": "James Arthur"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1745.88,
     "Standard": 1564.88
+   },
+   "change": {
+    "Global": -13.95,
+    "Standard": -17.15
    }
   },
   {
    "cycle": 9,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "danso",
     "name": "Brett Girvan"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1620.12,
     "Standard": 1434.81
+   },
+   "change": {
+    "Global": -15.93,
+    "Standard": -19.2
    }
   },
   {
    "cycle": 9,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "mcfish",
     "name": "Joel McAndrew"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1433.67,
     "Standard": 1418.14
+   },
+   "change": {
+    "Global": 16.97,
+    "Standard": 16.84
    }
   },
   {
    "cycle": 9,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "hazzrd",
     "name": "RIley Jones"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1617.96,
     "Standard": 1592.38
+   },
+   "change": {
+    "Global": -15.99,
+    "Standard": -16.29
    }
   },
   {
    "cycle": 9,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "volcanicpanik",
     "name": "Daniel Yam"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1507.6,
     "Standard": 1467.19
+   },
+   "change": {
+    "Global": -17.7,
+    "Standard": -18.27
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "112th of 222",
+   "typical_finish": 50.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "112th of 222",
+   "typical_finish": 50.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

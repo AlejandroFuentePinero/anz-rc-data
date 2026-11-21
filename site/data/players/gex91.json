@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "113th",
    "field_size": 228,
+   "finish_share": 49.6,
    "record": "3-4-1",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1485.63,
+    "Modern": 1482.0
+   },
    "deck": "Hardened Scales",
    "decklist": "https://melee.gg/Decklist/View/42602daf-0599-4682-8d1e-c981f4df82bb"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 5,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "pingu",
     "name": "Ben Parker"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "lillia",
     "name": "Brennan Crawford"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1683.12,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": -15.02,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "kate_two",
     "name": "Kate Chelberg"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1547.23,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": 18.81,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "buiqs",
     "name": "Buiqs"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1519.12,
     "Modern": 1517.99
+   },
+   "change": {
+    "Global": 17.95,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "milkywhitejustice",
     "name": "Robert Lark"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1507.88,
     "Modern": 1536.0
+   },
+   "change": {
+    "Global": -18.58,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "pot_of_greed",
     "name": "Pot_of_Greed"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1516.57,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": -18.08,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "dallas",
     "name": "Dallas"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1504.82,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": -17.97,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "yangjinhao",
     "name": "Jinhao Yang"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1513.86,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": 0.52,
+    "Modern": 0.0
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-4-1",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "113th of 228",
+   "typical_finish": 49.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "3-4-1",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "113th of 228",
+   "typical_finish": 49.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

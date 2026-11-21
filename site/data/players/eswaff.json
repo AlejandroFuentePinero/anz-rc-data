@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "108th",
    "field_size": 188,
+   "finish_share": 57.4,
    "record": "3-2-0",
+   "win_rate": {
+    "rate": 60.0,
+    "matches": 5
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1516.4,
+    "Standard": 1518.82
+   },
    "deck": "Mono-Green Landfall",
    "decklist": "https://melee.gg/Decklist/View/728c62a6-77ef-4ca3-b702-b452007c12f0"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 12,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "carps",
     "name": "Samuel Carpenter"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1549.2,
     "Standard": 1590.56
+   },
+   "change": {
+    "Global": -17.1,
+    "Standard": -16.35
    }
   },
   {
    "cycle": 12,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "alecf",
     "name": "Alecf"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1448.9,
     "Standard": 1484.02
+   },
+   "change": {
+    "Global": 17.38,
+    "Standard": 18.01
    }
   },
   {
    "cycle": 12,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "pmanser",
     "name": "Paul Manser"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1498.27,
     "Standard": 1498.2
+   },
+   "change": {
+    "Global": 17.96,
+    "Standard": 17.94
    }
   },
   {
    "cycle": 12,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "joshpedley",
     "name": "JoshPedley"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1469.0,
     "Standard": 1527.89
+   },
+   "change": {
+    "Global": 17.1,
+    "Standard": 18.15
    }
   },
   {
    "cycle": 12,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "thokk",
     "name": "Ethan Taylor"
@@ -90,6 +124,10 @@
    "opponent_rating": {
     "Global": 1483.86,
     "Standard": 1487.09
+   },
+   "change": {
+    "Global": -18.94,
+    "Standard": -18.92
    }
   }
  ],
@@ -114,6 +152,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-2-0",
+   "win_rate": {
+    "rate": 60.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "108th of 188",
+   "typical_finish": 57.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "3-2-0",
+   "win_rate": {
+    "rate": 60.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "108th of 188",
+   "typical_finish": 57.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

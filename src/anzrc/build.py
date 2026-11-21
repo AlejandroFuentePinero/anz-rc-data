@@ -2,6 +2,7 @@
 
 import json
 import shutil
+import statistics
 from pathlib import Path
 
 from anzrc import identity, ratings, rcs
@@ -27,6 +28,13 @@ def _finish(rank: int | None) -> str | None:
         return {1: "Title", 2: "Finalist", 3: "Top 4", 4: "Top 4"}.get(rank, "Top 8")
     suffix = "th" if rank % 100 in (11, 12, 13) else {1: "st", 2: "nd", 3: "rd"}.get(rank % 10, "th")
     return f"{rank}{suffix}"
+
+
+def _finish_share(rank: int | None, field_size: int) -> float | None:
+    """A Finish as a share of the Field Size, the Top 4 and Top 8 tiers counted at their midpoints 3.5 and 6.5."""
+    if rank is None:
+        return None
+    return round(100 * {3: 3.5, 4: 3.5}.get(rank, 6.5 if 5 <= rank <= 8 else rank) / field_size, 1)
 
 
 # W-L-D counts every draw, Intentional Draws included; a Match not played is in no record.
@@ -75,7 +83,8 @@ def _sides(match: dict, where: str, late_round: bool, curated_draw: bool) -> lis
 
 
 PLAYOFF_ROUNDS = ["Quarterfinal", "Semifinal", "Final"]
-TOP_8 = {"Title", "Finalist", "Top 4", "Top 8"}
+TIERS = ["Title", "Finalist", "Top 4", "Top 8"]  # the Top 8's Finishes, best first
+TOP_8 = set(TIERS)
 
 
 # Seeding from the end-of-Swiss standings, 1 v 8 and so on, the winners meeting in this order. Every complete bracket follows it.
@@ -172,6 +181,9 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
         rc_players = {_username(row): {"entry": row, "rank": row["Rank"], "decklists": row["Decklists"]} for row in standings}
         records = {}
         format_view = ratings.rated_by(rc["format"])
+        # The views this RC shows, Global and its Format, each read from the Ratings that Format shows.
+        view_sources = (("Global", "Global"), (rc["format"], format_view))
+        at_start = {source: dict(views.get(source, {})) for _, source in view_sources}
         history.append({"cycle": rc["cycle"], "format": rc["format"], "rounds": []})
         swiss = [round_["name"] for round_ in rc["rounds"] if round_["name"].startswith("Round")]
         for round_ in rc["rounds"]:
@@ -189,18 +201,28 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
                     opponent = card(them) if them else None
                     # The opponent's Ratings as the round started, in Global and in the RC's Format as its card shows them.
                     opponent_rating = opponent and {
-                        view: round(views.get(source, {}).get(opponent["slug"], ratings.START), 2)
-                        for view, source in (("Global", "Global"), (rc["format"], format_view))
+                        view: round(views.get(source, {}).get(opponent["slug"], ratings.START), 2) for view, source in view_sources
                     }
+                    # A Player plays once a round and Ratings move at its end, so this is what the Match moves.
+                    change = result in SCORE and {
+                        view: round(ratings.move(
+                            views.get(source, {}).get(card(me)["slug"], ratings.START),
+                            views.get(source, {}).get(opponent["slug"], ratings.START),
+                            SCORE[result],
+                        ), 2)
+                        for view, source in view_sources
+                    } or None
                     card(me)["matches"].append(
                         {
                             "cycle": rc["cycle"],
                             "round": round_["name"],
+                            "playoff": round_["name"] in PLAYOFF_ROUNDS,
                             "opponent": opponent and {"slug": opponent["slug"], "name": opponent["name"]},
                             "result": result,
                             "games": games,
                             "reconstructed": match.get("Reconstructed", False),
                             "opponent_rating": opponent_rating,
+                            "change": change,
                         }
                     )
                     if result in RECORD:
@@ -216,6 +238,8 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
                 after_rc.setdefault(view, {}).setdefault(slug, []).append({"cycle": rc["cycle"], "rating": rating})
         for username, rc_player in rc_players.items():
             deck = rc_player["decklists"][0] if rc_player["decklists"] else None
+            slug = card(rc_player["entry"])["slug"]
+            wins, losses, _ = records.get(username, [0, 0, 0])
             card(rc_player["entry"])["rcs"].append(
                 {
                     "cycle": rc["cycle"],
@@ -223,7 +247,11 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
                     "format": rc["format"],
                     "finish": _finish(rc_player["rank"]),
                     "field_size": len(standings),
+                    "finish_share": _finish_share(rc_player["rank"], len(standings)),
                     "record": "-".join(map(str, records.get(username, [0, 0, 0]))),
+                    "win_rate": _win_rate(wins, losses),
+                    "rating_start": {view: round(at_start[source].get(slug, ratings.START), 2) for view, source in view_sources},
+                    "rating_end": {view: round(views[source].get(slug, ratings.START), 2) for view, source in view_sources},
                     "deck": deck and deck["DecklistName"],
                     "decklist": deck and f"https://melee.gg/Decklist/View/{deck['DecklistId']}",
                 }
@@ -244,7 +272,56 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
         player["ratings"] = {"Global": view_rating("Global")}
         for format_ in dict.fromkeys(rc["format"] for rc in player["rcs"]):
             player["ratings"][format_] = view_rating(ratings.rated_by(format_)) | {"rated_by": ratings.rated_by(format_)}
+        player["summary"] = {view: _summary(player, view) for view in player["ratings"]}
+    _rank(cards)
     return rc_rows, cards, history
+
+
+def _win_rate(wins: int, losses: int) -> dict:
+    """Wins over wins plus losses, with that count as the sample: draws are in neither."""
+    return {"rate": round(100 * wins / (wins + losses), 1) if wins + losses else None, "matches": wins + losses}
+
+
+def _summary(player: dict, view: str) -> dict:
+    """A Player's results in one view: Global, or one Format's RCs and Matches only."""
+    rcs_ = [rc for rc in player["rcs"] if view in ("Global", rc["format"])]
+    cycles = {rc["cycle"] for rc in rcs_}
+    record = [0, 0, 0]
+    for match in player["matches"]:
+        if match["cycle"] in cycles and match["result"] in RECORD:
+            record[RECORD[match["result"]]] += 1
+    wins, losses = record[0], record[1]
+    finished = [rc for rc in rcs_ if rc["finish"] is not None]
+    # Best Finish: the Top 8 tiers in order first, then the best share of the field.
+    best = min(finished, key=lambda rc: (TIERS.index(rc["finish"]) if rc["finish"] in TOP_8 else len(TIERS), rc["finish_share"]), default=None)
+    top_8s = sum(rc["finish"] in TOP_8 for rc in rcs_)
+    return {
+        "record": "-".join(map(str, record)),
+        "win_rate": _win_rate(wins, losses),
+        "rcs": len(rcs_),
+        "top_8s": top_8s,
+        "titles": sum(rc["finish"] == "Title" for rc in rcs_),
+        "best_finish": best and (best["finish"] if best["finish"] in TOP_8 else f"{best['finish']} of {best['field_size']}"),
+        "typical_finish": round(statistics.median(rc["finish_share"] for rc in finished), 1) if finished else None,
+        "top_8_rate": round(100 * top_8s / len(rcs_), 1),
+    }
+
+
+def _rank(cards: dict[str, dict]) -> None:
+    """Each Player's rank in every view they are eligible in (the cutoff's RCs or more), and the share of eligible
+    Players rated below them; an ineligible Player gets how many RCs they still need."""
+    for view in {view for player in cards.values() for view in player["summary"]}:
+        in_view = [player for player in cards.values() if view in player["summary"]]
+        eligible = [player["ratings"][view]["rating"] for player in in_view if player["summary"][view]["rcs"] >= ratings.CUTOFF]
+        for player in in_view:
+            summary = player["summary"][view]
+            if summary["rcs"] >= ratings.CUTOFF:
+                mine = player["ratings"][view]["rating"]
+                summary["rank"] = 1 + sum(other > mine for other in eligible)
+                summary["above"] = round(100 * sum(other < mine for other in eligible) / len(eligible), 1)
+                summary["rcs_needed"] = None
+            else:
+                summary |= {"rank": None, "above": None, "rcs_needed": ratings.CUTOFF - summary["rcs"]}
 
 
 def build(raw: Path, rc_list: Path, curation: Path, out: Path) -> None:

@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "84th",
    "field_size": 180,
+   "finish_share": 46.7,
    "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1502.43,
+    "Pioneer": 1501.16
+   },
    "deck": "Mono-White Humans",
    "decklist": "https://melee.gg/Decklist/View/cd7637c7-7c22-4c38-9913-0249b47d9afa"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 3,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "mikeym",
     "name": "MikeyM"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Pioneer": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 3,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "ganksyou",
     "name": "Michael Russell"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1589.02,
     "Pioneer": 1589.02
+   },
+   "change": {
+    "Global": -16.71,
+    "Pioneer": -16.71
    }
   },
   {
    "cycle": 3,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "blazedugin",
     "name": "Saher Khalil"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1469.09,
     "Pioneer": 1464.67
+   },
+   "change": {
+    "Global": -18.59,
+    "Pioneer": -18.67
    }
   },
   {
    "cycle": 3,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "dazza824",
     "name": "Daniel Zhao"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1534.93,
     "Pioneer": 1482.01
+   },
+   "change": {
+    "Global": -17.05,
+    "Pioneer": -18.01
    }
   },
   {
    "cycle": 3,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "escher_vi",
     "name": "Escher Webster"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1466.78,
     "Pioneer": 1465.23
+   },
+   "change": {
+    "Global": 18.02,
+    "Pioneer": 18.01
    }
   },
   {
    "cycle": 3,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "kirblinx",
     "name": "Jamie Schoneveld"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1480.79,
     "Pioneer": 1480.8
+   },
+   "change": {
+    "Global": -18.05,
+    "Pioneer": -18.03
    }
   },
   {
    "cycle": 3,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "damienhookway",
     "name": "Damien Hookway"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1465.37,
     "Pioneer": 1463.41
+   },
+   "change": {
+    "Global": 18.0,
+    "Pioneer": 17.98
    }
   },
   {
    "cycle": 3,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "mindcandy",
     "name": "mindcandy"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1528.03,
     "Pioneer": 1515.14
+   },
+   "change": {
+    "Global": 18.81,
+    "Pioneer": 18.59
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "84th of 180",
+   "typical_finish": 46.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "84th of 180",
+   "typical_finish": 46.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

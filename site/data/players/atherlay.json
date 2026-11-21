@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "162nd",
    "field_size": 188,
+   "finish_share": 86.2,
    "record": "1-6-0",
+   "win_rate": {
+    "rate": 14.3,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1411.96,
+    "Standard": 1410.98
+   },
    "deck": "Sultai Reanimator",
    "decklist": "https://melee.gg/Decklist/View/990520d9-b29d-41e6-b1a3-b451004a6335"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 12,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "mindcandy",
     "name": "mindcandy"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1563.48,
     "Standard": 1551.92
+   },
+   "change": {
+    "Global": -16.84,
+    "Standard": -17.05
    }
   },
   {
    "cycle": 12,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "nranyone",
     "name": "ivan sanche"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1536.32,
     "Standard": 1463.65
+   },
+   "change": {
+    "Global": -17.03,
+    "Standard": -18.35
    }
   },
   {
    "cycle": 12,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "rowanmillers",
     "name": "Rowan Millers"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1513.8,
     "Standard": 1535.28
+   },
+   "change": {
+    "Global": -17.13,
+    "Standard": -16.71
    }
   },
   {
    "cycle": 12,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "waterygraves",
     "name": "waterygraves"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1415.13,
     "Standard": 1403.61
+   },
+   "change": {
+    "Global": 17.38,
+    "Standard": 17.19
    }
   },
   {
    "cycle": 12,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "tonyjones22",
     "name": "antoine nguyen"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1502.53,
     "Standard": 1471.0
+   },
+   "change": {
+    "Global": -17.34,
+    "Standard": -17.89
    }
   },
   {
    "cycle": 12,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "10kquinn",
     "name": "10kquinn"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1405.4,
     "Standard": 1453.05
+   },
+   "change": {
+    "Global": -18.8,
+    "Standard": -17.89
    }
   },
   {
    "cycle": 12,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "ethanwillmot",
     "name": "EthanWillmot"
@@ -120,6 +164,10 @@
    "opponent_rating": {
     "Global": 1414.68,
     "Standard": 1412.16
+   },
+   "change": {
+    "Global": -18.28,
+    "Standard": -18.31
    }
   }
  ],
@@ -144,6 +192,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-6-0",
+   "win_rate": {
+    "rate": 14.3,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "162nd of 188",
+   "typical_finish": 86.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "1-6-0",
+   "win_rate": {
+    "rate": 14.3,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "162nd of 188",
+   "typical_finish": 86.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

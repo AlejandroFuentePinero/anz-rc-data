@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "145th",
    "field_size": 188,
+   "finish_share": 77.1,
    "record": "0-6-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 6
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1394.94,
+    "Standard": 1395.12
+   },
    "deck": "Temur Otters",
    "decklist": "https://melee.gg/Decklist/View/b4a1343f-20d7-45c6-86ce-b45100aee873"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 12,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "jamzone_",
     "name": "JAMzone_"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1466.38,
     "Standard": 1431.08
+   },
+   "change": {
+    "Global": -18.61,
+    "Standard": -19.26
    }
   },
   {
    "cycle": 12,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "mitchsetter",
     "name": "MitchSetter"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1479.62,
     "Standard": 1480.69
+   },
+   "change": {
+    "Global": -18.03,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 12,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "tonyjones22",
     "name": "antoine nguyen"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1498.25,
     "Standard": 1466.42
+   },
+   "change": {
+    "Global": -17.36,
+    "Standard": -17.93
    }
   },
   {
    "cycle": 12,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "zeroix7",
     "name": "William Jettner"
@@ -75,20 +104,27 @@
    "opponent_rating": {
     "Global": 1420.38,
     "Standard": 1450.25
+   },
+   "change": {
+    "Global": -0.47,
+    "Standard": 0.1
    }
   },
   {
    "cycle": 12,
    "round": "Round 5",
+   "playoff": false,
    "opponent": null,
    "result": "Bye",
    "games": null,
    "reconstructed": false,
-   "opponent_rating": null
+   "opponent_rating": null,
+   "change": null
   },
   {
    "cycle": 12,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "mike03yap",
     "name": "Joe Michael Caragan"
@@ -99,11 +135,16 @@
    "opponent_rating": {
     "Global": 1363.94,
     "Standard": 1421.69
+   },
+   "change": {
+    "Global": -19.49,
+    "Standard": -18.42
    }
   },
   {
    "cycle": 12,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "rowanmillers",
     "name": "Rowan Millers"
@@ -114,11 +155,16 @@
    "opponent_rating": {
     "Global": 1511.67,
     "Standard": 1531.98
+   },
+   "change": {
+    "Global": -16.44,
+    "Standard": -16.08
    }
   },
   {
    "cycle": 12,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "pingu",
     "name": "Ben Parker"
@@ -129,6 +175,10 @@
    "opponent_rating": {
     "Global": 1594.86,
     "Standard": 1560.64
+   },
+   "change": {
+    "Global": -14.66,
+    "Standard": -15.28
    }
   }
  ],
@@ -153,6 +203,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-6-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "145th of 188",
+   "typical_finish": 77.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "0-6-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "145th of 188",
+   "typical_finish": 77.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

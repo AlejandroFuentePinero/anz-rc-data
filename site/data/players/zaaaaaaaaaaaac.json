@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "105th",
    "field_size": 212,
+   "finish_share": 49.5,
    "record": "3-2-1",
+   "win_rate": {
+    "rate": 60.0,
+    "matches": 5
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1520.64,
+    "Modern": 1519.63
+   },
    "deck": "Esper Blink",
    "decklist": "https://melee.gg/Decklist/View/345bb9ce-708e-4df7-9226-b3800071eb58"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 10,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "floptic",
     "name": "Ben Kleinsman-Leusink-Hill"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1553.93,
     "Modern": 1540.31
+   },
+   "change": {
+    "Global": -17.02,
+    "Modern": -17.26
    }
   },
   {
    "cycle": 10,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "nynjaturtle",
     "name": "Ryan Jonns Lewis"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1466.98,
     "Modern": 1472.13
+   },
+   "change": {
+    "Global": 17.71,
+    "Modern": 17.81
    }
   },
   {
    "cycle": 10,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "garyjohnson1",
     "name": "GaryJohnson1"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1562.76,
     "Modern": 1500.64
+   },
+   "change": {
+    "Global": 1.13,
+    "Modern": 0.0
    }
   },
   {
    "cycle": 10,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "jinavie",
     "name": "Jin Kim"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1586.84,
     "Modern": 1585.17
+   },
+   "change": {
+    "Global": -16.45,
+    "Modern": -16.46
    }
   },
   {
    "cycle": 10,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "samird",
     "name": "SamirD"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1464.23,
     "Modern": 1480.49
+   },
+   "change": {
+    "Global": 17.61,
+    "Modern": 17.93
    }
   },
   {
    "cycle": 10,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "jacquesmcmaster",
     "name": "JacquesMcMaster"
@@ -105,6 +144,10 @@
    "opponent_rating": {
     "Global": 1484.15,
     "Modern": 1480.47
+   },
+   "change": {
+    "Global": 17.66,
+    "Modern": 17.61
    }
   }
  ],
@@ -129,6 +172,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-2-1",
+   "win_rate": {
+    "rate": 60.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "105th of 212",
+   "typical_finish": 49.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "3-2-1",
+   "win_rate": {
+    "rate": 60.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "105th of 212",
+   "typical_finish": 49.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "157th",
    "field_size": 180,
+   "finish_share": 87.2,
    "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1463.95,
+    "Pioneer": 1464.01
+   },
    "deck": "Azorius Lotus Field",
    "decklist": "https://melee.gg/Decklist/View/87294add-530a-4bb1-a667-ae0ab55cecb0"
   },
@@ -21,7 +34,20 @@
    "format": "Modern",
    "finish": "201st",
    "field_size": 228,
+   "finish_share": 88.2,
    "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rating_start": {
+    "Global": 1463.95,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1428.47,
+    "Modern": 1464.0
+   },
    "deck": "Amulet Titan",
    "decklist": "https://melee.gg/Decklist/View/3d67d1c5-5151-45cd-a31d-8e1f852b704f"
   }
@@ -30,6 +56,7 @@
   {
    "cycle": 3,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "joshh",
     "name": "JoshH"
@@ -40,11 +67,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Pioneer": 1500
+   },
+   "change": {
+    "Global": -18.0,
+    "Pioneer": -18.0
    }
   },
   {
    "cycle": 3,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "hrmmmm",
     "name": "William Kong"
@@ -55,11 +87,16 @@
    "opponent_rating": {
     "Global": 1482.38,
     "Pioneer": 1481.67
+   },
+   "change": {
+    "Global": 18.01,
+    "Pioneer": 17.99
    }
   },
   {
    "cycle": 3,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "andyv",
     "name": "Andrew Virgona"
@@ -70,11 +107,16 @@
    "opponent_rating": {
     "Global": 1498.08,
     "Pioneer": 1500.64
+   },
+   "change": {
+    "Global": -18.04,
+    "Pioneer": -17.99
    }
   },
   {
    "cycle": 3,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "savvykavvy",
     "name": "SavvyKavvy"
@@ -85,11 +127,16 @@
    "opponent_rating": {
     "Global": 1480.78,
     "Pioneer": 1482.01
+   },
+   "change": {
+    "Global": -18.02,
+    "Pioneer": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "danjozlec",
     "name": "Danjozlec"
@@ -100,11 +147,16 @@
    "opponent_rating": {
     "Global": 1450.76,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -18.24,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "jeffrey_blancia_inveritas_",
     "name": "Jeffrey Blancia"
@@ -115,11 +167,16 @@
    "opponent_rating": {
     "Global": 1466.49,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -17.62,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "gabrielk",
     "name": "GabrielK"
@@ -130,11 +187,16 @@
    "opponent_rating": {
     "Global": 1465.34,
     "Modern": 1464.0
+   },
+   "change": {
+    "Global": -17.32,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "samcosmo",
     "name": "Samuel Taubman"
@@ -145,6 +207,10 @@
    "opponent_rating": {
     "Global": 1394.59,
     "Modern": 1446.0
+   },
+   "change": {
+    "Global": 17.7,
+    "Modern": 18.0
    }
   }
  ],
@@ -184,6 +250,56 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-6-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 8
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "157th of 180",
+   "typical_finish": 87.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
+  },
+  "Pioneer": {
+   "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "157th of 180",
+   "typical_finish": 87.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "201st of 228",
+   "typical_finish": 88.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

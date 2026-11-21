@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "117th",
    "field_size": 152,
+   "finish_share": 77.0,
    "record": "2-5-0",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1445.68,
+    "Pioneer": 1445.68
+   },
    "deck": "Izzet Phoenix",
    "decklist": "https://melee.gg/Decklist/View/68199b8a-4cce-40da-a88f-414ef25d20a8"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 1,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "chrisbenoit",
     "name": "Marcus Wheeler"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Pioneer": 1500
+   },
+   "change": {
+    "Global": -18.0,
+    "Pioneer": -18.0
    }
   },
   {
    "cycle": 1,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "joezheng",
     "name": "Jingwei Zheng"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1482.0,
     "Pioneer": 1482.0
+   },
+   "change": {
+    "Global": -18.0,
+    "Pioneer": -18.0
    }
   },
   {
    "cycle": 1,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "pholtzman",
     "name": "Paul Holtzman"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1464.0,
     "Pioneer": 1464.0
+   },
+   "change": {
+    "Global": -18.0,
+    "Pioneer": -18.0
    }
   },
   {
    "cycle": 1,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "fvd",
     "name": "Francis Dwyer"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1446.0,
     "Pioneer": 1446.0
+   },
+   "change": {
+    "Global": 18.0,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 1,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "chuckasickie",
     "name": "Jacob Harvey"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1446.0,
     "Pioneer": 1446.0
+   },
+   "change": {
+    "Global": -18.33,
+    "Pioneer": -18.33
    }
   },
   {
    "cycle": 1,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "scholian",
     "name": "Nick Bate"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1446.0,
     "Pioneer": 1446.0
+   },
+   "change": {
+    "Global": 18.01,
+    "Pioneer": 18.01
    }
   },
   {
    "cycle": 1,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "spiderbyte12",
     "name": "Michael Billinghurst"
@@ -120,6 +164,10 @@
    "opponent_rating": {
     "Global": 1463.68,
     "Pioneer": 1463.68
+   },
+   "change": {
+    "Global": -18.0,
+    "Pioneer": -18.0
    }
   }
  ],
@@ -144,6 +192,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-5-0",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "117th of 152",
+   "typical_finish": 77.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "2-5-0",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "117th of 152",
+   "typical_finish": 77.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "163rd",
    "field_size": 180,
+   "finish_share": 90.6,
    "record": "0-3-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1447.59,
+    "Pioneer": 1447.59
+   },
    "deck": "Gruul Vehicles",
    "decklist": "https://melee.gg/Decklist/View/6453e4b8-a92f-4573-9a76-72ba60e30dbb"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 3,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "tastycheez",
     "name": "Nicholas Turner"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1572.0,
     "Pioneer": 1572.0
+   },
+   "change": {
+    "Global": 1.31,
+    "Pioneer": 1.31
    }
   },
   {
    "cycle": 3,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "thebetterpierce",
     "name": "Pierce Tattersall"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1500.0,
     "Pioneer": 1500.0
+   },
+   "change": {
+    "Global": -18.02,
+    "Pioneer": -18.02
    }
   },
   {
    "cycle": 3,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "charr",
     "name": "Jacques vanEeden"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1483.21,
     "Pioneer": 1482.97
+   },
+   "change": {
+    "Global": -18.0,
+    "Pioneer": -18.01
    }
   },
   {
    "cycle": 3,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "miaatcheson",
     "name": "Mia Atcheson"
@@ -75,6 +104,10 @@
    "opponent_rating": {
     "Global": 1482.02,
     "Pioneer": 1482.02
+   },
+   "change": {
+    "Global": -17.69,
+    "Pioneer": -17.69
    }
   }
  ],
@@ -99,6 +132,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-3-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "163rd of 180",
+   "typical_finish": 90.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "0-3-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "163rd of 180",
+   "typical_finish": 90.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

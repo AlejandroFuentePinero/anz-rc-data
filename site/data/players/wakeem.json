@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "114th",
    "field_size": 233,
+   "finish_share": 48.9,
    "record": "3-3-1",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 6
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1504.14,
+    "Modern": 1504.7
+   },
    "deck": "W-U-B-G Goryo's",
    "decklist": "https://melee.gg/Decklist/View/0fead3e6-215d-4a6d-a26a-b4e0006b1805"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "christong0203",
     "name": "Christopher Tong"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1675.25,
     "Modern": 1686.06
+   },
+   "change": {
+    "Global": -14.84,
+    "Modern": -14.64
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "quinci",
     "name": "Quinci Cohen"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1422.79,
     "Modern": 1484.15
+   },
+   "change": {
+    "Global": 16.86,
+    "Modern": 17.98
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "rovilleson",
     "name": "Rovilleson Lucero"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1496.39,
     "Modern": 1500.02
+   },
+   "change": {
+    "Global": 17.9,
+    "Modern": 17.94
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "lavaridge",
     "name": "James Larsen-Scott"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1662.36,
     "Modern": 1622.04
+   },
+   "change": {
+    "Global": 2.58,
+    "Modern": 1.83
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "adamjaz",
     "name": "AdamJaz"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1576.53,
     "Modern": 1577.01
+   },
+   "change": {
+    "Global": -17.02,
+    "Modern": -17.02
    }
   },
   {
    "cycle": 13,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "jockjohnson",
     "name": "Joel James"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1499.76,
     "Modern": 1499.11
+   },
+   "change": {
+    "Global": 17.9,
+    "Modern": 17.87
    }
   },
   {
    "cycle": 13,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "josharcher",
     "name": "Josharcher"
@@ -120,6 +164,10 @@
    "opponent_rating": {
     "Global": 1454.95,
     "Modern": 1454.77
+   },
+   "change": {
+    "Global": -19.25,
+    "Modern": -19.26
    }
   }
  ],
@@ -144,6 +192,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-3-1",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "114th of 233",
+   "typical_finish": 48.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "3-3-1",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "114th of 233",
+   "typical_finish": 48.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

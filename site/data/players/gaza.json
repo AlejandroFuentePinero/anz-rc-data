@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "33rd",
    "field_size": 180,
+   "finish_share": 18.3,
    "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1536.81,
+    "Pioneer": 1534.32
+   },
    "deck": "Abzan Greasefang",
    "decklist": "https://melee.gg/Decklist/View/9b4eda57-31dd-48fc-9a4f-ce616bbc5265"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 3,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "chiawhey",
     "name": "Chia Wei Leong"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1539.19,
     "Pioneer": 1500
+   },
+   "change": {
+    "Global": 18.71,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 3,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "willows",
     "name": "WillowMoon99"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1518.0,
     "Pioneer": 1518.0
+   },
+   "change": {
+    "Global": -18.01,
+    "Pioneer": -18.0
    }
   },
   {
    "cycle": 3,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "regularwilde",
     "name": "James Laurenson"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1412.9,
     "Pioneer": 1412.9
+   },
+   "change": {
+    "Global": 16.4,
+    "Pioneer": 16.41
    }
   },
   {
    "cycle": 3,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "andyv",
     "name": "Andrew Virgona"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1516.11,
     "Pioneer": 1518.63
+   },
+   "change": {
+    "Global": 17.98,
+    "Pioneer": 18.04
    }
   },
   {
    "cycle": 3,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "benjaminhipwell",
     "name": "BenjaminHipwell"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1535.3,
     "Pioneer": 1534.76
+   },
+   "change": {
+    "Global": -18.0,
+    "Pioneer": -17.99
    }
   },
   {
    "cycle": 3,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "vaxielkai",
     "name": "VaxielKai"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1521.29,
     "Pioneer": 1520.51
+   },
+   "change": {
+    "Global": 18.08,
+    "Pioneer": 18.07
    }
   },
   {
    "cycle": 3,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "penchair",
     "name": "Calvin Liu"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1585.27,
     "Pioneer": 1552.07
+   },
+   "change": {
+    "Global": -17.09,
+    "Pioneer": -17.68
    }
   },
   {
    "cycle": 3,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "floptic",
     "name": "Ben Kleinsman-Leusink-Hill"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1558.06,
     "Pioneer": 1487.56
+   },
+   "change": {
+    "Global": 18.73,
+    "Pioneer": 17.47
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "33rd of 180",
+   "typical_finish": 18.3,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "33rd of 180",
+   "typical_finish": 18.3,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "92nd",
    "field_size": 188,
+   "finish_share": 48.9,
    "record": "3-4-0",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1490.91,
+    "Standard": 1483.16
+   },
    "deck": "Dimir",
    "decklist": "https://melee.gg/Decklist/View/fd4f1cfc-a23b-4ef5-9102-b4520065f538"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 12,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "billskillz",
     "name": "Billskillz"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1608.01,
     "Standard": 1536.8
+   },
+   "change": {
+    "Global": 19.96,
+    "Standard": 18.67
    }
   },
   {
    "cycle": 12,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "shannonyo",
     "name": "Shannon Dann"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1463.36,
     "Standard": 1448.66
+   },
+   "change": {
+    "Global": -19.03,
+    "Standard": -19.28
    }
   },
   {
    "cycle": 12,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "stirlingp",
     "name": "StirlingP"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1520.63,
     "Standard": 1518.4
+   },
+   "change": {
+    "Global": 18.36,
+    "Standard": 18.35
    }
   },
   {
    "cycle": 12,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "goscar",
     "name": "Oscar Gray"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1480.92,
     "Standard": 1513.96
+   },
+   "change": {
+    "Global": -18.7,
+    "Standard": -18.07
    }
   },
   {
    "cycle": 12,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "wynterwulf",
     "name": "Thomas Castanelli"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1499.94,
     "Standard": 1500.82
+   },
+   "change": {
+    "Global": -18.01,
+    "Standard": -17.98
    }
   },
   {
    "cycle": 12,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "ez_clap",
     "name": "Henry Sams"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1761.82,
     "Standard": 1514.26
+   },
+   "change": {
+    "Global": 22.96,
+    "Standard": 18.59
    }
   },
   {
    "cycle": 12,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "yangjinhao",
     "name": "Jinhao Yang"
@@ -120,6 +164,10 @@
    "opponent_rating": {
     "Global": 1692.05,
     "Standard": 1548.33
+   },
+   "change": {
+    "Global": -14.64,
+    "Standard": -17.12
    }
   }
  ],
@@ -144,6 +192,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-4-0",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "92nd of 188",
+   "typical_finish": 48.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "3-4-0",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "92nd of 188",
+   "typical_finish": 48.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

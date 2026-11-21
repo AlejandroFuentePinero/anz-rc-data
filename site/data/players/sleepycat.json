@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "162nd",
    "field_size": 212,
+   "finish_share": 76.4,
    "record": "0-6-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 6
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1390.4,
+    "Modern": 1391.27
+   },
    "deck": "Esper Blink",
    "decklist": "https://melee.gg/Decklist/View/3699dc7a-f91d-4976-bd0a-b3800013f16e"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 10,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "mikd18",
     "name": "MikD18"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 0.0,
+    "Modern": 0.0
    }
   },
   {
    "cycle": 10,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "yida",
     "name": "Yida"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1442.97,
     "Modern": 1434.06
+   },
+   "change": {
+    "Global": -19.04,
+    "Modern": -19.2
    }
   },
   {
    "cycle": 10,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "nathanchambers",
     "name": "NathanChambers"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1471.27,
     "Modern": 1468.5
+   },
+   "change": {
+    "Global": -18.18,
+    "Modern": -18.22
    }
   },
   {
    "cycle": 10,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "alecf",
     "name": "Alecf"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1447.15,
     "Modern": 1459.68
+   },
+   "change": {
+    "Global": -18.29,
+    "Modern": -18.05
    }
   },
   {
    "cycle": 10,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "arcguy302",
     "name": "Aseem Chandar"
@@ -90,20 +124,27 @@
    "opponent_rating": {
     "Global": 1432.57,
     "Modern": 1428.38
+   },
+   "change": {
+    "Global": -18.22,
+    "Modern": -18.29
    }
   },
   {
    "cycle": 10,
    "round": "Round 6",
+   "playoff": false,
    "opponent": null,
    "result": "Bye",
    "games": null,
    "reconstructed": false,
-   "opponent_rating": null
+   "opponent_rating": null,
+   "change": null
   },
   {
    "cycle": 10,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "trevor_georgesz",
     "name": "Trevor_Georgesz"
@@ -114,11 +155,16 @@
    "opponent_rating": {
     "Global": 1438.89,
     "Modern": 1445.73
+   },
+   "change": {
+    "Global": -17.77,
+    "Modern": -17.64
    }
   },
   {
    "cycle": 10,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "ethanwcranford",
     "name": "Ethan Cranford"
@@ -129,6 +175,10 @@
    "opponent_rating": {
     "Global": 1402.23,
     "Modern": 1446.35
+   },
+   "change": {
+    "Global": -18.11,
+    "Modern": -17.31
    }
   }
  ],
@@ -153,6 +203,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-6-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "162nd of 212",
+   "typical_finish": 76.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "0-6-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "162nd of 212",
+   "typical_finish": 76.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

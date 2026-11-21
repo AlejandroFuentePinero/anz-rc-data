@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "207th",
    "field_size": 212,
+   "finish_share": 97.6,
    "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1448.22,
+    "Modern": 1446.77
+   },
    "deck": "Izzet Prowess",
    "decklist": "https://melee.gg/Decklist/View/fb44e1cb-1f3e-4bc4-a505-b37f0089b6b3"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 10,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "sam_lewin",
     "name": "Sam_Lewin"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1701.01,
     "Modern": 1617.62
+   },
+   "change": {
+    "Global": -14.38,
+    "Modern": -15.86
    }
   },
   {
    "cycle": 10,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "jezza",
     "name": "Jezza"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1481.12,
     "Modern": 1481.05
+   },
+   "change": {
+    "Global": -18.08,
+    "Modern": -18.06
    }
   },
   {
    "cycle": 10,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "miketrev",
     "name": "MikeTrev"
@@ -60,6 +84,10 @@
    "opponent_rating": {
     "Global": 1395.52,
     "Modern": 1394.28
+   },
+   "change": {
+    "Global": -19.31,
+    "Modern": -19.31
    }
   }
  ],
@@ -84,6 +112,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "207th of 212",
+   "typical_finish": 97.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "207th of 212",
+   "typical_finish": 97.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

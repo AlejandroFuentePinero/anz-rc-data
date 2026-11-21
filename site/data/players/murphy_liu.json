@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "180th",
    "field_size": 233,
+   "finish_share": 77.3,
    "record": "1-2-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 3
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1490.04,
+    "Modern": 1486.0
+   },
    "deck": "Esper",
    "decklist": "https://melee.gg/Decklist/View/800c2c01-bf65-4b6d-a9c7-b4ec008b89b2"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "stormztv",
     "name": "Toby Needs"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1482.52,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 17.68,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "conradus",
     "name": "connor mcgillivray"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1847.0,
     "Modern": 1634.5
+   },
+   "change": {
+    "Global": -12.2,
+    "Modern": -15.88
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "lavaridge",
     "name": "James Larsen-Scott"
@@ -60,6 +84,10 @@
    "opponent_rating": {
     "Global": 1646.92,
     "Modern": 1605.93
+   },
+   "change": {
+    "Global": -15.44,
+    "Modern": -16.11
    }
   }
  ],
@@ -84,6 +112,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-2-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "180th of 233",
+   "typical_finish": 77.3,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "1-2-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "180th of 233",
+   "typical_finish": 77.3,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

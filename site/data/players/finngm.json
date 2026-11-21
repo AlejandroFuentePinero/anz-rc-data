@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "40th",
    "field_size": 180,
+   "finish_share": 22.2,
    "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1538.28,
+    "Pioneer": 1536.37
+   },
    "deck": "Azorius Spirits",
    "decklist": "https://melee.gg/Decklist/View/ccac962d-1e6b-4716-a920-5fc7ca71c8b6"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 3,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "dweebdog",
     "name": "Ivan Schroder"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1535.69,
     "Pioneer": 1535.69
+   },
+   "change": {
+    "Global": -17.35,
+    "Pioneer": -17.35
    }
   },
   {
    "cycle": 3,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "virrid",
     "name": "Virrid"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1481.96,
     "Pioneer": 1482.0
+   },
+   "change": {
+    "Global": 17.99,
+    "Pioneer": 17.99
    }
   },
   {
    "cycle": 3,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "chiawhey",
     "name": "Chia Wei Leong"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1538.32,
     "Pioneer": 1501.28
+   },
+   "change": {
+    "Global": 18.69,
+    "Pioneer": 18.01
    }
   },
   {
    "cycle": 3,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "fredstick",
     "name": "Michael Antolini"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1518.65,
     "Pioneer": 1518.62
+   },
+   "change": {
+    "Global": 17.99,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 3,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "dallas",
     "name": "Dallas"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1537.28,
     "Pioneer": 1535.98
+   },
+   "change": {
+    "Global": 18.0,
+    "Pioneer": 17.99
    }
   },
   {
    "cycle": 3,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "markzhou2207",
     "name": "Mark Zhou"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1507.97,
     "Pioneer": 1505.97
+   },
+   "change": {
+    "Global": -18.86,
+    "Pioneer": -18.89
    }
   },
   {
    "cycle": 3,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "voltie",
     "name": "Voltie"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1572.12,
     "Pioneer": 1569.66
+   },
+   "change": {
+    "Global": -17.35,
+    "Pioneer": -17.38
    }
   },
   {
    "cycle": 3,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "spiderbyte12",
     "name": "Michael Billinghurst"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1583.98,
     "Pioneer": 1518.68
+   },
+   "change": {
+    "Global": 19.18,
+    "Pioneer": 18.01
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "40th of 180",
+   "typical_finish": 22.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "40th of 180",
+   "typical_finish": 22.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

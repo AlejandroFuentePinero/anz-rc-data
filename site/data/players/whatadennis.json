@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "95th",
    "field_size": 233,
+   "finish_share": 40.8,
    "record": "4-5-0",
+   "win_rate": {
+    "rate": 44.4,
+    "matches": 9
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1489.16,
+    "Modern": 1484.38
+   },
    "deck": "Izzet Affinity",
    "decklist": "https://melee.gg/Decklist/View/99a74aff-2add-460e-bdb2-b4eb000f14f4"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "jimmielinville",
     "name": "JimmieLinville"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -18.0,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "jamzone_",
     "name": "JAMzone_"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1530.57,
     "Modern": 1482.04
+   },
+   "change": {
+    "Global": 18.89,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "davidmarshall",
     "name": "DavidMarshall"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1500.2,
     "Modern": 1502.02
+   },
+   "change": {
+    "Global": 17.99,
+    "Modern": 18.04
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "fairjordans",
     "name": "Dylan Brown"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1666.74,
     "Modern": 1533.79
+   },
+   "change": {
+    "Global": 20.68,
+    "Modern": 18.29
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "frewdobaggins",
     "name": "FrewdoBaggins"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1538.24,
     "Modern": 1535.78
+   },
+   "change": {
+    "Global": -18.02,
+    "Modern": -18.01
    }
   },
   {
    "cycle": 13,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "pholtzman",
     "name": "Paul Holtzman"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1426.97,
     "Modern": 1519.16
+   },
+   "change": {
+    "Global": 16.28,
+    "Modern": 18.02
    }
   },
   {
    "cycle": 13,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "lt254",
     "name": "Luke Trenberth"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1575.95,
     "Modern": 1508.13
+   },
+   "change": {
+    "Global": -17.3,
+    "Modern": -18.51
    }
   },
   {
    "cycle": 13,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "harryhaz1",
     "name": "Harry Franks"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1528.46,
     "Modern": 1555.72
+   },
+   "change": {
+    "Global": -17.85,
+    "Modern": -17.31
    }
   },
   {
    "cycle": 13,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "alosaur",
     "name": "Alex Humbley"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1755.2,
     "Modern": 1603.6
+   },
+   "change": {
+    "Global": -13.49,
+    "Modern": -16.13
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-5-0",
+   "win_rate": {
+    "rate": 44.4,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "95th of 233",
+   "typical_finish": 40.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "4-5-0",
+   "win_rate": {
+    "rate": 44.4,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "95th of 233",
+   "typical_finish": 40.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

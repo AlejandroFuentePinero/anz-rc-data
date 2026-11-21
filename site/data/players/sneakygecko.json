@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "106th",
    "field_size": 233,
+   "finish_share": 45.5,
    "record": "4-5-0",
+   "win_rate": {
+    "rate": 44.4,
+    "matches": 9
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1482.4,
+    "Modern": 1483.62
+   },
    "deck": "Boros Energy",
    "decklist": "https://melee.gg/Decklist/View/ce6dac67-1102-4751-931e-b4eb0182c1e1"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "haohaothevillain",
     "name": "Hao Min"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1591.5,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -16.34,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "parasisnotcool",
     "name": "parasisnotcool"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1405.84,
     "Modern": 1520.85
+   },
+   "change": {
+    "Global": -19.42,
+    "Modern": -17.29
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "jdh1",
     "name": "JD Hawke"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1361.64,
     "Modern": 1427.2
+   },
+   "change": {
+    "Global": -19.87,
+    "Modern": -18.68
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "fergystyx98",
     "name": "FergyStyx98"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1447.62,
     "Modern": 1447.94
+   },
+   "change": {
+    "Global": 18.06,
+    "Modern": 18.04
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "stormztv",
     "name": "Toby Needs"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1448.89,
     "Modern": 1464.14
+   },
+   "change": {
+    "Global": 17.75,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "jamzone_",
     "name": "JAMzone_"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1528.17,
     "Modern": 1482.92
+   },
+   "change": {
+    "Global": 18.87,
+    "Modern": 18.02
    }
   },
   {
    "cycle": 13,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "pholtzman",
     "name": "Paul Holtzman"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1410.69,
     "Modern": 1501.14
+   },
+   "change": {
+    "Global": -19.61,
+    "Modern": -17.98
    }
   },
   {
    "cycle": 13,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "morienus",
     "name": "Morienus"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1485.23,
     "Modern": 1482.69
+   },
+   "change": {
+    "Global": 18.11,
+    "Modern": 18.01
    }
   },
   {
    "cycle": 13,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "nino111",
     "name": "Nino Manera"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1654.49,
     "Modern": 1583.37
+   },
+   "change": {
+    "Global": -15.16,
+    "Modern": -16.48
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-5-0",
+   "win_rate": {
+    "rate": 44.4,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "106th of 233",
+   "typical_finish": 45.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "4-5-0",
+   "win_rate": {
+    "rate": 44.4,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "106th of 233",
+   "typical_finish": 45.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

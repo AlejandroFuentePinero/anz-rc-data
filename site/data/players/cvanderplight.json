@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "194th",
    "field_size": 212,
+   "finish_share": 91.5,
    "record": "0-2-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 2
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1464.27,
+    "Modern": 1463.04
+   },
    "deck": "Azorius Control (Kaheera)",
    "decklist": "https://melee.gg/Decklist/View/bc701875-7b08-4e01-9d52-b37f00b2b716"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 10,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "dweebdog",
     "name": "Ivan Schroder"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1607.61,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -16.04,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 10,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "boorman2311",
     "name": "Thomas Boorman"
@@ -45,6 +64,10 @@
    "opponent_rating": {
     "Global": 1391.26,
     "Modern": 1429.31
+   },
+   "change": {
+    "Global": -19.69,
+    "Modern": -18.96
    }
   }
  ],
@@ -69,6 +92,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-2-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 2
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "194th of 212",
+   "typical_finish": 91.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "0-2-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 2
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "194th of 212",
+   "typical_finish": 91.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

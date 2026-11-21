@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "83rd",
    "field_size": 168,
+   "finish_share": 49.4,
    "record": "3-4-0",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1486.2,
+    "Standard": 1483.18
+   },
    "deck": "Boros Convoke",
    "decklist": "https://melee.gg/Decklist/View/182565f2-4be1-459d-8097-7c21cfec6f26"
   },
@@ -21,7 +34,20 @@
    "format": "Standard",
    "finish": "184th",
    "field_size": 222,
+   "finish_share": 82.9,
    "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rating_start": {
+    "Global": 1486.2,
+    "Standard": 1483.18
+   },
+   "rating_end": {
+    "Global": 1447.59,
+    "Standard": 1446.32
+   },
    "deck": "Izzet Prowess",
    "decklist": "https://melee.gg/Decklist/View/814058b8-1edf-4ccc-a827-b2d601766a57"
   }
@@ -30,6 +56,7 @@
   {
    "cycle": 6,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "carps",
     "name": "Samuel Carpenter"
@@ -40,11 +67,16 @@
    "opponent_rating": {
     "Global": 1500.94,
     "Standard": 1500
+   },
+   "change": {
+    "Global": 18.02,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 6,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "hazzrd",
     "name": "RIley Jones"
@@ -55,11 +87,16 @@
    "opponent_rating": {
     "Global": 1676.47,
     "Standard": 1588.68
+   },
+   "change": {
+    "Global": 20.87,
+    "Standard": 19.29
    }
   },
   {
    "cycle": 6,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "santinomaher",
     "name": "Santinomaher"
@@ -70,11 +107,16 @@
    "opponent_rating": {
     "Global": 1456.3,
     "Standard": 1536.0
+   },
+   "change": {
+    "Global": -19.5,
+    "Standard": -18.02
    }
   },
   {
    "cycle": 6,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "dc_abstracted",
     "name": "David Chamberlain"
@@ -85,11 +127,16 @@
    "opponent_rating": {
     "Global": 1600.55,
     "Standard": 1516.73
+   },
+   "change": {
+    "Global": -16.52,
+    "Standard": -18.05
    }
   },
   {
    "cycle": 6,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "ray_charles_28",
     "name": "Ray_charles_28"
@@ -100,11 +147,16 @@
    "opponent_rating": {
     "Global": 1497.92,
     "Standard": 1500.0
+   },
+   "change": {
+    "Global": 17.91,
+    "Standard": 17.98
    }
   },
   {
    "cycle": 6,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "jacobfrench",
     "name": "JacobFrench"
@@ -115,11 +167,16 @@
    "opponent_rating": {
     "Global": 1487.65,
     "Standard": 1519.23
+   },
+   "change": {
+    "Global": -18.6,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 6,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "willows",
     "name": "WillowMoon99"
@@ -130,11 +187,16 @@
    "opponent_rating": {
     "Global": 1614.43,
     "Standard": 1500.32
+   },
+   "change": {
+    "Global": -15.96,
+    "Standard": -18.02
    }
   },
   {
    "cycle": 9,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "reecepruis",
     "name": "Reece Pruis"
@@ -145,11 +207,16 @@
    "opponent_rating": {
     "Global": 1472.4,
     "Standard": 1463.14
+   },
+   "change": {
+    "Global": 17.75,
+    "Standard": 17.63
    }
   },
   {
    "cycle": 9,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "apellosine",
     "name": "Apellosine"
@@ -160,11 +227,16 @@
    "opponent_rating": {
     "Global": 1517.45,
     "Standard": 1518.85
+   },
+   "change": {
+    "Global": -17.75,
+    "Standard": -17.67
    }
   },
   {
    "cycle": 9,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "tonycultanvil",
     "name": "Tony Dwyer"
@@ -175,11 +247,16 @@
    "opponent_rating": {
     "Global": 1455.32,
     "Standard": 1437.01
+   },
+   "change": {
+    "Global": -18.56,
+    "Standard": -18.84
    }
   },
   {
    "cycle": 9,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "cayliss",
     "name": "cayliss"
@@ -190,6 +267,10 @@
    "opponent_rating": {
     "Global": 1354.89,
     "Standard": 1465.27
+   },
+   "change": {
+    "Global": -20.05,
+    "Standard": -17.98
    }
   }
  ],
@@ -222,6 +303,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-7-0",
+   "win_rate": {
+    "rate": 36.4,
+    "matches": 11
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "83rd of 168",
+   "typical_finish": 66.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
+  },
+  "Standard": {
+   "record": "4-7-0",
+   "win_rate": {
+    "rate": 36.4,
+    "matches": 11
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "83rd of 168",
+   "typical_finish": 66.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
   }
  }
 }

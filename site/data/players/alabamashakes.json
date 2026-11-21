@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "125th",
    "field_size": 209,
+   "finish_share": 59.8,
    "record": "2-5-0",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1454.03,
+    "Standard": 1450.62
+   },
    "deck": "Mono-Green Aggro",
    "decklist": "https://melee.gg/Decklist/View/7b1dc172-87dd-4b62-a00e-b40c00289cb9"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 11,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "danso",
     "name": "Brett Girvan"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1673.49,
     "Standard": 1510.88
+   },
+   "change": {
+    "Global": -14.87,
+    "Standard": -17.8
    }
   },
   {
    "cycle": 11,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "bent",
     "name": "Ben Tudman"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1761.13,
     "Standard": 1711.54
+   },
+   "change": {
+    "Global": -13.09,
+    "Standard": -13.89
    }
   },
   {
    "cycle": 11,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "juripryde",
     "name": "juripryde"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1472.52,
     "Standard": 1467.95
+   },
+   "change": {
+    "Global": -17.99,
+    "Standard": -18.01
    }
   },
   {
    "cycle": 11,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "mitchoner",
     "name": "Mitchoner"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1444.47,
     "Standard": 1446.03
+   },
+   "change": {
+    "Global": -18.17,
+    "Standard": -18.08
    }
   },
   {
    "cycle": 11,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "e9",
     "name": "Jeremy Mackney"
@@ -90,20 +124,27 @@
    "opponent_rating": {
     "Global": 1448.41,
     "Standard": 1458.41
+   },
+   "change": {
+    "Global": -17.77,
+    "Standard": -17.52
    }
   },
   {
    "cycle": 11,
    "round": "Round 6",
+   "playoff": false,
    "opponent": null,
    "result": "Bye",
    "games": null,
    "reconstructed": false,
-   "opponent_rating": null
+   "opponent_rating": null,
+   "change": null
   },
   {
    "cycle": 11,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "popalotgnome",
     "name": "Popalotgnome"
@@ -114,11 +155,16 @@
    "opponent_rating": {
     "Global": 1434.77,
     "Standard": 1429.58
+   },
+   "change": {
+    "Global": 18.3,
+    "Standard": 18.27
    }
   },
   {
    "cycle": 11,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "rexmatical",
     "name": "Courtney Fox"
@@ -129,6 +175,10 @@
    "opponent_rating": {
     "Global": 1415.85,
     "Standard": 1413.69
+   },
+   "change": {
+    "Global": 17.62,
+    "Standard": 17.65
    }
   }
  ],
@@ -153,6 +203,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-5-0",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "125th of 209",
+   "typical_finish": 59.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "2-5-0",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "125th of 209",
+   "typical_finish": 59.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

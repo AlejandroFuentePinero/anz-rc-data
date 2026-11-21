@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "56th",
    "field_size": 180,
+   "finish_share": 31.1,
    "record": "4-3-1",
+   "win_rate": {
+    "rate": 57.1,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1519.13,
+    "Pioneer": 1518.47
+   },
    "deck": "Azorius Control",
    "decklist": "https://melee.gg/Decklist/View/7f0a9a85-ef48-4e50-b1f6-edc2a8d52223"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 3,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "peterkeenan",
     "name": "PeterKeenan"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Pioneer": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 3,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "lavaridge",
     "name": "James Larsen-Scott"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1520.87,
     "Pioneer": 1518.0
+   },
+   "change": {
+    "Global": 18.05,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 3,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "tibbersau",
     "name": "Malcolm Zegveld"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1536.0,
     "Pioneer": 1536.0
+   },
+   "change": {
+    "Global": -0.0,
+    "Pioneer": 0.0
    }
   },
   {
    "cycle": 3,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "cardsonbikes",
     "name": "Declan Roberts"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1554.48,
     "Pioneer": 1553.03
+   },
+   "change": {
+    "Global": 18.34,
+    "Pioneer": 18.31
    }
   },
   {
    "cycle": 3,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "maxiebon1234",
     "name": "maxiebon1234"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1536.79,
     "Pioneer": 1535.39
+   },
+   "change": {
+    "Global": -18.32,
+    "Pioneer": -18.35
    }
   },
   {
    "cycle": 3,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "tastycheez",
     "name": "Nicholas Turner"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1601.44,
     "Pioneer": 1601.42
+   },
+   "change": {
+    "Global": -16.81,
+    "Pioneer": -16.81
    }
   },
   {
    "cycle": 3,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "iantan87",
     "name": "Ian Tan"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1531.8,
     "Pioneer": 1500.3
+   },
+   "change": {
+    "Global": -17.77,
+    "Pioneer": -18.34
    }
   },
   {
    "cycle": 3,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "joshh",
     "name": "JoshH"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1482.09,
     "Pioneer": 1482.1
+   },
+   "change": {
+    "Global": 17.65,
+    "Pioneer": 17.66
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-3-1",
+   "win_rate": {
+    "rate": 57.1,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "56th of 180",
+   "typical_finish": 31.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "4-3-1",
+   "win_rate": {
+    "rate": 57.1,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "56th of 180",
+   "typical_finish": 31.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

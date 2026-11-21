@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "144th",
    "field_size": 154,
+   "finish_share": 93.5,
    "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1450.72,
+    "Modern": 1446.95
+   },
    "deck": "Eldrazi Ramp",
    "decklist": "https://melee.gg/Decklist/View/6ab64b4c-c4f5-46d4-9782-cbff2630bf67"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 8,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "na",
     "name": "Sebastian Vearncombe"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1603.03,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -16.13,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 8,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "kierantierney",
     "name": "Kieran Tierney"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1646.11,
     "Modern": 1535.01
+   },
+   "change": {
+    "Global": -15.07,
+    "Modern": -17.03
    }
   },
   {
    "cycle": 8,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "mrdarcey",
     "name": "Simon Darcey"
@@ -60,6 +84,10 @@
    "opponent_rating": {
     "Global": 1464.12,
     "Modern": 1464.04
+   },
+   "change": {
+    "Global": -18.09,
+    "Modern": -18.02
    }
   }
  ],
@@ -84,6 +112,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "144th of 154",
+   "typical_finish": 93.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "144th of 154",
+   "typical_finish": 93.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

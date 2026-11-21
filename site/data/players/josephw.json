@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "127th",
    "field_size": 180,
+   "finish_share": 70.6,
    "record": "2-3-0",
+   "win_rate": {
+    "rate": 40.0,
+    "matches": 5
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1480.81,
+    "Pioneer": 1481.38
+   },
    "deck": "Lotus Field Combo",
    "decklist": "https://melee.gg/Decklist/View/6541471e-586a-48e8-a2fe-1b0eb8849c3c"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 3,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "willows",
     "name": "WillowMoon99"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Pioneer": 1500
+   },
+   "change": {
+    "Global": -18.0,
+    "Pioneer": -18.0
    }
   },
   {
    "cycle": 3,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "jazza619",
     "name": "Jared Allsop"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1482.0,
     "Pioneer": 1482.0
+   },
+   "change": {
+    "Global": 18.0,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 3,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "kjvt",
     "name": "Kyle Van Tienen"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1465.94,
     "Pioneer": 1465.94
+   },
+   "change": {
+    "Global": -18.62,
+    "Pioneer": -18.62
    }
   },
   {
    "cycle": 3,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "nanolotl",
     "name": "Lewis Tolonen"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1450.34,
     "Pioneer": 1482.62
+   },
+   "change": {
+    "Global": 17.43,
+    "Pioneer": 18.02
    }
   },
   {
    "cycle": 3,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "johnb2",
     "name": "JohnB2"
@@ -90,6 +124,10 @@
    "opponent_rating": {
     "Global": 1498.44,
     "Pioneer": 1498.47
+   },
+   "change": {
+    "Global": -18.01,
+    "Pioneer": -18.02
    }
   }
  ],
@@ -114,6 +152,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-3-0",
+   "win_rate": {
+    "rate": 40.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "127th of 180",
+   "typical_finish": 70.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "2-3-0",
+   "win_rate": {
+    "rate": 40.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "127th of 180",
+   "typical_finish": 70.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

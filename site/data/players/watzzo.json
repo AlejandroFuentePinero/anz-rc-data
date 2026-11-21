@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "220th",
    "field_size": 233,
+   "finish_share": 94.4,
    "record": "0-5-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 5
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1410.55,
+    "Modern": 1409.75
+   },
    "deck": "Grixis Reanimator",
    "decklist": "https://melee.gg/Decklist/View/bb345166-8a5c-4d4a-823c-b4ec005ea2cc"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "shannonyo",
     "name": "Shannon Dann"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1530.91,
     "Modern": 1500.53
+   },
+   "change": {
+    "Global": -17.44,
+    "Modern": -17.99
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "zoeanne",
     "name": "ZoeAnne"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1484.43,
     "Modern": 1483.07
+   },
+   "change": {
+    "Global": -17.97,
+    "Modern": -17.98
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "stormztv",
     "name": "Toby Needs"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1448.25,
     "Modern": 1464.07
+   },
+   "change": {
+    "Global": -18.3,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "thatonebloke",
     "name": "Luke Frazer"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1459.19,
     "Modern": 1428.42
+   },
+   "change": {
+    "Global": -17.76,
+    "Modern": -18.32
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "fergystyx98",
     "name": "FergyStyx98"
@@ -90,6 +124,10 @@
    "opponent_rating": {
     "Global": 1429.56,
     "Modern": 1429.91
+   },
+   "change": {
+    "Global": -17.98,
+    "Modern": -17.96
    }
   }
  ],
@@ -114,6 +152,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-5-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "220th of 233",
+   "typical_finish": 94.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "0-5-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "220th of 233",
+   "typical_finish": 94.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

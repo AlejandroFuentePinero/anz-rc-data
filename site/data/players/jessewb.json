@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "191st",
    "field_size": 209,
+   "finish_share": 91.4,
    "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1467.14,
+    "Standard": 1464.44
+   },
    "deck": "Simic Rhythm",
    "decklist": "https://melee.gg/Decklist/View/43503b1d-0517-4134-896e-b40c0044ea23"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 11,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "secondonkey",
     "name": "Secondonkey"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Standard": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 11,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "eann",
     "name": "Eann"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1518.0,
     "Standard": 1518.0
+   },
+   "change": {
+    "Global": -18.0,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 11,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "ganksyou",
     "name": "Michael Russell"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1668.01,
     "Standard": 1520.73
+   },
+   "change": {
+    "Global": -14.96,
+    "Standard": -17.62
    }
   },
   {
    "cycle": 11,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "juripryde",
     "name": "juripryde"
@@ -75,6 +104,10 @@
    "opponent_rating": {
     "Global": 1490.52,
     "Standard": 1485.96
+   },
+   "change": {
+    "Global": -17.9,
+    "Standard": -17.93
    }
   }
  ],
@@ -99,6 +132,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "191st of 209",
+   "typical_finish": 91.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "191st of 209",
+   "typical_finish": 91.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "187th",
    "field_size": 212,
+   "finish_share": 88.2,
    "record": "0-5-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 5
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1409.73,
+    "Modern": 1410.92
+   },
    "deck": "Esper Goryo's Vengeance",
    "decklist": "https://melee.gg/Decklist/View/a4ca7f84-20bc-44f5-b60d-b380004f3f4c"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 10,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "sleepycat",
     "name": "sleepycat"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 0.0,
+    "Modern": 0.0
    }
   },
   {
    "cycle": 10,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "jinavie",
     "name": "Jin Kim"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1590.11,
     "Modern": 1588.37
+   },
+   "change": {
+    "Global": -16.36,
+    "Modern": -16.39
    }
   },
   {
    "cycle": 10,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "joeshoer",
     "name": "Joshua Bennett"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1436.42,
     "Modern": 1464.98
+   },
+   "change": {
+    "Global": -18.86,
+    "Modern": -18.34
    }
   },
   {
    "cycle": 10,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "kuangfupanda",
     "name": "kuangfupanda"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1448.42,
     "Modern": 1446.79
+   },
+   "change": {
+    "Global": -18.3,
+    "Modern": -18.34
    }
   },
   {
    "cycle": 10,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "ethanwcranford",
     "name": "Ethan Cranford"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1381.99,
     "Modern": 1427.98
+   },
+   "change": {
+    "Global": -19.17,
+    "Modern": -18.35
    }
   },
   {
    "cycle": 10,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "arcguy302",
     "name": "Aseem Chandar"
@@ -105,6 +144,10 @@
    "opponent_rating": {
     "Global": 1450.79,
     "Modern": 1446.68
+   },
+   "change": {
+    "Global": -17.57,
+    "Modern": -17.67
    }
   }
  ],
@@ -129,6 +172,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-5-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "187th of 212",
+   "typical_finish": 88.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "0-5-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "187th of 212",
+   "typical_finish": 88.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "100th",
    "field_size": 154,
+   "finish_share": 64.9,
    "record": "2-5-1",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1452.38,
+    "Modern": 1446.57
+   },
    "deck": "Ruby Storm",
    "decklist": "https://melee.gg/Decklist/View/3ceeebda-6912-42af-9da4-0c3be1edd635"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 8,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "jimmy1",
     "name": "James Moore"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1690.01,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -14.58,
+    "Modern": -18.33
    }
   },
   {
    "cycle": 8,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "mike03yap",
     "name": "Joe Michael Caragan"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1438.68,
     "Modern": 1482.33
+   },
+   "change": {
+    "Global": -0.85,
+    "Modern": 0.01
    }
   },
   {
    "cycle": 8,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "rowanmillers",
     "name": "Rowan Millers"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1549.43,
     "Modern": 1464.98
+   },
+   "change": {
+    "Global": 19.18,
+    "Modern": 17.7
    }
   },
   {
    "cycle": 8,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "calmmirror",
     "name": "Samuel Maher"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1603.49,
     "Modern": 1516.73
+   },
+   "change": {
+    "Global": 19.81,
+    "Modern": 18.32
    }
   },
   {
    "cycle": 8,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "alecf",
     "name": "Alecf"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1521.56,
     "Modern": 1533.78
+   },
+   "change": {
+    "Global": -18.04,
+    "Modern": -17.71
    }
   },
   {
    "cycle": 8,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "williamtheconq",
     "name": "William Poor"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1591.92,
     "Modern": 1519.47
+   },
+   "change": {
+    "Global": -16.43,
+    "Modern": -17.64
    }
   },
   {
    "cycle": 8,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "thepakeha",
     "name": "ThePakeha"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1479.83,
     "Modern": 1479.61
+   },
+   "change": {
+    "Global": -18.17,
+    "Modern": -18.05
    }
   },
   {
    "cycle": 8,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "mcfish",
     "name": "Joel McAndrew"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1440.63,
     "Modern": 1479.35
+   },
+   "change": {
+    "Global": -18.55,
+    "Modern": -17.73
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-5-1",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "100th of 154",
+   "typical_finish": 64.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "2-5-1",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "100th of 154",
+   "typical_finish": 64.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

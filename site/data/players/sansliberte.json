@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "46th",
    "field_size": 228,
+   "finish_share": 20.2,
    "record": "6-3-0",
+   "win_rate": {
+    "rate": 66.7,
+    "matches": 9
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1552.68,
+    "Modern": 1553.66
+   },
    "deck": "Golgari Yawgmoth",
    "decklist": "https://melee.gg/Decklist/View/ce3e468c-e928-45df-8c4b-e3732297c672"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 5,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "blazedugin",
     "name": "Saher Khalil"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1452.24,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -18.87,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "michaeljoey",
     "name": "Michael Joey Gaviola"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1483.33,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": 18.04,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "isaac_s",
     "name": "Isaac_S"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1501.15,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": 18.04,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "tezzarexy",
     "name": "TezzaREXy"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1502.03,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": -18.28,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "gilaflame",
     "name": "Randall Hopson"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1500.87,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": 18.04,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "georgemto",
     "name": "GeorgeMTO"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1517.79,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": 18.02,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "pot_of_greed",
     "name": "Pot_of_Greed"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1534.66,
     "Modern": 1536.0
+   },
+   "change": {
+    "Global": 17.99,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "jamesdoust",
     "name": "James Doust"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1554.4,
     "Modern": 1553.69
+   },
+   "change": {
+    "Global": -17.97,
+    "Modern": -18.01
    }
   },
   {
    "cycle": 5,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "maxed",
     "name": "MaxEd"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1517.45,
     "Modern": 1517.65
+   },
+   "change": {
+    "Global": 17.68,
+    "Modern": 17.67
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "6-3-0",
+   "win_rate": {
+    "rate": 66.7,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "46th of 228",
+   "typical_finish": 20.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "6-3-0",
+   "win_rate": {
+    "rate": 66.7,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "46th of 228",
+   "typical_finish": 20.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

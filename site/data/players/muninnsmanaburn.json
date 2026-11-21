@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "132nd",
    "field_size": 222,
+   "finish_share": 59.5,
    "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1466.43,
+    "Standard": 1464.01
+   },
    "deck": "Mono-Green",
    "decklist": "https://melee.gg/Decklist/View/8f578d86-7cc4-4a2a-94b2-b2d8008d8be3"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 9,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "mwpmccabe",
     "name": "mwpmccabe"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Standard": 1500
+   },
+   "change": {
+    "Global": -18.0,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 9,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "shannonyo",
     "name": "Shannon Dann"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1484.42,
     "Standard": 1482.0
+   },
+   "change": {
+    "Global": -17.96,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 9,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "johnb2",
     "name": "JohnB2"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1462.26,
     "Standard": 1463.08
+   },
+   "change": {
+    "Global": 17.97,
+    "Standard": 17.98
    }
   },
   {
    "cycle": 9,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "mattynate",
     "name": "mattynate"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1480.38,
     "Standard": 1482.35
+   },
+   "change": {
+    "Global": 17.97,
+    "Standard": 18.01
    }
   },
   {
    "cycle": 9,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "shaunmarek",
     "name": "Shaunmarek"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1516.97,
     "Standard": 1499.99
+   },
+   "change": {
+    "Global": -17.69,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 9,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "lennygo7",
     "name": "Lennygo7"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1500.03,
     "Standard": 1500.07
+   },
+   "change": {
+    "Global": 18.32,
+    "Standard": 18.33
    }
   },
   {
    "cycle": 9,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "pingu",
     "name": "Ben Parker"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1619.73,
     "Standard": 1502.18
+   },
+   "change": {
+    "Global": -15.84,
+    "Standard": -17.97
    }
   },
   {
    "cycle": 9,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "brendussy",
     "name": "Brendan Patton"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1465.8,
     "Standard": 1463.51
+   },
+   "change": {
+    "Global": -18.35,
+    "Standard": -18.34
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "132nd of 222",
+   "typical_finish": 59.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "132nd of 222",
+   "typical_finish": 59.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

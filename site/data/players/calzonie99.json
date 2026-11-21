@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "102nd",
    "field_size": 209,
+   "finish_share": 48.8,
    "record": "3-4-1",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1487.0,
+    "Standard": 1483.97
+   },
    "deck": "Azorius Tempo",
    "decklist": "https://melee.gg/Decklist/View/3045b309-4b6a-4f91-9974-b40b0188f395"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 11,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "forceofwilks",
     "name": "James Wilks"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1817.47,
     "Standard": 1676.38
+   },
+   "change": {
+    "Global": -12.4,
+    "Standard": -14.82
    }
   },
   {
    "cycle": 11,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "cambeat10",
     "name": "Cambeat10"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1484.22,
     "Standard": 1482.16
+   },
+   "change": {
+    "Global": -0.06,
+    "Standard": -0.06
    }
   },
   {
    "cycle": 11,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "breelord",
     "name": "BreeLord"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1530.21,
     "Standard": 1519.52
+   },
+   "change": {
+    "Global": 18.78,
+    "Standard": 18.63
    }
   },
   {
    "cycle": 11,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "jaypeanewb",
     "name": "jaypeanewb"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1498.18,
     "Standard": 1499.7
+   },
+   "change": {
+    "Global": 17.85,
+    "Standard": 17.93
    }
   },
   {
    "cycle": 11,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "pureparzival",
     "name": "PureParzival"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1527.84,
     "Standard": 1518.68
+   },
+   "change": {
+    "Global": 18.07,
+    "Standard": 17.95
    }
   },
   {
    "cycle": 11,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "mtgkyle",
     "name": "Kyle Gibson"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1545.16,
     "Standard": 1495.89
+   },
+   "change": {
+    "Global": -17.95,
+    "Standard": -18.8
    }
   },
   {
    "cycle": 11,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "johnb2",
     "name": "JohnB2"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1469.7,
     "Standard": 1469.85
+   },
+   "change": {
+    "Global": -19.0,
+    "Standard": -18.93
    }
   },
   {
    "cycle": 11,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "snowman87",
     "name": "Snowman87"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1489.0,
     "Standard": 1505.51
+   },
+   "change": {
+    "Global": -18.3,
+    "Standard": -17.93
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-4-1",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "102nd of 209",
+   "typical_finish": 48.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "3-4-1",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "102nd of 209",
+   "typical_finish": 48.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

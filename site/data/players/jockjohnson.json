@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "118th",
    "field_size": 233,
+   "finish_share": 50.6,
    "record": "3-5-1",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1464.69,
+    "Modern": 1463.0
+   },
    "deck": "Dimir",
    "decklist": "https://melee.gg/Decklist/View/65be71b0-5871-4f2d-9329-b4eb0183ca33"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "quiznium",
     "name": "Riley Beck"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1654.75,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -15.2,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "opdadad",
     "name": "brisbanebroncosrule"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1429.36,
     "Modern": 1430.43
+   },
+   "change": {
+    "Global": -19.01,
+    "Modern": -18.94
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "jeshu",
     "name": "Jeshu"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1463.36,
     "Modern": 1464.0
+   },
+   "change": {
+    "Global": 17.96,
+    "Modern": 18.02
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "jdh1",
     "name": "JD Hawke"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1381.5,
     "Modern": 1445.88
+   },
+   "change": {
+    "Global": -1.86,
+    "Modern": -0.64
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "hamishsnares",
     "name": "hamish_snares"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1474.84,
     "Modern": 1517.3
+   },
+   "change": {
+    "Global": 17.87,
+    "Modern": 18.67
    }
   },
   {
    "cycle": 13,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "wakeem",
     "name": "Luke Russell"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1505.49,
     "Modern": 1506.09
+   },
+   "change": {
+    "Global": -17.9,
+    "Modern": -17.87
    }
   },
   {
    "cycle": 13,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "syncopatico",
     "name": "Timothy Sandford"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1513.66,
     "Modern": 1481.11
+   },
+   "change": {
+    "Global": 18.58,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "thatonebloke",
     "name": "Luke Frazer"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1512.56,
     "Modern": 1483.37
+   },
+   "change": {
+    "Global": -17.78,
+    "Modern": -18.29
    }
   },
   {
    "cycle": 13,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "grendalos",
     "name": "Wyatt Dubrett"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1484.3,
     "Modern": 1484.32
+   },
+   "change": {
+    "Global": -17.97,
+    "Modern": -17.94
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-5-1",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "118th of 233",
+   "typical_finish": 50.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "3-5-1",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "118th of 233",
+   "typical_finish": 50.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "153rd",
    "field_size": 233,
+   "finish_share": 65.7,
    "record": "2-5-0",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1449.41,
+    "Modern": 1450.39
+   },
    "deck": "Izzet",
    "decklist": "https://melee.gg/Decklist/View/ee1b34a7-9e38-42d9-9cca-b4eb00cae780"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "cynthia",
     "name": "Cynthiaaa"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1504.67,
     "Modern": 1501.36
+   },
+   "change": {
+    "Global": -17.91,
+    "Modern": -17.98
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "johnb2",
     "name": "JohnB2"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1483.92,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": 18.03,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "pholtzman",
     "name": "Paul Holtzman"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1403.1,
     "Modern": 1501.91
+   },
+   "change": {
+    "Global": 16.24,
+    "Modern": 18.03
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "harryhaz1",
     "name": "Harry Franks"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1520.46,
     "Modern": 1554.5
+   },
+   "change": {
+    "Global": -17.93,
+    "Modern": -17.34
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "ez_clap",
     "name": "Henry Sams"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1748.04,
     "Modern": 1689.73
+   },
+   "change": {
+    "Global": -13.54,
+    "Modern": -14.59
    }
   },
   {
    "cycle": 13,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "jaymes129",
     "name": "Jaymes129"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1514.25,
     "Modern": 1502.18
+   },
+   "change": {
+    "Global": -17.46,
+    "Modern": -17.71
    }
   },
   {
    "cycle": 13,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "grendalos",
     "name": "Wyatt Dubrett"
@@ -120,6 +164,10 @@
    "opponent_rating": {
     "Global": 1466.67,
     "Modern": 1466.81
+   },
+   "change": {
+    "Global": -18.01,
+    "Modern": -18.03
    }
   }
  ],
@@ -144,6 +192,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-5-0",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "153rd of 233",
+   "typical_finish": 65.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "2-5-0",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "153rd of 233",
+   "typical_finish": 65.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

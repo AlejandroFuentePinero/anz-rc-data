@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "83rd",
    "field_size": 156,
+   "finish_share": 53.2,
    "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1464.73,
+    "Pioneer": 1465.04
+   },
    "deck": "Mono-Green Devotion",
    "decklist": "https://melee.gg/Decklist/View/bf3f4feb-60d1-482b-ba75-0bb0ce68f965"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 4,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "jimmy1",
     "name": "James Moore"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1444.85,
     "Pioneer": 1446.38
+   },
+   "change": {
+    "Global": 16.99,
+    "Pioneer": 17.02
    }
   },
   {
    "cycle": 4,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "calgit",
     "name": "Calum Gittins"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1594.66,
     "Pioneer": 1579.7
+   },
+   "change": {
+    "Global": -16.59,
+    "Pioneer": -16.86
    }
   },
   {
    "cycle": 4,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "pjax",
     "name": "Paul Jackson"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1536.93,
     "Pioneer": 1536.9
+   },
+   "change": {
+    "Global": -17.33,
+    "Pioneer": -17.33
    }
   },
   {
    "cycle": 4,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "zeltarn",
     "name": "Zeltarn"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1463.4,
     "Pioneer": 1463.4
+   },
+   "change": {
+    "Global": -18.36,
+    "Pioneer": -18.35
    }
   },
   {
    "cycle": 4,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "samcosmo",
     "name": "Samuel Taubman"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1464.8,
     "Pioneer": 1464.11
+   },
+   "change": {
+    "Global": 18.0,
+    "Pioneer": 17.99
    }
   },
   {
    "cycle": 4,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "dannystone",
     "name": "Danny Stone"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1419.65,
     "Pioneer": 1450.03
+   },
+   "change": {
+    "Global": 16.85,
+    "Pioneer": 17.41
    }
   },
   {
    "cycle": 4,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "danro",
     "name": "Daniel Roper"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1565.89,
     "Pioneer": 1565.75
+   },
+   "change": {
+    "Global": -16.79,
+    "Pioneer": -16.8
    }
   },
   {
    "cycle": 4,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "cooperr",
     "name": "CooperR"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1480.29,
     "Pioneer": 1480.83
+   },
+   "change": {
+    "Global": -18.05,
+    "Pioneer": -18.04
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "83rd of 156",
+   "typical_finish": 53.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "83rd of 156",
+   "typical_finish": 53.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

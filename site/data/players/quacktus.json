@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "55th",
    "field_size": 154,
+   "finish_share": 35.7,
    "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1507.58,
+    "Modern": 1500.69
+   },
    "deck": "Esper Control",
    "decklist": "https://melee.gg/Decklist/View/b67e0d06-3217-4d57-b25f-f4dc40f51e51"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 8,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "kenodvt",
     "name": "Keayn de Vries-Turnell"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1602.12,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": 19.86,
+    "Modern": 17.67
    }
   },
   {
    "cycle": 8,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "conradjohansson",
     "name": "ConradJohansson"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1498.55,
     "Modern": 1500.99
+   },
+   "change": {
+    "Global": 17.61,
+    "Modern": 17.7
    }
   },
   {
    "cycle": 8,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "joedeane",
     "name": "Joe Deane"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1741.13,
     "Modern": 1588.03
+   },
+   "change": {
+    "Global": 21.66,
+    "Modern": 18.96
    }
   },
   {
    "cycle": 8,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "nicholas-talbot",
     "name": "Nicholas Talbot"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1491.46,
     "Modern": 1486.16
+   },
+   "change": {
+    "Global": -19.23,
+    "Modern": -19.24
    }
   },
   {
    "cycle": 8,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "steve-rebbechi",
     "name": "Steve Rebbechi"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1518.43,
     "Modern": 1571.34
+   },
+   "change": {
+    "Global": 17.61,
+    "Modern": 18.66
    }
   },
   {
    "cycle": 8,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "floptic",
     "name": "Ben Kleinsman-Leusink-Hill"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1587.53,
     "Modern": 1554.83
+   },
+   "change": {
+    "Global": -17.45,
+    "Modern": -17.98
    }
   },
   {
    "cycle": 8,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "wft",
     "name": "Benjamin Twemlow"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1597.76,
     "Modern": 1585.89
+   },
+   "change": {
+    "Global": -16.95,
+    "Modern": -17.09
    }
   },
   {
    "cycle": 8,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "alabaster",
     "name": "Ian Cormick"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1659.72,
     "Modern": 1519.0
+   },
+   "change": {
+    "Global": -15.52,
+    "Modern": -17.99
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "55th of 154",
+   "typical_finish": 35.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "55th of 154",
+   "typical_finish": 35.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

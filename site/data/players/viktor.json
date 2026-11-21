@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "45th",
    "field_size": 180,
+   "finish_share": 25.0,
    "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1538.0,
+    "Pioneer": 1535.25
+   },
    "deck": "Lotus Field Combo",
    "decklist": "https://melee.gg/Decklist/View/0726666b-55dc-4c17-b419-ae67276c9ca5"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 3,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "jleb",
     "name": "johneb"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500.0,
     "Pioneer": 1500.0
+   },
+   "change": {
+    "Global": 18.0,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 3,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "dallas",
     "name": "Dallas"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1518.0,
     "Pioneer": 1518.0
+   },
+   "change": {
+    "Global": -18.0,
+    "Pioneer": -18.0
    }
   },
   {
    "cycle": 3,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "hazzrd",
     "name": "RIley Jones"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1604.36,
     "Pioneer": 1536.66
+   },
+   "change": {
+    "Global": 19.9,
+    "Pioneer": 18.67
    }
   },
   {
    "cycle": 3,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "kjvt",
     "name": "Kyle Van Tienen"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1484.56,
     "Pioneer": 1484.56
+   },
+   "change": {
+    "Global": 17.36,
+    "Pioneer": 17.38
    }
   },
   {
    "cycle": 3,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "kenodvt",
     "name": "Keayn de Vries-Turnell"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1536.9,
     "Pioneer": 1536.92
+   },
+   "change": {
+    "Global": -18.01,
+    "Pioneer": -17.98
    }
   },
   {
    "cycle": 3,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "sillygoose",
     "name": "Gideon Hallam-walsh"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1408.19,
     "Pioneer": 1451.76
+   },
+   "change": {
+    "Global": 15.98,
+    "Pioneer": 16.79
    }
   },
   {
    "cycle": 3,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "planeswalkerzen",
     "name": "Zen Miyaji-Thorne"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1671.25,
     "Pioneer": 1536.91
+   },
+   "change": {
+    "Global": -15.53,
+    "Pioneer": -17.96
    }
   },
   {
    "cycle": 3,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "thebetterpierce",
     "name": "Pierce Tattersall"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1536.46,
     "Pioneer": 1536.33
+   },
+   "change": {
+    "Global": 18.31,
+    "Pioneer": 18.35
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "45th of 180",
+   "typical_finish": 25.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "45th of 180",
+   "typical_finish": 25.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

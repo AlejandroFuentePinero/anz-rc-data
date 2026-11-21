@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "205th",
    "field_size": 221,
+   "finish_share": 92.8,
    "record": "0-4-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 4
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1431.36,
+    "Pioneer": 1429.65
+   },
    "deck": "Rakdos Mice",
    "decklist": "https://melee.gg/Decklist/View/000e262f-aa9c-4360-814b-4f09bcb4e61c"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 7,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "bbotonline",
     "name": "Brandon Rashad"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1628.43,
     "Pioneer": 1608.44
+   },
+   "change": {
+    "Global": -15.67,
+    "Pioneer": -16.03
    }
   },
   {
    "cycle": 7,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "theazzyg",
     "name": "Aaron Gillis"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1483.88,
     "Pioneer": 1482.68
+   },
+   "change": {
+    "Global": -18.01,
+    "Pioneer": -18.02
    }
   },
   {
    "cycle": 7,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "awesomebrew",
     "name": "Awesomebrew"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1451.43,
     "Pioneer": 1448.57
+   },
+   "change": {
+    "Global": -18.27,
+    "Pioneer": -18.32
    }
   },
   {
    "cycle": 7,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "pingu",
     "name": "Ben Parker"
@@ -75,6 +104,10 @@
    "opponent_rating": {
     "Global": 1519.8,
     "Pioneer": 1448.51
+   },
+   "change": {
+    "Global": -16.69,
+    "Pioneer": -17.98
    }
   }
  ],
@@ -99,6 +132,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-4-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 4
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "205th of 221",
+   "typical_finish": 92.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "0-4-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 4
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "205th of 221",
+   "typical_finish": 92.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

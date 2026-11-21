@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "122nd",
    "field_size": 222,
+   "finish_share": 55.0,
    "record": "3-3-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 6
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1504.13,
+    "Standard": 1502.01
+   },
    "deck": "Gruul Aggro",
    "decklist": "https://melee.gg/Decklist/View/4138baa8-6a8e-4c53-a76a-b2d800570042"
   },
@@ -21,7 +34,20 @@
    "format": "Standard",
    "finish": "82nd",
    "field_size": 209,
+   "finish_share": 39.2,
    "record": "4-3-0",
+   "win_rate": {
+    "rate": 57.1,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1504.13,
+    "Standard": 1502.01
+   },
+   "rating_end": {
+    "Global": 1521.0,
+    "Standard": 1518.38
+   },
    "deck": "Izzet Combo",
    "decklist": "https://melee.gg/Decklist/View/a17f6349-8202-4329-8b2d-b40c006f45f4"
   }
@@ -30,6 +56,7 @@
   {
    "cycle": 9,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "cardsonbikes",
     "name": "Declan Roberts"
@@ -40,11 +67,16 @@
    "opponent_rating": {
     "Global": 1500.4,
     "Standard": 1500
+   },
+   "change": {
+    "Global": 18.01,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 9,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "fairjordans",
     "name": "Dylan Brown"
@@ -55,11 +87,16 @@
    "opponent_rating": {
     "Global": 1566.62,
     "Standard": 1518.0
+   },
+   "change": {
+    "Global": -17.11,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 9,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "kenodvt",
     "name": "Keayn de Vries-Turnell"
@@ -70,11 +107,16 @@
    "opponent_rating": {
     "Global": 1583.27,
     "Standard": 1568.81
+   },
+   "change": {
+    "Global": 19.5,
+    "Standard": 19.25
    }
   },
   {
    "cycle": 9,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "shannonyo",
     "name": "Shannon Dann"
@@ -85,11 +127,16 @@
    "opponent_rating": {
     "Global": 1520.7,
     "Standard": 1517.04
+   },
+   "change": {
+    "Global": 18.01,
+    "Standard": 17.96
    }
   },
   {
    "cycle": 9,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "tibbersau",
     "name": "Malcolm Zegveld"
@@ -100,11 +147,16 @@
    "opponent_rating": {
     "Global": 1627.85,
     "Standard": 1518.28
+   },
+   "change": {
+    "Global": -16.37,
+    "Standard": -18.35
    }
   },
   {
    "cycle": 9,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "trasmussen",
     "name": "Timothy Rasmussen"
@@ -115,11 +167,16 @@
    "opponent_rating": {
     "Global": 1527.47,
     "Standard": 1581.42
+   },
+   "change": {
+    "Global": -17.9,
+    "Standard": -16.86
    }
   },
   {
    "cycle": 11,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "angrydome",
     "name": "Nathan Burges"
@@ -130,11 +187,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Standard": 1500
+   },
+   "change": {
+    "Global": 17.92,
+    "Standard": 17.96
    }
   },
   {
    "cycle": 11,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "adamdunphy",
     "name": "AdamDunphy"
@@ -145,11 +207,16 @@
    "opponent_rating": {
     "Global": 1519.31,
     "Standard": 1518.0
+   },
+   "change": {
+    "Global": 17.95,
+    "Standard": 17.96
    }
   },
   {
    "cycle": 11,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "helloaragon",
     "name": "Oliver Wearing"
@@ -160,11 +227,16 @@
    "opponent_rating": {
     "Global": 1509.49,
     "Standard": 1536.78
+   },
+   "change": {
+    "Global": 17.44,
+    "Standard": 17.98
    }
   },
   {
    "cycle": 11,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "simon_l",
     "name": "Simon Linabury"
@@ -175,11 +247,16 @@
    "opponent_rating": {
     "Global": 1554.45,
     "Standard": 1554.31
+   },
+   "change": {
+    "Global": -18.05,
+    "Standard": -18.03
    }
   },
   {
    "cycle": 11,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "baileyparks",
     "name": "Bailey Parks"
@@ -190,11 +267,16 @@
    "opponent_rating": {
     "Global": 1533.93,
     "Standard": 1535.19
+   },
+   "change": {
+    "Global": -18.1,
+    "Standard": -18.05
    }
   },
   {
    "cycle": 11,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "eann",
     "name": "Eann"
@@ -205,11 +287,16 @@
    "opponent_rating": {
     "Global": 1518.13,
     "Standard": 1518.05
+   },
+   "change": {
+    "Global": 17.94,
+    "Standard": 17.97
    }
   },
   {
    "cycle": 11,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "avocado",
     "name": "San Dro"
@@ -220,6 +307,10 @@
    "opponent_rating": {
     "Global": 1526.77,
     "Standard": 1459.65
+   },
+   "change": {
+    "Global": -18.23,
+    "Standard": -19.42
    }
   }
  ],
@@ -252,6 +343,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "7-6-0",
+   "win_rate": {
+    "rate": 53.8,
+    "matches": 13
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "82nd of 209",
+   "typical_finish": 47.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
+  },
+  "Standard": {
+   "record": "7-6-0",
+   "win_rate": {
+    "rate": 53.8,
+    "matches": 13
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "82nd of 209",
+   "typical_finish": 47.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
   }
  }
 }

@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "84th",
    "field_size": 209,
+   "finish_share": 40.2,
    "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1512.2,
+    "Standard": 1505.42
+   },
    "deck": "Temur Aggro",
    "decklist": "https://melee.gg/Decklist/View/fe6101db-3814-4132-8fae-b40b01886714"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 11,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "jessewb",
     "name": "jessewb"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Standard": 1500
+   },
+   "change": {
+    "Global": -18.0,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 11,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "floyd",
     "name": "Floyd"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1503.54,
     "Standard": 1453.49
+   },
+   "change": {
+    "Global": 18.39,
+    "Standard": 17.48
    }
   },
   {
    "cycle": 11,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "apellosine",
     "name": "Apellosine"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1571.85,
     "Standard": 1572.34
+   },
+   "change": {
+    "Global": 19.3,
+    "Standard": 19.33
    }
   },
   {
    "cycle": 11,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "juzza",
     "name": "Justin Cheung"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1690.12,
     "Standard": 1609.42
+   },
+   "change": {
+    "Global": 21.08,
+    "Standard": 19.65
    }
   },
   {
    "cycle": 11,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "avocado",
     "name": "San Dro"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1524.2,
     "Standard": 1455.11
+   },
+   "change": {
+    "Global": -18.3,
+    "Standard": -19.52
    }
   },
   {
    "cycle": 11,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "bent",
     "name": "Ben Tudman"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1778.85,
     "Standard": 1731.52
+   },
+   "change": {
+    "Global": -13.42,
+    "Standard": -14.18
    }
   },
   {
    "cycle": 11,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "danso",
     "name": "Brett Girvan"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1651.42,
     "Standard": 1510.03
+   },
+   "change": {
+    "Global": 20.58,
+    "Standard": 18.1
    }
   },
   {
    "cycle": 11,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "myriad58",
     "name": "Myriad58"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1560.83,
     "Standard": 1553.91
+   },
+   "change": {
+    "Global": -17.43,
+    "Standard": -17.43
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "84th of 209",
+   "typical_finish": 40.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "84th of 209",
+   "typical_finish": 40.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

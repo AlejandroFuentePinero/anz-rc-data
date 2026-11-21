@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "146th",
    "field_size": 154,
+   "finish_share": 94.8,
    "record": "0-2-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 2
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1465.71,
+    "Modern": 1465.61
+   },
    "deck": "Temur Breach",
    "decklist": "https://melee.gg/Decklist/View/758b2ded-240c-44fc-a52d-f682eebf2a16"
   },
@@ -21,7 +34,20 @@
    "format": "Modern",
    "finish": "200th",
    "field_size": 212,
+   "finish_share": 94.3,
    "record": "0-2-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 2
+   },
+   "rating_start": {
+    "Global": 1465.71,
+    "Modern": 1465.61
+   },
+   "rating_end": {
+    "Global": 1431.75,
+    "Modern": 1430.17
+   },
    "deck": "Esper Goryo's Vengeance",
    "decklist": "https://melee.gg/Decklist/View/74a6b5ca-a72a-4276-80c2-b37f009ee79e"
   },
@@ -31,7 +57,20 @@
    "format": "Modern",
    "finish": "23rd",
    "field_size": 233,
+   "finish_share": 9.9,
    "record": "6-2-1",
+   "win_rate": {
+    "rate": 75.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1431.75,
+    "Modern": 1430.17
+   },
+   "rating_end": {
+    "Global": 1512.97,
+    "Modern": 1512.32
+   },
    "deck": "Golgari Necro",
    "decklist": "https://melee.gg/Decklist/View/d37859ff-bbb6-4c8f-a375-b4ec006e16c4"
   }
@@ -40,6 +79,7 @@
   {
    "cycle": 8,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "mace20",
     "name": "Max de Kievith"
@@ -50,11 +90,16 @@
    "opponent_rating": {
     "Global": 1433.73,
     "Modern": 1464.0
+   },
+   "change": {
+    "Global": -19.21,
+    "Modern": -18.66
    }
   },
   {
    "cycle": 8,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "swiftclaw",
     "name": "James Arthur"
@@ -65,11 +110,16 @@
    "opponent_rating": {
     "Global": 1641.99,
     "Modern": 1606.02
+   },
+   "change": {
+    "Global": -15.08,
+    "Modern": -15.74
    }
   },
   {
    "cycle": 10,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "d4rk0dse",
     "name": "d4rk0dse"
@@ -80,11 +130,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -17.37,
+    "Modern": -17.37
    }
   },
   {
    "cycle": 10,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "trasmussen",
     "name": "Timothy Rasmussen"
@@ -95,11 +150,16 @@
    "opponent_rating": {
     "Global": 1526.04,
     "Modern": 1444.49
+   },
+   "change": {
+    "Global": -16.59,
+    "Modern": -18.07
    }
   },
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "exs1n",
     "name": "David Brunton"
@@ -110,11 +170,16 @@
    "opponent_rating": {
     "Global": 1554.61,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 20.23,
+    "Modern": 19.27
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "slzzzpy",
     "name": "Danny Thai"
@@ -125,11 +190,16 @@
    "opponent_rating": {
     "Global": 1483.59,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": 0.58,
+    "Modern": 1.25
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "1drakos1",
     "name": "1Drakos1"
@@ -140,11 +210,16 @@
    "opponent_rating": {
     "Global": 1424.48,
     "Modern": 1476.3
+   },
+   "change": {
+    "Global": 17.49,
+    "Modern": 18.47
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "floptic",
     "name": "Ben Kleinsman-Leusink-Hill"
@@ -155,11 +230,16 @@
    "opponent_rating": {
     "Global": 1601.2,
     "Modern": 1585.43
+   },
+   "change": {
+    "Global": -15.62,
+    "Modern": -15.89
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "syncopatico",
     "name": "Timothy Sandford"
@@ -170,11 +250,16 @@
    "opponent_rating": {
     "Global": 1555.59,
     "Modern": 1518.94
+   },
+   "change": {
+    "Global": 19.84,
+    "Modern": 19.2
    }
   },
   {
    "cycle": 13,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "mike03yap",
     "name": "Joe Michael Caragan"
@@ -185,11 +270,16 @@
    "opponent_rating": {
     "Global": 1402.3,
     "Modern": 1489.2
+   },
+   "change": {
+    "Global": -19.31,
+    "Modern": -17.69
    }
   },
   {
    "cycle": 13,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "wakeem",
     "name": "Luke Russell"
@@ -200,11 +290,16 @@
    "opponent_rating": {
     "Global": 1523.39,
     "Modern": 1523.96
+   },
+   "change": {
+    "Global": 19.25,
+    "Modern": 19.26
    }
   },
   {
    "cycle": 13,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "jdh1",
     "name": "JD Hawke"
@@ -215,11 +310,16 @@
    "opponent_rating": {
     "Global": 1443.69,
     "Modern": 1503.57
+   },
+   "change": {
+    "Global": 17.44,
+    "Modern": 18.54
    }
   },
   {
    "cycle": 13,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "rk9",
     "name": "Jacob Golding"
@@ -230,6 +330,10 @@
    "opponent_rating": {
     "Global": 1676.26,
     "Modern": 1589.15
+   },
+   "change": {
+    "Global": 21.33,
+    "Modern": 19.76
    }
   }
  ],
@@ -270,6 +374,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "6-6-1",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 12
+   },
+   "rcs": 3,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "23rd of 233",
+   "typical_finish": 94.3,
+   "top_8_rate": 0.0,
+   "rank": 164,
+   "above": 45.5,
+   "rcs_needed": null
+  },
+  "Modern": {
+   "record": "6-6-1",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 12
+   },
+   "rcs": 3,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "23rd of 233",
+   "typical_finish": 94.3,
+   "top_8_rate": 0.0,
+   "rank": 57,
+   "above": 35.2,
+   "rcs_needed": null
   }
  }
 }

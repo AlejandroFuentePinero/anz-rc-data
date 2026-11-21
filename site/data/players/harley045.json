@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "121st",
    "field_size": 209,
+   "finish_share": 57.9,
    "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1463.59,
+    "Standard": 1463.32
+   },
    "deck": "Izzet Spellementals",
    "decklist": "https://melee.gg/Decklist/View/1851f7a7-b9cf-4195-9aaa-b40b00c04ca1"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 11,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "dialect",
     "name": "Joey Brautigam"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1569.98,
     "Standard": 1463.95
+   },
+   "change": {
+    "Global": 19.27,
+    "Standard": 17.34
    }
   },
   {
    "cycle": 11,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "samird",
     "name": "SamirD"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1447.23,
     "Standard": 1499.14
+   },
+   "change": {
+    "Global": 16.69,
+    "Standard": 17.67
    }
   },
   {
    "cycle": 11,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "cynthia",
     "name": "Cynthiaaa"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1539.49,
     "Standard": 1536.28
+   },
+   "change": {
+    "Global": -17.94,
+    "Standard": -17.98
    }
   },
   {
    "cycle": 11,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "samcosmo",
     "name": "Samuel Taubman"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1484.31,
     "Standard": 1551.8
+   },
+   "change": {
+    "Global": -18.61,
+    "Standard": -17.37
    }
   },
   {
    "cycle": 11,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "chamm38",
     "name": "Chamm38"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1503.92,
     "Standard": 1501.7
+   },
+   "change": {
+    "Global": -17.92,
+    "Standard": -17.96
    }
   },
   {
    "cycle": 11,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "jamzone_",
     "name": "JAMzone_"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1466.44,
     "Standard": 1428.4
+   },
+   "change": {
+    "Global": -18.27,
+    "Standard": -18.97
    }
   },
   {
    "cycle": 11,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "snowman87",
     "name": "Snowman87"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1471.15,
     "Standard": 1487.97
+   },
+   "change": {
+    "Global": -17.86,
+    "Standard": -17.54
    }
   },
   {
    "cycle": 11,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "dargi",
     "name": "Dargi"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1457.89,
     "Standard": 1452.23
+   },
+   "change": {
+    "Global": 18.23,
+    "Standard": 18.13
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "121st of 209",
+   "typical_finish": 57.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "121st of 209",
+   "typical_finish": 57.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

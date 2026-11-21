@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "113th",
    "field_size": 188,
+   "finish_share": 60.1,
    "record": "2-3-1",
+   "win_rate": {
+    "rate": 40.0,
+    "matches": 5
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1484.35,
+    "Standard": 1483.31
+   },
    "deck": "Izzet Spellementals",
    "decklist": "https://melee.gg/Decklist/View/a317bbf4-0089-4184-a91e-b45200add127"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 12,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "fairjordans",
     "name": "Dylan Brown"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1560.99,
     "Standard": 1517.32
+   },
+   "change": {
+    "Global": 19.11,
+    "Standard": 18.32
    }
   },
   {
    "cycle": 12,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "teej42",
     "name": "teej42"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1522.51,
     "Standard": 1517.67
+   },
+   "change": {
+    "Global": -17.94,
+    "Standard": -18.01
    }
   },
   {
    "cycle": 12,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "elterrentino",
     "name": "Elterrentino"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1500.32,
     "Standard": 1501.08
+   },
+   "change": {
+    "Global": 17.98,
+    "Standard": 18.01
    }
   },
   {
    "cycle": 12,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "xanderrichardson",
     "name": "XanderRichardson"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1526.57,
     "Standard": 1520.96
+   },
+   "change": {
+    "Global": -17.86,
+    "Standard": -17.95
    }
   },
   {
    "cycle": 12,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "cardgamebooy",
     "name": "Cardgamebooy"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1507.78,
     "Standard": 1502.74
+   },
+   "change": {
+    "Global": -17.88,
+    "Standard": -17.96
    }
   },
   {
    "cycle": 12,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "apellosine",
     "name": "Apellosine"
@@ -105,6 +144,10 @@
    "opponent_rating": {
     "Global": 1534.67,
     "Standard": 1531.88
+   },
+   "change": {
+    "Global": 0.93,
+    "Standard": 0.9
    }
   }
  ],
@@ -129,6 +172,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-3-1",
+   "win_rate": {
+    "rate": 40.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "113th of 188",
+   "typical_finish": 60.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "2-3-1",
+   "win_rate": {
+    "rate": 40.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "113th of 188",
+   "typical_finish": 60.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

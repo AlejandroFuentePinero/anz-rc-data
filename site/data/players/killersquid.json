@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "52nd",
    "field_size": 180,
+   "finish_share": 28.9,
    "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1535.89,
+    "Pioneer": 1535.77
+   },
    "deck": "Rakdos Midrange",
    "decklist": "https://melee.gg/Decklist/View/bc51cf0b-a17b-4391-a053-2e5db2c58179"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 3,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "samloy",
     "name": "Samuel Loy"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1464.0,
     "Pioneer": 1464.0
+   },
+   "change": {
+    "Global": -18.66,
+    "Pioneer": -18.66
    }
   },
   {
    "cycle": 3,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "rvd007",
     "name": "Rhys Dalli"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1481.95,
     "Pioneer": 1482.65
+   },
+   "change": {
+    "Global": 18.01,
+    "Pioneer": 18.02
    }
   },
   {
    "cycle": 3,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "beardyhd",
     "name": "Samuel Beard"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1500.0,
     "Pioneer": 1500.0
+   },
+   "change": {
+    "Global": 18.01,
+    "Pioneer": 18.01
    }
   },
   {
    "cycle": 3,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "fairjordans",
     "name": "Dylan Brown"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1552.11,
     "Pioneer": 1552.08
+   },
+   "change": {
+    "Global": 18.63,
+    "Pioneer": 18.63
    }
   },
   {
    "cycle": 3,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "tylervisser",
     "name": "Tyler Visser"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1507.55,
     "Pioneer": 1503.15
+   },
+   "change": {
+    "Global": -18.52,
+    "Pioneer": -18.6
    }
   },
   {
    "cycle": 3,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "rovilleson",
     "name": "Rovilleson Lucero"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1536.49,
     "Pioneer": 1536.29
+   },
+   "change": {
+    "Global": -17.65,
+    "Pioneer": -17.66
    }
   },
   {
    "cycle": 3,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "nachiroquai",
     "name": "Ignacio Carrasco"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1501.59,
     "Pioneer": 1499.69
+   },
+   "change": {
+    "Global": 18.03,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 3,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "dallas",
     "name": "Dallas"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1519.45,
     "Pioneer": 1518.63
+   },
+   "change": {
+    "Global": 18.03,
+    "Pioneer": 18.02
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "52nd of 180",
+   "typical_finish": 28.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "52nd of 180",
+   "typical_finish": 28.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

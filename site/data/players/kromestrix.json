@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "166th",
    "field_size": 212,
+   "finish_share": 78.3,
    "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1464.89,
+    "Modern": 1464.29
+   },
    "deck": "W-U-R-G Domain Zoo",
    "decklist": "https://melee.gg/Decklist/View/18661a88-449c-44db-aa5d-b37c000e51bb"
   },
@@ -21,7 +34,20 @@
    "format": "Modern",
    "finish": "125th",
    "field_size": 233,
+   "finish_share": 53.6,
    "record": "3-4-0",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1464.89,
+    "Modern": 1464.29
+   },
+   "rating_end": {
+    "Global": 1453.79,
+    "Modern": 1451.6
+   },
    "deck": "Mono-Green Broodscale",
    "decklist": "https://melee.gg/Decklist/View/e0295360-403a-41b9-835b-b4eb00ccd066"
   }
@@ -30,6 +56,7 @@
   {
    "cycle": 10,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "dinok",
     "name": "Dino Kucukovic"
@@ -40,11 +67,16 @@
    "opponent_rating": {
     "Global": 1377.89,
     "Modern": 1464.0
+   },
+   "change": {
+    "Global": 15.78,
+    "Modern": 17.34
    }
   },
   {
    "cycle": 10,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "jleb",
     "name": "johneb"
@@ -55,11 +87,16 @@
    "opponent_rating": {
     "Global": 1528.76,
     "Modern": 1552.72
+   },
+   "change": {
+    "Global": -17.76,
+    "Modern": -17.35
    }
   },
   {
    "cycle": 10,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "maxiebon1234",
     "name": "maxiebon1234"
@@ -70,11 +107,16 @@
    "opponent_rating": {
     "Global": 1560.12,
     "Modern": 1517.36
+   },
+   "change": {
+    "Global": -16.87,
+    "Modern": -17.68
    }
   },
   {
    "cycle": 10,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "rk9",
     "name": "Jacob Golding"
@@ -85,11 +127,16 @@
    "opponent_rating": {
     "Global": 1576.49,
     "Modern": 1481.7
+   },
+   "change": {
+    "Global": -16.27,
+    "Modern": -18.01
    }
   },
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "jezza",
     "name": "Jezza"
@@ -100,11 +147,16 @@
    "opponent_rating": {
     "Global": 1478.87,
     "Modern": 1471.25
+   },
+   "change": {
+    "Global": 18.26,
+    "Modern": 18.13
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "caylem01",
     "name": "Caylem01"
@@ -115,11 +167,16 @@
    "opponent_rating": {
     "Global": 1483.68,
     "Modern": 1481.74
+   },
+   "change": {
+    "Global": -17.99,
+    "Modern": -18.01
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "bealewithit",
     "name": "Bealewithit"
@@ -130,11 +187,16 @@
    "opponent_rating": {
     "Global": 1501.22,
     "Modern": 1500.94
+   },
+   "change": {
+    "Global": 18.66,
+    "Modern": 18.67
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "ignismorgan",
     "name": "IgnisMorgan"
@@ -145,11 +207,16 @@
    "opponent_rating": {
     "Global": 1481.5,
     "Modern": 1520.07
+   },
+   "change": {
+    "Global": -18.04,
+    "Modern": -17.33
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "jayvdh",
     "name": "JayVDH"
@@ -160,11 +227,16 @@
    "opponent_rating": {
     "Global": 1583.45,
     "Modern": 1586.61
+   },
+   "change": {
+    "Global": 20.14,
+    "Modern": 20.19
    }
   },
   {
    "cycle": 13,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "ethanmtg",
     "name": "Ethan Bird"
@@ -175,11 +247,16 @@
    "opponent_rating": {
     "Global": 1630.58,
     "Modern": 1598.64
+   },
+   "change": {
+    "Global": -15.38,
+    "Modern": -15.95
    }
   },
   {
    "cycle": 13,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "goscar",
     "name": "Oscar Gray"
@@ -190,6 +267,10 @@
    "opponent_rating": {
     "Global": 1539.73,
     "Modern": 1448.58
+   },
+   "change": {
+    "Global": -16.74,
+    "Modern": -18.39
    }
   }
  ],
@@ -222,6 +303,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-7-0",
+   "win_rate": {
+    "rate": 36.4,
+    "matches": 11
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "125th of 233",
+   "typical_finish": 66.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
+  },
+  "Modern": {
+   "record": "4-7-0",
+   "win_rate": {
+    "rate": 36.4,
+    "matches": 11
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "125th of 233",
+   "typical_finish": 66.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
   }
  }
 }

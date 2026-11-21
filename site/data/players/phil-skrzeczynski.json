@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "144th",
    "field_size": 180,
+   "finish_share": 80.0,
    "record": "1-6-1",
+   "win_rate": {
+    "rate": 14.3,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1409.08,
+    "Pioneer": 1407.06
+   },
    "deck": "Azorius Control",
    "decklist": "https://melee.gg/Decklist/View/74074ce4-4f73-4eea-a8bd-39f094b790b4"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 3,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "planeswalkerzen",
     "name": "Zen Miyaji-Thorne"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1649.14,
     "Pioneer": 1500.31
+   },
+   "change": {
+    "Global": -15.3,
+    "Pioneer": -17.99
    }
   },
   {
    "cycle": 3,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "charr",
     "name": "Jacques vanEeden"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1483.18,
     "Pioneer": 1482.98
+   },
+   "change": {
+    "Global": -0.03,
+    "Pioneer": 0.02
    }
   },
   {
    "cycle": 3,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "jleb",
     "name": "johneb"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1482.0,
     "Pioneer": 1482.0
+   },
+   "change": {
+    "Global": 17.95,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 3,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "weirdperson",
     "name": "Carl Frankel"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1473.95,
     "Pioneer": 1465.94
+   },
+   "change": {
+    "Global": -18.52,
+    "Pioneer": -18.62
    }
   },
   {
    "cycle": 3,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "vincentc",
     "name": "VincentC"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1389.6,
     "Pioneer": 1416.27
+   },
+   "change": {
+    "Global": -19.72,
+    "Pioneer": -19.19
    }
   },
   {
    "cycle": 3,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "peterkeenan",
     "name": "PeterKeenan"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1481.48,
     "Pioneer": 1482.07
+   },
+   "change": {
+    "Global": -17.69,
+    "Pioneer": -17.64
    }
   },
   {
    "cycle": 3,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "raiyzd",
     "name": "RAiYzd"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1409.84,
     "Pioneer": 1409.73
+   },
+   "change": {
+    "Global": -18.67,
+    "Pioneer": -18.64
    }
   },
   {
    "cycle": 3,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "shinypants",
     "name": "Gordon Chan"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1376.39,
     "Pioneer": 1377.84
+   },
+   "change": {
+    "Global": -18.94,
+    "Pioneer": -18.88
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-6-1",
+   "win_rate": {
+    "rate": 14.3,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "144th of 180",
+   "typical_finish": 80.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "1-6-1",
+   "win_rate": {
+    "rate": 14.3,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "144th of 180",
+   "typical_finish": 80.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "90th",
    "field_size": 228,
+   "finish_share": 39.5,
    "record": "4-5-0",
+   "win_rate": {
+    "rate": 44.4,
+    "matches": 9
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1481.88,
+    "Modern": 1482.31
+   },
    "deck": "Living End",
    "decklist": "https://melee.gg/Decklist/View/6ee82dda-c0f5-4a54-83e9-9c9b967ffa13"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 5,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "ptbenny",
     "name": "PTBenny"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "sam_lewin",
     "name": "Sam_Lewin"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1519.91,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": -17.97,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "beardyhd",
     "name": "Samuel Beard"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1467.12,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": 17.4,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "dallas",
     "name": "Dallas"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1523.35,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": -17.89,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "lifi",
     "name": "Liam Fisher"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1504.02,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": 18.08,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "jamesdoust",
     "name": "James Doust"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1517.93,
     "Modern": 1517.68
+   },
+   "change": {
+    "Global": -17.99,
+    "Modern": -18.01
    }
   },
   {
    "cycle": 5,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "rowanmillers",
     "name": "Rowan Millers"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1457.92,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": -18.76,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "numerated",
     "name": "Ewan Smith"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1503.05,
     "Modern": 1499.66
+   },
+   "change": {
+    "Global": 18.4,
+    "Modern": 18.32
    }
   },
   {
    "cycle": 5,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "andrewd2",
     "name": "AndrewD2"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1532.24,
     "Modern": 1500.01
+   },
+   "change": {
+    "Global": -17.4,
+    "Modern": -18.01
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-5-0",
+   "win_rate": {
+    "rate": 44.4,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "90th of 228",
+   "typical_finish": 39.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "4-5-0",
+   "win_rate": {
+    "rate": 44.4,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "90th of 228",
+   "typical_finish": 39.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

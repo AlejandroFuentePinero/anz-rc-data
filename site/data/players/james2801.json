@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "177th",
    "field_size": 209,
+   "finish_share": 84.7,
    "record": "1-4-0",
+   "win_rate": {
+    "rate": 20.0,
+    "matches": 5
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1450.35,
+    "Standard": 1446.66
+   },
    "deck": "Boros Tokens",
    "decklist": "https://melee.gg/Decklist/View/8a62970b-ebf9-4439-a51e-b40c0027c625"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 11,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "sniperhood",
     "name": "Sniperhood"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1499.44,
     "Standard": 1500
+   },
+   "change": {
+    "Global": -18.01,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 11,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "matteobuckley",
     "name": "Matteo Buckley"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1563.25,
     "Standard": 1483.94
+   },
+   "change": {
+    "Global": -16.52,
+    "Standard": -17.96
    }
   },
   {
    "cycle": 11,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "safetosay",
     "name": "SafeToSay"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1466.44,
     "Standard": 1463.05
+   },
+   "change": {
+    "Global": -17.98,
+    "Standard": -18.02
    }
   },
   {
    "cycle": 11,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "andrewd2",
     "name": "AndrewD2"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1627.12,
     "Standard": 1538.01
+   },
+   "change": {
+    "Global": 21.24,
+    "Standard": 19.67
    }
   },
   {
    "cycle": 11,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "jamzone_",
     "name": "JAMzone_"
@@ -90,6 +124,10 @@
    "opponent_rating": {
     "Global": 1448.06,
     "Standard": 1409.37
+   },
+   "change": {
+    "Global": -18.38,
+    "Standard": -19.03
    }
   }
  ],
@@ -114,6 +152,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-4-0",
+   "win_rate": {
+    "rate": 20.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "177th of 209",
+   "typical_finish": 84.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "1-4-0",
+   "win_rate": {
+    "rate": 20.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "177th of 209",
+   "typical_finish": 84.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

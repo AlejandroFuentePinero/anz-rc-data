@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "90th",
    "field_size": 156,
+   "finish_share": 57.7,
    "record": "3-4-0",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1487.14,
+    "Pioneer": 1484.85
+   },
    "deck": "Rakdos Midrange",
    "decklist": "https://melee.gg/Decklist/View/6e0c4ff1-3dcf-45ec-b7cc-b4c4d411aec3"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 4,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "alosaur",
     "name": "Alex Humbley"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1583.5,
     "Pioneer": 1602.58
+   },
+   "change": {
+    "Global": -16.48,
+    "Pioneer": -16.14
    }
   },
   {
    "cycle": 4,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "trasmussen",
     "name": "Timothy Rasmussen"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1576.93,
     "Pioneer": 1549.49
+   },
+   "change": {
+    "Global": -16.3,
+    "Pioneer": -16.8
    }
   },
   {
    "cycle": 4,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "thebetterpierce",
     "name": "Pierce Tattersall"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1481.85,
     "Pioneer": 1481.64
+   },
+   "change": {
+    "Global": 18.27,
+    "Pioneer": 18.27
    }
   },
   {
    "cycle": 4,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "nicholas-talbot",
     "name": "Nicholas Talbot"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1431.62,
     "Pioneer": 1431.57
+   },
+   "change": {
+    "Global": 17.02,
+    "Pioneer": 17.02
    }
   },
   {
    "cycle": 4,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "planeswalkerzen",
     "name": "Zen Miyaji-Thorne"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1656.21,
     "Pioneer": 1535.34
+   },
+   "change": {
+    "Global": 20.78,
+    "Pioneer": 18.6
    }
   },
   {
    "cycle": 4,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "allan_begovic",
     "name": "Allan Begovic"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1516.42,
     "Pioneer": 1516.8
+   },
+   "change": {
+    "Global": -18.13,
+    "Pioneer": -18.08
    }
   },
   {
    "cycle": 4,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "kierantierney",
     "name": "Kieran Tierney"
@@ -120,6 +164,10 @@
    "opponent_rating": {
     "Global": 1503.76,
     "Pioneer": 1501.6
+   },
+   "change": {
+    "Global": -18.03,
+    "Pioneer": -18.02
    }
   }
  ],
@@ -144,6 +192,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-4-0",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "90th of 156",
+   "typical_finish": 57.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "3-4-0",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "90th of 156",
+   "typical_finish": 57.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

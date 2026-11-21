@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "52nd",
    "field_size": 209,
+   "finish_share": 24.9,
    "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1543.92,
+    "Standard": 1538.65
+   },
    "deck": "Simic Rhythm",
    "decklist": "https://melee.gg/Decklist/View/f68e9928-65e0-4f6c-942c-b40c00297ae5"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 11,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "joshpedley",
     "name": "JoshPedley"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1376.91,
     "Standard": 1462.25
+   },
+   "change": {
+    "Global": 15.77,
+    "Standard": 17.31
    }
   },
   {
    "cycle": 11,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "ez_clap",
     "name": "Henry Sams"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1766.72,
     "Standard": 1470.42
+   },
+   "change": {
+    "Global": -13.52,
+    "Standard": -18.85
    }
   },
   {
    "cycle": 11,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "nguqn004",
     "name": "nguqn004"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1502.19,
     "Standard": 1501.34
+   },
+   "change": {
+    "Global": -18.0,
+    "Standard": -17.95
    }
   },
   {
    "cycle": 11,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "lostwanderer",
     "name": "Dillon Kikkawa"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1633.93,
     "Standard": 1493.88
+   },
+   "change": {
+    "Global": 20.71,
+    "Standard": 18.24
    }
   },
   {
    "cycle": 11,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "noelletrippett",
     "name": "Noelle Trippett"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1500.08,
     "Standard": 1500.07
+   },
+   "change": {
+    "Global": 17.91,
+    "Standard": 18.02
    }
   },
   {
    "cycle": 11,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "shadowhunterjb",
     "name": "ShadowhunterJB"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1524.99,
     "Standard": 1521.66
+   },
+   "change": {
+    "Global": 18.04,
+    "Standard": 18.09
    }
   },
   {
    "cycle": 11,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "bent",
     "name": "Ben Tudman"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1792.27,
     "Standard": 1745.7
+   },
+   "change": {
+    "Global": -13.51,
+    "Standard": -14.21
    }
   },
   {
    "cycle": 11,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "bradjohn94",
     "name": "Brad Lewis-Jonns"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1446.12,
     "Standard": 1520.49
+   },
+   "change": {
+    "Global": 16.52,
+    "Standard": 18.0
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "52nd of 209",
+   "typical_finish": 24.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "52nd of 209",
+   "typical_finish": 24.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

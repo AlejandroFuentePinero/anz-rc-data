@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "41st",
    "field_size": 154,
+   "finish_share": 26.6,
    "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1543.44,
+    "Modern": 1538.6
+   },
    "deck": "Eldrazi Ramp",
    "decklist": "https://melee.gg/Decklist/View/563ed79b-321b-44e0-89d8-34bcd1963585"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 8,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "jleb",
     "name": "johneb"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1513.47,
     "Modern": 1554.0
+   },
+   "change": {
+    "Global": -17.75,
+    "Modern": -17.02
    }
   },
   {
    "cycle": 8,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "argtigg",
     "name": "Fernando Arriagada"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1653.42,
     "Modern": 1569.71
+   },
+   "change": {
+    "Global": 21.09,
+    "Modern": 19.58
    }
   },
   {
    "cycle": 8,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "zach88",
     "name": "Zach McDannold"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1499.32,
     "Modern": 1499.98
+   },
+   "change": {
+    "Global": 17.93,
+    "Modern": 17.95
    }
   },
   {
    "cycle": 8,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "jimmy1",
     "name": "James Moore"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1700.63,
     "Modern": 1500.99
+   },
+   "change": {
+    "Global": 21.24,
+    "Modern": 17.64
    }
   },
   {
    "cycle": 8,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "christong0203",
     "name": "Christopher Tong"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1537.31,
     "Modern": 1536.67
+   },
+   "change": {
+    "Global": -18.09,
+    "Modern": -18.03
    }
   },
   {
    "cycle": 8,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "jawsh",
     "name": "Jawsh"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1492.02,
     "Modern": 1519.83
+   },
+   "change": {
+    "Global": 17.41,
+    "Modern": 17.99
    }
   },
   {
    "cycle": 8,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "kenodvt",
     "name": "Keayn de Vries-Turnell"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1627.53,
     "Modern": 1519.62
+   },
+   "change": {
+    "Global": 19.56,
+    "Modern": 17.66
    }
   },
   {
    "cycle": 8,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "sam_lewin",
     "name": "Sam_Lewin"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1564.69,
     "Modern": 1600.44
+   },
+   "change": {
+    "Global": -17.94,
+    "Modern": -17.19
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "41st of 154",
+   "typical_finish": 26.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "41st of 154",
+   "typical_finish": 26.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

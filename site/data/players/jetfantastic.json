@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "21st",
    "field_size": 168,
+   "finish_share": 12.5,
    "record": "5-1-2",
+   "win_rate": {
+    "rate": 83.3,
+    "matches": 6
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1571.29,
+    "Standard": 1570.76
+   },
    "deck": "Boros Convoke",
    "decklist": "https://melee.gg/Decklist/View/0b99103a-054f-447b-8f73-a2ac048823df"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 6,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "nino111",
     "name": "Nino Manera"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1513.71,
     "Standard": 1482.0
+   },
+   "change": {
+    "Global": 0.25,
+    "Standard": -0.33
    }
   },
   {
    "cycle": 6,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "goscar",
     "name": "Oscar Gray"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1439.12,
     "Standard": 1464.33
+   },
+   "change": {
+    "Global": 16.89,
+    "Standard": 17.36
    }
   },
   {
    "cycle": 6,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "jinp",
     "name": "JinP"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1573.58,
     "Standard": 1517.36
+   },
+   "change": {
+    "Global": 19.03,
+    "Standard": 18.01
    }
   },
   {
    "cycle": 6,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "jarronp",
     "name": "JarronP"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1532.26,
     "Standard": 1534.78
+   },
+   "change": {
+    "Global": 17.93,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 6,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "urisklyerg",
     "name": "Caleb House"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1552.19,
     "Standard": 1553.35
+   },
+   "change": {
+    "Global": -18.03,
+    "Standard": -17.99
    }
   },
   {
    "cycle": 6,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "benhawke",
     "name": "BenHawke"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1538.59,
     "Standard": 1536.01
+   },
+   "change": {
+    "Global": 18.05,
+    "Standard": 18.02
    }
   },
   {
    "cycle": 6,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "samloy",
     "name": "Samuel Loy"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1525.63,
     "Standard": 1553.39
+   },
+   "change": {
+    "Global": -0.52,
+    "Standard": 0.01
    }
   },
   {
    "cycle": 6,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "carps",
     "name": "Samuel Carpenter"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1537.56,
     "Standard": 1536.96
+   },
+   "change": {
+    "Global": 17.71,
+    "Standard": 17.71
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "5-1-2",
+   "win_rate": {
+    "rate": 83.3,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "21st of 168",
+   "typical_finish": 12.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "5-1-2",
+   "win_rate": {
+    "rate": 83.3,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "21st of 168",
+   "typical_finish": 12.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

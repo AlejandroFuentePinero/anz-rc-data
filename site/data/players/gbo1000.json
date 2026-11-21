@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "82nd",
    "field_size": 233,
+   "finish_share": 35.2,
    "record": "4-4-1",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1508.96,
+    "Modern": 1501.46
+   },
    "deck": "Gruul",
    "decklist": "https://melee.gg/Decklist/View/8ee56672-04dc-4634-a235-b4ec01707e14"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "jaaayy",
     "name": "Jaaayy"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "halumii",
     "name": "Charlie Boyd"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1434.19,
     "Modern": 1500.04
+   },
+   "change": {
+    "Global": 16.47,
+    "Modern": 17.67
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "viraz",
     "name": "Viraz"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1604.75,
     "Modern": 1505.46
+   },
+   "change": {
+    "Global": 19.28,
+    "Modern": 17.45
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "solarion",
     "name": "Scott Aitchison"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1711.38,
     "Modern": 1559.5
+   },
+   "change": {
+    "Global": -15.15,
+    "Modern": -17.88
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "beardyhd",
     "name": "Samuel Beard"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1555.83,
     "Modern": 1502.22
+   },
+   "change": {
+    "Global": 18.31,
+    "Modern": 17.4
    }
   },
   {
    "cycle": 13,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "pingu",
     "name": "Ben Parker"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1656.52,
     "Modern": 1587.63
+   },
+   "change": {
+    "Global": 1.81,
+    "Modern": 0.64
    }
   },
   {
    "cycle": 13,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "lavaridge",
     "name": "James Larsen-Scott"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1691.01,
     "Modern": 1652.29
+   },
+   "change": {
+    "Global": -15.6,
+    "Modern": -16.2
    }
   },
   {
    "cycle": 13,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "rk9",
     "name": "Jacob Golding"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1660.39,
     "Modern": 1571.78
+   },
+   "change": {
+    "Global": -15.87,
+    "Modern": -17.37
    }
   },
   {
    "cycle": 13,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "caylem01",
     "name": "Caylem01"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1510.89,
     "Modern": 1505.88
+   },
+   "change": {
+    "Global": -18.3,
+    "Modern": -18.25
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-4-1",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "82nd of 233",
+   "typical_finish": 35.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "4-4-1",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "82nd of 233",
+   "typical_finish": 35.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

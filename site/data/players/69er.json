@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "101st",
    "field_size": 132,
+   "finish_share": 76.5,
    "record": "1-2-1",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 3
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1481.39,
+    "Standard": 1482.0
+   },
    "deck": "Rakdos Midrange",
    "decklist": "https://melee.gg/Decklist/View/e5d36c75-9e84-448f-b914-da195a6d2048"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 2,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "planeswalkerzen",
     "name": "Zen Miyaji-Thorne"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500.31,
     "Standard": 1500
+   },
+   "change": {
+    "Global": 0.01,
+    "Standard": 0.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "calmmirror",
     "name": "Samuel Maher"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1464.96,
     "Standard": 1500.0
+   },
+   "change": {
+    "Global": 17.36,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "sgtberry",
     "name": "Liam Newbery"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1517.99,
     "Standard": 1518.0
+   },
+   "change": {
+    "Global": -17.99,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "trevor_georgesz",
     "name": "Trevor_Georgesz"
@@ -75,6 +104,10 @@
    "opponent_rating": {
     "Global": 1500.05,
     "Standard": 1500.0
+   },
+   "change": {
+    "Global": -17.99,
+    "Standard": -18.0
    }
   }
  ],
@@ -99,6 +132,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-2-1",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "101st of 132",
+   "typical_finish": 76.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "1-2-1",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "101st of 132",
+   "typical_finish": 76.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "69th",
    "field_size": 209,
+   "finish_share": 33.0,
    "record": "4-3-1",
+   "win_rate": {
+    "rate": 57.1,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1518.85,
+    "Standard": 1519.48
+   },
    "deck": "Orzhov Control",
    "decklist": "https://melee.gg/Decklist/View/132dd45f-666d-48d2-8a7e-b40c0071b840"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 11,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "raydric",
     "name": "Jose Gabriel Hilario"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1649.22,
     "Standard": 1594.44
+   },
+   "change": {
+    "Global": -15.3,
+    "Standard": -16.28
    }
   },
   {
    "cycle": 11,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "kjvt",
     "name": "Kyle Van Tienen"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1427.37,
     "Standard": 1429.05
+   },
+   "change": {
+    "Global": -19.04,
+    "Standard": -19.0
    }
   },
   {
    "cycle": 11,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "goscar",
     "name": "Oscar Gray"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1476.43,
     "Standard": 1517.48
+   },
+   "change": {
+    "Global": -17.8,
+    "Standard": -17.04
    }
   },
   {
    "cycle": 11,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "e9",
     "name": "Jeremy Mackney"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1466.75,
     "Standard": 1476.94
+   },
+   "change": {
+    "Global": 18.34,
+    "Standard": 18.53
    }
   },
   {
    "cycle": 11,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "popalotgnome",
     "name": "Popalotgnome"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1468.76,
     "Standard": 1463.73
+   },
+   "change": {
+    "Global": 18.05,
+    "Standard": 17.95
    }
   },
   {
    "cycle": 11,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "dimbledore",
     "name": "Ben Warren"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1452.33,
     "Standard": 1449.74
+   },
+   "change": {
+    "Global": -0.58,
+    "Standard": -0.63
    }
   },
   {
    "cycle": 11,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "pureparzival",
     "name": "PureParzival"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1494.2,
     "Standard": 1482.08
+   },
+   "change": {
+    "Global": 18.19,
+    "Standard": 17.97
    }
   },
   {
    "cycle": 11,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "tundy",
     "name": "Sean Lysaught"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1446.95,
     "Standard": 1499.22
+   },
+   "change": {
+    "Global": 17.0,
+    "Standard": 17.96
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-3-1",
+   "win_rate": {
+    "rate": 57.1,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "69th of 209",
+   "typical_finish": 33.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "4-3-1",
+   "win_rate": {
+    "rate": 57.1,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "69th of 209",
+   "typical_finish": 33.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

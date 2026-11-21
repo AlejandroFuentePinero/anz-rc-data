@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "74th",
    "field_size": 209,
+   "finish_share": 35.4,
    "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1499.36,
+    "Standard": 1499.55
+   },
    "deck": "Boros Tokens",
    "decklist": "https://melee.gg/Decklist/View/802c6621-f44f-4bd5-b8f0-b40400a5e2cb"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 11,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "alejandrofp",
     "name": "Alejandro de la Fuente"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1652.99,
     "Standard": 1543.36
+   },
+   "change": {
+    "Global": -15.23,
+    "Standard": -17.21
    }
   },
   {
    "cycle": 11,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "danthech3f",
     "name": "DantheCh3f"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1487.0,
     "Standard": 1482.44
+   },
+   "change": {
+    "Global": 18.04,
+    "Standard": 17.99
    }
   },
   {
    "cycle": 11,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "juggers",
     "name": "Trent Armstrong"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1472.8,
     "Standard": 1500.68
+   },
+   "change": {
+    "Global": 17.45,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 11,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "carps",
     "name": "Samuel Carpenter"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1489.6,
     "Standard": 1535.62
+   },
+   "change": {
+    "Global": -18.56,
+    "Standard": -17.69
    }
   },
   {
    "cycle": 11,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "10145",
     "name": "Jade Buckler"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1499.53,
     "Standard": 1499.77
+   },
+   "change": {
+    "Global": 17.96,
+    "Standard": 17.98
    }
   },
   {
    "cycle": 11,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "tonycultanvil",
     "name": "Tony Dwyer"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1456.81,
     "Standard": 1433.03
+   },
+   "change": {
+    "Global": 16.85,
+    "Standard": 16.43
    }
   },
   {
    "cycle": 11,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "hunter3rd",
     "name": "Qihan Zhang"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1468.67,
     "Standard": 1537.08
+   },
+   "change": {
+    "Global": -19.24,
+    "Standard": -17.97
    }
   },
   {
    "cycle": 11,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "deekstarr",
     "name": "Deekstarr"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1521.26,
     "Standard": 1518.67
+   },
+   "change": {
+    "Global": -17.93,
+    "Standard": -17.98
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "74th of 209",
+   "typical_finish": 35.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "74th of 209",
+   "typical_finish": 35.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

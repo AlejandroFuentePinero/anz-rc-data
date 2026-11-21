@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "194th",
    "field_size": 233,
+   "finish_share": 83.3,
    "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1463.43,
+    "Modern": 1463.99
+   },
    "deck": "Boros Energy",
    "decklist": "https://melee.gg/Decklist/View/11d7450e-a998-4f67-b244-b4ec005da6e3"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "fvd",
     "name": "Francis Dwyer"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1464.3,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -18.65,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "aarondunn",
     "name": "AaronDunn"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1484.89,
     "Modern": 1482.06
+   },
+   "change": {
+    "Global": 18.06,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "rohitwagh",
     "name": "RohitWagh"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1497.36,
     "Modern": 1498.76
+   },
+   "change": {
+    "Global": -18.04,
+    "Modern": -18.02
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "moonglade",
     "name": "mOOnGLaDe"
@@ -75,6 +104,10 @@
    "opponent_rating": {
     "Global": 1484.1,
     "Modern": 1482.54
+   },
+   "change": {
+    "Global": -17.95,
+    "Modern": -17.99
    }
   }
  ],
@@ -99,6 +132,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "194th of 233",
+   "typical_finish": 83.3,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "194th of 233",
+   "typical_finish": 83.3,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

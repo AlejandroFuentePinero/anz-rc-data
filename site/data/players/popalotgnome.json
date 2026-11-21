@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "154th",
    "field_size": 209,
+   "finish_share": 73.7,
    "record": "1-6-0",
+   "win_rate": {
+    "rate": 14.3,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1416.46,
+    "Standard": 1411.31
+   },
    "deck": "U-B-R-G",
    "decklist": "https://melee.gg/Decklist/View/de16ca56-d46a-4ddd-a4e6-b407016120a4"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 11,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "ez_clap",
     "name": "Henry Sams"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1753.25,
     "Standard": 1451.54
+   },
+   "change": {
+    "Global": -13.48,
+    "Standard": -18.88
    }
   },
   {
    "cycle": 11,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "tonycultanvil",
     "name": "Tony Dwyer"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1411.04,
     "Standard": 1388.8
+   },
+   "change": {
+    "Global": -19.37,
+    "Standard": -19.68
    }
   },
   {
    "cycle": 11,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "lqki",
     "name": "LQKI"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1466.08,
     "Standard": 1465.13
+   },
+   "change": {
+    "Global": 17.98,
+    "Standard": 18.07
    }
   },
   {
    "cycle": 11,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "rowanmillers",
     "name": "Rowan Millers"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1574.74,
     "Standard": 1602.38
+   },
+   "change": {
+    "Global": -16.37,
+    "Standard": -15.77
    }
   },
   {
    "cycle": 11,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "infamon",
     "name": "infamon"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1466.2,
     "Standard": 1466.22
+   },
+   "change": {
+    "Global": -18.05,
+    "Standard": -17.95
    }
   },
   {
    "cycle": 11,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "hazzrd",
     "name": "RIley Jones"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1563.9,
     "Standard": 1544.69
+   },
+   "change": {
+    "Global": -15.94,
+    "Standard": -16.2
    }
   },
   {
    "cycle": 11,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "alabamashakes",
     "name": "Sean Howe"
@@ -120,16 +164,22 @@
    "opponent_rating": {
     "Global": 1418.1,
     "Standard": 1414.7
+   },
+   "change": {
+    "Global": -18.3,
+    "Standard": -18.27
    }
   },
   {
    "cycle": 11,
    "round": "Round 8",
+   "playoff": false,
    "opponent": null,
    "result": "Bye",
    "games": null,
    "reconstructed": false,
-   "opponent_rating": null
+   "opponent_rating": null,
+   "change": null
   }
  ],
  "ratings": {
@@ -153,6 +203,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-6-0",
+   "win_rate": {
+    "rate": 14.3,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "154th of 209",
+   "typical_finish": 73.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "1-6-0",
+   "win_rate": {
+    "rate": 14.3,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "154th of 209",
+   "typical_finish": 73.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

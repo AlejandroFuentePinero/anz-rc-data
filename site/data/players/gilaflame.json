@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "141st",
    "field_size": 228,
+   "finish_share": 61.8,
    "record": "2-4-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 6
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1466.31,
+    "Modern": 1464.0
+   },
    "deck": "Golgari Yawgmoth",
    "decklist": "https://melee.gg/Decklist/View/6197b26a-0364-4681-96fc-6eab18075a31"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 5,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "joedeane",
     "name": "Joe Deane"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1615.66,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 20.1,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "tradeylouish",
     "name": "Louis Habberfield-Short"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1453.16,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": 16.78,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "bradleyhorne",
     "name": "BradleyHorne"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1535.08,
     "Modern": 1536.0
+   },
+   "change": {
+    "Global": -18.03,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "avocado",
     "name": "San Dro"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1520.29,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": -17.97,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "sansliberte",
     "name": "sansLiberte"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1498.93,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": -18.04,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "trasmussen",
     "name": "Timothy Rasmussen"
@@ -105,6 +144,10 @@
    "opponent_rating": {
     "Global": 1563.45,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -16.53,
+    "Modern": -18.0
    }
   }
  ],
@@ -129,6 +172,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-4-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "141st of 228",
+   "typical_finish": 61.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "2-4-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "141st of 228",
+   "typical_finish": 61.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

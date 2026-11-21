@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "59th",
    "field_size": 212,
+   "finish_share": 27.8,
    "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1533.08,
+    "Modern": 1534.33
+   },
    "deck": "Mono-Green Amulet Titan",
    "decklist": "https://melee.gg/Decklist/View/1cb6874f-4754-42af-9236-b37e0004ff1d"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 10,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "sabor2th",
     "name": "Cameron Cooke"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500.53,
     "Modern": 1538.07
+   },
+   "change": {
+    "Global": 18.01,
+    "Modern": 18.69
    }
   },
   {
    "cycle": 10,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "parasisnotcool",
     "name": "parasisnotcool"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1483.89,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": -18.62,
+    "Modern": -18.01
    }
   },
   {
    "cycle": 10,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "carps",
     "name": "Samuel Carpenter"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1465.62,
     "Modern": 1499.45
+   },
+   "change": {
+    "Global": -18.62,
+    "Modern": -18.02
    }
   },
   {
    "cycle": 10,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "dinok",
     "name": "Dino Kucukovic"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1367.37,
     "Modern": 1447.97
+   },
+   "change": {
+    "Global": 15.94,
+    "Modern": 17.37
    }
   },
   {
    "cycle": 10,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "jleb",
     "name": "johneb"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1513.87,
     "Modern": 1534.92
+   },
+   "change": {
+    "Global": 18.31,
+    "Modern": 18.64
    }
   },
   {
    "cycle": 10,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "caerulean",
     "name": "Raechel Mansfield"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1514.38,
     "Modern": 1515.2
+   },
+   "change": {
+    "Global": 17.99,
+    "Modern": 17.94
    }
   },
   {
    "cycle": 10,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "settler_of",
     "name": "Albern Catan"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1518.06,
     "Modern": 1455.75
+   },
+   "change": {
+    "Global": -18.27,
+    "Modern": -19.47
    }
   },
   {
    "cycle": 10,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "jeffrey_blancia_inveritas_",
     "name": "Jeffrey Blancia"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1533.4,
     "Modern": 1473.6
+   },
+   "change": {
+    "Global": 18.34,
+    "Modern": 17.21
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "59th of 212",
+   "typical_finish": 27.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "59th of 212",
+   "typical_finish": 27.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

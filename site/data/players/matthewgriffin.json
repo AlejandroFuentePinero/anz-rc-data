@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "62nd",
    "field_size": 228,
+   "finish_share": 27.2,
    "record": "5-4-0",
+   "win_rate": {
+    "rate": 55.6,
+    "matches": 9
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1517.71,
+    "Modern": 1518.01
+   },
    "deck": "Domain Rhinos",
    "decklist": "https://melee.gg/Decklist/View/f4e565e7-7771-4575-910f-7ffd7f36b778"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 5,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "shovit",
     "name": "Carlos Pacheco"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1498.1,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -18.03,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "pingu",
     "name": "Ben Parker"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1482.0,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -18.0,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "joeshoer",
     "name": "Joshua Bennett"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1465.73,
     "Modern": 1464.33
+   },
+   "change": {
+    "Global": 18.03,
+    "Modern": 18.01
    }
   },
   {
    "cycle": 5,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "boombarton",
     "name": "BoomBarton"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1429.1,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": 17.04,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "michaeljoey",
     "name": "Michael Joey Gaviola"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1502.51,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": 18.06,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "peterkeenan",
     "name": "PeterKeenan"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1517.77,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": 18.01,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "danjozlec",
     "name": "Danjozlec"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1496.5,
     "Modern": 1536.0
+   },
+   "change": {
+    "Global": 17.3,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "sqlut",
     "name": "Jason Chung"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1609.49,
     "Modern": 1554.0
+   },
+   "change": {
+    "Global": -16.96,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "wft",
     "name": "Benjamin Twemlow"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1549.87,
     "Modern": 1536.0
+   },
+   "change": {
+    "Global": -17.74,
+    "Modern": -18.0
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "5-4-0",
+   "win_rate": {
+    "rate": 55.6,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "62nd of 228",
+   "typical_finish": 27.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "5-4-0",
+   "win_rate": {
+    "rate": 55.6,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "62nd of 228",
+   "typical_finish": 27.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

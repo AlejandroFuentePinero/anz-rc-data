@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "147th",
    "field_size": 221,
+   "finish_share": 66.5,
    "record": "2-4-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 6
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1463.07,
+    "Pioneer": 1463.42
+   },
    "deck": "Jund Sacrifice",
    "decklist": "https://melee.gg/Decklist/View/85fb35ea-4dbf-463a-86cc-864b48b42bc7"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 7,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "gunkfire",
     "name": "Gunkfire"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Pioneer": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 7,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "thewanderingemp",
     "name": "Alex Patterson"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1517.0,
     "Pioneer": 1518.0
+   },
+   "change": {
+    "Global": 17.98,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 7,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "rk9",
     "name": "Jacob Golding"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1516.84,
     "Pioneer": 1519.26
+   },
+   "change": {
+    "Global": -18.35,
+    "Pioneer": -18.31
    }
   },
   {
    "cycle": 7,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "jeffrey_blancia_inveritas_",
     "name": "Jeffrey Blancia"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1484.9,
     "Pioneer": 1500.98
+   },
+   "change": {
+    "Global": -18.6,
+    "Pioneer": -18.3
    }
   },
   {
    "cycle": 7,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "cain",
     "name": "Cain"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1499.61,
     "Pioneer": 1499.81
+   },
+   "change": {
+    "Global": -17.99,
+    "Pioneer": -17.99
    }
   },
   {
    "cycle": 7,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "jazzmox",
     "name": "Sven Restel"
@@ -105,6 +144,10 @@
    "opponent_rating": {
     "Global": 1482.31,
     "Pioneer": 1482.64
+   },
+   "change": {
+    "Global": -17.98,
+    "Pioneer": -17.98
    }
   }
  ],
@@ -129,6 +172,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-4-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "147th of 221",
+   "typical_finish": 66.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "2-4-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "147th of 221",
+   "typical_finish": 66.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

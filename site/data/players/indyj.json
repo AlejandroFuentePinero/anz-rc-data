@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "213th",
    "field_size": 233,
+   "finish_share": 91.4,
    "record": "0-2-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 2
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1464.77,
+    "Modern": 1464.68
+   },
    "deck": "Izzet Prowess",
    "decklist": "https://melee.gg/Decklist/View/19f3edd1-199c-46ca-9882-b4ec00787f1f"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "seby666",
     "name": "Sebastiano Condo"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1540.55,
     "Modern": 1537.88
+   },
+   "change": {
+    "Global": -17.26,
+    "Modern": -17.31
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "runningtarget",
     "name": "Hamish Gordon"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1484.19,
     "Modern": 1481.65
+   },
+   "change": {
+    "Global": 0.03,
+    "Modern": -0.02
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "smenbith",
     "name": "Smenbith"
@@ -60,6 +84,10 @@
    "opponent_rating": {
     "Global": 1483.16,
     "Modern": 1483.15
+   },
+   "change": {
+    "Global": -17.99,
+    "Modern": -17.99
    }
   }
  ],
@@ -84,6 +112,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-2-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 2
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "213th of 233",
+   "typical_finish": 91.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "0-2-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 2
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "213th of 233",
+   "typical_finish": 91.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

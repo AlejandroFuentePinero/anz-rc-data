@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "96th",
    "field_size": 154,
+   "finish_share": 62.3,
    "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1466.24,
+    "Modern": 1465.06
+   },
    "deck": "Gruul Prowess",
    "decklist": "https://melee.gg/Decklist/View/510f3a77-6775-488f-af13-d028d77ce6d1"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 8,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "rainergerrits",
     "name": "RainerGerrits"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 8,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "alabaster",
     "name": "Ian Cormick"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1672.38,
     "Modern": 1518.98
+   },
+   "change": {
+    "Global": -15.21,
+    "Modern": -17.98
    }
   },
   {
    "cycle": 8,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "scubasteve",
     "name": "scubasteve91"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1490.82,
     "Modern": 1521.17
+   },
+   "change": {
+    "Global": -18.22,
+    "Modern": -17.61
    }
   },
   {
    "cycle": 8,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "patricktriglavcanin",
     "name": "PatrickTriglavcanin"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1486.26,
     "Modern": 1481.69
+   },
+   "change": {
+    "Global": 18.03,
+    "Modern": 17.99
    }
   },
   {
    "cycle": 8,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "bent",
     "name": "Ben Tudman"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1652.98,
     "Modern": 1534.75
+   },
+   "change": {
+    "Global": -15.28,
+    "Modern": -17.37
    }
   },
   {
    "cycle": 8,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "csypher",
     "name": "Jordan Cock"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1483.31,
     "Modern": 1481.76
+   },
+   "change": {
+    "Global": 17.93,
+    "Modern": 17.98
    }
   },
   {
    "cycle": 8,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "jawsh",
     "name": "Jawsh"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1474.61,
     "Modern": 1501.84
+   },
+   "change": {
+    "Global": -18.56,
+    "Modern": -17.98
    }
   },
   {
    "cycle": 8,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "thesource",
     "name": "Michael Rose"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1351.16,
     "Modern": 1485.51
+   },
+   "change": {
+    "Global": -20.46,
+    "Modern": -17.95
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "96th of 154",
+   "typical_finish": 62.3,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "96th of 154",
+   "typical_finish": 62.3,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

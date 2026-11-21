@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "111th",
    "field_size": 168,
+   "finish_share": 66.1,
    "record": "2-4-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 6
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1468.96,
+    "Standard": 1465.22
+   },
    "deck": "Four-Color Legends",
    "decklist": "https://melee.gg/Decklist/View/acf21536-b802-45c7-a2c8-ccb8bf051061"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 6,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "milkywhitejustice",
     "name": "Robert Lark"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1565.31,
     "Standard": 1499.99
+   },
+   "change": {
+    "Global": -16.81,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 6,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "debakeyforceps",
     "name": "Sean Goh"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1420.4,
     "Standard": 1482.0
+   },
+   "change": {
+    "Global": 16.86,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 6,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "alabaster",
     "name": "Ian Cormick"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1604.83,
     "Standard": 1499.7
+   },
+   "change": {
+    "Global": -16.1,
+    "Standard": -18.01
    }
   },
   {
    "cycle": 6,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "gotrek2222",
     "name": "Gotrek2222"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1482.14,
     "Standard": 1481.36
+   },
+   "change": {
+    "Global": 17.97,
+    "Standard": 17.99
    }
   },
   {
    "cycle": 6,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "conradus",
     "name": "connor mcgillivray"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1645.02,
     "Standard": 1567.17
+   },
+   "change": {
+    "Global": -15.41,
+    "Standard": -16.78
    }
   },
   {
    "cycle": 6,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "moistvl",
     "name": "Simon Harnden"
@@ -105,6 +144,10 @@
    "opponent_rating": {
     "Global": 1511.32,
     "Standard": 1483.83
+   },
+   "change": {
+    "Global": -17.55,
+    "Standard": -17.99
    }
   }
  ],
@@ -129,6 +172,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-4-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "111th of 168",
+   "typical_finish": 66.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "2-4-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "111th of 168",
+   "typical_finish": 66.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

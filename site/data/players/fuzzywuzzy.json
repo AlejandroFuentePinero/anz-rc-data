@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "139th",
    "field_size": 156,
+   "finish_share": 89.1,
    "record": "1-2-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 3
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1481.79,
+    "Pioneer": 1482.11
+   },
    "deck": "Izzet Creativity",
    "decklist": "https://melee.gg/Decklist/View/cab094c2-dfd0-45ed-940f-4644edcac92d"
   },
@@ -21,7 +34,20 @@
    "format": "Standard",
    "finish": "126th",
    "field_size": 168,
+   "finish_share": 75.0,
    "record": "1-2-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 3
+   },
+   "rating_start": {
+    "Global": 1481.79,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1471.4,
+    "Standard": 1481.06
+   },
    "deck": "Azorius Control",
    "decklist": "https://melee.gg/Decklist/View/19c16b5a-fd2e-4268-878e-e93d3617cc27"
   }
@@ -30,6 +56,7 @@
   {
    "cycle": 4,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "carps",
     "name": "Samuel Carpenter"
@@ -40,11 +67,16 @@
    "opponent_rating": {
     "Global": 1538.16,
     "Pioneer": 1540.33
+   },
+   "change": {
+    "Global": -17.3,
+    "Pioneer": -17.26
    }
   },
   {
    "cycle": 4,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "redmage38",
     "name": "David Gonzalez"
@@ -55,11 +87,16 @@
    "opponent_rating": {
     "Global": 1431.6,
     "Pioneer": 1446.97
+   },
+   "change": {
+    "Global": 17.07,
+    "Pioneer": 17.35
    }
   },
   {
    "cycle": 4,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "ringdingdingo",
     "name": "Rhianna Milton"
@@ -70,11 +107,16 @@
    "opponent_rating": {
     "Global": 1501.03,
     "Pioneer": 1501.31
+   },
+   "change": {
+    "Global": -17.98,
+    "Pioneer": -17.98
    }
   },
   {
    "cycle": 6,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "danielcollins",
     "name": "DanielCollins"
@@ -85,11 +127,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Standard": 1500
+   },
+   "change": {
+    "Global": 18.33,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 6,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "alosaur",
     "name": "Alex Humbley"
@@ -100,11 +147,16 @@
    "opponent_rating": {
     "Global": 1690.01,
     "Standard": 1500.66
+   },
+   "change": {
+    "Global": -14.58,
+    "Standard": -18.32
    }
   },
   {
    "cycle": 6,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "ez_clap",
     "name": "Henry Sams"
@@ -115,6 +167,10 @@
    "opponent_rating": {
     "Global": 1700.29,
     "Standard": 1465.32
+   },
+   "change": {
+    "Global": -14.14,
+    "Standard": -18.63
    }
   }
  ],
@@ -154,6 +210,56 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-4-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 6
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "126th of 168",
+   "typical_finish": 82.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
+  },
+  "Pioneer": {
+   "record": "1-2-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "139th of 156",
+   "typical_finish": 89.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "1-2-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "126th of 168",
+   "typical_finish": 75.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

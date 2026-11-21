@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "61st",
    "field_size": 209,
+   "finish_share": 29.2,
    "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1531.73,
+    "Standard": 1533.63
+   },
    "deck": "Simic Ouroboroid",
    "decklist": "https://melee.gg/Decklist/View/c0ac8556-f2b2-4ef9-aeb6-b3b90081b75f"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 11,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "excrement",
     "name": "Conor G"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1429.04,
     "Standard": 1500
+   },
+   "change": {
+    "Global": -19.29,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 11,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "starilixel",
     "name": "Mia Fountain"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1487.29,
     "Standard": 1483.6
+   },
+   "change": {
+    "Global": -17.88,
+    "Standard": -17.97
    }
   },
   {
    "cycle": 11,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "joeshoer",
     "name": "Joshua Bennett"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1443.32,
     "Standard": 1464.03
+   },
+   "change": {
+    "Global": -18.36,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 11,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "alabamashakes",
     "name": "Sean Howe"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1454.05,
     "Standard": 1450.3
+   },
+   "change": {
+    "Global": 18.17,
+    "Standard": 18.08
    }
   },
   {
    "cycle": 11,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "beau_bubbles",
     "name": "Beau_Bubbles"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1357.25,
     "Standard": 1352.84
+   },
+   "change": {
+    "Global": 16.08,
+    "Standard": 15.98
    }
   },
   {
    "cycle": 11,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "rexmatical",
     "name": "Courtney Fox"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1448.61,
     "Standard": 1446.69
+   },
+   "change": {
+    "Global": 17.45,
+    "Standard": 17.39
    }
   },
   {
    "cycle": 11,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "nguqn004",
     "name": "nguqn004"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1500.1,
     "Standard": 1500.94
+   },
+   "change": {
+    "Global": 18.07,
+    "Standard": 18.06
    }
   },
   {
    "cycle": 11,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "litreofcola78",
     "name": "Tyson Gainsforth"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1485.84,
     "Standard": 1520.42
+   },
+   "change": {
+    "Global": 17.48,
+    "Standard": 18.09
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "61st of 209",
+   "typical_finish": 29.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "61st of 209",
+   "typical_finish": 29.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

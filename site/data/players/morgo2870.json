@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "135th",
    "field_size": 156,
+   "finish_share": 86.5,
    "record": "1-4-0",
+   "win_rate": {
+    "rate": 20.0,
+    "matches": 5
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1447.97,
+    "Pioneer": 1447.84
+   },
    "deck": "Rakdos Midrange",
    "decklist": "https://melee.gg/Decklist/View/a077f5f4-2be7-41a6-96aa-a0d06c349c2f"
   },
@@ -21,7 +34,20 @@
    "format": "Pioneer",
    "finish": "213th",
    "field_size": 221,
+   "finish_share": 96.4,
    "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rating_start": {
+    "Global": 1447.97,
+    "Pioneer": 1447.84
+   },
+   "rating_end": {
+    "Global": 1397.95,
+    "Pioneer": 1397.79
+   },
    "deck": "Gruul Prowess",
    "decklist": "https://melee.gg/Decklist/View/e3805a89-6e41-4d3f-a760-01c7070bf011"
   }
@@ -30,6 +56,7 @@
   {
    "cycle": 4,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "danro",
     "name": "Daniel Roper"
@@ -40,11 +67,16 @@
    "opponent_rating": {
     "Global": 1569.6,
     "Pioneer": 1568.83
+   },
+   "change": {
+    "Global": 19.27,
+    "Pioneer": 19.25
    }
   },
   {
    "cycle": 4,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "awesomebrew",
     "name": "Awesomebrew"
@@ -55,11 +87,16 @@
    "opponent_rating": {
     "Global": 1521.01,
     "Pioneer": 1518.68
+   },
+   "change": {
+    "Global": -17.97,
+    "Pioneer": -18.01
    }
   },
   {
    "cycle": 4,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "masonme2",
     "name": "Masonme2"
@@ -70,11 +107,16 @@
    "opponent_rating": {
     "Global": 1593.45,
     "Pioneer": 1589.5
+   },
+   "change": {
+    "Global": -16.32,
+    "Pioneer": -16.39
    }
   },
   {
    "cycle": 4,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "damiansparks",
     "name": "Damian Sparks"
@@ -85,11 +127,16 @@
    "opponent_rating": {
     "Global": 1429.35,
     "Pioneer": 1429.34
+   },
+   "change": {
+    "Global": -19.01,
+    "Pioneer": -19.01
    }
   },
   {
    "cycle": 4,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "chump1991",
     "name": "Chris Humphreys"
@@ -100,11 +147,16 @@
    "opponent_rating": {
     "Global": 1466.21,
     "Pioneer": 1466.21
+   },
+   "change": {
+    "Global": -18.0,
+    "Pioneer": -17.99
    }
   },
   {
    "cycle": 7,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "markzhou2207",
     "name": "Mark Zhou"
@@ -115,11 +167,16 @@
    "opponent_rating": {
     "Global": 1568.83,
     "Pioneer": 1566.24
+   },
+   "change": {
+    "Global": -15.81,
+    "Pioneer": -15.85
    }
   },
   {
    "cycle": 7,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "jedlamoreaux",
     "name": "JedLamoreaux"
@@ -130,11 +187,16 @@
    "opponent_rating": {
     "Global": 1482.0,
     "Pioneer": 1482.0
+   },
+   "change": {
+    "Global": -17.09,
+    "Pioneer": -17.09
    }
   },
   {
    "cycle": 7,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "eggbeat",
     "name": "Louis Thomson-Gregg"
@@ -145,6 +207,10 @@
    "opponent_rating": {
     "Global": 1463.31,
     "Pioneer": 1463.28
+   },
+   "change": {
+    "Global": -17.12,
+    "Pioneer": -17.12
    }
   }
  ],
@@ -177,6 +243,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-7-0",
+   "win_rate": {
+    "rate": 12.5,
+    "matches": 8
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "135th of 156",
+   "typical_finish": 91.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
+  },
+  "Pioneer": {
+   "record": "1-7-0",
+   "win_rate": {
+    "rate": 12.5,
+    "matches": 8
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "135th of 156",
+   "typical_finish": 91.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
   }
  }
 }

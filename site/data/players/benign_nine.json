@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "149th",
    "field_size": 168,
+   "finish_share": 88.7,
    "record": "0-3-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1441.87,
+    "Standard": 1445.06
+   },
    "deck": "Dimir Midrange",
    "decklist": "https://melee.gg/Decklist/View/406336bd-ca94-4a15-8825-2a99d8884e8c"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 6,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "nigelg23",
     "name": "nigelg23"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Standard": 1500
+   },
+   "change": {
+    "Global": 0.0,
+    "Standard": 0.0
    }
   },
   {
    "cycle": 6,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "nicholas-talbot",
     "name": "Nicholas Talbot"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1324.51,
     "Standard": 1482.0
+   },
+   "change": {
+    "Global": -21.17,
+    "Standard": -18.33
    }
   },
   {
    "cycle": 6,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "goscar",
     "name": "Oscar Gray"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1422.23,
     "Standard": 1446.98
+   },
+   "change": {
+    "Global": -19.03,
+    "Standard": -18.63
    }
   },
   {
    "cycle": 6,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "franc32c0",
     "name": "Franc32c0"
@@ -75,6 +104,10 @@
    "opponent_rating": {
     "Global": 1463.92,
     "Standard": 1464.31
+   },
+   "change": {
+    "Global": -17.92,
+    "Standard": -17.98
    }
   }
  ],
@@ -99,6 +132,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-3-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "149th of 168",
+   "typical_finish": 88.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "0-3-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "149th of 168",
+   "typical_finish": 88.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "214th",
    "field_size": 222,
+   "finish_share": 96.4,
    "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1449.71,
+    "Standard": 1446.15
+   },
    "deck": "Azorius Omniscience",
    "decklist": "https://melee.gg/Decklist/View/a24f924e-94cb-408b-bf5a-b2d8006737e4"
   },
@@ -21,7 +34,20 @@
    "format": "Standard",
    "finish": "115th",
    "field_size": 188,
+   "finish_share": 61.2,
    "record": "2-2-1",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 4
+   },
+   "rating_start": {
+    "Global": 1449.71,
+    "Standard": 1446.15
+   },
+   "rating_end": {
+    "Global": 1456.98,
+    "Standard": 1453.35
+   },
    "deck": "Mono-Black Control",
    "decklist": "https://melee.gg/Decklist/View/041fe676-b61f-430c-9f46-b45200302978"
   }
@@ -30,6 +56,7 @@
   {
    "cycle": 9,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "nicholasc1",
     "name": "Nick Chow"
@@ -40,11 +67,16 @@
    "opponent_rating": {
     "Global": 1553.24,
     "Standard": 1500
+   },
+   "change": {
+    "Global": -17.03,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 9,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "tonycultanvil",
     "name": "Tony Dwyer"
@@ -55,11 +87,16 @@
    "opponent_rating": {
     "Global": 1436.47,
     "Standard": 1417.84
+   },
+   "change": {
+    "Global": -18.85,
+    "Standard": -19.17
    }
   },
   {
    "cycle": 9,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "na",
     "name": "Sebastian Vearncombe"
@@ -70,11 +107,16 @@
    "opponent_rating": {
     "Global": 1663.19,
     "Standard": 1535.19
+   },
+   "change": {
+    "Global": -14.42,
+    "Standard": -16.68
    }
   },
   {
    "cycle": 12,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "johnkim",
     "name": "John Kim"
@@ -85,11 +127,16 @@
    "opponent_rating": {
     "Global": 1541.5,
     "Standard": 1504.89
+   },
+   "change": {
+    "Global": 1.67,
+    "Standard": 1.07
    }
   },
   {
    "cycle": 12,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "luciaclarke",
     "name": "Lucia Clarke"
@@ -100,11 +147,16 @@
    "opponent_rating": {
     "Global": 1604.87,
     "Standard": 1517.85
+   },
+   "change": {
+    "Global": -15.22,
+    "Standard": -16.71
    }
   },
   {
    "cycle": 12,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "zacs39",
     "name": "ZacS39"
@@ -115,11 +167,16 @@
    "opponent_rating": {
     "Global": 1483.15,
     "Standard": 1483.33
+   },
+   "change": {
+    "Global": 18.86,
+    "Standard": 18.96
    }
   },
   {
    "cycle": 12,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "danielcollins",
     "name": "DanielCollins"
@@ -130,11 +187,16 @@
    "opponent_rating": {
     "Global": 1550.04,
     "Standard": 1587.39
+   },
+   "change": {
+    "Global": -16.27,
+    "Standard": -15.5
    }
   },
   {
    "cycle": 12,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "joshpedley",
     "name": "JoshPedley"
@@ -145,6 +207,10 @@
    "opponent_rating": {
     "Global": 1451.9,
     "Standard": 1509.74
+   },
+   "change": {
+    "Global": 18.24,
+    "Standard": 19.38
    }
   }
  ],
@@ -177,6 +243,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-5-1",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "115th of 188",
+   "typical_finish": 78.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
+  },
+  "Standard": {
+   "record": "2-5-1",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "115th of 188",
+   "typical_finish": 78.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
   }
  }
 }

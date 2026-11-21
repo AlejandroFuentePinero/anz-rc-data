@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "99th",
    "field_size": 209,
+   "finish_share": 47.4,
    "record": "3-4-1",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1489.07,
+    "Standard": 1484.53
+   },
    "deck": "Temur Combo",
    "decklist": "https://melee.gg/Decklist/View/ea245f3b-8935-44c7-b9c5-b40b01806e87"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 11,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "gunkfire",
     "name": "Gunkfire"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1465.05,
     "Standard": 1500
+   },
+   "change": {
+    "Global": 17.36,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 11,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "dimmer",
     "name": "Matthew Dewitte"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1669.6,
     "Standard": 1539.22
+   },
+   "change": {
+    "Global": 20.76,
+    "Standard": 18.39
    }
   },
   {
    "cycle": 11,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "sniperhood",
     "name": "Sniperhood"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1535.44,
     "Standard": 1535.98
+   },
+   "change": {
+    "Global": -18.05,
+    "Standard": -18.01
    }
   },
   {
    "cycle": 11,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "bent",
     "name": "Ben Tudman"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1787.09,
     "Standard": 1739.44
+   },
+   "change": {
+    "Global": -13.24,
+    "Standard": -14.03
    }
   },
   {
    "cycle": 11,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "campbells",
     "name": "Campbell Sullivan"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1515.74,
     "Standard": 1466.52
+   },
+   "change": {
+    "Global": 18.16,
+    "Standard": 17.31
    }
   },
   {
    "cycle": 11,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "alexmurray90",
     "name": "Alexmurray90"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1522.87,
     "Standard": 1516.78
+   },
+   "change": {
+    "Global": -18.04,
+    "Standard": -18.09
    }
   },
   {
    "cycle": 11,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "antoshka",
     "name": "Oran Ryan"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1536.93,
     "Standard": 1501.87
+   },
+   "change": {
+    "Global": -17.45,
+    "Standard": -18.03
    }
   },
   {
    "cycle": 11,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "jamzone_",
     "name": "JAMzone_"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1465.95,
     "Standard": 1430.07
+   },
+   "change": {
+    "Global": -0.43,
+    "Standard": -1.01
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-4-1",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "99th of 209",
+   "typical_finish": 47.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "3-4-1",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "99th of 209",
+   "typical_finish": 47.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

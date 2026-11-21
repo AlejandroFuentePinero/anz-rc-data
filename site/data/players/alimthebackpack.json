@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "190th",
    "field_size": 228,
+   "finish_share": 83.3,
    "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1466.25,
+    "Modern": 1464.0
+   },
    "deck": "Izzet Breach",
    "decklist": "https://melee.gg/Decklist/View/e2fa4a32-cd1a-44fa-9d98-687d191cb3ff"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 5,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "numerated",
     "name": "Ewan Smith"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -18.0,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "spiderbyte12",
     "name": "Michael Billinghurst"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1573.85,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": 19.67,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "swiftclaw",
     "name": "James Arthur"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1572.34,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": -16.71,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "excrement",
     "name": "Conor G"
@@ -75,6 +104,10 @@
    "opponent_rating": {
     "Global": 1446.0,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -18.71,
+    "Modern": -18.0
    }
   }
  ],
@@ -99,6 +132,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "190th of 228",
+   "typical_finish": 83.3,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "190th of 228",
+   "typical_finish": 83.3,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

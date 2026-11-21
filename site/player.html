@@ -10,7 +10,18 @@
   table { border-collapse: collapse; }
   th, td { padding: 4px 12px; text-align: left; border-bottom: 1px solid #ddd; white-space: nowrap; }
   td.num { text-align: right; }
+  tr.global td { font-weight: bold; }
+  .formats { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0; }
+  .formats button { font: inherit; padding: 4px 12px; border: 1px solid #bbb; border-radius: 16px; background: #fff; cursor: pointer; }
+  .formats button[aria-pressed="true"] { background: #222; color: #fff; border-color: #222; }
+  tr.rc { cursor: pointer; }
+  tr.rc:hover td { background: #f5f5f5; }
+  tr.rc td:first-child::before { content: "▸ "; color: #888; }
+  tr.rc.open td:first-child::before { content: "▾ "; }
+  tr.rounds > td { padding: 0 0 8px 28px; background: #fafafa; }
+  tr.rounds table td, tr.rounds table th { border-bottom-color: #eee; }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
 </head>
 <body>
 <p><a href="index.html">ANZ Regional Championships</a></p>
@@ -18,13 +29,30 @@
 <ul id="search-results"></ul>
 <h1 id="name"></h1>
 <p id="usernames"></p>
+<div class="formats" id="formats"></div>
+
+<div class="scroll">
+<table>
+  <thead><tr><th></th><th>Rating</th><th>Peak Rating</th><th>Rank</th><th>W-L-D</th><th>Win rate</th><th>RCs</th><th>Top 8s</th><th>Titles</th><th>Best Finish</th><th>Typical Finish</th><th>Top 8 rate</th></tr></thead>
+  <tbody id="summary"></tbody>
+</table>
+</div>
+
+<h2>Rating</h2>
+<div id="rating-plot"></div>
+<h2>Finish</h2>
+<div id="finish-plot"></div>
+<h2>Match win rate</h2>
+<div id="win-rate-plot"></div>
+
 <h2>RC history</h2>
 <div class="scroll">
 <table>
-  <thead><tr><th>Cycle</th><th>Date</th><th>Format</th><th>Finish</th><th>Record</th><th>Deck</th></tr></thead>
+  <thead><tr><th>RC</th><th>Finish</th><th>Deck</th><th>W-L-D</th><th>Win rate</th><th>Rating at start</th><th>Rating at end</th></tr></thead>
   <tbody id="rcs"></tbody>
 </table>
 </div>
+
 <h2>Match history</h2>
 <div class="scroll">
 <table>
@@ -35,6 +63,11 @@
 <p id="reconstructed-note" hidden>Reconstructed: a playoff Match Melee lost, rebuilt from the standings, so it has no game score.</p>
 <script src="search.js"></script>
 <script>
+const VIEWS = ["Global", "Pioneer", "Standard", "Modern"];
+const FORMAT_COLOUR = { Pioneer: "#3987e5", Standard: "#e07a1f", Modern: "#2a9d6f" };
+const config = { displayModeBar: false, responsive: true };
+const margin = { t: 8, r: 16, l: 56, b: 40 };
+
 function link(text, href) {
   const a = document.createElement("a");
   a.href = href;
@@ -42,57 +75,172 @@ function link(text, href) {
   return a;
 }
 
-function fill(body, rows) {
-  body.replaceChildren();
-  for (const cells of rows) {
-    const row = body.insertRow();
-    for (const [value, cls] of cells) {
-      const cell = row.insertCell();
-      cell.append(value ?? "-");
-      if (cls) cell.className = cls;
-    }
+function addRow(body, cells, cls) {
+  const row = body.insertRow();
+  if (cls) row.className = cls;
+  for (const [value, cellCls] of cells) {
+    const cell = row.insertCell();
+    cell.append(value ?? "-");
+    if (cellCls) cell.className = cellCls;
   }
+  return row;
+}
+
+const rating = (value) => (value == null ? null : Math.round(value));
+const signed = (value) => (value > 0 ? "+" : value < 0 ? "−" : "") + Math.abs(value).toFixed(2);
+const exact = (value) => (value == null ? null : value.toFixed(2));  // the RC table's Ratings add up to the cent
+const finish = (rc) => (rc.finish && (/^\d/.test(rc.finish) ? `${rc.finish} of ${rc.field_size}` : rc.finish));
+const rate = (winRate) => (winRate.rate == null ? null : `${winRate.rate}% (${winRate.matches})`);
+
+const rcsReady = fetch("data/rcs.json").then((response) => response.json());
+let card = null;
+const open = new Set();  // the Cycles whose rounds are showing
+
+function route() {
+  const [slug, view] = decodeURIComponent(location.hash.slice(1)).split("/");
+  return { slug, view: VIEWS.includes(view) ? view : "Global" };
 }
 
 function show() {
-  const slug = decodeURIComponent(location.hash.slice(1));
+  const { slug, view } = route();
   if (!slug) return;
-  fetch(`data/players/${slug}.json`)
-    .then((response) => {
-      if (!response.ok) throw new Error(`no card for ${slug}`);
-      return response.json();
-    })
-    .then((card) => {
+  if (card && card.slug === slug) { draw(view); return; }
+  Promise.all([rcsReady, fetch(`data/players/${slug}.json`).then((response) => {
+    if (!response.ok) throw new Error(`no card for ${slug}`);
+    return response.json();
+  })])
+    .then(([rcs, loaded]) => {
+      card = loaded;
+      card.city = Object.fromEntries(rcs.map((rc) => [rc.cycle, rc.city]));
+      open.clear();
       document.title = card.name;
       document.getElementById("name").textContent = card.name;
       document.getElementById("usernames").textContent = `Melee: ${card.usernames.join(", ")}`;
-      fill(document.getElementById("rcs"), card.rcs.map((rc) => [
-        [rc.cycle, "num"],
-        [rc.date],
-        [rc.format],
-        [rc.finish && `${rc.finish} of ${rc.field_size}`],
-        [rc.record],
-        [rc.deck && link(rc.deck, rc.decklist)],
-      ]));
-      fill(document.getElementById("matches"), card.matches.map((match) => [
-        [match.cycle, "num"],
-        [match.round],
-        [match.opponent && link(match.opponent.name, `#${match.opponent.slug}`)],
-        [match.opponent_rating && Math.round(match.opponent_rating.Global), "num"],
-        [match.result],
-        [match.reconstructed ? "Reconstructed" : match.games],
-      ]));
-      document.getElementById("reconstructed-note").hidden = !card.matches.some((match) => match.reconstructed);
+      draw(view);
       window.scrollTo(0, 0);
     })
     .catch(() => {
       // A mistyped or outdated link: say so rather than leave the page blank.
+      card = null;
       document.getElementById("name").textContent = "No Player found";
-      document.getElementById("usernames").textContent = "";
-      fill(document.getElementById("rcs"), []);
-      fill(document.getElementById("matches"), []);
+      for (const id of ["usernames", "formats", "summary", "rcs", "matches", "rating-plot", "finish-plot", "win-rate-plot"]) {
+        document.getElementById(id).replaceChildren();
+      }
       document.getElementById("reconstructed-note").hidden = true;
     });
+}
+
+function draw(view) {
+  if (!card.summary[view]) view = "Global";
+  const buttons = document.getElementById("formats");
+  buttons.replaceChildren();
+  for (const name of VIEWS.filter((name) => card.summary[name])) {
+    const button = document.createElement("button");
+    button.textContent = name;
+    button.setAttribute("aria-pressed", name === view);
+    button.addEventListener("click", () => { location.hash = name === "Global" ? card.slug : `${card.slug}/${name}`; });
+    buttons.append(button);
+  }
+
+  const summary = document.getElementById("summary");
+  summary.replaceChildren();
+  for (const name of VIEWS) {
+    const s = card.summary[name];
+    if (!s) { addRow(summary, [[name], ...Array(11).fill([null])]); continue; }
+    const r = card.ratings[name];
+    const rank = s.rank == null ? `not ranked (needs ${s.rcs_needed} more RC${s.rcs_needed === 1 ? "" : "s"})` : `${s.rank} (above ${s.above}%)`;
+    addRow(summary, [
+      [name], [rating(r.rating), "num"], [rating(r.peak), "num"], [rank], [s.record], [rate(s.win_rate), "num"],
+      [s.rcs, "num"], [s.top_8s, "num"], [s.titles, "num"], [s.best_finish],
+      [s.typical_finish == null ? null : `top ${s.typical_finish}%`], [`${s.top_8_rate}% (${s.rcs})`, "num"],
+    ], name === "Global" ? "global" : null);
+  }
+
+  const rcs = card.rcs.filter((rc) => view === "Global" || rc.format === view);
+  const key = (rc) => (view === "Global" ? "Global" : rc.format);
+  plots(view, rcs);
+
+  const body = document.getElementById("rcs");
+  body.replaceChildren();
+  for (const rc of rcs) {
+    const row = addRow(body, [
+      [`${rc.date} ${card.city[rc.cycle] ?? ""} ${rc.format}`.replace(/\s+/g, " ")],
+      [finish(rc)], [rc.deck && link(rc.deck, rc.decklist)], [rc.record],
+      [rate(rc.win_rate), "num"], [exact(rc.rating_start[key(rc)]), "num"], [exact(rc.rating_end[key(rc)]), "num"],
+    ], open.has(rc.cycle) ? "rc open" : "rc");
+    row.addEventListener("click", (event) => {
+      if (event.target.closest("a")) return;  // the deck link opens the decklist, not the rounds
+      open.has(rc.cycle) ? open.delete(rc.cycle) : open.add(rc.cycle);
+      draw(view);
+    });
+    if (open.has(rc.cycle)) body.append(rounds(rc, key(rc)));
+  }
+
+  const matches = card.matches.filter((match) => rcs.some((rc) => rc.cycle === match.cycle));
+  const history = document.getElementById("matches");
+  history.replaceChildren();
+  for (const match of matches) {
+    const rc = card.rcs.find((rc) => rc.cycle === match.cycle);
+    addRow(history, [
+      [match.cycle, "num"], [match.round],
+      [match.opponent && link(match.opponent.name, `#${match.opponent.slug}`)],
+      [match.opponent_rating && rating(match.opponent_rating[key(rc)]), "num"],
+      [match.result], [match.reconstructed ? "Reconstructed" : match.games],
+    ]);
+  }
+  document.getElementById("reconstructed-note").hidden = !matches.some((match) => match.reconstructed);
+}
+
+function rounds(rc, key) {
+  const table = document.createElement("table");
+  table.innerHTML = "<thead><tr><th>Round</th><th>Opponent</th><th>Their Rating</th><th>Result</th><th>Rating change</th></tr></thead>";
+  const body = table.createTBody();
+  for (const match of card.matches.filter((match) => match.cycle === rc.cycle)) {
+    const opponent = document.createDocumentFragment();
+    if (match.opponent) opponent.append(link(match.opponent.name, `#${match.opponent.slug}`));
+    addRow(body, [
+      [match.playoff ? `${match.round} (playoff)` : match.round],
+      [match.opponent ? opponent : null],
+      [match.opponent_rating && rating(match.opponent_rating[key]), "num"],
+      [match.reconstructed ? `${match.result} (reconstructed)` : [match.result, match.games].filter(Boolean).join(" ")],
+      [match.change ? signed(match.change[key]) : "", "num"],
+    ]);
+  }
+  const row = document.createElement("tr");
+  row.className = "rounds";
+  const cell = row.insertCell();
+  cell.colSpan = 7;
+  cell.append(table);
+  return row;
+}
+
+function plots(view, rcs) {
+  // One point per RC joined by a line, each point coloured by its Format.
+  const after = Object.fromEntries(card.ratings[view].after_rc.map((point) => [point.cycle, point.rating]));
+  const cycles = rcs.map((rc) => rc.cycle);
+  const series = [
+    ["rating-plot", rcs.map((rc) => after[rc.cycle]), (rc) => `${Math.round(after[rc.cycle])}`, { title: { text: "Rating" } }],
+    ["finish-plot", rcs.map((rc) => rc.finish_share), (rc) => finish(rc) ?? "no Finish",
+      { title: { text: "Finish, share of the field" }, ticksuffix: "%", autorange: "reversed", rangemode: "tozero" }],
+    ["win-rate-plot", rcs.map((rc) => rc.win_rate.rate), (rc) => rate(rc.win_rate) ?? "no Matches won or lost",
+      { title: { text: "Match win rate" }, ticksuffix: "%", range: [-5, 105] }],
+  ];
+  const formats = [...new Set(rcs.map((rc) => rc.format))];
+  for (const [id, y, label, yaxis] of series) {
+    const traces = [{ type: "scatter", mode: "lines", x: cycles, y, line: { color: "#bbb", width: 2 }, hoverinfo: "skip", showlegend: false, connectgaps: true }];
+    for (const format of formats) {
+      const mine = rcs.map((rc, i) => [rc, y[i]]).filter(([rc]) => rc.format === format);
+      traces.push({
+        type: "scatter", mode: "markers", name: format, x: mine.map(([rc]) => rc.cycle), y: mine.map(([, value]) => value),
+        text: mine.map(([rc]) => label(rc)), marker: { color: FORMAT_COLOUR[format], size: 9 },
+        hovertemplate: `Cycle %{x}, ${format}: %{text}<extra></extra>`,
+      });
+    }
+    Plotly.react(id, traces, {
+      margin, height: 260, legend: { orientation: "h", y: -0.3 }, showlegend: formats.length > 1,
+      xaxis: { title: { text: "Cycle" }, tickvals: cycles }, yaxis,
+    }, config);
+  }
 }
 
 window.addEventListener("hashchange", show);

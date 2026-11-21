@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "151st",
    "field_size": 188,
+   "finish_share": 80.3,
    "record": "1-2-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 3
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1485.11,
+    "Standard": 1482.76
+   },
    "deck": "Dimir Midrange",
    "decklist": "https://melee.gg/Decklist/View/63964c81-9b80-4437-afb7-b452004d7531"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 12,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "thokk",
     "name": "Ethan Taylor"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1441.88,
     "Standard": 1446.3
+   },
+   "change": {
+    "Global": -19.06,
+    "Standard": -18.98
    }
   },
   {
    "cycle": 12,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "calmmirror",
     "name": "Samuel Maher"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1673.0,
     "Standard": 1575.58
+   },
+   "change": {
+    "Global": -14.54,
+    "Standard": -16.28
    }
   },
   {
    "cycle": 12,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "cjpearse",
     "name": "CJPearse"
@@ -60,6 +84,10 @@
    "opponent_rating": {
     "Global": 1505.26,
     "Standard": 1465.8
+   },
+   "change": {
+    "Global": 18.71,
+    "Standard": 18.02
    }
   }
  ],
@@ -84,6 +112,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-2-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "151st of 188",
+   "typical_finish": 80.3,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "1-2-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "151st of 188",
+   "typical_finish": 80.3,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

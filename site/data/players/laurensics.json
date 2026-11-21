@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "123rd",
    "field_size": 222,
+   "finish_share": 55.4,
    "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1459.68,
+    "Standard": 1462.93
+   },
    "deck": "Mono-Red Aggro",
    "decklist": "https://melee.gg/Decklist/View/ec8feb60-1764-4500-81d5-b2d800880742"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 9,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "craig",
     "name": "Craig sweetman"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1398.2,
     "Standard": 1500
+   },
+   "change": {
+    "Global": -19.85,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 9,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "unrestrained",
     "name": "Daniel Szwed"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1482.56,
     "Standard": 1481.64
+   },
+   "change": {
+    "Global": 18.04,
+    "Standard": 17.99
    }
   },
   {
    "cycle": 9,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "achango",
     "name": "Achango"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1501.9,
     "Standard": 1499.66
+   },
+   "change": {
+    "Global": -17.93,
+    "Standard": -18.01
    }
   },
   {
    "cycle": 9,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "calgit",
     "name": "Calum Gittins"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1462.95,
     "Standard": 1500.53
+   },
+   "change": {
+    "Global": 17.68,
+    "Standard": 18.34
    }
   },
   {
    "cycle": 9,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "nibblet",
     "name": "Joel Dowsett"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1502.56,
     "Standard": 1502.22
+   },
+   "change": {
+    "Global": -17.92,
+    "Standard": -17.97
    }
   },
   {
    "cycle": 9,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "cayliss",
     "name": "cayliss"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1360.73,
     "Standard": 1465.53
+   },
+   "change": {
+    "Global": -20.17,
+    "Standard": -18.31
    }
   },
   {
    "cycle": 9,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "turner747",
     "name": "Turner747"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1463.59,
     "Standard": 1463.15
+   },
+   "change": {
+    "Global": 18.07,
+    "Standard": 17.98
    }
   },
   {
    "cycle": 9,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "jamzone_",
     "name": "JAMzone_"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1463.9,
     "Standard": 1421.38
+   },
+   "change": {
+    "Global": -18.26,
+    "Standard": -19.11
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "123rd of 222",
+   "typical_finish": 55.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "123rd of 222",
+   "typical_finish": 55.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

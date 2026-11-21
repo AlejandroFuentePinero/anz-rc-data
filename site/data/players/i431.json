@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "128th",
    "field_size": 156,
+   "finish_share": 82.1,
    "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1466.09,
+    "Pioneer": 1466.02
+   },
    "deck": "Abzan Greasefang",
    "decklist": "https://melee.gg/Decklist/View/6867efb3-5690-4cdc-a78a-67c381290813"
   },
@@ -21,7 +34,20 @@
    "format": "Pioneer",
    "finish": "148th",
    "field_size": 221,
+   "finish_share": 67.0,
    "record": "2-3-0",
+   "win_rate": {
+    "rate": 40.0,
+    "matches": 5
+   },
+   "rating_start": {
+    "Global": 1466.09,
+    "Pioneer": 1466.02
+   },
+   "rating_end": {
+    "Global": 1449.84,
+    "Pioneer": 1449.97
+   },
    "deck": "Mono-Black Demons",
    "decklist": "https://melee.gg/Decklist/View/54bf5fce-6e49-43c3-be10-aa81ef3d5877"
   }
@@ -30,6 +56,7 @@
   {
    "cycle": 4,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "tastycheez",
     "name": "Nicholas Turner"
@@ -40,11 +67,16 @@
    "opponent_rating": {
     "Global": 1617.77,
     "Pioneer": 1617.41
+   },
+   "change": {
+    "Global": -15.86,
+    "Pioneer": -15.87
    }
   },
   {
    "cycle": 4,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "tonyjones22",
     "name": "antoine nguyen"
@@ -55,11 +87,16 @@
    "opponent_rating": {
     "Global": 1482.0,
     "Pioneer": 1482.0
+   },
+   "change": {
+    "Global": -18.04,
+    "Pioneer": -18.04
    }
   },
   {
    "cycle": 4,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "andr_p",
     "name": "Andrew Pearce"
@@ -70,11 +107,16 @@
    "opponent_rating": {
     "Global": 1465.7,
     "Pioneer": 1464.65
+   },
+   "change": {
+    "Global": -18.01,
+    "Pioneer": -18.03
    }
   },
   {
    "cycle": 4,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "danjozlec",
     "name": "Danjozlec"
@@ -85,11 +127,16 @@
    "opponent_rating": {
     "Global": 1447.98,
     "Pioneer": 1445.72
+   },
+   "change": {
+    "Global": 18.0,
+    "Pioneer": 17.96
    }
   },
   {
    "cycle": 7,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "snekdotdek",
     "name": "Roberte Brookes"
@@ -100,11 +147,16 @@
    "opponent_rating": {
     "Global": 1434.26,
     "Pioneer": 1500
+   },
+   "change": {
+    "Global": -18.58,
+    "Pioneer": -17.38
    }
   },
   {
    "cycle": 7,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "debakeyforceps",
     "name": "Sean Goh"
@@ -115,11 +167,16 @@
    "opponent_rating": {
     "Global": 1368.57,
     "Pioneer": 1447.82
+   },
+   "change": {
+    "Global": 16.56,
+    "Pioneer": 17.99
    }
   },
   {
    "cycle": 7,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "mayhar",
     "name": "Christopher Allen"
@@ -130,11 +187,16 @@
    "opponent_rating": {
     "Global": 1501.22,
     "Pioneer": 1502.16
+   },
+   "change": {
+    "Global": 18.68,
+    "Pioneer": 18.65
    }
   },
   {
    "cycle": 7,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "mattbarnes",
     "name": "Matthew Barnes"
@@ -145,11 +207,16 @@
    "opponent_rating": {
     "Global": 1584.79,
     "Pioneer": 1517.36
+   },
+   "change": {
+    "Global": -16.14,
+    "Pioneer": -17.41
    }
   },
   {
    "cycle": 7,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "rowanmillers",
     "name": "Rowan Millers"
@@ -160,6 +227,10 @@
    "opponent_rating": {
     "Global": 1534.22,
     "Pioneer": 1473.66
+   },
+   "change": {
+    "Global": -16.77,
+    "Pioneer": -17.89
    }
   }
  ],
@@ -192,6 +263,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-6-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 9
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "148th of 221",
+   "typical_finish": 74.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
+  },
+  "Pioneer": {
+   "record": "3-6-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 9
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "148th of 221",
+   "typical_finish": 74.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
   }
  }
 }

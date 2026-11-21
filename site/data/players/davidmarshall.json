@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "108th",
    "field_size": 233,
+   "finish_share": 46.4,
    "record": "4-5-0",
+   "win_rate": {
+    "rate": 44.4,
+    "matches": 9
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1486.16,
+    "Modern": 1484.25
+   },
    "deck": "Colorless Tron",
    "decklist": "https://melee.gg/Decklist/View/06397122-5d24-47c6-a240-b4eb004cb889"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "dialect",
     "name": "Joey Brautigam"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1508.43,
     "Modern": 1612.7
+   },
+   "change": {
+    "Global": -17.85,
+    "Modern": -15.95
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "mooncomix",
     "name": "Ellis Dolan"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1484.62,
     "Modern": 1482.78
+   },
+   "change": {
+    "Global": 18.04,
+    "Modern": 17.98
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "whatadennis",
     "name": "Daniel McKay"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1500.89,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": -17.99,
+    "Modern": -18.04
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "k1tt0",
     "name": "Kitt Ng"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1458.64,
     "Modern": 1466.7
+   },
+   "change": {
+    "Global": 17.57,
+    "Modern": 17.68
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "arcguy302",
     "name": "Aseem Chandar"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1452.55,
     "Modern": 1449.09
+   },
+   "change": {
+    "Global": -18.86,
+    "Modern": -18.96
    }
   },
   {
    "cycle": 13,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "razorlives",
     "name": "Razorlives"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1621.37,
     "Modern": 1533.52
+   },
+   "change": {
+    "Global": 20.55,
+    "Modern": 18.93
    }
   },
   {
    "cycle": 13,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "hazzrd",
     "name": "RIley Jones"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1590.92,
     "Modern": 1565.08
+   },
+   "change": {
+    "Global": -16.37,
+    "Modern": -16.84
    }
   },
   {
    "cycle": 13,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "viraz",
     "name": "Viraz"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1544.1,
     "Modern": 1453.7
+   },
+   "change": {
+    "Global": 19.08,
+    "Modern": 17.43
    }
   },
   {
    "cycle": 13,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "bealewithit",
     "name": "Bealewithit"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1503.89,
     "Modern": 1503.15
+   },
+   "change": {
+    "Global": -18.01,
+    "Modern": -17.98
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-5-0",
+   "win_rate": {
+    "rate": 44.4,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "108th of 233",
+   "typical_finish": 46.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "4-5-0",
+   "win_rate": {
+    "rate": 44.4,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "108th of 233",
+   "typical_finish": 46.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

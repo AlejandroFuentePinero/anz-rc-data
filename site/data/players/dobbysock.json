@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "143rd",
    "field_size": 154,
+   "finish_share": 92.9,
    "record": "0-3-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1445.86,
+    "Modern": 1446.62
+   },
    "deck": "Orzhov Death & Taxes",
    "decklist": "https://melee.gg/Decklist/View/3c35cf64-9e45-441c-8574-a3e7926ea3a6"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 8,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "fairjordans",
     "name": "Dylan Brown"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1584.93,
     "Modern": 1553.99
+   },
+   "change": {
+    "Global": -16.45,
+    "Modern": -17.02
    }
   },
   {
    "cycle": 8,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "derpish1",
     "name": "Connor Teh-Hall"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1481.36,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -18.04,
+    "Modern": -18.02
    }
   },
   {
    "cycle": 8,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "cuisiwang1",
     "name": "LeoCui"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1465.45,
     "Modern": 1465.64
+   },
+   "change": {
+    "Global": -0.0,
+    "Modern": 0.01
    }
   },
   {
    "cycle": 8,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "mitchrobbo",
     "name": "Mitch Robinson"
@@ -75,6 +104,10 @@
    "opponent_rating": {
     "Global": 1375.26,
     "Modern": 1445.38
+   },
+   "change": {
+    "Global": -19.64,
+    "Modern": -18.36
    }
   }
  ],
@@ -99,6 +132,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-3-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "143rd of 154",
+   "typical_finish": 92.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "0-3-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "143rd of 154",
+   "typical_finish": 92.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

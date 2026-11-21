@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "190th",
    "field_size": 221,
+   "finish_share": 86.0,
    "record": "1-5-0",
+   "win_rate": {
+    "rate": 16.7,
+    "matches": 6
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1426.67,
+    "Pioneer": 1426.48
+   },
    "deck": "Rakdos Midrange",
    "decklist": "https://melee.gg/Decklist/View/361f675c-7977-48dd-b15b-461ec569ac87"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 7,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "skerpyderps",
     "name": "skerpyderps"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1480.46,
     "Pioneer": 1480.56
+   },
+   "change": {
+    "Global": -18.36,
+    "Pioneer": -18.35
    }
   },
   {
    "cycle": 7,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "miaatcheson",
     "name": "Mia Atcheson"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1463.13,
     "Pioneer": 1461.74
+   },
+   "change": {
+    "Global": -18.34,
+    "Pioneer": -18.36
    }
   },
   {
    "cycle": 7,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "morgo2870",
     "name": "Morgo2870"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1415.07,
     "Pioneer": 1414.91
+   },
+   "change": {
+    "Global": 17.12,
+    "Pioneer": 17.12
    }
   },
   {
    "cycle": 7,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "cain",
     "name": "Cain"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1481.64,
     "Pioneer": 1481.84
+   },
+   "change": {
+    "Global": -17.98,
+    "Pioneer": -17.97
    }
   },
   {
    "cycle": 7,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "chiawhey",
     "name": "Chia Wei Leong"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1476.3,
     "Pioneer": 1466.94
+   },
+   "change": {
+    "Global": -17.75,
+    "Pioneer": -17.92
    }
   },
   {
    "cycle": 7,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "indruheinstein",
     "name": "indruheinstein"
@@ -105,6 +144,10 @@
    "opponent_rating": {
     "Global": 1442.92,
     "Pioneer": 1443.19
+   },
+   "change": {
+    "Global": -18.03,
+    "Pioneer": -18.02
    }
   }
  ],
@@ -129,6 +172,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-5-0",
+   "win_rate": {
+    "rate": 16.7,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "190th of 221",
+   "typical_finish": 86.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "1-5-0",
+   "win_rate": {
+    "rate": 16.7,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "190th of 221",
+   "typical_finish": 86.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

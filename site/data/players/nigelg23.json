@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "150th",
    "field_size": 168,
+   "finish_share": 89.3,
    "record": "0-2-1",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 2
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1465.03,
+    "Standard": 1463.69
+   },
    "deck": "Domain Ramp",
    "decklist": "https://melee.gg/Decklist/View/5b3fce86-1c16-43a1-9e15-5207b7181c0c"
   },
@@ -21,7 +34,20 @@
    "format": "Standard",
    "finish": "131st",
    "field_size": 188,
+   "finish_share": 69.7,
    "record": "2-3-0",
+   "win_rate": {
+    "rate": 40.0,
+    "matches": 5
+   },
+   "rating_start": {
+    "Global": 1465.03,
+    "Standard": 1463.69
+   },
+   "rating_end": {
+    "Global": 1453.85,
+    "Standard": 1447.29
+   },
    "deck": "Azorius Fliers",
    "decklist": "https://melee.gg/Decklist/View/648f372d-4890-4331-8d37-b4510168d4b7"
   }
@@ -30,6 +56,7 @@
   {
    "cycle": 6,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "benign_nine",
     "name": "Nick Perry"
@@ -40,11 +67,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Standard": 1500
+   },
+   "change": {
+    "Global": 0.0,
+    "Standard": 0.0
    }
   },
   {
    "cycle": 6,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "ittaiw",
     "name": "IttaiW"
@@ -55,11 +87,16 @@
    "opponent_rating": {
     "Global": 1541.87,
     "Standard": 1500.0
+   },
+   "change": {
+    "Global": -17.24,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 6,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "nino111",
     "name": "Nino Manera"
@@ -70,11 +107,16 @@
    "opponent_rating": {
     "Global": 1497.29,
     "Standard": 1464.98
+   },
+   "change": {
+    "Global": -17.73,
+    "Standard": -18.31
    }
   },
   {
    "cycle": 12,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "nranyone",
     "name": "ivan sanche"
@@ -85,11 +127,16 @@
    "opponent_rating": {
     "Global": 1555.97,
     "Standard": 1481.99
+   },
+   "change": {
+    "Global": 19.65,
+    "Standard": 18.33
    }
   },
   {
    "cycle": 12,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "mythar",
     "name": "Ken Hickey"
@@ -100,11 +147,16 @@
    "opponent_rating": {
     "Global": 1493.39,
     "Standard": 1518.0
+   },
+   "change": {
+    "Global": -17.84,
+    "Standard": -17.34
    }
   },
   {
    "cycle": 12,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "riku_slayers",
     "name": "Alfred Chen"
@@ -115,11 +167,16 @@
    "opponent_rating": {
     "Global": 1419.59,
     "Standard": 1414.49
+   },
+   "change": {
+    "Global": 17.14,
+    "Standard": 17.09
    }
   },
   {
    "cycle": 12,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "danso",
     "name": "Brett Girvan"
@@ -130,11 +187,16 @@
    "opponent_rating": {
     "Global": 1659.42,
     "Standard": 1528.34
+   },
+   "change": {
+    "Global": -14.83,
+    "Standard": -17.15
    }
   },
   {
    "cycle": 12,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "nicholasc1",
     "name": "Nick Chow"
@@ -145,6 +207,10 @@
    "opponent_rating": {
     "Global": 1618.19,
     "Standard": 1501.59
+   },
+   "change": {
+    "Global": -15.3,
+    "Standard": -17.33
    }
   }
  ],
@@ -177,6 +243,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-5-1",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "131st of 188",
+   "typical_finish": 79.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
+  },
+  "Standard": {
+   "record": "2-5-1",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "131st of 188",
+   "typical_finish": 79.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
   }
  }
 }

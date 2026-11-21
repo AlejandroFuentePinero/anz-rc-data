@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "137th",
    "field_size": 228,
+   "finish_share": 60.1,
    "record": "2-6-1",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1427.42,
+    "Modern": 1428.31
+   },
    "deck": "Mono-Black Coffers",
    "decklist": "https://melee.gg/Decklist/View/f8668ae2-bab5-4bf2-b8fd-1e65cf70b973"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 5,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "dannystone",
     "name": "Danny Stone"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1404.82,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -19.73,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "calmmirror",
     "name": "Samuel Maher"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1521.97,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -17.24,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "nanolotl",
     "name": "Lewis Tolonen"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1387.18,
     "Modern": 1464.0
+   },
+   "change": {
+    "Global": 16.62,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "antoshka",
     "name": "Oran Ryan"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1482.66,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -17.95,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "nedw",
     "name": "Ned Weinert"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1470.48,
     "Modern": 1464.0
+   },
+   "change": {
+    "Global": -17.84,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "shovit",
     "name": "Carlos Pacheco"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1444.84,
     "Modern": 1446.33
+   },
+   "change": {
+    "Global": -17.98,
+    "Modern": -17.99
    }
   },
   {
    "cycle": 5,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "sirchristophr",
     "name": "Christopher Bilboe"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1465.48,
     "Modern": 1462.39
+   },
+   "change": {
+    "Global": 0.72,
+    "Modern": 0.63
    }
   },
   {
    "cycle": 5,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "tonyjones22",
     "name": "antoine nguyen"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1508.16,
     "Modern": 1446.63
+   },
+   "change": {
+    "Global": -16.52,
+    "Modern": -17.67
    }
   },
   {
    "cycle": 5,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "dale85",
     "name": "dale85"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1373.67,
     "Modern": 1375.28
+   },
+   "change": {
+    "Global": 17.34,
+    "Modern": 17.35
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-6-1",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "137th of 228",
+   "typical_finish": 60.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "2-6-1",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "137th of 228",
+   "typical_finish": 60.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

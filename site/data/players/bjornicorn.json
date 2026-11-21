@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "55th",
    "field_size": 228,
+   "finish_share": 24.1,
    "record": "5-4-0",
+   "win_rate": {
+    "rate": 55.6,
+    "matches": 9
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1521.68,
+    "Modern": 1517.71
+   },
    "deck": "Living End",
    "decklist": "https://melee.gg/Decklist/View/825e0230-0894-4dce-9672-4f69e8c08db8"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 5,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "benjaminhipwell",
     "name": "BenjaminHipwell"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1537.57,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 18.69,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "serswagsalot",
     "name": "SerSwagsalot"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1501.44,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": 17.69,
+    "Modern": 17.67
    }
   },
   {
    "cycle": 5,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "buiqs",
     "name": "Buiqs"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1537.14,
     "Modern": 1536.0
+   },
+   "change": {
+    "Global": 18.01,
+    "Modern": 18.01
    }
   },
   {
    "cycle": 5,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "bradleyhorne",
     "name": "BradleyHorne"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1553.11,
     "Modern": 1554.0
+   },
+   "change": {
+    "Global": 17.98,
+    "Modern": 18.01
    }
   },
   {
    "cycle": 5,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "lavaridge",
     "name": "James Larsen-Scott"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1720.0,
     "Modern": 1572.0
+   },
+   "change": {
+    "Global": -15.33,
+    "Modern": -17.99
    }
   },
   {
    "cycle": 5,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "jinavie",
     "name": "Jin Kim"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1554.7,
     "Modern": 1554.0
+   },
+   "change": {
+    "Global": -18.04,
+    "Modern": -17.99
    }
   },
   {
    "cycle": 5,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "thokk",
     "name": "Ethan Taylor"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1479.67,
     "Modern": 1536.0
+   },
+   "change": {
+    "Global": 16.92,
+    "Modern": 18.01
    }
   },
   {
    "cycle": 5,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "pingu",
     "name": "Ben Parker"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1556.21,
     "Modern": 1554.0
+   },
+   "change": {
+    "Global": -17.99,
+    "Modern": -17.99
    }
   },
   {
    "cycle": 5,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "joedeane",
     "name": "Joe Deane"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1634.91,
     "Modern": 1536.01
+   },
+   "change": {
+    "Global": -16.24,
+    "Modern": -17.99
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "5-4-0",
+   "win_rate": {
+    "rate": 55.6,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "55th of 228",
+   "typical_finish": 24.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "5-4-0",
+   "win_rate": {
+    "rate": 55.6,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "55th of 228",
+   "typical_finish": 24.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "131st",
    "field_size": 228,
+   "finish_share": 57.5,
    "record": "3-6-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 9
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1449.03,
+    "Modern": 1446.01
+   },
    "deck": "Colorless Combo",
    "decklist": "https://melee.gg/Decklist/View/29ce7a82-97e8-498f-af45-22205539adb9"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 5,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "spiderbyte12",
     "name": "Michael Billinghurst"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1593.55,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 19.7,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "denby",
     "name": "Denby Adams"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1503.36,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": -18.3,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "juzza",
     "name": "Justin Cheung"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1454.35,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": -18.86,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "trasmussen",
     "name": "Timothy Rasmussen"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1566.42,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": 19.53,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "ramohn",
     "name": "Ramohn"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1499.99,
     "Modern": 1500.0
+   },
+   "change": {
+    "Global": -18.04,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "lifi",
     "name": "Liam Fisher"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1485.94,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -17.97,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "shovit",
     "name": "Carlos Pacheco"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1462.82,
     "Modern": 1464.32
+   },
+   "change": {
+    "Global": 17.94,
+    "Modern": 18.01
    }
   },
   {
    "cycle": 5,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "tomjreid5",
     "name": "tomjreid5"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1481.23,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -18.05,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "tonyjones22",
     "name": "antoine nguyen"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1524.68,
     "Modern": 1464.3
+   },
+   "change": {
+    "Global": -16.93,
+    "Modern": -17.99
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-6-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "131st of 228",
+   "typical_finish": 57.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "3-6-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "131st of 228",
+   "typical_finish": 57.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

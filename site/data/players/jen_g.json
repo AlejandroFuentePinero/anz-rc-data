@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "123rd",
    "field_size": 221,
+   "finish_share": 55.7,
    "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1469.07,
+    "Pioneer": 1466.81
+   },
    "deck": "Boros Convoke",
    "decklist": "https://melee.gg/Decklist/View/6a62b080-5764-4b47-a255-17b4a04f8be4"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 7,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "moistvl",
     "name": "Simon Harnden"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1528.87,
     "Pioneer": 1465.28
+   },
+   "change": {
+    "Global": -17.47,
+    "Pioneer": -18.63
    }
   },
   {
    "cycle": 7,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "planeswalkerzen",
     "name": "Zen Miyaji-Thorne"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1689.42,
     "Pioneer": 1498.43
+   },
+   "change": {
+    "Global": -14.28,
+    "Pioneer": -17.69
    }
   },
   {
    "cycle": 7,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "calgit",
     "name": "Calum Gittins"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1522.72,
     "Pioneer": 1584.5
+   },
+   "change": {
+    "Global": -17.01,
+    "Pioneer": -15.81
    }
   },
   {
    "cycle": 7,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "1drakos1",
     "name": "1Drakos1"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1383.12,
     "Pioneer": 1427.62
+   },
+   "change": {
+    "Global": 16.76,
+    "Pioneer": 17.63
    }
   },
   {
    "cycle": 7,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "shredmane",
     "name": "Shredmane"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1462.76,
     "Pioneer": 1462.88
+   },
+   "change": {
+    "Global": 17.9,
+    "Pioneer": 17.95
    }
   },
   {
    "cycle": 7,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "garyjohnson1",
     "name": "GaryJohnson1"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1544.54,
     "Pioneer": 1545.74
+   },
+   "change": {
+    "Global": 19.07,
+    "Pioneer": 19.13
    }
   },
   {
    "cycle": 7,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "nekmilla",
     "name": "Nick Millar"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1516.93,
     "Pioneer": 1515.67
+   },
+   "change": {
+    "Global": -17.78,
+    "Pioneer": -17.76
    }
   },
   {
    "cycle": 7,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "antoshka",
     "name": "Oran Ryan"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1480.58,
     "Pioneer": 1484.06
+   },
+   "change": {
+    "Global": -18.12,
+    "Pioneer": -18.01
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "123rd of 221",
+   "typical_finish": 55.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "123rd of 221",
+   "typical_finish": 55.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

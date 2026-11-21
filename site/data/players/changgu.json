@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "69th",
    "field_size": 212,
+   "finish_share": 32.5,
    "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1505.57,
+    "Modern": 1501.65
+   },
    "deck": "Dimir Midrange",
    "decklist": "https://melee.gg/Decklist/View/13d7d716-cb5b-40ba-bde5-b3800088a511"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 10,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "leonardb",
     "name": "Leonard Barker"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1514.93,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 18.27,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 10,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "juzza",
     "name": "Justin Cheung"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1616.83,
     "Modern": 1537.61
+   },
+   "change": {
+    "Global": -16.21,
+    "Modern": -17.64
    }
   },
   {
    "cycle": 10,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "safetosay",
     "name": "SafeToSay"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1500.56,
     "Modern": 1500.32
+   },
+   "change": {
+    "Global": 17.97,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 10,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "carps",
     "name": "Samuel Carpenter"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1484.24,
     "Modern": 1517.47
+   },
+   "change": {
+    "Global": 17.35,
+    "Modern": 17.98
    }
   },
   {
    "cycle": 10,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "oldmate",
     "name": "Sean Harmanis"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1537.45,
     "Modern": 1551.48
+   },
+   "change": {
+    "Global": 18.0,
+    "Modern": 18.28
    }
   },
   {
    "cycle": 10,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "yangjinhao",
     "name": "Jinhao Yang"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1654.88,
     "Modern": 1595.81
+   },
+   "change": {
+    "Global": -16.19,
+    "Modern": -17.25
    }
   },
   {
    "cycle": 10,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "slydaniel7787",
     "name": "SlyDaniel7787"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1539.53,
     "Modern": 1536.91
+   },
+   "change": {
+    "Global": -17.99,
+    "Modern": -18.01
    }
   },
   {
    "cycle": 10,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "razorlives",
     "name": "Razorlives"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1651.96,
     "Modern": 1535.01
+   },
+   "change": {
+    "Global": -15.63,
+    "Modern": -17.71
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "69th of 212",
+   "typical_finish": 32.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "69th of 212",
+   "typical_finish": 32.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

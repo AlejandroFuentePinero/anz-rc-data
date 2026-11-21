@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "133rd",
    "field_size": 209,
+   "finish_share": 63.6,
    "record": "1-5-1",
+   "win_rate": {
+    "rate": 16.7,
+    "matches": 6
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1433.53,
+    "Standard": 1429.87
+   },
    "deck": "Dimir Midrange",
    "decklist": "https://melee.gg/Decklist/View/73a4fb72-1581-44de-b4f2-b40a00951b1b"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 11,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "ashbrown",
     "name": "Hanbin Zhou"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1568.24,
     "Standard": 1533.0
+   },
+   "change": {
+    "Global": -16.76,
+    "Standard": -17.4
    }
   },
   {
    "cycle": 11,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "ganksyou",
     "name": "Michael Russell"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1653.08,
     "Standard": 1503.1
+   },
+   "change": {
+    "Global": -14.93,
+    "Standard": -17.63
    }
   },
   {
    "cycle": 11,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "e9",
     "name": "Jeremy Mackney"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1485.06,
     "Standard": 1495.5
+   },
+   "change": {
+    "Global": 18.31,
+    "Standard": 18.56
    }
   },
   {
    "cycle": 11,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "jeremiahchua",
     "name": "Jeremiah Chua"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1514.45,
     "Standard": 1482.45
+   },
+   "change": {
+    "Global": -17.49,
+    "Standard": -18.02
    }
   },
   {
    "cycle": 11,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "dejake",
     "name": "DeJake"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1469.58,
     "Standard": 1465.01
+   },
+   "change": {
+    "Global": -17.99,
+    "Standard": -18.01
    }
   },
   {
    "cycle": 11,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "theblackflame",
     "name": "theblackflame"
@@ -105,20 +144,27 @@
    "opponent_rating": {
     "Global": 1449.61,
     "Standard": 1447.68
+   },
+   "change": {
+    "Global": -18.03,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 11,
    "round": "Round 7",
+   "playoff": false,
    "opponent": null,
    "result": "Bye",
    "games": null,
    "reconstructed": false,
-   "opponent_rating": null
+   "opponent_rating": null,
+   "change": null
   },
   {
    "cycle": 11,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "klarence_the_mouse",
     "name": "Klarence_the_Mouse"
@@ -129,6 +175,10 @@
    "opponent_rating": {
     "Global": 1456.36,
     "Standard": 1449.38
+   },
+   "change": {
+    "Global": 0.42,
+    "Standard": 0.36
    }
   }
  ],
@@ -153,6 +203,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-5-1",
+   "win_rate": {
+    "rate": 16.7,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "133rd of 209",
+   "typical_finish": 63.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "1-5-1",
+   "win_rate": {
+    "rate": 16.7,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "133rd of 209",
+   "typical_finish": 63.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

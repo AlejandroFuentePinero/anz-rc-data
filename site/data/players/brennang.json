@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "26th",
    "field_size": 228,
+   "finish_share": 11.4,
    "record": "6-3-0",
+   "win_rate": {
+    "rate": 66.7,
+    "matches": 9
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1551.84,
+    "Modern": 1554.0
+   },
    "deck": "Golgari Yawgmoth",
    "decklist": "https://melee.gg/Decklist/View/14a84f2d-290f-4606-8068-a7e3e9697188"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 5,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "samcosmo",
     "name": "Samuel Taubman"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1446.8,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 17.03,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "chump1991",
     "name": "Chris Humphreys"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1450.77,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": 16.79,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "matteobuckley",
     "name": "Matteo Buckley"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1535.98,
     "Modern": 1536.0
+   },
+   "change": {
+    "Global": 18.04,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "rowanmillers",
     "name": "Rowan Millers"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1509.93,
     "Modern": 1554.0
+   },
+   "change": {
+    "Global": 17.24,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "jleb",
     "name": "johneb"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1539.95,
     "Modern": 1572.0
+   },
+   "change": {
+    "Global": -18.53,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "jacobroom",
     "name": "Jacob Broom"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1545.36,
     "Modern": 1554.0
+   },
+   "change": {
+    "Global": 17.9,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "swiftclaw",
     "name": "James Arthur"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1640.36,
     "Modern": 1572.0
+   },
+   "change": {
+    "Global": -16.69,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "dc_abstracted",
     "name": "David Chamberlain"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1552.53,
     "Modern": 1554.0
+   },
+   "change": {
+    "Global": -17.99,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "mayanais",
     "name": "May Kelly-Mills"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1536.38,
     "Modern": 1535.99
+   },
+   "change": {
+    "Global": 18.05,
+    "Modern": 18.0
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "6-3-0",
+   "win_rate": {
+    "rate": 66.7,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "26th of 228",
+   "typical_finish": 11.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "6-3-0",
+   "win_rate": {
+    "rate": 66.7,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "26th of 228",
+   "typical_finish": 11.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

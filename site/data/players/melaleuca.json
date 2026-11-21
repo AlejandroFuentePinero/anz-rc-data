@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "193rd",
    "field_size": 233,
+   "finish_share": 82.8,
    "record": "1-4-0",
+   "win_rate": {
+    "rate": 20.0,
+    "matches": 5
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1451.93,
+    "Modern": 1449.11
+   },
    "deck": "Mono-Red Ruby Storm",
    "decklist": "https://melee.gg/Decklist/View/6e99c2c9-081e-46f6-894b-b4ec0040157b"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "alecf",
     "name": "Alecf"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1415.96,
     "Modern": 1477.73
+   },
+   "change": {
+    "Global": 16.47,
+    "Modern": 17.59
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "seby666",
     "name": "Sebastiano Condo"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1557.81,
     "Modern": 1555.19
+   },
+   "change": {
+    "Global": -17.25,
+    "Modern": -17.31
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "fairjordans",
     "name": "Dylan Brown"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1651.49,
     "Modern": 1516.08
+   },
+   "change": {
+    "Global": -15.24,
+    "Modern": -17.71
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "volcanicpanik",
     "name": "Daniel Yam"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1538.86,
     "Modern": 1533.73
+   },
+   "change": {
+    "Global": -17.0,
+    "Modern": -17.07
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "nino111",
     "name": "Nino Manera"
@@ -90,6 +124,10 @@
    "opponent_rating": {
     "Global": 1629.81,
     "Modern": 1553.74
+   },
+   "change": {
+    "Global": -15.06,
+    "Modern": -16.39
    }
   }
  ],
@@ -114,6 +152,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-4-0",
+   "win_rate": {
+    "rate": 20.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "193rd of 233",
+   "typical_finish": 82.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "1-4-0",
+   "win_rate": {
+    "rate": 20.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "193rd of 233",
+   "typical_finish": 82.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

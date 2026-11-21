@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "180th",
    "field_size": 188,
+   "finish_share": 95.7,
    "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1446.95,
+    "Standard": 1449.4
+   },
    "deck": "Dimir Demons",
    "decklist": "https://melee.gg/Decklist/View/c04ad021-5475-45ba-a820-b45200867db0"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 12,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "alexacres",
     "name": "AlexAcres"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1444.96,
     "Standard": 1500
+   },
+   "change": {
+    "Global": -19.0,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 12,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "jenniferrose",
     "name": "Jennifer-Rose Holloway"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1645.43,
     "Standard": 1693.42
+   },
+   "change": {
+    "Global": -15.03,
+    "Standard": -14.2
    }
   },
   {
    "cycle": 12,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "miketaylor",
     "name": "MikeTaylor"
@@ -60,6 +84,10 @@
    "opponent_rating": {
     "Global": 1409.82,
     "Standard": 1445.75
+   },
+   "change": {
+    "Global": -19.02,
+    "Standard": -18.4
    }
   }
  ],
@@ -84,6 +112,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "180th of 188",
+   "typical_finish": 95.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "180th of 188",
+   "typical_finish": 95.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

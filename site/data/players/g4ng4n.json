@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "183rd",
    "field_size": 188,
+   "finish_share": 97.3,
    "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1447.18,
+    "Standard": 1447.31
+   },
    "deck": "Temur Prowess",
    "decklist": "https://melee.gg/Decklist/View/a962b873-3213-4d5a-8b2f-b452006b0462"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 12,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "hazzrd",
     "name": "RIley Jones"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1573.66,
     "Standard": 1555.66
+   },
+   "change": {
+    "Global": -16.66,
+    "Standard": -16.99
    }
   },
   {
    "cycle": 12,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "voltie",
     "name": "Voltie"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1494.53,
     "Standard": 1431.8
+   },
+   "change": {
+    "Global": -17.8,
+    "Standard": -18.93
    }
   },
   {
    "cycle": 12,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "skips",
     "name": "Nathan Jones"
@@ -60,6 +84,10 @@
    "opponent_rating": {
     "Global": 1445.52,
     "Standard": 1531.46
+   },
+   "change": {
+    "Global": -18.37,
+    "Standard": -16.77
    }
   }
  ],
@@ -84,6 +112,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "183rd of 188",
+   "typical_finish": 97.3,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "183rd of 188",
+   "typical_finish": 97.3,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

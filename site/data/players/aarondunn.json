@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "223rd",
    "field_size": 233,
+   "finish_share": 95.7,
    "record": "0-5-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 5
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1413.64,
+    "Modern": 1409.6
+   },
    "deck": "Mono-Black Combo",
    "decklist": "https://melee.gg/Decklist/View/4c7f695a-834d-4bc9-ae87-b4ec00577ad3"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "solarion",
     "name": "Scott Aitchison"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1660.05,
     "Modern": 1503.35
+   },
+   "change": {
+    "Global": -15.11,
+    "Modern": -17.94
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "gurmagangler",
     "name": "GurmagAngler"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1481.35,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -18.06,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "lt254",
     "name": "Luke Trenberth"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1505.67,
     "Modern": 1433.0
+   },
+   "change": {
+    "Global": -17.29,
+    "Modern": -18.57
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "dans108",
     "name": "DanS108"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1446.11,
     "Modern": 1445.38
+   },
+   "change": {
+    "Global": -18.06,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "goidbro",
     "name": "Goidbro"
@@ -90,6 +124,10 @@
    "opponent_rating": {
     "Global": 1440.33,
     "Modern": 1433.51
+   },
+   "change": {
+    "Global": -17.84,
+    "Modern": -17.89
    }
   }
  ],
@@ -114,6 +152,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-5-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "223rd of 233",
+   "typical_finish": 95.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "0-5-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "223rd of 233",
+   "typical_finish": 95.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

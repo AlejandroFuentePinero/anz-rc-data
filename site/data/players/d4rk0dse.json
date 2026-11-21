@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "106th",
    "field_size": 212,
+   "finish_share": 50.0,
    "record": "3-3-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 6
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1506.46,
+    "Modern": 1502.69
+   },
    "deck": "Mono-Green Amulet Titan",
    "decklist": "https://melee.gg/Decklist/View/5eb4748b-d279-4896-b466-b3800047bd01"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 10,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "josharcher",
     "name": "Josharcher"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1465.71,
     "Modern": 1465.61
+   },
+   "change": {
+    "Global": 17.37,
+    "Modern": 17.37
    }
   },
   {
    "cycle": 10,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "jeremiahchua",
     "name": "Jeremiah Chua"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1592.44,
     "Modern": 1588.42
+   },
+   "change": {
+    "Global": 19.37,
+    "Modern": 19.29
    }
   },
   {
    "cycle": 10,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "dimmer",
     "name": "Matthew Dewitte"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1604.36,
     "Modern": 1523.61
+   },
+   "change": {
+    "Global": -16.77,
+    "Modern": -18.24
    }
   },
   {
    "cycle": 10,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "chuckasickie",
     "name": "Jacob Harvey"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1508.02,
     "Modern": 1518.78
+   },
+   "change": {
+    "Global": 17.78,
+    "Modern": 18.01
    }
   },
   {
    "cycle": 10,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "yangjinhao",
     "name": "Jinhao Yang"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1638.72,
     "Modern": 1578.58
+   },
+   "change": {
+    "Global": -16.16,
+    "Modern": -17.23
    }
   },
   {
    "cycle": 10,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "milkywhitejustice",
     "name": "Robert Lark"
@@ -105,6 +144,10 @@
    "opponent_rating": {
     "Global": 1679.92,
     "Modern": 1600.69
+   },
+   "change": {
+    "Global": -15.14,
+    "Modern": -16.52
    }
   }
  ],
@@ -129,6 +172,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-3-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "106th of 212",
+   "typical_finish": 50.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "3-3-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "106th of 212",
+   "typical_finish": 50.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

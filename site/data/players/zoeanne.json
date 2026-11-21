@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "65th",
    "field_size": 233,
+   "finish_share": 27.9,
    "record": "5-4-0",
+   "win_rate": {
+    "rate": 55.6,
+    "matches": 9
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1521.91,
+    "Modern": 1521.39
+   },
    "deck": "Rakdos Midrange",
    "decklist": "https://melee.gg/Decklist/View/02697d38-1235-44f4-b557-b4ec00589497"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "bbotonline",
     "name": "Brandon Rashad"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1634.05,
     "Modern": 1558.6
+   },
+   "change": {
+    "Global": -15.57,
+    "Modern": -16.93
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "watzzo",
     "name": "Jack Goodhew"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1482.56,
     "Modern": 1482.01
+   },
+   "change": {
+    "Global": 17.97,
+    "Modern": 17.98
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "andrewd2",
     "name": "AndrewD2"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1582.4,
     "Modern": 1553.66
+   },
+   "change": {
+    "Global": 19.46,
+    "Modern": 18.96
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "finlay",
     "name": "Fin George"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1515.93,
     "Modern": 1515.58
+   },
+   "change": {
+    "Global": 17.89,
+    "Modern": 17.92
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "miketrev",
     "name": "MikeTrev"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1444.21,
     "Modern": 1442.41
+   },
+   "change": {
+    "Global": -19.74,
+    "Modern": -19.74
    }
   },
   {
    "cycle": 13,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "garyjohnson1",
     "name": "GaryJohnson1"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1578.45,
     "Modern": 1523.05
+   },
+   "change": {
+    "Global": 19.07,
+    "Modern": 18.09
    }
   },
   {
    "cycle": 13,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "dallas",
     "name": "Dallas"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1576.74,
     "Modern": 1606.21
+   },
+   "change": {
+    "Global": -17.31,
+    "Modern": -16.73
    }
   },
   {
    "cycle": 13,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "loffisky",
     "name": "Loffisky"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1492.88,
     "Modern": 1519.29
+   },
+   "change": {
+    "Global": -18.53,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "nicholas-talbot",
     "name": "Nicholas Talbot"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1540.5,
     "Modern": 1602.66
+   },
+   "change": {
+    "Global": 18.68,
+    "Modern": 19.84
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "5-4-0",
+   "win_rate": {
+    "rate": 55.6,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "65th of 233",
+   "typical_finish": 27.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "5-4-0",
+   "win_rate": {
+    "rate": 55.6,
+    "matches": 9
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "65th of 233",
+   "typical_finish": 27.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

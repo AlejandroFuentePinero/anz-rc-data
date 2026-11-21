@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "152nd",
    "field_size": 209,
+   "finish_share": 72.7,
    "record": "2-5-0",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1449.68,
+    "Standard": 1447.68
+   },
    "deck": "Izzet Lessons",
    "decklist": "https://melee.gg/Decklist/View/71d17229-286b-4706-930c-b40b0173d52b"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 11,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "nino111",
     "name": "Nino Manera"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1600.9,
     "Standard": 1519.89
+   },
+   "change": {
+    "Global": -16.17,
+    "Standard": -17.64
    }
   },
   {
    "cycle": 11,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "ortnomas",
     "name": "Jason Griffin"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1484.26,
     "Standard": 1482.34
+   },
+   "change": {
+    "Global": -17.99,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 11,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "avila",
     "name": "Alex Vilagosh"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1468.77,
     "Standard": 1463.47
+   },
+   "change": {
+    "Global": -17.95,
+    "Standard": -18.02
    }
   },
   {
    "cycle": 11,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "rvd007",
     "name": "Rhys Dalli"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1365.93,
     "Standard": 1429.23
+   },
+   "change": {
+    "Global": -19.49,
+    "Standard": -18.31
    }
   },
   {
    "cycle": 11,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "andrewd2",
     "name": "AndrewD2"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1605.88,
     "Standard": 1518.33
+   },
+   "change": {
+    "Global": 21.2,
+    "Standard": 19.64
    }
   },
   {
    "cycle": 11,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "cazaman11",
     "name": "Caleb O'Reilly"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1451.13,
     "Standard": 1447.5
+   },
+   "change": {
+    "Global": 18.03,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 11,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "daveschxc",
     "name": "Daveschxc"
@@ -120,6 +164,10 @@
    "opponent_rating": {
     "Global": 1470.04,
     "Standard": 1466.15
+   },
+   "change": {
+    "Global": -17.96,
+    "Standard": -17.99
    }
   }
  ],
@@ -144,6 +192,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-5-0",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "152nd of 209",
+   "typical_finish": 72.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "2-5-0",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "152nd of 209",
+   "typical_finish": 72.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

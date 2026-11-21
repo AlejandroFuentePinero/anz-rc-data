@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "115th",
    "field_size": 132,
+   "finish_share": 87.1,
    "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1464.29,
+    "Standard": 1464.0
+   },
    "deck": "Mono-Red Aggro",
    "decklist": "https://melee.gg/Decklist/View/007c382c-fa57-44ed-96a0-9f78bf8a1b21"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 2,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "mindcandy",
     "name": "mindcandy"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1536.0,
     "Standard": 1500
+   },
+   "change": {
+    "Global": 18.66,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "exs1n",
     "name": "David Brunton"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1500.32,
     "Standard": 1518.0
+   },
+   "change": {
+    "Global": -18.33,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "andyv",
     "name": "Andrew Virgona"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1500.0,
     "Standard": 1500.0
+   },
+   "change": {
+    "Global": -18.01,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "insanitystreak",
     "name": "Jye Terry"
@@ -75,6 +104,10 @@
    "opponent_rating": {
     "Global": 1480.75,
     "Standard": 1482.0
+   },
+   "change": {
+    "Global": -18.03,
+    "Standard": -18.0
    }
   }
  ],
@@ -99,6 +132,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "115th of 132",
+   "typical_finish": 87.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "115th of 132",
+   "typical_finish": 87.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

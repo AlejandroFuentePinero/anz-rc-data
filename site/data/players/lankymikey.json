@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "174th",
    "field_size": 233,
+   "finish_share": 74.7,
    "record": "1-6-2",
+   "win_rate": {
+    "rate": 14.3,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1413.92,
+    "Modern": 1409.78
+   },
    "deck": "Izzet Prowess",
    "decklist": "https://melee.gg/Decklist/View/c42667c7-d391-4dad-a804-b4ea009fa084"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "shr1ke",
     "name": "Shr1ke"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -18.0,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "goidbro",
     "name": "Goidbro"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1494.95,
     "Modern": 1487.78
+   },
+   "change": {
+    "Global": 18.24,
+    "Modern": 18.11
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "natl41",
     "name": "NatL41"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1500.84,
     "Modern": 1499.36
+   },
+   "change": {
+    "Global": -17.99,
+    "Modern": -18.01
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "sniperhood",
     "name": "Sniperhood"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1551.9,
     "Modern": 1412.82
+   },
+   "change": {
+    "Global": -16.73,
+    "Modern": -19.26
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "avila",
     "name": "Alex Vilagosh"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1458.53,
     "Modern": 1447.68
+   },
+   "change": {
+    "Global": -18.13,
+    "Modern": -18.28
    }
   },
   {
    "cycle": 13,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "michellerose",
     "name": "MichelleRose"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1446.45,
     "Modern": 1449.02
+   },
+   "change": {
+    "Global": -18.02,
+    "Modern": -17.92
    }
   },
   {
    "cycle": 13,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "validan",
     "name": "Validan"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1448.05,
     "Modern": 1446.56
+   },
+   "change": {
+    "Global": 0.34,
+    "Modern": 0.36
    }
   },
   {
    "cycle": 13,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "smenbith",
     "name": "Smenbith"
@@ -135,11 +184,16 @@
    "opponent_rating": {
     "Global": 1450.57,
     "Modern": 1449.78
+   },
+   "change": {
+    "Global": 0.38,
+    "Modern": 0.42
    }
   },
   {
    "cycle": 13,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "haohaothevillain",
     "name": "Hao Min"
@@ -150,6 +204,10 @@
    "opponent_rating": {
     "Global": 1530.51,
     "Modern": 1447.27
+   },
+   "change": {
+    "Global": -16.17,
+    "Modern": -17.64
    }
   }
  ],
@@ -174,6 +232,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-6-2",
+   "win_rate": {
+    "rate": 14.3,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "174th of 233",
+   "typical_finish": 74.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "1-6-2",
+   "win_rate": {
+    "rate": 14.3,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "174th of 233",
+   "typical_finish": 74.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

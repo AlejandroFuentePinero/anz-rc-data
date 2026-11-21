@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "89th",
    "field_size": 180,
+   "finish_share": 49.4,
    "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1505.56,
+    "Pioneer": 1502.67
+   },
    "deck": "Gruul Vehicles",
    "decklist": "https://melee.gg/Decklist/View/8662d6c7-e671-4840-933a-1b72a042eca5"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 3,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "jazza619",
     "name": "Jared Allsop"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Pioneer": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 3,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "spiderbyte12",
     "name": "Michael Billinghurst"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1591.3,
     "Pioneer": 1517.7
+   },
+   "change": {
+    "Global": -16.67,
+    "Pioneer": -18.01
    }
   },
   {
    "cycle": 3,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "fredstick",
     "name": "Michael Antolini"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1500.63,
     "Pioneer": 1500.63
+   },
+   "change": {
+    "Global": -18.01,
+    "Pioneer": -17.99
    }
   },
   {
    "cycle": 3,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "calgit",
     "name": "Calum Gittins"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1563.13,
     "Pioneer": 1549.21
+   },
+   "change": {
+    "Global": -16.55,
+    "Pioneer": -16.78
    }
   },
   {
    "cycle": 3,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "clarak",
     "name": "Clara Stephenson"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1465.66,
     "Pioneer": 1464.61
+   },
+   "change": {
+    "Global": -18.02,
+    "Pioneer": -18.01
    }
   },
   {
    "cycle": 3,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "dimmer",
     "name": "Matthew Dewitte"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1510.83,
     "Pioneer": 1444.17
+   },
+   "change": {
+    "Global": 19.13,
+    "Pioneer": 17.94
    }
   },
   {
    "cycle": 3,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "mindcandy",
     "name": "mindcandy"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1547.48,
     "Pioneer": 1534.41
+   },
+   "change": {
+    "Global": 19.45,
+    "Pioneer": 19.26
    }
   },
   {
    "cycle": 3,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "hunter3rd",
     "name": "Qihan Zhang"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1499.76,
     "Pioneer": 1497.86
+   },
+   "change": {
+    "Global": 18.23,
+    "Pioneer": 18.25
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "89th of 180",
+   "typical_finish": 49.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "89th of 180",
+   "typical_finish": 49.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

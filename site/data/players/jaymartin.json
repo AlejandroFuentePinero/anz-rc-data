@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "130th",
    "field_size": 221,
+   "finish_share": 58.8,
    "record": "2-5-0",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1448.87,
+    "Pioneer": 1446.71
+   },
    "deck": "Mono-White Humans",
    "decklist": "https://melee.gg/Decklist/View/f64a46c4-81d9-4123-88b2-be1916633ea1"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 7,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "lukew123",
     "name": "LukeW123"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1482.48,
     "Pioneer": 1500
+   },
+   "change": {
+    "Global": -18.32,
+    "Pioneer": -18.0
    }
   },
   {
    "cycle": 7,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "raydric",
     "name": "Jose Gabriel Hilario"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1593.27,
     "Pioneer": 1484.66
+   },
+   "change": {
+    "Global": -15.97,
+    "Pioneer": -17.95
    }
   },
   {
    "cycle": 7,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "benjaminhipwell",
     "name": "BenjaminHipwell"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1577.99,
     "Pioneer": 1498.12
+   },
+   "change": {
+    "Global": -15.96,
+    "Pioneer": -17.38
    }
   },
   {
    "cycle": 7,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "stevengee28",
     "name": "StevenGee28"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1452.2,
     "Pioneer": 1448.77
+   },
+   "change": {
+    "Global": 18.04,
+    "Pioneer": 18.04
    }
   },
   {
    "cycle": 7,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "hamishsnares",
     "name": "hamish_snares"
@@ -90,20 +124,27 @@
    "opponent_rating": {
     "Global": 1462.19,
     "Pioneer": 1462.41
+   },
+   "change": {
+    "Global": -18.1,
+    "Pioneer": -18.04
    }
   },
   {
    "cycle": 7,
    "round": "Round 6",
+   "playoff": false,
    "opponent": null,
    "result": "Bye",
    "games": null,
    "reconstructed": false,
-   "opponent_rating": null
+   "opponent_rating": null,
+   "change": null
   },
   {
    "cycle": 7,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "1drakos1",
     "name": "1Drakos1"
@@ -114,11 +155,16 @@
    "opponent_rating": {
     "Global": 1384.92,
     "Pioneer": 1428.06
+   },
+   "change": {
+    "Global": 16.82,
+    "Pioneer": 17.66
    }
   },
   {
    "cycle": 7,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "goscar",
     "name": "Oscar Gray"
@@ -129,6 +175,10 @@
    "opponent_rating": {
     "Global": 1486.12,
     "Pioneer": 1485.06
+   },
+   "change": {
+    "Global": -17.64,
+    "Pioneer": -17.62
    }
   }
  ],
@@ -153,6 +203,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-5-0",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "130th of 221",
+   "typical_finish": 58.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "2-5-0",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "130th of 221",
+   "typical_finish": 58.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "66th",
    "field_size": 188,
+   "finish_share": 35.1,
    "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1508.24,
+    "Standard": 1501.56
+   },
    "deck": "Dimir Tempo",
    "decklist": "https://melee.gg/Decklist/View/a4a0ed1b-c879-4e4b-92be-b452005d1881"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 12,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "soul_mtg",
     "name": "David Huang"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1752.47,
     "Standard": 1482.0
+   },
+   "change": {
+    "Global": 22.51,
+    "Standard": 17.67
    }
   },
   {
    "cycle": 12,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "chivvalry",
     "name": "Chivvalry"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1519.11,
     "Standard": 1518.32
+   },
+   "change": {
+    "Global": 17.94,
+    "Standard": 18.01
    }
   },
   {
    "cycle": 12,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "isaaclee",
     "name": "Isaac Lee"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1620.71,
     "Standard": 1595.59
+   },
+   "change": {
+    "Global": 19.46,
+    "Standard": 19.09
    }
   },
   {
    "cycle": 12,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "luciaclarke",
     "name": "Lucia Clarke"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1636.24,
     "Standard": 1552.26
+   },
+   "change": {
+    "Global": -16.61,
+    "Standard": -18.05
    }
   },
   {
    "cycle": 12,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "rvd007",
     "name": "Rhys Dalli"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1408.76,
     "Standard": 1456.78
+   },
+   "change": {
+    "Global": 15.56,
+    "Standard": 16.54
    }
   },
   {
    "cycle": 12,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "nino111",
     "name": "Nino Manera"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1699.16,
     "Standard": 1632.55
+   },
+   "change": {
+    "Global": -15.46,
+    "Standard": -16.56
    }
   },
   {
    "cycle": 12,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "mindcandy",
     "name": "mindcandy"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1590.96,
     "Standard": 1581.66
+   },
+   "change": {
+    "Global": -17.13,
+    "Standard": -17.18
    }
   },
   {
    "cycle": 12,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "elvelt6",
     "name": "Elvelt6"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1524.96,
     "Standard": 1520.8
+   },
+   "change": {
+    "Global": -18.02,
+    "Standard": -17.98
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "66th of 188",
+   "typical_finish": 35.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "66th of 188",
+   "typical_finish": 35.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

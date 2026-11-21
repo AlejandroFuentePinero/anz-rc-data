@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "142nd",
    "field_size": 222,
+   "finish_share": 64.0,
    "record": "2-5-1",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1446.82,
+    "Standard": 1445.72
+   },
    "deck": "Izzet Prowess",
    "decklist": "https://melee.gg/Decklist/View/086ad449-2d4b-4cee-90e7-b2d700ef7513"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 9,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "pianto",
     "name": "James Pianto"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Standard": 1500
+   },
+   "change": {
+    "Global": 0.0,
+    "Standard": 0.0
    }
   },
   {
    "cycle": 9,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "zenzaq",
     "name": "Shane Moore"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1482.0,
     "Standard": 1482.0
+   },
+   "change": {
+    "Global": -18.33,
+    "Standard": -18.33
    }
   },
   {
    "cycle": 9,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "cjellis",
     "name": "CJEllis"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1480.84,
     "Standard": 1483.36
+   },
+   "change": {
+    "Global": 17.98,
+    "Standard": 18.03
    }
   },
   {
    "cycle": 9,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "cf123",
     "name": "CF123"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1498.22,
     "Standard": 1500.0
+   },
+   "change": {
+    "Global": -18.03,
+    "Standard": -17.99
    }
   },
   {
    "cycle": 9,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "raijindemon",
     "name": "RaijinDemon"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1503.76,
     "Standard": 1501.33
+   },
+   "change": {
+    "Global": 18.4,
+    "Standard": 18.36
    }
   },
   {
    "cycle": 9,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "muninnsmanaburn",
     "name": "MuninnsManaBurn"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1482.29,
     "Standard": 1481.99
+   },
+   "change": {
+    "Global": -18.32,
+    "Standard": -18.33
    }
   },
   {
    "cycle": 9,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "adamjaz",
     "name": "AdamJaz"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1542.5,
     "Standard": 1481.43
+   },
+   "change": {
+    "Global": -16.89,
+    "Standard": -18.01
    }
   },
   {
    "cycle": 9,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "zeta_aldasoro",
     "name": "Zeta_Aldasoro"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1465.1,
     "Standard": 1463.27
+   },
+   "change": {
+    "Global": -17.99,
+    "Standard": -18.01
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-5-1",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "142nd of 222",
+   "typical_finish": 64.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "2-5-1",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "142nd of 222",
+   "typical_finish": 64.0,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

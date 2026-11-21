@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "94th",
    "field_size": 180,
+   "finish_share": 52.2,
    "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1464.99,
+    "Pioneer": 1463.71
+   },
    "deck": "Izzet Creativity",
    "decklist": "https://melee.gg/Decklist/View/3dee1ce0-d903-45c0-b976-83aa560cfb57"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 3,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "alabaster",
     "name": "Ian Cormick"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1529.56,
     "Pioneer": 1536.0
+   },
+   "change": {
+    "Global": 18.54,
+    "Pioneer": 18.66
    }
   },
   {
    "cycle": 3,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "karlos04",
     "name": "Karlos04"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1519.02,
     "Pioneer": 1518.0
+   },
+   "change": {
+    "Global": 18.01,
+    "Pioneer": 17.99
    }
   },
   {
    "cycle": 3,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "garyjohnson1",
     "name": "GaryJohnson1"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1534.39,
     "Pioneer": 1534.39
+   },
+   "change": {
+    "Global": -18.04,
+    "Pioneer": -18.04
    }
   },
   {
    "cycle": 3,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "miketaylor",
     "name": "MikeTaylor"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1518.9,
     "Pioneer": 1519.26
+   },
+   "change": {
+    "Global": 18.01,
+    "Pioneer": 18.01
    }
   },
   {
    "cycle": 3,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "natebass",
     "name": "Nathan Basser"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1562.6,
     "Pioneer": 1484.92
+   },
+   "change": {
+    "Global": -17.52,
+    "Pioneer": -18.94
    }
   },
   {
    "cycle": 3,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "browntown182",
     "name": "Liam Brown"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1551.93,
     "Pioneer": 1518.87
+   },
+   "change": {
+    "Global": -17.4,
+    "Pioneer": -17.98
    }
   },
   {
    "cycle": 3,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "killersquid",
     "name": "Killersquid"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1499.83,
     "Pioneer": 1499.76
+   },
+   "change": {
+    "Global": -18.03,
+    "Pioneer": -18.0
    }
   },
   {
    "cycle": 3,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "nanolotl",
     "name": "Lewis Tolonen"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1452.54,
     "Pioneer": 1482.56
+   },
+   "change": {
+    "Global": -18.57,
+    "Pioneer": -17.98
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "94th of 180",
+   "typical_finish": 52.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "94th of 180",
+   "typical_finish": 52.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

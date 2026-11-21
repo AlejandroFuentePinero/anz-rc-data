@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "71st",
    "field_size": 212,
+   "finish_share": 33.5,
    "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1510.26,
+    "Modern": 1499.56
+   },
    "deck": "W-U-R-G Domain Zoo",
    "decklist": "https://melee.gg/Decklist/View/98ac760f-0708-4984-a91d-b380006fd5c4"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 10,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "patricktriglavcanin",
     "name": "PatrickTriglavcanin"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1469.72,
     "Modern": 1463.7
+   },
+   "change": {
+    "Global": 17.45,
+    "Modern": 17.34
    }
   },
   {
    "cycle": 10,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "nonco",
     "name": "Jackson Kidd"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1518.58,
     "Modern": 1517.02
+   },
+   "change": {
+    "Global": 18.02,
+    "Modern": 17.99
    }
   },
   {
    "cycle": 10,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "miketaylor",
     "name": "MikeTaylor"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1525.34,
     "Modern": 1465.29
+   },
+   "change": {
+    "Global": 17.82,
+    "Modern": 16.72
    }
   },
   {
    "cycle": 10,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "dweebdog",
     "name": "Ivan Schroder"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1653.97,
     "Modern": 1553.41
+   },
+   "change": {
+    "Global": 19.83,
+    "Modern": 18.02
    }
   },
   {
    "cycle": 10,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "nicholasc1",
     "name": "Nick Chow"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1622.67,
     "Modern": 1587.84
+   },
+   "change": {
+    "Global": -17.1,
+    "Modern": -17.68
    }
   },
   {
    "cycle": 10,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "itisiconscience",
     "name": "Elliott Low Choy"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1514.11,
     "Modern": 1507.35
+   },
+   "change": {
+    "Global": -18.76,
+    "Modern": -18.82
    }
   },
   {
    "cycle": 10,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "conradus",
     "name": "connor mcgillivray"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1804.55,
     "Modern": 1584.44
+   },
+   "change": {
+    "Global": -13.24,
+    "Modern": -17.07
    }
   },
   {
    "cycle": 10,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "lillia",
     "name": "Brennan Crawford"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1761.25,
     "Modern": 1573.94
+   },
+   "change": {
+    "Global": -13.75,
+    "Modern": -16.95
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "71st of 212",
+   "typical_finish": 33.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "71st of 212",
+   "typical_finish": 33.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

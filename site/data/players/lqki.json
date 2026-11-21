@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "200th",
    "field_size": 209,
+   "finish_share": 95.7,
    "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1448.1,
+    "Standard": 1447.07
+   },
    "deck": "Dimir Excruciator",
    "decklist": "https://melee.gg/Decklist/View/16d260af-2cbc-429c-b724-b40b01880c6b"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 11,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "na",
     "name": "Sebastian Vearncombe"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1743.31,
     "Standard": 1601.38
+   },
+   "change": {
+    "Global": -13.65,
+    "Standard": -16.16
    }
   },
   {
    "cycle": 11,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "joshpedley",
     "name": "JoshPedley"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1361.15,
     "Standard": 1444.94
+   },
+   "change": {
+    "Global": -20.27,
+    "Standard": -18.71
    }
   },
   {
    "cycle": 11,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "popalotgnome",
     "name": "Popalotgnome"
@@ -60,6 +84,10 @@
    "opponent_rating": {
     "Global": 1467.15,
     "Standard": 1461.44
+   },
+   "change": {
+    "Global": -17.98,
+    "Standard": -18.07
    }
   }
  ],
@@ -84,6 +112,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "200th of 209",
+   "typical_finish": 95.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "200th of 209",
+   "typical_finish": 95.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

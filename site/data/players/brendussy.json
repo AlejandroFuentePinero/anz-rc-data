@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "97th",
    "field_size": 222,
+   "finish_share": 43.7,
    "record": "3-4-0",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1484.15,
+    "Standard": 1481.85
+   },
    "deck": "Azorius Control",
    "decklist": "https://melee.gg/Decklist/View/4a7cdb15-3afd-4a84-8c35-b2d601718ee6"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 9,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "gabrielbartholazzi",
     "name": "GabrielBartholazzi"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Standard": 1500
+   },
+   "change": {
+    "Global": -18.0,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 9,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "drdeadwood",
     "name": "Edward Endres"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1409.13,
     "Standard": 1482.0
+   },
+   "change": {
+    "Global": -19.33,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 9,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "nedw",
     "name": "Ned Weinert"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1487.47,
     "Standard": 1464.0
+   },
+   "change": {
+    "Global": -17.55,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 9,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "dialect",
     "name": "Joey Brautigam"
@@ -75,20 +104,27 @@
    "opponent_rating": {
     "Global": 1520.78,
     "Standard": 1445.97
+   },
+   "change": {
+    "Global": -16.62,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 9,
    "round": "Round 5",
+   "playoff": false,
    "opponent": null,
    "result": "Bye",
    "games": null,
    "reconstructed": false,
-   "opponent_rating": null
+   "opponent_rating": null,
+   "change": null
   },
   {
    "cycle": 9,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "leonardb",
     "name": "Leonard Barker"
@@ -99,11 +135,16 @@
    "opponent_rating": {
     "Global": 1534.87,
     "Standard": 1444.52
+   },
+   "change": {
+    "Global": 19.93,
+    "Standard": 18.3
    }
   },
   {
    "cycle": 9,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "apricity",
     "name": "Apricity"
@@ -114,11 +155,16 @@
    "opponent_rating": {
     "Global": 1413.71,
     "Standard": 1402.99
+   },
+   "change": {
+    "Global": 17.37,
+    "Standard": 17.21
    }
   },
   {
    "cycle": 9,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "muninnsmanaburn",
     "name": "MuninnsManaBurn"
@@ -129,6 +175,10 @@
    "opponent_rating": {
     "Global": 1484.78,
     "Standard": 1482.35
+   },
+   "change": {
+    "Global": 18.35,
+    "Standard": 18.34
    }
   }
  ],
@@ -153,6 +203,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-4-0",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "97th of 222",
+   "typical_finish": 43.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "3-4-0",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "97th of 222",
+   "typical_finish": 43.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

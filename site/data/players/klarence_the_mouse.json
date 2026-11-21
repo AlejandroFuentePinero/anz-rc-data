@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "132nd",
    "field_size": 209,
+   "finish_share": 63.2,
    "record": "2-5-1",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1455.94,
+    "Standard": 1449.02
+   },
    "deck": "Boros Dragons",
    "decklist": "https://melee.gg/Decklist/View/2970eb08-f745-4124-a0e6-b40c00307839"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 11,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "nguqn004",
     "name": "nguqn004"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Standard": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 11,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "skrb",
     "name": "Benjamin Skrbinsek"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1518.62,
     "Standard": 1517.65
+   },
+   "change": {
+    "Global": -17.99,
+    "Standard": -18.01
    }
   },
   {
    "cycle": 11,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "natebass",
     "name": "Nathan Basser"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1794.83,
     "Standard": 1619.62
+   },
+   "change": {
+    "Global": -12.78,
+    "Standard": -15.83
    }
   },
   {
    "cycle": 11,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "bianca",
     "name": "Bianca"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1433.16,
     "Standard": 1483.7
+   },
+   "change": {
+    "Global": 17.01,
+    "Standard": 17.99
    }
   },
   {
    "cycle": 11,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "alosaur",
     "name": "Alex Humbley"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1769.65,
     "Standard": 1588.12
+   },
+   "change": {
+    "Global": -13.27,
+    "Standard": -16.44
    }
   },
   {
    "cycle": 11,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "jeremiahchua",
     "name": "Jeremiah Chua"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1513.38,
     "Standard": 1482.47
+   },
+   "change": {
+    "Global": -17.59,
+    "Standard": -18.06
    }
   },
   {
    "cycle": 11,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "volcanicpanik",
     "name": "Daniel Yam"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1526.75,
     "Standard": 1452.26
+   },
+   "change": {
+    "Global": -17.03,
+    "Standard": -18.28
    }
   },
   {
    "cycle": 11,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "cazaman11",
     "name": "Caleb O'Reilly"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1433.11,
     "Standard": 1429.51
+   },
+   "change": {
+    "Global": -0.42,
+    "Standard": -0.36
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "2-5-1",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "132nd of 209",
+   "typical_finish": 63.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "2-5-1",
+   "win_rate": {
+    "rate": 28.6,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "132nd of 209",
+   "typical_finish": 63.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

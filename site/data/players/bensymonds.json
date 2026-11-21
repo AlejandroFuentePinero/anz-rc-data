@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "184th",
    "field_size": 212,
+   "finish_share": 86.8,
    "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1468.35,
+    "Modern": 1467.17
+   },
    "deck": "Izzet Prowess",
    "decklist": "https://melee.gg/Decklist/View/3bfb3e50-354b-4494-a7e4-b38000447f6f"
   },
@@ -21,7 +34,20 @@
    "format": "Modern",
    "finish": "89th",
    "field_size": 233,
+   "finish_share": 38.2,
    "record": "4-3-0",
+   "win_rate": {
+    "rate": 57.1,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1468.35,
+    "Modern": 1467.17
+   },
+   "rating_end": {
+    "Global": 1492.63,
+    "Modern": 1488.57
+   },
    "deck": "Boros Energy",
    "decklist": "https://melee.gg/Decklist/View/4dbd597f-408b-414d-9db7-b4eb00cc32d0"
   }
@@ -30,6 +56,7 @@
   {
    "cycle": 10,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "richardtasker",
     "name": "Richardtasker"
@@ -40,11 +67,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -18.0,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 10,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "wft",
     "name": "Benjamin Twemlow"
@@ -55,11 +87,16 @@
    "opponent_rating": {
     "Global": 1576.9,
     "Modern": 1564.23
+   },
+   "change": {
+    "Global": -16.27,
+    "Modern": -16.5
    }
   },
   {
    "cycle": 10,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "pingu",
     "name": "Ben Parker"
@@ -70,11 +107,16 @@
    "opponent_rating": {
     "Global": 1610.1,
     "Modern": 1557.4
+   },
+   "change": {
+    "Global": 20.62,
+    "Modern": 19.67
    }
   },
   {
    "cycle": 10,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "helloaragon",
     "name": "Oliver Wearing"
@@ -85,11 +127,16 @@
    "opponent_rating": {
     "Global": 1486.87,
     "Modern": 1485.01
+   },
+   "change": {
+    "Global": -17.99,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "frknbonzam8",
     "name": "Zach Alvar"
@@ -100,11 +147,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 18.58,
+    "Modern": 18.6
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "fvd",
     "name": "Francis Dwyer"
@@ -115,11 +167,16 @@
    "opponent_rating": {
     "Global": 1482.96,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": 17.93,
+    "Modern": 18.59
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "settler_of",
     "name": "Albern Catan"
@@ -130,11 +187,16 @@
    "opponent_rating": {
     "Global": 1551.74,
     "Modern": 1494.73
+   },
+   "change": {
+    "Global": 18.85,
+    "Modern": 17.82
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "stolensock16",
     "name": "Jason Yan"
@@ -145,11 +207,16 @@
    "opponent_rating": {
     "Global": 1633.05,
     "Modern": 1558.21
+   },
+   "change": {
+    "Global": 19.99,
+    "Modern": 18.66
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "peterkeenan",
     "name": "PeterKeenan"
@@ -160,11 +227,16 @@
    "opponent_rating": {
     "Global": 1572.58,
     "Modern": 1576.53
+   },
+   "change": {
+    "Global": -17.47,
+    "Modern": -17.35
    }
   },
   {
    "cycle": 13,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "bbotonline",
     "name": "Brandon Rashad"
@@ -175,11 +247,16 @@
    "opponent_rating": {
     "Global": 1679.72,
     "Modern": 1607.97
+   },
+   "change": {
+    "Global": -15.22,
+    "Modern": -16.46
    }
   },
   {
    "cycle": 13,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "csypher",
     "name": "Jordan Cock"
@@ -190,6 +267,10 @@
    "opponent_rating": {
     "Global": 1490.71,
     "Modern": 1482.14
+   },
+   "change": {
+    "Global": -18.37,
+    "Modern": -18.45
    }
   }
  ],
@@ -222,6 +303,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "5-6-0",
+   "win_rate": {
+    "rate": 45.5,
+    "matches": 11
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "89th of 233",
+   "typical_finish": 62.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
+  },
+  "Modern": {
+   "record": "5-6-0",
+   "win_rate": {
+    "rate": 45.5,
+    "matches": 11
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "89th of 233",
+   "typical_finish": 62.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
   }
  }
 }

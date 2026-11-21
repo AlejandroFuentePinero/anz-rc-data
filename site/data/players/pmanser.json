@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "150th",
    "field_size": 188,
+   "finish_share": 79.8,
    "record": "1-2-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 3
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1480.31,
+    "Standard": 1480.26
+   },
    "deck": "Mono-Blue",
    "decklist": "https://melee.gg/Decklist/View/127ed79c-5b80-4848-aad0-b4520048c760"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 12,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "mcfish",
     "name": "Joel McAndrew"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1532.13,
     "Standard": 1450.38
+   },
+   "change": {
+    "Global": -17.41,
+    "Standard": -18.9
    }
   },
   {
    "cycle": 12,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "sgtberry",
     "name": "Liam Newbery"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1355.05,
     "Standard": 1431.75
+   },
+   "change": {
+    "Global": 15.69,
+    "Standard": 17.1
    }
   },
   {
    "cycle": 12,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "eswaff",
     "name": "Eli Swafford"
@@ -60,6 +84,10 @@
    "opponent_rating": {
     "Global": 1500.28,
     "Standard": 1501.65
+   },
+   "change": {
+    "Global": -17.96,
+    "Standard": -17.94
    }
   }
  ],
@@ -84,6 +112,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-2-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "150th of 188",
+   "typical_finish": 79.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "1-2-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "150th of 188",
+   "typical_finish": 79.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

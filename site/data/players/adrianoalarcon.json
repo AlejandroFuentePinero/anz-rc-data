@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "188th",
    "field_size": 221,
+   "finish_share": 85.1,
    "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1461.45,
+    "Pioneer": 1461.74
+   },
    "deck": "Mono-Red Prowess",
    "decklist": "https://melee.gg/Decklist/View/db5f175b-d86f-4ebc-a08a-ec548ccc472c"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 7,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "danjozlec",
     "name": "Danjozlec"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1461.2,
     "Pioneer": 1448.57
+   },
+   "change": {
+    "Global": -18.71,
+    "Pioneer": -18.94
    }
   },
   {
    "cycle": 7,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "chuckasickie",
     "name": "Jacob Harvey"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1373.83,
     "Pioneer": 1403.36
+   },
+   "change": {
+    "Global": 16.05,
+    "Pioneer": 16.59
    }
   },
   {
    "cycle": 7,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "killad",
     "name": "KillaD"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1499.48,
     "Pioneer": 1501.08
+   },
+   "change": {
+    "Global": -17.96,
+    "Pioneer": -17.94
    }
   },
   {
    "cycle": 7,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "baileyparks",
     "name": "Bailey Parks"
@@ -75,6 +104,10 @@
    "opponent_rating": {
     "Global": 1483.44,
     "Pioneer": 1481.61
+   },
+   "change": {
+    "Global": -17.93,
+    "Pioneer": -17.97
    }
   }
  ],
@@ -99,6 +132,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "188th of 221",
+   "typical_finish": 85.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "188th of 221",
+   "typical_finish": 85.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

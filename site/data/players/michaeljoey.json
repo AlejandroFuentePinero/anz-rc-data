@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "150th",
    "field_size": 228,
+   "finish_share": 65.8,
    "record": "2-3-0",
+   "win_rate": {
+    "rate": 40.0,
+    "matches": 5
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1484.44,
+    "Modern": 1482.0
+   },
    "deck": "Domain Rhinos",
    "decklist": "https://melee.gg/Decklist/View/1a495079-afa1-4427-898b-31daff6e481a"
   },
@@ -21,7 +34,20 @@
    "format": "Modern",
    "finish": "188th",
    "field_size": 233,
+   "finish_share": 80.7,
    "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rating_start": {
+    "Global": 1484.44,
+    "Modern": 1482.0
+   },
+   "rating_end": {
+    "Global": 1449.44,
+    "Modern": 1447.06
+   },
    "deck": "Izzet Aggro",
    "decklist": "https://melee.gg/Decklist/View/79744a5c-be1e-4e53-b495-b4ec006a8749"
   }
@@ -30,6 +56,7 @@
   {
    "cycle": 5,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "kirblinx",
     "name": "Jamie Schoneveld"
@@ -40,11 +67,16 @@
    "opponent_rating": {
     "Global": 1572.96,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -16.67,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "sansliberte",
     "name": "sansLiberte"
@@ -55,11 +87,16 @@
    "opponent_rating": {
     "Global": 1481.13,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -18.04,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "tonyjones22",
     "name": "antoine nguyen"
@@ -70,11 +107,16 @@
    "opponent_rating": {
     "Global": 1531.32,
     "Modern": 1464.0
+   },
+   "change": {
+    "Global": 19.2,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "calanata222",
     "name": "Caleb Wigman"
@@ -85,11 +127,16 @@
    "opponent_rating": {
     "Global": 1485.32,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": 18.02,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "matthewgriffin",
     "name": "matthewgriffin"
@@ -100,11 +147,16 @@
    "opponent_rating": {
     "Global": 1499.03,
     "Modern": 1500.01
+   },
+   "change": {
+    "Global": -18.06,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "lennyregione",
     "name": "LennyRegione"
@@ -115,11 +167,16 @@
    "opponent_rating": {
     "Global": 1491.8,
     "Modern": 1483.78
+   },
+   "change": {
+    "Global": -17.87,
+    "Modern": -17.97
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "jaydengrogan",
     "name": "JaydenGrogan"
@@ -130,11 +187,16 @@
    "opponent_rating": {
     "Global": 1482.0,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -17.72,
+    "Modern": -17.67
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "jaaayy",
     "name": "Jaaayy"
@@ -145,11 +207,16 @@
    "opponent_rating": {
     "Global": 1464.04,
     "Modern": 1463.99
+   },
+   "change": {
+    "Global": 18.28,
+    "Modern": 18.32
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "sparhawk221",
     "name": "Sparhawk221"
@@ -160,6 +227,10 @@
    "opponent_rating": {
     "Global": 1483.62,
     "Modern": 1485.42
+   },
+   "change": {
+    "Global": -17.7,
+    "Modern": -17.62
    }
   }
  ],
@@ -192,6 +263,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-6-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 9
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "150th of 228",
+   "typical_finish": 73.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
+  },
+  "Modern": {
+   "record": "3-6-0",
+   "win_rate": {
+    "rate": 33.3,
+    "matches": 9
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "150th of 228",
+   "typical_finish": 73.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
   }
  }
 }

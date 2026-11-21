@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "98th",
    "field_size": 188,
+   "finish_share": 52.1,
    "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1472.72,
+    "Standard": 1468.7
+   },
    "deck": "Mardu Aggro",
    "decklist": "https://melee.gg/Decklist/View/0cf3d6d6-65c0-45a1-bef9-b4520024b091"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 12,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "starilixel",
     "name": "Mia Fountain"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1543.29,
     "Standard": 1539.14
+   },
+   "change": {
+    "Global": -17.21,
+    "Standard": -17.29
    }
   },
   {
    "cycle": 12,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "baldyp",
     "name": "BaldyP"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1481.97,
     "Standard": 1482.43
+   },
+   "change": {
+    "Global": -18.01,
+    "Standard": -18.01
    }
   },
   {
    "cycle": 12,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "zeroix7",
     "name": "William Jettner"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1437.89,
     "Standard": 1468.32
+   },
+   "change": {
+    "Global": 17.51,
+    "Standard": 18.07
    }
   },
   {
    "cycle": 12,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "elterrentino",
     "name": "Elterrentino"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1482.34,
     "Standard": 1483.06
+   },
+   "change": {
+    "Global": 18.0,
+    "Standard": 18.01
    }
   },
   {
    "cycle": 12,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "flamyblade",
     "name": "george williams"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1527.97,
     "Standard": 1521.26
+   },
+   "change": {
+    "Global": 18.51,
+    "Standard": 18.37
    }
   },
   {
    "cycle": 12,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "sprat56",
     "name": "Jack Contencin"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1612.38,
     "Standard": 1616.59
+   },
+   "change": {
+    "Global": -16.3,
+    "Standard": -16.23
    }
   },
   {
    "cycle": 12,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "beardedbear",
     "name": "BeardedBear"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1585.81,
     "Standard": 1574.25
+   },
+   "change": {
+    "Global": -16.48,
+    "Standard": -16.7
    }
   },
   {
    "cycle": 12,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "ez_clap",
     "name": "Henry Sams"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1750.15,
     "Standard": 1512.33
+   },
+   "change": {
+    "Global": -13.29,
+    "Standard": -17.52
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "98th of 188",
+   "typical_finish": 52.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "98th of 188",
+   "typical_finish": 52.1,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

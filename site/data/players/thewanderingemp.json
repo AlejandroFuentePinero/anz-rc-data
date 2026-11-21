@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "133rd",
    "field_size": 221,
+   "finish_share": 60.2,
    "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1465.32,
+    "Pioneer": 1461.47
+   },
    "deck": "Azorius Control",
    "decklist": "https://melee.gg/Decklist/View/060f9760-df62-4dc7-be8f-b0d2ba952c46"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 7,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "trevor_georgesz",
     "name": "Trevor_Georgesz"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1445.1,
     "Pioneer": 1500
+   },
+   "change": {
+    "Global": 17.0,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 7,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "grief_scam",
     "name": "Nicholas Farrell"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1518.0,
     "Pioneer": 1518.0
+   },
+   "change": {
+    "Global": -17.98,
+    "Pioneer": -18.0
    }
   },
   {
    "cycle": 7,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "milkywhitejustice",
     "name": "Robert Lark"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1606.46,
     "Pioneer": 1463.71
+   },
+   "change": {
+    "Global": -16.05,
+    "Pioneer": -18.66
    }
   },
   {
    "cycle": 7,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "miaatcheson",
     "name": "Mia Atcheson"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1464.42,
     "Pioneer": 1463.13
+   },
+   "change": {
+    "Global": -18.34,
+    "Pioneer": -18.33
    }
   },
   {
    "cycle": 7,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "insanitystreak",
     "name": "Jye Terry"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1433.95,
     "Pioneer": 1461.76
+   },
+   "change": {
+    "Global": 17.44,
+    "Pioneer": 17.98
    }
   },
   {
    "cycle": 7,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "bent",
     "name": "Ben Tudman"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1653.63,
     "Pioneer": 1464.51
+   },
+   "change": {
+    "Global": -14.9,
+    "Pioneer": -18.3
    }
   },
   {
    "cycle": 7,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "chuckasickie",
     "name": "Jacob Harvey"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1368.78,
     "Pioneer": 1394.9
+   },
+   "change": {
+    "Global": -19.79,
+    "Pioneer": -19.23
    }
   },
   {
    "cycle": 7,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "patrickdarge352",
     "name": "patrickdarge352"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1444.09,
     "Pioneer": 1444.42
+   },
+   "change": {
+    "Global": 17.94,
+    "Pioneer": 18.02
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "133rd of 221",
+   "typical_finish": 60.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "133rd of 221",
+   "typical_finish": 60.2,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

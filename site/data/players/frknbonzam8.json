@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "121st",
    "field_size": 233,
+   "finish_share": 51.9,
    "record": "3-4-0",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1486.61,
+    "Modern": 1487.34
+   },
    "deck": "Azorius",
    "decklist": "https://melee.gg/Decklist/View/944ebed6-a8ad-41df-b7da-b4ec007c19f9"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 13,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "bensymonds",
     "name": "Ben Symonds"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1468.35,
     "Modern": 1467.17
+   },
+   "change": {
+    "Global": -18.58,
+    "Modern": -18.6
    }
   },
   {
    "cycle": 13,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "jinavie",
     "name": "Jin Kim"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1585.35,
     "Modern": 1578.21
+   },
+   "change": {
+    "Global": 19.89,
+    "Modern": 19.76
    }
   },
   {
    "cycle": 13,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "ez_clap",
     "name": "Henry Sams"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1757.11,
     "Modern": 1696.73
+   },
+   "change": {
+    "Global": 22.57,
+    "Modern": 21.52
    }
   },
   {
    "cycle": 13,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "fvd",
     "name": "Francis Dwyer"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1483.68,
     "Modern": 1517.42
+   },
+   "change": {
+    "Global": -18.73,
+    "Modern": -18.1
    }
   },
   {
    "cycle": 13,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "zxedh",
     "name": "zxedh"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1499.85,
     "Modern": 1499.51
+   },
+   "change": {
+    "Global": 17.9,
+    "Modern": 17.91
    }
   },
   {
    "cycle": 13,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "dallas",
     "name": "Dallas"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1559.4,
     "Modern": 1589.43
+   },
+   "change": {
+    "Global": -17.34,
+    "Modern": -16.78
    }
   },
   {
    "cycle": 13,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "stevengee28",
     "name": "StevenGee28"
@@ -120,6 +164,10 @@
    "opponent_rating": {
     "Global": 1445.44,
     "Modern": 1484.89
+   },
+   "change": {
+    "Global": -19.1,
+    "Modern": -18.38
    }
   }
  ],
@@ -144,6 +192,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-4-0",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "121st of 233",
+   "typical_finish": 51.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "3-4-0",
+   "win_rate": {
+    "rate": 42.9,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "121st of 233",
+   "typical_finish": 51.9,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "46th",
    "field_size": 180,
+   "finish_share": 25.6,
    "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1536.06,
+    "Pioneer": 1535.57
+   },
    "deck": "Mono-White Humans",
    "decklist": "https://melee.gg/Decklist/View/27dbb1cf-f428-41f3-842d-112b54f95aad"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 3,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "potatowifi",
     "name": "Ramy Michel"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Pioneer": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 3,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "sanderson",
     "name": "Sophie Anderson"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1518.0,
     "Pioneer": 1518.0
+   },
+   "change": {
+    "Global": -18.0,
+    "Pioneer": -18.0
    }
   },
   {
    "cycle": 3,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "rovilleson",
     "name": "Rovilleson Lucero"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1518.03,
     "Pioneer": 1518.03
+   },
+   "change": {
+    "Global": 18.33,
+    "Pioneer": 18.33
    }
   },
   {
    "cycle": 3,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "rowanmillers",
     "name": "Rowan Millers"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1500.55,
     "Pioneer": 1520.18
+   },
+   "change": {
+    "Global": 17.68,
+    "Pioneer": 18.03
    }
   },
   {
    "cycle": 3,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "alexander",
     "name": "Alex Lim"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1506.88,
     "Pioneer": 1538.18
+   },
+   "change": {
+    "Global": -18.53,
+    "Pioneer": -17.97
    }
   },
   {
    "cycle": 3,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "thebetterpierce",
     "name": "Pierce Tattersall"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1536.78,
     "Pioneer": 1536.63
+   },
+   "change": {
+    "Global": 18.35,
+    "Pioneer": 18.33
    }
   },
   {
    "cycle": 3,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "floptic",
     "name": "Ben Kleinsman-Leusink-Hill"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1576.81,
     "Pioneer": 1504.98
+   },
+   "change": {
+    "Global": 18.75,
+    "Pioneer": 17.42
    }
   },
   {
    "cycle": 3,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "tylervisser",
     "name": "Tyler Visser"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1526.54,
     "Pioneer": 1522.36
+   },
+   "change": {
+    "Global": -18.51,
+    "Pioneer": -18.58
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "46th of 180",
+   "typical_finish": 25.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "46th of 180",
+   "typical_finish": 25.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

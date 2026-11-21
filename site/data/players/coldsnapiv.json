@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "27th",
    "field_size": 212,
+   "finish_share": 12.7,
    "record": "5-2-1",
+   "win_rate": {
+    "rate": 71.4,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1557.49,
+    "Modern": 1557.33
+   },
    "deck": "Dimir Oculus",
    "decklist": "https://melee.gg/Decklist/View/e1e92d82-4fb2-4a82-ba9d-b380007a8f10"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 10,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "notcelestial",
     "name": "Ashleigh Cassar"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1464.01,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 17.34,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 10,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "yanley",
     "name": "Stanley Yu"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1537.2,
     "Modern": 1537.35
+   },
+   "change": {
+    "Global": 18.36,
+    "Modern": 18.35
    }
   },
   {
    "cycle": 10,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "1mrlee",
     "name": "LEE HUNG NGUYEN"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1501.59,
     "Modern": 1500.67
+   },
+   "change": {
+    "Global": 17.38,
+    "Modern": 17.35
    }
   },
   {
    "cycle": 10,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "ez_clap",
     "name": "Henry Sams"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1746.89,
     "Modern": 1696.47
+   },
+   "change": {
+    "Global": 21.49,
+    "Modern": 20.59
    }
   },
   {
    "cycle": 10,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "christong0203",
     "name": "Christopher Tong"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1624.02,
     "Modern": 1638.05
+   },
+   "change": {
+    "Global": 0.9,
+    "Modern": 1.16
    }
   },
   {
    "cycle": 10,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "peterkeenan",
     "name": "PeterKeenan"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1521.11,
     "Modern": 1555.32
+   },
+   "change": {
+    "Global": 17.01,
+    "Modern": 17.63
    }
   },
   {
    "cycle": 10,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "aetherlock",
     "name": "Jonathon Lowbridge"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1573.18,
     "Modern": 1574.45
+   },
+   "change": {
+    "Global": -18.35,
+    "Modern": -18.34
    }
   },
   {
    "cycle": 10,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "maxiebon1234",
     "name": "maxiebon1234"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1648.71,
     "Modern": 1607.05
+   },
+   "change": {
+    "Global": -16.64,
+    "Modern": -17.41
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "5-2-1",
+   "win_rate": {
+    "rate": 71.4,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "27th of 212",
+   "typical_finish": 12.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Modern": {
+   "record": "5-2-1",
+   "win_rate": {
+    "rate": 71.4,
+    "matches": 7
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "27th of 212",
+   "typical_finish": 12.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

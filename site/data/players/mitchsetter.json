@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "163rd",
    "field_size": 188,
+   "finish_share": 86.7,
    "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1460.83,
+    "Standard": 1462.42
+   },
    "deck": "Sultai Reanimator",
    "decklist": "https://melee.gg/Decklist/View/2a22553b-f4bf-435b-9b5e-b451009f1064"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 12,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "pholtzman",
     "name": "Paul Holtzman"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1369.01,
     "Standard": 1428.01
+   },
+   "change": {
+    "Global": -20.38,
+    "Standard": -19.31
    }
   },
   {
    "cycle": 12,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "darain7",
     "name": "Darain7"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1481.39,
     "Standard": 1480.74
+   },
+   "change": {
+    "Global": 18.03,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 12,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "devtin",
     "name": "Martin Devlin"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1503.21,
     "Standard": 1500.33
+   },
+   "change": {
+    "Global": -17.9,
+    "Standard": -17.97
    }
   },
   {
    "cycle": 12,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "miketaylor",
     "name": "MikeTaylor"
@@ -75,6 +104,10 @@
    "opponent_rating": {
     "Global": 1428.85,
     "Standard": 1464.15
+   },
+   "change": {
+    "Global": -18.93,
+    "Standard": -18.3
    }
   }
  ],
@@ -99,6 +132,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "163rd of 188",
+   "typical_finish": 86.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "1-3-0",
+   "win_rate": {
+    "rate": 25.0,
+    "matches": 4
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "163rd of 188",
+   "typical_finish": 86.7,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

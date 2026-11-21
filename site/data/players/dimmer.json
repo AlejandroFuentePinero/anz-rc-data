@@ -12,7 +12,20 @@
    "format": "Standard",
    "finish": "12th",
    "field_size": 132,
+   "finish_share": 9.1,
    "record": "6-2-0",
+   "win_rate": {
+    "rate": 75.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1572.96,
+    "Standard": 1571.38
+   },
    "deck": "Jund Control",
    "decklist": "https://melee.gg/Decklist/View/15735f2e-dfe5-41e4-98b2-9e08454c51d6"
   },
@@ -22,7 +35,20 @@
    "format": "Pioneer",
    "finish": "103rd",
    "field_size": 180,
+   "finish_share": 57.2,
    "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1572.96,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1526.45,
+    "Pioneer": 1463.19
+   },
    "deck": "Rakdos Midrange",
    "decklist": "https://melee.gg/Decklist/View/56c183b8-9ecd-41d9-8b09-36f4a25e048e"
   },
@@ -32,7 +58,20 @@
    "format": "Modern",
    "finish": "108th",
    "field_size": 228,
+   "finish_share": 47.4,
    "record": "4-5-0",
+   "win_rate": {
+    "rate": 44.4,
+    "matches": 9
+   },
+   "rating_start": {
+    "Global": 1526.45,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1506.66,
+    "Modern": 1482.59
+   },
    "deck": "Golgari Yawgmoth",
    "decklist": "https://melee.gg/Decklist/View/d6788740-f264-4373-97f6-d21f38b03734"
   },
@@ -42,7 +81,20 @@
    "format": "Standard",
    "finish": "85th",
    "field_size": 168,
+   "finish_share": 50.6,
    "record": "3-5-0",
+   "win_rate": {
+    "rate": 37.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1506.66,
+    "Standard": 1571.38
+   },
+   "rating_end": {
+    "Global": 1464.0,
+    "Standard": 1523.37
+   },
    "deck": "Golgari Midrange",
    "decklist": "https://melee.gg/Decklist/View/acee493a-d3e5-436b-b56e-428501909c4b"
   },
@@ -52,7 +104,20 @@
    "format": "Pioneer",
    "finish": "Top 8",
    "field_size": 221,
+   "finish_share": 2.9,
    "record": "7-2-0",
+   "win_rate": {
+    "rate": 77.8,
+    "matches": 9
+   },
+   "rating_start": {
+    "Global": 1464.0,
+    "Pioneer": 1463.19
+   },
+   "rating_end": {
+    "Global": 1570.13,
+    "Pioneer": 1562.19
+   },
    "deck": "Rakdos Transmogrify",
    "decklist": "https://melee.gg/Decklist/View/0f7db94a-5c12-4201-a717-c4bcd668bd16"
   },
@@ -62,7 +127,20 @@
    "format": "Modern",
    "finish": "65th",
    "field_size": 154,
+   "finish_share": 42.2,
    "record": "4-4-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1570.13,
+    "Modern": 1482.59
+   },
+   "rating_end": {
+    "Global": 1570.4,
+    "Modern": 1487.09
+   },
    "deck": "Golgari Soultrader",
    "decklist": "https://melee.gg/Decklist/View/24514d9d-dcaf-4de9-9ae7-ded524ca7b3f"
   },
@@ -72,7 +150,20 @@
    "format": "Modern",
    "finish": "Top 8",
    "field_size": 212,
+   "finish_share": 3.1,
    "record": "6-1-2",
+   "win_rate": {
+    "rate": 85.7,
+    "matches": 7
+   },
+   "rating_start": {
+    "Global": 1570.4,
+    "Modern": 1487.09
+   },
+   "rating_end": {
+    "Global": 1655.73,
+    "Modern": 1580.44
+   },
    "deck": "Golgari Broodscale",
    "decklist": "https://melee.gg/Decklist/View/8c08ba8a-af03-4f36-9399-b3800007360d"
   },
@@ -82,7 +173,20 @@
    "format": "Standard",
    "finish": "22nd",
    "field_size": 209,
+   "finish_share": 10.5,
    "record": "6-2-0",
+   "win_rate": {
+    "rate": 75.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1655.73,
+    "Standard": 1523.37
+   },
+   "rating_end": {
+    "Global": 1712.51,
+    "Standard": 1587.23
+   },
    "deck": "Sultai Reanimator",
    "decklist": "https://melee.gg/Decklist/View/64f2c410-f945-459f-9739-b40c0048ab9a"
   }
@@ -91,6 +195,7 @@
   {
    "cycle": 2,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "ethanmtg",
     "name": "Ethan Bird"
@@ -101,11 +206,16 @@
    "opponent_rating": {
     "Global": 1553.98,
     "Standard": 1500
+   },
+   "change": {
+    "Global": 18.98,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "bossbooz",
     "name": "Josh Drew"
@@ -116,11 +226,16 @@
    "opponent_rating": {
     "Global": 1518.0,
     "Standard": 1518.0
+   },
+   "change": {
+    "Global": -18.02,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "karazi",
     "name": "Isaac Riley"
@@ -131,11 +246,16 @@
    "opponent_rating": {
     "Global": 1501.29,
     "Standard": 1500.0
+   },
+   "change": {
+    "Global": -17.99,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "dennison",
     "name": "Gabriel Dennison"
@@ -146,11 +266,16 @@
    "opponent_rating": {
     "Global": 1463.36,
     "Standard": 1464.0
+   },
+   "change": {
+    "Global": 17.64,
+    "Standard": 17.67
    }
   },
   {
    "cycle": 2,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "toddyoungs",
     "name": "Todd Youngs"
@@ -161,11 +286,16 @@
    "opponent_rating": {
     "Global": 1482.01,
     "Standard": 1482.0
+   },
+   "change": {
+    "Global": 17.66,
+    "Standard": 17.68
    }
   },
   {
    "cycle": 2,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "nicholask",
     "name": "NicholasK"
@@ -176,11 +306,16 @@
    "opponent_rating": {
     "Global": 1519.51,
     "Standard": 1518.0
+   },
+   "change": {
+    "Global": 18.02,
+    "Standard": 18.01
    }
   },
   {
    "cycle": 2,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "forceofwilks",
     "name": "James Wilks"
@@ -191,11 +326,16 @@
    "opponent_rating": {
     "Global": 1569.41,
     "Standard": 1536.0
+   },
+   "change": {
+    "Global": 18.6,
+    "Standard": 18.01
    }
   },
   {
    "cycle": 2,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "bradenm",
     "name": "Braden Mills"
@@ -206,11 +346,16 @@
    "opponent_rating": {
     "Global": 1558.15,
     "Standard": 1554.01
+   },
+   "change": {
+    "Global": 18.06,
+    "Standard": 18.01
    }
   },
   {
    "cycle": 3,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "slavouchka",
     "name": "Slava Sheynin"
@@ -221,11 +366,16 @@
    "opponent_rating": {
     "Global": 1464.01,
     "Pioneer": 1464.01
+   },
+   "change": {
+    "Global": 16.02,
+    "Pioneer": 17.34
    }
   },
   {
    "cycle": 3,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "tylervisser",
     "name": "Tyler Visser"
@@ -236,11 +386,16 @@
    "opponent_rating": {
     "Global": 1486.64,
     "Pioneer": 1482.66
+   },
+   "change": {
+    "Global": -19.86,
+    "Pioneer": -18.63
    }
   },
   {
    "cycle": 3,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "godtierpancake",
     "name": "Solomon Nivison-Smith"
@@ -251,11 +406,16 @@
    "opponent_rating": {
     "Global": 1535.99,
     "Pioneer": 1534.7
+   },
+   "change": {
+    "Global": -18.6,
+    "Pioneer": -17.34
    }
   },
   {
    "cycle": 3,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "regularwilde",
     "name": "James Laurenson"
@@ -266,11 +426,16 @@
    "opponent_rating": {
     "Global": 1396.5,
     "Pioneer": 1396.48
+   },
+   "change": {
+    "Global": -20.79,
+    "Pioneer": -19.54
    }
   },
   {
    "cycle": 3,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "hunter3rd",
     "name": "Qihan Zhang"
@@ -281,11 +446,16 @@
    "opponent_rating": {
     "Global": 1480.39,
     "Pioneer": 1481.08
+   },
+   "change": {
+    "Global": -18.9,
+    "Pioneer": -17.65
    }
   },
   {
    "cycle": 3,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "escher_vi",
     "name": "Escher Webster"
@@ -296,11 +466,16 @@
    "opponent_rating": {
     "Global": 1448.75,
     "Pioneer": 1447.22
+   },
+   "change": {
+    "Global": -19.13,
+    "Pioneer": -17.94
    }
   },
   {
    "cycle": 3,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "ethanmtg",
     "name": "Ethan Bird"
@@ -311,11 +486,16 @@
    "opponent_rating": {
     "Global": 1488.44,
     "Pioneer": 1478.79
+   },
+   "change": {
+    "Global": 17.94,
+    "Pioneer": 18.96
    }
   },
   {
    "cycle": 3,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "kalvan",
     "name": "Calum Thatcher"
@@ -326,11 +506,16 @@
    "opponent_rating": {
     "Global": 1444.22,
     "Pioneer": 1445.4
+   },
+   "change": {
+    "Global": 16.81,
+    "Pioneer": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "alabaster",
     "name": "Ian Cormick"
@@ -341,11 +526,16 @@
    "opponent_rating": {
     "Global": 1623.12,
     "Modern": 1500
+   },
+   "change": {
+    "Global": -16.24,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "tundy",
     "name": "Sean Lysaught"
@@ -356,11 +546,16 @@
    "opponent_rating": {
     "Global": 1482.59,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -18.5,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "opdadad",
     "name": "brisbanebroncosrule"
@@ -371,11 +566,16 @@
    "opponent_rating": {
     "Global": 1463.01,
     "Modern": 1464.0
+   },
+   "change": {
+    "Global": 17.48,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "jamesdoust",
     "name": "James Doust"
@@ -386,11 +586,16 @@
    "opponent_rating": {
     "Global": 1481.41,
     "Modern": 1481.67
+   },
+   "change": {
+    "Global": -18.51,
+    "Modern": -18.01
    }
   },
   {
    "cycle": 5,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "bianca",
     "name": "Bianca"
@@ -401,11 +606,16 @@
    "opponent_rating": {
     "Global": 1462.02,
     "Modern": 1464.0
+   },
+   "change": {
+    "Global": 17.48,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "pnametala",
     "name": "pnametala"
@@ -416,11 +626,16 @@
    "opponent_rating": {
     "Global": 1483.98,
     "Modern": 1482.0
+   },
+   "change": {
+    "Global": -18.44,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 5,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "numerated",
     "name": "Ewan Smith"
@@ -431,11 +646,16 @@
    "opponent_rating": {
     "Global": 1484.97,
     "Modern": 1481.99
+   },
+   "change": {
+    "Global": -18.09,
+    "Modern": -17.67
    }
   },
   {
    "cycle": 5,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "sirchristophr",
     "name": "Christopher Bilboe"
@@ -446,11 +666,16 @@
    "opponent_rating": {
     "Global": 1464.76,
     "Modern": 1461.76
+   },
+   "change": {
+    "Global": 17.87,
+    "Modern": 18.28
    }
   },
   {
    "cycle": 5,
    "round": "Round 9",
+   "playoff": false,
    "opponent": {
     "slug": "dennison",
     "name": "Gabriel Dennison"
@@ -461,11 +686,16 @@
    "opponent_rating": {
     "Global": 1443.88,
     "Modern": 1464.0
+   },
+   "change": {
+    "Global": 17.17,
+    "Modern": 17.99
    }
   },
   {
    "cycle": 6,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "snekdotdek",
     "name": "Roberte Brookes"
@@ -476,11 +706,16 @@
    "opponent_rating": {
     "Global": 1486.44,
     "Standard": 1500
+   },
+   "change": {
+    "Global": -18.37,
+    "Standard": -19.3
    }
   },
   {
    "cycle": 6,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "juzza",
     "name": "Justin Cheung"
@@ -491,11 +726,16 @@
    "opponent_rating": {
     "Global": 1422.0,
     "Standard": 1428.98
+   },
+   "change": {
+    "Global": 16.79,
+    "Standard": 15.77
    }
   },
   {
    "cycle": 6,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "chazure",
     "name": "Benaya Lie"
@@ -506,11 +746,16 @@
    "opponent_rating": {
     "Global": 1471.89,
     "Standard": 1500.66
+   },
+   "change": {
+    "Global": 17.39,
+    "Standard": 16.78
    }
   },
   {
    "cycle": 6,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "johnkim",
     "name": "John Kim"
@@ -521,11 +766,16 @@
    "opponent_rating": {
     "Global": 1555.97,
     "Standard": 1518.93
+   },
+   "change": {
+    "Global": -17.39,
+    "Standard": -19.2
    }
   },
   {
    "cycle": 6,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "damiansparks",
     "name": "Damian Sparks"
@@ -536,11 +786,16 @@
    "opponent_rating": {
     "Global": 1421.9,
     "Standard": 1500.64
+   },
+   "change": {
+    "Global": 16.49,
+    "Standard": 16.82
    }
   },
   {
    "cycle": 6,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "sillygoose",
     "name": "Gideon Hallam-walsh"
@@ -551,11 +806,16 @@
    "opponent_rating": {
     "Global": 1416.96,
     "Standard": 1469.34
+   },
+   "change": {
+    "Global": -19.9,
+    "Standard": -20.05
    }
   },
   {
    "cycle": 6,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "billskillz",
     "name": "Billskillz"
@@ -566,11 +826,16 @@
    "opponent_rating": {
     "Global": 1502.14,
     "Standard": 1498.25
+   },
+   "change": {
+    "Global": -17.99,
+    "Standard": -19.17
    }
   },
   {
    "cycle": 6,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "vincentc",
     "name": "VincentC"
@@ -581,11 +846,16 @@
    "opponent_rating": {
     "Global": 1391.22,
     "Standard": 1451.79
+   },
+   "change": {
+    "Global": -19.68,
+    "Standard": -19.66
    }
   },
   {
    "cycle": 7,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "jamier",
     "name": "JamieR"
@@ -596,11 +866,16 @@
    "opponent_rating": {
     "Global": 1467.93,
     "Pioneer": 1466.6
+   },
+   "change": {
+    "Global": 18.07,
+    "Pioneer": 18.06
    }
   },
   {
    "cycle": 7,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "isitaboutmycube",
     "name": "Scott Stipkovich"
@@ -611,11 +886,16 @@
    "opponent_rating": {
     "Global": 1589.99,
     "Pioneer": 1589.04
+   },
+   "change": {
+    "Global": 19.96,
+    "Pioneer": 19.96
    }
   },
   {
    "cycle": 7,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "numerated",
     "name": "Ewan Smith"
@@ -626,11 +906,16 @@
    "opponent_rating": {
     "Global": 1540.26,
     "Pioneer": 1536.37
+   },
+   "change": {
+    "Global": 18.7,
+    "Pioneer": 18.64
    }
   },
   {
    "cycle": 7,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "moistvl",
     "name": "Simon Harnden"
@@ -641,11 +926,16 @@
    "opponent_rating": {
     "Global": 1581.59,
     "Pioneer": 1521.8
+   },
+   "change": {
+    "Global": 19.11,
+    "Pioneer": 18.04
    }
   },
   {
    "cycle": 7,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "andrewd2",
     "name": "AndrewD2"
@@ -656,11 +946,16 @@
    "opponent_rating": {
     "Global": 1650.04,
     "Pioneer": 1553.36
+   },
+   "change": {
+    "Global": 20.0,
+    "Pioneer": 18.28
    }
   },
   {
    "cycle": 7,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "lillia",
     "name": "Brennan Crawford"
@@ -671,11 +966,16 @@
    "opponent_rating": {
     "Global": 1822.09,
     "Pioneer": 1729.34
+   },
+   "change": {
+    "Global": 22.68,
+    "Pioneer": 21.13
    }
   },
   {
    "cycle": 7,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "settler_of",
     "name": "Albern Catan"
@@ -686,11 +986,16 @@
    "opponent_rating": {
     "Global": 1554.31,
     "Pioneer": 1574.49
+   },
+   "change": {
+    "Global": 17.49,
+    "Pioneer": 17.95
    }
   },
   {
    "cycle": 7,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "assembledalphas",
     "name": "Matthew Giudes"
@@ -701,11 +1006,16 @@
    "opponent_rating": {
     "Global": 1859.67,
     "Pioneer": 1761.78
+   },
+   "change": {
+    "Global": -13.37,
+    "Pioneer": -14.99
    }
   },
   {
    "cycle": 7,
    "round": "Quarterfinal",
+   "playoff": true,
    "opponent": {
     "slug": "andrewd2",
     "name": "AndrewD2"
@@ -716,11 +1026,16 @@
    "opponent_rating": {
     "Global": 1668.53,
     "Pioneer": 1576.42
+   },
+   "change": {
+    "Global": -16.51,
+    "Pioneer": -18.07
    }
   },
   {
    "cycle": 8,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "lavaridge",
     "name": "James Larsen-Scott"
@@ -731,11 +1046,16 @@
    "opponent_rating": {
     "Global": 1725.23,
     "Modern": 1625.33
+   },
+   "change": {
+    "Global": -15.19,
+    "Modern": -15.41
    }
   },
   {
    "cycle": 8,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "urisklyerg",
     "name": "Caleb House"
@@ -746,11 +1066,16 @@
    "opponent_rating": {
     "Global": 1501.72,
     "Modern": 1481.02
+   },
+   "change": {
+    "Global": 17.03,
+    "Modern": 18.25
    }
   },
   {
    "cycle": 8,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "soul_mtg",
     "name": "David Huang"
@@ -761,11 +1086,16 @@
    "opponent_rating": {
     "Global": 1642.09,
     "Modern": 1552.37
+   },
+   "change": {
+    "Global": -16.72,
+    "Modern": -16.78
    }
   },
   {
    "cycle": 8,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "derpish1",
     "name": "Connor Teh-Hall"
@@ -776,11 +1106,16 @@
    "opponent_rating": {
     "Global": 1483.05,
     "Modern": 1483.57
+   },
+   "change": {
+    "Global": 16.69,
+    "Modern": 18.27
    }
   },
   {
    "cycle": 8,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "mulch",
     "name": "Luke Mulcahy"
@@ -791,11 +1126,16 @@
    "opponent_rating": {
     "Global": 1602.78,
     "Modern": 1500.02
+   },
+   "change": {
+    "Global": -17.44,
+    "Modern": -17.76
    }
   },
   {
    "cycle": 8,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "tundy",
     "name": "Sean Lysaught"
@@ -806,11 +1146,16 @@
    "opponent_rating": {
     "Global": 1473.23,
     "Modern": 1468.33
+   },
+   "change": {
+    "Global": 16.52,
+    "Modern": 17.98
    }
   },
   {
    "cycle": 8,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "godtierpancake",
     "name": "Solomon Nivison-Smith"
@@ -821,11 +1166,16 @@
    "opponent_rating": {
     "Global": 1458.4,
     "Modern": 1436.98
+   },
+   "change": {
+    "Global": 15.95,
+    "Modern": 17.09
    }
   },
   {
    "cycle": 8,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "bent",
     "name": "Ben Tudman"
@@ -836,11 +1186,16 @@
    "opponent_rating": {
     "Global": 1665.74,
     "Modern": 1551.24
+   },
+   "change": {
+    "Global": -16.57,
+    "Modern": -17.14
    }
   },
   {
    "cycle": 10,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "notjohn",
     "name": "Ben Simmons"
@@ -851,11 +1206,16 @@
    "opponent_rating": {
     "Global": 1528.1,
     "Modern": 1504.27
+   },
+   "change": {
+    "Global": 17.23,
+    "Modern": 18.31
    }
   },
   {
    "cycle": 10,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "thrillhelm",
     "name": "THRILLHELM"
@@ -866,11 +1226,16 @@
    "opponent_rating": {
     "Global": 1518.22,
     "Modern": 1516.75
+   },
+   "change": {
+    "Global": 16.74,
+    "Modern": 18.21
    }
   },
   {
    "cycle": 10,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "d4rk0dse",
     "name": "d4rk0dse"
@@ -881,11 +1246,16 @@
    "opponent_rating": {
     "Global": 1536.74,
     "Modern": 1536.67
+   },
+   "change": {
+    "Global": 16.77,
+    "Modern": 18.24
    }
   },
   {
    "cycle": 10,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "bbotonline",
     "name": "Brandon Rashad"
@@ -896,11 +1266,16 @@
    "opponent_rating": {
     "Global": 1665.2,
     "Modern": 1538.6
+   },
+   "change": {
+    "Global": 18.8,
+    "Modern": 17.94
    }
   },
   {
    "cycle": 10,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "nicholas-talbot",
     "name": "Nicholas Talbot"
@@ -911,11 +1286,16 @@
    "opponent_rating": {
     "Global": 1673.59,
     "Modern": 1621.0
+   },
+   "change": {
+    "Global": 18.61,
+    "Modern": 19.12
    }
   },
   {
    "cycle": 10,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "mcfish",
     "name": "Joel McAndrew"
@@ -926,11 +1306,16 @@
    "opponent_rating": {
     "Global": 1519.42,
     "Modern": 1589.96
+   },
+   "change": {
+    "Global": 15.48,
+    "Modern": 18.2
    }
   },
   {
    "cycle": 10,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "jamesdrake",
     "name": "James Drake"
@@ -941,11 +1326,13 @@
    "opponent_rating": {
     "Global": 1730.57,
     "Modern": 1629.99
-   }
+   },
+   "change": null
   },
   {
    "cycle": 10,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "nicholasc1",
     "name": "Nick Chow"
@@ -956,11 +1343,13 @@
    "opponent_rating": {
     "Global": 1641.38,
     "Modern": 1606.27
-   }
+   },
+   "change": null
   },
   {
    "cycle": 10,
    "round": "Quarterfinal",
+   "playoff": true,
    "opponent": {
     "slug": "christong0203",
     "name": "Christopher Tong"
@@ -971,11 +1360,16 @@
    "opponent_rating": {
     "Global": 1657.91,
     "Modern": 1670.49
+   },
+   "change": {
+    "Global": -18.29,
+    "Modern": -16.66
    }
   },
   {
    "cycle": 11,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "tonycultanvil",
     "name": "Tony Dwyer"
@@ -986,11 +1380,16 @@
    "opponent_rating": {
     "Global": 1424.91,
     "Standard": 1404.64
+   },
+   "change": {
+    "Global": 13.86,
+    "Standard": 15.84
    }
   },
   {
    "cycle": 11,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "shadowhunterjb",
     "name": "ShadowhunterJB"
@@ -1001,11 +1400,16 @@
    "opponent_rating": {
     "Global": 1517.36,
     "Standard": 1518.0
+   },
+   "change": {
+    "Global": -20.76,
+    "Standard": -18.39
    }
   },
   {
    "cycle": 11,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "ignismorgan",
     "name": "IgnisMorgan"
@@ -1016,11 +1420,16 @@
    "opponent_rating": {
     "Global": 1465.46,
     "Standard": 1464.79
+   },
+   "change": {
+    "Global": 14.69,
+    "Standard": 16.98
    }
   },
   {
    "cycle": 11,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "dimbledore",
     "name": "Ben Warren"
@@ -1031,11 +1440,16 @@
    "opponent_rating": {
     "Global": 1485.73,
     "Standard": 1484.47
+   },
+   "change": {
+    "Global": 14.79,
+    "Standard": 17.03
    }
   },
   {
    "cycle": 11,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "ez_clap",
     "name": "Henry Sams"
@@ -1046,11 +1460,16 @@
    "opponent_rating": {
     "Global": 1775.73,
     "Standard": 1492.29
+   },
+   "change": {
+    "Global": 19.77,
+    "Standard": 16.86
    }
   },
   {
    "cycle": 11,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "mcfish",
     "name": "Joel McAndrew"
@@ -1061,11 +1480,16 @@
    "opponent_rating": {
     "Global": 1546.91,
     "Standard": 1463.56
+   },
+   "change": {
+    "Global": 15.26,
+    "Standard": 16.03
    }
   },
   {
    "cycle": 11,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "skrb",
     "name": "Benjamin Skrbinsek"
@@ -1076,11 +1500,16 @@
    "opponent_rating": {
     "Global": 1555.54,
     "Standard": 1554.52
+   },
+   "change": {
+    "Global": 15.14,
+    "Standard": 17.39
    }
   },
   {
    "cycle": 11,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "jamesdrake",
     "name": "James Drake"
@@ -1091,6 +1520,10 @@
    "opponent_rating": {
     "Global": 1839.28,
     "Standard": 1610.91
+   },
+   "change": {
+    "Global": -15.99,
+    "Standard": -17.89
    }
   }
  ],
@@ -1185,6 +1618,72 @@
     }
    ],
    "rated_by": "Modern"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "39-26-2",
+   "win_rate": {
+    "rate": 60.0,
+    "matches": 65
+   },
+   "rcs": 8,
+   "top_8s": 2,
+   "titles": 0,
+   "best_finish": "Top 8",
+   "typical_finish": 26.4,
+   "top_8_rate": 25.0,
+   "rank": 22,
+   "above": 92.7,
+   "rcs_needed": null
+  },
+  "Standard": {
+   "record": "15-9-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 24
+   },
+   "rcs": 3,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "12th of 132",
+   "typical_finish": 10.5,
+   "top_8_rate": 0.0,
+   "rank": 34,
+   "above": 68.8,
+   "rcs_needed": null
+  },
+  "Pioneer": {
+   "record": "10-7-0",
+   "win_rate": {
+    "rate": 58.8,
+    "matches": 17
+   },
+   "rcs": 2,
+   "top_8s": 1,
+   "titles": 0,
+   "best_finish": "Top 8",
+   "typical_finish": 30.1,
+   "top_8_rate": 50.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
+  },
+  "Modern": {
+   "record": "14-10-2",
+   "win_rate": {
+    "rate": 58.3,
+    "matches": 24
+   },
+   "rcs": 3,
+   "top_8s": 1,
+   "titles": 0,
+   "best_finish": "Top 8",
+   "typical_finish": 42.2,
+   "top_8_rate": 33.3,
+   "rank": 33,
+   "above": 62.5,
+   "rcs_needed": null
   }
  }
 }

@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "92nd",
    "field_size": 168,
+   "finish_share": 54.8,
    "record": "3-3-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 6
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1498.4,
+    "Standard": 1500.33
+   },
    "deck": "Mono-Red Aggro",
    "decklist": "https://melee.gg/Decklist/View/36274672-027e-42ed-b7de-f5868ad9f8c2"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 6,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "samcosmo",
     "name": "Samuel Taubman"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1395.8,
     "Standard": 1500
+   },
+   "change": {
+    "Global": -19.89,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 6,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "klarkt",
     "name": "Klarke Trezise"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1432.79,
     "Standard": 1463.68
+   },
+   "change": {
+    "Global": -18.86,
+    "Standard": -18.33
    }
   },
   {
    "cycle": 6,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "candlezs",
     "name": "Luke McCandless"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1429.96,
     "Standard": 1464.64
+   },
+   "change": {
+    "Global": 17.43,
+    "Standard": 18.02
    }
   },
   {
    "cycle": 6,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "solarion",
     "name": "Scott Aitchison"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1484.55,
     "Standard": 1482.63
+   },
+   "change": {
+    "Global": 18.11,
+    "Standard": 18.02
    }
   },
   {
    "cycle": 6,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "cyproterjoan",
     "name": "cyproterjoan"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1503.36,
     "Standard": 1499.98
+   },
+   "change": {
+    "Global": 18.12,
+    "Standard": 18.01
    }
   },
   {
    "cycle": 6,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "raydric",
     "name": "Jose Gabriel Hilario"
@@ -105,6 +144,10 @@
    "opponent_rating": {
     "Global": 1597.19,
     "Standard": 1551.76
+   },
+   "change": {
+    "Global": -16.5,
+    "Standard": -17.38
    }
   }
  ],
@@ -129,6 +172,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "3-3-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "92nd of 168",
+   "typical_finish": 54.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "3-3-0",
+   "win_rate": {
+    "rate": 50.0,
+    "matches": 6
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "92nd of 168",
+   "typical_finish": 54.8,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

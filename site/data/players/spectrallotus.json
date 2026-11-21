@@ -11,7 +11,20 @@
    "format": "Standard",
    "finish": "40th",
    "field_size": 132,
+   "finish_share": 30.3,
    "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1535.97,
+    "Standard": 1536.0
+   },
    "deck": "Rakdos Reanimator",
    "decklist": "https://melee.gg/Decklist/View/483b999a-e10f-4bb6-8eb8-e46b27d7d733"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 2,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "bent",
     "name": "Ben Tudman"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Standard": 1500
+   },
+   "change": {
+    "Global": -18.0,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "pholtzman",
     "name": "Paul Holtzman"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1411.63,
     "Standard": 1482.0
+   },
+   "change": {
+    "Global": 16.72,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "alabaster",
     "name": "Ian Cormick"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1534.7,
     "Standard": 1500.0
+   },
+   "change": {
+    "Global": -17.34,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "felixt",
     "name": "Felix Tonkin"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1481.69,
     "Standard": 1482.0
+   },
+   "change": {
+    "Global": 18.01,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "alosaur",
     "name": "Alex Humbley"
@@ -90,11 +124,16 @@
    "opponent_rating": {
     "Global": 1533.45,
     "Standard": 1500.0
+   },
+   "change": {
+    "Global": -17.38,
+    "Standard": -18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "scoopinresponse",
     "name": "Matthew Macinante"
@@ -105,11 +144,16 @@
    "opponent_rating": {
     "Global": 1480.84,
     "Standard": 1482.0
+   },
+   "change": {
+    "Global": 17.98,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "lithium98",
     "name": "Marcus Courts"
@@ -120,11 +164,16 @@
    "opponent_rating": {
     "Global": 1498.54,
     "Standard": 1500.0
+   },
+   "change": {
+    "Global": 17.97,
+    "Standard": 18.0
    }
   },
   {
    "cycle": 2,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "karazi",
     "name": "Isaac Riley"
@@ -135,6 +184,10 @@
    "opponent_rating": {
     "Global": 1518.99,
     "Standard": 1518.0
+   },
+   "change": {
+    "Global": 18.02,
+    "Standard": 18.0
    }
   }
  ],
@@ -159,6 +212,40 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "40th of 132",
+   "typical_finish": 30.3,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Standard": {
+   "record": "5-3-0",
+   "win_rate": {
+    "rate": 62.5,
+    "matches": 8
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "40th of 132",
+   "typical_finish": 30.3,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

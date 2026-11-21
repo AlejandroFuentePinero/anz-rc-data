@@ -11,7 +11,20 @@
    "format": "Pioneer",
    "finish": "152nd",
    "field_size": 156,
+   "finish_share": 97.4,
    "record": "0-5-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 5
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Pioneer": 1500
+   },
+   "rating_end": {
+    "Global": 1409.6,
+    "Pioneer": 1410.2
+   },
    "deck": "Mono-White Devotion",
    "decklist": "https://melee.gg/Decklist/View/efbd4db4-8a08-4c33-bb8a-0c009cb34bdd"
   }
@@ -20,6 +33,7 @@
   {
    "cycle": 4,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "bbotonline",
     "name": "Brandon Rashad"
@@ -30,11 +44,16 @@
    "opponent_rating": {
     "Global": 1527.21,
     "Pioneer": 1563.37
+   },
+   "change": {
+    "Global": -17.5,
+    "Pioneer": -16.85
    }
   },
   {
    "cycle": 4,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "vacantlot",
     "name": "Jacob Hart"
@@ -45,11 +64,16 @@
    "opponent_rating": {
     "Global": 1482.0,
     "Pioneer": 1482.0
+   },
+   "change": {
+    "Global": -18.01,
+    "Pioneer": -18.02
    }
   },
   {
    "cycle": 4,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "1drakos1",
     "name": "1Drakos1"
@@ -60,11 +84,16 @@
    "opponent_rating": {
     "Global": 1463.1,
     "Pioneer": 1463.11
+   },
+   "change": {
+    "Global": -18.03,
+    "Pioneer": -18.04
    }
   },
   {
    "cycle": 4,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "mtgdirk",
     "name": "MTGDirk"
@@ -75,11 +104,16 @@
    "opponent_rating": {
     "Global": 1448.65,
     "Pioneer": 1448.39
+   },
+   "change": {
+    "Global": -17.96,
+    "Pioneer": -17.98
    }
   },
   {
    "cycle": 4,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "craig",
     "name": "Craig sweetman"
@@ -90,6 +124,10 @@
    "opponent_rating": {
     "Global": 1379.31,
     "Pioneer": 1378.61
+   },
+   "change": {
+    "Global": -18.9,
+    "Pioneer": -18.92
    }
   }
  ],
@@ -114,6 +152,40 @@
     }
    ],
    "rated_by": "Pioneer"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "0-5-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "152nd of 156",
+   "typical_finish": 97.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
+  },
+  "Pioneer": {
+   "record": "0-5-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 5
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "152nd of 156",
+   "typical_finish": 97.4,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }

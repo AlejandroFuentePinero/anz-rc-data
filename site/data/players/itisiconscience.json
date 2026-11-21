@@ -11,7 +11,20 @@
    "format": "Modern",
    "finish": "134th",
    "field_size": 154,
+   "finish_share": 87.0,
    "record": "1-4-0",
+   "win_rate": {
+    "rate": 20.0,
+    "matches": 5
+   },
+   "rating_start": {
+    "Global": 1500,
+    "Modern": 1500
+   },
+   "rating_end": {
+    "Global": 1448.92,
+    "Modern": 1446.94
+   },
    "deck": "Grinding Breach",
    "decklist": "https://melee.gg/Decklist/View/473ff0b0-5164-478e-9849-ef86a333cbb2"
   },
@@ -21,7 +34,20 @@
    "format": "Modern",
    "finish": "21st",
    "field_size": 212,
+   "finish_share": 9.9,
    "record": "6-2-0",
+   "win_rate": {
+    "rate": 75.0,
+    "matches": 8
+   },
+   "rating_start": {
+    "Global": 1448.92,
+    "Modern": 1446.94
+   },
+   "rating_end": {
+    "Global": 1535.77,
+    "Modern": 1527.24
+   },
    "deck": "Esper Goryo's Vengeance",
    "decklist": "https://melee.gg/Decklist/View/71d760ea-79e6-48e2-ade5-b38000662a85"
   },
@@ -31,7 +57,20 @@
    "format": "Standard",
    "finish": "204th",
    "field_size": 209,
+   "finish_share": 97.6,
    "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rating_start": {
+    "Global": 1535.77,
+    "Standard": 1500
+   },
+   "rating_end": {
+    "Global": 1481.31,
+    "Standard": 1449.34
+   },
    "deck": "Golgari Combo",
    "decklist": "https://melee.gg/Decklist/View/96c55ad5-9010-4fee-9a87-b40b00c51507"
   }
@@ -40,6 +79,7 @@
   {
    "cycle": 8,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "zach88",
     "name": "Zach McDannold"
@@ -50,11 +90,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 18.0,
+    "Modern": 18.0
    }
   },
   {
    "cycle": 8,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "markzhou2207",
     "name": "Mark Zhou"
@@ -65,11 +110,16 @@
    "opponent_rating": {
     "Global": 1648.18,
     "Modern": 1518.0
+   },
+   "change": {
+    "Global": -15.64,
+    "Modern": -18.0
    }
   },
   {
    "cycle": 8,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "kierantierney",
     "name": "Kieran Tierney"
@@ -80,11 +130,16 @@
    "opponent_rating": {
     "Global": 1661.17,
     "Modern": 1552.04
+   },
+   "change": {
+    "Global": -15.13,
+    "Modern": -17.05
    }
   },
   {
    "cycle": 8,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "urisklyerg",
     "name": "Caleb House"
@@ -95,11 +150,16 @@
    "opponent_rating": {
     "Global": 1502.34,
     "Modern": 1480.78
+   },
+   "change": {
+    "Global": -17.72,
+    "Modern": -18.04
    }
   },
   {
    "cycle": 8,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "thesource",
     "name": "Michael Rose"
@@ -110,11 +170,16 @@
    "opponent_rating": {
     "Global": 1326.43,
     "Modern": 1466.48
+   },
+   "change": {
+    "Global": -20.59,
+    "Modern": -17.97
    }
   },
   {
    "cycle": 10,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "ascetichell",
     "name": "Ethan De Silva"
@@ -125,11 +190,16 @@
    "opponent_rating": {
     "Global": 1500,
     "Modern": 1500
+   },
+   "change": {
+    "Global": 18.93,
+    "Modern": 18.97
    }
   },
   {
    "cycle": 10,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "venerablelammasu",
     "name": "Thomas Bot"
@@ -140,11 +210,16 @@
    "opponent_rating": {
     "Global": 1688.2,
     "Modern": 1665.26
+   },
+   "change": {
+    "Global": -14.04,
+    "Modern": -14.41
    }
   },
   {
    "cycle": 10,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "temporaleddy",
     "name": "Edward Nurse"
@@ -155,11 +230,16 @@
    "opponent_rating": {
     "Global": 1488.46,
     "Modern": 1501.3
+   },
+   "change": {
+    "Global": 18.63,
+    "Modern": 18.91
    }
   },
   {
    "cycle": 10,
    "round": "Round 4",
+   "playoff": false,
    "opponent": {
     "slug": "trasmussen",
     "name": "Timothy Rasmussen"
@@ -170,11 +250,16 @@
    "opponent_rating": {
     "Global": 1562.82,
     "Modern": 1481.24
+   },
+   "change": {
+    "Global": 19.64,
+    "Modern": 18.2
    }
   },
   {
    "cycle": 10,
    "round": "Round 5",
+   "playoff": false,
    "opponent": {
     "slug": "danso",
     "name": "Brett Girvan"
@@ -185,11 +270,16 @@
    "opponent_rating": {
     "Global": 1716.68,
     "Modern": 1529.74
+   },
+   "change": {
+    "Global": 22.03,
+    "Modern": 18.75
    }
   },
   {
    "cycle": 10,
    "round": "Round 6",
+   "playoff": false,
    "opponent": {
     "slug": "edacious",
     "name": "Edacious"
@@ -200,11 +290,16 @@
    "opponent_rating": {
     "Global": 1556.02,
     "Modern": 1552.41
+   },
+   "change": {
+    "Global": 18.76,
+    "Modern": 18.82
    }
   },
   {
    "cycle": 10,
    "round": "Round 7",
+   "playoff": false,
    "opponent": {
     "slug": "nicholas-talbot",
     "name": "Nicholas Talbot"
@@ -215,11 +310,16 @@
    "opponent_rating": {
     "Global": 1673.5,
     "Modern": 1619.57
+   },
+   "change": {
+    "Global": -15.45,
+    "Modern": -16.3
    }
   },
   {
    "cycle": 10,
    "round": "Round 8",
+   "playoff": false,
    "opponent": {
     "slug": "settler_of",
     "name": "Albern Catan"
@@ -230,11 +330,16 @@
    "opponent_rating": {
     "Global": 1536.33,
     "Modern": 1475.23
+   },
+   "change": {
+    "Global": 18.34,
+    "Modern": 17.37
    }
   },
   {
    "cycle": 11,
    "round": "Round 1",
+   "playoff": false,
    "opponent": {
     "slug": "samloy",
     "name": "Samuel Loy"
@@ -245,11 +350,16 @@
    "opponent_rating": {
     "Global": 1581.18,
     "Standard": 1654.4
+   },
+   "change": {
+    "Global": -17.17,
+    "Standard": -15.21
    }
   },
   {
    "cycle": 11,
    "round": "Round 2",
+   "playoff": false,
    "opponent": {
     "slug": "mtgdirk",
     "name": "MTGDirk"
@@ -260,11 +370,16 @@
    "opponent_rating": {
     "Global": 1484.19,
     "Standard": 1518.3
+   },
+   "change": {
+    "Global": -18.63,
+    "Standard": -17.39
    }
   },
   {
    "cycle": 11,
    "round": "Round 3",
+   "playoff": false,
    "opponent": {
     "slug": "10145",
     "name": "Jade Buckler"
@@ -275,6 +390,10 @@
    "opponent_rating": {
     "Global": 1463.68,
     "Standard": 1464.0
+   },
+   "change": {
+    "Global": -18.66,
+    "Standard": -18.06
    }
   }
  ],
@@ -322,6 +441,56 @@
     }
    ],
    "rated_by": "Standard"
+  }
+ },
+ "summary": {
+  "Global": {
+   "record": "7-9-0",
+   "win_rate": {
+    "rate": 43.8,
+    "matches": 16
+   },
+   "rcs": 3,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "21st of 212",
+   "typical_finish": 87.0,
+   "top_8_rate": 0.0,
+   "rank": 198,
+   "above": 34.2,
+   "rcs_needed": null
+  },
+  "Modern": {
+   "record": "7-6-0",
+   "win_rate": {
+    "rate": 53.8,
+    "matches": 13
+   },
+   "rcs": 2,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "21st of 212",
+   "typical_finish": 48.5,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 1
+  },
+  "Standard": {
+   "record": "0-3-0",
+   "win_rate": {
+    "rate": 0.0,
+    "matches": 3
+   },
+   "rcs": 1,
+   "top_8s": 0,
+   "titles": 0,
+   "best_finish": "204th of 209",
+   "typical_finish": 97.6,
+   "top_8_rate": 0.0,
+   "rank": null,
+   "above": null,
+   "rcs_needed": 2
   }
  }
 }
