@@ -4,35 +4,35 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaderboard</title>
-<style>
-  body { font-family: system-ui, sans-serif; margin: 16px; background: #fff; color: #222; }
-  .scroll { overflow-x: auto; }
-  table { border-collapse: collapse; }
-  th, td { padding: 4px 12px; text-align: left; border-bottom: 1px solid #ddd; white-space: nowrap; }
-  td.num { text-align: right; }
-  th { cursor: pointer; user-select: none; }
-  th[aria-sort="ascending"]::after { content: " ▲"; color: #888; }
-  th[aria-sort="descending"]::after { content: " ▼"; color: #888; }
-  .formats { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0; }
-  .formats a { padding: 4px 12px; border: 1px solid #bbb; border-radius: 16px; color: inherit; text-decoration: none; }
-  .formats a[aria-current="true"] { background: #222; color: #fff; border-color: #222; }
-</style>
+<!-- PROTOTYPE (#11): the style and Compare placement switcher, with each style's sheet. -->
+<script src="prototype/switcher.js"></script>
 </head>
 <body>
-<p><a href="index.html">ANZ Regional Championships</a></p>
+<header class="site">
+<div class="in">
+<p class="brand"><a href="index.html">ANZ Regional Championships</a></p>
+<nav><a href="leaderboard.html" aria-current="page">Leaderboard</a></nav>
+<div class="search">
 <input id="search" type="search" placeholder="Find a Player" autocomplete="off">
 <ul id="search-results"></ul>
+</div>
+</div>
+</header>
+<main class="leaderboard">
 <h1>Leaderboard</h1>
 <div class="formats" id="formats"></div>
 
+<section class="panel">
 <div class="scroll">
-<table>
+<table class="sortable">
   <thead><tr id="columns"></tr></thead>
   <tbody id="rows"></tbody>
 </table>
 </div>
 <!-- The cutoff is ratings.CUTOFF in the build. -->
-<p>You must have played at least 3 RCs to be ranked, and 3 in a Format to be ranked in it.</p>
+<p class="note">You must have played at least 3 RCs to be ranked, and 3 in a Format to be ranked in it.</p>
+</section>
+</main>
 <script src="search.js"></script>
 <script>
 const VIEWS = ["Global", "Pioneer", "Standard", "Modern"];
@@ -85,6 +85,7 @@ function show() {
   header.replaceChildren(...COLUMNS.map((column) => {
     const th = document.createElement("th");
     th.textContent = column.name;
+    if (column.num) th.className = "num";
     if (column.name === sort.column) th.setAttribute("aria-sort", sort.high ? "descending" : "ascending");
     th.addEventListener("click", () => {
       sort = sort.column === column.name ? { column: column.name, high: !sort.high } : { column: column.name, high: !!column.high };

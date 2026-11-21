@@ -1,0 +1,74 @@
+/* PROTOTYPE (#11), throwaway: the layout every style shares, so the styles differ in look and not in structure.
+   The Format block's pair, the Experience pair, and both Compare Players placements live here. */
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+[hidden] { display: none !important; }
+h1, h2, h3, p { margin: 0; }
+table { border-collapse: collapse; }
+th, td { white-space: nowrap; text-align: left; }
+.num { text-align: right; font-variant-numeric: tabular-nums; }
+.scroll { overflow-x: auto; max-width: 100%; }
+
+/* Header: the site's name, the Leaderboard, the Player search. */
+header.site .in { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; margin: 0 auto; }
+header.site .brand a { text-decoration: none; color: inherit; }
+header.site nav { display: flex; gap: 4px; }
+header.site .search { margin-left: auto; width: min(320px, 100%); }
+.search { position: relative; }
+.search input { width: 100%; font: inherit; }
+.search ul { position: absolute; z-index: 30; top: calc(100% + 4px); left: 0; right: 0; margin: 0; padding: 4px 0; list-style: none;
+  max-height: 60vh; overflow-y: auto; }
+.search ul:empty { display: none; }
+.search li { padding: 6px 12px; white-space: normal; }
+
+main { margin: 0 auto; }
+.formats { display: flex; gap: 8px; flex-wrap: wrap; }
+.formats button, .formats a { font: inherit; cursor: pointer; text-decoration: none; }
+
+/* Two blocks side by side where the width allows, stacked on a phone. */
+.pair { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: start; }
+.experience-block { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+@media (max-width: 1000px) { .pair, .experience-block { grid-template-columns: minmax(0, 1fr); } }
+
+/* Leaderboard sorting. */
+table.sortable th { cursor: pointer; user-select: none; }
+table.sortable th[aria-sort="ascending"]::after { content: " ▲"; }
+table.sortable th[aria-sort="descending"]::after { content: " ▼"; }
+
+/* Player card: rows that open their rounds. */
+tr.rc { cursor: pointer; }
+tr.rc td:first-child::before { content: "▸ "; }
+tr.rc.open td:first-child::before { content: "▾ "; }
+tr.rounds > td { padding: 0 0 12px 28px; }
+.picker { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.compare-search { width: min(280px, 100%); }
+.chip a { text-decoration: none; }
+#against h3 { margin-top: 16px; }
+/* On a phone the Rating plot keeps a readable width and scrolls inside its block, as a wide table does. */
+@media (max-width: 640px) { #plot-slot-card, #plot-slot-compare { overflow-x: auto; } #against-field { min-width: 600px; } }
+
+/* Compare Players placement: a tab, or a column beside the card. */
+.card-tabs { display: flex; gap: 4px; }
+.card-tabs button { font: inherit; cursor: pointer; }
+html[data-place="tab"] .card-layout[data-tab="card"] .compare-pane { display: none; }
+html[data-place="tab"] .card-layout[data-tab="compare"] .card-main { display: none; }
+html[data-place="beside"] .card-layout { display: grid; grid-template-columns: minmax(0, 1fr); align-items: start; }
+@media (min-width: 1100px) {
+  html[data-place="beside"] .card-layout { grid-template-columns: minmax(0, 1fr) minmax(400px, 44%); }
+  html[data-place="beside"] .compare-pane { position: sticky; top: var(--header-h, 64px); max-height: calc(100vh - var(--header-h, 64px)); overflow-y: auto; }
+}
+
+/* The prototype's own bar: deliberately unlike any of the styles. */
+.proto-bar { position: fixed; z-index: 100; left: 50%; bottom: 14px; transform: translateX(-50%); display: flex; align-items: center; gap: 4px;
+  max-width: calc(100vw - 16px); flex-wrap: wrap; justify-content: center;
+  padding: 5px 6px; border-radius: 999px; background: #111; color: #fff; box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  font: 13px/1 ui-monospace, Menlo, monospace; }
+.proto-bar button { font: inherit; color: #fff; background: transparent; border: 0; padding: 7px 10px; border-radius: 999px; cursor: pointer; }
+.proto-bar button:hover { background: #333; }
+.proto-bar button[aria-pressed="true"] { background: #fff; color: #111; }
+.proto-bar, .proto-bar * { white-space: nowrap; }
+.proto-label { padding: 0 4px; text-align: center; }
+.proto-places { display: flex; align-items: center; gap: 2px; margin-left: 4px; padding-left: 8px; border-left: 1px solid #444; }
+@media (max-width: 640px) { .proto-bar { font-size: 12px; gap: 0; } .proto-bar button { padding: 7px 8px; } }
+body { padding-bottom: 72px; }

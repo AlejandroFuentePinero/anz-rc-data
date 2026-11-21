@@ -4,28 +4,30 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ANZ Regional Championships</title>
-<style>
-  body { font-family: system-ui, sans-serif; margin: 16px; background: #fff; color: #222; }
-  .scroll { overflow-x: auto; }
-  table { border-collapse: collapse; }
-  th, td { padding: 4px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid #ddd; white-space: nowrap; }
-  td.num { text-align: right; }
-  .formats { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0; }
-  .formats button { font: inherit; padding: 4px 12px; border: 1px solid #bbb; border-radius: 16px; background: #fff; cursor: pointer; }
-  .formats button[aria-pressed="true"] { background: #222; color: #fff; border-color: #222; }
-</style>
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
+<!-- PROTOTYPE (#11): the style and Compare placement switcher, with each style's sheet and plot theme. -->
+<script src="prototype/switcher.js"></script>
 </head>
 <body>
-<h1>ANZ Regional Championships</h1>
-<p><a href="leaderboard.html">Leaderboard</a></p>
+<header class="site">
+<div class="in">
+<h1 class="brand"><a href="index.html">ANZ Regional Championships</a></h1>
+<nav><a href="leaderboard.html">Leaderboard</a></nav>
+<div class="search">
 <input id="search" type="search" placeholder="Find a Player" autocomplete="off">
 <ul id="search-results"></ul>
+</div>
+</div>
+</header>
+<main class="community">
+<section class="block format-block">
 <div class="formats" id="formats"></div>
-
+<div class="pair">
+<div class="panel">
 <h2>RC size</h2>
 <div id="field-size"></div>
-
+</div>
+<div class="panel">
 <h2>RC history</h2>
 <div class="scroll">
 <table>
@@ -33,16 +35,27 @@
   <tbody id="rcs"></tbody>
 </table>
 </div>
+</div>
+</div>
+</section>
 
+<div class="pair experience-block">
+<section class="panel">
 <h2>Field by Experience</h2>
 <div id="experience"></div>
-
+</section>
+<section class="panel">
 <h2>Top 8 rate by Experience</h2>
+<div class="scroll">
 <table>
   <thead><tr><th>RCs played</th><th>Entries</th><th>Top 8s</th><th>Top 8 rate</th><th>Against a first RC</th></tr></thead>
   <tbody id="top-8-rate"></tbody>
 </table>
-<p id="first-rc-note"></p>
+</div>
+<p class="note" id="first-rc-note"></p>
+</section>
+</div>
+</main>
 <script src="search.js"></script>
 <script>
 // Each level of experience runs light (new) to dark (8th+).
