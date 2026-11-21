@@ -25,14 +25,6 @@
 <h2>How big is each RC?</h2>
 <div id="field-size"></div>
 
-<h2>Who fills each RC?</h2>
-<p>Across every RC. <span id="fill-story"></span></p>
-<div id="experience"></div>
-
-<h2>Does experience pay?</h2>
-<p>Across every RC. <span id="pay-story"></span></p>
-<div id="top-8-rate"></div>
-
 <h2>Every RC</h2>
 <p id="table-story"></p>
 <div class="scroll">
@@ -41,6 +33,17 @@
   <tbody id="rcs"></tbody>
 </table>
 </div>
+
+<h2>Who fills each RC?</h2>
+<p>Across every RC. <span id="fill-story"></span></p>
+<div id="experience"></div>
+
+<h2>Does experience pay?</h2>
+<p>Across every RC. <span id="pay-story"></span></p>
+<table>
+  <thead><tr><th>Experience</th><th>Top 8 rate</th></tr></thead>
+  <tbody id="top-8-rate"></tbody>
+</table>
 <script src="search.js"></script>
 <script>
 // Each level of experience runs light (new) to dark (8th+).
@@ -83,16 +86,14 @@ Promise.all([fetch("data/rcs.json"), fetch("data/community.json")])
       `Players at their 8th RC or later made the Top 8 ${veteran.rate}% of the time, against ${first.rate}% at their first. ` +
       "That shows who keeps coming back, strong Players among them, not that playing more makes anyone better. " +
       `Cycle ${cycles[0]} is left out, where everyone was at their first RC.`;
-    const rates = community.top_8_rate_by_experience;
-    Plotly.newPlot("top-8-rate", [{
-      type: "bar", x: rates.map((row) => `At their ${row.level} RC`), y: rates.map((row) => row.rate),
-      text: rates.map(rate), textposition: "outside", cliponaxis: false,
-      marker: { color: LEVEL_COLOUR },
-      hovertemplate: "%{x}: %{text}<extra></extra>",
-    }], {
-      margin, height: 300, showlegend: false,
-      yaxis: { title: { text: "Top 8 rate" }, ticksuffix: "%", rangemode: "tozero" },
-    }, config);
+    const rates = document.getElementById("top-8-rate");
+    for (const level of community.top_8_rate_by_experience) {
+      const row = rates.insertRow();
+      row.insertCell().textContent = `At their ${level.level} RC`;
+      const cell = row.insertCell();
+      cell.textContent = rate(level);
+      cell.className = "num";
+    }
 
     document.getElementById("table-story").textContent =
       `Across every RC: ${rcs.length} RCs, ${community.champions} different champions, and the ${community.top_8_places} Top 8 places went to ${community.top_8_players} Players.`;
