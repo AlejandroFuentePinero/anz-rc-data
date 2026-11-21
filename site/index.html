@@ -104,13 +104,14 @@ Promise.all([fetch("data/rcs.json"), fetch("data/community.json")])
     const buttons = document.getElementById("formats");
     for (const name of ["Global", ...formats]) {
       const button = document.createElement("button");
-      button.textContent = name;
+      button.textContent = name === "Global" ? "All" : name;  // every Format together reads as All
+      button.dataset.view = name;
       button.addEventListener("click", () => { view = name; show(); });
       buttons.append(button);
     }
 
     function show() {
-      for (const button of buttons.children) button.setAttribute("aria-pressed", button.textContent === view);
+      for (const button of buttons.children) button.setAttribute("aria-pressed", button.dataset.view === view);
       const shown = rcs.filter((rc) => view === "Global" || rc.format === view);
 
       // Every RC stays on the plot; a chosen Format's RCs keep full strength and the others fade.

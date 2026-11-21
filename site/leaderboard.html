@@ -76,7 +76,7 @@ function show() {
   formats.replaceChildren(...views.map((name) => {
     const a = document.createElement("a");
     a.href = name === "Global" ? "#" : `#${name}`;
-    a.textContent = name;
+    a.textContent = name === "Global" ? "All" : name;  // every Format together reads as All
     a.setAttribute("aria-current", name === view);
     return a;
   }));
