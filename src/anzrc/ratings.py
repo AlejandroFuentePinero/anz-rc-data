@@ -1,8 +1,6 @@
 """The Rating rule, mtgeloproject's plain Elo (ADR 0001): everyone starts at 1500 and a Match moves both Ratings."""
 
 import math
-import random
-from collections.abc import Iterator
 
 START = 1500
 # mtgeloproject's K. Measured (docs/measurements.md): K = 40 scores best but only by a tie, so 36 stays.
@@ -11,12 +9,8 @@ K = 36
 SCALE = 200 / math.log10(1.5)
 # The Formats whose own Rating ships; any other Format shows the Global Rating. Measured: all three beat 50-50.
 FORMAT_RATINGS = {"Pioneer", "Standard", "Modern"}
-# Measured: about 5 of the top 10 stay in the top 10 across resamples, so the Leaderboard shows "Rank could be".
-RANK_COULD_BE = True
 # RCs a Player needs in a view to be ranked in it. Measured: stability barely moves between 2, 3 and 4.
 CUTOFF = 3
-# The resamples behind "Rank could be" and the stability measurement, and the seed that makes them repeat.
-RESAMPLES, SEED = 1000, 2026
 
 
 def rated_by(format_: str) -> str:
@@ -46,26 +40,3 @@ def play_round(ratings: dict[str, float], matches: list[tuple[str, str, float]],
         moves[opponent] = moves.get(opponent, 0) - change
     for player, change in moves.items():
         ratings[player] = ratings.get(player, START) + change
-
-
-def resampled(history: list[dict], k: float = K) -> Iterator[dict[str, float]]:
-    """The Ratings after each seeded resample of the RCs: each RC's rated Matches drawn with replacement, each Match
-    keeping its round, and the RCs replayed in order."""
-    rng = random.Random(SEED)
-    for _ in range(RESAMPLES):
-        current: dict[str, float] = {}
-        for rc in history:
-            tagged = [(index, match) for index, rated in enumerate(rc["rounds"]) for match in rated]
-            drawn = [rng.choice(tagged) for _ in tagged]
-            by_round: list[list] = [[] for _ in rc["rounds"]]
-            for index, match in drawn:
-                by_round[index].append(match)
-            for rated in by_round:
-                play_round(current, rated, k)
-        yield current
-
-
-def interval(values: list[int]) -> tuple[int, int]:
-    """The 90% interval of the values: their 5th and 95th percentiles."""
-    values = sorted(values)
-    return values[int(0.05 * len(values))], values[math.ceil(0.95 * len(values)) - 1]

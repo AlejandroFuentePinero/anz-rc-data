@@ -1,6 +1,5 @@
 """The build: the raw folder, the RC list and the curation file in, the site's data bundle out."""
 
-import bisect
 import json
 import shutil
 import statistics
@@ -26,7 +25,7 @@ def _finish(rank: int | None) -> str | None:
     if rank is None:
         return None
     if rank <= 8:
-        return {1: "Title", 2: "Finalist", 3: "Top 4", 4: "Top 4"}.get(rank, "Top 8")
+        return {1: "Winner", 2: "Runner-up", 3: "Top 4", 4: "Top 4"}.get(rank, "Top 8")
     suffix = "th" if rank % 100 in (11, 12, 13) else {1: "st", 2: "nd", 3: "rd"}.get(rank % 10, "th")
     return f"{rank}{suffix}"
 
@@ -84,7 +83,7 @@ def _sides(match: dict, where: str, late_round: bool, curated_draw: bool) -> lis
 
 
 PLAYOFF_ROUNDS = ["Quarterfinal", "Semifinal", "Final"]
-TIERS = ["Title", "Finalist", "Top 4", "Top 8"]  # the Top 8's Finishes, best first
+TIERS = ["Winner", "Runner-up", "Top 4", "Top 8"]  # the Top 8's Finishes, best first
 TOP_8 = set(TIERS)
 
 
@@ -286,8 +285,6 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
             player["ratings"][format_] = view_rating(ratings.rated_by(format_)) | {"rated_by": ratings.rated_by(format_)}
         player["summary"] = {view: _summary(player, view) for view in player["ratings"]}
     _rank(cards)
-    if ratings.RANK_COULD_BE:
-        _rank_could_be(cards, history)
     return rc_rows, cards, history
 
 
@@ -313,7 +310,6 @@ def _summary(player: dict, view: str) -> dict:
         "win_rate": _win_rate(wins, losses),
         "rcs": len(rcs_),
         "top_8s": sum(rc["finish"] in TOP_8 for rc in rcs_),
-        "titles": sum(rc["finish"] == "Title" for rc in rcs_),
         "finals": sum(rc["finish"] in TIERS[:2] for rc in rcs_),
         "best_finish": best and best["finish"],
         # Typical Finish read as the share of the field it finishes above.
@@ -330,31 +326,6 @@ def _rank(cards: dict[str, dict]) -> None:
             summary = player["summary"][view]
             mine = player["ratings"][view]["rating"]
             summary["rank"] = 1 + sum(other > mine for other in eligible) if summary["rcs"] >= ratings.CUTOFF else None
-
-
-def _leaderboard_views(cards: dict[str, dict]) -> list[str]:
-    """Global and each shipped Format anyone played."""
-    played = {view for player in cards.values() for view in player["summary"]}
-    return ["Global", *sorted(ratings.FORMAT_RATINGS & played)]
-
-
-def _ranked(cards: dict[str, dict], view: str) -> list[dict]:
-    """The Players ranked in a view."""
-    return [player for player in cards.values() if player["summary"].get(view, {}).get("rank")]
-
-
-def _rank_could_be(cards: dict[str, dict], history: list[dict]) -> None:
-    """Each ranked Player's 90% rank interval in every Leaderboard view, across resamples of that view's RCs."""
-    for view in _leaderboard_views(cards):
-        ranked = _ranked(cards, view)
-        ranks: dict[str, list[int]] = {player["slug"]: [] for player in ranked}
-        for current in ratings.resampled([rc for rc in history if view in ("Global", rc["format"])]):
-            # A rank is 1 plus the ranked Players strictly above, as the observed rank counts it.
-            negated = sorted(-current.get(slug, ratings.START) for slug in ranks)
-            for slug, values in ranks.items():
-                values.append(1 + bisect.bisect_left(negated, -current.get(slug, ratings.START)))
-        for player in ranked:
-            player["summary"][view]["rank_could_be"] = list(ratings.interval(ranks[player["slug"]]))
 
 
 def build(raw: Path, rc_list: Path, curation: Path, out: Path) -> None:
@@ -377,18 +348,17 @@ TOP = 50  # the Players a Leaderboard shows
 
 def _leaderboard(cards: dict[str, dict]) -> dict[str, list[dict]]:
     """The top eligible Players by Rating in Global and each shipped Format anyone played, ties in name order."""
+    played = {view for player in cards.values() for view in player["summary"]}
     boards = {}
-    for view in _leaderboard_views(cards):
-        ranked = _ranked(cards, view)
+    for view in ["Global", *sorted(ratings.FORMAT_RATINGS & played)]:
+        ranked = [player for player in cards.values() if player["summary"].get(view, {}).get("rank")]
         ranked.sort(key=lambda player: (player["summary"][view]["rank"], player["name"]))
         boards[view] = []
         for player in ranked[:TOP]:
             summary, rating = player["summary"][view], player["ratings"][view]
             boards[view].append(
-                {"rank": summary["rank"]}
-                | ({"rank_could_be": summary["rank_could_be"]} if "rank_could_be" in summary else {})
-                | {"slug": player["slug"], "name": player["name"], "rating": rating["rating"], "peak": rating["peak"]}
-                | {key: summary[key] for key in ("record", "win_rate", "rcs", "top_8s", "titles", "best_finish")}
+                {"rank": summary["rank"], "slug": player["slug"], "name": player["name"], "rating": rating["rating"], "peak": rating["peak"]}
+                | {key: summary[key] for key in ("record", "win_rate", "rcs", "top_8s", "finals", "best_finish")}
                 | {"last_rc": max(rc["cycle"] for rc in player["rcs"] if view in ("Global", rc["format"]))}
             )
     return boards

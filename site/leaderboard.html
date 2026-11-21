@@ -31,27 +31,26 @@
   <tbody id="rows"></tbody>
 </table>
 </div>
-<!-- The cutoff is ratings.CUTOFF and the resamples ratings.RESAMPLES in the build. -->
-<p>A rank needs 3 RCs in the view.<span id="could-be-note"> Rank could be: where the rank falls in 90% of 1000 resamples of every RC's Matches.</span></p>
+<!-- The cutoff is ratings.CUTOFF in the build. -->
+<p>You must have played at least 3 RCs to be ranked, and 3 in a Format to be ranked in it.</p>
 <script src="search.js"></script>
 <script>
 const VIEWS = ["Global", "Pioneer", "Standard", "Modern"];
-const TIERS = ["Title", "Finalist", "Top 4", "Top 8"];
+const TIERS = ["Winner", "Runner-up", "Top 4", "Top 8"];
 // Best Finish in order: the Top 8 tiers, then the ordinals by rank.
 const finishOrder = (finish) => (finish == null ? Infinity : TIERS.includes(finish) ? TIERS.indexOf(finish) : 8 + parseInt(finish, 10));
 
 // Each column: its heading, how a row shows in it, the value it sorts on, and whether its first click sorts high first.
 const COLUMNS = [
   { name: "Rank", show: (row) => row.rank, key: (row) => row.rank, num: true },
-  { name: "Rank could be", show: (row) => `${row.rank_could_be[0]} to ${row.rank_could_be[1]}`, key: (row) => row.rank_could_be[0] * 1000 + row.rank_could_be[1] },
   { name: "Player", show: (row) => link(row), key: (row) => row.name.toLowerCase() },
   { name: "Rating", show: (row) => Math.round(row.rating), key: (row) => row.rating, num: true, high: true },
   { name: "Peak Rating", show: (row) => Math.round(row.peak), key: (row) => row.peak, num: true, high: true },
   { name: "W-L-D", show: (row) => row.record, key: (row) => parseInt(row.record, 10), high: true },
-  { name: "Win rate (Matches)", show: (row) => (row.win_rate.rate == null ? "-" : `${row.win_rate.rate}% (${row.win_rate.matches})`), key: (row) => row.win_rate.rate ?? -1, num: true, high: true },
+  { name: "Win rate", show: (row) => (row.win_rate.rate == null ? "-" : `${row.win_rate.rate}%`), key: (row) => row.win_rate.rate ?? -1, num: true, high: true },
   { name: "RCs", show: (row) => row.rcs, key: (row) => row.rcs, num: true, high: true },
   { name: "Top 8s", show: (row) => row.top_8s, key: (row) => row.top_8s, num: true, high: true },
-  { name: "Titles", show: (row) => row.titles, key: (row) => row.titles, num: true, high: true },
+  { name: "Finals", show: (row) => row.finals, key: (row) => row.finals, num: true, high: true },
   { name: "Best Finish", show: (row) => row.best_finish ?? "-", key: (row) => finishOrder(row.best_finish) },
   { name: "Last RC", show: (row) => row.last_rc, key: (row) => row.last_rc, num: true, high: true },
 ];
@@ -82,11 +81,8 @@ function show() {
     return a;
   }));
 
-  const couldBe = rows.length > 0 && "rank_could_be" in rows[0];
-  document.getElementById("could-be-note").hidden = !couldBe;
-  const columns = COLUMNS.filter((column) => couldBe || column.name !== "Rank could be");
   const header = document.getElementById("columns");
-  header.replaceChildren(...columns.map((column) => {
+  header.replaceChildren(...COLUMNS.map((column) => {
     const th = document.createElement("th");
     th.textContent = column.name;
     if (column.name === sort.column) th.setAttribute("aria-sort", sort.high ? "descending" : "ascending");
@@ -108,7 +104,7 @@ function show() {
   body.replaceChildren();
   for (const row of sorted) {
     const tr = body.insertRow();
-    for (const column of columns) {
+    for (const column of COLUMNS) {
       const cell = tr.insertCell();
       cell.append(column.show(row));
       if (column.num) cell.className = "num";

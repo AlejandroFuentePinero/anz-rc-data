@@ -51,7 +51,7 @@ A Match both Players agreed to draw without playing: a 0-0-3 in the last two Swi
 _Avoid_: ID, agreed draw
 
 **Finish**:
-A Player's rank in an RC's final standings, read against the Field Size (12th of 233).
+A Player's rank in an RC's final standings, read against the Field Size (12th of 233). Inside the Top 8 it reads as a tier: Winner, Runner-up, Top 4 or Top 8.
 _Avoid_: Placement, position, result
 
 **Top 8**:
@@ -66,11 +66,11 @@ One Player at one RC. A Player at two RCs is two Entries.
 _Avoid_: Seat, registration
 
 **Title**:
-First place at an RC. "Win" alone always means a Match win.
+First place at an RC: the Winner Finish. "Win" alone always means a Match win.
 _Avoid_: Win, trophy, first place
 
 **Final**:
-Reaching an RC's final: a Title or a Finalist Finish. The Player card counts Finals rather than Titles.
+Reaching an RC's final: a Winner or Runner-up Finish. The Player card and the Leaderboard count Finals rather than Titles.
 _Avoid_: Final appearance, top 2
 
 **Typical Finish**:

@@ -5,16 +5,17 @@ as constants in anzrc.ratings, and recorded in ADR 0001.
 """
 
 import math
+import random
 import statistics
 from pathlib import Path
 
 from anzrc import rcs, ratings
 from anzrc.build import CURATION, replayed
-from anzrc.ratings import RESAMPLES, SEED
 
 REPORT = Path("docs/measurements.md")
 K_CANDIDATES = list(range(16, 65, 4))
 BASELINE = math.log(2)  # the log loss of calling every Match 50-50
+RESAMPLES, SEED = 1000, 2026
 CUTOFFS = (2, 3, 4)
 TOP = 10
 
@@ -122,7 +123,17 @@ def measure_stability(history: list[dict], k: float) -> dict:
     top = {cutoff: _ranked(observed, eligible[cutoff])[:TOP] for cutoff in CUTOFFS}
     kept = {cutoff: [] for cutoff in CUTOFFS}
     ranks = {cutoff: {slug: [] for slug in top[cutoff]} for cutoff in CUTOFFS}
-    for current in ratings.resampled(history, k):
+    rng = random.Random(SEED)
+    for _ in range(RESAMPLES):
+        current: dict[str, float] = {}
+        for rc in history:
+            tagged = [(index, match) for index, rated in enumerate(rc["rounds"]) for match in rated]
+            drawn = [rng.choice(tagged) for _ in tagged]
+            by_round: list[list] = [[] for _ in rc["rounds"]]
+            for index, match in drawn:
+                by_round[index].append(match)
+            for rated in by_round:
+                ratings.play_round(current, rated, k)
         for cutoff in CUTOFFS:
             order = _ranked(current, eligible[cutoff])
             kept[cutoff].append(len(set(order[:TOP]) & set(top[cutoff])))
@@ -130,11 +141,15 @@ def measure_stability(history: list[dict], k: float) -> dict:
             for slug in top[cutoff]:
                 ranks[cutoff][slug].append(position[slug])
 
+    def interval(values):
+        values = sorted(values)
+        return values[int(0.05 * len(values))], values[math.ceil(0.95 * len(values)) - 1]
+
     return {
         cutoff: {
             "leaderboard": len(eligible[cutoff]),
             "kept": statistics.fmean(kept[cutoff]),
-            "top": [(slug, observed.get(slug, ratings.START), ratings.interval(ranks[cutoff][slug])) for slug in top[cutoff]],
+            "top": [(slug, observed.get(slug, ratings.START), interval(ranks[cutoff][slug])) for slug in top[cutoff]],
         }
         for cutoff in CUTOFFS
     }

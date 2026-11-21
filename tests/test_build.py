@@ -139,7 +139,7 @@ def test_a_bare_card_shows_the_rc_history_and_the_match_history(tmp_path):
             "cycle": 1,
             "date": "2023-01-01",
             "format": "Pioneer",
-            "finish": "Title",
+            "finish": "Winner",
             "top_8": True,
             "field_size": 4,
             "finish_share": 25.0,
@@ -330,7 +330,7 @@ def test_a_final_melee_lost_is_rebuilt_as_rank_1_beating_rank_2_with_no_game_sco
     # Swiss loss, then the quarterfinal, the semifinal and the rebuilt final won.
     assert champion["rcs"][0]["record"] == "3-1-0"
     assert finalist["rcs"][0]["record"] == "3-1-0"
-    assert (champion["rcs"][0]["finish"], finalist["rcs"][0]["finish"]) == ("Title", "Finalist")
+    assert (champion["rcs"][0]["finish"], finalist["rcs"][0]["finish"]) == ("Winner", "Runner-up")
 
 
 def test_a_bracket_melee_holds_no_matches_for_is_rebuilt_from_end_of_swiss_seeding_and_the_final_standings(tmp_path):
@@ -365,7 +365,7 @@ def test_a_bracket_melee_holds_no_matches_for_is_rebuilt_from_end_of_swiss_seedi
     assert bundle.card("p6")["rcs"][0]["record"] == "3-1-0"
 
 
-def test_finishes_show_title_finalist_and_top_4_and_top_8_tiers_never_melees_order_inside_a_tier(tmp_path):
+def test_finishes_show_winner_runner_up_and_top_4_and_top_8_tiers_never_melees_order_inside_a_tier(tmp_path):
     field = [(f"p{n}", f"Player {n}") for n in range(1, 11)]
     rounds = [(SWISS, [played(field[n], field[n + 1], 2, 0) for n in range(0, 10, 2)])]
     final = [standing(n, who) for n, who in enumerate(field, start=1)]
@@ -374,8 +374,8 @@ def test_finishes_show_title_finalist_and_top_4_and_top_8_tiers_never_melees_ord
 
     finishes = [(bundle.card(f"p{n}")["rcs"][0]["finish"], bundle.card(f"p{n}")["rcs"][0]["field_size"]) for n in range(1, 11)]
     assert finishes == [
-        ("Title", 10),
-        ("Finalist", 10),
+        ("Winner", 10),
+        ("Runner-up", 10),
         ("Top 4", 10),
         ("Top 4", 10),
         ("Top 8", 10),
@@ -430,7 +430,7 @@ def test_accounts_with_the_same_real_name_that_never_shared_an_rc_are_one_player
 
     ana = bundle.card("ana")
     assert ana["usernames"] == ["ana", "Ana_L"]
-    assert [(rc["cycle"], rc["finish"]) for rc in ana["rcs"]] == [(1, "Title"), (2, "Finalist")]
+    assert [(rc["cycle"], rc["finish"]) for rc in ana["rcs"]] == [(1, "Winner"), (2, "Runner-up")]
     assert [(m["cycle"], m["result"]) for m in ana["matches"]] == [(1, "Win"), (2, "Loss")]
     assert [m["opponent"]["slug"] for m in bundle.card("ben")["matches"]] == ["ana", "ana"]
     assert sorted(player["slug"] for player in bundle.index()) == ["ana", "ben"]
@@ -730,18 +730,18 @@ def test_the_summary_gives_each_view_its_record_win_rate_and_finishes(tmp_path):
     # Typical Finish: the median of 1/10, 3.5/8 (the Top 4 tier) and 12/20 is 43.8%, so above 56.2% of the field.
     assert {key: summary["Global"][key] for key in figures} == {
         "record": "2-1-2", "win_rate": {"rate": 66.7, "matches": 3}, "rcs": 3, "top_8s": 2, "finals": 1,
-        "best_finish": "Title", "typical_finish_above": 56.2,
+        "best_finish": "Winner", "typical_finish_above": 56.2,
     }
     assert {key: summary["Pioneer"][key] for key in figures} == {
         "record": "2-0-1", "win_rate": {"rate": 100.0, "matches": 2}, "rcs": 2, "top_8s": 1, "finals": 1,
-        "best_finish": "Title", "typical_finish_above": 65.0,  # median of 10% and 60%
+        "best_finish": "Winner", "typical_finish_above": 65.0,  # median of 10% and 60%
     }
     assert {key: summary["Modern"][key] for key in figures} == {
         "record": "0-1-1", "win_rate": {"rate": 0.0, "matches": 1}, "rcs": 1, "top_8s": 1, "finals": 0,
         "best_finish": "Top 4", "typical_finish_above": 56.2,
     }
     assert "Standard" not in summary
-    assert bundle.card("ben")["summary"]["Global"]["finals"] == 2  # Finalist in Cycle 1, Title in Cycle 2
+    assert bundle.card("ben")["summary"]["Global"]["finals"] == 2  # Runner-up in Cycle 1, Winner in Cycle 2
 
 
 def test_best_finish_puts_any_top_8_first_then_the_best_share_of_the_field(tmp_path):
@@ -877,7 +877,6 @@ def test_a_leaderboard_row_carries_the_players_rating_record_and_finishes_in_the
     bundle = run_build(tmp_path, three_rcs_for_ana())
 
     (row,) = bundle.leaderboard()["Global"]  # only Ana has 3 RCs
-    row.pop("rank_could_be", None)  # its own tests below
     assert row == {
         "rank": 1,
         "slug": "ana",
@@ -888,8 +887,8 @@ def test_a_leaderboard_row_carries_the_players_rating_record_and_finishes_in_the
         "win_rate": {"rate": 66.7, "matches": 3},
         "rcs": 3,
         "top_8s": 2,
-        "titles": 1,
-        "best_finish": "Title",
+        "finals": 1,
+        "best_finish": "Winner",
         "last_rc": 3,
     }
     assert bundle.leaderboard()["Pioneer"] == []  # two Pioneer RCs
@@ -907,33 +906,3 @@ def test_the_leaderboard_shows_the_top_50_of_more_eligible_players(tmp_path):
     assert {row["slug"] for row in rows} >= {f"p{n:02}" for n in range(0, 60, 2)}
     assert [row["rank"] for row in rows] == [1] * 30 + [31] * 20  # tied Players share a rank
 
-
-def test_rank_could_be_is_the_rank_itself_when_every_rc_has_one_match_to_resample(tmp_path):
-    # Drawing one Match from one with replacement gives that Match back, so every resample replays the observed RCs.
-    rcs = [(cycle, "Modern", [(SWISS, [played(ANA, BEN, 2, 0)])], field(cycle, 2, {1: ANA, 2: BEN})) for cycle in (1, 2, 3)]
-    bundle = run_build(tmp_path, rcs)
-
-    for view in ("Global", "Modern"):
-        assert [(row["slug"], row["rank_could_be"]) for row in bundle.leaderboard()[view]] == [("ana", [1, 1]), ("ben", [2, 2])]
-
-
-def test_rank_could_be_spans_the_ranks_resampling_reaches(tmp_path):
-    # Ana beats Ben and Cal beats Dee at each of three RCs. A resample draws two Matches from the two, so Ana and Cal
-    # trade first place and Ben and Dee third, but a winner falls below a loser only if every draw of all three RCs
-    # misses that winner's Match, under 2% of the time.
-    rcs = [(cycle, "Pioneer", [(SWISS, [played(ANA, BEN, 2, 0), played(CAL, DEE, 2, 0)])], field(cycle, 4, {1: ANA, 2: CAL, 3: BEN, 4: DEE}))
-           for cycle in (1, 2, 3)]
-    bundle = run_build(tmp_path, rcs)
-
-    could_be = {row["slug"]: row["rank_could_be"] for row in bundle.leaderboard()["Global"]}
-    assert could_be == {"ana": [1, 2], "cal": [1, 2], "ben": [3, 4], "dee": [3, 4]}
-    assert bundle.card("ana")["summary"]["Pioneer"]["rank_could_be"] == [1, 2]
-
-
-def test_rank_could_be_is_left_out_when_the_measurement_drops_it(tmp_path, monkeypatch):
-    monkeypatch.setattr(ratings, "RANK_COULD_BE", False)
-    bundle = run_build(tmp_path, three_pioneer_rcs_and_a_modern_one())
-
-    for rows in bundle.leaderboard().values():
-        assert all("rank_could_be" not in row for row in rows)
-    assert "rank_could_be" not in bundle.card("ana")["summary"]["Global"]

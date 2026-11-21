@@ -14,7 +14,7 @@
 
 - **K = 36**, mtgeloproject's own. Predicting every Match from Cycle 2 on from the Ratings before its RC, K = 40 scores lowest (log loss 0.68686 against 0.68687), a difference of 0.00001 with a standard error of 0.00011: a tie, so 36 stays. K from 16 to 64 all lie within 0.0017 of each other.
 - **All three Format Ratings ship.** The rule is beating the 50-50 baseline on its own later RCs, and each does so by more than two standard errors: Pioneer by 0.0047 (SE 0.0014), Standard by 0.0033 (SE 0.0013), Modern by 0.0050 (SE 0.0014). Read the same way on the same Matches, the Global Rating predicts slightly better (by 0.0014 to 0.0041: about one standard error for Pioneer and Standard, two for Modern), which the rule does not ask about.
-- **"Rank could be" stays.** Across 1000 resamples only 5.1 of the observed Global top 10 stay in the top 10, so the Leaderboard shows each Player's 90% rank interval. The leader's runs from 1 to about 25; the ends of an interval move by a few ranks between random draws, so they read as approximate.
+- **No "Rank could be".** Across 1000 resamples only 5.1 of the observed Global top 10 stay in the top 10, which by the measurement's own rule would keep each Player's 90% rank interval (the leader's runs from 1 to about 25). The owner ruled it not needed on the rendered Leaderboard (2026-11-21), so the Leaderboard shows the rank alone.
 - **The cutoff stays at 3 RCs.** Stability barely moves with it (5.14, 5.14 and 5.21 of 10 at 2, 3 and 4 RCs) while the Leaderboard holds 461, 301 and 220 Players, so nothing argues against 3.
 
 ## Faithful to mtgeloproject
