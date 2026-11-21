@@ -3054,10 +3054,15 @@
    },
    "rcs": 13,
    "top_8s": 4,
+   "titles": 1,
    "finals": 1,
    "best_finish": "Title",
    "typical_finish_above": 87.0,
-   "rank": 4
+   "rank": 4,
+   "rank_could_be": [
+    1,
+    50
+   ]
   },
   "Pioneer": {
    "record": "23-8-1",
@@ -3067,10 +3072,15 @@
    },
    "rcs": 4,
    "top_8s": 2,
+   "titles": 0,
    "finals": 0,
    "best_finish": "Top 8",
    "typical_finish_above": 95.6,
-   "rank": 2
+   "rank": 2,
+   "rank_could_be": [
+    1,
+    28
+   ]
   },
   "Standard": {
    "record": "25-15-1",
@@ -3080,10 +3090,15 @@
    },
    "rcs": 5,
    "top_8s": 1,
+   "titles": 1,
    "finals": 1,
    "best_finish": "Title",
    "typical_finish_above": 81.1,
-   "rank": 17
+   "rank": 17,
+   "rank_could_be": [
+    3,
+    75
+   ]
   },
   "Modern": {
    "record": "22-11-2",
@@ -3093,10 +3108,15 @@
    },
    "rcs": 4,
    "top_8s": 1,
+   "titles": 0,
    "finals": 0,
    "best_finish": "Top 8",
    "typical_finish_above": 83.8,
-   "rank": 6
+   "rank": 6,
+   "rank_could_be": [
+    2,
+    39
+   ]
   }
  }
 }

@@ -95,6 +95,9 @@ class Bundle:
     def community(self):
         return json.loads((self.folder / "community.json").read_text())
 
+    def leaderboard(self):
+        return json.loads((self.folder / "leaderboard.json").read_text())
+
 
 def run_build(tmp_path, rcs, curation=""):
     """Build from RCs given as (cycle, format, rounds, final standings[, end-of-Swiss standings]); Melee IDs are made up."""
@@ -759,11 +762,11 @@ def test_best_finish_puts_any_top_8_first_then_the_best_share_of_the_field(tmp_p
     assert (dee["best_finish"], dee["typical_finish_above"], dee["rcs"]) == (None, None, 1)
 
 
-def test_the_rank_counts_only_players_eligible_in_the_view(tmp_path):
-    # Ana, Ben and Cal play three Pioneer RCs; Dee plays one and beats Eve four times, so Dee holds the top Rating
-    # (about 1565 against Ana's 1552) but is not eligible. Ana and Ben then meet at one Modern RC.
+def three_pioneer_rcs_and_a_modern_one():
+    """Ana, Ben and Cal play three Pioneer RCs; Dee plays one and beats Eve four times, so Dee holds the top Rating
+    (about 1565 against Ana's 1552) but is not eligible. Ana and Ben then meet at one Modern RC."""
     eve = ("eve", "Eve Moss")
-    rcs = [
+    return [
         (1, "Pioneer", [(SWISS, [played(ANA, BEN, 2, 0), bye(CAL)])], field(1, 3, {1: ANA, 2: BEN, 3: CAL})),
         (2, "Pioneer", [(SWISS, [played(ANA, CAL, 2, 0), bye(BEN)])], field(2, 3, {1: ANA, 2: BEN, 3: CAL})),
         (3, "Pioneer", [(SWISS, [played(BEN, CAL, 2, 0)])] + [(SWISS, [played(DEE, eve, 2, 0)])] * 4,
@@ -771,7 +774,9 @@ def test_the_rank_counts_only_players_eligible_in_the_view(tmp_path):
         (4, "Modern", [(SWISS, [played(ANA, BEN, 2, 0)])], field(4, 2, {1: ANA, 2: BEN})),
     ]
 
-    bundle = run_build(tmp_path, rcs)
+
+def test_the_rank_counts_only_players_eligible_in_the_view(tmp_path):
+    bundle = run_build(tmp_path, three_pioneer_rcs_and_a_modern_one())
 
     def standing_in(slug, view="Global"):
         return bundle.card(slug)["summary"][view]["rank"]
@@ -851,3 +856,84 @@ def test_each_rc_gives_the_ratings_of_its_typical_player_its_top_10_percent_and_
     bundle = run_build(tmp_path, [(1, "Modern", rounds, field(1, 4, {1: ANA, 2: CAL, 3: DEE, 4: BEN}))])
 
     assert bundle.rcs()[0]["field_rating"] == {"median": 1500.0, "top_10": 1512.6, "highest": 1518.0}
+
+
+# The Leaderboard (issue #9): the top 50 eligible Players in Global and each shipped Format.
+
+
+def test_the_leaderboard_ranks_only_players_eligible_in_the_view_by_rating(tmp_path):
+    bundle = run_build(tmp_path, three_pioneer_rcs_and_a_modern_one())
+
+    leaderboard = bundle.leaderboard()
+    assert [(row["rank"], row["slug"]) for row in leaderboard["Global"]] == [(1, "ana"), (2, "ben"), (3, "cal")]
+    assert [(row["rank"], row["slug"]) for row in leaderboard["Pioneer"]] == [(1, "ana"), (2, "ben"), (3, "cal")]
+    assert leaderboard["Modern"] == []  # one Modern RC each, two short of the cutoff
+    assert "Standard" not in leaderboard  # no Standard RC played
+    ratings_in_order = [row["rating"] for row in leaderboard["Global"]]
+    assert ratings_in_order == sorted(ratings_in_order, reverse=True)
+
+
+def test_a_leaderboard_row_carries_the_players_rating_record_and_finishes_in_the_view(tmp_path):
+    bundle = run_build(tmp_path, three_rcs_for_ana())
+
+    (row,) = bundle.leaderboard()["Global"]  # only Ana has 3 RCs
+    row.pop("rank_could_be", None)  # its own tests below
+    assert row == {
+        "rank": 1,
+        "slug": "ana",
+        "name": "Ana Lopez",
+        "rating": bundle.card("ana")["ratings"]["Global"]["rating"],
+        "peak": 1517.67,  # after Cycle 1: +18 over Ben, then -0.33 for a played draw with Cal at 1500
+        "record": "2-1-2",
+        "win_rate": {"rate": 66.7, "matches": 3},
+        "rcs": 3,
+        "top_8s": 2,
+        "titles": 1,
+        "best_finish": "Title",
+        "last_rc": 3,
+    }
+    assert bundle.leaderboard()["Pioneer"] == []  # two Pioneer RCs
+
+
+def test_the_leaderboard_shows_the_top_50_of_more_eligible_players(tmp_path):
+    # 60 Players at three Modern RCs, each RC the even-numbered Player beating the next: 30 winners above 30 losers.
+    field_ = [(f"p{n:02}", f"Player {n:02}") for n in range(60)]
+    matches = [played(field_[n], field_[n + 1], 2, 0) for n in range(0, 60, 2)]
+    standings = [standing(rank, who) for rank, who in enumerate(field_, start=1)]
+    bundle = run_build(tmp_path, [(cycle, "Modern", [(SWISS, matches)], standings) for cycle in (1, 2, 3)])
+
+    rows = bundle.leaderboard()["Global"]
+    assert len(rows) == 50
+    assert {row["slug"] for row in rows} >= {f"p{n:02}" for n in range(0, 60, 2)}
+    assert [row["rank"] for row in rows] == [1] * 30 + [31] * 20  # tied Players share a rank
+
+
+def test_rank_could_be_is_the_rank_itself_when_every_rc_has_one_match_to_resample(tmp_path):
+    # Drawing one Match from one with replacement gives that Match back, so every resample replays the observed RCs.
+    rcs = [(cycle, "Modern", [(SWISS, [played(ANA, BEN, 2, 0)])], field(cycle, 2, {1: ANA, 2: BEN})) for cycle in (1, 2, 3)]
+    bundle = run_build(tmp_path, rcs)
+
+    for view in ("Global", "Modern"):
+        assert [(row["slug"], row["rank_could_be"]) for row in bundle.leaderboard()[view]] == [("ana", [1, 1]), ("ben", [2, 2])]
+
+
+def test_rank_could_be_spans_the_ranks_resampling_reaches(tmp_path):
+    # Ana beats Ben and Cal beats Dee at each of three RCs. A resample draws two Matches from the two, so Ana and Cal
+    # trade first place and Ben and Dee third, but a winner falls below a loser only if every draw of all three RCs
+    # misses that winner's Match, under 2% of the time.
+    rcs = [(cycle, "Pioneer", [(SWISS, [played(ANA, BEN, 2, 0), played(CAL, DEE, 2, 0)])], field(cycle, 4, {1: ANA, 2: CAL, 3: BEN, 4: DEE}))
+           for cycle in (1, 2, 3)]
+    bundle = run_build(tmp_path, rcs)
+
+    could_be = {row["slug"]: row["rank_could_be"] for row in bundle.leaderboard()["Global"]}
+    assert could_be == {"ana": [1, 2], "cal": [1, 2], "ben": [3, 4], "dee": [3, 4]}
+    assert bundle.card("ana")["summary"]["Pioneer"]["rank_could_be"] == [1, 2]
+
+
+def test_rank_could_be_is_left_out_when_the_measurement_drops_it(tmp_path, monkeypatch):
+    monkeypatch.setattr(ratings, "RANK_COULD_BE", False)
+    bundle = run_build(tmp_path, three_pioneer_rcs_and_a_modern_one())
+
+    for rows in bundle.leaderboard().values():
+        assert all("rank_could_be" not in row for row in rows)
+    assert "rank_could_be" not in bundle.card("ana")["summary"]["Global"]

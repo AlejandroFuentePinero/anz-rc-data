@@ -1007,10 +1007,15 @@
    },
    "rcs": 4,
    "top_8s": 1,
+   "titles": 1,
    "finals": 1,
    "best_finish": "Title",
    "typical_finish_above": 79.6,
-   "rank": 35
+   "rank": 35,
+   "rank_could_be": [
+    10,
+    125
+   ]
   },
   "Standard": {
    "record": "21-6-0",
@@ -1020,10 +1025,15 @@
    },
    "rcs": 3,
    "top_8s": 1,
+   "titles": 1,
    "finals": 1,
    "best_finish": "Title",
    "typical_finish_above": 88.5,
-   "rank": 3
+   "rank": 3,
+   "rank_could_be": [
+    1,
+    32
+   ]
   },
   "Modern": {
    "record": "3-5-0",
@@ -1033,6 +1043,7 @@
    },
    "rcs": 1,
    "top_8s": 0,
+   "titles": 0,
    "finals": 0,
    "best_finish": "119th",
    "typical_finish_above": 43.9,

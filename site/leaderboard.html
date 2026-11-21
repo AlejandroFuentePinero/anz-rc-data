@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leaderboard</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 16px; background: #fff; color: #222; }
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; }
+  th, td { padding: 4px 12px; text-align: left; border-bottom: 1px solid #ddd; white-space: nowrap; }
+  td.num { text-align: right; }
+  th { cursor: pointer; user-select: none; }
+  th[aria-sort="ascending"]::after { content: " ▲"; color: #888; }
+  th[aria-sort="descending"]::after { content: " ▼"; color: #888; }
+  .formats { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0; }
+  .formats a { padding: 4px 12px; border: 1px solid #bbb; border-radius: 16px; color: inherit; text-decoration: none; }
+  .formats a[aria-current="true"] { background: #222; color: #fff; border-color: #222; }
+</style>
+</head>
+<body>
+<p><a href="index.html">ANZ Regional Championships</a></p>
+<input id="search" type="search" placeholder="Find a Player" autocomplete="off">
+<ul id="search-results"></ul>
+<h1>Leaderboard</h1>
+<div class="formats" id="formats"></div>
+
+<div class="scroll">
+<table>
+  <thead><tr id="columns"></tr></thead>
+  <tbody id="rows"></tbody>
+</table>
+</div>
+<!-- The cutoff is ratings.CUTOFF and the resamples ratings.RESAMPLES in the build. -->
+<p>A rank needs 3 RCs in the view.<span id="could-be-note"> Rank could be: where the rank falls in 90% of 1000 resamples of every RC's Matches.</span></p>
+<script src="search.js"></script>
+<script>
+const VIEWS = ["Global", "Pioneer", "Standard", "Modern"];
+const TIERS = ["Title", "Finalist", "Top 4", "Top 8"];
+// Best Finish in order: the Top 8 tiers, then the ordinals by rank.
+const finishOrder = (finish) => (finish == null ? Infinity : TIERS.includes(finish) ? TIERS.indexOf(finish) : 8 + parseInt(finish, 10));
+
+// Each column: its heading, how a row shows in it, the value it sorts on, and whether its first click sorts high first.
+const COLUMNS = [
+  { name: "Rank", show: (row) => row.rank, key: (row) => row.rank, num: true },
+  { name: "Rank could be", show: (row) => `${row.rank_could_be[0]} to ${row.rank_could_be[1]}`, key: (row) => row.rank_could_be[0] * 1000 + row.rank_could_be[1] },
+  { name: "Player", show: (row) => link(row), key: (row) => row.name.toLowerCase() },
+  { name: "Rating", show: (row) => Math.round(row.rating), key: (row) => row.rating, num: true, high: true },
+  { name: "Peak Rating", show: (row) => Math.round(row.peak), key: (row) => row.peak, num: true, high: true },
+  { name: "W-L-D", show: (row) => row.record, key: (row) => parseInt(row.record, 10), high: true },
+  { name: "Win rate (Matches)", show: (row) => (row.win_rate.rate == null ? "-" : `${row.win_rate.rate}% (${row.win_rate.matches})`), key: (row) => row.win_rate.rate ?? -1, num: true, high: true },
+  { name: "RCs", show: (row) => row.rcs, key: (row) => row.rcs, num: true, high: true },
+  { name: "Top 8s", show: (row) => row.top_8s, key: (row) => row.top_8s, num: true, high: true },
+  { name: "Titles", show: (row) => row.titles, key: (row) => row.titles, num: true, high: true },
+  { name: "Best Finish", show: (row) => row.best_finish ?? "-", key: (row) => finishOrder(row.best_finish) },
+  { name: "Last RC", show: (row) => row.last_rc, key: (row) => row.last_rc, num: true, high: true },
+];
+
+function link(row) {
+  const a = document.createElement("a");
+  a.href = `player.html#${row.slug}`;
+  a.textContent = row.name;
+  return a;
+}
+
+let boards = null;
+let sort = { column: "Rank", high: false };
+
+function show() {
+  const views = VIEWS.filter((view) => view in boards);
+  const asked = decodeURIComponent(location.hash.slice(1));
+  const view = views.includes(asked) ? asked : "Global";
+  const rows = boards[view];
+  document.title = view === "Global" ? "Leaderboard" : `${view} Leaderboard`;
+
+  const formats = document.getElementById("formats");
+  formats.replaceChildren(...views.map((name) => {
+    const a = document.createElement("a");
+    a.href = name === "Global" ? "#" : `#${name}`;
+    a.textContent = name;
+    a.setAttribute("aria-current", name === view);
+    return a;
+  }));
+
+  const couldBe = rows.length > 0 && "rank_could_be" in rows[0];
+  document.getElementById("could-be-note").hidden = !couldBe;
+  const columns = COLUMNS.filter((column) => couldBe || column.name !== "Rank could be");
+  const header = document.getElementById("columns");
+  header.replaceChildren(...columns.map((column) => {
+    const th = document.createElement("th");
+    th.textContent = column.name;
+    if (column.name === sort.column) th.setAttribute("aria-sort", sort.high ? "descending" : "ascending");
+    th.addEventListener("click", () => {
+      sort = sort.column === column.name ? { column: column.name, high: !sort.high } : { column: column.name, high: !!column.high };
+      show();
+    });
+    return th;
+  }));
+
+  // Ties keep the Leaderboard's own order, by rank.
+  const by = COLUMNS.find((column) => column.name === sort.column).key;
+  const sorted = [...rows].sort((a, b) => {
+    const [x, y] = [by(a), by(b)];
+    const order = x < y ? -1 : x > y ? 1 : 0;
+    return (sort.high ? -order : order) || a.rank - b.rank;
+  });
+  const body = document.getElementById("rows");
+  body.replaceChildren();
+  for (const row of sorted) {
+    const tr = body.insertRow();
+    for (const column of columns) {
+      const cell = tr.insertCell();
+      cell.append(column.show(row));
+      if (column.num) cell.className = "num";
+    }
+  }
+}
+
+fetch("data/leaderboard.json")
+  .then((response) => response.json())
+  .then((loaded) => {
+    boards = loaded;
+    window.addEventListener("hashchange", show);
+    show();
+  });
+</script>
+</body>
+</html>
