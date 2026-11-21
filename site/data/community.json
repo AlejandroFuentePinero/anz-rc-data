@@ -209,27 +209,41 @@
  "top_8_rate_by_experience": [
   {
    "level": "1st",
+   "rcs": "1",
    "top_8s": 14,
-   "seats": 755,
-   "rate": 1.9
+   "entries": 755,
+   "rate": 1.9,
+   "vs_first": 1.0
   },
   {
    "level": "2nd-3rd",
+   "rcs": "2-3",
    "top_8s": 29,
-   "seats": 762,
-   "rate": 3.8
+   "entries": 762,
+   "rate": 3.8,
+   "vs_first": 2.1
   },
   {
    "level": "4th-7th",
+   "rcs": "4-7",
    "top_8s": 38,
-   "seats": 596,
-   "rate": 6.4
+   "entries": 596,
+   "rate": 6.4,
+   "vs_first": 3.4
   },
   {
    "level": "8th+",
+   "rcs": "8+",
    "top_8s": 15,
-   "seats": 192,
-   "rate": 7.8
+   "entries": 192,
+   "rate": 7.8,
+   "vs_first": 4.2
   }
- ]
+ ],
+ "top_8_rate_overall": {
+  "top_8s": 96,
+  "entries": 2305,
+  "rate": 4.2,
+  "vs_first": 2.2
+ }
 }

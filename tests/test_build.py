@@ -229,12 +229,16 @@ def test_the_top_8_rate_by_experience_leaves_out_the_first_rc_where_everyone_was
         ],
     )
 
-    assert bundle.community()["top_8_rate_by_experience"] == [
-        {"level": "1st", "top_8s": 1, "seats": 2, "rate": 50.0},  # n1 of n1, n2
-        {"level": "2nd-3rd", "top_8s": 7, "seats": 8, "rate": 87.5},  # p2 to p8 of p1 to p8
-        {"level": "4th-7th", "top_8s": 0, "seats": 0, "rate": None},
-        {"level": "8th+", "top_8s": 0, "seats": 0, "rate": None},
+    community = bundle.community()
+    # Each level's rate, and how many times the rate at a first RC it is.
+    assert community["top_8_rate_by_experience"] == [
+        {"level": "1st", "rcs": "1", "top_8s": 1, "entries": 2, "rate": 50.0, "vs_first": 1.0},  # n1 of n1, n2
+        {"level": "2nd-3rd", "rcs": "2-3", "top_8s": 7, "entries": 8, "rate": 87.5, "vs_first": 1.8},  # p2 to p8 of p1 to p8; 87.5 / 50 = 1.75
+        {"level": "4th-7th", "rcs": "4-7", "top_8s": 0, "entries": 0, "rate": None, "vs_first": None},
+        {"level": "8th+", "rcs": "8+", "top_8s": 0, "entries": 0, "rate": None, "vs_first": None},
     ]
+    # Every level together: 8 of 10, and 80 / 50 = 1.6.
+    assert community["top_8_rate_overall"] == {"top_8s": 8, "entries": 10, "rate": 80.0, "vs_first": 1.6}
 
 
 def test_the_community_captions_give_the_typical_first_rc_share_and_how_many_players_reached_a_title_and_a_top_8(tmp_path):

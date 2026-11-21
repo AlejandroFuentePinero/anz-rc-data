@@ -41,7 +41,7 @@
 <h2>Does experience pay?</h2>
 <p>Across every RC. <span id="pay-story"></span></p>
 <table>
-  <thead><tr><th>Experience</th><th>Top 8 rate</th></tr></thead>
+  <thead><tr><th>Experience (RCs)</th><th>Entries</th><th>Top 8s</th><th>Top 8 rate</th><th>Against a first RC</th></tr></thead>
   <tbody id="top-8-rate"></tbody>
 </table>
 <script src="search.js"></script>
@@ -64,7 +64,6 @@ Promise.all([fetch("data/rcs.json"), fetch("data/community.json")])
   .then(([rcs, community]) => {
     const cycles = rcs.map((rc) => rc.cycle);
     const formats = [...new Set(rcs.map((rc) => rc.format))];
-    const rate = (row) => `${row.rate}% (${row.top_8s} of ${row.seats})`;
     const [first, , , veteran] = community.top_8_rate_by_experience;
 
     // Across every RC: the field by experience and the Top 8 rate at each level. The Format filter leaves these.
@@ -83,16 +82,18 @@ Promise.all([fetch("data/rcs.json"), fetch("data/community.json")])
     }, config);
 
     document.getElementById("pay-story").textContent =
-      `Players at their 8th RC or later made the Top 8 ${veteran.rate}% of the time, against ${first.rate}% at their first. ` +
+      `Players at their 8th RC or later made the Top 8 ${veteran.rate}% of the time, ${veteran.vs_first} times the ${first.rate}% at a first RC. ` +
+      "An Entry is one Player at one RC. " +
       "That shows who keeps coming back, strong Players among them, not that playing more makes anyone better. " +
       `Cycle ${cycles[0]} is left out, where everyone was at their first RC.`;
     const rates = document.getElementById("top-8-rate");
-    for (const level of community.top_8_rate_by_experience) {
+    for (const level of [...community.top_8_rate_by_experience, { rcs: "All", ...community.top_8_rate_overall }]) {
       const row = rates.insertRow();
-      row.insertCell().textContent = `At their ${level.level} RC`;
-      const cell = row.insertCell();
-      cell.textContent = rate(level);
-      cell.className = "num";
+      for (const value of [level.rcs, level.entries, level.top_8s, `${level.rate}%`, `×${level.vs_first.toFixed(1)}`]) {
+        const cell = row.insertCell();
+        cell.textContent = value;
+        cell.className = "num";
+      }
     }
 
     document.getElementById("table-story").textContent =

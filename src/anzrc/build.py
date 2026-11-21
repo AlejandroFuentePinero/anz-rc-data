@@ -264,6 +264,7 @@ def build(raw: Path, rc_list: Path, curation: Path, out: Path) -> None:
 
 # Experience: how many RCs an RC is for a Player, across every Format, in these levels.
 LEVELS = ["1st", "2nd-3rd", "4th-7th", "8th+"]
+LEVEL_RCS = ["1", "2-3", "4-7", "8+"]  # each level as the RCs it spans
 
 
 def _level(nth: int) -> int:
@@ -277,18 +278,25 @@ def _community(rc_rows: list[dict], cards: dict[str, dict]) -> dict:
     The rate leaves out the first RC, where everyone is at their first by construction, established Players too.
     """
     fields = {rc["cycle"]: [0] * len(LEVELS) for rc in rc_rows}
-    seats, top_8s = [0] * len(LEVELS), [0] * len(LEVELS)
+    entries, top_8s = [0] * len(LEVELS), [0] * len(LEVELS)  # an entry is one Player at one RC
     for player in cards.values():
         for nth, rc in enumerate(player["rcs"], start=1):
             level = _level(nth)
             fields[rc["cycle"]][level] += 1
             if rc["cycle"] != rc_rows[0]["cycle"]:
-                seats[level] += 1
+                entries[level] += 1
                 top_8s[level] += rc["finish"] in TOP_8
     field_by_experience = [
         {"cycle": cycle, "players": counts, "shares": [round(100 * n / sum(counts), 1) for n in counts]}
         for cycle, counts in fields.items()
     ]
+    def rate(top: int, n: int) -> dict:
+        """Top 8s over Entries, and how many times the rate at a first RC that is."""
+        if not n:
+            return {"top_8s": top, "entries": n, "rate": None, "vs_first": None}
+        first = top_8s[0] / entries[0] if entries[0] else 0
+        return {"top_8s": top, "entries": n, "rate": round(100 * top / n, 1), "vs_first": round(top / n / first, 1) if first else None}
+
     top_8_holders = [player["slug"] for player in cards.values() for rc in player["rcs"] if rc["finish"] in TOP_8]
     return {
         "levels": LEVELS,
@@ -301,9 +309,9 @@ def _community(rc_rows: list[dict], cards: dict[str, dict]) -> dict:
         "top_8_players": len(set(top_8_holders)),
         "top_8_places": len(top_8_holders),
         "top_8_rate_by_experience": [
-            {"level": name, "top_8s": top, "seats": n, "rate": round(100 * top / n, 1) if n else None}
-            for name, top, n in zip(LEVELS, top_8s, seats)
+            {"level": name, "rcs": span} | rate(top, n) for name, span, top, n in zip(LEVELS, LEVEL_RCS, top_8s, entries)
         ],
+        "top_8_rate_overall": rate(sum(top_8s), sum(entries)),
     }
 
 
