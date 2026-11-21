@@ -27,8 +27,6 @@
 <div class="card-layout">
 <div class="card-main">
 <section class="panel">
-<!-- PROTOTYPE: the All row as tiles, the Formats in the table beneath. -->
-<div class="tiles" id="tiles"></div>
 <div class="scroll">
 <table class="summary">
   <thead><tr><th></th><th class="num">ANZ Rank</th><th class="num">RCs</th><th class="num">Rating</th><th class="num">Peak Rating</th><th>W-L-D</th><th class="num">Win rate</th><th class="num">Top 8s</th><th class="num">Finals</th><th>Best Finish</th><th class="num">Typically finishes top</th></tr></thead>
@@ -184,16 +182,7 @@ function show() {
 function draw() {
   const summary = document.getElementById("summary");
   summary.replaceChildren();
-  // All as tiles, labelled by the table's own headers; the table keeps the Formats.
-  const labels = [...document.querySelectorAll("table.summary thead th")].slice(1).map((th) => th.textContent);
-  document.getElementById("tiles").replaceChildren(...summaryCells(card.summary.Global, card.ratings.Global).map(([value], i) => {
-    const tile = document.createElement("div");
-    tile.className = "tile";
-    tile.append(Object.assign(document.createElement("span"), { className: "label", textContent: labels[i] }),
-      Object.assign(document.createElement("span"), { className: "value", textContent: i === 0 && !value ? "Not ranked" : value ?? "" }));
-    return tile;
-  }));
-  for (const name of VIEWS.slice(1)) {
+  for (const name of VIEWS) {
     const s = card.summary[name];
     if (!s) { addRow(summary, [[name === "Global" ? "All" : name], ...Array(10).fill([null])]); continue; }
     addRow(summary, [[name === "Global" ? "All" : name], ...summaryCells(s, card.ratings[name])], name === "Global" ? "global" : null);
