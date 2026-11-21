@@ -252,13 +252,21 @@ function compare() {
       continue;
     }
     const table = document.createElement("table");
-    table.innerHTML = "<thead><tr><th>RC</th><th>Format</th><th>Round</th><th>Result</th></tr></thead>";
+    const header = table.createTHead().insertRow();
+    for (const name of ["RC", "Format", "Round", `${card.name}'s deck`, `${other.name}'s deck`, "Result"]) {
+      header.append(Object.assign(document.createElement("th"), { textContent: name }));
+    }
     const body = table.createTBody();
+    // Each Player's deck at the RC, linked to its decklist on Melee.
+    const deck = (player, cycle) => {
+      const entry = player.rcs.find((rc) => rc.cycle === cycle);
+      return entry.deck && link(entry.deck, entry.decklist);
+    };
     for (const match of card.matches.filter((match) => match.opponent?.slug === other.slug)) {
       const rc = card.rcs.find((rc) => rc.cycle === match.cycle);
       addRow(body, [
         [`Cycle ${[rc.cycle, card.city[rc.cycle], rc.date.slice(0, 4)].filter(Boolean).join(" ")}`], [rc.format],
-        [roundName(match)], [outcome(match)],
+        [roundName(match)], [deck(card, rc.cycle)], [deck(other, rc.cycle)], [outcome(match)],
       ]);
     }
     const scroll = document.createElement("div");
