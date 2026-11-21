@@ -163,7 +163,7 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
 
     for rc in loaded:
         standings = rc["standings"]
-        champion, finalist = (
+        winner, runner_up = (
             {key: players[_username(row)][key] for key in ("slug", "name")} for row in sorted(standings, key=lambda row: row["Rank"])[:2]
         )
         rc_rows.append(
@@ -173,8 +173,8 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
                 "city": rc["city"] or None,
                 "format": rc["format"],
                 "field_size": len(standings),
-                "champion": champion,
-                "finalist": finalist,
+                "winner": winner,
+                "runner_up": runner_up,
             }
         )
         # Every Player of the RC: the final standings, and anyone missing from them who kept their Matches.

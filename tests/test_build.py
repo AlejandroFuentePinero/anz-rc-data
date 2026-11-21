@@ -160,7 +160,7 @@ def test_a_bare_card_shows_the_rc_history_and_the_match_history(tmp_path):
     assert bundle.card("ben")["matches"][0]["games"] == "1-2-0"
 
 
-def test_the_rc_table_gives_each_rc_its_field_size_and_champion_as_the_player_their_card_names(tmp_path):
+def test_the_rc_table_gives_each_rc_its_field_size_and_winner_as_the_player_their_card_names(tmp_path):
     owner = ("alejandrofp", "alejandrofp")
     bundle = run_build(
         tmp_path,
@@ -171,15 +171,15 @@ def test_the_rc_table_gives_each_rc_its_field_size_and_champion_as_the_player_th
         curation='[display_names]\nalejandrofp = "Alejandro de la Fuente"\n',
     )
 
-    assert [{key: rc[key] for key in ("cycle", "date", "city", "format", "field_size", "champion")} for rc in bundle.rcs()] == [
+    assert [{key: rc[key] for key in ("cycle", "date", "city", "format", "field_size", "winner")} for rc in bundle.rcs()] == [
         {"cycle": 1, "date": "2023-01-01", "city": None, "format": "Pioneer", "field_size": 3,
-         "champion": {"slug": "ben", "name": "Ben Hall"}},
+         "winner": {"slug": "ben", "name": "Ben Hall"}},
         {"cycle": 2, "date": "2023-02-01", "city": None, "format": "Modern", "field_size": 2,
-         "champion": {"slug": "alejandrofp", "name": "Alejandro de la Fuente"}},
+         "winner": {"slug": "alejandrofp", "name": "Alejandro de la Fuente"}},
     ]
 
 
-def test_the_rc_table_gives_each_rc_its_champion_and_finalist_by_rank_as_players(tmp_path):
+def test_the_rc_table_gives_each_rc_its_winner_and_runner_up_by_rank_as_players(tmp_path):
     p = {n: (f"p{n}", f"Player {n}") for n in range(1, 5)}
     p[2] = ("Ana_L", "Ana Lopez")  # Ana's second account, one Player with "ana" by the real-name rule
     # Melee's rows out of rank order, so the table follows the Rank, not the row order.
@@ -196,7 +196,7 @@ def test_the_rc_table_gives_each_rc_its_champion_and_finalist_by_rank_as_players
     del row["field_rating"]  # tested on its own
     assert row == {
         "cycle": 2, "date": "2023-02-01", "city": None, "format": "Modern", "field_size": 4,
-        "champion": {"slug": "p3", "name": "Player 3"}, "finalist": {"slug": "ana", "name": "Ana Lopez"},
+        "winner": {"slug": "p3", "name": "Player 3"}, "runner_up": {"slug": "ana", "name": "Ana Lopez"},
     }
 
 
@@ -315,22 +315,22 @@ def test_a_final_melee_lost_is_rebuilt_as_rank_1_beating_rank_2_with_no_game_sco
 
     bundle = run_build(tmp_path, [(1, "Modern", rounds, final)])
 
-    champion, finalist = bundle.card("p4"), bundle.card("p3")
-    for card in (champion, finalist):  # the Ratings around the Match are tested on their own
+    winner, runner_up = bundle.card("p4"), bundle.card("p3")
+    for card in (winner, runner_up):  # the Ratings around the Match are tested on their own
         del card["matches"][-1]["opponent_rating"]
         del card["matches"][-1]["change"]
         del card["matches"][-1]["rating_after"]
-    assert champion["matches"][-1] == {
+    assert winner["matches"][-1] == {
         "cycle": 1, "round": "Final", "playoff": True, "opponent": {"slug": "p3", "name": "Player 3"}, "result": "Win", "games": None, "reconstructed": True
     }
-    assert finalist["matches"][-1] == {
+    assert runner_up["matches"][-1] == {
         "cycle": 1, "round": "Final", "playoff": True, "opponent": {"slug": "p4", "name": "Player 4"}, "result": "Loss", "games": None, "reconstructed": True
     }
-    assert [m["reconstructed"] for m in champion["matches"][:-1]] == [False, False, False]
+    assert [m["reconstructed"] for m in winner["matches"][:-1]] == [False, False, False]
     # Swiss loss, then the quarterfinal, the semifinal and the rebuilt final won.
-    assert champion["rcs"][0]["record"] == "3-1-0"
-    assert finalist["rcs"][0]["record"] == "3-1-0"
-    assert (champion["rcs"][0]["finish"], finalist["rcs"][0]["finish"]) == ("Winner", "Runner-up")
+    assert winner["rcs"][0]["record"] == "3-1-0"
+    assert runner_up["rcs"][0]["record"] == "3-1-0"
+    assert (winner["rcs"][0]["finish"], runner_up["rcs"][0]["finish"]) == ("Winner", "Runner-up")
 
 
 def test_a_bracket_melee_holds_no_matches_for_is_rebuilt_from_end_of_swiss_seeding_and_the_final_standings(tmp_path):

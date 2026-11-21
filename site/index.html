@@ -29,7 +29,7 @@
 <h2>RC history</h2>
 <div class="scroll">
 <table>
-  <thead><tr><th>Cycle</th><th>Date</th><th>City</th><th>Format</th><th>Field Size</th><th>Champion</th><th>Finalist</th></tr></thead>
+  <thead><tr><th>Cycle</th><th>Date</th><th>City</th><th>Format</th><th>Field Size</th><th>Winner</th><th>Runner-up</th></tr></thead>
   <tbody id="rcs"></tbody>
 </table>
 </div>
@@ -118,7 +118,7 @@ Promise.all([fetch("data/rcs.json"), fetch("data/community.json")])
         const row = body.insertRow();
         const cells = [
           [rc.cycle, "num"], [rc.date], [rc.city ?? "-"], [rc.format], [rc.field_size, "num"],
-          [link(rc.champion)], [link(rc.finalist)],
+          [link(rc.winner)], [link(rc.runner_up)],
         ];
         for (const [value, cls] of cells) {
           const cell = row.insertCell();
