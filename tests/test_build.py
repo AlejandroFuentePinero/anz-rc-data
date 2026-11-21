@@ -894,18 +894,18 @@ def test_the_leaderboard_ranks_only_players_eligible_in_the_view_by_rating(tmp_p
     bundle = run_build(tmp_path, three_pioneer_rcs_and_a_modern_one())
 
     leaderboard = bundle.leaderboard()
-    assert [(row["rank"], row["slug"]) for row in leaderboard["Global"]] == [(1, "ana"), (2, "ben"), (3, "cal")]
-    assert [(row["rank"], row["slug"]) for row in leaderboard["Pioneer"]] == [(1, "ana"), (2, "ben"), (3, "cal")]
-    assert leaderboard["Modern"] == []  # one Modern RC each, two short of the cutoff
+    assert [(row["rank"], row["slug"]) for row in leaderboard["Global"]["players"]] == [(1, "ana"), (2, "ben"), (3, "cal")]
+    assert [(row["rank"], row["slug"]) for row in leaderboard["Pioneer"]["players"]] == [(1, "ana"), (2, "ben"), (3, "cal")]
+    assert leaderboard["Modern"]["players"] == []  # one Modern RC each, two short of the cutoff
     assert "Standard" not in leaderboard  # no Standard RC played
-    ratings_in_order = [row["rating"] for row in leaderboard["Global"]]
+    ratings_in_order = [row["rating"] for row in leaderboard["Global"]["players"]]
     assert ratings_in_order == sorted(ratings_in_order, reverse=True)
 
 
 def test_a_leaderboard_row_carries_the_players_rating_record_and_finishes_in_the_view(tmp_path):
     bundle = run_build(tmp_path, three_rcs_for_ana())
 
-    (row,) = bundle.leaderboard()["Global"]  # only Ana has 3 RCs
+    (row,) = bundle.leaderboard()["Global"]["players"]  # only Ana has 3 RCs
     assert row == {
         "rank": 1,
         "slug": "ana",
@@ -920,7 +920,7 @@ def test_a_leaderboard_row_carries_the_players_rating_record_and_finishes_in_the
         "best_finish": "Winner",
         "last_rc": 3,
     }
-    assert bundle.leaderboard()["Pioneer"] == []  # two Pioneer RCs
+    assert bundle.leaderboard()["Pioneer"]["players"] == []  # two Pioneer RCs
 
 
 def test_the_leaderboard_shows_the_top_50_of_more_eligible_players(tmp_path):
@@ -930,10 +930,28 @@ def test_the_leaderboard_shows_the_top_50_of_more_eligible_players(tmp_path):
     standings = [standing(rank, who) for rank, who in enumerate(field_, start=1)]
     bundle = run_build(tmp_path, [(cycle, "Modern", [(SWISS, matches)], standings) for cycle in (1, 2, 3)])
 
-    rows = bundle.leaderboard()["Global"]
+    rows = bundle.leaderboard()["Global"]["players"]
     assert len(rows) == 50
     assert {row["slug"] for row in rows} >= {f"p{n:02}" for n in range(0, 60, 2)}
     assert [row["rank"] for row in rows] == [1] * 30 + [31] * 20  # tied Players share a rank
+
+
+def test_each_leaderboard_view_counts_every_ranked_player_beyond_the_top_50(tmp_path):
+    # Issue #12: the Leaderboard's note says how many Players are ranked in its view. 60 Players at three Modern RCs:
+    # all 60 are ranked in Global and Modern though 50 are shown.
+    field_ = [(f"p{n:02}", f"Player {n:02}") for n in range(60)]
+    matches = [played(field_[n], field_[n + 1], 2, 0) for n in range(0, 60, 2)]
+    standings = [standing(rank, who) for rank, who in enumerate(field_, start=1)]
+    bundle = run_build(tmp_path, [(cycle, "Modern", [(SWISS, matches)], standings) for cycle in (1, 2, 3)])
+
+    assert {view: board["ranked"] for view, board in bundle.leaderboard().items()} == {"Global": 60, "Modern": 60}
+
+
+def test_a_view_nobody_is_ranked_in_counts_none(tmp_path):
+    bundle = run_build(tmp_path, three_pioneer_rcs_and_a_modern_one())
+
+    # Ana, Ben and Cal ranked; Dee and Eve one RC each; nobody has three Modern RCs.
+    assert {view: board["ranked"] for view, board in bundle.leaderboard().items()} == {"Global": 3, "Pioneer": 3, "Modern": 0}
 
 
 # Compare Players (issue #10): the card's Player against the Players compared with them.

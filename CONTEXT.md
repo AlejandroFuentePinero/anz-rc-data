@@ -8,18 +8,18 @@ The players and the competitive scene of the Australian Magic Regional Champions
 
 **Regional Championship (RC)**:
 One of the ANZ Regional Championships run under the ANZMTG Super Series organiser on Melee, one per Cycle, each played in a single Format.
-_Avoid_: Event (too wide), tournament, regional
+_Avoid_: Event (too wide), tournament (except the RC size axis, Tournament size, by the owner's ruling), regional
 
 **Cycle**:
 The ordinal of an RC in the series (Cycle 1 in November 2022 to Cycle 13 in October 2026), the order every time axis follows.
 _Avoid_: Season, edition
 
 **Format**:
-The constructed format an RC was played in: Pioneer, Standard or Modern. **Global** is every format together, the default view.
+The constructed format an RC was played in: Pioneer, Standard or Modern. **All** is every format together, the default view (Global in the data and the URLs, never in the interface).
 _Avoid_: Mode, type
 
 **Field Size**:
-The number of players in an RC's final standings, the count a Finish is read against.
+The number of players in an RC's final standings, the count a Finish is read against. The Overview's RC size plot shows it on an axis titled Tournament size.
 _Avoid_: Attendance, event size
 
 ### People
@@ -47,8 +47,8 @@ One pairing between two Players in one round of an RC, with its result.
 _Avoid_: Game (a Match is played over games), pairing
 
 **Intentional Draw**:
-A Match both Players agreed to draw without playing: a 0-0-3 in the last two Swiss rounds at tables 1 to 8, where Players still in the hunt for the Top 8 agree to one, or a 0-0-3 the curation file names. A 0-0-3 anywhere else is a played draw. Counted in a record, never in a Rating or a win rate.
-_Avoid_: ID, agreed draw
+A Match both Players agreed to draw without playing: a 0-0-3 in the last two Swiss rounds at tables 1 to 8, where Players still in the hunt for the Top 8 agree to one, or a 0-0-3 the curation file names. A 0-0-3 anywhere else is a played draw. Counted in a record, never in a Rating or a win rate. Its Result cell reads ID with the games, ID (0-0-3).
+_Avoid_: agreed draw
 
 **Finish**:
 A Player's rank in an RC's final standings, read against the Field Size (12th of 233). Inside the Top 8 it reads as a tier: Winner, Runner-up, Top 4 or Top 8.
@@ -63,7 +63,7 @@ Match wins over wins plus losses (66-31-3 is 68%): every draw, played or intenti
 _Avoid_: Match win percentage, MWP
 
 **Top 8 rate**:
-Top 8s over RCs played: a Player's own (3 of 7), or every Entry's at one level of Experience (15 of 192).
+Top 8s over RCs played: a Player's own (3 of 7), or every Entry's at one level of Experience (15 of 192). Top 8 rate by Experience heads that count **Players**: a Player counts once for each RC they played, so someone at their 2nd and their 3rd RC counts twice in the 2-3 row. It counts every Player who played an RC, not only those in its final standings, so an RC whose final standings miss a Player counts one more than its Field Size.
 
 **Entry**:
 One Player at one RC. A Player at two RCs is two Entries.
@@ -82,7 +82,7 @@ A Player's lowest-placed Finish, so any Winner, Runner-up, Top 4 or Top 8 comes 
 _Avoid_: Best result, peak finish
 
 **Typical Finish**:
-A Player's median Finish as a share of the Field Size, read as the share of the field it finishes above ("above 78% of the field"), the consistency figure beside Best Finish. The Top 4 and Top 8 tiers count at ranks 3.5 and 6.5.
+A Player's median Finish as a share of the Field Size, read as the share of the field it finishes above ("above 78% of the field"), the consistency figure beside Best Finish. The Top 4 and Top 8 tiers count at ranks 3.5 and 6.5. The Player card reads it from the top, as **Typically finishes top**: above 85.2% of the field is the top 14.8%.
 _Avoid_: Average finish, mean placement
 
 **Head-to-head**:
@@ -99,17 +99,18 @@ _Avoid_: Max Elo, best rating
 
 ### Surfaces
 
-**Community page**:
+**Overview**:
 The landing page: the scene as a whole across RCs (Field Sizes, each field by Experience, the Top 8 rate at each level of Experience, and every RC's Winner and Runner-up).
+_Avoid_: Community page
 
 **Player card**:
 One Player's page: their RCs, Finishes, Matches and Rating over the Cycles, and Compare Players.
 _Avoid_: Profile, pilot page
 
 **Compare Players**:
-The Player card's section, headed "Compare <name> with other Players", setting up to three other Players beside the card's Player: the Head-to-head records (a matrix once three or more Players are in), every Match the card's Player played against each of them, a summary row per Player, and every Player's line on the card's plot. The card's Player is the focus: Matches are listed only between them and each other Player.
+The Player card's section, headed "Compare <name> with other Players", setting up to three other Players beside the card's Player: a summary row per Player, then for each of them a Match table headed "Against <name>" with the card's Player's W-L-D against them (or "Never met") and every Match they played, and every Player's line on the card's plot. The card's Player is the focus: Matches are listed only between them and each other Player.
 _Avoid_: Face to face, versus
 
 **Leaderboard**:
-The Players ranked by Rating, in Global or one Format.
+The Players ranked by Rating, in All or one Format.
 _Avoid_: Ranking, best players

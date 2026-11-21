@@ -37,3 +37,13 @@ function playerSearch(input, results, href) {
 
 // The site search opens the Player's card.
 playerSearch(document.getElementById("search"), document.getElementById("search-results"), (player) => `player.html#${player.slug}`);
+
+// Its results open over the page, so they close once used or left: on Escape, on a click elsewhere, and when the
+// page moves to another card.
+const siteResults = document.getElementById("search-results");
+window.addEventListener("hashchange", () => {
+  siteResults.replaceChildren();
+  document.getElementById("search").value = "";
+});
+document.addEventListener("click", (event) => { if (!event.target.closest("header .search")) siteResults.replaceChildren(); });
+document.addEventListener("keydown", (event) => { if (event.key === "Escape") siteResults.replaceChildren(); });

@@ -4,35 +4,39 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leaderboard</title>
-<style>
-  body { font-family: system-ui, sans-serif; margin: 16px; background: #fff; color: #222; }
-  .scroll { overflow-x: auto; }
-  table { border-collapse: collapse; }
-  th, td { padding: 4px 12px; text-align: left; border-bottom: 1px solid #ddd; white-space: nowrap; }
-  td.num { text-align: right; }
-  th { cursor: pointer; user-select: none; }
-  th[aria-sort="ascending"]::after { content: " ▲"; color: #888; }
-  th[aria-sort="descending"]::after { content: " ▼"; color: #888; }
-  .formats { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0; }
-  .formats a { padding: 4px 12px; border: 1px solid #bbb; border-radius: 16px; color: inherit; text-decoration: none; }
-  .formats a[aria-current="true"] { background: #222; color: #fff; border-color: #222; }
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-<p><a href="index.html">ANZ Regional Championships</a></p>
+<header class="site">
+<div class="in">
+<p class="brand"><a href="index.html">ANZ Regional Championships</a></p>
+<nav><a href="index.html">Overview</a><a href="leaderboard.html" aria-current="page">Leaderboard</a></nav>
+<div class="search">
 <input id="search" type="search" placeholder="Find a Player" autocomplete="off">
 <ul id="search-results"></ul>
+</div>
+</div>
+</header>
+<main>
 <h1>Leaderboard</h1>
 <div class="formats" id="formats"></div>
 
+<section class="panel">
 <div class="scroll">
-<table>
+<table class="sortable">
   <thead><tr id="columns"></tr></thead>
   <tbody id="rows"></tbody>
 </table>
 </div>
 <!-- The cutoff is ratings.CUTOFF in the build. -->
-<p>You must have played at least 3 RCs to be ranked, and 3 in a Format to be ranked in it.</p>
+<p class="note">You must have played at least 3 RCs to be ranked, and 3 in a Format to be ranked in it. <span id="ranked"></span></p>
+</section>
+</main>
+<footer class="site"><p><span>Contact: <a href="mailto:alejandrofuentepinero@gmail.com">alejandrofuentepinero@gmail.com</a></span> · <span>Discord: alejandrofp92</span> · <span>Also by me: <a href="https://www.7phgraph.com/">7PH Graph</a></span></p></footer>
+<script src="site.js"></script>
 <script src="search.js"></script>
 <script>
 const VIEWS = ["Global", "Pioneer", "Standard", "Modern"];
@@ -44,8 +48,8 @@ const finishOrder = (finish) => (finish == null ? Infinity : TIERS.includes(fini
 const COLUMNS = [
   { name: "Rank", show: (row) => row.rank, key: (row) => row.rank, num: true },
   { name: "Player", show: (row) => link(row), key: (row) => row.name.toLowerCase() },
-  { name: "Rating", show: (row) => Math.round(row.rating), key: (row) => row.rating, num: true, high: true },
-  { name: "Peak Rating", show: (row) => Math.round(row.peak), key: (row) => row.peak, num: true, high: true },
+  { name: "Rating", show: (row) => row.rating, key: (row) => row.rating, num: true, high: true },
+  { name: "Peak Rating", show: (row) => row.peak, key: (row) => row.peak, num: true, high: true },
   { name: "W-L-D", show: (row) => row.record, key: (row) => parseInt(row.record, 10), high: true },
   { name: "Win rate", show: (row) => (row.win_rate.rate == null ? "-" : `${row.win_rate.rate}%`), key: (row) => row.win_rate.rate ?? -1, num: true, high: true },
   { name: "RCs", show: (row) => row.rcs, key: (row) => row.rcs, num: true, high: true },
@@ -58,7 +62,7 @@ const COLUMNS = [
 function link(row) {
   const a = document.createElement("a");
   a.href = `player.html#${row.slug}`;
-  a.textContent = row.name;
+  a.append(whole(row.name));
   return a;
 }
 
@@ -69,14 +73,15 @@ function show() {
   const views = VIEWS.filter((view) => view in boards);
   const asked = decodeURIComponent(location.hash.slice(1));
   const view = views.includes(asked) ? asked : "Global";
-  const rows = boards[view];
+  const rows = boards[view].players;
+  document.getElementById("ranked").textContent = `${boards[view].ranked} Players are ranked in ${viewName(view)}.`;
   document.title = view === "Global" ? "Leaderboard" : `${view} Leaderboard`;
 
   const formats = document.getElementById("formats");
   formats.replaceChildren(...views.map((name) => {
     const a = document.createElement("a");
     a.href = name === "Global" ? "#" : `#${name}`;
-    a.textContent = name;
+    a.textContent = viewName(name);
     a.setAttribute("aria-current", name === view);
     return a;
   }));
@@ -84,7 +89,8 @@ function show() {
   const header = document.getElementById("columns");
   header.replaceChildren(...COLUMNS.map((column) => {
     const th = document.createElement("th");
-    th.textContent = column.name;
+    th.append(whole(column.name));
+    if (column.num) th.className = "num";
     if (column.name === sort.column) th.setAttribute("aria-sort", sort.high ? "descending" : "ascending");
     th.addEventListener("click", () => {
       sort = sort.column === column.name ? { column: column.name, high: !sort.high } : { column: column.name, high: !!column.high };
@@ -106,7 +112,8 @@ function show() {
     const tr = body.insertRow();
     for (const column of COLUMNS) {
       const cell = tr.insertCell();
-      cell.append(column.show(row));
+      const value = column.show(row);
+      cell.append(value instanceof Node ? value : whole(value));
       if (column.num) cell.className = "num";
     }
   }

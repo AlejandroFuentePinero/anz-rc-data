@@ -373,17 +373,18 @@ def build(raw: Path, rc_list: Path, curation: Path, out: Path) -> None:
 TOP = 50  # the Players a Leaderboard shows
 
 
-def _leaderboard(cards: dict[str, dict]) -> dict[str, list[dict]]:
-    """The top eligible Players by Rating in Global and each shipped Format anyone played, ties in name order."""
+def _leaderboard(cards: dict[str, dict]) -> dict[str, dict]:
+    """In Global and each shipped Format anyone played: how many Players are ranked, and the top of them by Rating,
+    ties in name order."""
     played = {view for player in cards.values() for view in player["summary"]}
     boards = {}
     for view in ["Global", *sorted(ratings.FORMAT_RATINGS & played)]:
         ranked = [player for player in cards.values() if player["summary"].get(view, {}).get("rank")]
         ranked.sort(key=lambda player: (player["summary"][view]["rank"], player["name"]))
-        boards[view] = []
+        boards[view] = {"ranked": len(ranked), "players": []}
         for player in ranked[:TOP]:
             summary, rating = player["summary"][view], player["ratings"][view]
-            boards[view].append(
+            boards[view]["players"].append(
                 {"rank": summary["rank"], "slug": player["slug"], "name": player["name"], "rating": rating["rating"], "peak": rating["peak"]}
                 | {key: summary[key] for key in ("record", "win_rate", "rcs", "top_8s", "finals", "best_finish")}
                 | {"last_rc": max(rc["cycle"] for rc in player["rcs"] if view in ("Global", rc["format"]))}

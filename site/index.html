@@ -4,57 +4,73 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ANZ Regional Championships</title>
-<style>
-  body { font-family: system-ui, sans-serif; margin: 16px; background: #fff; color: #222; }
-  .scroll { overflow-x: auto; }
-  table { border-collapse: collapse; }
-  th, td { padding: 4px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid #ddd; white-space: nowrap; }
-  td.num { text-align: right; }
-  .formats { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0; }
-  .formats button { font: inherit; padding: 4px 12px; border: 1px solid #bbb; border-radius: 16px; background: #fff; cursor: pointer; }
-  .formats button[aria-pressed="true"] { background: #222; color: #fff; border-color: #222; }
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap">
+<link rel="stylesheet" href="site.css">
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
 </head>
 <body>
-<h1>ANZ Regional Championships</h1>
-<p><a href="leaderboard.html">Leaderboard</a></p>
+<header class="site">
+<div class="in">
+<h1 class="brand"><a href="index.html">ANZ Regional Championships</a></h1>
+<nav><a href="index.html" aria-current="page">Overview</a><a href="leaderboard.html">Leaderboard</a></nav>
+<div class="search">
 <input id="search" type="search" placeholder="Find a Player" autocomplete="off">
 <ul id="search-results"></ul>
+</div>
+</div>
+</header>
+<main>
+<section>
 <div class="formats" id="formats"></div>
-
-<h2>RC size</h2>
-<div id="field-size"></div>
-
+<div class="panel">
 <h2>RC history</h2>
 <div class="scroll">
-<table>
-  <thead><tr><th>Cycle</th><th>Date</th><th>City</th><th>Format</th><th>Field Size</th><th>Winner</th><th>Runner-up</th></tr></thead>
+<table id="rc-history">
+  <thead><tr><th>RC Cycle</th><th>Date</th><th>City</th><th>Format</th><th>Field Size</th><th>Winner</th><th><span class="whole">Runner-up</span></th></tr></thead>
   <tbody id="rcs"></tbody>
 </table>
 </div>
+</div>
+<div class="panel">
+<h2>RC size</h2>
+<div class="plot"><div id="field-size"></div></div>
+</div>
+</section>
 
-<h2>Field by Experience</h2>
-<div id="experience"></div>
-
+<section class="experience-block">
+<div class="panel">
 <h2>Top 8 rate by Experience</h2>
-<table>
-  <thead><tr><th>RCs played</th><th>Entries</th><th>Top 8s</th><th>Top 8 rate</th><th>Against a first RC</th></tr></thead>
+<div class="scroll">
+<table id="experience-rates">
+  <thead><tr><th>RCs played</th><th>Players</th><th>Top 8s</th><th>Top 8 rate</th><th>Against a first RC</th></tr></thead>
   <tbody id="top-8-rate"></tbody>
 </table>
-<p id="first-rc-note"></p>
+</div>
+<p class="note" id="first-rc-note"></p>
+<p class="note">A Player counts once for each RC they played, so someone at their 2nd and their 3rd RC counts twice in the 2-3 row.</p>
+</div>
+<div class="panel">
+<h2>Field by Experience</h2>
+<div class="plot"><div id="experience"></div></div>
+</div>
+</section>
+</main>
+<footer class="site"><p><span>Contact: <a href="mailto:alejandrofuentepinero@gmail.com">alejandrofuentepinero@gmail.com</a></span> · <span>Discord: alejandrofp92</span> · <span>Also by me: <a href="https://www.7phgraph.com/">7PH Graph</a></span></p></footer>
+<script src="site.js"></script>
 <script src="search.js"></script>
 <script>
-// Each level of experience runs light (new) to dark (8th+).
-const FIELD_COLOUR = "#4a4a4a";
-const LEVEL_COLOUR = ["#86b6ef", "#3987e5", "#1c5cab", "#0d366b"];
-const config = { displayModeBar: false, responsive: true };
+// RC size in one light colour outlined in ink; each level of Experience in a green ramp, light (new) to dark (8th+).
+const FIELD_COLOUR = "#C9C7BE";
+const LEVEL_COLOUR = ["#D5DCC9", "#A8B591", "#788C5D", "#4A5838"];
+const PLOT_SIZE = 14;  // the plots' type
 const margin = { t: 8, r: 16, l: 56, b: 40 };
 
 function link(player) {
   const a = document.createElement("a");
   a.href = `player.html#${player.slug}`;
-  a.textContent = player.name;
+  a.append(whole(player.name));
   return a;
 }
 
@@ -65,25 +81,25 @@ Promise.all([fetch("data/rcs.json"), fetch("data/community.json")])
     const formats = [...new Set(rcs.map((rc) => rc.format))];
 
     // Across every RC: the field by experience and the Top 8 rate at each level. The Format filter leaves these.
-    Plotly.newPlot("experience", community.levels.map((level, j) => ({
+    drawPlot("experience", community.levels.map((level, j) => ({
       type: "bar", name: `At their ${level} RC`,
       x: community.field_by_experience.map((rc) => rc.cycle),
       y: community.field_by_experience.map((rc) => rc.shares[j]),
       customdata: community.field_by_experience.map((rc) => rc.players[j]),
       marker: { color: LEVEL_COLOUR[j], line: { color: "#fff", width: 1 } },
-      hovertemplate: `Cycle %{x}: %{customdata} Players at their ${level} RC (%{y}%)<extra></extra>`,
+      hovertemplate: `RC Cycle %{x}: %{customdata} Players at their ${level} RC (%{y}%)<extra></extra>`,
     })), {
       margin, height: 340, barmode: "stack", legend: { orientation: "h", y: -0.25, traceorder: "normal" },
-      xaxis: { title: { text: "Cycle" }, tickvals: cycles }, yaxis: { title: { text: "Share of the field" }, ticksuffix: "%", range: [0, 100] },
-    }, config);
+      xaxis: { title: { text: "RC Cycle" }, tickvals: cycles }, yaxis: { title: { text: "Share of the field" }, ticksuffix: "%", range: [0, 100] },
+    }, PLOT_SIZE);
 
-    document.getElementById("first-rc-note").textContent = `Cycle ${cycles[0]} left out: everyone there was at their first RC.`;
+    document.getElementById("first-rc-note").textContent = `RC Cycle ${cycles[0]} left out: everyone there was at their first RC.`;
     const rates = document.getElementById("top-8-rate");
     for (const level of community.top_8_rate_by_experience) {
       const row = rates.insertRow();
       for (const value of [level.rcs, level.entries, level.top_8s, `${level.rate}%`, `×${level.vs_first.toFixed(1)}`]) {
         const cell = row.insertCell();
-        cell.textContent = value;
+        cell.append(whole(value));
         cell.className = "num";
       }
     }
@@ -93,24 +109,25 @@ Promise.all([fetch("data/rcs.json"), fetch("data/community.json")])
     const buttons = document.getElementById("formats");
     for (const name of ["Global", ...formats]) {
       const button = document.createElement("button");
-      button.textContent = name;
+      button.textContent = viewName(name);
+      button.dataset.view = name;
       button.addEventListener("click", () => { view = name; show(); });
       buttons.append(button);
     }
 
     function show() {
-      for (const button of buttons.children) button.setAttribute("aria-pressed", button.textContent === view);
+      for (const button of buttons.children) button.setAttribute("aria-pressed", button.dataset.view === view);
       const shown = rcs.filter((rc) => view === "Global" || rc.format === view);
 
       // Every RC stays on the plot; a chosen Format's RCs keep full strength and the others fade.
-      Plotly.react("field-size", [{
+      drawPlot("field-size", [{
         type: "bar", x: cycles, y: rcs.map((rc) => rc.field_size), customdata: rcs.map((rc) => rc.format),
-        marker: { color: FIELD_COLOUR, opacity: rcs.map((rc) => (view === "Global" || rc.format === view ? 1 : 0.2)) },
-        hovertemplate: "Cycle %{x}, %{customdata}: %{y} Players<extra></extra>",
+        marker: { color: FIELD_COLOUR, line: { color: "#141413", width: 1 }, opacity: rcs.map((rc) => (view === "Global" || rc.format === view ? 1 : 0.2)) },
+        hovertemplate: "RC Cycle %{x}, %{customdata}: %{y} Players<extra></extra>",
       }], {
         margin, height: 300, showlegend: false, bargap: 0.25,
-        xaxis: { title: { text: "Cycle" }, tickvals: cycles }, yaxis: { title: { text: "Field Size" }, rangemode: "tozero" },
-      }, config);
+        xaxis: { title: { text: "RC Cycle" }, tickvals: cycles }, yaxis: { title: { text: "Tournament size" }, rangemode: "tozero" },
+      }, PLOT_SIZE);
 
       const body = document.getElementById("rcs");
       body.replaceChildren();
@@ -122,7 +139,7 @@ Promise.all([fetch("data/rcs.json"), fetch("data/community.json")])
         ];
         for (const [value, cls] of cells) {
           const cell = row.insertCell();
-          cell.append(value);
+          cell.append(value instanceof Node ? value : whole(value));
           if (cls) cell.className = cls;
         }
       }
