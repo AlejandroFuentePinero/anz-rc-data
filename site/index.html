@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ANZ Regional Championships</title>
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
-<!-- PROTOTYPE (#11): the style and Compare placement switcher, with each style's sheet and plot theme. -->
-<script src="prototype/switcher.js"></script>
+<!-- PROTOTYPE (#11): the chosen style's sheet and plot theme, and the header's search behaviour. -->
+<script src="prototype/style.js"></script>
 </head>
 <body>
 <header class="site">
 <div class="in">
 <h1 class="brand"><a href="index.html">ANZ Regional Championships</a></h1>
-<nav><a href="leaderboard.html">Leaderboard</a></nav>
+<nav><a href="index.html" aria-current="page">Community</a><a href="leaderboard.html">Leaderboard</a></nav>
 <div class="search">
 <input id="search" type="search" placeholder="Find a Player" autocomplete="off">
 <ul id="search-results"></ul>
@@ -22,29 +22,23 @@
 <main class="community">
 <section class="block format-block">
 <div class="formats" id="formats"></div>
-<div class="pair">
-<div class="panel">
-<h2>RC size</h2>
-<div id="field-size"></div>
-</div>
 <div class="panel">
 <h2>RC history</h2>
 <div class="scroll">
 <table>
-  <thead><tr><th>Cycle</th><th>Date</th><th>City</th><th>Format</th><th>Field Size</th><th>Winner</th><th>Runner-up</th></tr></thead>
+  <thead><tr><th>RC Cycle</th><th>Date</th><th>City</th><th>Format</th><th>Field Size</th><th>Winner</th><th>Runner-up</th></tr></thead>
   <tbody id="rcs"></tbody>
 </table>
 </div>
 </div>
+<div class="panel">
+<h2>RC size</h2>
+<div id="field-size"></div>
 </div>
 </section>
 
-<div class="pair experience-block">
-<section class="panel">
-<h2>Field by Experience</h2>
-<div id="experience"></div>
-</section>
-<section class="panel">
+<section class="block experience-block">
+<div class="panel">
 <h2>Top 8 rate by Experience</h2>
 <div class="scroll">
 <table>
@@ -53,8 +47,12 @@
 </table>
 </div>
 <p class="note" id="first-rc-note"></p>
-</section>
 </div>
+<div class="panel">
+<h2>Field by Experience</h2>
+<div id="experience"></div>
+</div>
+</section>
 </main>
 <script src="search.js"></script>
 <script>
@@ -84,13 +82,13 @@ Promise.all([fetch("data/rcs.json"), fetch("data/community.json")])
       y: community.field_by_experience.map((rc) => rc.shares[j]),
       customdata: community.field_by_experience.map((rc) => rc.players[j]),
       marker: { color: LEVEL_COLOUR[j], line: { color: "#fff", width: 1 } },
-      hovertemplate: `Cycle %{x}: %{customdata} Players at their ${level} RC (%{y}%)<extra></extra>`,
+      hovertemplate: `RC Cycle %{x}: %{customdata} Players at their ${level} RC (%{y}%)<extra></extra>`,
     })), {
       margin, height: 340, barmode: "stack", legend: { orientation: "h", y: -0.25, traceorder: "normal" },
-      xaxis: { title: { text: "Cycle" }, tickvals: cycles }, yaxis: { title: { text: "Share of the field" }, ticksuffix: "%", range: [0, 100] },
+      xaxis: { title: { text: "RC Cycle" }, tickvals: cycles }, yaxis: { title: { text: "Share of the field" }, ticksuffix: "%", range: [0, 100] },
     }, config);
 
-    document.getElementById("first-rc-note").textContent = `Cycle ${cycles[0]} left out: everyone there was at their first RC.`;
+    document.getElementById("first-rc-note").textContent = `RC Cycle ${cycles[0]} left out: everyone there was at their first RC.`;
     const rates = document.getElementById("top-8-rate");
     for (const level of community.top_8_rate_by_experience) {
       const row = rates.insertRow();
@@ -119,10 +117,10 @@ Promise.all([fetch("data/rcs.json"), fetch("data/community.json")])
       Plotly.react("field-size", [{
         type: "bar", x: cycles, y: rcs.map((rc) => rc.field_size), customdata: rcs.map((rc) => rc.format),
         marker: { color: FIELD_COLOUR, opacity: rcs.map((rc) => (view === "Global" || rc.format === view ? 1 : 0.2)) },
-        hovertemplate: "Cycle %{x}, %{customdata}: %{y} Players<extra></extra>",
+        hovertemplate: "RC Cycle %{x}, %{customdata}: %{y} Players<extra></extra>",
       }], {
         margin, height: 300, showlegend: false, bargap: 0.25,
-        xaxis: { title: { text: "Cycle" }, tickvals: cycles }, yaxis: { title: { text: "Field Size" }, rangemode: "tozero" },
+        xaxis: { title: { text: "RC Cycle" }, tickvals: cycles }, yaxis: { title: { text: "Tournament size" }, rangemode: "tozero" },
       }, config);
 
       const body = document.getElementById("rcs");

@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Player card</title>
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
-<!-- PROTOTYPE (#11): the style and Compare placement switcher, with each style's sheet and plot theme. -->
-<script src="prototype/switcher.js"></script>
+<!-- PROTOTYPE (#11): the chosen style's sheet and plot theme, and the header's search behaviour. -->
+<script src="prototype/style.js"></script>
 </head>
 <body>
 <header class="site">
 <div class="in">
 <p class="brand"><a href="index.html">ANZ Regional Championships</a></p>
-<nav><a href="leaderboard.html">Leaderboard</a></nav>
+<nav><a href="index.html">Community</a><a href="leaderboard.html">Leaderboard</a></nav>
 <div class="search">
 <input id="search" type="search" placeholder="Find a Player" autocomplete="off">
 <ul id="search-results"></ul>
@@ -24,9 +24,7 @@
 <h1 id="name"></h1>
 <p id="usernames"></p>
 </div>
-<!-- PROTOTYPE (#11): the Compare tab placement's tabs; prototype/placement.js drives them. -->
-<nav class="card-tabs" hidden><button type="button" data-tab="card">Player card</button><button type="button" data-tab="compare">Compare Players<span class="tab-count"></span></button></nav>
-<div class="card-layout" data-tab="card">
+<div class="card-layout">
 <div class="card-main">
 <section class="panel">
 <div class="scroll">
@@ -41,14 +39,14 @@
 
 <section class="panel">
 <h2>Rating against the field</h2>
-<div id="plot-slot-card"><div id="against-field"></div></div>
+<div class="rating-plot"><div id="against-field"></div></div>
 </section>
 
 <section class="panel">
 <h2>RC history</h2>
 <div class="scroll">
 <table class="history">
-  <thead><tr><th class="num">Cycle</th><th>City and year</th><th>Format</th><th>Finish</th><th class="num">Field</th><th>Deck</th><th>W-L-D</th><th class="num">Win rate</th><th class="num">Rating at start</th><th class="num">Rating at end</th></tr></thead>
+  <thead><tr><th class="num">RC Cycle</th><th>City and year</th><th>Format</th><th>Finish</th><th class="num">Field</th><th>Deck</th><th>W-L-D</th><th class="num">Win rate</th><th class="num">Rating at start</th><th class="num">Rating at end</th></tr></thead>
   <tbody id="rcs"></tbody>
 </table>
 </div>
@@ -68,19 +66,13 @@
 </div>
 <p id="compare-missing" hidden></p>
 <div id="compared" hidden>
-<p id="record"></p>
-<div id="matrix" hidden>
-<div class="scroll"><table><thead><tr id="matrix-columns"></tr></thead><tbody id="matrix-rows"></tbody></table></div>
-<p class="note">Each row's W-L-D against each column.</p>
-</div>
-<div id="plot-slot-compare"></div>
-<div id="against"></div>
 <div class="scroll">
 <table class="summary">
   <thead><tr><th>Player</th><th class="num">ANZ Rank</th><th class="num">RCs</th><th class="num">Rating</th><th class="num">Peak Rating</th><th>W-L-D</th><th class="num">Win rate</th><th class="num">Top 8s</th><th class="num">Finals</th><th>Best Finish</th><th>Typically finishes above</th></tr></thead>
   <tbody id="compared-summary"></tbody>
 </table>
 </div>
+<div class="matches" id="against"></div>
 </div>
 </section>
 </aside>
@@ -88,7 +80,6 @@
 </main>
 <!-- The version makes a browser holding the old search.js, without playerSearch, fetch this one. -->
 <script src="search.js?v=2"></script>
-<script src="prototype/placement.js"></script>
 <script>
 const VIEWS = ["Global", "Pioneer", "Standard", "Modern"];
 const MAX_COMPARED = 3;  // Players compared with the card's own, so the plot stays readable
@@ -231,39 +222,15 @@ function compare() {
   if (!compared.length) return;
   const players = [card, ...compared];
   const cardLink = (player) => link(player.name, `#${player.slug}`);
-  // One Player compared: the card's Player's record against them. More: every Player's record against every other.
-  const matrix = compared.length > 1;
-  const record = document.getElementById("record");
-  record.hidden = matrix;
-  const [other] = compared;
-  const versus = card.head_to_head[other.slug];
-  record.replaceChildren(cardLink(card), versus ? " against " : " and ", cardLink(other), versus ? `: ${versus} (W-L-D)` : " never met.");
-  document.getElementById("matrix").hidden = !matrix;
-  const columns = document.getElementById("matrix-columns");
-  columns.replaceChildren(document.createElement("th"), ...players.map((player) => {
-    const th = document.createElement("th");
-    th.append(cardLink(player));
-    return th;
-  }));
-  const rows = document.getElementById("matrix-rows");
-  rows.replaceChildren();
-  for (const row of players) {
-    addRow(rows, [[cardLink(row)], ...players.map((column) => [row === column ? "" : row.head_to_head[column.slug]])]);
-  }
-
-  // Every Match the card's Player played against each compared Player, or that they never met.
+  // Every Match the card's Player played against each compared Player, headed by their record, or that they never met.
   const against = document.getElementById("against");
   against.replaceChildren();
   for (const other of compared) {
     const heading = document.createElement("h3");
-    heading.append("Against ", cardLink(other));
-    if (!card.head_to_head[other.slug]) {
-      // With one Player compared, the record line already says it.
-      const never = document.createElement("p");
-      never.textContent = "Never met.";
-      if (matrix) against.append(heading, never);
-      continue;
-    }
+    const versus = card.head_to_head[other.slug];
+    heading.append("Against ", cardLink(other), Object.assign(document.createElement("span"), { className: "versus", textContent: versus ?? "Never met" }));
+    against.append(heading);
+    if (!versus) continue;
     const table = document.createElement("table");
     const header = table.createTHead().insertRow();
     for (const name of ["RC", "Format", "Round", `${card.name}'s deck`, `${other.name}'s deck`, "Result"]) {
@@ -278,14 +245,14 @@ function compare() {
     for (const match of card.matches.filter((match) => match.opponent?.slug === other.slug)) {
       const rc = card.rcs.find((rc) => rc.cycle === match.cycle);
       addRow(body, [
-        [`Cycle ${[rc.cycle, card.city[rc.cycle], rc.date.slice(0, 4)].filter(Boolean).join(" ")}`], [rc.format],
-        [roundName(match)], [deck(card, rc.cycle)], [deck(other, rc.cycle)], [outcome(match)],
+        [`RC Cycle ${[rc.cycle, card.city[rc.cycle], rc.date.slice(0, 4)].filter(Boolean).join(" ")}`], [rc.format],
+        [match.round], [deck(card, rc.cycle)], [deck(other, rc.cycle)], [outcome(match)],
       ]);
     }
     const scroll = document.createElement("div");
     scroll.className = "scroll";
     scroll.append(table);
-    against.append(heading, scroll);
+    against.append(scroll);
   }
 
   const summary = document.getElementById("compared-summary");
@@ -304,7 +271,6 @@ function summaryCells(s, r) {
   ];
 }
 
-const roundName = (match) => (match.playoff ? `${match.round} (playoff)` : match.round);
 
 function rounds(rc) {
   const table = document.createElement("table");
@@ -312,7 +278,7 @@ function rounds(rc) {
   const body = table.createTBody();
   for (const match of card.matches.filter((match) => match.cycle === rc.cycle)) {
     addRow(body, [
-      [roundName(match)],
+      [match.round],
       [match.opponent && link(match.opponent.name, `#${match.opponent.slug}`)],
       [match.opponent_rating && rating(match.opponent_rating.Global), "num"],
       [outcome(match)],
@@ -342,7 +308,8 @@ function againstField() {
       x: player.rcs.map((rc) => rc.cycle), y: player.rcs.map((rc) => after[rc.cycle]), mode: "lines+markers+text", name: player.name,
       text: player.rcs.map((rc) => rc.finish ?? ""), textposition: n ? "bottom center" : "top center", textfont: { size: 11, color: "#555" },
       line: { color: COLOURS[n], width: 2 },
-      marker: { size: 10, color: player.rcs.map((rc) => (rc.top_8 ? "#d9a520" : COLOURS[n])), line: { color: "#fff", width: 1 } },
+      // A Top 8 is a star in the Player's own colour, so the shape and not a hue marks it beside other Players.
+      marker: { size: player.rcs.map((rc) => (rc.top_8 ? 17 : 10)), symbol: player.rcs.map((rc) => (rc.top_8 ? "star" : "circle")), color: COLOURS[n], line: { color: "#fff", width: 1 } },
       customdata: player.rcs.map((rc) => `${rc.format}, ${rc.finish ?? "no Finish"} of ${rc.field_size}`),
       hovertemplate: `${player.name}<br>RC Cycle %{x}, %{customdata}<br>Rating after: %{y:.0f}<extra></extra>`,
     };
