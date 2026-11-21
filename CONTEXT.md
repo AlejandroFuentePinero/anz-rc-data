@@ -99,7 +99,7 @@ One Player's page: their RCs, Finishes, Matches and Rating over the Cycles, and 
 _Avoid_: Profile, pilot page
 
 **Compare Players**:
-The Player card's section setting up to four other Players beside the card's Player: the Head-to-head records (a matrix once three or more Players are in), every Match the card's Player played against each of them, a summary row per Player, and every Player's line on the card's plot. The card's Player is the focus: Matches are listed only between them and each other Player.
+The Player card's section, headed "Compare <name> with other Players", setting up to three other Players beside the card's Player: the Head-to-head records (a matrix once three or more Players are in), every Match the card's Player played against each of them, a summary row per Player, and every Player's line on the card's plot. The card's Player is the focus: Matches are listed only between them and each other Player.
 _Avoid_: Face to face, versus
 
 **Leaderboard**:

@@ -41,7 +41,7 @@
 <!-- The cutoff is ratings.CUTOFF in the build. -->
 <p>You must have played at least 3 RCs to be ranked, and 3 in a Format to be ranked in it.</p>
 
-<h2>Compare Players</h2>
+<h2 id="compare-heading">Compare with other Players</h2>
 <div class="picker">
 <input id="compare" type="search" placeholder="Compare with a Player" autocomplete="off">
 <span class="picker" id="chips"></span>
@@ -78,7 +78,7 @@
 <script src="search.js?v=2"></script>
 <script>
 const VIEWS = ["Global", "Pioneer", "Standard", "Modern"];
-const MAX_COMPARED = 4;  // Players compared with the card's own, so the plot stays readable
+const MAX_COMPARED = 3;  // Players compared with the card's own, so the plot stays readable
 const COLOURS = ["#1c5cab", "#c2571a", "#2a8f7b", "#7b4fa8", "#c23b6e"];  // the card's Player, then each compared one
 
 function link(text, href) {
@@ -160,6 +160,7 @@ function show() {
         open.clear();
         document.title = card.name;
         document.getElementById("name").textContent = card.name;
+        document.getElementById("compare-heading").textContent = `Compare ${card.name} with other Players`;
         document.getElementById("usernames").textContent = `Melee: ${card.usernames.join(", ")}`;
       }
       draw();
