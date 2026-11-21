@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Face to face</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 16px; background: #fff; color: #222; }
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; }
+  th, td { padding: 4px 12px; text-align: left; border-bottom: 1px solid #ddd; white-space: nowrap; }
+  td.num { text-align: right; }
+  .pickers { display: flex; gap: 16px; flex-wrap: wrap; }
+  .formats { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0; }
+  .formats a { padding: 4px 12px; border: 1px solid #bbb; border-radius: 16px; color: inherit; text-decoration: none; }
+  .formats a[aria-current="true"] { background: #222; color: #fff; border-color: #222; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
+</head>
+<body>
+<p><a href="index.html">ANZ Regional Championships</a></p>
+<h1>Face to face</h1>
+<div class="pickers">
+  <div><input id="pick-0" type="search" placeholder="First Player" autocomplete="off"><ul id="pick-0-results"></ul></div>
+  <div><input id="pick-1" type="search" placeholder="Second Player" autocomplete="off"><ul id="pick-1-results"></ul></div>
+</div>
+<p id="missing" hidden></p>
+
+<div id="pair" hidden>
+<div class="formats" id="formats"></div>
+
+<h2>Head-to-head</h2>
+<p id="never-met" hidden></p>
+<div id="met">
+<div class="scroll">
+<table>
+  <thead><tr><th>Player</th><th>W-L-D</th></tr></thead>
+  <tbody id="record"></tbody>
+</table>
+</div>
+<div class="scroll">
+<table>
+  <thead><tr><th>Cycle</th><th>City and year</th><th>Format</th><th>Round</th><th>Result</th></tr></thead>
+  <tbody id="matches"></tbody>
+</table>
+</div>
+<p id="reconstructed-note" hidden>Reconstructed: a playoff Match Melee lost, rebuilt from the standings, so it has no game score.</p>
+</div>
+
+<h2>Summary</h2>
+<div class="scroll">
+<table>
+  <thead><tr><th>Player</th><th>ANZ Rank</th><th>RCs</th><th>Rating</th><th>Peak Rating</th><th>W-L-D</th><th>Win rate</th><th>Top 8s</th><th>Finals</th><th>Best Finish</th><th>Typically finishes above</th></tr></thead>
+  <tbody id="summary"></tbody>
+</table>
+</div>
+<!-- The cutoff is ratings.CUTOFF in the build. -->
+<p>You must have played at least 3 RCs to be ranked, and 3 in a Format to be ranked in it.</p>
+
+<h2>Rating against the field</h2>
+<div id="against-field"></div>
+</div>
+<script src="search.js"></script>
+<script>
+const VIEWS = ["Global", "Pioneer", "Standard", "Modern"];
+const COLOURS = ["#1c5cab", "#c2571a"];  // the first Player, the second
+
+// The URL: face.html#first/second, with /Format after them under a Format filter.
+function parse() {
+  const parts = decodeURIComponent(location.hash.slice(1)).split("/").filter(Boolean);
+  const view = VIEWS.includes(parts.at(-1)) ? parts.pop() : "Global";
+  return { slugs: [parts[0] ?? "", parts[1] ?? ""], view };
+}
+const address = (slugs, view) => `#${[...slugs, view === "Global" ? "" : view].filter(Boolean).join("/")}`;
+
+function link(text, href) {
+  const a = document.createElement("a");
+  a.href = href;
+  a.textContent = text;
+  return a;
+}
+
+function addRow(body, cells) {
+  const row = body.insertRow();
+  for (const [value, cellCls] of cells) {
+    const cell = row.insertCell();
+    cell.append(value ?? "-");
+    if (cellCls) cell.className = cellCls;
+  }
+}
+
+const rating = (value) => (value == null ? null : Math.round(value));
+const rate = (winRate) => (winRate.rate == null ? null : `${winRate.rate}%`);
+const cardLink = (card) => link(card.name, `player.html#${card.slug}`);
+
+const rcsReady = fetch("data/rcs.json").then((response) => response.json());
+const cardFetches = {};  // each card fetched so far, by slug
+function fetchCard(slug) {
+  cardFetches[slug] ??= fetch(`data/players/${slug}.json`).then((response) => {
+    if (!response.ok) throw new Error(`no card for ${slug}`);
+    return response.json();
+  });
+  return cardFetches[slug];
+}
+
+// Each picker sets its own Player and keeps the other one and the Format.
+[0, 1].forEach((slot) => {
+  playerSearch(document.getElementById(`pick-${slot}`), document.getElementById(`pick-${slot}-results`), (player) => {
+    const { slugs, view } = parse();
+    slugs[slot] = player.slug;
+    return address(slugs, view);
+  });
+});
+
+function show() {
+  const { slugs, view } = parse();
+  for (const slot of [0, 1]) document.getElementById(`pick-${slot}-results`).replaceChildren();
+  const chosen = slugs.map((slug) => (slug ? fetchCard(slug).catch(() => null) : Promise.resolve(null)));
+  Promise.all([rcsReady, ...chosen]).then(([rcs, ...cards]) => {
+    cards.forEach((card, slot) => { document.getElementById(`pick-${slot}`).value = card ? card.name : ""; });
+    // A mistyped or outdated link: say so rather than leave the page blank.
+    const missing = document.getElementById("missing");
+    const lost = slugs.filter((slug, slot) => slug && !cards[slot]);
+    missing.hidden = !lost.length;
+    missing.textContent = `No Player found for ${lost.join(" and ")}`;
+    const pair = document.getElementById("pair");
+    pair.hidden = !(cards[0] && cards[1]);
+    if (pair.hidden) { document.title = "Face to face"; return; }
+    document.title = `${cards[0].name} and ${cards[1].name}`;
+    draw(rcs, cards, view);
+  });
+}
+
+function draw(rcs, [first, second], view) {
+  const formats = document.getElementById("formats");
+  formats.replaceChildren(...VIEWS.map((name) => {
+    const a = link(name, address([first.slug, second.slug], name));
+    a.setAttribute("aria-current", name === view);
+    return a;
+  }));
+  const inView = rcs.filter((rc) => view === "Global" || rc.format === view);
+  const rcOf = Object.fromEntries(rcs.map((rc) => [rc.cycle, rc]));
+
+  // The Head-to-head: each Player's record against the other, then every Match between them.
+  const records = [first.head_to_head[second.slug]?.[view], second.head_to_head[first.slug]?.[view]];
+  const met = records[0] != null;
+  document.getElementById("met").hidden = !met;
+  const neverMet = document.getElementById("never-met");
+  neverMet.hidden = met;
+  neverMet.textContent = `${first.name} and ${second.name} never met${view === "Global" ? "" : ` in ${view}`}.`;
+  const record = document.getElementById("record");
+  record.replaceChildren();
+  [first, second].forEach((card, slot) => addRow(record, [[cardLink(card)], [records[slot]]]));
+  const matches = first.matches.filter((match) => match.opponent?.slug === second.slug && (view === "Global" || rcOf[match.cycle].format === view));
+  const body = document.getElementById("matches");
+  body.replaceChildren();
+  for (const match of matches) {
+    const rc = rcOf[match.cycle];
+    addRow(body, [
+      [match.cycle, "num"], [[rc.city, rc.date.slice(0, 4)].filter(Boolean).join(" ")], [rc.format],
+      [match.playoff ? `${match.round} (playoff)` : match.round], [result(match, first, second)],
+    ]);
+  }
+  document.getElementById("reconstructed-note").hidden = !matches.some((match) => match.reconstructed);
+
+  const summary = document.getElementById("summary");
+  summary.replaceChildren();
+  for (const card of [first, second]) {
+    const s = card.summary[view];
+    if (!s) { addRow(summary, [[cardLink(card)], ...Array(10).fill([null])]); continue; }
+    const r = card.ratings[view];
+    addRow(summary, [
+      [cardLink(card)], [s.rank ?? "", "num"], [s.rcs, "num"], [rating(r.rating), "num"], [rating(r.peak), "num"], [s.record],
+      [rate(s.win_rate), "num"], [s.top_8s, "num"], [s.finals, "num"], [s.best_finish],
+      [s.typical_finish_above == null ? null : `${s.typical_finish_above}% of the field`],
+    ]);
+  }
+  againstField(inView, [first, second], view);  // last, so the tables stand even if the plot cannot be drawn
+}
+
+// A Match in words, from the winner's side: "Ana Lopez won (2-1-0)", "Drew (1-1-1)", "Intentional Draw (0-0-3)".
+function result(match, first, second) {
+  // The second Player's own record of the Match carries the game score from their side.
+  const theirs = second.matches.find((other) => other.cycle === match.cycle && other.round === match.round);
+  const [said, games] = match.result === "Win" ? [`${first.name} won`, match.games]
+    : match.result === "Loss" ? [`${second.name} won`, theirs.games]
+    : [match.result === "Draw" ? "Drew" : match.result, match.games];
+  return `${said}${match.reconstructed ? " (reconstructed)" : games ? ` (${games})` : ""}`;
+}
+
+function againstField(inView, cards, view) {
+  // Both Players' Ratings after each RC in the view, over that RC's field in the same view: its typical Player,
+  // its top 10% and its highest. Global reads the Global field, a Format its own.
+  const key = view === "Global" ? "field_rating" : "field_rating_in_format";
+  const cycles = inView.map((rc) => rc.cycle);
+  const reference = (level, dash, colour, says) => ({
+    x: cycles, y: inView.map((rc) => rc[key][level]), mode: "lines", line: { color: colour, width: 1.5, dash }, showlegend: false,
+    hovertemplate: `RC Cycle %{x}: ${says} stood at %{y:.0f}<extra></extra>`,
+  });
+  const players = cards.map((card, slot) => {
+    const after = Object.fromEntries((card.ratings[view]?.after_rc ?? []).map((point) => [point.cycle, point.rating]));
+    const played = card.rcs.filter((rc) => view === "Global" || rc.format === view);
+    return {
+      x: played.map((rc) => rc.cycle), y: played.map((rc) => after[rc.cycle]), mode: "lines+markers+text", name: card.name,
+      text: played.map((rc) => rc.finish ?? ""), textposition: slot ? "bottom center" : "top center", textfont: { size: 11, color: "#555" },
+      line: { color: COLOURS[slot], width: 2 },
+      marker: { size: 10, color: played.map((rc) => (rc.top_8 ? "#d9a520" : COLOURS[slot])), line: { color: "#fff", width: 1 } },
+      customdata: played.map((rc) => `${rc.format}, ${rc.finish ?? "no Finish"} of ${rc.field_size}`),
+      hovertemplate: `${card.name}<br>RC Cycle %{x}, %{customdata}<br>Rating after: %{y:.0f}<extra></extra>`,
+    };
+  });
+  const last = inView.at(-1)[key];
+  // The axis tops out at the highest Rating any field in the view reached, as on the Player card.
+  const lowest = Math.min(...inView.map((rc) => rc[key].median), ...players.flatMap((trace) => trace.y));
+  const highest = Math.max(...inView.map((rc) => rc[key].highest));
+  Plotly.react("against-field", [
+    reference("highest", "solid", "#ccc", "the top Player in the field"),
+    reference("top_10", "dash", "#999", "a top 10% Player"),
+    reference("median", "dot", "#bbb", "the typical Player"),
+    ...players,
+  ], {
+    height: 400, margin: { t: 40, r: 130, l: 56, b: 40 }, legend: { orientation: "h", x: 0, y: 1, yanchor: "bottom" },
+    xaxis: { title: { text: "RC Cycle" }, tickvals: cycles }, yaxis: { title: { text: "Rating" }, range: [lowest - 25, highest + 10] },
+    annotations: [["highest", "Top Player in the field", "#aaa"], ["top_10", "Top 10% of the field", "#777"], ["median", "Typical Player", "#999"]].map(([level, label, colour]) => ({
+      x: cycles.at(-1), y: last[level], xanchor: "left", xshift: 6, showarrow: false, text: label, font: { size: 11, color: colour },
+    })),
+  }, { displayModeBar: false, responsive: true });
+}
+
+window.addEventListener("hashchange", show);
+show();
+</script>
+</body>
+</html>
