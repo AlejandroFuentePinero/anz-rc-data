@@ -110,7 +110,7 @@ function signed(value) {
   return (whole > 0 ? "+" : whole < 0 ? "−" : "") + Math.abs(whole);
 }
 // A Match's result in words, with its game score where it was played.
-const SAID = { Win: "Won", Loss: "Lost", Draw: "Drew" };
+const SAID = { Win: "Won", Loss: "Lost", Draw: "Drew", "Intentional Draw": "ID" };
 const outcome = (match) => `${SAID[match.result] ?? match.result}${match.reconstructed ? " (reconstructed)" : match.games ? ` (${match.games})` : ""}`;
 const rate = (winRate) => (winRate.rate == null ? null : `${winRate.rate}%`);
 
@@ -306,7 +306,8 @@ function againstField() {
   const lines = [card, ...compared].map((player, n) => {
     const after = Object.fromEntries(player.ratings.Global.after_rc.map((point) => [point.cycle, point.rating]));
     return {
-      x: player.rcs.map((rc) => rc.cycle), y: player.rcs.map((rc) => after[rc.cycle]), mode: "lines+markers+text", name: player.name,
+      x: player.rcs.map((rc) => rc.cycle), y: player.rcs.map((rc) => after[rc.cycle]), // Only the card's Player carries finish labels; a compared Player's finishes are in the hover, so labels never collide.
+      mode: n ? "lines+markers" : "lines+markers+text", name: player.name,
       text: player.rcs.map((rc) => rc.finish ?? ""), textposition: n ? "bottom center" : "top center", textfont: { size: 11, color: "#555" },
       line: { color: COLOURS[n], width: 2 },
       // A Top 8 is a star in the Player's own colour, so the shape and not a hue marks it beside other Players.
