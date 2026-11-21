@@ -163,7 +163,10 @@ function show() {
       if (newCard) {
         open.clear();
         document.title = card.name;
-        document.getElementById("name").textContent = card.name;
+        // The name carries the Player's ANZ Rank, so it reads before the table does.
+        const rank = card.summary.Global.rank;
+        document.getElementById("name").replaceChildren(card.name, Object.assign(document.createElement("span"), {
+          className: "standing", textContent: rank ? `(#${rank})` : "(Not ranked)" }));
         document.getElementById("compare-heading").textContent = `Compare ${card.name} with other Players`;
         document.getElementById("usernames").textContent = `Melee: ${card.usernames.join(", ")}`;
       }

@@ -40,6 +40,7 @@ main { padding: 24px 32px 48px; }
 main > h1, .card-head h1 { font-size: 26px; line-height: 1.15; font-weight: 650; letter-spacing: -0.015em; margin-bottom: 16px; }
 .card-head { margin-bottom: 20px; }
 .card-head h1 { margin-bottom: 4px; }
+.card-head h1 .standing { margin-left: 0.5em; font-weight: 500; color: var(--ink-muted); white-space: nowrap; }
 #usernames { color: var(--ink-muted); }
 
 /* Headings sit on the paper; what they head sits in a white sheet. */
