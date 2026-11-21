@@ -18,6 +18,7 @@
   tr.rounds > td { padding: 0 0 8px 28px; background: #fafafa; }
   tr.rounds table td, tr.rounds table th { border-bottom-color: #eee; }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
 </head>
 <body>
 <p><a href="index.html">ANZ Regional Championships</a></p>
@@ -28,12 +29,15 @@
 
 <div class="scroll">
 <table>
-  <thead><tr><th></th><th>ANZ Rank</th><th>Rating</th><th>Peak Rating</th><th>W-L-D</th><th>Win rate</th><th>RCs</th><th>Top 8s</th><th>Titles</th><th>Best Finish</th><th>Typical Finish</th></tr></thead>
+  <thead><tr><th></th><th>ANZ Rank</th><th>RCs</th><th>Rating</th><th>Peak Rating</th><th>W-L-D</th><th>Win rate</th><th>Top 8s</th><th>Finals</th><th>Best Finish</th><th>Typically finishes above</th></tr></thead>
   <tbody id="summary"></tbody>
 </table>
 </div>
 <!-- The cutoff is ratings.CUTOFF in the build. -->
 <p>A rank needs 3 RCs: in that Format for a Format, in any Format for Global.</p>
+
+<h2>Rating against the field</h2>
+<div id="against-field"></div>
 
 <h2>RC history</h2>
 <div class="scroll">
@@ -51,6 +55,7 @@ function link(text, href) {
   const a = document.createElement("a");
   a.href = href;
   a.textContent = text;
+  if (/^https?:/.test(href)) { a.target = "_blank"; a.rel = "noopener"; }  // a link off the site opens in a new tab
   return a;
 }
 
@@ -65,12 +70,19 @@ function addRow(body, cells, cls) {
   return row;
 }
 
-const rating = (value) => (value == null ? null : value.toFixed(1));
-const signed = (value) => (value > 0 ? "+" : value < 0 ? "−" : "") + Math.abs(value).toFixed(1);
+const rating = (value) => (value == null ? null : Math.round(value));
+function signed(value) {
+  const whole = Math.round(value);
+  return (whole > 0 ? "+" : whole < 0 ? "−" : "") + Math.abs(whole);
+}
+// A Match's result in words, with its game score where it was played.
+const SAID = { Win: "Won", Loss: "Lost", Draw: "Drew" };
+const outcome = (match) => `${SAID[match.result] ?? match.result}${match.reconstructed ? " (reconstructed)" : match.games ? ` (${match.games})` : ""}`;
 const rate = (winRate) => (winRate.rate == null ? null : `${winRate.rate}%`);
 
 const rcsReady = fetch("data/rcs.json").then((response) => response.json());
 let card = null;
+let allRcs = [];  // every RC in the series, with its field's Ratings
 const open = new Set();  // the Cycles whose rounds are showing
 
 function show() {
@@ -80,8 +92,10 @@ function show() {
     if (!response.ok) throw new Error(`no card for ${slug}`);
     return response.json();
   })])
+    // Only a failed fetch means no such Player; a fault in drawing the card is not reported as one.
     .then(([rcs, loaded]) => {
       card = loaded;
+      allRcs = rcs;
       card.city = Object.fromEntries(rcs.map((rc) => [rc.cycle, rc.city]));
       open.clear();
       document.title = card.name;
@@ -89,12 +103,11 @@ function show() {
       document.getElementById("usernames").textContent = `Melee: ${card.usernames.join(", ")}`;
       draw();
       window.scrollTo(0, 0);
-    })
-    .catch(() => {
+    }, () => {
       // A mistyped or outdated link: say so rather than leave the page blank.
       card = null;
       document.getElementById("name").textContent = "No Player found";
-      for (const id of ["usernames", "summary", "rcs"]) document.getElementById(id).replaceChildren();
+      for (const id of ["usernames", "summary", "rcs", "against-field"]) document.getElementById(id).replaceChildren();
       document.getElementById("reconstructed-note").hidden = true;
     });
 }
@@ -107,9 +120,9 @@ function draw() {
     if (!s) { addRow(summary, [[name], ...Array(10).fill([null])]); continue; }
     const r = card.ratings[name];
     addRow(summary, [
-      [name], [s.rank ?? "", "num"], [rating(r.rating), "num"], [rating(r.peak), "num"], [s.record], [rate(s.win_rate), "num"],
-      [s.rcs, "num"], [s.top_8s, "num"], [s.titles, "num"], [s.best_finish],
-      [s.typical_finish == null ? null : `top ${s.typical_finish}%`],
+      [name], [s.rank ?? "", "num"], [s.rcs, "num"], [rating(r.rating), "num"], [rating(r.peak), "num"], [s.record],
+      [rate(s.win_rate), "num"], [s.top_8s, "num"], [s.finals, "num"], [s.best_finish],
+      [s.typical_finish_above == null ? null : `${s.typical_finish_above}% of the field`],
     ], name === "Global" ? "global" : null);
   }
 
@@ -129,19 +142,21 @@ function draw() {
     if (open.has(rc.cycle)) body.append(rounds(rc));
   }
   document.getElementById("reconstructed-note").hidden = !card.matches.some((match) => match.reconstructed);
+  againstField();  // last, so the tables stand even if the plot cannot be drawn
 }
 
 function rounds(rc) {
   const table = document.createElement("table");
-  table.innerHTML = "<thead><tr><th>Round</th><th>Opponent</th><th>Their Rating</th><th>Result</th><th>Games</th><th>Rating change</th></tr></thead>";
+  table.innerHTML = "<thead><tr><th>Round</th><th>Opponent</th><th>Their Rating</th><th>Result</th><th>Rating change</th><th>New Rating</th></tr></thead>";
   const body = table.createTBody();
   for (const match of card.matches.filter((match) => match.cycle === rc.cycle)) {
     addRow(body, [
       [match.playoff ? `${match.round} (playoff)` : match.round],
       [match.opponent && link(match.opponent.name, `#${match.opponent.slug}`)],
       [match.opponent_rating && rating(match.opponent_rating.Global), "num"],
-      [match.result], [match.reconstructed ? "Reconstructed" : match.games],
+      [outcome(match)],
       [match.change ? signed(match.change.Global) : "", "num"],
+      [match.rating_after ? rating(match.rating_after.Global) : "", "num"],
     ]);
   }
   const row = document.createElement("tr");
@@ -150,6 +165,39 @@ function rounds(rc) {
   cell.colSpan = 10;
   cell.append(table);
   return row;
+}
+
+function againstField() {
+  // The Player's Rating after each RC, over the Ratings of that RC's typical Player, its top 10% and its highest.
+  const cycles = allRcs.map((rc) => rc.cycle);
+  const reference = (key, dash, colour, says) => ({
+    x: cycles, y: allRcs.map((rc) => rc.field_rating[key]), mode: "lines", line: { color: colour, width: 1.5, dash },
+    hovertemplate: `RC Cycle %{x}: ${says} stood at %{y:.0f}<extra></extra>`,
+  });
+  const after = Object.fromEntries(card.ratings.Global.after_rc.map((point) => [point.cycle, point.rating]));
+  const last = allRcs.at(-1).field_rating;
+  // The axis tops out at the highest Rating any RC's field reached, so every Player is drawn to the same scale.
+  const lowest = Math.min(...allRcs.map((rc) => rc.field_rating.median), ...Object.values(after));
+  const highest = Math.max(...allRcs.map((rc) => rc.field_rating.highest));
+  Plotly.react("against-field", [
+    reference("highest", "solid", "#ccc", "the highest-rated Player"),
+    reference("top_10", "dash", "#999", "a top 10% Player"),
+    reference("median", "dot", "#bbb", "the typical Player"),
+    {
+      x: card.rcs.map((rc) => rc.cycle), y: card.rcs.map((rc) => after[rc.cycle]), mode: "lines+markers+text",
+      text: card.rcs.map((rc) => rc.finish ?? ""), textposition: "top center", textfont: { size: 11, color: "#555" },
+      line: { color: "#1c5cab", width: 2 },
+      marker: { size: 10, color: card.rcs.map((rc) => (rc.top_8 ? "#d9a520" : "#1c5cab")), line: { color: "#fff", width: 1 } },
+      customdata: card.rcs.map((rc) => `${rc.format}, ${rc.finish ?? "no Finish"} of ${rc.field_size}`),
+      hovertemplate: "RC Cycle %{x}, %{customdata}<br>Rating after: %{y:.0f}<extra></extra>",
+    },
+  ], {
+    height: 360, margin: { t: 16, r: 130, l: 56, b: 40 }, showlegend: false,
+    xaxis: { title: { text: "RC Cycle" }, tickvals: cycles }, yaxis: { title: { text: "Rating" }, range: [lowest - 25, highest + 10] },
+    annotations: [["highest", "Highest in the field", "#aaa"], ["top_10", "Top 10% of the field", "#777"], ["median", "Typical Player", "#999"]].map(([key, label, colour]) => ({
+      x: cycles.at(-1), y: last[key], xanchor: "left", xshift: 6, showarrow: false, text: label, font: { size: 11, color: colour },
+    })),
+  }, { displayModeBar: false, responsive: true });
 }
 
 window.addEventListener("hashchange", show);

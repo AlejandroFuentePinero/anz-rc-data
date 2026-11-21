@@ -10,6 +10,7 @@
    "date": "2024-05-25",
    "format": "Standard",
    "finish": "110th",
+   "top_8": false,
    "field_size": 168,
    "finish_share": 65.5,
    "record": "2-4-0",
@@ -48,6 +49,10 @@
    "change": {
     "Global": -18.02,
     "Standard": -18.66
+   },
+   "rating_after": {
+    "Global": 1481.98,
+    "Standard": 1481.34
    }
   },
   {
@@ -68,6 +73,10 @@
    "change": {
     "Global": 21.66,
     "Standard": 17.99
+   },
+   "rating_after": {
+    "Global": 1503.63,
+    "Standard": 1499.34
    }
   },
   {
@@ -88,6 +97,10 @@
    "change": {
     "Global": -18.05,
     "Standard": -17.98
+   },
+   "rating_after": {
+    "Global": 1485.59,
+    "Standard": 1481.36
    }
   },
   {
@@ -108,6 +121,10 @@
    "change": {
     "Global": 20.01,
     "Standard": 18.0
+   },
+   "rating_after": {
+    "Global": 1505.59,
+    "Standard": 1499.36
    }
   },
   {
@@ -128,6 +145,10 @@
    "change": {
     "Global": -18.98,
     "Standard": -18.9
+   },
+   "rating_after": {
+    "Global": 1486.61,
+    "Standard": 1480.46
    }
   },
   {
@@ -148,6 +169,10 @@
    "change": {
     "Global": -17.14,
     "Standard": -17.69
+   },
+   "rating_after": {
+    "Global": 1469.47,
+    "Standard": 1462.77
    }
   }
  ],
@@ -183,9 +208,9 @@
    },
    "rcs": 1,
    "top_8s": 0,
-   "titles": 0,
+   "finals": 0,
    "best_finish": "110th",
-   "typical_finish": 65.5,
+   "typical_finish_above": 34.5,
    "rank": null
   },
   "Standard": {
@@ -196,9 +221,9 @@
    },
    "rcs": 1,
    "top_8s": 0,
-   "titles": 0,
+   "finals": 0,
    "best_finish": "110th",
-   "typical_finish": 65.5,
+   "typical_finish_above": 34.5,
    "rank": null
   }
  }

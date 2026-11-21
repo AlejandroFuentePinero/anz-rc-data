@@ -10,6 +10,7 @@
    "date": "2022-11-25",
    "format": "Pioneer",
    "finish": "Top 8",
+   "top_8": true,
    "field_size": 152,
    "finish_share": 4.3,
    "record": "6-2-1",
@@ -33,6 +34,7 @@
    "date": "2023-03-03",
    "format": "Standard",
    "finish": "49th",
+   "top_8": false,
    "field_size": 132,
    "finish_share": 37.1,
    "record": "4-4-0",
@@ -56,6 +58,7 @@
    "date": "2023-06-24",
    "format": "Pioneer",
    "finish": "34th",
+   "top_8": false,
    "field_size": 180,
    "finish_share": 18.9,
    "record": "5-3-0",
@@ -79,6 +82,7 @@
    "date": "2023-10-27",
    "format": "Pioneer",
    "finish": "56th",
+   "top_8": false,
    "field_size": 156,
    "finish_share": 35.9,
    "record": "4-4-0",
@@ -102,6 +106,7 @@
    "date": "2024-11-08",
    "format": "Pioneer",
    "finish": "19th",
+   "top_8": false,
    "field_size": 221,
    "finish_share": 8.6,
    "record": "6-2-0",
@@ -140,6 +145,10 @@
    "change": {
     "Global": -18.0,
     "Pioneer": -18.0
+   },
+   "rating_after": {
+    "Global": 1482.0,
+    "Pioneer": 1482.0
    }
   },
   {
@@ -160,6 +169,10 @@
    "change": {
     "Global": 18.0,
     "Pioneer": 18.0
+   },
+   "rating_after": {
+    "Global": 1500.0,
+    "Pioneer": 1500.0
    }
   },
   {
@@ -180,6 +193,10 @@
    "change": {
     "Global": 18.0,
     "Pioneer": 18.0
+   },
+   "rating_after": {
+    "Global": 1518.0,
+    "Pioneer": 1518.0
    }
   },
   {
@@ -200,6 +217,10 @@
    "change": {
     "Global": 18.0,
     "Pioneer": 18.0
+   },
+   "rating_after": {
+    "Global": 1536.0,
+    "Pioneer": 1536.0
    }
   },
   {
@@ -220,6 +241,10 @@
    "change": {
     "Global": 18.0,
     "Pioneer": 18.0
+   },
+   "rating_after": {
+    "Global": 1554.0,
+    "Pioneer": 1554.0
    }
   },
   {
@@ -240,6 +265,10 @@
    "change": {
     "Global": 18.0,
     "Pioneer": 18.0
+   },
+   "rating_after": {
+    "Global": 1572.0,
+    "Pioneer": 1572.0
    }
   },
   {
@@ -260,6 +289,10 @@
    "change": {
     "Global": 18.0,
     "Pioneer": 18.0
+   },
+   "rating_after": {
+    "Global": 1590.0,
+    "Pioneer": 1590.0
    }
   },
   {
@@ -277,7 +310,8 @@
     "Global": 1590.0,
     "Pioneer": 1590.0
    },
-   "change": null
+   "change": null,
+   "rating_after": null
   },
   {
    "cycle": 1,
@@ -297,6 +331,10 @@
    "change": {
     "Global": -17.68,
     "Pioneer": -17.68
+   },
+   "rating_after": {
+    "Global": 1572.32,
+    "Pioneer": 1572.32
    }
   },
   {
@@ -317,6 +355,10 @@
    "change": {
     "Global": 16.68,
     "Standard": 18.0
+   },
+   "rating_after": {
+    "Global": 1589.01,
+    "Standard": 1518.0
    }
   },
   {
@@ -337,6 +379,10 @@
    "change": {
     "Global": -17.99,
     "Standard": -18.0
+   },
+   "rating_after": {
+    "Global": 1571.01,
+    "Standard": 1500.0
    }
   },
   {
@@ -357,6 +403,10 @@
    "change": {
     "Global": 16.69,
     "Standard": 18.0
+   },
+   "rating_after": {
+    "Global": 1587.71,
+    "Standard": 1518.0
    }
   },
   {
@@ -377,6 +427,10 @@
    "change": {
     "Global": 16.12,
     "Standard": 18.0
+   },
+   "rating_after": {
+    "Global": 1603.83,
+    "Standard": 1536.0
    }
   },
   {
@@ -397,6 +451,10 @@
    "change": {
     "Global": 18.32,
     "Standard": 18.33
+   },
+   "rating_after": {
+    "Global": 1622.15,
+    "Standard": 1554.33
    }
   },
   {
@@ -417,6 +475,10 @@
    "change": {
     "Global": -19.2,
     "Standard": -18.01
+   },
+   "rating_after": {
+    "Global": 1602.96,
+    "Standard": 1536.32
    }
   },
   {
@@ -437,6 +499,10 @@
    "change": {
     "Global": -19.77,
     "Standard": -18.01
+   },
+   "rating_after": {
+    "Global": 1583.19,
+    "Standard": 1518.32
    }
   },
   {
@@ -457,6 +523,10 @@
    "change": {
     "Global": -18.59,
     "Standard": -18.01
+   },
+   "rating_after": {
+    "Global": 1564.6,
+    "Standard": 1500.31
    }
   },
   {
@@ -477,6 +547,10 @@
    "change": {
     "Global": -17.02,
     "Pioneer": -18.01
+   },
+   "rating_after": {
+    "Global": 1547.57,
+    "Pioneer": 1554.32
    }
   },
   {
@@ -497,6 +571,10 @@
    "change": {
     "Global": 17.45,
     "Pioneer": 16.68
+   },
+   "rating_after": {
+    "Global": 1565.02,
+    "Pioneer": 1571.0
    }
   },
   {
@@ -517,6 +595,10 @@
    "change": {
     "Global": 17.97,
     "Pioneer": 17.65
+   },
+   "rating_after": {
+    "Global": 1582.99,
+    "Pioneer": 1588.65
    }
   },
   {
@@ -537,6 +619,10 @@
    "change": {
     "Global": 17.49,
     "Pioneer": 16.72
+   },
+   "rating_after": {
+    "Global": 1600.48,
+    "Pioneer": 1605.38
    }
   },
   {
@@ -557,6 +643,10 @@
    "change": {
     "Global": -19.12,
     "Pioneer": -19.28
+   },
+   "rating_after": {
+    "Global": 1581.36,
+    "Pioneer": 1586.1
    }
   },
   {
@@ -577,6 +667,10 @@
    "change": {
     "Global": 17.17,
     "Pioneer": 17.08
+   },
+   "rating_after": {
+    "Global": 1598.53,
+    "Pioneer": 1603.18
    }
   },
   {
@@ -597,6 +691,10 @@
    "change": {
     "Global": -18.64,
     "Pioneer": -18.62
+   },
+   "rating_after": {
+    "Global": 1579.89,
+    "Pioneer": 1584.56
    }
   },
   {
@@ -617,6 +715,10 @@
    "change": {
     "Global": 18.28,
     "Pioneer": 17.93
+   },
+   "rating_after": {
+    "Global": 1598.16,
+    "Pioneer": 1602.49
    }
   },
   {
@@ -637,6 +739,10 @@
    "change": {
     "Global": -18.78,
     "Pioneer": -18.85
+   },
+   "rating_after": {
+    "Global": 1579.39,
+    "Pioneer": 1583.64
    }
   },
   {
@@ -657,6 +763,10 @@
    "change": {
     "Global": 15.7,
     "Pioneer": 16.16
+   },
+   "rating_after": {
+    "Global": 1595.09,
+    "Pioneer": 1599.8
    }
   },
   {
@@ -677,6 +787,10 @@
    "change": {
     "Global": 15.07,
     "Pioneer": 15.54
+   },
+   "rating_after": {
+    "Global": 1610.16,
+    "Pioneer": 1615.35
    }
   },
   {
@@ -697,6 +811,10 @@
    "change": {
     "Global": 16.34,
     "Pioneer": 16.25
+   },
+   "rating_after": {
+    "Global": 1626.5,
+    "Pioneer": 1631.6
    }
   },
   {
@@ -717,6 +835,10 @@
    "change": {
     "Global": 17.0,
     "Pioneer": 16.91
+   },
+   "rating_after": {
+    "Global": 1643.5,
+    "Pioneer": 1648.51
    }
   },
   {
@@ -737,6 +859,10 @@
    "change": {
     "Global": -18.27,
     "Pioneer": -18.44
+   },
+   "rating_after": {
+    "Global": 1625.23,
+    "Pioneer": 1630.06
    }
   },
   {
@@ -757,6 +883,10 @@
    "change": {
     "Global": -19.87,
     "Pioneer": -19.97
+   },
+   "rating_after": {
+    "Global": 1605.36,
+    "Pioneer": 1610.1
    }
   },
   {
@@ -777,6 +907,10 @@
    "change": {
     "Global": -19.37,
     "Pioneer": -20.15
+   },
+   "rating_after": {
+    "Global": 1585.99,
+    "Pioneer": 1589.94
    }
   },
   {
@@ -797,6 +931,10 @@
    "change": {
     "Global": 16.44,
     "Pioneer": 16.36
+   },
+   "rating_after": {
+    "Global": 1602.42,
+    "Pioneer": 1606.3
    }
   },
   {
@@ -817,6 +955,10 @@
    "change": {
     "Global": -18.19,
     "Pioneer": -19.0
+   },
+   "rating_after": {
+    "Global": 1584.23,
+    "Pioneer": 1587.3
    }
   },
   {
@@ -837,6 +979,10 @@
    "change": {
     "Global": 16.55,
     "Pioneer": 16.41
+   },
+   "rating_after": {
+    "Global": 1600.78,
+    "Pioneer": 1603.71
    }
   },
   {
@@ -857,6 +1003,10 @@
    "change": {
     "Global": 18.45,
     "Pioneer": 16.49
+   },
+   "rating_after": {
+    "Global": 1619.23,
+    "Pioneer": 1620.19
    }
   },
   {
@@ -877,6 +1027,10 @@
    "change": {
     "Global": -16.84,
     "Pioneer": -17.52
+   },
+   "rating_after": {
+    "Global": 1602.39,
+    "Pioneer": 1602.67
    }
   },
   {
@@ -897,6 +1051,10 @@
    "change": {
     "Global": 17.7,
     "Pioneer": 18.25
+   },
+   "rating_after": {
+    "Global": 1620.09,
+    "Pioneer": 1620.92
    }
   },
   {
@@ -917,6 +1075,10 @@
    "change": {
     "Global": 19.91,
     "Pioneer": 19.65
+   },
+   "rating_after": {
+    "Global": 1640.0,
+    "Pioneer": 1640.57
    }
   },
   {
@@ -937,6 +1099,10 @@
    "change": {
     "Global": 17.85,
     "Pioneer": 16.76
+   },
+   "rating_after": {
+    "Global": 1657.85,
+    "Pioneer": 1657.33
    }
   }
  ],
@@ -1011,9 +1177,9 @@
    },
    "rcs": 5,
    "top_8s": 1,
-   "titles": 0,
+   "finals": 0,
    "best_finish": "Top 8",
-   "typical_finish": 18.9,
+   "typical_finish_above": 81.1,
    "rank": 49
   },
   "Pioneer": {
@@ -1024,9 +1190,9 @@
    },
    "rcs": 4,
    "top_8s": 1,
-   "titles": 0,
+   "finals": 0,
    "best_finish": "Top 8",
-   "typical_finish": 13.8,
+   "typical_finish_above": 86.2,
    "rank": 11
   },
   "Standard": {
@@ -1037,9 +1203,9 @@
    },
    "rcs": 1,
    "top_8s": 0,
-   "titles": 0,
+   "finals": 0,
    "best_finish": "49th",
-   "typical_finish": 37.1,
+   "typical_finish_above": 62.9,
    "rank": null
   }
  }

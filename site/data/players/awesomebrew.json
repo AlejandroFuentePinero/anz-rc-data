@@ -10,6 +10,7 @@
    "date": "2023-10-27",
    "format": "Pioneer",
    "finish": "106th",
+   "top_8": false,
    "field_size": 156,
    "finish_share": 67.9,
    "record": "2-3-0",
@@ -33,6 +34,7 @@
    "date": "2024-11-08",
    "format": "Pioneer",
    "finish": "181st",
+   "top_8": false,
    "field_size": 221,
    "finish_share": 81.9,
    "record": "1-2-0",
@@ -71,6 +73,10 @@
    "change": {
     "Global": 21.01,
     "Pioneer": 18.68
+   },
+   "rating_after": {
+    "Global": 1521.01,
+    "Pioneer": 1518.68
    }
   },
   {
@@ -91,6 +97,10 @@
    "change": {
     "Global": 17.97,
     "Pioneer": 18.01
+   },
+   "rating_after": {
+    "Global": 1538.98,
+    "Pioneer": 1536.69
    }
   },
   {
@@ -111,6 +121,10 @@
    "change": {
     "Global": -18.0,
     "Pioneer": -17.96
+   },
+   "rating_after": {
+    "Global": 1520.97,
+    "Pioneer": 1518.73
    }
   },
   {
@@ -131,6 +145,10 @@
    "change": {
     "Global": -17.39,
     "Pioneer": -17.35
+   },
+   "rating_after": {
+    "Global": 1503.58,
+    "Pioneer": 1501.38
    }
   },
   {
@@ -151,6 +169,10 @@
    "change": {
     "Global": -18.04,
     "Pioneer": -18.01
+   },
+   "rating_after": {
+    "Global": 1485.54,
+    "Pioneer": 1483.36
    }
   },
   {
@@ -171,6 +193,10 @@
    "change": {
     "Global": -16.36,
     "Pioneer": -17.07
+   },
+   "rating_after": {
+    "Global": 1469.18,
+    "Pioneer": 1466.29
    }
   },
   {
@@ -191,6 +217,10 @@
    "change": {
     "Global": -17.76,
     "Pioneer": -17.72
+   },
+   "rating_after": {
+    "Global": 1451.43,
+    "Pioneer": 1448.57
    }
   },
   {
@@ -211,6 +241,10 @@
    "change": {
     "Global": 18.27,
     "Pioneer": 18.32
+   },
+   "rating_after": {
+    "Global": 1469.7,
+    "Pioneer": 1466.88
    }
   }
  ],
@@ -254,9 +288,9 @@
    },
    "rcs": 2,
    "top_8s": 0,
-   "titles": 0,
+   "finals": 0,
    "best_finish": "106th",
-   "typical_finish": 74.9,
+   "typical_finish_above": 25.1,
    "rank": null
   },
   "Pioneer": {
@@ -267,9 +301,9 @@
    },
    "rcs": 2,
    "top_8s": 0,
-   "titles": 0,
+   "finals": 0,
    "best_finish": "106th",
-   "typical_finish": 74.9,
+   "typical_finish_above": 25.1,
    "rank": null
   }
  }

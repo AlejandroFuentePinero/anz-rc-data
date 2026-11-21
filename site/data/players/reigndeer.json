@@ -10,6 +10,7 @@
    "date": "2023-06-24",
    "format": "Pioneer",
    "finish": "13th",
+   "top_8": false,
    "field_size": 180,
    "finish_share": 7.2,
    "record": "6-2-0",
@@ -48,6 +49,10 @@
    "change": {
     "Global": 18.0,
     "Pioneer": 18.0
+   },
+   "rating_after": {
+    "Global": 1518.0,
+    "Pioneer": 1518.0
    }
   },
   {
@@ -68,6 +73,10 @@
    "change": {
     "Global": 18.33,
     "Pioneer": 18.33
+   },
+   "rating_after": {
+    "Global": 1536.33,
+    "Pioneer": 1536.33
    }
   },
   {
@@ -88,6 +97,10 @@
    "change": {
     "Global": 18.08,
     "Pioneer": 17.68
+   },
+   "rating_after": {
+    "Global": 1554.41,
+    "Pioneer": 1554.01
    }
   },
   {
@@ -108,6 +121,10 @@
    "change": {
     "Global": 18.69,
     "Pioneer": 18.65
+   },
+   "rating_after": {
+    "Global": 1573.1,
+    "Pioneer": 1572.66
    }
   },
   {
@@ -128,6 +145,10 @@
    "change": {
     "Global": 18.56,
     "Pioneer": 18.57
+   },
+   "rating_after": {
+    "Global": 1591.66,
+    "Pioneer": 1591.23
    }
   },
   {
@@ -148,6 +169,10 @@
    "change": {
     "Global": -18.05,
     "Pioneer": -18.03
+   },
+   "rating_after": {
+    "Global": 1573.61,
+    "Pioneer": 1573.2
    }
   },
   {
@@ -168,6 +193,10 @@
    "change": {
     "Global": -16.91,
     "Pioneer": -17.43
+   },
+   "rating_after": {
+    "Global": 1556.7,
+    "Pioneer": 1555.76
    }
   },
   {
@@ -188,6 +217,10 @@
    "change": {
     "Global": 17.97,
     "Pioneer": 17.99
+   },
+   "rating_after": {
+    "Global": 1574.68,
+    "Pioneer": 1573.75
    }
   }
  ],
@@ -223,9 +256,9 @@
    },
    "rcs": 1,
    "top_8s": 0,
-   "titles": 0,
+   "finals": 0,
    "best_finish": "13th",
-   "typical_finish": 7.2,
+   "typical_finish_above": 92.8,
    "rank": null
   },
   "Pioneer": {
@@ -236,9 +269,9 @@
    },
    "rcs": 1,
    "top_8s": 0,
-   "titles": 0,
+   "finals": 0,
    "best_finish": "13th",
-   "typical_finish": 7.2,
+   "typical_finish_above": 92.8,
    "rank": null
   }
  }

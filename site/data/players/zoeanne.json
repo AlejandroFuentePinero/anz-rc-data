@@ -10,6 +10,7 @@
    "date": "2026-10-23",
    "format": "Modern",
    "finish": "65th",
+   "top_8": false,
    "field_size": 233,
    "finish_share": 27.9,
    "record": "5-4-0",
@@ -48,6 +49,10 @@
    "change": {
     "Global": -15.57,
     "Modern": -16.93
+   },
+   "rating_after": {
+    "Global": 1484.43,
+    "Modern": 1483.07
    }
   },
   {
@@ -68,6 +73,10 @@
    "change": {
     "Global": 17.97,
     "Modern": 17.98
+   },
+   "rating_after": {
+    "Global": 1502.4,
+    "Modern": 1501.05
    }
   },
   {
@@ -88,6 +97,10 @@
    "change": {
     "Global": 19.46,
     "Modern": 18.96
+   },
+   "rating_after": {
+    "Global": 1521.85,
+    "Modern": 1520.01
    }
   },
   {
@@ -108,6 +121,10 @@
    "change": {
     "Global": 17.89,
     "Modern": 17.92
+   },
+   "rating_after": {
+    "Global": 1539.75,
+    "Modern": 1537.93
    }
   },
   {
@@ -128,6 +145,10 @@
    "change": {
     "Global": -19.74,
     "Modern": -19.74
+   },
+   "rating_after": {
+    "Global": 1520.01,
+    "Modern": 1518.19
    }
   },
   {
@@ -148,6 +169,10 @@
    "change": {
     "Global": 19.07,
     "Modern": 18.09
+   },
+   "rating_after": {
+    "Global": 1539.07,
+    "Modern": 1536.28
    }
   },
   {
@@ -168,6 +193,10 @@
    "change": {
     "Global": -17.31,
     "Modern": -16.73
+   },
+   "rating_after": {
+    "Global": 1521.76,
+    "Modern": 1519.55
    }
   },
   {
@@ -188,6 +217,10 @@
    "change": {
     "Global": -18.53,
     "Modern": -18.0
+   },
+   "rating_after": {
+    "Global": 1503.23,
+    "Modern": 1501.55
    }
   },
   {
@@ -208,6 +241,10 @@
    "change": {
     "Global": 18.68,
     "Modern": 19.84
+   },
+   "rating_after": {
+    "Global": 1521.91,
+    "Modern": 1521.39
    }
   }
  ],
@@ -243,9 +280,9 @@
    },
    "rcs": 1,
    "top_8s": 0,
-   "titles": 0,
+   "finals": 0,
    "best_finish": "65th",
-   "typical_finish": 27.9,
+   "typical_finish_above": 72.1,
    "rank": null
   },
   "Modern": {
@@ -256,9 +293,9 @@
    },
    "rcs": 1,
    "top_8s": 0,
-   "titles": 0,
+   "finals": 0,
    "best_finish": "65th",
-   "typical_finish": 27.9,
+   "typical_finish_above": 72.1,
    "rank": null
   }
  }

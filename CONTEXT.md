@@ -69,8 +69,12 @@ _Avoid_: Seat, registration
 First place at an RC. "Win" alone always means a Match win.
 _Avoid_: Win, trophy, first place
 
+**Final**:
+Reaching an RC's final: a Title or a Finalist Finish. The Player card counts Finals rather than Titles.
+_Avoid_: Final appearance, top 2
+
 **Typical Finish**:
-A Player's median Finish as a share of the Field Size ("top 22%"), the consistency figure beside Best Finish.
+A Player's median Finish as a share of the Field Size, read as the share of the field it finishes above ("above 78% of the field"), the consistency figure beside Best Finish. The Top 4 and Top 8 tiers count at ranks 3.5 and 6.5.
 _Avoid_: Average finish, mean placement
 
 **Head-to-head**:

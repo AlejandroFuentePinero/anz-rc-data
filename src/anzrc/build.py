@@ -203,15 +203,17 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
                     opponent_rating = opponent and {
                         view: round(views.get(source, {}).get(opponent["slug"], ratings.START), 2) for view, source in view_sources
                     }
-                    # A Player plays once a round and Ratings move at its end, so this is what the Match moves.
-                    change = result in SCORE and {
-                        view: round(ratings.move(
-                            views.get(source, {}).get(card(me)["slug"], ratings.START),
-                            views.get(source, {}).get(opponent["slug"], ratings.START),
-                            SCORE[result],
-                        ), 2)
-                        for view, source in view_sources
-                    } or None
+                    # A Player plays once a round and Ratings move at its end, so this is what the Match moves, and
+                    # the Player's Rating after it.
+                    change, rating_after = None, None
+                    if result in SCORE:
+                        before = {view: views.get(source, {}).get(card(me)["slug"], ratings.START) for view, source in view_sources}
+                        moved = {
+                            view: ratings.move(before[view], views.get(source, {}).get(opponent["slug"], ratings.START), SCORE[result])
+                            for view, source in view_sources
+                        }
+                        change = {view: round(moved[view], 2) for view in moved}
+                        rating_after = {view: round(before[view] + moved[view], 2) for view in moved}
                     card(me)["matches"].append(
                         {
                             "cycle": rc["cycle"],
@@ -223,6 +225,7 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
                             "reconstructed": match.get("Reconstructed", False),
                             "opponent_rating": opponent_rating,
                             "change": change,
+                            "rating_after": rating_after,
                         }
                     )
                     if result in RECORD:
@@ -232,6 +235,13 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
             for view in ("Global", rc["format"]):
                 ratings.play_round(views.setdefault(view, {}), rated)
         history[-1]["players"] = list(dict.fromkeys(players[username]["slug"] for username in rc_players))
+        # The field's Global Ratings after the RC: its typical Player, the Rating a tenth of it reached, and its highest.
+        field_ratings = [views["Global"].get(slug, ratings.START) for slug in history[-1]["players"]]
+        rc_rows[-1]["field_rating"] = {
+            "median": round(statistics.median(field_ratings), 2),
+            "top_10": round(statistics.quantiles(field_ratings, n=10, method="inclusive")[-1], 2),
+            "highest": round(max(field_ratings), 2),
+        }
         for view in ("Global", rc["format"]):
             for slug in history[-1]["players"]:
                 rating = views[view].get(slug, ratings.START)
@@ -246,6 +256,7 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
                     "date": rc["start_date"],
                     "format": rc["format"],
                     "finish": _finish(rc_player["rank"]),
+                    "top_8": _finish(rc_player["rank"]) in TOP_8,
                     "field_size": len(standings),
                     "finish_share": _finish_share(rc_player["rank"], len(standings)),
                     "record": "-".join(map(str, records.get(username, [0, 0, 0]))),
@@ -299,9 +310,10 @@ def _summary(player: dict, view: str) -> dict:
         "win_rate": _win_rate(wins, losses),
         "rcs": len(rcs_),
         "top_8s": sum(rc["finish"] in TOP_8 for rc in rcs_),
-        "titles": sum(rc["finish"] == "Title" for rc in rcs_),
+        "finals": sum(rc["finish"] in TIERS[:2] for rc in rcs_),
         "best_finish": best and best["finish"],
-        "typical_finish": round(statistics.median(rc["finish_share"] for rc in finished), 1) if finished else None,
+        # Typical Finish read as the share of the field it finishes above.
+        "typical_finish_above": round(100 - statistics.median(rc["finish_share"] for rc in finished), 1) if finished else None,
     }
 
 

@@ -137,6 +137,7 @@ def test_a_bare_card_shows_the_rc_history_and_the_match_history(tmp_path):
             "date": "2023-01-01",
             "format": "Pioneer",
             "finish": "Title",
+            "top_8": True,
             "field_size": 4,
             "finish_share": 25.0,
             "record": "1-0-0",
@@ -150,7 +151,7 @@ def test_a_bare_card_shows_the_rc_history_and_the_match_history(tmp_path):
     assert card["matches"] == [
         {"cycle": 1, "round": "Round 1", "playoff": False, "opponent": {"slug": "ben", "name": "Ben Hall"}, "result": "Win",
          "games": "2-1-0", "reconstructed": False, "opponent_rating": {"Global": 1500.0, "Pioneer": 1500.0},
-         "change": {"Global": 18.0, "Pioneer": 18.0}}
+         "change": {"Global": 18.0, "Pioneer": 18.0}, "rating_after": {"Global": 1518.0, "Pioneer": 1518.0}}
     ]
     assert bundle.card("ben")["matches"][0]["result"] == "Loss"
     assert bundle.card("ben")["matches"][0]["games"] == "1-2-0"
@@ -188,7 +189,9 @@ def test_the_rc_table_gives_each_rc_its_champion_and_finalist_by_rank_as_players
         ],
     )
 
-    assert bundle.rcs()[1] == {
+    row = bundle.rcs()[1]
+    del row["field_rating"]  # tested on its own
+    assert row == {
         "cycle": 2, "date": "2023-02-01", "city": None, "format": "Modern", "field_size": 4,
         "champion": {"slug": "p3", "name": "Player 3"}, "finalist": {"slug": "ana", "name": "Ana Lopez"},
     }
@@ -310,9 +313,10 @@ def test_a_final_melee_lost_is_rebuilt_as_rank_1_beating_rank_2_with_no_game_sco
     bundle = run_build(tmp_path, [(1, "Modern", rounds, final)])
 
     champion, finalist = bundle.card("p4"), bundle.card("p3")
-    for card in (champion, finalist):  # the opponent's Rating and the Rating change are tested on their own
+    for card in (champion, finalist):  # the Ratings around the Match are tested on their own
         del card["matches"][-1]["opponent_rating"]
         del card["matches"][-1]["change"]
+        del card["matches"][-1]["rating_after"]
     assert champion["matches"][-1] == {
         "cycle": 1, "round": "Final", "playoff": True, "opponent": {"slug": "p3", "name": "Player 3"}, "result": "Win", "games": None, "reconstructed": True
     }
@@ -378,6 +382,7 @@ def test_finishes_show_title_finalist_and_top_4_and_top_8_tiers_never_melees_ord
         ("9th", 10),
         ("10th", 10),
     ]
+    assert [bundle.card(f"p{n}")["rcs"][0]["top_8"] for n in range(1, 11)] == [True] * 8 + [False] * 2
 
 
 def test_a_player_missing_from_the_standings_keeps_their_matches_and_gets_no_finish(tmp_path):
@@ -392,7 +397,7 @@ def test_a_player_missing_from_the_standings_keeps_their_matches_and_gets_no_fin
     dee = bundle.card("dee")
     assert [(m["opponent"]["slug"], m["result"]) for m in dee["matches"]] == [("cal", "Loss")]
     assert dee["rcs"] == [
-        {"cycle": 1, "date": "2023-01-01", "format": "Modern", "finish": None, "field_size": 3, "finish_share": None, "record": "0-1-0",
+        {"cycle": 1, "date": "2023-01-01", "format": "Modern", "finish": None, "top_8": False, "field_size": 3, "finish_share": None, "record": "0-1-0",
          "win_rate": {"rate": 0.0, "matches": 1}, "rating_start": {"Global": 1500.0, "Modern": 1500.0},
          "rating_end": {"Global": 1482.0, "Modern": 1482.0}, "deck": "Boros Energy", "decklist": "https://melee.gg/Decklist/View/d-dee"}
     ]
@@ -717,22 +722,23 @@ def test_the_summary_gives_each_view_its_record_win_rate_and_finishes(tmp_path):
     bundle = run_build(tmp_path, three_rcs_for_ana())
 
     summary = bundle.card("ana")["summary"]
-    figures = ("record", "win_rate", "rcs", "top_8s", "titles", "best_finish", "typical_finish")
+    figures = ("record", "win_rate", "rcs", "top_8s", "finals", "best_finish", "typical_finish_above")
     # Global: wins over Ben and Cal, the loss to Ben, a played draw and an Intentional Draw; the bye is in no record.
-    # Typical Finish: the median of 1/10, 3.5/8 (the Top 4 tier) and 12/20.
+    # Typical Finish: the median of 1/10, 3.5/8 (the Top 4 tier) and 12/20 is 43.8%, so above 56.2% of the field.
     assert {key: summary["Global"][key] for key in figures} == {
-        "record": "2-1-2", "win_rate": {"rate": 66.7, "matches": 3}, "rcs": 3, "top_8s": 2, "titles": 1,
-        "best_finish": "Title", "typical_finish": 43.8,
+        "record": "2-1-2", "win_rate": {"rate": 66.7, "matches": 3}, "rcs": 3, "top_8s": 2, "finals": 1,
+        "best_finish": "Title", "typical_finish_above": 56.2,
     }
     assert {key: summary["Pioneer"][key] for key in figures} == {
-        "record": "2-0-1", "win_rate": {"rate": 100.0, "matches": 2}, "rcs": 2, "top_8s": 1, "titles": 1,
-        "best_finish": "Title", "typical_finish": 35.0,  # median of 10% and 60%
+        "record": "2-0-1", "win_rate": {"rate": 100.0, "matches": 2}, "rcs": 2, "top_8s": 1, "finals": 1,
+        "best_finish": "Title", "typical_finish_above": 65.0,  # median of 10% and 60%
     }
     assert {key: summary["Modern"][key] for key in figures} == {
-        "record": "0-1-1", "win_rate": {"rate": 0.0, "matches": 1}, "rcs": 1, "top_8s": 1, "titles": 0,
-        "best_finish": "Top 4", "typical_finish": 43.8,
+        "record": "0-1-1", "win_rate": {"rate": 0.0, "matches": 1}, "rcs": 1, "top_8s": 1, "finals": 0,
+        "best_finish": "Top 4", "typical_finish_above": 56.2,
     }
     assert "Standard" not in summary
+    assert bundle.card("ben")["summary"]["Global"]["finals"] == 2  # Finalist in Cycle 1, Title in Cycle 2
 
 
 def test_best_finish_puts_any_top_8_first_then_the_best_share_of_the_field(tmp_path):
@@ -750,7 +756,7 @@ def test_best_finish_puts_any_top_8_first_then_the_best_share_of_the_field(tmp_p
     assert bundle.card("ben")["summary"]["Pioneer"]["best_finish"] == "12th"
     assert bundle.card("cal")["summary"]["Global"]["best_finish"] == "13th"  # 13th of 20 (65%) beats 10th of 10 (100%)
     dee = bundle.card("dee")["summary"]["Global"]
-    assert (dee["best_finish"], dee["typical_finish"], dee["rcs"]) == (None, None, 1)
+    assert (dee["best_finish"], dee["typical_finish_above"], dee["rcs"]) == (None, None, 1)
 
 
 def test_the_rank_counts_only_players_eligible_in_the_view(tmp_path):
@@ -813,6 +819,13 @@ def test_each_rc_gives_its_rating_at_start_and_end_in_global_and_its_format(tmp_
         {"Global": -18.0, "Pioneer": -18.0},
         {"Global": 17.67, "Modern": 17.34},
     ]
+    assert [m["rating_after"] for m in ana["matches"]] == [
+        {"Global": 1518.0, "Modern": 1518.0},
+        None,
+        None,
+        {"Global": 1500.0, "Pioneer": 1482.0},
+        {"Global": 1517.67, "Modern": 1535.34},
+    ]
     assert [rc["win_rate"] for rc in ana["rcs"]] == [{"rate": 100.0, "matches": 1}, {"rate": 0.0, "matches": 1}, {"rate": 100.0, "matches": 1}]
 
 
@@ -829,3 +842,12 @@ def test_each_rcs_start_plus_its_changes_is_its_end_and_the_next_rc_starts_there
                 assert rc["rating_start"][view] == last_end.get(view, 1500.0)
                 last_end[view] = rc["rating_end"][view]
             assert rc["rating_end"]["Global"] == card["ratings"]["Global"]["after_rc"][card["rcs"].index(rc)]["rating"]
+
+
+def test_each_rc_gives_the_ratings_of_its_typical_player_its_top_10_percent_and_its_highest(tmp_path):
+    # After Cycle 1: Ana 1518 (beat Ben), Ben 1482, Cal and Dee 1500 (a played draw). Sorted 1482, 1500, 1500, 1518:
+    # the median is 1500, the 90th percentile sits 0.9 x 3 = 2.7 places up, 1500 + 0.7 x 18 = 1512.6, and Ana is highest.
+    rounds = [(SWISS, [played(ANA, BEN, 2, 0), played(CAL, DEE, 1, 1)])]
+    bundle = run_build(tmp_path, [(1, "Modern", rounds, field(1, 4, {1: ANA, 2: CAL, 3: DEE, 4: BEN}))])
+
+    assert bundle.rcs()[0]["field_rating"] == {"median": 1500.0, "top_10": 1512.6, "highest": 1518.0}

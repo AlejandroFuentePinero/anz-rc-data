@@ -10,6 +10,7 @@
    "date": "2025-03-07",
    "format": "Modern",
    "finish": "122nd",
+   "top_8": false,
    "field_size": 154,
    "finish_share": 79.2,
    "record": "0-3-0",
@@ -48,6 +49,10 @@
    "change": {
     "Global": -18.0,
     "Modern": -18.0
+   },
+   "rating_after": {
+    "Global": 1482.0,
+    "Modern": 1482.0
    }
   },
   {
@@ -68,6 +73,10 @@
    "change": {
     "Global": -14.67,
     "Modern": -17.03
+   },
+   "rating_after": {
+    "Global": 1467.33,
+    "Modern": 1464.97
    }
   },
   {
@@ -79,7 +88,8 @@
    "games": null,
    "reconstructed": false,
    "opponent_rating": null,
-   "change": null
+   "change": null,
+   "rating_after": null
   },
   {
    "cycle": 8,
@@ -99,6 +109,10 @@
    "change": {
     "Global": -16.94,
     "Modern": -16.78
+   },
+   "rating_after": {
+    "Global": 1450.39,
+    "Modern": 1448.19
    }
   }
  ],
@@ -134,9 +148,9 @@
    },
    "rcs": 1,
    "top_8s": 0,
-   "titles": 0,
+   "finals": 0,
    "best_finish": "122nd",
-   "typical_finish": 79.2,
+   "typical_finish_above": 20.8,
    "rank": null
   },
   "Modern": {
@@ -147,9 +161,9 @@
    },
    "rcs": 1,
    "top_8s": 0,
-   "titles": 0,
+   "finals": 0,
    "best_finish": "122nd",
-   "typical_finish": 79.2,
+   "typical_finish_above": 20.8,
    "rank": null
   }
  }

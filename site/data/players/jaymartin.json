@@ -10,6 +10,7 @@
    "date": "2024-11-08",
    "format": "Pioneer",
    "finish": "130th",
+   "top_8": false,
    "field_size": 221,
    "finish_share": 58.8,
    "record": "2-5-0",
@@ -48,6 +49,10 @@
    "change": {
     "Global": -18.32,
     "Pioneer": -18.0
+   },
+   "rating_after": {
+    "Global": 1481.68,
+    "Pioneer": 1482.0
    }
   },
   {
@@ -68,6 +73,10 @@
    "change": {
     "Global": -15.97,
     "Pioneer": -17.95
+   },
+   "rating_after": {
+    "Global": 1465.71,
+    "Pioneer": 1464.05
    }
   },
   {
@@ -88,6 +97,10 @@
    "change": {
     "Global": -15.96,
     "Pioneer": -17.38
+   },
+   "rating_after": {
+    "Global": 1449.75,
+    "Pioneer": 1446.67
    }
   },
   {
@@ -108,6 +121,10 @@
    "change": {
     "Global": 18.04,
     "Pioneer": 18.04
+   },
+   "rating_after": {
+    "Global": 1467.79,
+    "Pioneer": 1464.71
    }
   },
   {
@@ -128,6 +145,10 @@
    "change": {
     "Global": -18.1,
     "Pioneer": -18.04
+   },
+   "rating_after": {
+    "Global": 1449.69,
+    "Pioneer": 1446.67
    }
   },
   {
@@ -139,7 +160,8 @@
    "games": null,
    "reconstructed": false,
    "opponent_rating": null,
-   "change": null
+   "change": null,
+   "rating_after": null
   },
   {
    "cycle": 7,
@@ -159,6 +181,10 @@
    "change": {
     "Global": 16.82,
     "Pioneer": 17.66
+   },
+   "rating_after": {
+    "Global": 1466.51,
+    "Pioneer": 1464.33
    }
   },
   {
@@ -179,6 +205,10 @@
    "change": {
     "Global": -17.64,
     "Pioneer": -17.62
+   },
+   "rating_after": {
+    "Global": 1448.87,
+    "Pioneer": 1446.71
    }
   }
  ],
@@ -214,9 +244,9 @@
    },
    "rcs": 1,
    "top_8s": 0,
-   "titles": 0,
+   "finals": 0,
    "best_finish": "130th",
-   "typical_finish": 58.8,
+   "typical_finish_above": 41.2,
    "rank": null
   },
   "Pioneer": {
@@ -227,9 +257,9 @@
    },
    "rcs": 1,
    "top_8s": 0,
-   "titles": 0,
+   "finals": 0,
    "best_finish": "130th",
-   "typical_finish": 58.8,
+   "typical_finish_above": 41.2,
    "rank": null
   }
  }

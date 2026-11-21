@@ -10,6 +10,7 @@
    "date": "2023-06-24",
    "format": "Pioneer",
    "finish": "146th",
+   "top_8": false,
    "field_size": 180,
    "finish_share": 81.1,
    "record": "1-3-0",
@@ -33,6 +34,7 @@
    "date": "2026-10-23",
    "format": "Modern",
    "finish": "177th",
+   "top_8": false,
    "field_size": 233,
    "finish_share": 76.0,
    "record": "1-3-1",
@@ -71,6 +73,10 @@
    "change": {
     "Global": 18.66,
     "Pioneer": 18.0
+   },
+   "rating_after": {
+    "Global": 1518.66,
+    "Pioneer": 1518.0
    }
   },
   {
@@ -91,6 +97,10 @@
    "change": {
     "Global": -17.03,
     "Pioneer": -17.65
+   },
+   "rating_after": {
+    "Global": 1501.63,
+    "Pioneer": 1500.35
    }
   },
   {
@@ -111,6 +121,10 @@
    "change": {
     "Global": -18.96,
     "Pioneer": -18.97
+   },
+   "rating_after": {
+    "Global": 1482.66,
+    "Pioneer": 1481.38
    }
   },
   {
@@ -131,6 +145,10 @@
    "change": {
     "Global": -17.71,
     "Pioneer": -17.99
+   },
+   "rating_after": {
+    "Global": 1464.95,
+    "Pioneer": 1463.39
    }
   },
   {
@@ -151,6 +169,10 @@
    "change": {
     "Global": 18.64,
     "Modern": 18.0
+   },
+   "rating_after": {
+    "Global": 1483.59,
+    "Modern": 1518.0
    }
   },
   {
@@ -171,6 +193,10 @@
    "change": {
     "Global": -0.58,
     "Modern": -1.25
+   },
+   "rating_after": {
+    "Global": 1483.02,
+    "Modern": 1516.75
    }
   },
   {
@@ -191,6 +217,10 @@
    "change": {
     "Global": -16.78,
     "Modern": -17.92
+   },
+   "rating_after": {
+    "Global": 1466.24,
+    "Modern": 1498.83
    }
   },
   {
@@ -211,6 +241,10 @@
    "change": {
     "Global": -19.94,
     "Modern": -18.88
+   },
+   "rating_after": {
+    "Global": 1446.3,
+    "Modern": 1479.95
    }
   },
   {
@@ -231,6 +265,10 @@
    "change": {
     "Global": -14.69,
     "Modern": -16.06
+   },
+   "rating_after": {
+    "Global": 1431.61,
+    "Modern": 1463.89
    }
   }
  ],
@@ -281,9 +319,9 @@
    },
    "rcs": 2,
    "top_8s": 0,
-   "titles": 0,
+   "finals": 0,
    "best_finish": "177th",
-   "typical_finish": 78.5,
+   "typical_finish_above": 21.5,
    "rank": null
   },
   "Pioneer": {
@@ -294,9 +332,9 @@
    },
    "rcs": 1,
    "top_8s": 0,
-   "titles": 0,
+   "finals": 0,
    "best_finish": "146th",
-   "typical_finish": 81.1,
+   "typical_finish_above": 18.9,
    "rank": null
   },
   "Modern": {
@@ -307,9 +345,9 @@
    },
    "rcs": 1,
    "top_8s": 0,
-   "titles": 0,
+   "finals": 0,
    "best_finish": "177th",
-   "typical_finish": 76.0,
+   "typical_finish_above": 24.0,
    "rank": null
   }
  }

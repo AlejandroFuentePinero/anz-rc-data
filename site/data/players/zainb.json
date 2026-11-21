@@ -10,6 +10,7 @@
    "date": "2024-03-08",
    "format": "Modern",
    "finish": "90th",
+   "top_8": false,
    "field_size": 228,
    "finish_share": 39.5,
    "record": "4-5-0",
@@ -48,6 +49,10 @@
    "change": {
     "Global": 18.0,
     "Modern": 18.0
+   },
+   "rating_after": {
+    "Global": 1518.0,
+    "Modern": 1518.0
    }
   },
   {
@@ -68,6 +73,10 @@
    "change": {
     "Global": -17.97,
     "Modern": -18.0
+   },
+   "rating_after": {
+    "Global": 1500.03,
+    "Modern": 1500.0
    }
   },
   {
@@ -88,6 +97,10 @@
    "change": {
     "Global": 17.4,
     "Modern": 18.0
+   },
+   "rating_after": {
+    "Global": 1517.43,
+    "Modern": 1518.0
    }
   },
   {
@@ -108,6 +121,10 @@
    "change": {
     "Global": -17.89,
     "Modern": -18.0
+   },
+   "rating_after": {
+    "Global": 1499.54,
+    "Modern": 1500.0
    }
   },
   {
@@ -128,6 +145,10 @@
    "change": {
     "Global": 18.08,
     "Modern": 18.0
+   },
+   "rating_after": {
+    "Global": 1517.62,
+    "Modern": 1518.0
    }
   },
   {
@@ -148,6 +169,10 @@
    "change": {
     "Global": -17.99,
     "Modern": -18.01
+   },
+   "rating_after": {
+    "Global": 1499.63,
+    "Modern": 1499.99
    }
   },
   {
@@ -168,6 +193,10 @@
    "change": {
     "Global": -18.76,
     "Modern": -18.0
+   },
+   "rating_after": {
+    "Global": 1480.87,
+    "Modern": 1481.99
    }
   },
   {
@@ -188,6 +217,10 @@
    "change": {
     "Global": 18.4,
     "Modern": 18.32
+   },
+   "rating_after": {
+    "Global": 1499.27,
+    "Modern": 1500.32
    }
   },
   {
@@ -208,6 +241,10 @@
    "change": {
     "Global": -17.4,
     "Modern": -18.01
+   },
+   "rating_after": {
+    "Global": 1481.88,
+    "Modern": 1482.31
    }
   }
  ],
@@ -243,9 +280,9 @@
    },
    "rcs": 1,
    "top_8s": 0,
-   "titles": 0,
+   "finals": 0,
    "best_finish": "90th",
-   "typical_finish": 39.5,
+   "typical_finish_above": 60.5,
    "rank": null
   },
   "Modern": {
@@ -256,9 +293,9 @@
    },
    "rcs": 1,
    "top_8s": 0,
-   "titles": 0,
+   "finals": 0,
    "best_finish": "90th",
-   "typical_finish": 39.5,
+   "typical_finish_above": 60.5,
    "rank": null
   }
  }
