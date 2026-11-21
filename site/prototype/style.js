@@ -40,7 +40,9 @@
     }
     const axis = {
       gridcolor: "#EFEEE9", linecolor: "#BDBCB6", zeroline: false, showline: true, ticks: "outside", ticklen: 4, tickcolor: "#BDBCB6",
-      tickfont: { size, color: "#3D3D3A" }, title: { font: { size, color: "#141413" } },
+      tickfont: { size, color: "#3D3D3A" }, title: { font: { size, color: "#141413" }, standoff: 12 },
+      // The margins grow to fit the tick labels and the title, so neither overlaps the other at any type size.
+      automargin: true,
     };
     let out = merge(walk(layout), {
       font: { family: FONT, size, color: "#3D3D3A" },
