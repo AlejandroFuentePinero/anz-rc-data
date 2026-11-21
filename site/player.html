@@ -233,7 +233,7 @@ function compare() {
     if (!versus) continue;
     const table = document.createElement("table");
     const header = table.createTHead().insertRow();
-    for (const name of ["RC", "Format", "Round", `${card.name}'s deck`, `${other.name}'s deck`, "Result"]) {
+    for (const name of ["RC Cycle", "Format", "Round", `${card.name}'s deck`, `${other.name}'s deck`, "Result"]) {
       header.append(Object.assign(document.createElement("th"), { textContent: name }));
     }
     const body = table.createTBody();
@@ -245,8 +245,9 @@ function compare() {
     for (const match of card.matches.filter((match) => match.opponent?.slug === other.slug)) {
       const rc = card.rcs.find((rc) => rc.cycle === match.cycle);
       addRow(body, [
-        [`RC Cycle ${[rc.cycle, card.city[rc.cycle], rc.date.slice(0, 4)].filter(Boolean).join(" ")}`], [rc.format],
-        [match.round], [deck(card, rc.cycle)], [deck(other, rc.cycle)], [outcome(match)],
+        [rc.cycle, "num"], [rc.format],
+        // A Swiss round by its number; a playoff round keeps its name (Quarterfinal).
+        [match.round.replace(/^Round /, "")], [deck(card, rc.cycle)], [deck(other, rc.cycle)], [outcome(match)],
       ]);
     }
     const scroll = document.createElement("div");
