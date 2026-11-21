@@ -30,12 +30,14 @@
 </table>
 </div>
 <!-- The cutoff is ratings.CUTOFF in the build. -->
-<p class="note">You must have played at least 3 RCs to be ranked, and 3 in a Format to be ranked in it.</p>
+<p class="note">You must have played at least 3 RCs to be ranked, and 3 in a Format to be ranked in it. <span id="ranked"></span></p>
 </section>
 </main>
 <script src="search.js"></script>
 <script>
 const VIEWS = ["Global", "Pioneer", "Standard", "Modern"];
+// PROTOTYPE: how many Players are ranked in each view, counted from the cards; the build would publish these.
+const RANKED = { Global: 301, Pioneer: 82, Standard: 109, Modern: 88 };
 const TIERS = ["Winner", "Runner-up", "Top 4", "Top 8"];
 // Best Finish in order: the Top 8 tiers, then the ordinals by rank.
 const finishOrder = (finish) => (finish == null ? Infinity : TIERS.includes(finish) ? TIERS.indexOf(finish) : 8 + parseInt(finish, 10));
@@ -70,6 +72,7 @@ function show() {
   const asked = decodeURIComponent(location.hash.slice(1));
   const view = views.includes(asked) ? asked : "Global";
   const rows = boards[view];
+  document.getElementById("ranked").textContent = `${RANKED[view]} Players are ranked in ${view === "Global" ? "All" : view}.`;
   document.title = view === "Global" ? "Leaderboard" : `${view} Leaderboard`;
 
   const formats = document.getElementById("formats");
