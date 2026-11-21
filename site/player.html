@@ -180,7 +180,7 @@ function againstField() {
   const lowest = Math.min(...allRcs.map((rc) => rc.field_rating.median), ...Object.values(after));
   const highest = Math.max(...allRcs.map((rc) => rc.field_rating.highest));
   Plotly.react("against-field", [
-    reference("highest", "solid", "#ccc", "the highest-rated Player"),
+    reference("highest", "solid", "#ccc", "the top Player in the field"),
     reference("top_10", "dash", "#999", "a top 10% Player"),
     reference("median", "dot", "#bbb", "the typical Player"),
     {
@@ -194,7 +194,7 @@ function againstField() {
   ], {
     height: 360, margin: { t: 16, r: 130, l: 56, b: 40 }, showlegend: false,
     xaxis: { title: { text: "RC Cycle" }, tickvals: cycles }, yaxis: { title: { text: "Rating" }, range: [lowest - 25, highest + 10] },
-    annotations: [["highest", "Highest in the field", "#aaa"], ["top_10", "Top 10% of the field", "#777"], ["median", "Typical Player", "#999"]].map(([key, label, colour]) => ({
+    annotations: [["highest", "Top Player in the field", "#aaa"], ["top_10", "Top 10% of the field", "#777"], ["median", "Typical Player", "#999"]].map(([key, label, colour]) => ({
       x: cycles.at(-1), y: last[key], xanchor: "left", xshift: 6, showarrow: false, text: label, font: { size: 11, color: colour },
     })),
   }, { displayModeBar: false, responsive: true });
