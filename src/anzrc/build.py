@@ -294,34 +294,26 @@ def _summary(player: dict, view: str) -> dict:
     finished = [rc for rc in rcs_ if rc["finish"] is not None]
     # Best Finish: the Top 8 tiers in order first, then the best share of the field.
     best = min(finished, key=lambda rc: (TIERS.index(rc["finish"]) if rc["finish"] in TOP_8 else len(TIERS), rc["finish_share"]), default=None)
-    top_8s = sum(rc["finish"] in TOP_8 for rc in rcs_)
     return {
         "record": "-".join(map(str, record)),
         "win_rate": _win_rate(wins, losses),
         "rcs": len(rcs_),
-        "top_8s": top_8s,
+        "top_8s": sum(rc["finish"] in TOP_8 for rc in rcs_),
         "titles": sum(rc["finish"] == "Title" for rc in rcs_),
-        "best_finish": best and (best["finish"] if best["finish"] in TOP_8 else f"{best['finish']} of {best['field_size']}"),
+        "best_finish": best and best["finish"],
         "typical_finish": round(statistics.median(rc["finish_share"] for rc in finished), 1) if finished else None,
-        "top_8_rate": round(100 * top_8s / len(rcs_), 1),
     }
 
 
 def _rank(cards: dict[str, dict]) -> None:
-    """Each Player's rank in every view they are eligible in (the cutoff's RCs or more), and the share of eligible
-    Players rated below them; an ineligible Player gets how many RCs they still need."""
+    """Each Player's rank in every view they are eligible in (the cutoff's RCs or more), else none."""
     for view in {view for player in cards.values() for view in player["summary"]}:
         in_view = [player for player in cards.values() if view in player["summary"]]
         eligible = [player["ratings"][view]["rating"] for player in in_view if player["summary"][view]["rcs"] >= ratings.CUTOFF]
         for player in in_view:
             summary = player["summary"][view]
-            if summary["rcs"] >= ratings.CUTOFF:
-                mine = player["ratings"][view]["rating"]
-                summary["rank"] = 1 + sum(other > mine for other in eligible)
-                summary["above"] = round(100 * sum(other < mine for other in eligible) / len(eligible), 1)
-                summary["rcs_needed"] = None
-            else:
-                summary |= {"rank": None, "above": None, "rcs_needed": ratings.CUTOFF - summary["rcs"]}
+            mine = player["ratings"][view]["rating"]
+            summary["rank"] = 1 + sum(other > mine for other in eligible) if summary["rcs"] >= ratings.CUTOFF else None
 
 
 def build(raw: Path, rc_list: Path, curation: Path, out: Path) -> None:

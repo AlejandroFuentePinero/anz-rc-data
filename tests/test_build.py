@@ -717,20 +717,20 @@ def test_the_summary_gives_each_view_its_record_win_rate_and_finishes(tmp_path):
     bundle = run_build(tmp_path, three_rcs_for_ana())
 
     summary = bundle.card("ana")["summary"]
-    figures = ("record", "win_rate", "rcs", "top_8s", "titles", "best_finish", "typical_finish", "top_8_rate")
+    figures = ("record", "win_rate", "rcs", "top_8s", "titles", "best_finish", "typical_finish")
     # Global: wins over Ben and Cal, the loss to Ben, a played draw and an Intentional Draw; the bye is in no record.
     # Typical Finish: the median of 1/10, 3.5/8 (the Top 4 tier) and 12/20.
     assert {key: summary["Global"][key] for key in figures} == {
         "record": "2-1-2", "win_rate": {"rate": 66.7, "matches": 3}, "rcs": 3, "top_8s": 2, "titles": 1,
-        "best_finish": "Title", "typical_finish": 43.8, "top_8_rate": 66.7,
+        "best_finish": "Title", "typical_finish": 43.8,
     }
     assert {key: summary["Pioneer"][key] for key in figures} == {
         "record": "2-0-1", "win_rate": {"rate": 100.0, "matches": 2}, "rcs": 2, "top_8s": 1, "titles": 1,
-        "best_finish": "Title", "typical_finish": 35.0, "top_8_rate": 50.0,  # median of 10% and 60%
+        "best_finish": "Title", "typical_finish": 35.0,  # median of 10% and 60%
     }
     assert {key: summary["Modern"][key] for key in figures} == {
         "record": "0-1-1", "win_rate": {"rate": 0.0, "matches": 1}, "rcs": 1, "top_8s": 1, "titles": 0,
-        "best_finish": "Top 4", "typical_finish": 43.8, "top_8_rate": 100.0,
+        "best_finish": "Top 4", "typical_finish": 43.8,
     }
     assert "Standard" not in summary
 
@@ -747,13 +747,13 @@ def test_best_finish_puts_any_top_8_first_then_the_best_share_of_the_field(tmp_p
     bundle = run_build(tmp_path, rcs)
 
     assert bundle.card("ben")["summary"]["Global"]["best_finish"] == "Top 8"
-    assert bundle.card("ben")["summary"]["Pioneer"]["best_finish"] == "12th of 20"
-    assert bundle.card("cal")["summary"]["Global"]["best_finish"] == "13th of 20"  # 65% beats 10th of 10 (100%)
+    assert bundle.card("ben")["summary"]["Pioneer"]["best_finish"] == "12th"
+    assert bundle.card("cal")["summary"]["Global"]["best_finish"] == "13th"  # 13th of 20 (65%) beats 10th of 10 (100%)
     dee = bundle.card("dee")["summary"]["Global"]
-    assert (dee["best_finish"], dee["typical_finish"], dee["rcs"], dee["top_8_rate"]) == (None, None, 1, 0.0)
+    assert (dee["best_finish"], dee["typical_finish"], dee["rcs"]) == (None, None, 1)
 
 
-def test_rank_and_above_count_only_players_eligible_in_the_view(tmp_path):
+def test_the_rank_counts_only_players_eligible_in_the_view(tmp_path):
     # Ana, Ben and Cal play three Pioneer RCs; Dee plays one and beats Eve four times, so Dee holds the top Rating
     # (about 1565 against Ana's 1552) but is not eligible. Ana and Ben then meet at one Modern RC.
     eve = ("eve", "Eve Moss")
@@ -768,16 +768,15 @@ def test_rank_and_above_count_only_players_eligible_in_the_view(tmp_path):
     bundle = run_build(tmp_path, rcs)
 
     def standing_in(slug, view="Global"):
-        summary = bundle.card(slug)["summary"][view]
-        return summary["rank"], summary["above"], summary["rcs_needed"]
+        return bundle.card(slug)["summary"][view]["rank"]
 
     assert bundle.card("dee")["ratings"]["Global"]["rating"] > bundle.card("ana")["ratings"]["Global"]["rating"]
-    # Of three eligible Players, Ana is above two, Ben above one, Cal above none.
-    assert [standing_in(slug) for slug in ("ana", "ben", "cal")] == [(1, 66.7, None), (2, 33.3, None), (3, 0.0, None)]
-    assert standing_in("dee") == (None, None, 2)
-    assert standing_in("eve") == (None, None, 2)
-    assert standing_in("ana", "Pioneer") == (1, 66.7, None)
-    assert standing_in("ana", "Modern") == (None, None, 2)  # ranked in Global, two RCs short in Modern
+    assert [standing_in(slug) for slug in ("ana", "ben", "cal")] == [1, 2, 3]
+    assert standing_in("dee") is None
+    assert standing_in("eve") is None
+    assert standing_in("ana", "Pioneer") == 1
+    assert standing_in("ana", "Modern") is None  # ranked in Global, two RCs short in Modern
+    assert {"above", "rcs_needed", "top_8_rate"}.isdisjoint(bundle.card("ana")["summary"]["Global"])
 
 
 # The RC table (issue #8): each RC's Rating at its start and end, and each Match's Rating change, per view.
