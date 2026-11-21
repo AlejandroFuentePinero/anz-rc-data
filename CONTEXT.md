@@ -36,6 +36,10 @@ _Avoid_: Username (one of its sources), handle
 A Player at their first RC.
 _Avoid_: Debutant, first-timer
 
+**Experience**:
+How many RCs an RC is for a Player (their 1st, their 9th), counted across every Format. Read in four levels: 1st, 2nd-3rd, 4th-7th and 8th+.
+_Avoid_: Seniority, maturity
+
 ### Results
 
 **Match**:
@@ -55,7 +59,7 @@ Reaching an RC's playoff, the result the scene counts most after winning it.
 _Avoid_: Cut, day 2
 
 **Top 8 rate**:
-A Player's Top 8s over the RCs they played (3 of 7).
+Top 8s over RCs played: a Player's own (3 of 7), or every Player's at one level of Experience (15 of 192).
 
 **Title**:
 First place at an RC. "Win" alone always means a Match win.
@@ -80,7 +84,7 @@ _Avoid_: Max Elo, best rating
 ### Surfaces
 
 **Community page**:
-The landing page: the scene as a whole across RCs (Field Sizes, new and returning Players, how many RCs Players have played).
+The landing page: the scene as a whole across RCs (Field Sizes, each field by Experience, the Top 8 rate at each level of Experience, and every RC's Top 8).
 
 **Player card**:
 One Player's page: their RCs, Finishes, Matches and Rating over the Cycles.

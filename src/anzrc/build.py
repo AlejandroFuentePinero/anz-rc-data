@@ -2,7 +2,7 @@
 
 import json
 import shutil
-from collections import Counter
+import statistics
 from pathlib import Path
 
 from anzrc import identity, ratings, rcs
@@ -76,6 +76,7 @@ def _sides(match: dict, where: str, late_round: bool, curated_draw: bool) -> lis
 
 
 PLAYOFF_ROUNDS = ["Quarterfinal", "Semifinal", "Final"]
+TOP_8 = {"Title", "Finalist", "Top 4", "Top 8"}
 
 
 # Seeding from the end-of-Swiss standings, 1 v 8 and so on, the winners meeting in this order. Every complete bracket follows it.
@@ -144,7 +145,6 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
     agreed = {(draw["cycle"], f"Round {draw['round']}", draw["table"]) for draw in curated["intentional_draws"]}
     found = set()
     rc_rows, cards, history = [], {}, []
-    seen = set()  # every Player at an earlier RC
     # Global from every Match, and each Format from its own Matches only.
     views: dict[str, dict[str, float]] = {"Global": {}}
     after_rc: dict[str, dict[str, list[dict]]] = {}  # each view's Ratings after every RC a Player was in
@@ -155,7 +155,8 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
 
     for rc in loaded:
         standings = rc["standings"]
-        champion = next(row for row in standings if row["Rank"] == 1)
+        # The Top 8 by tier, each tier in Melee's order.
+        top_8 = [{key: players[_username(row)][key] for key in ("slug", "name")} for row in sorted(standings, key=lambda row: row["Rank"])[:8]]
         rc_rows.append(
             {
                 "cycle": rc["cycle"],
@@ -163,7 +164,10 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
                 "city": rc["city"] or None,
                 "format": rc["format"],
                 "field_size": len(standings),
-                "champion": {key: players[_username(champion)][key] for key in ("slug", "name")},
+                "champion": top_8[0],
+                "finalist": top_8[1],
+                "places_3_4": top_8[2:4],
+                "places_5_8": top_8[4:8],
             }
         )
         # Every Player of the RC: the final standings, and anyone missing from them who kept their Matches.
@@ -208,10 +212,6 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
             for view in ("Global", rc["format"]):
                 ratings.play_round(views.setdefault(view, {}), rated)
         history[-1]["players"] = list(dict.fromkeys(players[username]["slug"] for username in rc_players))
-        # A New Player is one at their first RC; everyone the RC has counts, the standings-missing included.
-        new = set(history[-1]["players"]) - seen
-        rc_rows[-1] |= {"new_players": len(new), "returning_players": len(history[-1]["players"]) - len(new)}
-        seen |= new
         for view in ("Global", rc["format"]):
             for slug in history[-1]["players"]:
                 rating = views[view].get(slug, ratings.START)
@@ -260,12 +260,52 @@ def build(raw: Path, rc_list: Path, curation: Path, out: Path) -> None:
         (out / "players" / f"{player['slug']}.json").write_text(json.dumps(player, indent=1) + "\n")
     index = [{key: player[key] for key in ("slug", "name", "usernames")} for player in cards.values()]
     (out / "players.json").write_text(json.dumps(index, indent=1) + "\n")
-    # How many Players have played each number of RCs, in Global and in each Format's RCs alone.
-    rcs_played = {}
-    for view in ["Global", *dict.fromkeys(rc["format"] for rc in rc_rows)]:
-        counts = Counter(sum(view in ("Global", rc["format"]) for rc in player["rcs"]) for player in cards.values())
-        rcs_played[view] = [{"rcs": n, "players": counts[n]} for n in sorted(counts) if n]
-    (out / "community.json").write_text(json.dumps({"rcs_played": rcs_played}, indent=1) + "\n")
+    (out / "community.json").write_text(json.dumps(_community(rc_rows, cards), indent=1) + "\n")
+
+
+# Experience: how many RCs an RC is for a Player, across every Format, in these levels.
+LEVELS = ["1st", "2nd-3rd", "4th-7th", "8th+"]
+
+
+def _level(nth: int) -> int:
+    return 0 if nth == 1 else 1 if nth <= 3 else 2 if nth <= 7 else 3
+
+
+def _community(rc_rows: list[dict], cards: dict[str, dict]) -> dict:
+    """The scene across every RC: each field by experience, the Top 8 rate at each level of experience, and the
+    figures the captions quote.
+
+    The rate leaves out the first RC, where everyone is at their first by construction, established Players too.
+    """
+    fields = {rc["cycle"]: [0] * len(LEVELS) for rc in rc_rows}
+    seats, top_8s = [0] * len(LEVELS), [0] * len(LEVELS)
+    for player in cards.values():
+        for nth, rc in enumerate(player["rcs"], start=1):
+            level = _level(nth)
+            fields[rc["cycle"]][level] += 1
+            if rc["cycle"] != rc_rows[0]["cycle"]:
+                seats[level] += 1
+                top_8s[level] += rc["finish"] in TOP_8
+    field_by_experience = [
+        {"cycle": cycle, "players": counts, "shares": [round(100 * n / sum(counts), 1) for n in counts]}
+        for cycle, counts in fields.items()
+    ]
+    top_8 = [player for rc in rc_rows for player in [rc["champion"], rc["finalist"], *rc["places_3_4"], *rc["places_5_8"]]]
+    return {
+        "levels": LEVELS,
+        "field_by_experience": field_by_experience,
+        # The share of a field at their first RC at the median RC, the first RC aside.
+        "typical_first_rc_share": round(statistics.median(rc["shares"][0] for rc in field_by_experience[1:]), 1)
+        if len(field_by_experience) > 1
+        else None,
+        "champions": len({rc["champion"]["slug"] for rc in rc_rows}),
+        "top_8_players": len({player["slug"] for player in top_8}),
+        "top_8_places": len(top_8),
+        "top_8_rate_by_experience": [
+            {"level": name, "top_8s": top, "seats": n, "rate": round(100 * top / n, 1) if n else None}
+            for name, top, n in zip(LEVELS, top_8s, seats)
+        ],
+    }
 
 
 def main() -> None:

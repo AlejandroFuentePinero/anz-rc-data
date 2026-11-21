@@ -8,8 +8,9 @@
   body { font-family: system-ui, sans-serif; margin: 16px; background: #fff; color: #222; }
   .scroll { overflow-x: auto; }
   table { border-collapse: collapse; }
-  th, td { padding: 4px 12px; text-align: left; border-bottom: 1px solid #ddd; white-space: nowrap; }
+  th, td { padding: 4px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid #ddd; white-space: nowrap; }
   td.num { text-align: right; }
+  td a { display: block; }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
 </head>
@@ -18,68 +19,116 @@
 <input id="search" type="search" placeholder="Find a Player" autocomplete="off">
 <ul id="search-results"></ul>
 <label>Format <select id="format"></select></label>
-<h2>Field Size</h2>
+
+<h2>How big is each RC?</h2>
 <div id="field-size"></div>
-<h2>New and returning Players</h2>
-<div id="new-returning"></div>
-<h2>RCs played</h2>
-<div id="rcs-played"></div>
+
+<h2>Who fills each RC?</h2>
+<p>Across every RC. <span id="fill-story"></span></p>
+<div id="experience"></div>
+
+<h2>Does experience pay?</h2>
+<p>Across every RC. <span id="pay-story"></span></p>
+<div id="top-8-rate"></div>
+
 <h2>Every RC</h2>
+<p id="table-story"></p>
 <div class="scroll">
 <table>
-  <thead><tr><th>Cycle</th><th>Date</th><th>City</th><th>Format</th><th>Field Size</th><th>Champion</th></tr></thead>
+  <thead><tr><th>Cycle</th><th>Date</th><th>City</th><th>Format</th><th>Field Size</th><th>Champion</th><th>Finalist</th><th>3-4</th><th>5-8</th></tr></thead>
   <tbody id="rcs"></tbody>
 </table>
 </div>
 <script src="search.js"></script>
 <script>
-const layout = (x, y, extra = {}) => ({
-  xaxis: { title: { text: x }, dtick: 1 },
-  yaxis: { title: { text: y } },
-  margin: { t: 16 },
-  ...extra,
-});
+// Each Format keeps its colour whichever view is shown; each level of experience runs light (new) to dark (8th+).
+const FORMAT_COLOUR = { Pioneer: "#eb6834", Standard: "#1baf7a", Modern: "#6250d6" };
+const LEVEL_COLOUR = ["#86b6ef", "#3987e5", "#1c5cab", "#0d366b"];
 const config = { displayModeBar: false, responsive: true };
+const margin = { t: 8, r: 16, l: 56, b: 40 };
+
+function link(player) {
+  const a = document.createElement("a");
+  a.href = `player.html#${player.slug}`;
+  a.textContent = player.name;
+  return a;
+}
 
 Promise.all([fetch("data/rcs.json"), fetch("data/community.json")])
   .then((responses) => Promise.all(responses.map((response) => response.json())))
   .then(([rcs, community]) => {
-    const views = Object.keys(community.rcs_played);
-    // Each Format keeps its colour whichever view is shown.
-    const colour = Object.fromEntries(views.slice(1).map((format, i) => [format, ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728"][i]]));
-    const select = document.getElementById("format");
-    for (const view of views) select.add(new Option(view, view));
+    const cycles = rcs.map((rc) => rc.cycle);
+    const formats = [...new Set(rcs.map((rc) => rc.format))];
+    const rate = (row) => `${row.rate}% (${row.top_8s} of ${row.seats})`;
+    const [first, , , veteran] = community.top_8_rate_by_experience;
 
+    // Across every RC: the field by experience and the Top 8 rate at each level. The Format filter leaves these.
+    document.getElementById("fill-story").textContent =
+      `At a typical RC, ${community.typical_first_rc_share}% of the field is at their first RC (Cycle ${cycles[0]} aside, where everyone was).`;
+    Plotly.newPlot("experience", community.levels.map((level, j) => ({
+      type: "bar", name: `At their ${level} RC`,
+      x: community.field_by_experience.map((rc) => rc.cycle),
+      y: community.field_by_experience.map((rc) => rc.shares[j]),
+      customdata: community.field_by_experience.map((rc) => rc.players[j]),
+      marker: { color: LEVEL_COLOUR[j], line: { color: "#fff", width: 1 } },
+      hovertemplate: `Cycle %{x}: %{customdata} Players at their ${level} RC (%{y}%)<extra></extra>`,
+    })), {
+      margin, height: 340, barmode: "stack", legend: { orientation: "h", y: -0.25, traceorder: "normal" },
+      xaxis: { title: { text: "Cycle" }, tickvals: cycles }, yaxis: { title: { text: "Share of the field" }, ticksuffix: "%", range: [0, 100] },
+    }, config);
+
+    document.getElementById("pay-story").textContent =
+      `Players at their 8th RC or later made the Top 8 ${veteran.rate}% of the time, against ${first.rate}% at their first. ` +
+      "That shows who keeps coming back, strong Players among them, not that playing more makes anyone better. " +
+      `Cycle ${cycles[0]} is left out, where everyone was at their first RC.`;
+    const rates = community.top_8_rate_by_experience;
+    Plotly.newPlot("top-8-rate", [{
+      type: "bar", x: rates.map((row) => `At their ${row.level} RC`), y: rates.map((row) => row.rate),
+      text: rates.map(rate), textposition: "outside", cliponaxis: false,
+      marker: { color: LEVEL_COLOUR },
+      hovertemplate: "%{x}: %{text}<extra></extra>",
+    }], {
+      margin, height: 300, showlegend: false,
+      yaxis: { title: { text: "Top 8 rate" }, ticksuffix: "%", rangemode: "tozero" },
+    }, config);
+
+    document.getElementById("table-story").textContent =
+      `Across every RC: ${rcs.length} RCs, ${community.champions} different champions, and the ${community.top_8_places} Top 8 places went to ${community.top_8_players} Players.`;
+
+    const select = document.getElementById("format");
+    for (const view of ["Global", ...formats]) select.add(new Option(view, view));
+
+    // The Format filter: the Field Size plot and the RC table.
     function show() {
       const view = select.value;
       const shown = rcs.filter((rc) => view === "Global" || rc.format === view);
 
-      const formats = [...new Set(shown.map((rc) => rc.format))];
-      Plotly.react("field-size", formats.map((format) => {
+      Plotly.react("field-size", formats.filter((format) => shown.some((rc) => rc.format === format)).map((format) => {
         const inFormat = shown.filter((rc) => rc.format === format);
-        return { type: "bar", name: format, x: inFormat.map((rc) => rc.cycle), y: inFormat.map((rc) => rc.field_size), marker: { color: colour[format] } };
-      }), layout("Cycle", "Players"), config);
-
-      Plotly.react("new-returning", [
-        { type: "bar", name: "New", x: shown.map((rc) => rc.cycle), y: shown.map((rc) => rc.new_players) },
-        { type: "bar", name: "Returning", x: shown.map((rc) => rc.cycle), y: shown.map((rc) => rc.returning_players) },
-      ], layout("Cycle", "Players", { barmode: "stack" }), config);
-
-      const played = community.rcs_played[view];
-      Plotly.react("rcs-played", [
-        { type: "bar", x: played.map((row) => row.rcs), y: played.map((row) => row.players) },
-      ], layout("RCs played", "Players"), config);
+        return {
+          type: "scatter", mode: "lines+markers+text", name: format,
+          x: inFormat.map((rc) => rc.cycle), y: inFormat.map((rc) => rc.field_size),
+          text: inFormat.map((rc, i) => (i === inFormat.length - 1 ? format : "")), textposition: "middle right",
+          line: { color: FORMAT_COLOUR[format], width: 2 }, marker: { size: 9 },
+          hovertemplate: `Cycle %{x}, ${format}: %{y} Players<extra></extra>`,
+        };
+      }), {
+        margin, height: 300, showlegend: false,
+        xaxis: { title: { text: "Cycle" }, tickvals: cycles, range: [cycles[0] - 0.5, cycles.at(-1) + 0.9] },
+        yaxis: { title: { text: "Field Size" }, rangemode: "tozero" },
+      }, config);
 
       const body = document.getElementById("rcs");
       body.replaceChildren();
       for (const rc of shown) {
         const row = body.insertRow();
-        const champion = document.createElement("a");
-        champion.href = `player.html#${rc.champion.slug}`;
-        champion.textContent = rc.champion.name;
-        for (const [value, cls] of [[rc.cycle, "num"], [rc.date], [rc.city ?? "-"], [rc.format], [rc.field_size, "num"], [champion]]) {
+        const cells = [
+          [rc.cycle, "num"], [rc.date], [rc.city ?? "-"], [rc.format], [rc.field_size, "num"],
+          [link(rc.champion)], [link(rc.finalist)], [rc.places_3_4.map(link)], [rc.places_5_8.map(link)],
+        ];
+        for (const [value, cls] of cells) {
           const cell = row.insertCell();
-          cell.append(value);
+          cell.append(...[value].flat());
           if (cls) cell.className = cls;
         }
       }

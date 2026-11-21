@@ -1,116 +1,235 @@
 {
- "rcs_played": {
-  "Global": [
-   {
-    "rcs": 1,
-    "players": 446
-   },
-   {
-    "rcs": 2,
-    "players": 160
-   },
-   {
-    "rcs": 3,
-    "players": 81
-   },
-   {
-    "rcs": 4,
-    "players": 60
-   },
-   {
-    "rcs": 5,
-    "players": 35
-   },
-   {
-    "rcs": 6,
-    "players": 34
-   },
-   {
-    "rcs": 7,
-    "players": 28
-   },
-   {
-    "rcs": 8,
-    "players": 16
-   },
-   {
-    "rcs": 9,
-    "players": 16
-   },
-   {
-    "rcs": 10,
-    "players": 7
-   },
-   {
-    "rcs": 11,
-    "players": 7
-   },
-   {
-    "rcs": 12,
-    "players": 7
-   },
-   {
-    "rcs": 13,
-    "players": 10
-   }
-  ],
-  "Pioneer": [
-   {
-    "rcs": 1,
-    "players": 241
-   },
-   {
-    "rcs": 2,
-    "players": 93
-   },
-   {
-    "rcs": 3,
-    "players": 46
-   },
-   {
-    "rcs": 4,
-    "players": 36
-   }
-  ],
-  "Standard": [
-   {
-    "rcs": 1,
-    "players": 304
-   },
-   {
-    "rcs": 2,
-    "players": 108
-   },
-   {
-    "rcs": 3,
-    "players": 60
-   },
-   {
-    "rcs": 4,
-    "players": 26
-   },
-   {
-    "rcs": 5,
-    "players": 23
-   }
-  ],
-  "Modern": [
-   {
-    "rcs": 1,
-    "players": 319
-   },
-   {
-    "rcs": 2,
-    "players": 106
-   },
-   {
-    "rcs": 3,
-    "players": 54
-   },
-   {
-    "rcs": 4,
-    "players": 34
-   }
-  ]
- }
+ "levels": [
+  "1st",
+  "2nd-3rd",
+  "4th-7th",
+  "8th+"
+ ],
+ "field_by_experience": [
+  {
+   "cycle": 1,
+   "players": [
+    152,
+    0,
+    0,
+    0
+   ],
+   "shares": [
+    100.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "cycle": 2,
+   "players": [
+    70,
+    62,
+    0,
+    0
+   ],
+   "shares": [
+    53.0,
+    47.0,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "cycle": 3,
+   "players": [
+    79,
+    101,
+    0,
+    0
+   ],
+   "shares": [
+    43.9,
+    56.1,
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "cycle": 4,
+   "players": [
+    55,
+    70,
+    31,
+    0
+   ],
+   "shares": [
+    35.3,
+    44.9,
+    19.9,
+    0.0
+   ]
+  },
+  {
+   "cycle": 5,
+   "players": [
+    99,
+    77,
+    52,
+    0
+   ],
+   "shares": [
+    43.4,
+    33.8,
+    22.8,
+    0.0
+   ]
+  },
+  {
+   "cycle": 6,
+   "players": [
+    47,
+    58,
+    63,
+    0
+   ],
+   "shares": [
+    28.0,
+    34.5,
+    37.5,
+    0.0
+   ]
+  },
+  {
+   "cycle": 7,
+   "players": [
+    61,
+    71,
+    89,
+    0
+   ],
+   "shares": [
+    27.6,
+    32.1,
+    40.3,
+    0.0
+   ]
+  },
+  {
+   "cycle": 8,
+   "players": [
+    43,
+    40,
+    56,
+    16
+   ],
+   "shares": [
+    27.7,
+    25.8,
+    36.1,
+    10.3
+   ]
+  },
+  {
+   "cycle": 9,
+   "players": [
+    72,
+    55,
+    70,
+    25
+   ],
+   "shares": [
+    32.4,
+    24.8,
+    31.5,
+    11.3
+   ]
+  },
+  {
+   "cycle": 10,
+   "players": [
+    62,
+    61,
+    60,
+    30
+   ],
+   "shares": [
+    29.1,
+    28.6,
+    28.2,
+    14.1
+   ]
+  },
+  {
+   "cycle": 11,
+   "players": [
+    60,
+    62,
+    50,
+    37
+   ],
+   "shares": [
+    28.7,
+    29.7,
+    23.9,
+    17.7
+   ]
+  },
+  {
+   "cycle": 12,
+   "players": [
+    40,
+    47,
+    62,
+    39
+   ],
+   "shares": [
+    21.3,
+    25.0,
+    33.0,
+    20.7
+   ]
+  },
+  {
+   "cycle": 13,
+   "players": [
+    67,
+    58,
+    63,
+    45
+   ],
+   "shares": [
+    28.8,
+    24.9,
+    27.0,
+    19.3
+   ]
+  }
+ ],
+ "typical_first_rc_share": 29.0,
+ "champions": 13,
+ "top_8_players": 80,
+ "top_8_places": 104,
+ "top_8_rate_by_experience": [
+  {
+   "level": "1st",
+   "top_8s": 14,
+   "seats": 755,
+   "rate": 1.9
+  },
+  {
+   "level": "2nd-3rd",
+   "top_8s": 29,
+   "seats": 762,
+   "rate": 3.8
+  },
+  {
+   "level": "4th-7th",
+   "top_8s": 38,
+   "seats": 596,
+   "rate": 6.4
+  },
+  {
+   "level": "8th+",
+   "top_8s": 15,
+   "seats": 192,
+   "rate": 7.8
+  }
+ ]
 }

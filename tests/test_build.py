@@ -170,43 +170,96 @@ def test_the_rc_table_gives_each_rc_its_field_size_and_champion_as_the_player_th
     ]
 
 
-def test_each_rc_counts_its_new_players_and_its_returning_players_across_joined_accounts(tmp_path):
-    ana_new = ("Ana_L", "Ana Lopez")  # Ana's second account, one Player with "ana" by the real-name rule
-    eve = ("eve", "Eve Moss")  # disqualified in Cycle 3: off the standings, still at the RC
+def test_the_rc_table_gives_each_rc_its_top_8_by_tier_in_melees_order_as_players(tmp_path):
+    p = {n: (f"p{n}", f"Player {n}") for n in range(1, 11)}
+    p[6] = ("Ana_L", "Ana Lopez")  # Ana's second account, one Player with "ana" by the real-name rule
+    # Melee's rows out of rank order, so the table follows the Rank, not the row order.
+    ranks = {3: 1, 7: 2, 1: 3, 9: 4, 6: 5, 2: 6, 10: 7, 4: 8, 5: 9, 8: 10}
     bundle = run_build(
         tmp_path,
         [
             (1, "Pioneer", [(SWISS, [played(ANA, BEN, 2, 0)])], [standing(1, ANA), standing(2, BEN)]),
-            (2, "Modern", [(SWISS, [played(ana_new, CAL, 2, 0)])], [standing(1, ana_new), standing(2, CAL)]),
-            (3, "Pioneer", [(SWISS, [played(BEN, DEE, 2, 0), played(CAL, eve, 2, 0)])], [
-                standing(1, BEN), standing(2, CAL), standing(3, DEE),
-            ]),
+            (2, "Modern", [(SWISS, [played(p[n], p[n + 1], 2, 0) for n in range(1, 11, 2)])],
+             [standing(ranks[n], p[n]) for n in range(1, 11)]),
         ],
     )
 
-    assert [(rc["cycle"], rc["new_players"], rc["returning_players"]) for rc in bundle.rcs()] == [
-        (1, 2, 0),  # ana, ben
-        (2, 1, 1),  # cal new; ana back on her other account
-        (3, 2, 2),  # dee and eve new; ben and cal back
+    player = lambda slug, name: {"slug": slug, "name": name}
+    rc = bundle.rcs()[1]
+    assert {key: rc[key] for key in ("champion", "finalist", "places_3_4", "places_5_8")} == {
+        "champion": player("p3", "Player 3"),
+        "finalist": player("p7", "Player 7"),
+        "places_3_4": [player("p1", "Player 1"), player("p9", "Player 9")],
+        "places_5_8": [player("ana", "Ana Lopez"), player("p2", "Player 2"), player("p10", "Player 10"), player("p4", "Player 4")],
+    }
+
+
+def test_each_rc_splits_its_field_by_experience_across_formats_and_joined_accounts(tmp_path):
+    ben_new = ("Ben_H", "Ben Hall")  # Ben's second account from Cycle 4, one Player with "ben" by the real-name rule
+    eve = ("eve", "Eve Moss")  # disqualified in Cycle 8: off the standings, still at the RC
+    formats = ["Pioneer", "Modern", "Standard", "Pioneer", "Modern", "Standard", "Pioneer", "Modern"]
+    rcs = [(c, formats[c - 1], [(SWISS, [played(ANA, BEN if c <= 3 else ben_new, 2, 0)])], [standing(1, ANA), standing(2, BEN if c <= 3 else ben_new)])
+           for c in range(1, 8)]
+    rcs.append((8, "Modern", [(SWISS, [played(ANA, ben_new, 2, 0), played(CAL, eve, 2, 0)])],
+                [standing(1, ANA), standing(2, ben_new), standing(3, CAL)]))
+
+    bundle = run_build(tmp_path, rcs)
+
+    community = bundle.community()
+    assert community["levels"] == ["1st", "2nd-3rd", "4th-7th", "8th+"]
+    assert [(rc["cycle"], rc["players"]) for rc in community["field_by_experience"]] == [
+        (1, [2, 0, 0, 0]),
+        (2, [0, 2, 0, 0]),
+        (3, [0, 2, 0, 0]),
+        (4, [0, 0, 2, 0]),
+        (5, [0, 0, 2, 0]),
+        (6, [0, 0, 2, 0]),
+        (7, [0, 0, 2, 0]),
+        (8, [2, 0, 0, 2]),  # cal and eve at their first; ana and ben at their eighth
+    ]
+    assert community["field_by_experience"][-1]["shares"] == [50.0, 0.0, 0.0, 50.0]
+
+
+def test_the_top_8_rate_by_experience_leaves_out_the_first_rc_where_everyone_was_at_their_first(tmp_path):
+    p = {n: (f"p{n}", f"Player {n}") for n in range(1, 10)}
+    n1, n2 = ("n1", "New One"), ("n2", "New Two")
+    cycle_1 = [standing(n, p[n]) for n in range(1, 10)]  # p9 misses the Top 8
+    # Cycle 2: p1 to p8 back at their second RC, n1 and n2 at their first; n1 takes the Title, p1 drops to 9th.
+    cycle_2 = [standing(1, n1)] + [standing(n, p[n]) for n in range(2, 9)] + [standing(9, p[1]), standing(10, n2)]
+    bundle = run_build(
+        tmp_path,
+        [
+            (1, "Pioneer", [(SWISS, [played(p[n], p[n + 1], 2, 0) for n in (1, 3, 5, 7)])], cycle_1),
+            (2, "Modern", [(SWISS, [played(n1, p[1], 2, 0), played(p[2], n2, 2, 0)])], cycle_2),
+        ],
+    )
+
+    assert bundle.community()["top_8_rate_by_experience"] == [
+        {"level": "1st", "top_8s": 1, "seats": 2, "rate": 50.0},  # n1 of n1, n2
+        {"level": "2nd-3rd", "top_8s": 7, "seats": 8, "rate": 87.5},  # p2 to p8 of p1 to p8
+        {"level": "4th-7th", "top_8s": 0, "seats": 0, "rate": None},
+        {"level": "8th+", "top_8s": 0, "seats": 0, "rate": None},
     ]
 
 
-def test_the_community_counts_players_by_rcs_played_in_each_view_across_joined_accounts(tmp_path):
-    ana_new = ("Ana_L", "Ana Lopez")  # Ana's second account, one Player with "ana" by the real-name rule
+def test_the_community_captions_give_the_typical_first_rc_share_and_how_many_players_reached_a_title_and_a_top_8(tmp_path):
+    eve = ("eve", "Eve Moss")
     bundle = run_build(
         tmp_path,
         [
             (1, "Pioneer", [(SWISS, [played(ANA, BEN, 2, 0)])], [standing(1, ANA), standing(2, BEN)]),
-            (2, "Modern", [(SWISS, [played(ana_new, CAL, 2, 0)])], [standing(1, ana_new), standing(2, CAL)]),
-            (3, "Pioneer", [(SWISS, [played(BEN, DEE, 2, 0)])], [standing(1, BEN), standing(2, DEE)]),
+            (2, "Modern", [(SWISS, [played(CAL, ANA, 2, 0)])], [standing(1, CAL), standing(2, ANA)]),  # cal new: 50%
+            (3, "Modern", [(SWISS, [played(ANA, BEN, 2, 0), played(CAL, DEE, 2, 0)])],
+             [standing(1, ANA), standing(2, BEN), standing(3, CAL), standing(4, DEE)]),  # dee new: 25%
+            (4, "Pioneer", [(SWISS, [played(BEN, ANA, 2, 0)])], [standing(1, BEN), standing(2, ANA)]),  # 0%
+            (5, "Pioneer", [(SWISS, [played(eve, ANA, 2, 0)])], [standing(1, eve), standing(2, ANA)]),  # eve new: 50%
         ],
     )
 
-    assert bundle.community()["rcs_played"] == {
-        "Global": [{"rcs": 1, "players": 2}, {"rcs": 2, "players": 2}],  # cal, dee once; ana, ben twice
-        "Pioneer": [{"rcs": 1, "players": 2}, {"rcs": 2, "players": 1}],  # ana, dee once; ben twice
-        "Modern": [{"rcs": 1, "players": 2}],  # ana, cal
-    }
+    community = bundle.community()
+    # The median of 50, 25, 0 and 50, the first RC aside: the middle two are 25 and 50.
+    assert community["typical_first_rc_share"] == 37.5
+    assert (community["champions"], community["top_8_players"], community["top_8_places"]) == (4, 5, 12)
 
 
 def test_every_match_class_shows_its_result_and_only_played_matches_and_intentional_draws_count_in_the_record(tmp_path):
