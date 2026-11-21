@@ -23,8 +23,8 @@
     "Pioneer": 1500
    },
    "rating_end": {
-    "Global": 1409.08,
-    "Pioneer": 1407.06
+    "Global": 1409,
+    "Pioneer": 1407
    },
    "deck": "Azorius Control",
    "decklist": "https://melee.gg/Decklist/View/74074ce4-4f73-4eea-a8bd-39f094b790b4"
@@ -43,16 +43,16 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1649.14,
-    "Pioneer": 1500.31
+    "Global": 1649,
+    "Pioneer": 1500
    },
    "change": {
-    "Global": -15.3,
-    "Pioneer": -17.99
+    "Global": -15,
+    "Pioneer": -18
    },
    "rating_after": {
-    "Global": 1484.7,
-    "Pioneer": 1482.01
+    "Global": 1485,
+    "Pioneer": 1482
    }
   },
   {
@@ -67,16 +67,16 @@
    "games": "1-1-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1483.18,
-    "Pioneer": 1482.98
+    "Global": 1483,
+    "Pioneer": 1483
    },
    "change": {
-    "Global": -0.03,
-    "Pioneer": 0.02
+    "Global": 0,
+    "Pioneer": 0
    },
    "rating_after": {
-    "Global": 1484.67,
-    "Pioneer": 1482.02
+    "Global": 1485,
+    "Pioneer": 1482
    }
   },
   {
@@ -85,22 +85,22 @@
    "playoff": false,
    "opponent": {
     "slug": "jleb",
-    "name": "johneb"
+    "name": "John Eastgate-Brown"
    },
    "result": "Win",
    "games": "2-0-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1482.0,
-    "Pioneer": 1482.0
+    "Global": 1482,
+    "Pioneer": 1482
    },
    "change": {
-    "Global": 17.95,
-    "Pioneer": 18.0
+    "Global": 18,
+    "Pioneer": 18
    },
    "rating_after": {
-    "Global": 1502.62,
-    "Pioneer": 1500.02
+    "Global": 1503,
+    "Pioneer": 1500
    }
   },
   {
@@ -115,16 +115,16 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1473.95,
-    "Pioneer": 1465.94
+    "Global": 1474,
+    "Pioneer": 1466
    },
    "change": {
-    "Global": -18.52,
-    "Pioneer": -18.62
+    "Global": -19,
+    "Pioneer": -19
    },
    "rating_after": {
-    "Global": 1484.1,
-    "Pioneer": 1481.4
+    "Global": 1484,
+    "Pioneer": 1481
    }
   },
   {
@@ -139,16 +139,16 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1389.6,
-    "Pioneer": 1416.27
+    "Global": 1390,
+    "Pioneer": 1416
    },
    "change": {
-    "Global": -19.72,
-    "Pioneer": -19.19
+    "Global": -20,
+    "Pioneer": -19
    },
    "rating_after": {
-    "Global": 1464.38,
-    "Pioneer": 1462.21
+    "Global": 1464,
+    "Pioneer": 1462
    }
   },
   {
@@ -163,16 +163,16 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1481.48,
-    "Pioneer": 1482.07
+    "Global": 1481,
+    "Pioneer": 1482
    },
    "change": {
-    "Global": -17.69,
-    "Pioneer": -17.64
+    "Global": -17,
+    "Pioneer": -17
    },
    "rating_after": {
-    "Global": 1446.69,
-    "Pioneer": 1444.58
+    "Global": 1447,
+    "Pioneer": 1445
    }
   },
   {
@@ -187,16 +187,16 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1409.84,
-    "Pioneer": 1409.73
+    "Global": 1410,
+    "Pioneer": 1410
    },
    "change": {
-    "Global": -18.67,
-    "Pioneer": -18.64
+    "Global": -19,
+    "Pioneer": -19
    },
    "rating_after": {
-    "Global": 1428.02,
-    "Pioneer": 1425.94
+    "Global": 1428,
+    "Pioneer": 1426
    }
   },
   {
@@ -211,37 +211,37 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1376.39,
-    "Pioneer": 1377.84
+    "Global": 1376,
+    "Pioneer": 1378
    },
    "change": {
-    "Global": -18.94,
-    "Pioneer": -18.88
+    "Global": -19,
+    "Pioneer": -19
    },
    "rating_after": {
-    "Global": 1409.08,
-    "Pioneer": 1407.06
+    "Global": 1409,
+    "Pioneer": 1407
    }
   }
  ],
  "ratings": {
   "Global": {
-   "rating": 1409.08,
-   "peak": 1409.08,
+   "rating": 1409,
+   "peak": 1409,
    "after_rc": [
     {
      "cycle": 3,
-     "rating": 1409.08
+     "rating": 1409
     }
    ]
   },
   "Pioneer": {
-   "rating": 1407.06,
-   "peak": 1407.06,
+   "rating": 1407,
+   "peak": 1407,
    "after_rc": [
     {
      "cycle": 3,
-     "rating": 1407.06
+     "rating": 1407
     }
    ],
    "rated_by": "Pioneer"

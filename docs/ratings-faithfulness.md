@@ -1,6 +1,6 @@
 # How faithful the Rating is to mtgeloproject
 
-**Verdict: the Rating is mtgeloproject's calculation, proven on their own numbers.** Given the same two Ratings before a Match and the same result, this site moves a Rating by exactly what mtgeloproject moves it, on every one of the 16,280 rated Matches they record for the 13 ANZ RCs. Where the two sites differ, it is never the maths: it is which Matches count (2 Matches, each listed below with its reason), and the fact that this site counts only the ANZ RCs.
+**Verdict: the Rating is mtgeloproject's calculation, proven on their own numbers.** Given the same two Ratings before a Match and the same result, this site moves a Rating by exactly what mtgeloproject moves it, on both sides of every one of the 8,140 rated Matches they record for the 13 ANZ RCs. Where the two sites differ, it is never the maths: it is which Matches count (2 Matches, each listed below with its reason), and the fact that this site counts only the ANZ RCs.
 
 A worked example. In Cycle 1, round 2, mtgeloproject has a Player at 1465.86 drawing an opponent at 1519.01. The expected score for the lower-rated Player is 1 / (1 + 10^(-(1465.86 - 1519.01) / 1135.77)) = 0.4731, so a draw (worth 0.5) moves them up by 36 x (0.5 - 0.4731) = 0.97, to 1466.83. mtgeloproject shows 1466.83.
 
@@ -31,9 +31,9 @@ mtgeloproject's public API gives, for every Match, each Player's Rating before a
 
 | Check | Result |
 |---|---|
-| Rated Matches reproduced (wins, losses and 470 played draws) | 16,280 of 16,280 |
+| Rated Match sides reproduced (wins, losses and 235 played draws, each Match from both sides) | 16,280 of 16,280 |
 | Largest difference from their Rating after the Match | 0.0099 (their numbers are rounded to 0.01) |
-| Their 98 Intentional Draws | all move nothing |
+| Their 49 Intentional Draws (98 sides) | all move nothing |
 | The same rule with K = 35 or 37 | misses by up to 0.79 |
 | The same rule with a scale of 1100 or 1150 | misses by up to 0.26 |
 | Chess's 400-point scale | misses by up to 7.8 |
@@ -52,14 +52,18 @@ Each mtgeloproject row was found among Melee's Matches by RC, round and table, a
 | Where the two differ | Matches | Why the build does what it does |
 |---|---|---|
 | Cycle 1 round 3 table 65, round 5 table 60 | 2 | mtgeloproject has the same 2-1 score with the winner swapped. Melee names its winner in four places that agree: the game wins, the result text ("Lisa McGlaughlin won 2-1-0", "Ryan McCartney won 2-1-0"), the final standings points, and its own pairings for the next round, which put each winner among the Players on the points that win gives them (round 4 table 44 in the 3-point group, not table 68 in the 0-point group; round 6 table 51 in the 6-point group, not 54 to 56 in the 3-point group). The build follows Melee. |
-| natebass, miketaylor | | One Melee account each, which mtgeloproject splits in two after a change of name. One account is one Player. |
-| tylervisser | | Two accounts with the same real name, joined by the identity rule; mtgeloproject keeps a misspelt "Visserr" apart. |
+| natebass, miketaylor | | One Melee account each, which mtgeloproject files under two people: natebass after a change of name, miketaylor with two of their nine RCs under an American namesake. One account is one Player. |
+| tylervisser | | Two accounts with the same real name, joined by the identity rule; mtgeloproject holds both accounts but files the Cycle 2 Entry under a misspelt "Visserr". |
 
 Three of the owner's rulings came out of this check and are in ADR 0001: which 0-0-3 is an Intentional Draw, as above, following mtgeloproject; a Match Melee left unconfirmed counts by its game score (Cycle 13's 0-0-1 is a played draw, as Melee's standings and mtgeloproject both count it); and where mtgeloproject holds two accounts as one person they are one Player here (14 joins in data/curation.toml).
 
 ### 3. A blind reimplementation
 
-A separate agent rebuilt every Rating from the raw Melee files and the written rules, without seeing this code. Its numbers and the build's agree for all 907 Players, every view, every Rating after every RC and every Peak (9,628 values), and for the opponent's Rating before each of the 16,280 rated Match sides. The largest difference is 0.005, the two-decimal rounding of the bundle. After the 0-0-3 ruling it was rerun with that one line of its rules changed, and still agrees everywhere.
+A separate agent rebuilt every Rating from the raw Melee files and the written rules, without seeing this code, and an exhaustive review on 2026-11-21 did it again. That replay is kept as tests/independent_replay.py, sharing no code with the build, and tests/test_real_ratings.py holds the shipped bundle to it: the same Players, every Rating after every RC, current and Peak in every view (9,628 values), every Match's opponent Rating, Rating after and change (16,433 rows), every RC's start and end, and every rank. The same test checks the shipped bundle is what the build makes from the raw files today. Building with K = 40, or with the RCs out of order, fails it.
+
+### How a Rating is shown
+
+The site shows whole numbers, each rounded once from the exact Rating, so no shown Rating is a point off. A Match's change is the difference of the two whole Ratings (the owner's ruling, 2026-11-21), so every card adds up, row by row and from an RC's start to its end; the two Players in a Match can then show changes one point apart. Ranks are by the exact Rating.
 
 ## The measured settings
 
@@ -67,12 +71,12 @@ From docs/measurements.md, which `anzrc-measure` rewrites:
 
 - **K = 36.** K = 40 predicts later RCs a hair better, by 0.00001 against a standard error of 0.00011: a tie, so mtgeloproject's 36 stays.
 - **Pioneer, Standard and Modern Ratings ship.** Each beats a 50-50 guess on its own later RCs, by more than two standard errors. The Global Rating predicts each Format's Matches slightly better still, within noise for Pioneer and Standard and about two standard errors for Modern; the rule asks only for beating 50-50.
-- **"Rank could be" stays.** Only about 5 of the top 10 stay in the top 10 when each RC's Matches are resampled, so the top of the Leaderboard is not settled and each rank shows its 90% interval.
+- **No "Rank could be".** Only about 5 of the top 10 stay in the top 10 when each RC's Matches are resampled, which by the measurement's rule would show each rank's 90% interval; the owner ruled it not needed (2026-11-21, ADR 0001), so the Leaderboard shows the rank alone.
 - **3 RCs to be ranked.** The stability of the top 10 barely moves between 2, 3 and 4 RCs (5.14, 5.14, 5.21), so 3 stands, ranking 301 Players.
 
 ## Confidence and what is left
 
-- **The calculation: certain.** It reproduces mtgeloproject's own Rating changes on all 16,280 rated Matches, and nearby rules do not.
+- **The calculation: certain.** It reproduces mtgeloproject's own Rating changes on both sides of all 8,140 rated Matches, and nearby rules do not.
 - **The inputs: high.** Every rated Match agrees with mtgeloproject's record but 2, where Melee names the other winner; identity agrees but 3, each explained.
-- **The code: high.** An implementation written blind from the raw data gives the same numbers.
-- **Not checked here:** mtgeloproject's own record can be wrong (the two Cycle 1 results are the cases found), and the per-Player rank intervals the Leaderboard shows are built in issue #9, from the resampling already measured.
+- **The code: high.** An implementation written blind from the raw data gives the same numbers, and it is kept as a test (check 3).
+- **Not checked here:** mtgeloproject's own record can be wrong (the two Cycle 1 results are the cases found).

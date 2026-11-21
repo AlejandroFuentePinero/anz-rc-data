@@ -23,8 +23,8 @@
     "Modern": 1500
    },
    "rating_end": {
-    "Global": 1463.1,
-    "Modern": 1464.0
+    "Global": 1463,
+    "Modern": 1464
    },
    "deck": "Mono-Red Aggro",
    "decklist": "https://melee.gg/Decklist/View/ce7f38a8-9f38-490d-98b8-af99f21a7429"
@@ -43,16 +43,16 @@
    "games": "2-0-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1445.33,
+    "Global": 1445,
     "Modern": 1500
    },
    "change": {
-    "Global": 17.0,
-    "Modern": 18.0
+    "Global": 17,
+    "Modern": 18
    },
    "rating_after": {
-    "Global": 1517.0,
-    "Modern": 1518.0
+    "Global": 1517,
+    "Modern": 1518
    }
   },
   {
@@ -67,16 +67,16 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1518.12,
-    "Modern": 1518.0
+    "Global": 1518,
+    "Modern": 1518
    },
    "change": {
-    "Global": -17.98,
-    "Modern": -18.0
+    "Global": -18,
+    "Modern": -18
    },
    "rating_after": {
-    "Global": 1499.02,
-    "Modern": 1500.0
+    "Global": 1499,
+    "Modern": 1500
    }
   },
   {
@@ -91,16 +91,16 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1500.0,
-    "Modern": 1500.0
+    "Global": 1500,
+    "Modern": 1500
    },
    "change": {
-    "Global": -17.98,
-    "Modern": -18.0
+    "Global": -18,
+    "Modern": -18
    },
    "rating_after": {
-    "Global": 1481.04,
-    "Modern": 1482.0
+    "Global": 1481,
+    "Modern": 1482
    }
   },
   {
@@ -115,37 +115,37 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1483.97,
-    "Modern": 1482.0
+    "Global": 1484,
+    "Modern": 1482
    },
    "change": {
-    "Global": -17.95,
-    "Modern": -18.0
+    "Global": -18,
+    "Modern": -18
    },
    "rating_after": {
-    "Global": 1463.1,
-    "Modern": 1464.0
+    "Global": 1463,
+    "Modern": 1464
    }
   }
  ],
  "ratings": {
   "Global": {
-   "rating": 1463.1,
-   "peak": 1463.1,
+   "rating": 1463,
+   "peak": 1463,
    "after_rc": [
     {
      "cycle": 5,
-     "rating": 1463.1
+     "rating": 1463
     }
    ]
   },
   "Modern": {
-   "rating": 1464.0,
-   "peak": 1464.0,
+   "rating": 1464,
+   "peak": 1464,
    "after_rc": [
     {
      "cycle": 5,
-     "rating": 1464.0
+     "rating": 1464
     }
    ],
    "rated_by": "Modern"

@@ -23,8 +23,8 @@
     "Pioneer": 1500
    },
    "rating_end": {
-    "Global": 1464.35,
-    "Pioneer": 1463.13
+    "Global": 1464,
+    "Pioneer": 1463
    },
    "deck": "Izzet Phoenix",
    "decklist": "https://melee.gg/Decklist/View/bf16bc80-1702-4fd8-9f28-c7c4663c5a3d"
@@ -43,16 +43,16 @@
    "games": "1-1-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1518.86,
-    "Pioneer": 1520.05
+    "Global": 1519,
+    "Pioneer": 1520
    },
    "change": {
-    "Global": 0.34,
-    "Pioneer": 0.37
+    "Global": 0,
+    "Pioneer": 0
    },
    "rating_after": {
-    "Global": 1500.34,
-    "Pioneer": 1500.37
+    "Global": 1500,
+    "Pioneer": 1500
    }
   },
   {
@@ -67,16 +67,16 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1428.73,
-    "Pioneer": 1428.68
+    "Global": 1429,
+    "Pioneer": 1429
    },
    "change": {
-    "Global": -19.3,
-    "Pioneer": -19.31
+    "Global": -19,
+    "Pioneer": -19
    },
    "rating_after": {
-    "Global": 1481.04,
-    "Pioneer": 1481.06
+    "Global": 1481,
+    "Pioneer": 1481
    }
   },
   {
@@ -91,16 +91,16 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1553.57,
-    "Pioneer": 1481.82
+    "Global": 1554,
+    "Pioneer": 1482
    },
    "change": {
-    "Global": -16.68,
-    "Pioneer": -17.99
+    "Global": -17,
+    "Pioneer": -18
    },
    "rating_after": {
-    "Global": 1464.36,
-    "Pioneer": 1463.07
+    "Global": 1464,
+    "Pioneer": 1463
    }
   },
   {
@@ -115,16 +115,16 @@
    "games": "2-1-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1482.46,
-    "Pioneer": 1483.11
+    "Global": 1482,
+    "Pioneer": 1483
    },
    "change": {
-    "Global": 18.33,
-    "Pioneer": 18.37
+    "Global": 19,
+    "Pioneer": 18
    },
    "rating_after": {
-    "Global": 1482.69,
-    "Pioneer": 1481.44
+    "Global": 1483,
+    "Pioneer": 1481
    }
   },
   {
@@ -139,37 +139,37 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1463.81,
-    "Pioneer": 1464.36
+    "Global": 1464,
+    "Pioneer": 1464
    },
    "change": {
-    "Global": -18.34,
-    "Pioneer": -18.31
+    "Global": -19,
+    "Pioneer": -18
    },
    "rating_after": {
-    "Global": 1464.35,
-    "Pioneer": 1463.13
+    "Global": 1464,
+    "Pioneer": 1463
    }
   }
  ],
  "ratings": {
   "Global": {
-   "rating": 1464.35,
-   "peak": 1464.35,
+   "rating": 1464,
+   "peak": 1464,
    "after_rc": [
     {
      "cycle": 4,
-     "rating": 1464.35
+     "rating": 1464
     }
    ]
   },
   "Pioneer": {
-   "rating": 1463.13,
-   "peak": 1463.13,
+   "rating": 1463,
+   "peak": 1463,
    "after_rc": [
     {
      "cycle": 4,
-     "rating": 1463.13
+     "rating": 1463
     }
    ],
    "rated_by": "Pioneer"

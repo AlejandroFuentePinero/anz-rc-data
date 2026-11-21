@@ -66,7 +66,8 @@ events:
 
 - Round names differ between events. Some playoff rounds are named "Quarterfinals/Semifinals/Finals"
   and others continue as "Round 9…". Tell Swiss and playoff rounds apart by phase, not by name.
-- Cycle 13 has 1 match out of 812 with no result. It is probably a bye or a drop.
+- Cycle 13 has 1 match out of 812 that Melee left unconfirmed (round 1 table 57, 0-0-1). It is a played draw, as Melee's standings count it (ADR 0001).
+- Melee holds no Matches for some playoff rounds: the whole Top 8 of Cycles 3 and 4, and the finals of Cycles 7, 8 and 10 (17 Matches). The build rebuilds them from the end-of-Swiss seeding and the final standings, and mtgeloproject's record has the same pairings and winners.
 - In Cycles 4 and 7, summing every quantity on the deck page gives 76: older lists show the companion
   under Companion and again under Sideboard, newer ones under Companion only. The stored sideboard counts
   the companion once either way.

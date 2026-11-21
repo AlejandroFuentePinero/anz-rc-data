@@ -23,8 +23,8 @@
     "Standard": 1500
    },
    "rating_end": {
-    "Global": 1445.41,
-    "Standard": 1446.42
+    "Global": 1445,
+    "Standard": 1446
    },
    "deck": "Mono-Blue Combo",
    "decklist": "https://melee.gg/Decklist/View/e039b419-f1c1-4f8c-a2bd-b45200a547d4"
@@ -43,16 +43,16 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1421.08,
-    "Standard": 1482.27
+    "Global": 1421,
+    "Standard": 1482
    },
    "change": {
-    "Global": -19.44,
-    "Standard": -18.32
+    "Global": -19,
+    "Standard": -18
    },
    "rating_after": {
-    "Global": 1480.56,
-    "Standard": 1481.68
+    "Global": 1481,
+    "Standard": 1482
    }
   },
   {
@@ -67,16 +67,16 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1522.45,
-    "Standard": 1520.67
+    "Global": 1522,
+    "Standard": 1521
    },
    "change": {
-    "Global": -17.24,
-    "Standard": -17.29
+    "Global": -18,
+    "Standard": -18
    },
    "rating_after": {
-    "Global": 1463.33,
-    "Standard": 1464.39
+    "Global": 1463,
+    "Standard": 1464
    }
   },
   {
@@ -91,37 +91,37 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1467.73,
-    "Standard": 1466.31
+    "Global": 1468,
+    "Standard": 1466
    },
    "change": {
-    "Global": -17.92,
-    "Standard": -17.97
+    "Global": -18,
+    "Standard": -18
    },
    "rating_after": {
-    "Global": 1445.41,
-    "Standard": 1446.42
+    "Global": 1445,
+    "Standard": 1446
    }
   }
  ],
  "ratings": {
   "Global": {
-   "rating": 1445.41,
-   "peak": 1445.41,
+   "rating": 1445,
+   "peak": 1445,
    "after_rc": [
     {
      "cycle": 12,
-     "rating": 1445.41
+     "rating": 1445
     }
    ]
   },
   "Standard": {
-   "rating": 1446.42,
-   "peak": 1446.42,
+   "rating": 1446,
+   "peak": 1446,
    "after_rc": [
     {
      "cycle": 12,
-     "rating": 1446.42
+     "rating": 1446
     }
    ],
    "rated_by": "Standard"

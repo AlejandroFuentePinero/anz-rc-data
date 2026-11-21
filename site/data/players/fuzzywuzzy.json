@@ -23,8 +23,8 @@
     "Pioneer": 1500
    },
    "rating_end": {
-    "Global": 1481.79,
-    "Pioneer": 1482.11
+    "Global": 1482,
+    "Pioneer": 1482
    },
    "deck": "Izzet Creativity",
    "decklist": "https://melee.gg/Decklist/View/cab094c2-dfd0-45ed-940f-4644edcac92d"
@@ -43,12 +43,12 @@
     "matches": 3
    },
    "rating_start": {
-    "Global": 1481.79,
+    "Global": 1482,
     "Standard": 1500
    },
    "rating_end": {
-    "Global": 1471.4,
-    "Standard": 1481.06
+    "Global": 1471,
+    "Standard": 1481
    },
    "deck": "Azorius Control",
    "decklist": "https://melee.gg/Decklist/View/19c16b5a-fd2e-4268-878e-e93d3617cc27"
@@ -67,16 +67,16 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1538.16,
-    "Pioneer": 1540.33
+    "Global": 1538,
+    "Pioneer": 1540
    },
    "change": {
-    "Global": -17.3,
-    "Pioneer": -17.26
+    "Global": -17,
+    "Pioneer": -17
    },
    "rating_after": {
-    "Global": 1482.7,
-    "Pioneer": 1482.74
+    "Global": 1483,
+    "Pioneer": 1483
    }
   },
   {
@@ -91,16 +91,16 @@
    "games": "2-0-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1431.6,
-    "Pioneer": 1446.97
+    "Global": 1432,
+    "Pioneer": 1447
    },
    "change": {
-    "Global": 17.07,
-    "Pioneer": 17.35
+    "Global": 17,
+    "Pioneer": 17
    },
    "rating_after": {
-    "Global": 1499.76,
-    "Pioneer": 1500.08
+    "Global": 1500,
+    "Pioneer": 1500
    }
   },
   {
@@ -115,16 +115,16 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1501.03,
-    "Pioneer": 1501.31
+    "Global": 1501,
+    "Pioneer": 1501
    },
    "change": {
-    "Global": -17.98,
-    "Pioneer": -17.98
+    "Global": -18,
+    "Pioneer": -18
    },
    "rating_after": {
-    "Global": 1481.79,
-    "Pioneer": 1482.11
+    "Global": 1482,
+    "Pioneer": 1482
    }
   },
   {
@@ -143,12 +143,12 @@
     "Standard": 1500
    },
    "change": {
-    "Global": 18.33,
-    "Standard": 18.0
+    "Global": 18,
+    "Standard": 18
    },
    "rating_after": {
-    "Global": 1500.12,
-    "Standard": 1518.0
+    "Global": 1500,
+    "Standard": 1518
    }
   },
   {
@@ -163,16 +163,16 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1690.01,
-    "Standard": 1500.66
+    "Global": 1690,
+    "Standard": 1501
    },
    "change": {
-    "Global": -14.58,
-    "Standard": -18.32
+    "Global": -14,
+    "Standard": -18
    },
    "rating_after": {
-    "Global": 1485.54,
-    "Standard": 1499.68
+    "Global": 1486,
+    "Standard": 1500
    }
   },
   {
@@ -187,52 +187,52 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1700.29,
-    "Standard": 1465.32
+    "Global": 1700,
+    "Standard": 1465
    },
    "change": {
-    "Global": -14.14,
-    "Standard": -18.63
+    "Global": -15,
+    "Standard": -19
    },
    "rating_after": {
-    "Global": 1471.4,
-    "Standard": 1481.06
+    "Global": 1471,
+    "Standard": 1481
    }
   }
  ],
  "ratings": {
   "Global": {
-   "rating": 1471.4,
-   "peak": 1481.79,
+   "rating": 1471,
+   "peak": 1482,
    "after_rc": [
     {
      "cycle": 4,
-     "rating": 1481.79
+     "rating": 1482
     },
     {
      "cycle": 6,
-     "rating": 1471.4
+     "rating": 1471
     }
    ]
   },
   "Pioneer": {
-   "rating": 1482.11,
-   "peak": 1482.11,
+   "rating": 1482,
+   "peak": 1482,
    "after_rc": [
     {
      "cycle": 4,
-     "rating": 1482.11
+     "rating": 1482
     }
    ],
    "rated_by": "Pioneer"
   },
   "Standard": {
-   "rating": 1481.06,
-   "peak": 1481.06,
+   "rating": 1481,
+   "peak": 1481,
    "after_rc": [
     {
      "cycle": 6,
-     "rating": 1481.06
+     "rating": 1481
     }
    ],
    "rated_by": "Standard"
@@ -249,7 +249,7 @@
    "top_8s": 0,
    "finals": 0,
    "best_finish": "126th",
-   "typical_finish_above": 18.0,
+   "typical_finish_above": 17.9,
    "rank": null
   },
   "Pioneer": {

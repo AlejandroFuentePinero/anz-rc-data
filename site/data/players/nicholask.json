@@ -23,8 +23,8 @@
     "Standard": 1500
    },
    "rating_end": {
-    "Global": 1502.34,
-    "Standard": 1499.68
+    "Global": 1502,
+    "Standard": 1500
    },
    "deck": "Mono-Red Aggro",
    "decklist": "https://melee.gg/Decklist/View/cf1f5415-70d5-4969-8d53-9c37e5abc5dd"
@@ -47,12 +47,12 @@
     "Standard": 1500
    },
    "change": {
-    "Global": 18.0,
-    "Standard": 18.0
+    "Global": 18,
+    "Standard": 18
    },
    "rating_after": {
-    "Global": 1518.0,
-    "Standard": 1518.0
+    "Global": 1518,
+    "Standard": 1518
    }
   },
   {
@@ -67,16 +67,16 @@
    "games": "2-1-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1517.67,
-    "Standard": 1518.0
+    "Global": 1518,
+    "Standard": 1518
    },
    "change": {
-    "Global": 17.99,
-    "Standard": 18.0
+    "Global": 18,
+    "Standard": 18
    },
    "rating_after": {
-    "Global": 1535.99,
-    "Standard": 1536.0
+    "Global": 1536,
+    "Standard": 1536
    }
   },
   {
@@ -91,16 +91,16 @@
    "games": "2-0-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1535.36,
-    "Standard": 1536.0
+    "Global": 1535,
+    "Standard": 1536
    },
    "change": {
-    "Global": 17.99,
-    "Standard": 18.0
+    "Global": 18,
+    "Standard": 18
    },
    "rating_after": {
-    "Global": 1553.98,
-    "Standard": 1554.0
+    "Global": 1554,
+    "Standard": 1554
    }
   },
   {
@@ -115,16 +115,16 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1554.63,
-    "Standard": 1554.0
+    "Global": 1555,
+    "Standard": 1554
    },
    "change": {
-    "Global": -17.99,
-    "Standard": -18.0
+    "Global": -18,
+    "Standard": -18
    },
    "rating_after": {
-    "Global": 1535.99,
-    "Standard": 1536.0
+    "Global": 1536,
+    "Standard": 1536
    }
   },
   {
@@ -139,16 +139,16 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1619.01,
-    "Standard": 1536.0
+    "Global": 1619,
+    "Standard": 1536
    },
    "change": {
-    "Global": -16.49,
-    "Standard": -18.0
+    "Global": -16,
+    "Standard": -18
    },
    "rating_after": {
-    "Global": 1519.51,
-    "Standard": 1518.0
+    "Global": 1520,
+    "Standard": 1518
    }
   },
   {
@@ -163,16 +163,16 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1518.27,
-    "Standard": 1517.35
+    "Global": 1518,
+    "Standard": 1517
    },
    "change": {
-    "Global": -18.02,
-    "Standard": -18.01
+    "Global": -19,
+    "Standard": -18
    },
    "rating_after": {
-    "Global": 1501.48,
-    "Standard": 1499.99
+    "Global": 1501,
+    "Standard": 1500
    }
   },
   {
@@ -187,16 +187,16 @@
    "games": "2-0-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1500.07,
-    "Standard": 1500.0
+    "Global": 1500,
+    "Standard": 1500
    },
    "change": {
-    "Global": 17.97,
-    "Standard": 18.0
+    "Global": 18,
+    "Standard": 18
    },
    "rating_after": {
-    "Global": 1519.46,
-    "Standard": 1517.99
+    "Global": 1519,
+    "Standard": 1518
    }
   },
   {
@@ -211,37 +211,37 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1567.87,
-    "Standard": 1501.27
+    "Global": 1568,
+    "Standard": 1501
    },
    "change": {
-    "Global": -17.12,
-    "Standard": -18.3
+    "Global": -17,
+    "Standard": -18
    },
    "rating_after": {
-    "Global": 1502.34,
-    "Standard": 1499.68
+    "Global": 1502,
+    "Standard": 1500
    }
   }
  ],
  "ratings": {
   "Global": {
-   "rating": 1502.34,
-   "peak": 1502.34,
+   "rating": 1502,
+   "peak": 1502,
    "after_rc": [
     {
      "cycle": 2,
-     "rating": 1502.34
+     "rating": 1502
     }
    ]
   },
   "Standard": {
-   "rating": 1499.68,
-   "peak": 1499.68,
+   "rating": 1500,
+   "peak": 1500,
    "after_rc": [
     {
      "cycle": 2,
-     "rating": 1499.68
+     "rating": 1500
     }
    ],
    "rated_by": "Standard"

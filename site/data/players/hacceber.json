@@ -23,8 +23,8 @@
     "Standard": 1500
    },
    "rating_end": {
-    "Global": 1450.5,
-    "Standard": 1446.64
+    "Global": 1450,
+    "Standard": 1447
    },
    "deck": "Gruul Aggro",
    "decklist": "https://melee.gg/Decklist/View/21bc5e57-e41e-4f91-9678-be4f62f50b20"
@@ -43,16 +43,16 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1525.18,
+    "Global": 1525,
     "Standard": 1500
    },
    "change": {
-    "Global": -17.54,
-    "Standard": -18.0
+    "Global": -18,
+    "Standard": -18
    },
    "rating_after": {
-    "Global": 1482.46,
-    "Standard": 1482.0
+    "Global": 1482,
+    "Standard": 1482
    }
   },
   {
@@ -67,16 +67,16 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1482.0,
-    "Standard": 1482.0
+    "Global": 1482,
+    "Standard": 1482
    },
    "change": {
-    "Global": -18.01,
-    "Standard": -18.0
+    "Global": -18,
+    "Standard": -18
    },
    "rating_after": {
-    "Global": 1464.45,
-    "Standard": 1464.0
+    "Global": 1464,
+    "Standard": 1464
    }
   },
   {
@@ -91,37 +91,37 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1689.98,
-    "Standard": 1499.32
+    "Global": 1690,
+    "Standard": 1499
    },
    "change": {
-    "Global": -13.96,
-    "Standard": -17.36
+    "Global": -14,
+    "Standard": -17
    },
    "rating_after": {
-    "Global": 1450.5,
-    "Standard": 1446.64
+    "Global": 1450,
+    "Standard": 1447
    }
   }
  ],
  "ratings": {
   "Global": {
-   "rating": 1450.5,
-   "peak": 1450.5,
+   "rating": 1450,
+   "peak": 1450,
    "after_rc": [
     {
      "cycle": 6,
-     "rating": 1450.5
+     "rating": 1450
     }
    ]
   },
   "Standard": {
-   "rating": 1446.64,
-   "peak": 1446.64,
+   "rating": 1447,
+   "peak": 1447,
    "after_rc": [
     {
      "cycle": 6,
-     "rating": 1446.64
+     "rating": 1447
     }
    ],
    "rated_by": "Standard"

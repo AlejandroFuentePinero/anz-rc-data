@@ -23,8 +23,8 @@
     "Modern": 1500
    },
    "rating_end": {
-    "Global": 1506.21,
-    "Modern": 1502.32
+    "Global": 1506,
+    "Modern": 1502
    },
    "deck": "Grixis Affinity",
    "decklist": "https://melee.gg/Decklist/View/dc079c21-2edf-4053-bbcf-b4ec00491928"
@@ -47,12 +47,12 @@
     "Modern": 1500
    },
    "change": {
-    "Global": 18.0,
-    "Modern": 18.0
+    "Global": 18,
+    "Modern": 18
    },
    "rating_after": {
-    "Global": 1518.0,
-    "Modern": 1518.0
+    "Global": 1518,
+    "Modern": 1518
    }
   },
   {
@@ -67,16 +67,16 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1614.27,
-    "Modern": 1518.0
+    "Global": 1614,
+    "Modern": 1518
    },
    "change": {
-    "Global": -16.25,
-    "Modern": -18.0
+    "Global": -16,
+    "Modern": -18
    },
    "rating_after": {
-    "Global": 1501.75,
-    "Modern": 1500.0
+    "Global": 1502,
+    "Modern": 1500
    }
   },
   {
@@ -91,16 +91,16 @@
    "games": "2-0-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1499.72,
-    "Modern": 1499.67
+    "Global": 1500,
+    "Modern": 1500
    },
    "change": {
-    "Global": 17.96,
-    "Modern": 17.99
+    "Global": 18,
+    "Modern": 18
    },
    "rating_after": {
-    "Global": 1519.71,
-    "Modern": 1517.99
+    "Global": 1520,
+    "Modern": 1518
    }
   },
   {
@@ -115,16 +115,16 @@
    "games": "2-1-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1602.96,
-    "Modern": 1606.22
+    "Global": 1603,
+    "Modern": 1606
    },
    "change": {
-    "Global": 19.52,
-    "Modern": 19.61
+    "Global": 19,
+    "Modern": 20
    },
    "rating_after": {
-    "Global": 1539.23,
-    "Modern": 1537.6
+    "Global": 1539,
+    "Modern": 1538
    }
   },
   {
@@ -139,16 +139,16 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1535.37,
-    "Modern": 1534.66
+    "Global": 1535,
+    "Modern": 1535
    },
    "change": {
-    "Global": -18.07,
-    "Modern": -18.05
+    "Global": -18,
+    "Modern": -18
    },
    "rating_after": {
-    "Global": 1521.16,
-    "Modern": 1519.55
+    "Global": 1521,
+    "Modern": 1520
    }
   },
   {
@@ -163,37 +163,37 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1689.9,
-    "Modern": 1562.14
+    "Global": 1690,
+    "Modern": 1562
    },
    "change": {
-    "Global": -14.95,
-    "Modern": -17.22
+    "Global": -15,
+    "Modern": -18
    },
    "rating_after": {
-    "Global": 1506.21,
-    "Modern": 1502.32
+    "Global": 1506,
+    "Modern": 1502
    }
   }
  ],
  "ratings": {
   "Global": {
-   "rating": 1506.21,
-   "peak": 1506.21,
+   "rating": 1506,
+   "peak": 1506,
    "after_rc": [
     {
      "cycle": 13,
-     "rating": 1506.21
+     "rating": 1506
     }
    ]
   },
   "Modern": {
-   "rating": 1502.32,
-   "peak": 1502.32,
+   "rating": 1502,
+   "peak": 1502,
    "after_rc": [
     {
      "cycle": 13,
-     "rating": 1502.32
+     "rating": 1502
     }
    ],
    "rated_by": "Modern"

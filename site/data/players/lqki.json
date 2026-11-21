@@ -23,8 +23,8 @@
     "Standard": 1500
    },
    "rating_end": {
-    "Global": 1448.1,
-    "Standard": 1447.07
+    "Global": 1448,
+    "Standard": 1447
    },
    "deck": "Dimir Excruciator",
    "decklist": "https://melee.gg/Decklist/View/16d260af-2cbc-429c-b724-b40b01880c6b"
@@ -43,16 +43,16 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1743.31,
-    "Standard": 1601.38
+    "Global": 1743,
+    "Standard": 1601
    },
    "change": {
-    "Global": -13.65,
-    "Standard": -16.16
+    "Global": -14,
+    "Standard": -16
    },
    "rating_after": {
-    "Global": 1486.35,
-    "Standard": 1483.84
+    "Global": 1486,
+    "Standard": 1484
    }
   },
   {
@@ -67,16 +67,16 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1361.15,
-    "Standard": 1444.94
+    "Global": 1361,
+    "Standard": 1445
    },
    "change": {
-    "Global": -20.27,
-    "Standard": -18.71
+    "Global": -20,
+    "Standard": -19
    },
    "rating_after": {
-    "Global": 1466.08,
-    "Standard": 1465.13
+    "Global": 1466,
+    "Standard": 1465
    }
   },
   {
@@ -91,37 +91,37 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1467.15,
-    "Standard": 1461.44
+    "Global": 1467,
+    "Standard": 1461
    },
    "change": {
-    "Global": -17.98,
-    "Standard": -18.07
+    "Global": -18,
+    "Standard": -18
    },
    "rating_after": {
-    "Global": 1448.1,
-    "Standard": 1447.07
+    "Global": 1448,
+    "Standard": 1447
    }
   }
  ],
  "ratings": {
   "Global": {
-   "rating": 1448.1,
-   "peak": 1448.1,
+   "rating": 1448,
+   "peak": 1448,
    "after_rc": [
     {
      "cycle": 11,
-     "rating": 1448.1
+     "rating": 1448
     }
    ]
   },
   "Standard": {
-   "rating": 1447.07,
-   "peak": 1447.07,
+   "rating": 1447,
+   "peak": 1447,
    "after_rc": [
     {
      "cycle": 11,
-     "rating": 1447.07
+     "rating": 1447
     }
    ],
    "rated_by": "Standard"

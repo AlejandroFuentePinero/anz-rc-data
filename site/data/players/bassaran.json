@@ -23,8 +23,8 @@
     "Standard": 1500
    },
    "rating_end": {
-    "Global": 1485.11,
-    "Standard": 1482.76
+    "Global": 1485,
+    "Standard": 1483
    },
    "deck": "Dimir Midrange",
    "decklist": "https://melee.gg/Decklist/View/63964c81-9b80-4437-afb7-b452004d7531"
@@ -43,16 +43,16 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1441.88,
-    "Standard": 1446.3
+    "Global": 1442,
+    "Standard": 1446
    },
    "change": {
-    "Global": -19.06,
-    "Standard": -18.98
+    "Global": -19,
+    "Standard": -19
    },
    "rating_after": {
-    "Global": 1480.94,
-    "Standard": 1481.02
+    "Global": 1481,
+    "Standard": 1481
    }
   },
   {
@@ -67,16 +67,16 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1673.0,
-    "Standard": 1575.58
+    "Global": 1673,
+    "Standard": 1576
    },
    "change": {
-    "Global": -14.54,
-    "Standard": -16.28
+    "Global": -15,
+    "Standard": -16
    },
    "rating_after": {
-    "Global": 1466.4,
-    "Standard": 1464.74
+    "Global": 1466,
+    "Standard": 1465
    }
   },
   {
@@ -91,37 +91,37 @@
    "games": "2-1-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1505.26,
-    "Standard": 1465.8
+    "Global": 1505,
+    "Standard": 1466
    },
    "change": {
-    "Global": 18.71,
-    "Standard": 18.02
+    "Global": 19,
+    "Standard": 18
    },
    "rating_after": {
-    "Global": 1485.11,
-    "Standard": 1482.76
+    "Global": 1485,
+    "Standard": 1483
    }
   }
  ],
  "ratings": {
   "Global": {
-   "rating": 1485.11,
-   "peak": 1485.11,
+   "rating": 1485,
+   "peak": 1485,
    "after_rc": [
     {
      "cycle": 12,
-     "rating": 1485.11
+     "rating": 1485
     }
    ]
   },
   "Standard": {
-   "rating": 1482.76,
-   "peak": 1482.76,
+   "rating": 1483,
+   "peak": 1483,
    "after_rc": [
     {
      "cycle": 12,
-     "rating": 1482.76
+     "rating": 1483
     }
    ],
    "rated_by": "Standard"

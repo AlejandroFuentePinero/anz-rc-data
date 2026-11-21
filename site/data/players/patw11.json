@@ -23,8 +23,8 @@
     "Standard": 1500
    },
    "rating_end": {
-    "Global": 1502.75,
-    "Standard": 1500.94
+    "Global": 1503,
+    "Standard": 1501
    },
    "deck": "Dimir",
    "decklist": "https://melee.gg/Decklist/View/3b902eea-f51d-40e7-b429-b452003559b4"
@@ -43,16 +43,16 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1624.52,
-    "Standard": 1501.69
+    "Global": 1625,
+    "Standard": 1502
    },
    "change": {
-    "Global": -15.74,
-    "Standard": -17.97
+    "Global": -16,
+    "Standard": -18
    },
    "rating_after": {
-    "Global": 1484.26,
-    "Standard": 1482.03
+    "Global": 1484,
+    "Standard": 1482
    }
   },
   {
@@ -67,16 +67,16 @@
    "games": "1-1-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1406.61,
-    "Standard": 1423.37
+    "Global": 1407,
+    "Standard": 1423
    },
    "change": {
-    "Global": -1.41,
-    "Standard": -1.07
+    "Global": -1,
+    "Standard": -1
    },
    "rating_after": {
-    "Global": 1482.85,
-    "Standard": 1480.96
+    "Global": 1483,
+    "Standard": 1481
    }
   },
   {
@@ -91,16 +91,16 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1532.95,
-    "Standard": 1571.03
+    "Global": 1533,
+    "Standard": 1571
    },
    "change": {
-    "Global": -17.09,
-    "Standard": -16.36
+    "Global": -17,
+    "Standard": -16
    },
    "rating_after": {
-    "Global": 1465.76,
-    "Standard": 1464.6
+    "Global": 1466,
+    "Standard": 1465
    }
   },
   {
@@ -115,16 +115,16 @@
    "games": "2-0-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1501.08,
-    "Standard": 1466.64
+    "Global": 1501,
+    "Standard": 1467
    },
    "change": {
-    "Global": 18.64,
-    "Standard": 18.04
+    "Global": 18,
+    "Standard": 18
    },
    "rating_after": {
-    "Global": 1484.4,
-    "Standard": 1482.64
+    "Global": 1484,
+    "Standard": 1483
    }
   },
   {
@@ -139,37 +139,37 @@
    "games": "2-1-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1503.11,
-    "Standard": 1499.27
+    "Global": 1503,
+    "Standard": 1499
    },
    "change": {
-    "Global": 18.34,
-    "Standard": 18.3
+    "Global": 19,
+    "Standard": 18
    },
    "rating_after": {
-    "Global": 1502.75,
-    "Standard": 1500.94
+    "Global": 1503,
+    "Standard": 1501
    }
   }
  ],
  "ratings": {
   "Global": {
-   "rating": 1502.75,
-   "peak": 1502.75,
+   "rating": 1503,
+   "peak": 1503,
    "after_rc": [
     {
      "cycle": 12,
-     "rating": 1502.75
+     "rating": 1503
     }
    ]
   },
   "Standard": {
-   "rating": 1500.94,
-   "peak": 1500.94,
+   "rating": 1501,
+   "peak": 1501,
    "after_rc": [
     {
      "cycle": 12,
-     "rating": 1500.94
+     "rating": 1501
     }
    ],
    "rated_by": "Standard"

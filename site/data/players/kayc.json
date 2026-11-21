@@ -23,8 +23,8 @@
     "Standard": 1500
    },
    "rating_end": {
-    "Global": 1445.06,
-    "Standard": 1445.68
+    "Global": 1445,
+    "Standard": 1446
    },
    "deck": "Mono-White Midrange",
    "decklist": "https://melee.gg/Decklist/View/308d9e79-8165-473e-9133-1a7eb269f242"
@@ -43,16 +43,16 @@
    "games": "1-1-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1464.3,
+    "Global": 1464,
     "Standard": 1500
    },
    "change": {
-    "Global": -0.65,
-    "Standard": 0.0
+    "Global": -1,
+    "Standard": 0
    },
    "rating_after": {
-    "Global": 1499.35,
-    "Standard": 1500.0
+    "Global": 1499,
+    "Standard": 1500
    }
   },
   {
@@ -67,16 +67,16 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1482.0,
-    "Standard": 1482.0
+    "Global": 1482,
+    "Standard": 1482
    },
    "change": {
-    "Global": -18.32,
-    "Standard": -18.33
+    "Global": -18,
+    "Standard": -18
    },
    "rating_after": {
-    "Global": 1481.03,
-    "Standard": 1481.67
+    "Global": 1481,
+    "Standard": 1482
    }
   },
   {
@@ -91,16 +91,16 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1482.97,
-    "Standard": 1482.0
+    "Global": 1483,
+    "Standard": 1482
    },
    "change": {
-    "Global": -17.96,
-    "Standard": -17.99
+    "Global": -18,
+    "Standard": -18
    },
    "rating_after": {
-    "Global": 1463.07,
-    "Standard": 1463.68
+    "Global": 1463,
+    "Standard": 1464
    }
   },
   {
@@ -115,37 +115,37 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1462.72,
-    "Standard": 1464.0
+    "Global": 1463,
+    "Standard": 1464
    },
    "change": {
-    "Global": -18.01,
-    "Standard": -17.99
+    "Global": -18,
+    "Standard": -18
    },
    "rating_after": {
-    "Global": 1445.06,
-    "Standard": 1445.68
+    "Global": 1445,
+    "Standard": 1446
    }
   }
  ],
  "ratings": {
   "Global": {
-   "rating": 1445.06,
-   "peak": 1445.06,
+   "rating": 1445,
+   "peak": 1445,
    "after_rc": [
     {
      "cycle": 2,
-     "rating": 1445.06
+     "rating": 1445
     }
    ]
   },
   "Standard": {
-   "rating": 1445.68,
-   "peak": 1445.68,
+   "rating": 1446,
+   "peak": 1446,
    "after_rc": [
     {
      "cycle": 2,
-     "rating": 1445.68
+     "rating": 1446
     }
    ],
    "rated_by": "Standard"

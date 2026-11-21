@@ -73,11 +73,14 @@ def players(accounts: dict[str, dict], curation: dict) -> dict[str, dict]:
                 "remove that join from the curation file"
             )
         overrides = [curation["display_names"][username] for username in group if username in curation["display_names"]]
-        latest = max(group, key=lambda username: accounts[username]["cycles"][-1])
+        # A real name from any of the Player's accounts beats a username (the owner's ruling), the latest one first.
+        named = [username for username in group if accounts[username]["display_name"] != username]
+        latest = max(named or group, key=lambda username: accounts[username]["cycles"][-1])
         player = {
             # The earliest account names the Player's URL, so a later account never moves it.
             "slug": re.sub(r"[^a-z0-9_]+", "-", group[0].lower()).strip("-"),
-            # Override, else the latest account's real name, else its username (Melee shows it when the name is hidden).
+            # Override, else the latest real name among the accounts, else the latest username (Melee shows it when
+            # the name is hidden).
             "name": overrides[0] if overrides else accounts[latest]["display_name"],
             "usernames": group,
         }

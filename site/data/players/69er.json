@@ -23,8 +23,8 @@
     "Standard": 1500
    },
    "rating_end": {
-    "Global": 1481.39,
-    "Standard": 1482.0
+    "Global": 1481,
+    "Standard": 1482
    },
    "deck": "Rakdos Midrange",
    "decklist": "https://melee.gg/Decklist/View/e5d36c75-9e84-448f-b914-da195a6d2048"
@@ -43,16 +43,16 @@
    "games": "1-1-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1500.31,
+    "Global": 1500,
     "Standard": 1500
    },
    "change": {
-    "Global": 0.01,
-    "Standard": 0.0
+    "Global": 0,
+    "Standard": 0
    },
    "rating_after": {
-    "Global": 1500.01,
-    "Standard": 1500.0
+    "Global": 1500,
+    "Standard": 1500
    }
   },
   {
@@ -67,16 +67,16 @@
    "games": "2-0-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1464.96,
-    "Standard": 1500.0
+    "Global": 1465,
+    "Standard": 1500
    },
    "change": {
-    "Global": 17.36,
-    "Standard": 18.0
+    "Global": 17,
+    "Standard": 18
    },
    "rating_after": {
-    "Global": 1517.37,
-    "Standard": 1518.0
+    "Global": 1517,
+    "Standard": 1518
    }
   },
   {
@@ -91,16 +91,16 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1517.99,
-    "Standard": 1518.0
+    "Global": 1518,
+    "Standard": 1518
    },
    "change": {
-    "Global": -17.99,
-    "Standard": -18.0
+    "Global": -18,
+    "Standard": -18
    },
    "rating_after": {
-    "Global": 1499.38,
-    "Standard": 1500.0
+    "Global": 1499,
+    "Standard": 1500
    }
   },
   {
@@ -115,37 +115,37 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1500.05,
-    "Standard": 1500.0
+    "Global": 1500,
+    "Standard": 1500
    },
    "change": {
-    "Global": -17.99,
-    "Standard": -18.0
+    "Global": -18,
+    "Standard": -18
    },
    "rating_after": {
-    "Global": 1481.39,
-    "Standard": 1482.0
+    "Global": 1481,
+    "Standard": 1482
    }
   }
  ],
  "ratings": {
   "Global": {
-   "rating": 1481.39,
-   "peak": 1481.39,
+   "rating": 1481,
+   "peak": 1481,
    "after_rc": [
     {
      "cycle": 2,
-     "rating": 1481.39
+     "rating": 1481
     }
    ]
   },
   "Standard": {
-   "rating": 1482.0,
-   "peak": 1482.0,
+   "rating": 1482,
+   "peak": 1482,
    "after_rc": [
     {
      "cycle": 2,
-     "rating": 1482.0
+     "rating": 1482
     }
    ],
    "rated_by": "Standard"

@@ -24,8 +24,8 @@
     "Pioneer": 1500
    },
    "rating_end": {
-    "Global": 1464.0,
-    "Pioneer": 1464.0
+    "Global": 1464,
+    "Pioneer": 1464
    },
    "deck": "Jeskai Ascendancy Combo",
    "decklist": "https://melee.gg/Decklist/View/e4268d36-7053-458d-a78d-5505d03cd4c4"
@@ -44,12 +44,12 @@
     "matches": 1
    },
    "rating_start": {
-    "Global": 1464.0,
+    "Global": 1464,
     "Standard": 1500
    },
    "rating_end": {
-    "Global": 1446.66,
-    "Standard": 1482.0
+    "Global": 1447,
+    "Standard": 1482
    },
    "deck": "Grixis Midrange",
    "decklist": "https://melee.gg/Decklist/View/c9502694-6e00-4bea-bdbe-208607665ce7"
@@ -72,12 +72,12 @@
     "Pioneer": 1500
    },
    "change": {
-    "Global": -18.0,
-    "Pioneer": -18.0
+    "Global": -18,
+    "Pioneer": -18
    },
    "rating_after": {
-    "Global": 1482.0,
-    "Pioneer": 1482.0
+    "Global": 1482,
+    "Pioneer": 1482
    }
   },
   {
@@ -92,16 +92,16 @@
    "games": "2-1-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1482.0,
-    "Pioneer": 1482.0
+    "Global": 1482,
+    "Pioneer": 1482
    },
    "change": {
-    "Global": 18.0,
-    "Pioneer": 18.0
+    "Global": 18,
+    "Pioneer": 18
    },
    "rating_after": {
-    "Global": 1500.0,
-    "Pioneer": 1500.0
+    "Global": 1500,
+    "Pioneer": 1500
    }
   },
   {
@@ -116,16 +116,16 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1500.0,
-    "Pioneer": 1500.0
+    "Global": 1500,
+    "Pioneer": 1500
    },
    "change": {
-    "Global": -18.0,
-    "Pioneer": -18.0
+    "Global": -18,
+    "Pioneer": -18
    },
    "rating_after": {
-    "Global": 1482.0,
-    "Pioneer": 1482.0
+    "Global": 1482,
+    "Pioneer": 1482
    }
   },
   {
@@ -140,16 +140,16 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1482.0,
-    "Pioneer": 1482.0
+    "Global": 1482,
+    "Pioneer": 1482
    },
    "change": {
-    "Global": -18.0,
-    "Pioneer": -18.0
+    "Global": -18,
+    "Pioneer": -18
    },
    "rating_after": {
-    "Global": 1464.0,
-    "Pioneer": 1464.0
+    "Global": 1464,
+    "Pioneer": 1464
    }
   },
   {
@@ -168,48 +168,48 @@
     "Standard": 1500
    },
    "change": {
-    "Global": -17.34,
-    "Standard": -18.0
+    "Global": -17,
+    "Standard": -18
    },
    "rating_after": {
-    "Global": 1446.66,
-    "Standard": 1482.0
+    "Global": 1447,
+    "Standard": 1482
    }
   }
  ],
  "ratings": {
   "Global": {
-   "rating": 1446.66,
-   "peak": 1464.0,
+   "rating": 1447,
+   "peak": 1464,
    "after_rc": [
     {
      "cycle": 1,
-     "rating": 1464.0
+     "rating": 1464
     },
     {
      "cycle": 2,
-     "rating": 1446.66
+     "rating": 1447
     }
    ]
   },
   "Pioneer": {
-   "rating": 1464.0,
-   "peak": 1464.0,
+   "rating": 1464,
+   "peak": 1464,
    "after_rc": [
     {
      "cycle": 1,
-     "rating": 1464.0
+     "rating": 1464
     }
    ],
    "rated_by": "Pioneer"
   },
   "Standard": {
-   "rating": 1482.0,
-   "peak": 1482.0,
+   "rating": 1482,
+   "peak": 1482,
    "after_rc": [
     {
      "cycle": 2,
-     "rating": 1482.0
+     "rating": 1482
     }
    ],
    "rated_by": "Standard"
@@ -225,8 +225,8 @@
    "rcs": 2,
    "top_8s": 0,
    "finals": 0,
-   "best_finish": "136th",
-   "typical_finish_above": 5.2,
+   "best_finish": "132nd",
+   "typical_finish_above": 5.3,
    "rank": null
   },
   "Pioneer": {

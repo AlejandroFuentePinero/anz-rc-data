@@ -29,7 +29,7 @@ One person across every RC they entered, recognised by their Melee account. Two 
 _Avoid_: Pilot, competitor, entrant, account
 
 **Display Name**:
-The name the site shows for a Player: the real name their Melee account shows, else their username, unless the owner names one.
+The name the site shows for a Player: the real name their Melee account shows, else their username, unless the owner names one. A Player with several accounts shows the latest real name any of them shows, so a newer account that hides it does not hide it.
 _Avoid_: Username (one of its sources), handle
 
 **New Player**:
@@ -58,6 +58,10 @@ _Avoid_: Placement, position, result
 Reaching an RC's playoff, the result the scene counts most after winning it.
 _Avoid_: Cut, day 2
 
+**Win rate**:
+Match wins over wins plus losses (66-31-3 is 68%): every draw, played or intentional, is in neither, though the record counts both.
+_Avoid_: Match win percentage, MWP
+
 **Top 8 rate**:
 Top 8s over RCs played: a Player's own (3 of 7), or every Entry's at one level of Experience (15 of 192).
 
@@ -72,6 +76,10 @@ _Avoid_: Win, trophy, first place
 **Final**:
 Reaching an RC's final: a Winner or Runner-up Finish. The Player card and the Leaderboard count Finals rather than Titles.
 _Avoid_: Final appearance, top 2
+
+**Best Finish**:
+A Player's lowest-placed Finish, so any Winner, Runner-up, Top 4 or Top 8 comes first, in that order. Read as the place alone (12th), never against the Field Size, so a 12th of 156 beats a 14th of 222.
+_Avoid_: Best result, peak finish
 
 **Typical Finish**:
 A Player's median Finish as a share of the Field Size, read as the share of the field it finishes above ("above 78% of the field"), the consistency figure beside Best Finish. The Top 4 and Top 8 tiers count at ranks 3.5 and 6.5.

@@ -495,6 +495,21 @@ def test_display_names_follow_the_override_then_the_real_name_then_the_username(
     assert bundle.card("ana")["matches"][0]["opponent"] == {"slug": "alejandrofp", "name": "Alejandro de la Fuente"}
 
 
+def test_a_joined_player_shows_a_real_name_from_any_account_over_a_newer_accounts_username(tmp_path):
+    # Nathan shows his real name on his first account and only a username on his newer one (the owner's ruling).
+    first, newer = ("nathan1", "Nathan Whalen"), ("natw", "natw")
+    bundle = run_build(
+        tmp_path,
+        [
+            (1, "Pioneer", [(SWISS, [played(first, ANA, 2, 0)])], [standing(1, first), standing(2, ANA)]),
+            (2, "Pioneer", [(SWISS, [played(newer, ANA, 2, 0)])], [standing(1, newer), standing(2, ANA)]),
+        ],
+        curation='joins = [["nathan1", "natw"]]\n',
+    )
+
+    assert [(p["slug"], p["name"]) for p in bundle.index() if p["slug"] == "nathan1"] == [("nathan1", "Nathan Whalen")]
+
+
 # Ratings (ADR 0001). Expected values are worked by hand from mtgeloproject's rule: E = 1 / (1 + 10^(-gap / D)),
 # D set so a 200 point gap is a 60% expectation, and a Match moves each Rating by K * (score - E).
 
@@ -531,8 +546,8 @@ def test_a_played_draw_moves_the_higher_rated_player_down(tmp_path):
 
     bundle = run_build(tmp_path, [(1, "Modern", rounds, [standing(1, ANA), standing(2, BEN)])])
 
-    assert rating(bundle, "ana") == pytest.approx(1518 - 0.66, abs=0.01)
-    assert rating(bundle, "ben") == pytest.approx(1482 + 0.66, abs=0.01)
+    assert rating(bundle, "ana") == 1517  # 1517.34, shown whole
+    assert rating(bundle, "ben") == 1483  # 1482.66
 
 
 def test_the_order_of_matches_inside_a_round_and_of_players_inside_a_match_changes_no_rating(tmp_path):
@@ -563,8 +578,8 @@ def test_a_format_rating_moves_only_on_its_own_format_and_starts_at_1500(tmp_pat
 
     assert rating(bundle, "ana", "Pioneer") == pytest.approx(1500 + K / 2)
     assert rating(bundle, "ana", "Modern") == pytest.approx(1500 - K / 2)
-    assert rating(bundle, "ana") == pytest.approx(1518 - 18.66, abs=0.01)
-    assert rating(bundle, "ben") == pytest.approx(1482 + 18.66, abs=0.01)
+    assert rating(bundle, "ana") == 1499  # 1499.34, shown whole
+    assert rating(bundle, "ben") == 1501  # 1500.66
     assert set(bundle.card("ana")["ratings"]) == {"Global", "Pioneer", "Modern"}
     assert bundle.card("ana")["ratings"]["Modern"]["rated_by"] == "Modern"
 
@@ -597,9 +612,9 @@ def test_peak_rating_is_the_highest_after_any_rc_not_the_1500_start(tmp_path):
     )
 
     ana = bundle.card("ana")["ratings"]["Global"]
-    assert ana["after_rc"] == [{"cycle": 1, "rating": 1518.0}, {"cycle": 2, "rating": 1518.0}, {"cycle": 3, "rating": 1499.67}]
-    assert ana["peak"] == 1518.0
-    assert ana["rating"] == 1499.67
+    assert ana["after_rc"] == [{"cycle": 1, "rating": 1518}, {"cycle": 2, "rating": 1518}, {"cycle": 3, "rating": 1500}]  # 1499.67
+    assert ana["peak"] == 1518
+    assert ana["rating"] == 1500
     assert bundle.card("ben")["ratings"]["Global"]["peak"] == 1482.0
     assert bundle.card("ana")["ratings"]["Modern"]["after_rc"] == [{"cycle": 3, "rating": 1482.0}]
     assert bundle.card("ana")["ratings"]["Pioneer"]["peak"] == 1518.0
@@ -649,7 +664,7 @@ def test_a_match_melee_left_unconfirmed_counts_by_its_game_score(tmp_path):
     ana = bundle.card("ana")
     assert [(m["result"], m["games"]) for m in ana["matches"]] == [("Win", "2-0-0"), ("Draw", "0-0-1")]
     assert ana["rcs"][0]["record"] == "1-0-1"
-    assert rating(bundle, "ana") == pytest.approx(1518 - 0.66, abs=0.01)  # the draw from 1518 v 1482, as worked above
+    assert rating(bundle, "ana") == 1517  # the draw from 1518 v 1482, as worked above: 1517.34
 
 
 # Which 0-0-3 is an Intentional Draw (ADR 0001, following mtgeloproject): one in the last two Swiss rounds at tables 1 to
@@ -675,8 +690,8 @@ def test_a_0_0_3_is_an_intentional_draw_only_in_the_last_two_swiss_rounds_at_tab
 
     assert [m["result"] for m in bundle.card("ana")["matches"]] == ["Win", "Draw", "Intentional Draw"]
     assert [m["result"] for m in bundle.card("cal")["matches"]] == ["Win", "Draw"]
-    assert rating(bundle, "ana") == pytest.approx(1518 - 0.66, abs=0.01)  # the early draw moves, the late top-table one not
-    assert rating(bundle, "cal") == pytest.approx(1518 - 0.66, abs=0.01)  # the late table-9 draw moves
+    assert rating(bundle, "ana") == 1517  # 1517.34: the early draw moves, the late top-table one not
+    assert rating(bundle, "cal") == 1517  # 1517.34: the late table-9 draw moves
     assert bundle.card("ana")["rcs"][0]["record"] == "1-0-2"
 
 
@@ -744,8 +759,8 @@ def test_the_summary_gives_each_view_its_record_win_rate_and_finishes(tmp_path):
     assert bundle.card("ben")["summary"]["Global"]["finals"] == 2  # Runner-up in Cycle 1, Winner in Cycle 2
 
 
-def test_best_finish_puts_any_top_8_first_then_the_best_share_of_the_field(tmp_path):
-    # Ben: 9th of 10 (90%), 12th of 20 (60%), then 8th of 8, a Top 8 at 6.5 / 8 = 81% that still beats 12th of 20.
+def test_best_finish_is_the_lowest_place_with_any_top_8_first(tmp_path):
+    # Ben: 9th of 10, 12th of 20 (a better share of the field, but a worse place), then 8th of 8, a Top 8.
     # Cal: the first two only. Dee: disqualified, so no Finish at all.
     rcs = [
         (1, "Pioneer", [(SWISS, [played(BEN, CAL, 2, 0)])], field(1, 10, {9: BEN, 10: CAL})),
@@ -756,10 +771,23 @@ def test_best_finish_puts_any_top_8_first_then_the_best_share_of_the_field(tmp_p
     bundle = run_build(tmp_path, rcs)
 
     assert bundle.card("ben")["summary"]["Global"]["best_finish"] == "Top 8"
-    assert bundle.card("ben")["summary"]["Pioneer"]["best_finish"] == "12th"
-    assert bundle.card("cal")["summary"]["Global"]["best_finish"] == "13th"  # 13th of 20 (65%) beats 10th of 10 (100%)
+    assert bundle.card("ben")["summary"]["Pioneer"]["best_finish"] == "9th"
+    assert bundle.card("cal")["summary"]["Global"]["best_finish"] == "10th"  # 10th of 10 beats 13th of 20
     dee = bundle.card("dee")["summary"]["Global"]
     assert (dee["best_finish"], dee["typical_finish_above"], dee["rcs"]) == (None, None, 1)
+
+
+def test_typical_finish_takes_the_median_of_exact_shares_and_rounds_once(tmp_path):
+    # Ben: 9th of 9 (100%) and 9th of 14 (64.2857%). The median is 82.1429%, so above 17.857% of the field: 17.9. Rounding
+    # each share first (100 and 64.3) would give a median of 82.15 and 17.8.
+    rcs = [
+        (1, "Pioneer", [(SWISS, [played(ANA, BEN, 2, 0)])], field(1, 9, {1: ANA, 9: BEN})),
+        (2, "Pioneer", [(SWISS, [played(ANA, BEN, 2, 0)])], field(2, 14, {1: ANA, 9: BEN})),
+    ]
+
+    bundle = run_build(tmp_path, rcs)
+
+    assert bundle.card("ben")["summary"]["Global"]["typical_finish_above"] == 17.9
 
 
 def three_pioneer_rcs_and_a_modern_one():
@@ -815,21 +843,21 @@ def test_each_rc_gives_its_rating_at_start_and_end_in_global_and_its_format(tmp_
     assert [(rc["rating_start"], rc["rating_end"]) for rc in ana["rcs"]] == [
         ({"Global": 1500.0, "Modern": 1500.0}, {"Global": 1518.0, "Modern": 1518.0}),  # a first RC starts at 1500
         ({"Global": 1518.0, "Pioneer": 1500.0}, {"Global": 1500.0, "Pioneer": 1482.0}),
-        ({"Global": 1500.0, "Modern": 1518.0}, {"Global": 1517.67, "Modern": 1535.34}),  # Modern picks up from Cycle 1
+        ({"Global": 1500.0, "Modern": 1518.0}, {"Global": 1518, "Modern": 1535}),  # Modern picks up from Cycle 1: 1517.67, 1535.34
     ]
     assert [m["change"] for m in ana["matches"]] == [
         {"Global": 18.0, "Modern": 18.0},
         None,  # the bye
         None,  # the Intentional Draw
         {"Global": -18.0, "Pioneer": -18.0},
-        {"Global": 17.67, "Modern": 17.34},
+        {"Global": 18, "Modern": 17},  # the difference of the whole Ratings, so the card adds up (17.67 and 17.34 exactly)
     ]
     assert [m["rating_after"] for m in ana["matches"]] == [
         {"Global": 1518.0, "Modern": 1518.0},
         None,
         None,
         {"Global": 1500.0, "Pioneer": 1482.0},
-        {"Global": 1517.67, "Modern": 1535.34},
+        {"Global": 1518, "Modern": 1535},
     ]
     assert [rc["win_rate"] for rc in ana["rcs"]] == [{"rate": 100.0, "matches": 1}, {"rate": 0.0, "matches": 1}, {"rate": 100.0, "matches": 1}]
 
@@ -843,7 +871,7 @@ def test_each_rcs_start_plus_its_changes_is_its_end_and_the_next_rc_starts_there
         for rc in card["rcs"]:
             for view in rc["rating_start"]:
                 changes = [m["change"][view] for m in card["matches"] if m["cycle"] == rc["cycle"] and m["change"]]
-                assert rc["rating_start"][view] + sum(changes) == pytest.approx(rc["rating_end"][view], abs=0.01)
+                assert rc["rating_start"][view] + sum(changes) == rc["rating_end"][view]
                 assert rc["rating_start"][view] == last_end.get(view, 1500.0)
                 last_end[view] = rc["rating_end"][view]
             assert rc["rating_end"]["Global"] == card["ratings"]["Global"]["after_rc"][card["rcs"].index(rc)]["rating"]
@@ -851,11 +879,12 @@ def test_each_rcs_start_plus_its_changes_is_its_end_and_the_next_rc_starts_there
 
 def test_each_rc_gives_the_ratings_of_its_typical_player_its_top_10_percent_and_its_highest(tmp_path):
     # After Cycle 1: Ana 1518 (beat Ben), Ben 1482, Cal and Dee 1500 (a played draw). Sorted 1482, 1500, 1500, 1518:
-    # the median is 1500, the 90th percentile sits 0.9 x 3 = 2.7 places up, 1500 + 0.7 x 18 = 1512.6, and Ana is highest.
+    # the median is 1500, the 90th percentile sits 0.9 x 3 = 2.7 places up, 1500 + 0.7 x 18 = 1512.6 (shown 1513), and Ana
+    # is highest.
     rounds = [(SWISS, [played(ANA, BEN, 2, 0), played(CAL, DEE, 1, 1)])]
     bundle = run_build(tmp_path, [(1, "Modern", rounds, field(1, 4, {1: ANA, 2: CAL, 3: DEE, 4: BEN}))])
 
-    assert bundle.rcs()[0]["field_rating"] == {"median": 1500.0, "top_10": 1512.6, "highest": 1518.0}
+    assert bundle.rcs()[0]["field_rating"] == {"median": 1500, "top_10": 1513, "highest": 1518}
 
 
 # The Leaderboard (issue #9): the top 50 eligible Players in Global and each shipped Format.
@@ -882,7 +911,7 @@ def test_a_leaderboard_row_carries_the_players_rating_record_and_finishes_in_the
         "slug": "ana",
         "name": "Ana Lopez",
         "rating": bundle.card("ana")["ratings"]["Global"]["rating"],
-        "peak": 1517.67,  # after Cycle 1: +18 over Ben, then -0.33 for a played draw with Cal at 1500
+        "peak": 1518,  # 1517.67 after Cycle 1: +18 over Ben, then -0.33 for a played draw with Cal at 1500
         "record": "2-1-2",
         "win_rate": {"rate": 66.7, "matches": 3},
         "rcs": 3,

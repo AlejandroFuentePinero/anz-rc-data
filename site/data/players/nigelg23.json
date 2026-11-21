@@ -23,8 +23,8 @@
     "Standard": 1500
    },
    "rating_end": {
-    "Global": 1465.03,
-    "Standard": 1463.69
+    "Global": 1465,
+    "Standard": 1464
    },
    "deck": "Domain Ramp",
    "decklist": "https://melee.gg/Decklist/View/5b3fce86-1c16-43a1-9e15-5207b7181c0c"
@@ -43,12 +43,12 @@
     "matches": 5
    },
    "rating_start": {
-    "Global": 1465.03,
-    "Standard": 1463.69
+    "Global": 1465,
+    "Standard": 1464
    },
    "rating_end": {
-    "Global": 1453.85,
-    "Standard": 1447.29
+    "Global": 1454,
+    "Standard": 1447
    },
    "deck": "Azorius Fliers",
    "decklist": "https://melee.gg/Decklist/View/648f372d-4890-4331-8d37-b4510168d4b7"
@@ -71,12 +71,12 @@
     "Standard": 1500
    },
    "change": {
-    "Global": 0.0,
-    "Standard": 0.0
+    "Global": 0,
+    "Standard": 0
    },
    "rating_after": {
-    "Global": 1500.0,
-    "Standard": 1500.0
+    "Global": 1500,
+    "Standard": 1500
    }
   },
   {
@@ -91,16 +91,16 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1541.87,
-    "Standard": 1500.0
+    "Global": 1542,
+    "Standard": 1500
    },
    "change": {
-    "Global": -17.24,
-    "Standard": -18.0
+    "Global": -17,
+    "Standard": -18
    },
    "rating_after": {
-    "Global": 1482.76,
-    "Standard": 1482.0
+    "Global": 1483,
+    "Standard": 1482
    }
   },
   {
@@ -115,16 +115,16 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1497.29,
-    "Standard": 1464.98
+    "Global": 1497,
+    "Standard": 1465
    },
    "change": {
-    "Global": -17.73,
-    "Standard": -18.31
+    "Global": -18,
+    "Standard": -18
    },
    "rating_after": {
-    "Global": 1465.03,
-    "Standard": 1463.69
+    "Global": 1465,
+    "Standard": 1464
    }
   },
   {
@@ -139,16 +139,16 @@
    "games": "2-1-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1555.97,
-    "Standard": 1481.99
+    "Global": 1556,
+    "Standard": 1482
    },
    "change": {
-    "Global": 19.65,
-    "Standard": 18.33
+    "Global": 20,
+    "Standard": 18
    },
    "rating_after": {
-    "Global": 1484.68,
-    "Standard": 1482.02
+    "Global": 1485,
+    "Standard": 1482
    }
   },
   {
@@ -163,16 +163,16 @@
    "games": "1-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1493.39,
-    "Standard": 1518.0
+    "Global": 1493,
+    "Standard": 1518
    },
    "change": {
-    "Global": -17.84,
-    "Standard": -17.34
+    "Global": -18,
+    "Standard": -17
    },
    "rating_after": {
-    "Global": 1466.84,
-    "Standard": 1464.68
+    "Global": 1467,
+    "Standard": 1465
    }
   },
   {
@@ -187,16 +187,16 @@
    "games": "2-0-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1419.59,
-    "Standard": 1414.49
+    "Global": 1420,
+    "Standard": 1414
    },
    "change": {
-    "Global": 17.14,
-    "Standard": 17.09
+    "Global": 17,
+    "Standard": 17
    },
    "rating_after": {
-    "Global": 1483.98,
-    "Standard": 1481.76
+    "Global": 1484,
+    "Standard": 1482
    }
   },
   {
@@ -211,16 +211,16 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1659.42,
-    "Standard": 1528.34
+    "Global": 1659,
+    "Standard": 1528
    },
    "change": {
-    "Global": -14.83,
-    "Standard": -17.15
+    "Global": -15,
+    "Standard": -17
    },
    "rating_after": {
-    "Global": 1469.15,
-    "Standard": 1464.61
+    "Global": 1469,
+    "Standard": 1465
    }
   },
   {
@@ -235,45 +235,45 @@
    "games": "0-2-0",
    "reconstructed": false,
    "opponent_rating": {
-    "Global": 1618.19,
-    "Standard": 1501.59
+    "Global": 1618,
+    "Standard": 1502
    },
    "change": {
-    "Global": -15.3,
-    "Standard": -17.33
+    "Global": -15,
+    "Standard": -18
    },
    "rating_after": {
-    "Global": 1453.85,
-    "Standard": 1447.29
+    "Global": 1454,
+    "Standard": 1447
    }
   }
  ],
  "ratings": {
   "Global": {
-   "rating": 1453.85,
-   "peak": 1465.03,
+   "rating": 1454,
+   "peak": 1465,
    "after_rc": [
     {
      "cycle": 6,
-     "rating": 1465.03
+     "rating": 1465
     },
     {
      "cycle": 12,
-     "rating": 1453.85
+     "rating": 1454
     }
    ]
   },
   "Standard": {
-   "rating": 1447.29,
-   "peak": 1463.69,
+   "rating": 1447,
+   "peak": 1464,
    "after_rc": [
     {
      "cycle": 6,
-     "rating": 1463.69
+     "rating": 1464
     },
     {
      "cycle": 12,
-     "rating": 1447.29
+     "rating": 1447
     }
    ],
    "rated_by": "Standard"
