@@ -86,12 +86,18 @@ tr.rc.open > td { background: var(--sunk); border-bottom-color: transparent; }
 tr.rounds > td { background: var(--sunk); padding: 0 16px 14px; }
 tr.rounds table { background: var(--raised); border-radius: 8px; }
 
-/* Compare Players beside the card: a narrow column until a Player is compared, then half the page. */
+/* Compare Players beside the card: a narrow column until a Player is compared, then half the page. Under 1440px
+   half the page is too narrow for the card's tables, so a comparison goes under the card instead. */
 .card-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0 32px; align-items: start; }
 @media (min-width: 1100px) {
   .card-layout { grid-template-columns: minmax(0, 1fr) 340px; }
-  .card-layout:has(#compared:not([hidden])) { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .compare-pane { padding-left: 32px; border-left: 0.5px solid var(--rule); }
+  .card-layout:has(#compared:not([hidden])) { grid-template-columns: minmax(0, 1fr); }
+  .card-layout:has(#compared:not([hidden])) .compare-pane { padding-left: 0; border-left: 0; }
+}
+@media (min-width: 1440px) {
+  .card-layout:has(#compared:not([hidden])) { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .card-layout:has(#compared:not([hidden])) .compare-pane { padding-left: 32px; border-left: 0.5px solid var(--rule); }
 }
 .picker { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-start; }
 .compare-search { width: min(320px, 100%); }
