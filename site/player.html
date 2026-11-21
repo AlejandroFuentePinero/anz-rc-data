@@ -68,7 +68,7 @@
 <div id="compared" hidden>
 <div class="scroll">
 <table class="summary">
-  <thead><tr><th>Player</th><th class="num" id="compared-rank">ANZ Rank</th><th class="num">RCs</th><th class="num">Rating</th><th class="num">Peak Rating</th><th>W-L-D</th><th class="num">Win rate</th><th class="num">Top 8s</th><th class="num">Finals</th><th>Best Finish</th><th class="num">Typically finishes top</th></tr></thead>
+  <thead><tr><th>Player</th><th class="num">ANZ Rank</th><th class="num">RCs</th><th class="num">Rating</th><th class="num">Peak Rating</th><th>W-L-D</th><th class="num">Win rate</th><th class="num">Top 8s</th><th class="num">Finals</th><th>Best Finish</th><th class="num">Typically finishes top</th></tr></thead>
   <tbody id="compared-summary"></tbody>
 </table>
 </div>
@@ -82,8 +82,6 @@
 <script src="search.js?v=2"></script>
 <script>
 const VIEWS = ["Global", "Pioneer", "Standard", "Modern"];
-// PROTOTYPE: how many Players are ranked in each view, counted from the cards; the build would publish these.
-const RANKED = { Global: 301, Pioneer: 82, Standard: 109, Modern: 88 };
 const MAX_COMPARED = 3;  // Players compared with the card's own, so the plot stays readable
 const COLOURS = ["#1c5cab", "#c2571a", "#2a8f7b", "#7b4fa8", "#c23b6e"];  // the card's Player, then each compared one
 
@@ -168,7 +166,7 @@ function show() {
         // The name carries the Player's ANZ Rank, so it reads before the table does.
         const rank = card.summary.Global.rank;
         document.getElementById("name").replaceChildren(card.name, Object.assign(document.createElement("span"), {
-          className: "standing", textContent: rank ? `(#${rank} of ${RANKED.Global})` : "(Not ranked)" }));
+          className: "standing", textContent: rank ? `(#${rank})` : "(Not ranked)" }));
         document.getElementById("compare-heading").textContent = `Compare ${card.name} with other Players`;
         document.getElementById("usernames").textContent = `Melee: ${card.usernames.join(", ")}`;
       }
@@ -190,7 +188,7 @@ function draw() {
   for (const name of VIEWS) {
     const s = card.summary[name];
     if (!s) { addRow(summary, [[name === "Global" ? "All" : name], ...Array(10).fill([null])]); continue; }
-    addRow(summary, [[name === "Global" ? "All" : name], ...summaryCells(s, card.ratings[name], name)], name === "Global" ? "global" : null);
+    addRow(summary, [[name === "Global" ? "All" : name], ...summaryCells(s, card.ratings[name])], name === "Global" ? "global" : null);
   }
 
   const body = document.getElementById("rcs");
@@ -262,7 +260,6 @@ function compare() {
   }
 
   const summary = document.getElementById("compared-summary");
-  document.getElementById("compared-rank").textContent = `ANZ Rank (of ${RANKED.Global})`;
   summary.replaceChildren();
   for (const player of players) {
     addRow(summary, [[cardLink(player)], ...summaryCells(player.summary.Global, player.ratings.Global)], player === card ? "global" : null);
@@ -270,10 +267,9 @@ function compare() {
 }
 
 // A summary row after its first cell: a view's figures and Ratings.
-function summaryCells(s, r, view) {
+function summaryCells(s, r) {
   return [
-    // A Format's rows each have their own pool; the comparison's rows share All's, so its header carries it.
-    [s.rank ? (view ? `${s.rank} of ${RANKED[view]}` : s.rank) : "", "num"], [s.rcs, "num"], [rating(r.rating), "num"], [rating(r.peak), "num"], [s.record],
+    [s.rank ?? "", "num"], [s.rcs, "num"], [rating(r.rating), "num"], [rating(r.peak), "num"], [s.record],
     [rate(s.win_rate), "num"], [s.top_8s, "num"], [s.finals, "num"], [s.best_finish],
     // The Typical Finish read from the top: finishing above 85.2% of the field is finishing in its top 14.8%.
     [s.typical_finish_above == null ? null : `${Number((100 - s.typical_finish_above).toFixed(1))}%`, "num"],
