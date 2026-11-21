@@ -28,14 +28,14 @@
     const walk = (value) => (Array.isArray(value) ? value.map(walk)
       : value && typeof value === "object" ? Object.fromEntries(Object.entries(value).map(([key, inner]) => [key, walk(inner)])) : swap(value));
     // The card's plot is read point by point, so its type is a step larger.
-    const size = community ? 13 : 14;
+    const size = community ? 14 : 15;
     const traces = walk(data);
     for (const trace of traces) {
       // RC size: every bar outlined in ink. The Experience bars keep their white seams.
       if (trace.type === "bar" && community && !trace.name) trace.marker.line = { color: "#141413", width: 1 };
       if (trace.mode?.includes("lines") && trace.marker) {
         trace.line.width = 2;
-        trace.textfont = { ...trace.textfont, size: 12, color: "#3D3D3A" };
+        trace.textfont = { ...trace.textfont, size: 13, color: "#3D3D3A" };
       }
     }
     const axis = {
@@ -45,19 +45,41 @@
     let out = merge(walk(layout), {
       font: { family: FONT, size, color: "#3D3D3A" },
       legend: { font: { size } },
-      hoverlabel: { bgcolor: "#FFFFFF", bordercolor: "#BDBCB6", font: { family: FONT, color: "#141413", size: 13 } },
+      hoverlabel: { bgcolor: "#FFFFFF", bordercolor: "#BDBCB6", font: { family: FONT, color: "#141413", size: 14 } },
       paper_bgcolor: "rgba(0,0,0,0)", plot_bgcolor: "rgba(0,0,0,0)",
     });
     out.xaxis = merge(merge(axis, { showgrid: false }), out.xaxis);
     out.yaxis = merge(axis, out.yaxis);
-    if (out.annotations) out.annotations = out.annotations.map((note) => merge(note, { font: { size: 12 } }));
+    if (out.annotations) out.annotations = out.annotations.map((note) => merge(note, { font: { size: 13 } }));
     return [traces, out];
+  }
+
+  // A plot is drawn at its box's width and redrawn whenever that box changes width, not only when the window does:
+  // opening the comparison narrows the card's column without any window resize. Plotly's own resize is not used,
+  // since it collapses a plot whose height the page sets.
+  const fitted = new WeakSet();
+  function fitToColumn(element) {
+    if (fitted.has(element)) return;
+    fitted.add(element);
+    let width = element.clientWidth;
+    new ResizeObserver(() => {
+      if (!element.clientWidth || element.clientWidth === width) return;
+      width = element.clientWidth;
+      Plotly.relayout(element, { width });
+    }).observe(element);
   }
 
   if (window.Plotly) {
     for (const name of ["newPlot", "react"]) {
       const original = Plotly[name];
-      Plotly[name] = (element, data, layout, config) => original(element, ...themed(data, layout), config);
+      Plotly[name] = (element, data, layout, config) => {
+        const box = typeof element === "string" ? document.getElementById(element) : element;
+        const [traces, themedLayout] = themed(data, layout);
+        if (box.clientWidth) themedLayout.width = box.clientWidth;
+        const drawn = original(box, traces, themedLayout, { ...config, responsive: false });
+        fitToColumn(box);
+        return drawn;
+      };
     }
   }
 

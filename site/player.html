@@ -12,7 +12,7 @@
 <header class="site">
 <div class="in">
 <p class="brand"><a href="index.html">ANZ Regional Championships</a></p>
-<nav><a href="index.html">Community</a><a href="leaderboard.html">Leaderboard</a></nav>
+<nav><a href="index.html">Overview</a><a href="leaderboard.html">Leaderboard</a></nav>
 <div class="search">
 <input id="search" type="search" placeholder="Find a Player" autocomplete="off">
 <ul id="search-results"></ul>
@@ -29,7 +29,7 @@
 <section class="panel">
 <div class="scroll">
 <table class="summary">
-  <thead><tr><th></th><th class="num">ANZ Rank</th><th class="num">RCs</th><th class="num">Rating</th><th class="num">Peak Rating</th><th>W-L-D</th><th class="num">Win rate</th><th class="num">Top 8s</th><th class="num">Finals</th><th>Best Finish</th><th>Typically finishes above</th></tr></thead>
+  <thead><tr><th></th><th class="num">ANZ Rank</th><th class="num">RCs</th><th class="num">Rating</th><th class="num">Peak Rating</th><th>W-L-D</th><th class="num">Win rate</th><th class="num">Top 8s</th><th class="num">Finals</th><th>Best Finish</th><th class="num">Typically finishes top</th></tr></thead>
   <tbody id="summary"></tbody>
 </table>
 </div>
@@ -39,7 +39,7 @@
 
 <section class="panel">
 <h2>Rating against the field</h2>
-<div class="rating-plot"><div id="against-field"></div></div>
+<div class="plot rating-plot"><div id="against-field"></div></div>
 </section>
 
 <section class="panel">
@@ -68,7 +68,7 @@
 <div id="compared" hidden>
 <div class="scroll">
 <table class="summary">
-  <thead><tr><th>Player</th><th class="num">ANZ Rank</th><th class="num">RCs</th><th class="num">Rating</th><th class="num">Peak Rating</th><th>W-L-D</th><th class="num">Win rate</th><th class="num">Top 8s</th><th class="num">Finals</th><th>Best Finish</th><th>Typically finishes above</th></tr></thead>
+  <thead><tr><th>Player</th><th class="num">ANZ Rank</th><th class="num">RCs</th><th class="num">Rating</th><th class="num">Peak Rating</th><th>W-L-D</th><th class="num">Win rate</th><th class="num">Top 8s</th><th class="num">Finals</th><th>Best Finish</th><th class="num">Typically finishes top</th></tr></thead>
   <tbody id="compared-summary"></tbody>
 </table>
 </div>
@@ -267,7 +267,8 @@ function summaryCells(s, r) {
   return [
     [s.rank ?? "", "num"], [s.rcs, "num"], [rating(r.rating), "num"], [rating(r.peak), "num"], [s.record],
     [rate(s.win_rate), "num"], [s.top_8s, "num"], [s.finals, "num"], [s.best_finish],
-    [s.typical_finish_above == null ? null : `${s.typical_finish_above}% of the field`],
+    // The Typical Finish read from the top: finishing above 85.2% of the field is finishing in its top 14.8%.
+    [s.typical_finish_above == null ? null : `${Number((100 - s.typical_finish_above).toFixed(1))}%`, "num"],
   ];
 }
 
@@ -309,7 +310,7 @@ function againstField() {
       text: player.rcs.map((rc) => rc.finish ?? ""), textposition: n ? "bottom center" : "top center", textfont: { size: 11, color: "#555" },
       line: { color: COLOURS[n], width: 2 },
       // A Top 8 is a star in the Player's own colour, so the shape and not a hue marks it beside other Players.
-      marker: { size: player.rcs.map((rc) => (rc.top_8 ? 17 : 10)), symbol: player.rcs.map((rc) => (rc.top_8 ? "star" : "circle")), color: COLOURS[n], line: { color: "#fff", width: 1 } },
+      marker: { size: player.rcs.map((rc) => (rc.top_8 ? 13 : 10)), symbol: player.rcs.map((rc) => (rc.top_8 ? "star" : "circle")), color: COLOURS[n], line: { color: "#fff", width: 1 } },
       customdata: player.rcs.map((rc) => `${rc.format}, ${rc.finish ?? "no Finish"} of ${rc.field_size}`),
       hovertemplate: `${player.name}<br>RC Cycle %{x}, %{customdata}<br>Rating after: %{y:.0f}<extra></extra>`,
     };
