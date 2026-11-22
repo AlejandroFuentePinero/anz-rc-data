@@ -8,7 +8,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap">
 <link rel="stylesheet" href="site.css">
-<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
 </head>
 <body>
 <header class="site">
@@ -22,94 +21,114 @@
 </div>
 </header>
 <main>
-<section>
 <div class="formats" id="formats"></div>
-<div class="panel">
+
+<div class="two">
+<section class="panel">
 <h2>RC history</h2>
+<p class="legend" id="legend"></p>
 <div class="scroll">
-<table id="rc-history">
-  <thead><tr><th>RC Cycle</th><th>Date</th><th>City</th><th>Format</th><th>Field Size</th><th>Winner</th><th><span class="whole">Runner-up</span></th></tr></thead>
+<table class="paired" id="rc-history">
+  <thead><tr><th>RC Cycle</th><th>City and year</th><th>Format</th><th>Winner</th><th><span class="whole">Runner-up</span></th><th>Field Size</th><th>Field by Experience</th></tr></thead>
   <tbody id="rcs"></tbody>
 </table>
 </div>
-</div>
-<div class="panel">
-<h2>RC size</h2>
-<div class="plot"><div id="field-size"></div></div>
-</div>
 </section>
+<section class="panel">
+<h2>What it takes to make Top 8</h2>
+<p class="legend">&nbsp;</p>
+<div class="scroll">
+<table class="paired" id="top-8-records">
+  <thead><tr><th>RC Cycle</th><th>Swiss rounds</th><th>Best record</th><th>Worst record in</th><th>Made it on that record</th></tr></thead>
+  <tbody id="records"></tbody>
+</table>
+</div>
+<p class="note" id="records-note"></p>
+</section>
+</div>
 
-<section class="experience-block">
-<div class="panel">
+<div class="two">
+<section class="panel">
 <h2>Top 8 rate by Experience</h2>
 <div class="scroll">
-<table id="experience-rates">
+<table class="paired" id="experience-rates">
   <thead><tr><th>RCs played</th><th>Players</th><th>Top 8s</th><th>Top 8 rate</th><th>Against a first RC</th></tr></thead>
   <tbody id="top-8-rate"></tbody>
 </table>
 </div>
 <p class="note" id="first-rc-note"></p>
-<p class="note">A Player counts once for each RC they played, so someone at their 2nd and their 3rd RC counts twice in the 2-3 row.</p>
-</div>
-<div class="panel">
-<h2>Field by Experience</h2>
-<div class="plot"><div id="experience"></div></div>
+<p class="note">The 10+ row counts a Player once for each RC from their 10th.</p>
+</section>
+<section class="panel">
+<h2>Played every RC</h2>
+<div class="scroll">
+<table class="paired" id="every-rc">
+  <thead><tr><th>Player</th><th>ANZ Rank</th><th>Rating</th><th><span class="whole">W-L-D</span></th><th>Win rate</th><th>Top 8s</th><th>Best Finish</th></tr></thead>
+  <tbody id="every-rc-rows"></tbody>
+</table>
 </div>
 </section>
+</div>
 </main>
 <footer class="site"><p><span>Contact: <a href="mailto:alejandrofuentepinero@gmail.com">alejandrofuentepinero@gmail.com</a></span> · <span>Discord: alejandrofp92</span> · <span>Ratings follow the <a href="https://mtgeloproject.net/">MTG Elo Project</a></span> · <span>Also by me: <a href="https://www.7phgraph.com/">7PH Graph</a></span></p></footer>
 <script src="site.js"></script>
 <script src="search.js"></script>
 <script>
-// RC size in one light colour outlined in ink; each level of Experience in a green ramp, light (new) to dark (8th+).
-const FIELD_COLOUR = "#C9C7BE";
+// Each level of Experience in a green ramp, light (new) to dark (8th+).
 const LEVEL_COLOUR = ["#D5DCC9", "#A8B591", "#788C5D", "#4A5838"];
-const PLOT_SIZE = 14;  // the plots' type
-const margin = { t: 8, r: 16, l: 56, b: 40 };
 
+const el = (tag, props = {}) => Object.assign(document.createElement(tag), props);
 function link(player) {
-  const a = document.createElement("a");
-  a.href = `player.html#${player.slug}`;
+  const a = el("a", { href: `player.html#${player.slug}` });
   a.append(whole(player.name));
   return a;
+}
+function addRow(body, cells) {
+  const row = body.insertRow();
+  for (const [value, cls] of cells) {
+    const cell = row.insertCell();
+    cell.append(value instanceof Node ? value : whole(value ?? "-"));
+    if (cls) cell.className = cls;
+  }
 }
 
 Promise.all([fetch("data/rcs.json"), fetch("data/community.json")])
   .then((responses) => Promise.all(responses.map((response) => response.json())))
   .then(([rcs, community]) => {
-    const cycles = rcs.map((rc) => rc.cycle);
-    const formats = [...new Set(rcs.map((rc) => rc.format))];
+    const experience = Object.fromEntries(community.field_by_experience.map((rc) => [rc.cycle, rc]));
+    const records = Object.fromEntries(community.top_8_records.map((rc) => [rc.cycle, rc]));
+    const biggest = Math.max(...rcs.map((rc) => rc.field_size));
 
-    // Across every RC: the field by experience and the Top 8 rate at each level. The Format filter leaves these.
-    drawPlot("experience", community.levels.map((level, j) => ({
-      type: "bar", name: `At their ${level} RC`,
-      x: community.field_by_experience.map((rc) => rc.cycle),
-      y: community.field_by_experience.map((rc) => rc.shares[j]),
-      customdata: community.field_by_experience.map((rc) => rc.players[j]),
-      marker: { color: LEVEL_COLOUR[j], line: { color: "#fff", width: 1 } },
-      hovertemplate: `RC Cycle %{x}: %{customdata} Players at their ${level} RC (%{y}%)<extra></extra>`,
-    })), {
-      margin, height: 340, barmode: "stack", legend: { orientation: "h", y: -0.25, traceorder: "normal" },
-      xaxis: { title: { text: "RC Cycle" }, tickvals: cycles }, yaxis: { title: { text: "Share of the field" }, ticksuffix: "%", range: [0, 100] },
-    }, PLOT_SIZE);
+    document.getElementById("legend").replaceChildren(...community.levels.map((level, j) => {
+      const span = el("span", { textContent: `At their ${level} RC` });
+      span.style.setProperty("--swatch", LEVEL_COLOUR[j]);
+      return span;
+    }));
 
-    document.getElementById("first-rc-note").textContent = `RC Cycle ${cycles[0]} left out: everyone there was at their first RC.`;
-    const rates = document.getElementById("top-8-rate");
+    // The note's counts, from the bundle.
+    const made = (record) => {
+      const { made: n, of } = community.made_top_8_at_8_rounds[record];
+      return n ? `made Top 8 ${n} times out of ${of}` : "never did";
+    };
+    document.getElementById("records-note").textContent =
+      `Swiss records, a Bye counted as a win. Across the 8-round RCs, 6-1-1 ${made("6-1-1")} and 6-2-0 ${made("6-2-0")}.`;
+
+    // Across every RC: the Top 8 rate at each RC played, and the Players at every RC. The Format filter leaves these.
+    document.getElementById("first-rc-note").textContent = `RC Cycle ${rcs[0].cycle} left out: everyone there was at their first RC.`;
     for (const level of community.top_8_rate_by_experience) {
-      const row = rates.insertRow();
-      for (const value of [level.rcs, level.entries, level.top_8s, `${level.rate}%`, `×${level.vs_first.toFixed(1)}`]) {
-        const cell = row.insertCell();
-        cell.append(whole(value));
-        cell.className = "num";
-      }
+      addRow(document.getElementById("top-8-rate"), [[level.rcs, "num"], [level.entries, "num"], [level.top_8s, "num"],
+        [`${level.rate}%`, "num"], [`×${level.vs_first.toFixed(1)}`, "num"]]);
+    }
+    for (const p of community.played_every_rc) {
+      addRow(document.getElementById("every-rc-rows"), [[link(p)], [p.rank, "num"], [p.rating, "num"], [p.record],
+        [`${p.win_rate.rate}%`, "num"], [p.top_8s, "num"], [p.best_finish]]);
     }
 
-    // The Format filter: the Field Size plot and the RC table.
+    // The Format filter: both per-RC tables.
     let view = "Global";
     const buttons = document.getElementById("formats");
-    for (const name of ["Global", ...formats]) {
-      const button = document.createElement("button");
-      button.textContent = viewName(name);
+    for (const name of ["Global", ...new Set(rcs.map((rc) => rc.format))]) {
+      const button = el("button", { textContent: viewName(name) });
       button.dataset.view = name;
       button.addEventListener("click", () => { view = name; show(); });
       buttons.append(button);
@@ -117,31 +136,30 @@ Promise.all([fetch("data/rcs.json"), fetch("data/community.json")])
 
     function show() {
       for (const button of buttons.children) button.setAttribute("aria-pressed", button.dataset.view === view);
-      const shown = rcs.filter((rc) => view === "Global" || rc.format === view);
-
-      // Every RC stays on the plot; a chosen Format's RCs keep full strength and the others fade.
-      drawPlot("field-size", [{
-        type: "bar", x: cycles, y: rcs.map((rc) => rc.field_size), customdata: rcs.map((rc) => rc.format),
-        marker: { color: FIELD_COLOUR, line: { color: "#141413", width: 1 }, opacity: rcs.map((rc) => (view === "Global" || rc.format === view ? 1 : 0.2)) },
-        hovertemplate: "RC Cycle %{x}, %{customdata}: %{y} Players<extra></extra>",
-      }], {
-        margin, height: 300, showlegend: false, bargap: 0.25,
-        xaxis: { title: { text: "RC Cycle" }, tickvals: cycles }, yaxis: { title: { text: "Tournament size" }, rangemode: "tozero" },
-      }, PLOT_SIZE);
-
       const body = document.getElementById("rcs");
+      const recordBody = document.getElementById("records");
       body.replaceChildren();
-      for (const rc of shown) {
-        const row = body.insertRow();
-        const cells = [
-          [rc.cycle, "num"], [rc.date], [rc.city ?? "-"], [rc.format], [rc.field_size, "num"],
-          [link(rc.winner)], [link(rc.runner_up)],
-        ];
-        for (const [value, cls] of cells) {
-          const cell = row.insertCell();
-          cell.append(value instanceof Node ? value : whole(value));
-          if (cls) cell.className = cls;
-        }
+      recordBody.replaceChildren();
+      for (const rc of rcs.filter((rc) => view === "Global" || rc.format === view)) {
+        // Field Size with a bar to scale, the largest RC filling the column.
+        const size = el("div", { className: "size" });
+        const bar = el("i");
+        bar.style.width = `${(100 * rc.field_size) / biggest}%`;
+        size.append(el("span", { textContent: rc.field_size }), bar);
+        // The field by Experience, each colour naming itself under the pointer.
+        const field = experience[rc.cycle];
+        const stack = el("div", { className: "stack" });
+        stack.append(...field.shares.map((share, j) => {
+          const part = el("i");
+          part.style.width = `${share}%`;
+          part.style.background = LEVEL_COLOUR[j];
+          part.dataset.tip = `At their ${community.levels[j]} RC: ${field.players[j]} Players (${share}%)`;
+          return part;
+        }));
+        addRow(body, [[rc.cycle, "num"], [[rc.city, rc.date.slice(0, 4)].filter(Boolean).join(" ")], [rc.format],
+          [link(rc.winner)], [link(rc.runner_up)], [size, "bar"], [stack, "bar"]]);
+        const r = records[rc.cycle];
+        addRow(recordBody, [[rc.cycle, "num"], [r.swiss_rounds, "num"], [r.best], [r.worst], [`${r.made} of ${r.on}`, "num"]]);
       }
     }
 

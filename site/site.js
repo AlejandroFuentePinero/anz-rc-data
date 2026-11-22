@@ -1,4 +1,5 @@
-// What the pages share: table text that keeps its hyphenated values whole, and plots drawn in the site's type.
+// What the pages share: table text that keeps its hyphenated values whole, plots drawn in the site's type, and the
+// pointer label.
 
 // A cell's text with every hyphenated value (29-14-3, Mono-Green, 2-3) in one unbreakable piece, so a squeezed column
 // wraps only at spaces.
@@ -53,3 +54,15 @@ function fitToColumn(box) {
     Plotly.relayout(box, { width });
   }).observe(box);
 }
+
+// The pointer label follows the pointer over anything that carries a data-tip, at once where a title would wait.
+const tip = Object.assign(document.createElement("div"), { className: "tip", hidden: true });
+document.body.append(tip);
+document.addEventListener("mousemove", (event) => {
+  const said = event.target.closest("[data-tip]")?.dataset.tip;
+  tip.hidden = !said;
+  if (!said) return;
+  tip.textContent = said;
+  tip.style.left = `${Math.min(event.clientX + 12, innerWidth - tip.offsetWidth - 8)}px`;
+  tip.style.top = `${event.clientY + 16}px`;
+});

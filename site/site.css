@@ -68,6 +68,8 @@ td { padding: 7px 6px; color: var(--ink-2); border-bottom: 0.5px solid var(--rul
 td .whole, th .whole { white-space: nowrap; }
 td.num { white-space: nowrap; font-variant-numeric: tabular-nums; }
 tbody tr:last-child > td { border-bottom: 0; }
+/* Every row tints under the pointer, so it reads straight across; a card row's open rounds keep their own shade. */
+:where(tbody tr:not(.rounds)):hover > td { background: var(--hover); }
 tr.global td { color: var(--ink); font-weight: 650; }
 table.sortable th { cursor: pointer; user-select: none; white-space: nowrap; }
 table.sortable th:hover { background: var(--hover); }
@@ -76,7 +78,6 @@ table.sortable th[aria-sort="descending"]::after { content: " ↓"; }
 
 /* Player card: rows that open their rounds. */
 tr.rc { cursor: pointer; }
-tr.rc:hover > td { background: var(--hover); }
 /* A chevron sized to the text, pointing right, turning down once the row is open. */
 tr.rc td:first-child::before { content: ""; display: inline-block; width: 0.42em; height: 0.42em; margin: 0 0.6em 0.12em 0;
   border-right: 2px solid var(--ink-muted); border-bottom: 2px solid var(--ink-muted); transform: rotate(-45deg); transition: transform 150ms; }
@@ -109,9 +110,26 @@ tr.rounds table { background: var(--raised); border-radius: 8px; }
 .matches h3 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 6px; margin: 14px 0 8px; font-size: 17px; font-weight: 650; }
 .matches .record-pill { margin-left: 6px; padding: 2px 8px; border-radius: 6px; background: var(--raised); border: 0.5px solid var(--rule-strong); font-size: 15px; }
 
-/* Overview: the two Experience blocks count across every RC, so they sit side by side, apart from the Format filter. */
-.experience-block { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 0 32px; align-items: start; }
-@media (max-width: 1000px) { .experience-block { grid-template-columns: minmax(0, 1fr); } }
+/* Overview: two columns, 7 to 5, stacked under 1100px. The two tables in a row share their row heights, so each row
+   reads straight across, and their cells don't wrap. */
+.two { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 0 32px; align-items: start; }
+@media (max-width: 1100px) { .two { grid-template-columns: minmax(0, 1fr); } }
+.paired th { height: 56px; }
+.paired td { height: 38px; white-space: nowrap; }
+/* Field Size as its number with a bar to scale; the field by Experience as a full-width stacked bar. */
+td.bar { width: 26%; }
+.size { display: flex; align-items: center; gap: 8px; }
+.size span { min-width: 2.2em; text-align: right; font-variant-numeric: tabular-nums; }
+.size i { display: block; height: 14px; background: #C9C7BE; border: 0.5px solid var(--ink); border-radius: 2px; }
+.stack { display: flex; height: 14px; border-radius: 2px; overflow: hidden; }
+.stack i { display: block; height: 100%; border-right: 1px solid #fff; }
+.stack i:last-child { border-right: 0; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 0 0 10px; font-size: 14px; color: var(--ink-2); }
+.legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; margin-right: 6px; border-radius: 2px; background: var(--swatch); }
+
+/* The pointer label: whatever carries a data-tip names itself under the pointer straight away. */
+.tip { position: fixed; z-index: 40; pointer-events: none; padding: 6px 10px; background: var(--raised); border: 0.5px solid var(--rule-strong);
+  border-radius: 6px; color: var(--ink); font-size: 14px; white-space: nowrap; box-shadow: 0 4px 12px rgba(20, 20, 19, 0.10); }
 
 @media (max-width: 820px) {
   header.site .in { padding: 10px 16px; }

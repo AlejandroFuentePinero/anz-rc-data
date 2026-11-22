@@ -202,9 +202,124 @@
    ]
   }
  ],
+ "top_8_records": [
+  {
+   "cycle": 1,
+   "swiss_rounds": 8,
+   "best": "7-0-1",
+   "worst": "6-1-1",
+   "made": 5,
+   "on": 5
+  },
+  {
+   "cycle": 2,
+   "swiss_rounds": 8,
+   "best": "6-0-2",
+   "worst": "6-1-1",
+   "made": 6,
+   "on": 6
+  },
+  {
+   "cycle": 3,
+   "swiss_rounds": 8,
+   "best": "7-1-0",
+   "worst": "6-1-1",
+   "made": 5,
+   "on": 8
+  },
+  {
+   "cycle": 4,
+   "swiss_rounds": 8,
+   "best": "7-0-1",
+   "worst": "6-1-1",
+   "made": 4,
+   "on": 5
+  },
+  {
+   "cycle": 5,
+   "swiss_rounds": 9,
+   "best": "7-0-2",
+   "worst": "7-1-1",
+   "made": 6,
+   "on": 6
+  },
+  {
+   "cycle": 6,
+   "swiss_rounds": 8,
+   "best": "6-0-2",
+   "worst": "6-1-1",
+   "made": 6,
+   "on": 8
+  },
+  {
+   "cycle": 7,
+   "swiss_rounds": 8,
+   "best": "8-0-0",
+   "worst": "6-1-1",
+   "made": 2,
+   "on": 4
+  },
+  {
+   "cycle": 8,
+   "swiss_rounds": 8,
+   "best": "6-0-2",
+   "worst": "6-1-1",
+   "made": 6,
+   "on": 7
+  },
+  {
+   "cycle": 9,
+   "swiss_rounds": 8,
+   "best": "7-0-1",
+   "worst": "6-1-1",
+   "made": 3,
+   "on": 6
+  },
+  {
+   "cycle": 10,
+   "swiss_rounds": 8,
+   "best": "7-1-0",
+   "worst": "6-1-1",
+   "made": 3,
+   "on": 6
+  },
+  {
+   "cycle": 11,
+   "swiss_rounds": 8,
+   "best": "7-1-0",
+   "worst": "6-1-1",
+   "made": 3,
+   "on": 6
+  },
+  {
+   "cycle": 12,
+   "swiss_rounds": 8,
+   "best": "7-1-0",
+   "worst": "6-1-1",
+   "made": 5,
+   "on": 8
+  },
+  {
+   "cycle": 13,
+   "swiss_rounds": 9,
+   "best": "7-0-2",
+   "worst": "7-2-0",
+   "made": 1,
+   "on": 12
+  }
+ ],
+ "made_top_8_at_8_rounds": {
+  "6-1-1": {
+   "made": 48,
+   "of": 69
+  },
+  "6-2-0": {
+   "made": 0,
+   "of": 147
+  }
+ },
  "top_8_rate_by_experience": [
   {
-   "level": "1st",
    "rcs": "1",
    "top_8s": 14,
    "entries": 755,
@@ -212,28 +327,199 @@
    "vs_first": 1.0
   },
   {
-   "level": "2nd-3rd",
-   "rcs": "2-3",
-   "top_8s": 29,
-   "entries": 762,
-   "rate": 3.8,
-   "vs_first": 2.1
+   "rcs": "2",
+   "top_8s": 16,
+   "entries": 461,
+   "rate": 3.5,
+   "vs_first": 1.9
   },
   {
-   "level": "4th-7th",
-   "rcs": "4-7",
-   "top_8s": 38,
-   "entries": 596,
+   "rcs": "3",
+   "top_8s": 13,
+   "entries": 301,
+   "rate": 4.3,
+   "vs_first": 2.3
+  },
+  {
+   "rcs": "4",
+   "top_8s": 8,
+   "entries": 220,
+   "rate": 3.6,
+   "vs_first": 2.0
+  },
+  {
+   "rcs": "5",
+   "top_8s": 11,
+   "entries": 160,
+   "rate": 6.9,
+   "vs_first": 3.7
+  },
+  {
+   "rcs": "6",
+   "top_8s": 12,
+   "entries": 125,
+   "rate": 9.6,
+   "vs_first": 5.2
+  },
+  {
+   "rcs": "7",
+   "top_8s": 7,
+   "entries": 91,
+   "rate": 7.7,
+   "vs_first": 4.1
+  },
+  {
+   "rcs": "8",
+   "top_8s": 6,
+   "entries": 63,
+   "rate": 9.5,
+   "vs_first": 5.1
+  },
+  {
+   "rcs": "9",
+   "top_8s": 3,
+   "entries": 47,
    "rate": 6.4,
    "vs_first": 3.4
   },
   {
-   "level": "8th+",
-   "rcs": "8+",
-   "top_8s": 15,
-   "entries": 192,
-   "rate": 7.8,
-   "vs_first": 4.2
+   "rcs": "10+",
+   "top_8s": 6,
+   "entries": 82,
+   "rate": 7.3,
+   "vs_first": 3.9
+  }
+ ],
+ "played_every_rc": [
+  {
+   "slug": "lillia",
+   "name": "Brennan Crawford",
+   "rank": 4,
+   "rating": 1828,
+   "record": "70-34-4",
+   "win_rate": {
+    "rate": 67.3,
+    "matches": 104
+   },
+   "top_8s": 4,
+   "best_finish": "Winner"
+  },
+  {
+   "slug": "ez_clap",
+   "name": "Henry Sams",
+   "rank": 5,
+   "rating": 1822,
+   "record": "64-33-2",
+   "win_rate": {
+    "rate": 66.0,
+    "matches": 97
+   },
+   "top_8s": 1,
+   "best_finish": "Top 8"
+  },
+  {
+   "slug": "alosaur",
+   "name": "Alex Humbley",
+   "rank": 9,
+   "rating": 1769,
+   "record": "67-38-0",
+   "win_rate": {
+    "rate": 63.8,
+    "matches": 105
+   },
+   "top_8s": 0,
+   "best_finish": "12th"
+  },
+  {
+   "slug": "lavaridge",
+   "name": "James Larsen-Scott",
+   "rank": 25,
+   "rating": 1708,
+   "record": "55-34-4",
+   "win_rate": {
+    "rate": 61.8,
+    "matches": 89
+   },
+   "top_8s": 2,
+   "best_finish": "Top 4"
+  },
+  {
+   "slug": "bbotonline",
+   "name": "Brandon Rashad",
+   "rank": 26,
+   "rating": 1707,
+   "record": "54-36-3",
+   "win_rate": {
+    "rate": 60.0,
+    "matches": 90
+   },
+   "top_8s": 1,
+   "best_finish": "Top 8"
+  },
+  {
+   "slug": "forceofwilks",
+   "name": "James Wilks",
+   "rank": 27,
+   "rating": 1706,
+   "record": "58-33-3",
+   "win_rate": {
+    "rate": 63.7,
+    "matches": 91
+   },
+   "top_8s": 2,
+   "best_finish": "Winner"
+  },
+  {
+   "slug": "calmmirror",
+   "name": "Samuel Maher",
+   "rank": 32,
+   "rating": 1696,
+   "record": "59-41-7",
+   "win_rate": {
+    "rate": 59.0,
+    "matches": 100
+   },
+   "top_8s": 1,
+   "best_finish": "Top 8"
+  },
+  {
+   "slug": "lostwanderer",
+   "name": "Dillon Kikkawa",
+   "rank": 36,
+   "rating": 1682,
+   "record": "54-34-1",
+   "win_rate": {
+    "rate": 61.4,
+    "matches": 88
+   },
+   "top_8s": 2,
+   "best_finish": "Runner-up"
+  },
+  {
+   "slug": "ethanmtg",
+   "name": "Ethan Bird",
+   "rank": 46,
+   "rating": 1664,
+   "record": "58-46-2",
+   "win_rate": {
+    "rate": 55.8,
+    "matches": 104
+   },
+   "top_8s": 0,
+   "best_finish": "21st"
+  },
+  {
+   "slug": "hazzrd",
+   "name": "RIley Jones",
+   "rank": 75,
+   "rating": 1605,
+   "record": "58-43-1",
+   "win_rate": {
+    "rate": 57.4,
+    "matches": 101
+   },
+   "top_8s": 1,
+   "best_finish": "Top 8"
   }
  ]
 }

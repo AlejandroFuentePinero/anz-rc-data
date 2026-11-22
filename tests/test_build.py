@@ -241,13 +241,11 @@ def test_the_top_8_rate_by_experience_leaves_out_the_first_rc_where_everyone_was
     )
 
     community = bundle.community()
-    # Each level's rate, and how many times the rate at a first RC it is.
+    # Each RC played's rate, and how many times the rate at a first RC it is; one row per RC played to 9, then 10+.
     assert community["top_8_rate_by_experience"] == [
-        {"level": "1st", "rcs": "1", "top_8s": 1, "entries": 2, "rate": 50.0, "vs_first": 1.0},  # n1 of n1, n2
-        {"level": "2nd-3rd", "rcs": "2-3", "top_8s": 7, "entries": 8, "rate": 87.5, "vs_first": 1.8},  # p2 to p8 of p1 to p8; 87.5 / 50 = 1.75
-        {"level": "4th-7th", "rcs": "4-7", "top_8s": 0, "entries": 0, "rate": None, "vs_first": None},
-        {"level": "8th+", "rcs": "8+", "top_8s": 0, "entries": 0, "rate": None, "vs_first": None},
-    ]
+        {"rcs": "1", "top_8s": 1, "entries": 2, "rate": 50.0, "vs_first": 1.0},  # n1 of n1, n2
+        {"rcs": "2", "top_8s": 7, "entries": 8, "rate": 87.5, "vs_first": 1.8},  # p2 to p8 of p1 to p8; 87.5 / 50 = 1.75
+    ] + [{"rcs": rcs, "top_8s": 0, "entries": 0, "rate": None, "vs_first": None} for rcs in ["3", "4", "5", "6", "7", "8", "9", "10+"]]
 
 
 def test_every_match_class_shows_its_result_and_only_played_matches_and_intentional_draws_count_in_the_record(tmp_path):
@@ -272,7 +270,7 @@ def test_every_match_class_shows_its_result_and_only_played_matches_and_intentio
         ("Round 5", "ben", "Intentional Draw", "0-0-3"),
         ("Round 6", "dee", "Draw", "0-0-1"),
     ]
-    assert ana["rcs"][0]["record"] == "2-0-3"
+    assert ana["rcs"][0]["record"] == "3-0-3"  # the Bye a win
     assert [(m["result"], m["games"]) for m in bundle.card("ben")["matches"]] == [
         ("Loss", "0-1-0"),
         ("Loss", "0-3-0"),
@@ -741,10 +739,10 @@ def test_the_summary_gives_each_view_its_record_win_rate_and_finishes(tmp_path):
 
     summary = bundle.card("ana")["summary"]
     figures = ("record", "win_rate", "rcs", "top_8s", "finals", "best_finish", "typical_finish_above")
-    # Global: wins over Ben and Cal, the loss to Ben, a played draw and an Intentional Draw; the bye is in no record.
+    # Global: wins over Ben and Cal, the Bye as a win, the loss to Ben, a played draw and an Intentional Draw.
     # Typical Finish: the median of 1/10, 3.5/8 (the Top 4 tier) and 12/20 is 43.8%, so above 56.2% of the field.
     assert {key: summary["Global"][key] for key in figures} == {
-        "record": "2-1-2", "win_rate": {"rate": 66.7, "matches": 3}, "rcs": 3, "top_8s": 2, "finals": 1,
+        "record": "3-1-2", "win_rate": {"rate": 75.0, "matches": 4}, "rcs": 3, "top_8s": 2, "finals": 1,
         "best_finish": "Winner", "typical_finish_above": 56.2,
     }
     assert {key: summary["Pioneer"][key] for key in figures} == {
@@ -752,7 +750,7 @@ def test_the_summary_gives_each_view_its_record_win_rate_and_finishes(tmp_path):
         "best_finish": "Winner", "typical_finish_above": 65.0,  # median of 10% and 60%
     }
     assert {key: summary["Modern"][key] for key in figures} == {
-        "record": "0-1-1", "win_rate": {"rate": 0.0, "matches": 1}, "rcs": 1, "top_8s": 1, "finals": 0,
+        "record": "1-1-1", "win_rate": {"rate": 50.0, "matches": 2}, "rcs": 1, "top_8s": 1, "finals": 0,  # the Bye a win
         "best_finish": "Top 4", "typical_finish_above": 56.2,
     }
     assert "Standard" not in summary
@@ -859,7 +857,8 @@ def test_each_rc_gives_its_rating_at_start_and_end_in_global_and_its_format(tmp_
         {"Global": 1500.0, "Pioneer": 1482.0},
         {"Global": 1518, "Modern": 1535},
     ]
-    assert [rc["win_rate"] for rc in ana["rcs"]] == [{"rate": 100.0, "matches": 1}, {"rate": 0.0, "matches": 1}, {"rate": 100.0, "matches": 1}]
+    # Cycle 1: the win over Ben and the Bye, both wins.
+    assert [rc["win_rate"] for rc in ana["rcs"]] == [{"rate": 100.0, "matches": 2}, {"rate": 0.0, "matches": 1}, {"rate": 100.0, "matches": 1}]
 
 
 def test_each_rcs_start_plus_its_changes_is_its_end_and_the_next_rc_starts_there(tmp_path):
@@ -912,8 +911,8 @@ def test_a_leaderboard_row_carries_the_players_rating_record_and_finishes_in_the
         "name": "Ana Lopez",
         "rating": bundle.card("ana")["ratings"]["Global"]["rating"],
         "peak": 1518,  # 1517.67 after Cycle 1: +18 over Ben, then -0.33 for a played draw with Cal at 1500
-        "record": "2-1-2",
-        "win_rate": {"rate": 66.7, "matches": 3},
+        "record": "3-1-2",  # the Bye in Cycle 2 a win
+        "win_rate": {"rate": 75.0, "matches": 4},
         "rcs": 3,
         "top_8s": 2,
         "finals": 1,
@@ -982,3 +981,92 @@ def test_the_head_to_head_counts_every_match_two_players_played_across_every_for
     # Ana and Dee never met.
     assert "dee" not in ana["head_to_head"]
     assert "ana" not in bundle.card("dee")["head_to_head"]
+
+
+# Byes (issue #15): a Bye is a win in every record and in Win rate, and moves no Rating, as nothing was played.
+
+
+def test_a_bye_of_either_kind_is_a_win_in_every_record_and_win_rate_but_moves_no_rating_and_has_no_opponent(tmp_path):
+    awarded = bye(CAL) | {"ByeReason": 3}  # Melee's awarded bye; the assigned kind (an odd field) is ByeReason 0
+    rounds = [
+        (SWISS, [played(BEN, ANA, 2, 0), played(CAL, DEE, 2, 0)]),
+        (SWISS, [bye(ANA), awarded, played(BEN, DEE, 2, 1)]),
+    ]
+    bundle = run_build(tmp_path, [(1, "Modern", rounds, [standing(1, BEN), standing(2, CAL), standing(3, ANA), standing(4, DEE)])])
+
+    ana, cal = bundle.card("ana"), bundle.card("cal")
+    # Ana lost to Ben, then had a Bye: 1-1-0 and 50%, where without the Bye she would read 0-1-0 and 0%.
+    assert ana["rcs"][0]["record"] == "1-1-0"
+    assert ana["rcs"][0]["win_rate"] == {"rate": 50.0, "matches": 2}
+    assert ana["summary"]["Global"]["record"] == "1-1-0"
+    assert ana["summary"]["Modern"]["win_rate"] == {"rate": 50.0, "matches": 2}
+    assert cal["rcs"][0]["record"] == "2-0-0"
+    assert ana["head_to_head"] == {"ben": "0-1-0"}
+    # The Bye moved nothing: Ana stays at 1500 - K / 2 after losing to a 1500.
+    assert rating(bundle, "ana") == 1500 - K / 2
+    assert [m["change"] for m in ana["matches"]] == [{"Global": -K / 2, "Modern": -K / 2}, None]
+
+
+# The Overview's figures (issue #15), published by the build so the page computes nothing.
+
+
+def test_each_rc_gives_the_best_and_worst_swiss_records_in_its_top_8_and_how_many_on_the_worst_made_it(tmp_path):
+    a, b, c, d, e, f, g, h, i, j, k = ((f"p{n}", f"Player {n}") for n in "abcdefghijk")
+    rounds = [
+        (SWISS, [played(a, d, 2, 0), played(b, f, 2, 0), played(c, g, 2, 0), played(h, j, 2, 0), played(i, k, 2, 0), bye(e)]),
+        (SWISS, [played(a, h, 2, 0), played(b, i, 2, 0), played(c, k, 1, 1, draws=1), played(d, j, 2, 0), played(f, e, 2, 0), bye(g)]),
+    ]
+    final = [standing(rank, who) for rank, who in enumerate([a, b, c, d, e, f, g, h, i, k, j], start=1)]
+
+    bundle = run_build(tmp_path, [(1, "Modern", rounds, final)])
+
+    # Swiss records: a and b 2-0-0, c 1-0-1, d to i 1-1-0 (e and g with a Bye as their win). The Top 8 runs a to h, so
+    # its worst is 1-1-0, and i finished on the same 3 points and missed: 5 of the 6 on it made Top 8.
+    assert bundle.community()["top_8_records"] == [
+        {"cycle": 1, "swiss_rounds": 2, "best": "2-0-0", "worst": "1-1-0", "made": 5, "on": 6},
+    ]
+
+
+def test_the_note_counts_how_often_6_1_1_and_6_2_0_made_top_8_across_the_8_round_rcs(tmp_path):
+    x, y, z = ("x", "X"), ("y", "Y"), ("z", "Z")
+    filler = lambda rank: (f"c1x{rank}", f"Filler 1 {rank}")
+    # Eight Swiss rounds, each against a fresh filler: x and y go 6-1-1, z goes 6-2-0; x makes Top 8, y and z miss.
+    results = {x: ["W"] * 6 + ["L", "D"], y: ["D"] + ["W"] * 6 + ["L"], z: ["L"] * 2 + ["W"] * 6}
+    game = {"W": (2, 0), "L": (0, 2), "D": (1, 1)}
+    rounds = [
+        (SWISS, [played(who, filler(11 + 3 * r + n), *game[results[who][r]], draws=results[who][r] == "D", table=9 + n)
+                 for n, who in enumerate(results)])
+        for r in range(8)
+    ]
+    standings = field(1, 40, {1: x, 9: y, 10: z})
+    short = (2, "Modern", [(SWISS, [played(y, z, 0, 2)])], field(2, 9, {1: y, 9: z}))  # a 1-round RC counts in neither
+
+    bundle = run_build(tmp_path, [(1, "Modern", rounds, standings), short])
+
+    assert bundle.community()["made_top_8_at_8_rounds"] == {"6-1-1": {"made": 1, "of": 2}, "6-2-0": {"made": 0, "of": 1}}
+
+
+def test_the_top_8_rate_reads_each_rc_played_to_9_then_10_plus_and_the_players_at_every_rc_are_listed_by_rating(tmp_path):
+    # Eleven RCs of ten: Ana wins each and Ben finishes 9th in each, among eight new fillers per RC. Then a twelfth
+    # where new Players Cal and Dee finish first and second, Ana 3rd and Ben 10th.
+    rcs = [(c, "Pioneer", [(SWISS, [played(ANA, BEN, 2, 0)])], field(c, 10, {1: ANA, 9: BEN})) for c in range(1, 12)]
+    rcs.append((12, "Pioneer", [(SWISS, [played(CAL, DEE, 2, 0), played(ANA, BEN, 2, 0)])], field(12, 10, {1: CAL, 2: DEE, 3: ANA, 10: BEN})))
+
+    bundle = run_build(tmp_path, rcs)
+
+    community = bundle.community()
+    rates = {row["rcs"]: row for row in community["top_8_rate_by_experience"]}
+    # From Cycle 2: 8 fillers a RC for 10 RCs, 7 of them in the Top 8 (ranks 2 to 8), then Cycle 12's Cal, Dee and six
+    # fillers, 7 of them in it (ranks 1, 2 and 4 to 8).
+    assert rates["1"] == {"rcs": "1", "top_8s": 77, "entries": 88, "rate": 87.5, "vs_first": 1.0}
+    # Ana and Ben at their 2nd to 9th RC, Ana in the Top 8 each time: 50 / 87.5 = 0.57.
+    assert rates["2"] == rates["9"] | {"rcs": "2"} == {"rcs": "2", "top_8s": 1, "entries": 2, "rate": 50.0, "vs_first": 0.6}
+    # Their 10th to 12th RCs, each Player once per RC.
+    assert rates["10+"] == {"rcs": "10+", "top_8s": 3, "entries": 6, "rate": 50.0, "vs_first": 0.6}
+    ana, ben = bundle.card("ana"), bundle.card("ben")
+    assert community["played_every_rc"] == [
+        {"slug": "ana", "name": "Ana Lopez", "rank": 1, "rating": ana["ratings"]["Global"]["rating"], "record": "12-0-0",
+         "win_rate": {"rate": 100.0, "matches": 12}, "top_8s": 12, "best_finish": "Winner"},
+        {"slug": "ben", "name": "Ben Hall", "rank": 2, "rating": ben["ratings"]["Global"]["rating"], "record": "0-12-0",
+         "win_rate": {"rate": 0.0, "matches": 12}, "top_8s": 0, "best_finish": "9th"},
+    ]

@@ -48,8 +48,9 @@ def _whole(rating: float) -> int:
     return math.floor(rating + 0.5)
 
 
-# W-L-D counts every draw, Intentional Draws included; a Match not played is in no record.
-RECORD = {"Win": 0, "Loss": 1, "Draw": 2, "Intentional Draw": 2}
+# W-L-D counts every draw, Intentional Draws included, and a Bye as a win (the owner's ruling, 2026-11-22); any other
+# Match not played is in no record.
+RECORD = {"Win": 0, "Loss": 1, "Draw": 2, "Intentional Draw": 2, "Bye": 0}
 # Only a played Match moves a Rating: Intentional Draws and anything not played move nothing.
 SCORE = {"Win": 1, "Loss": 0, "Draw": 0.5}
 
@@ -305,7 +306,7 @@ def replayed(raw: Path, rc_list: Path, curation: Path) -> tuple[list[dict], dict
 
 
 def _win_rate(wins: int, losses: int) -> dict:
-    """Wins over wins plus losses, with that count as the sample: draws are in neither."""
+    """Wins over wins plus losses, a Bye counted as a win, with that count as the sample: draws are in neither."""
     return {"rate": round(100 * wins / (wins + losses), 1) if wins + losses else None, "matches": wins + losses}
 
 
@@ -336,10 +337,10 @@ def _summary(player: dict, view: str) -> dict:
 
 
 def _head_to_head(player: dict) -> dict[str, str]:
-    """The Player's W-L-D against every opponent they met, across every Format."""
+    """The Player's W-L-D against every opponent they met, across every Format. A Bye has no opponent."""
     records: dict[str, list[int]] = {}
     for match in player["matches"]:
-        if match["result"] in RECORD:
+        if match["result"] in RECORD and match["opponent"]:
             records.setdefault(match["opponent"]["slug"], [0, 0, 0])[RECORD[match["result"]]] += 1
     return {slug: "-".join(map(str, record)) for slug, record in records.items()}
 
@@ -392,29 +393,55 @@ def _leaderboard(cards: dict[str, dict]) -> dict[str, dict]:
     return boards
 
 
-# Experience: how many RCs an RC is for a Player, across every Format, in these levels.
+# Experience: how many RCs an RC is for a Player, across every Format. Each RC's field reads it in these levels, the
+# Top 8 rate RC by RC to the 9th, then from the 10th on.
 LEVELS = ["1st", "2nd-3rd", "4th-7th", "8th+"]
-LEVEL_RCS = ["1", "2-3", "4-7", "8+"]  # each level as the RCs it spans
+EXPERIENCE_ROWS = [str(n) for n in range(1, 10)] + ["10+"]
 
 
 def _level(nth: int) -> int:
     return 0 if nth == 1 else 1 if nth <= 3 else 2 if nth <= 7 else 3
 
 
+def _swiss_records(cards: dict[str, dict], cycle: int) -> list[tuple[list[int], bool]]:
+    """Every Player's Swiss record at an RC (a Bye counted as a win) and whether they made its Top 8."""
+    field = []
+    for player in cards.values():
+        rc = next((rc for rc in player["rcs"] if rc["cycle"] == cycle), None)
+        if rc is None:
+            continue
+        record = [0, 0, 0]
+        for match in player["matches"]:
+            if match["cycle"] == cycle and not match["playoff"] and match["result"] in RECORD:
+                record[RECORD[match["result"]]] += 1
+        field.append((record, rc["top_8"]))
+    return field
+
+
+def _points(record: list[int]) -> tuple[int, int]:
+    """A Swiss record's standing: its points (3 a win, 1 a draw), then its wins."""
+    return 3 * record[0] + record[2], record[0]
+
+
+# The Overview's note: how often these Swiss records made Top 8 across the RCs of this many Swiss rounds.
+NOTE_ROUNDS, NOTE_RECORDS = 8, ["6-1-1", "6-2-0"]
+
+
 def _community(rc_rows: list[dict], cards: dict[str, dict]) -> dict:
-    """The scene across every RC: each field by experience, and the Top 8 rate at each level of experience.
+    """The scene across every RC: each field by Experience, what it took to make each Top 8, the Top 8 rate at each
+    RC played, and the Players at every RC.
 
     The rate leaves out the first RC, where everyone is at their first by construction, established Players too.
     """
     fields = {rc["cycle"]: [0] * len(LEVELS) for rc in rc_rows}
-    entries, top_8s = [0] * len(LEVELS), [0] * len(LEVELS)  # an entry is one Player at one RC
+    entries, top_8s = [0] * len(EXPERIENCE_ROWS), [0] * len(EXPERIENCE_ROWS)  # an entry is one Player at one RC
     for player in cards.values():
         for nth, rc in enumerate(player["rcs"], start=1):
-            level = _level(nth)
-            fields[rc["cycle"]][level] += 1
+            fields[rc["cycle"]][_level(nth)] += 1
             if rc["cycle"] != rc_rows[0]["cycle"]:
-                entries[level] += 1
-                top_8s[level] += rc["finish"] in TOP_8
+                entries[min(nth, 10) - 1] += 1
+                top_8s[min(nth, 10) - 1] += rc["top_8"]
+
     def rate(top: int, n: int) -> dict:
         """Top 8s over Entries, and how many times the rate at a first RC that is."""
         if not n:
@@ -422,14 +449,37 @@ def _community(rc_rows: list[dict], cards: dict[str, dict]) -> dict:
         first = top_8s[0] / entries[0] if entries[0] else 0
         return {"top_8s": top, "entries": n, "rate": round(100 * top / n, 1), "vs_first": round(top / n / first, 1) if first else None}
 
+    top_8_records, note = [], {record: {"made": 0, "of": 0} for record in NOTE_RECORDS}
+    for rc in rc_rows:
+        cycle = rc["cycle"]
+        swiss_rounds = len({m["round"] for p in cards.values() for m in p["matches"] if m["cycle"] == cycle and not m["playoff"]})
+        field = _swiss_records(cards, cycle)
+        top = sorted((record for record, made in field if made), key=_points)
+        on_line = [made for record, made in field if _points(record)[0] == _points(top[0])[0]]
+        top_8_records.append({"cycle": cycle, "swiss_rounds": swiss_rounds, "best": "-".join(map(str, top[-1])),
+                              "worst": "-".join(map(str, top[0])), "made": sum(on_line), "on": len(on_line)})
+        if swiss_rounds == NOTE_ROUNDS:
+            for record, made in field:
+                if (shown := "-".join(map(str, record))) in note:
+                    note[shown]["made"] += made
+                    note[shown]["of"] += 1
+
+    every_rc = [player for player in cards.values() if len(player["rcs"]) == len(rc_rows)]
+    every_rc.sort(key=lambda player: (-player["ratings"]["Global"]["rating"], player["name"]))
     return {
         "levels": LEVELS,
         "field_by_experience": [
             {"cycle": cycle, "players": counts, "shares": [round(100 * n / sum(counts), 1) for n in counts]}
             for cycle, counts in fields.items()
         ],
-        "top_8_rate_by_experience": [
-            {"level": name, "rcs": span} | rate(top, n) for name, span, top, n in zip(LEVELS, LEVEL_RCS, top_8s, entries)
+        "top_8_records": top_8_records,
+        "made_top_8_at_8_rounds": note,
+        "top_8_rate_by_experience": [{"rcs": rcs_} | rate(top, n) for rcs_, top, n in zip(EXPERIENCE_ROWS, top_8s, entries)],
+        "played_every_rc": [
+            {"slug": player["slug"], "name": player["name"], "rank": player["summary"]["Global"]["rank"],
+             "rating": player["ratings"]["Global"]["rating"]}
+            | {key: player["summary"]["Global"][key] for key in ("record", "win_rate", "top_8s", "best_finish")}
+            for player in every_rc
         ],
     }
 
