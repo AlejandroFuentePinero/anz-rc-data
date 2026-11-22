@@ -3,16 +3,25 @@ name = "anzrc"
 version = "0.1.0"
 description = "The Players of the ANZ Magic Regional Championships, from every RC's standings and pairings"
 requires-python = ">=3.12"
-dependencies = ["requests>=2.32,<3"]
+dependencies = [
+    "requests>=2.32,<3",
+    "starlette>=0.46,<1",
+    "uvicorn>=0.34,<1",
+]
 
 [project.scripts]
 anzrc-fetch = "anzrc.fetch:main"
 anzrc-build = "anzrc.build:main"
 anzrc-measure = "anzrc.measure:main"
 anzrc-fetch-mtgelo = "anzrc.mtgelo:main"
+anzrc-serve = "anzrc.serve:main"
+anzrc-usage = "anzrc.usage:main"
 
 [dependency-groups]
-dev = ["pytest>=8"]
+dev = [
+    "httpx>=0.28,<1",
+    "pytest>=8",
+]
 
 [build-system]
 requires = ["hatchling"]
