@@ -1,4 +1,4 @@
-"""The server the Space runs (issue #13): the site exactly as built, with its own record of use in front."""
+"""The server the Space runs (issue #14): the site exactly as built, with its own record of use in front."""
 
 import contextlib
 import json
@@ -13,7 +13,7 @@ from starlette.types import ASGIApp, Message, Receive, Scope, Send
 from anzrc import usage
 
 SITE = Path("site")
-PORT = 7860  # the port a Docker Space is reached on unless its README says otherwise
+PORT = 7860  # the port a Gradio Space is reached on
 
 
 class CheckBack:

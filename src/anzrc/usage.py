@@ -1,4 +1,4 @@
-"""The site's own record of its use (issue #13, ported from mtgo-insights' recorder, itself 7ph-graph's).
+"""The site's own record of its use (issue #14, ported from mtgo-insights' recorder, itself 7ph-graph's).
 
 Nothing else counts visits to the site: the Hub's visit count has no API and no dates, the
 domain's DNS record is not proxied, and the Space's run log holds no requests. So the server
@@ -139,6 +139,7 @@ class RecordVisits:
     def __init__(self, app: ASGIApp, recorder: Recorder) -> None:
         self.app = app
         self.recorder = recorder
+        self._named = False
 
     async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
         if scope["type"] != "http" or scope["method"] != "GET":
@@ -148,7 +149,14 @@ class RecordVisits:
         # page load among them, costs these comparisons and nothing more.
         path, headers = scope["path"], _headers(scope)
         if page := PAGES.get(path):
-            self.recorder.note({**_seen(headers), "kind": "page", "page": page, "ref": _site(headers.get("referer"))})
+            note = {**_seen(headers), "kind": "page", "page": page, "ref": _site(headers.get("referer")),
+                    "dest": headers.get("sec-fetch-dest")}
+            if not self._named:
+                # Once per run, the names of the headers that reached the app: what the Hub's
+                # proxy passes on cannot be seen from outside.
+                note["names"] = sorted(headers)
+                self._named = True
+            self.recorder.note(note)
         elif path == BROWSER:
             self.recorder.note({**_seen(headers), "kind": "browser"})
         elif (found := PLAYER.fullmatch(path)) and found[1] in self.recorder.players:

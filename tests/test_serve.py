@@ -1,4 +1,4 @@
-"""The server the Space runs (issue #13): the site as built, and the site's own record of its use."""
+"""The server the Space runs (issue #14): the site as built, and the site's own record of its use."""
 
 import json
 import os
@@ -34,6 +34,17 @@ def test_serves_the_site_as_built(tmp_path):
     assert bundle.json() == json.loads((SITE / "data" / "leaderboard.json").read_text())
 
 
+def test_a_visitor_gets_the_same_bytes_whether_or_not_visits_are_recorded(tmp_path):
+    requests = [(path, {"referer": "https://discord.com/x", "sec-fetch-dest": "document"}) for path in
+                ("/", "/leaderboard.html", "/player.html", "/data/players.json", f"/data/players/{A_PLAYER['slug']}.json",
+                 "/site.css", "/no-such-file")]
+    recorded, unrecorded = visit(tmp_path, *requests), visit(None, *requests)
+    assert any(line["kind"] == "read" for line in lines(tmp_path))
+    for on, off in zip(recorded, unrecorded):
+        assert (on.status_code, on.content) == (off.status_code, off.content)
+        assert {k: v for k, v in on.headers.items() if k != "date"} == {k: v for k, v in off.headers.items() if k != "date"}
+
+
 def test_browsers_check_back_on_every_load(tmp_path):
     """A copy kept without asking is a load the record never sees, and stale data after a deploy."""
     for response in visit(tmp_path, ("/", {}), (f"/data/players/{A_PLAYER['slug']}.json", {})):
@@ -46,9 +57,25 @@ def test_notes_a_page_with_the_site_it_came_from(tmp_path):
     assert [(p["page"], p["ref"]) for p in pages] == [("player", "discord.com"), ("leaderboard", None)]
 
 
+def test_a_page_says_what_the_browser_fetched_it_as_and_the_first_names_the_headers_that_arrived(tmp_path):
+    """What the Hub's proxy passes on cannot be seen from outside, so the first page of each run lists it."""
+    visit(tmp_path, ("/", {"sec-fetch-dest": "document", "x-forwarded-proto": "https"}),
+          ("/leaderboard.html", {"sec-fetch-dest": "iframe"}))
+    first, second = [line for line in lines(tmp_path) if line["kind"] == "page"]
+    assert (first["dest"], second["dest"]) == ("document", "iframe")
+    assert {"sec-fetch-dest", "x-forwarded-proto", "host"} <= set(first["names"])
+    assert "names" not in second
+
+
 def test_notes_a_browser_load_by_the_player_list_every_page_asks_for(tmp_path):
     visit(tmp_path, ("/data/players.json", {}), ("/site.css", {}))
     assert [line["kind"] for line in lines(tmp_path) if line["kind"] != "start"] == ["browser"]
+
+
+def test_a_fetcher_that_runs_no_script_is_a_page_and_never_a_browser_load(tmp_path):
+    """What `curl https://.../` does: one request for the page, nothing it asks for after."""
+    visit(tmp_path, ("/", {"user-agent": "curl/8.7.1", "accept": "*/*"}))
+    assert [(line["kind"], line.get("dest")) for line in lines(tmp_path) if line["kind"] != "start"] == [("page", None)]
 
 
 def test_notes_a_player_loaded(tmp_path):
@@ -75,7 +102,7 @@ def test_keeps_nothing_that_tells_one_visitor_from_another(tmp_path):
     visit(tmp_path, ("/", {"referer": "https://discord.com/x", "user-agent": "Mozilla/5.0", "cookie": "a=b"}),
           ("/data/players.json", {}), (f"/data/players/{A_PLAYER['slug']}.json", {}))
     for line in lines(tmp_path):
-        assert set(line) <= {"v", "run", "t", "kind", "host", "page", "ref", "view"}
+        assert set(line) <= {"v", "run", "t", "kind", "host", "page", "ref", "dest", "names", "view"}
 
 
 def test_writes_a_start_line_in_the_record_format_control_room_reads(tmp_path):
