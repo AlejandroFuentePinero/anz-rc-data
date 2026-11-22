@@ -1,7 +1,24 @@
 # Deploy
 
 How the site reaches its Hugging Face Space, and what lives on the Space outside the repo.
-The update after each new RC is #13's, and is added here with it.
+
+## After a new RC
+
+1. Add the RC's row to `data/rcs.csv` (Cycle, Melee id, Format, City, start date).
+2. Run `scripts/update.sh`. It fetches from Melee what is not stored yet, rebuilds the whole
+   bundle from Cycle 1, runs the tests, and lists what changed under `data/` and `site/`.
+   When the MTG Elo Project's stored record lacks the new RC, it fetches that record again
+   whole first (about 25 minutes), since the tests compare every Match the site rates with
+   it. If the Elo Project does not list the RC yet, the script says so and stops before the
+   build: re-run once it does.
+3. Expect red tests that pin facts of the 13-RC corpus: the RC and Match counts and complete
+   playoffs in `tests/test_raw_data.py`, the 13 in `tests/test_mtgelo_oracle.py`, and figures
+   the page tests read off today's bundle. Each gets its own account: re-measured from the
+   new data where the fact moved, or a real fault fixed.
+4. Commit the data, the bundle and any test changes, then deploy (below).
+
+With no new RC the script fetches nothing and the bundle comes out unchanged, byte for byte,
+which is how the rebuild was shown to reproduce on 2026-11-22.
 
 ## Deploying
 
