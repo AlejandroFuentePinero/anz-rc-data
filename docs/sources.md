@@ -10,8 +10,8 @@ Checked 2026-11-20: each event below returns standings, pairings with results, a
 | Cycle | City | Start date (UTC) | Format | Players | Event page | Pairings | Standings |
 |---|---|---|---|---|---|---|---|
 | 1 | Sydney | 2022-11-25 | Pioneer | 152 | [12737](https://melee.gg/Tournament/View/12737) | [pairings](https://melee.gg/Tournament/View/12737#pairings) | [standings](https://melee.gg/Tournament/View/12737#standings) |
-| 2 | - | 2023-03-03 | Standard | 132 | [13123](https://melee.gg/Tournament/View/13123) | [pairings](https://melee.gg/Tournament/View/13123#pairings) | [standings](https://melee.gg/Tournament/View/13123#standings) |
-| 3 | - | 2023-06-24 | Pioneer | 180 | [13419](https://melee.gg/Tournament/View/13419) | [pairings](https://melee.gg/Tournament/View/13419#pairings) | [standings](https://melee.gg/Tournament/View/13419#standings) |
+| 2 | Melbourne | 2023-03-03 | Standard | 132 | [13123](https://melee.gg/Tournament/View/13123) | [pairings](https://melee.gg/Tournament/View/13123#pairings) | [standings](https://melee.gg/Tournament/View/13123#standings) |
+| 3 | Sydney | 2023-06-24 | Pioneer | 180 | [13419](https://melee.gg/Tournament/View/13419) | [pairings](https://melee.gg/Tournament/View/13419#pairings) | [standings](https://melee.gg/Tournament/View/13419#standings) |
 | 4 | Sydney | 2023-10-27 | Pioneer | 156 | [14959](https://melee.gg/Tournament/View/14959) | [pairings](https://melee.gg/Tournament/View/14959#pairings) | [standings](https://melee.gg/Tournament/View/14959#standings) |
 | 5 | Melbourne | 2024-03-08 | Modern | 228 | [17545](https://melee.gg/Tournament/View/17545) | [pairings](https://melee.gg/Tournament/View/17545#pairings) | [standings](https://melee.gg/Tournament/View/17545#standings) |
 | 6 | Melbourne | 2024-05-25 | Standard | 168 | [44116](https://melee.gg/Tournament/View/44116) | [pairings](https://melee.gg/Tournament/View/44116#pairings) | [standings](https://melee.gg/Tournament/View/44116#standings) |
@@ -23,7 +23,7 @@ Checked 2026-11-20: each event below returns standings, pairings with results, a
 | 12 | Adelaide | 2026-05-22 | Standard | 188 | [379086](https://melee.gg/Tournament/View/379086) | [pairings](https://melee.gg/Tournament/View/379086#pairings) | [standings](https://melee.gg/Tournament/View/379086#standings) |
 | 13 | Sydney | 2026-10-23 | Modern | 233 | [414849](https://melee.gg/Tournament/View/414849) | [pairings](https://melee.gg/Tournament/View/414849#pairings) | [standings](https://melee.gg/Tournament/View/414849#standings) |
 
-The Melee event titles give the city only from Cycle 6 onwards. Cities for Cycles 4 and 5 come from the MTG Wiki season page. The city for Cycle 1 comes from its own Melee event description ("journey to Sydney"); Cycles 2 and 3 have no known city. "Players" is the number of players in the final standings.
+The Melee event titles give the city only from Cycle 6 onwards. Cities for Cycles 4 and 5 come from the MTG Wiki season page. The city for Cycle 1 comes from its own Melee event description ("journey to Sydney"). Cities for Cycles 2 and 3 come from Alejandro (2026-11-22). "Players" is the number of players in the final standings.
 
 ## Machine-readable list
 
