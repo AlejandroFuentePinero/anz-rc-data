@@ -20,7 +20,7 @@ CHROME = shutil.which("google-chrome") or shutil.which("chromium") or next(
 )
 pytestmark = pytest.mark.skipif(CHROME is None, reason="needs Chrome to render the pages")
 
-FOOTER = "Contact: alejandrofuentepinero@gmail.com · Discord: alejandrofp92 · Also by me: 7PH Graph"
+FOOTER = "Contact: alejandrofuentepinero@gmail.com · Discord: alejandrofp92 · Ratings follow the MTG Elo Project · Also by me: 7PH Graph"
 WIN_RATE_NOTE = "Win rate is wins over wins plus losses; draws count in W-L-D but not in the rate."
 
 
@@ -80,6 +80,7 @@ def test_every_page_links_its_stylesheet_and_font_and_carries_the_header_and_foo
     footer = re.search(r"<footer.*?</footer>", dom, flags=re.S).group(0)
     assert text(footer) == FOOTER
     assert 'href="mailto:alejandrofuentepinero@gmail.com"' in footer
+    assert 'href="https://mtgeloproject.net/"' in footer
     assert 'href="https://www.7phgraph.com/"' in footer
 
 
