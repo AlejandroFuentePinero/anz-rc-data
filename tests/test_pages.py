@@ -222,3 +222,12 @@ def test_every_story_tile_names_its_episode_and_points_at_a_video_a_cover_and_th
         who = re.search(r'<p class="who">.*?</p>', tile, flags=re.S).group(0)
         links = re.findall(r'<a href="player\.html#([^"]+)">([^<]+)</a>', who)
         assert links and all(names.get(slug) == name for slug, name in links)
+
+
+@pytest.mark.parametrize("page", sorted(path.name for path in SITE.glob("*.html")))
+def test_every_page_carries_the_site_icon_and_every_icon_it_names_is_there(page):
+    source = (SITE / page).read_text()
+    icons = re.findall(r'<link rel="(?:icon|apple-touch-icon)" href="([^"]+)"', source)
+
+    assert icons == ["favicon.ico", "favicon.svg", "apple-touch-icon.png"]
+    assert all((SITE / icon).is_file() for icon in icons)
