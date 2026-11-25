@@ -95,7 +95,7 @@ arena-insights' records, so control-room reads it with the same reader. Every li
 
 - `start`: one per start of the server, written at its first save whether or not anyone
   visits. A restart shows as a new `run`.
-- `page`: a page served (`/`, `/index.html`, `/leaderboard.html`, `/player.html`). It holds
+- `page`: a page served (`/`, `/index.html`, `/leaderboard.html`, `/player.html`, `/stories.html`). It holds
   which page, the address used (`host`: the custom domain or the Space's own), the site a
   visitor came from (`ref`, the host only, never the path or query) where the browser said,
   and what the browser fetched it as (`dest`, from `sec-fetch-dest`). The first `page` of each

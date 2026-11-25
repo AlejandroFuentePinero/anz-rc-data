@@ -48,7 +48,7 @@ FLUSH_SECONDS = 300
 
 QUEUE_SIZE = 10_000
 
-PAGES = {"/": "overview", "/index.html": "overview", "/leaderboard.html": "leaderboard", "/player.html": "player"}
+PAGES = {"/": "overview", "/index.html": "overview", "/leaderboard.html": "leaderboard", "/player.html": "player", "/stories.html": "stories"}
 BROWSER = "/data/players.json"
 PLAYER = re.compile(r"/data/players/([^/]+)\.json")
 

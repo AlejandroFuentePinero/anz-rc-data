@@ -65,7 +65,7 @@ def headers(dom: str, table: str) -> list[str]:
     return [text(cell) for cell in re.findall(r"<th\b.*?</th>", head, flags=re.S)]
 
 
-PAGES = {"index.html": "Overview", "leaderboard.html": "Leaderboard", "player.html#alejandrofp": None}
+PAGES = {"index.html": "Overview", "leaderboard.html": "Leaderboard", "player.html#alejandrofp": None, "stories.html": "Stories"}
 
 
 @pytest.mark.parametrize("page", PAGES)
@@ -76,7 +76,7 @@ def test_every_page_links_its_stylesheet_and_font_and_carries_the_header_and_foo
     assert "fonts.googleapis.com/css2?family=Inter" in dom
     assert "prototype" not in dom
     header = text(re.search(r"<header.*?</header>", dom, flags=re.S).group(0))
-    assert header.startswith("ANZ Regional Championships Overview Leaderboard")
+    assert header.startswith("ANZ Regional Championships Overview Leaderboard Stories")
     current = re.findall(r'<a [^>]*aria-current="page"[^>]*>([^<]*)</a>', dom)
     assert current == ([PAGES[page]] if PAGES[page] else [])
     footer = re.search(r"<footer.*?</footer>", dom, flags=re.S).group(0)
@@ -208,3 +208,17 @@ def test_compare_players_heads_each_match_table_against_its_player_with_the_reco
     assert "Each row's W-L-D against each column" not in text(dom)  # no matrix
     assert headers(compare, 'id="compared-summary-table"')[0] == "Player"
     assert WIN_RATE_NOTE in text(compare)
+
+
+def test_every_story_tile_names_its_episode_and_points_at_a_video_a_cover_and_the_cards_of_its_players(rendered):
+    dom = rendered("stories.html")
+    tiles = re.findall(r"<li>\s*<button[^>]*class=\"story\".*?</li>", dom, flags=re.S)
+    names = {player["slug"]: player["name"] for player in json.loads((SITE / "data" / "players.json").read_text())}
+
+    assert [text(tile) for tile in tiles] == ["Episode 1 The Line Joel McAndrew"]
+    for tile in tiles:
+        assert (SITE / re.search(r'data-video="([^"]+)"', tile).group(1)).is_file()
+        assert (SITE / re.search(r'<img [^>]*src="([^"]+)"', tile).group(1)).is_file()
+        who = re.search(r'<p class="who">.*?</p>', tile, flags=re.S).group(0)
+        links = re.findall(r'<a href="player\.html#([^"]+)">([^<]+)</a>', who)
+        assert links and all(names.get(slug) == name for slug, name in links)

@@ -14,12 +14,17 @@ head-to-heads, built from Melee standings and pairings.
 - **Player card**: one Player's RCs, finishes, Matches and Rating over the Cycles.
 - **Compare Players**: up to three other Players beside the card's Player, with
   the head-to-head record and every Match between them.
+- **Stories**: the short story videos shared on X, each played over the page from
+  its tile.
 
 ## Updating and deploying
 
 Requires Python 3.12+ and [uv](https://docs.astral.sh/uv/). After a new RC, add
 its row to `data/rcs.csv`, run `scripts/update.sh`, then `scripts/deploy_space.sh`.
 [docs/deploy.md](docs/deploy.md) has the full procedure.
+
+After a new Story, copy its video and cover into `site/stories/` and add its tile to
+`site/stories.html` (the comment there says how), then deploy.
 
 ## Documentation
 

@@ -25,7 +25,7 @@ from pathlib import Path
 
 SITE = Path(__file__).parent.parent / "site"
 # A Player's page reads its Player from the address, so it is checked on one Player.
-PAGES = ("", "leaderboard.html", "player.html#alejandrofp")
+PAGES = ("", "leaderboard.html", "player.html#alejandrofp", "stories.html")
 CHROME = shutil.which("google-chrome") or shutil.which("chromium") or next(
     (path for path in ["/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"] if Path(path).exists()), None
 )

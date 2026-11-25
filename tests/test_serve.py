@@ -148,3 +148,9 @@ def test_reports_visits_and_players_loaded_by_day(tmp_path):
 
 def test_reports_an_empty_record_plainly(tmp_path):
     assert report(tmp_path, SITE, by="week") == f"No usage recorded under {tmp_path}.\n"
+
+
+def test_a_story_is_served_in_pieces_as_safari_asks_for_a_video():
+    (piece,) = visit(None, ("/stories/ep01-the-line.mp4", {"range": "bytes=0-1"}))
+    assert piece.status_code == 206
+    assert piece.content == (SITE / "stories" / "ep01-the-line.mp4").read_bytes()[:2]
