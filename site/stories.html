@@ -25,14 +25,18 @@
 </header>
 <main>
 <h1>Stories</h1>
-<!-- A new episode: its video and its cover (a JPEG about 540 by 960) into stories/, and its tile here, newest first.
-     Each Player in it is a link to their card by slug, with their Display Name, separated by commas. -->
+<!-- A new episode: its video and its cover (a JPEG about 540 by 960) into stories/, and its tile here, after the last one.
+     Players under a tile are optional: each is a link to their card by slug, with their Display Name, separated by commas. -->
 <ul class="stories">
 <li><button type="button" class="story" data-video="stories/ep01-the-line.mp4">
 <img src="stories/ep01-the-line.jpg" alt="" width="540" height="960">
 <span class="episode">Episode 1</span><span class="title">The Line</span>
 </button>
 <p class="who"><a href="player.html#mcfish">Joel McAndrew</a></p></li>
+<li><button type="button" class="story" data-video="stories/ep02-round-one.mp4">
+<img src="stories/ep02-round-one.jpg" alt="" width="540" height="960">
+<span class="episode">Episode 2</span><span class="title">Round One</span>
+</button></li>
 </ul>
 </main>
 <dialog class="viewer" id="viewer">

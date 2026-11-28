@@ -215,13 +215,14 @@ def test_every_story_tile_names_its_episode_and_points_at_a_video_a_cover_and_th
     tiles = re.findall(r"<li>\s*<button[^>]*class=\"story\".*?</li>", dom, flags=re.S)
     names = {player["slug"]: player["name"] for player in json.loads((SITE / "data" / "players.json").read_text())}
 
-    assert [text(tile) for tile in tiles] == ["Episode 1 The Line Joel McAndrew"]
+    assert [text(tile) for tile in tiles] == ["Episode 1 The Line Joel McAndrew", "Episode 2 Round One"]
     for tile in tiles:
         assert (SITE / re.search(r'data-video="([^"]+)"', tile).group(1)).is_file()
         assert (SITE / re.search(r'<img [^>]*src="([^"]+)"', tile).group(1)).is_file()
-        who = re.search(r'<p class="who">.*?</p>', tile, flags=re.S).group(0)
-        links = re.findall(r'<a href="player\.html#([^"]+)">([^<]+)</a>', who)
-        assert links and all(names.get(slug) == name for slug, name in links)
+        who = re.search(r'<p class="who">.*?</p>', tile, flags=re.S)
+        if who:  # Players under a tile are optional
+            links = re.findall(r'<a href="player\.html#([^"]+)">([^<]+)</a>', who.group(0))
+            assert links and all(names.get(slug) == name for slug, name in links)
 
 
 @pytest.mark.parametrize("page", sorted(path.name for path in SITE.glob("*.html")))
