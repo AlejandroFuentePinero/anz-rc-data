@@ -14,8 +14,8 @@ head-to-heads, built from Melee standings and pairings.
 - **Player card**: one Player's RCs, finishes, Matches and Rating over the Cycles.
 - **Compare Players**: up to three other Players beside the card's Player, with
   the head-to-head record and every Match between them.
-- **Stories**: the short story videos shared on X, each played over the page from
-  its tile.
+- **Stories**: the short story videos, each played over the page from its
+  tile.
 
 ## Updating and deploying
 
